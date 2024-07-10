@@ -11,9 +11,10 @@ defineProps({
   <div class="greetings">
     <h1 class="green">{{ msg }}</h1>
     <h3>
-      You’ve successfully created a project with
-      <a href="https://vitejs.dev/" target="_blank" rel="noopener">Vite</a> +
-      <a href="https://vuejs.org/" target="_blank" rel="noopener">Vue 3</a>.
+      At Amortree Tech, we're passionate about harnessing the power of technology to transform businesses and drive
+      innovation. As a leading provider of comprehensive IT solutions, we specialize in a wide range of services
+      tailored to meet the diverse needs of our clients.
+      <a href="/" target="_blank" rel="noopener">Get Started</a>
     </h3>
   </div>
 </template>
