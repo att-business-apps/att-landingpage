@@ -18,3 +18,5 @@ Create and push a signed release:
 git release tag_name -s
 Create and push a release with a message:
 git release tag_name -m "message"
+
+hello git
