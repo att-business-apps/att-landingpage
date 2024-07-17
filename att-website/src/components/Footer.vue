@@ -79,7 +79,9 @@
               <div class="contact-info mb--50">
                   <h4 class="title">Phone</h4>
                   <p>Our customer care is open from Mon-Fri, 10:00 am to 6:00 pm</p>
-                  <h4 class="phone-number"><a href="tel:+917975859061">+91 79758 59061</a></h4>
+                  <h4 class="phone-number">
+                    <a href="tel:+917975859061">+91 79758 59061</a> / 
+                    <a href="https://wa.me/917975859061/?text=I'm%20inquiring%20about%20the%20website%20service." target="_blank">WhatsApp</a></h4>
               </div>
             </div>
             <div class="col-xl-6 col-lg-7">
