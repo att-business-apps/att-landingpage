@@ -4,7 +4,7 @@
         <div class="container">
           <div class="header-navbar">
             <div class="header-logo">
-              <a href="/index.html">
+              <a href="/">
                 <img class="light-version-logo" style="width:220px;" src="../assets/img/logo.png" alt="logo">
                 <!-- <img class="dark-version-logo" src="src/assets/img/logo-white.png" alt="logo">
                               <img class="sticky-logo" src="src/assets/img/logo.png" alt="logo"> -->
@@ -15,7 +15,7 @@
                 <ul class="mainmenu">
                     <li><a href="#whatWeDo">What we do</a></li>
                     <li><a href="#about">Who we are</a></li>
-                  <!-- <li><a href="/about.html">Our Work</a></li> -->
+                  <!-- <li><a href="/about">Our Work</a></li> -->
                   <li><a href="#contact">Contact</a></li>
                 </ul>
               </nav>
