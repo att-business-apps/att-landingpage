@@ -96,14 +96,15 @@
         <div class="footer-bottom">
           <div class="row">
             <div class="col-md-12">
-              <div class="footer-copyright text-center"><span class="copyright-text">© 2024. All rights reserved by <a
-                    href="https://amortree.com/">amortree tech</a>.</span></div>
+              <div class="footer-copyright text-center">
+                <span class="copyright-text">© 2024. All rights reserved by 
+                <a href="https://amortree.com/">amortree tech</a>.</span></div>
             </div>
             <div class="col-md-6 d-none">
               <div class="footer-bottom-link">
                 <ul class="list-unstyled">
-                  <li><a href="/amortree/privacy-policy">Privacy Policy</a></li>
-                  <li><a href="/amortree/terms-use">Terms of Use</a></li>
+                  <li><a href="/privacy-policy">Privacy Policy</a></li>
+                  <li><a href="/terms-use">Terms of Use</a></li>
                 </ul>
               </div>
             </div>
