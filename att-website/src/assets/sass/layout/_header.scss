@@ -28,6 +28,11 @@
                     width: 150px;
                 }
             }
+
+            @media #{$smlg-device} {
+                width: 100%;
+                text-align: center;
+            }
         }
         .header-main-nav {
             flex: 1;
