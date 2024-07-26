@@ -1,7 +1,7 @@
 <template>
     <div class="footer-area" id="contact">
       <div class="container">
-        <div class="footer-top d-none">
+        <div class="footer-top d-md-none d-block pt-5">
           <div class="footer-social-link">
             <ul class="list-unstyled">
               <li>
@@ -73,7 +73,7 @@
             </ul>
           </div>
         </div>
-        <div class="footer-main pt-5">
+        <div class="footer-main">
           <div class="row">
             <div class="col-xl-6 col-lg-5">
               <div class="contact-info mb--50">
