@@ -9,7 +9,8 @@
           <div class="col-lg-6">
             <div class="banner-content">
               <div class="animate__animated fadeInUp" style="animation-duration: 1s;">
-                <h1 class="title">Build beautiful website &amp; mobile apps.</h1>
+                <h1 class="title">A Touch of Class for Your Digital Presence.</h1>
+                <h4>Sleek. Stylish. Classy.</h4>
                 <p class="subtitle">
                   At Amortree Tech, we're passionate about harnessing the power of technology to transform businesses
                   and drive innovation. As a leading provider of comprehensive IT solutions, we specialize in a wide
