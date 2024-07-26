@@ -13,12 +13,12 @@
   --color-accent1: #FFDC60;
   --color-accent2: #FAB8C4;
   --color-blue-shade: #6865FF;
-  --color-link: #2522BA;
+  --color-link: #003DA5;
   --color-mabel: #DBF8FF;
   --color-fog: #DBDEFF;
   --color-pink-shade: #FFD3DB;
   --color-peach: #FFEDDC;
-  --color-rose: #C75C6F;
+  --color-rose: #DB3C2D;
   --color-chart1: #896BA7;
   --color-chart2: #BADEFF;
   --color-body: #525260;
@@ -16482,7 +16482,7 @@ input {
 }
 .shape-group-7 .shape.shape-2 {
   top: 210px;
-  left: 52%;
+  left: 60%;
 }
 @media only screen and (max-width: 991px) {
   .shape-group-7 .shape.shape-2 {
@@ -16490,7 +16490,7 @@ input {
   }
 }
 .shape-group-7 .shape.shape-3 {
-  top: 40%;
+  top: 46%;
   left: 170px;
 }
 
@@ -19573,7 +19573,7 @@ Pagination
 .serviceSec .section-heading p {
   color: var(--color-white);
   margin: 0 0 40px;
-  width: 40%;
+  width: 64%;
   opacity: 0.6;
   font-size: var(--font-body-1);
 }
@@ -20963,11 +20963,11 @@ Pagination
 }
 @media only screen and (max-width: 991px) {
   .footer-social-link ul li a {
-    font-size: 20px;
+    font-size: 26px;
   }
 }
 .footer-social-link ul li a:hover {
-  color: var(--color-link);
+  color: var(--color-primary);
 }
 
 .footer-widget {

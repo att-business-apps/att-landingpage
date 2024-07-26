@@ -273,13 +273,13 @@
         }
         &.shape-2 {
             top: 210px;
-            left: 52%;
+            left: 60%;
             @media #{$md-layout} {
                 display: none;
             }
         }
         &.shape-3 {
-            top: 40%;
+            top: 46%;
             left: 170px;
         }
     }
