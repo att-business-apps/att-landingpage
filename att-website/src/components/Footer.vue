@@ -82,7 +82,7 @@
           </ul>
         </div>
       </div>
-      <div class="footer-main">
+      <div class="footer-main pt-md-5 pt-0">
         <div class="row">
           <div class="col-xl-6 col-lg-5">
             <div class="contact-info mb--50">
