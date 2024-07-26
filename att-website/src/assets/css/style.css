@@ -17803,7 +17803,7 @@ Pagination
     width: 150px;
   }
 }
-@media only screen and (max-width: 1199px) {
+@media only screen and (max-width: 479px) {
   .amor-header .header-navbar .header-logo {
     width: 100%;
     text-align: center;
