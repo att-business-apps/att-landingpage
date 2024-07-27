@@ -282,6 +282,13 @@
             top: 46%;
             left: 170px;
         }
+        &.shape-4 {
+            top: 75%;
+            left: 60%;
+            @media #{$md-layout} {
+                top: 70%;
+            }
+        }
     }
 }
 

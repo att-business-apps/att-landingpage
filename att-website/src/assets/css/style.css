@@ -16493,6 +16493,15 @@ input {
   top: 46%;
   left: 170px;
 }
+.shape-group-7 .shape.shape-4 {
+  top: 75%;
+  left: 60%;
+}
+@media only screen and (max-width: 991px) {
+  .shape-group-7 .shape.shape-4 {
+    top: 70%;
+  }
+}
 
 .shape-group-8 .shape {
   position: absolute;

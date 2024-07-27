@@ -105,6 +105,7 @@
         <li class="shape shape-1"><img src="../assets/img/circle-1.png" alt="Line"></li>
         <li class="shape shape-2"><img src="../assets/img/bubble-2.png" alt="Line"></li>
         <li class="shape shape-3"><img src="../assets/img/bubble-1.png" alt="Line"></li>
+        <li class="shape shape-4"><img src="../assets/img/we-do.png" alt="Line"></li>
       </ul>
     </div>
 
