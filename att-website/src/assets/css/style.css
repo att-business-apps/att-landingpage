@@ -16212,7 +16212,7 @@ input {
   }
 }
 .section-heading .subtitle {
-  color: var(--color-primaryR);
+  color: var(--color-primaryG);
   font-weight: 500;
   font-size: 20px;
   font-family: var(--font-primary);
@@ -16262,7 +16262,7 @@ input {
   }
 }
 .section-heading .title .gradient-text-light {
-  background: linear-gradient(270deg, var(--color-dark) 21.9%, var(--color-primaryR) 53.55%);
+  background: linear-gradient(270deg, var(--color-dark) 21.9%, var(--color-primaryG) 53.55%);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
