@@ -10,7 +10,7 @@
   --color-light: #ECF2F6;
   --color-dark: #27272E;
   --color-text-dark: #292930;
-  --color-accent1: #FFDC60;
+  --color-primaryY: #FFDC60;
   --color-accent2: #FAB8C4;
   --color-blue-shade: #6865FF;
   --color-link: #2522BA;
@@ -19699,7 +19699,7 @@ Pagination
   }
 }
 .call-to-action .section-heading span {
-  color: var(--color-accent1);
+  color: var(--color-primaryY);
 }
 .call-to-action .section-heading .title {
   width: 60%;
@@ -21120,7 +21120,7 @@ Pagination
 }
 .contact-info .phone-number {
   font-size: 34px;
-  color: var(--color-accent1);
+  color: var(--color-primaryY);
   margin-bottom: 0;
 }
 @media only screen and (max-width: 1199px) {

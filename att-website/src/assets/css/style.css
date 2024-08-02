@@ -1,16 +1,18 @@
 @charset "UTF-8";
 /* Amortree Tech Landing Page */
 /* 6 Jun 2022 */
-/* Code by DInesh */
+/* Code by Dinesh */
 @import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400&family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
 :root {
   --color-primary: #0d6efd;
+  --color-primaryY: #e5c535;
+  --color-primaryG: #5cb04e;
+  --color-primaryR: #dc3c2d;
   --color-white: #ffffff;
   --color-black: #000000;
   --color-light: #ECF2F6;
   --color-dark: #27272E;
   --color-text-dark: #292930;
-  --color-accent1: #FFDC60;
   --color-accent2: #FAB8C4;
   --color-blue-shade: #6865FF;
   --color-link: #003DA5;
@@ -16210,7 +16212,7 @@ input {
   }
 }
 .section-heading .subtitle {
-  color: var(--color-rose);
+  color: var(--color-primaryR);
   font-weight: 500;
   font-size: 20px;
   font-family: var(--font-primary);
@@ -16258,6 +16260,12 @@ input {
   .section-heading .title {
     font-size: 34px;
   }
+}
+.section-heading .title .gradient-text-light {
+  background: linear-gradient(270deg, var(--color-dark) 21.9%, var(--color-primaryR) 53.55%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 .section-heading p {
   font-size: var(--font-body-1);
@@ -19128,7 +19136,7 @@ Pagination
 }
 .banner.banner-style-1 .banner-content .title {
   font-size: 78px;
-  line-height: 1;
+  line-height: 1.2;
 }
 @media only screen and (min-width: 1200px) and (max-width: 1599px) {
   .banner.banner-style-1 .banner-content .title {
@@ -19149,6 +19157,18 @@ Pagination
   .banner.banner-style-1 .banner-content .title {
     font-size: 40px;
   }
+}
+.banner.banner-style-1 .banner-content .title .gradient-text-light {
+  background: linear-gradient(270deg, var(--color-dark) 21.9%, var(--color-primary) 53.55%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.banner.banner-style-1 .banner-content h4 .gradient-text-light, .banner.banner-style-1 .banner-content .h4 .gradient-text-light {
+  background: linear-gradient(270deg, var(--color-dark) 21.9%, var(--color-primary) 53.55%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 .banner.banner-style-1 .banner-thumbnail {
   z-index: 5;
@@ -19564,7 +19584,7 @@ Pagination
   margin-bottom: 60px;
 }
 .serviceSec .section-heading .subtitle {
-  color: var(--color-rose);
+  color: var(--color-primaryY);
   font-weight: 500;
   font-size: 20px;
   margin-bottom: 15px;
@@ -19578,6 +19598,12 @@ Pagination
   .serviceSec .section-heading .title {
     width: 100% !important;
   }
+}
+.serviceSec .section-heading .title .gradient-text-light {
+  background: linear-gradient(270deg, var(--color-light) 21.9%, var(--color-primaryY) 53.55%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 .serviceSec .section-heading p {
   color: var(--color-white);
@@ -19989,7 +20015,7 @@ Pagination
   }
 }
 .call-to-action .section-heading span {
-  color: var(--color-accent1);
+  color: var(--color-primaryY);
 }
 .call-to-action .section-heading .title {
   width: 60%;
@@ -21147,7 +21173,7 @@ Pagination
 }
 .contact-info .phone-number {
   font-size: 34px;
-  color: var(--color-accent1);
+  color: var(--color-primaryY);
   margin-bottom: 0;
 }
 @media only screen and (max-width: 1199px) {
