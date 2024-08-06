@@ -6,7 +6,7 @@
                     <div class="header-logo">
                         <a href="/">
                             <img class="light-version-logo" style="width:220px; margin: 0 auto;"
-                                src="../assets/img/logo.png" alt="logo">
+                                src="../assets/img/att-logo.svg" alt="logo">
                             <!-- <img class="dark-version-logo" src="src/assets/img/logo-white.png" alt="logo">
                               <img class="sticky-logo" src="src/assets/img/logo.png" alt="logo"> -->
                         </a>
