@@ -278,6 +278,10 @@
             // right: 200px;
             top: 40%;
             right: 33%;
+            @media #{$md-layout} {
+                top: 38%;
+                right: 0%;
+            }
         }
         &.shape-2 {
             top: 210px;
@@ -289,6 +293,10 @@
         &.shape-3 {
             top: 46%;
             left: 170px;
+            @media #{$md-layout} {
+                top: 44%;
+                left: 180px;
+            }
         }
         &.shape-4 {
             top: 84%;
@@ -296,11 +304,20 @@
             perspective: 1000px;
             @media #{$md-layout} {
                 top: 70%;
+                left: 40%;
             }
 
             img {
                 animation: rotate-image linear;
                 animation-timeline: scroll();
+            }
+        }
+        &.shape-5 {
+            top: 55%;
+            left: 47%;
+            @media #{$md-layout} {
+                top: 60%;
+                left: 74%;
             }
         }
     }
