@@ -94,7 +94,7 @@
             <div class="contact-info mb--50">
               <h4 class="title">Email</h4>
               <p>Our support team will get back to in 48-h during standard business hours.</p>
-              <h4 class="phone-number"><a href="mailto:amortreetech@gmail.com">amortreetech@gmail.com</a></h4>
+              <h4 class="phone-number"><a href="mailto:hi@amortree.com">hi@amortree.com</a></h4>
             </div>
           </div>
         </div>
