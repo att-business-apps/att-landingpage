@@ -1,6 +1,7 @@
 <script setup>
 import { ref } from "vue";
 
+const disableBtn=ref(false);
 const from_name = ref("");
 const email = ref("");
 const phoneNumber = ref("");
@@ -34,6 +35,7 @@ function sendMail() {
     return;
   }
 
+  disableBtn.value = true;
   emailjs
     .send(serviceID, getTemplate('admin'), params)
     .then((res) => {
@@ -42,7 +44,7 @@ function sendMail() {
       phoneNumber.value = "";
       message.value = "";
       console.log(res);
-      alert("Your message sent successfully!!");
+      disableBtn.value = false;
     })
     .catch((err) => console.log(err));
   emailjs
@@ -53,7 +55,7 @@ function sendMail() {
       phoneNumber.value = "";
       message.value = "";
       console.log(res);
-      alert("Your message sent successfully!!");
+      disableBtn.value = false;
     })
     .catch((err) => console.log(err));
 }
@@ -387,7 +389,7 @@ function getTemplate(target){
                     @click="sendMail"
                     type="button"
                     class="amor-btn btn-fill-primary btn-fluid btn-primary"
-                    name="submit-btn"
+                    name="submit-btn" :disabled="disableBtn"
                   >
                     Send
                   </button>
