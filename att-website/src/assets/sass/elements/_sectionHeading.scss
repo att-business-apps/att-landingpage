@@ -274,8 +274,14 @@
         position: absolute;
         z-index: -1;
         &.shape-1 {
-            top: 90px;
-            right: 200px;
+            // top: 90px;
+            // right: 200px;
+            top: 40%;
+            right: 33%;
+            @media #{$md-layout} {
+                top: 38%;
+                right: 0%;
+            }
         }
         &.shape-2 {
             top: 210px;
@@ -287,14 +293,42 @@
         &.shape-3 {
             top: 46%;
             left: 170px;
-        }
-        &.shape-4 {
-            top: 75%;
-            left: 60%;
             @media #{$md-layout} {
-                top: 70%;
+                top: 44%;
+                left: 180px;
             }
         }
+        &.shape-4 {
+            top: 84%;
+            left: 60%;
+            perspective: 1000px;
+            @media #{$md-layout} {
+                top: 70%;
+                left: 40%;
+            }
+
+            img {
+                animation: rotate-image linear;
+                animation-timeline: scroll();
+            }
+        }
+        &.shape-5 {
+            top: 55%;
+            left: 47%;
+            @media #{$md-layout} {
+                top: 60%;
+                left: 74%;
+            }
+        }
+    }
+}
+
+@keyframes rotate-image {
+    0% {
+        transform: rotateY(0deg);
+    }
+    20% {
+        transform: rotateY(180deg);
     }
 }
 

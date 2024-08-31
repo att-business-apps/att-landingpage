@@ -93,6 +93,12 @@
         .thumbnail {
             margin-right: 25px;
             max-width: 85px;
+            perspective: 1000px;
+
+            img {
+                animation: rotate-image linear;
+                animation-timeline: scroll();
+            }
             @media #{$smlg-device} {
                 max-width: 60px;
             }

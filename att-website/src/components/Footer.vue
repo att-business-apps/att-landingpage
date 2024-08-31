@@ -94,24 +94,24 @@
             <div class="contact-info mb--50">
               <h4 class="title">Email</h4>
               <p>Our support team will get back to in 48-h during standard business hours.</p>
-              <h4 class="phone-number"><a href="mailto:amortreetech@gmail.com">amortreetech@gmail.com</a></h4>
+              <h4 class="phone-number"><a href="mailto:hi@amortree.com">hi@amortree.com</a></h4>
             </div>
           </div>
         </div>
       </div>
       <div class="footer-bottom">
         <div class="row">
-          <div class="col-md-12">
-            <div class="footer-copyright text-center">
+          <div class="col-md-6">
+            <div class="footer-copyright">
               <span class="copyright-text">© 2024. All rights reserved by
                 <a href="https://amortree.com/">amortree tech</a>.</span>
             </div>
           </div>
-          <div class="col-md-6 d-none">
+          <div class="col-md-6">
             <div class="footer-bottom-link">
               <ul class="list-unstyled">
-                <li><a href="/privacy-policy">Privacy Policy</a></li>
-                <li><a href="/terms-use">Terms of Use</a></li>
+                <li><a href="/privacy">Privacy Policy</a></li>
+                <li><a href="/terms">Terms of Use</a></li>
               </ul>
             </div>
           </div>

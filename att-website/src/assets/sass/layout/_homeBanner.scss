@@ -67,10 +67,17 @@
                 text-align: right;
                 margin-top: -260px;
                 margin-right: -50px;
+                perspective: 1000px;
                 @media #{$laptop-device} {
                     img {
                         width: 85%;
+                        animation: rotate-image linear;
+                        animation-timeline: scroll();
                     }
+                }
+                img {
+                    animation: rotate-image linear;
+                    animation-timeline: scroll();
                 }
                 @media #{$smlg-device} {
                     margin-top: -200px;
@@ -109,4 +116,3 @@
         }
     }
 }
-

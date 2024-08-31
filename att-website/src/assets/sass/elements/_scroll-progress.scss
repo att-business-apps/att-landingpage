@@ -1,0 +1,21 @@
+.scroll-progress {
+    position: fixed;
+    z-index: 10;
+    height: .2rem;
+    top: 80px;
+    left: 0;
+    width: 100%;
+    background: var(--color-primary);
+    // background: linear-gradient(90deg, var(--logo-light) 0%, var(--logo-blue) 25%, var(--logo-green) 50%, var(--logo-red) 75%, var(--logo-yellow) 100%);
+    animation: scroll-progress linear;
+    animation-timeline: scroll();
+}
+  
+@keyframes scroll-progress {
+    from {
+      width: 0%;
+    }
+    to {
+      width: 100%;
+    }
+}  
