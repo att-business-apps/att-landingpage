@@ -101,17 +101,17 @@
       </div>
       <div class="footer-bottom">
         <div class="row">
-          <div class="col-md-12">
-            <div class="footer-copyright text-center">
+          <div class="col-md-6">
+            <div class="footer-copyright">
               <span class="copyright-text">© 2024. All rights reserved by
                 <a href="https://amortree.com/">amortree tech</a>.</span>
             </div>
           </div>
-          <div class="col-md-6 d-none">
+          <div class="col-md-6">
             <div class="footer-bottom-link">
               <ul class="list-unstyled">
-                <li><a href="/privacy-policy">Privacy Policy</a></li>
-                <li><a href="/terms-use">Terms of Use</a></li>
+                <li><a href="/privacy">Privacy Policy</a></li>
+                <li><a href="/terms">Terms of Use</a></li>
               </ul>
             </div>
           </div>

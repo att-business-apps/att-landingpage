@@ -164,3 +164,12 @@
   }
 }
 
+// KeyFrame
+@keyframes rotate-image {
+  0% {
+      transform: rotateX(0deg);
+  }
+  20% {
+      transform: rotateX(180deg);
+  }
+}

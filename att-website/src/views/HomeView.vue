@@ -5,8 +5,8 @@
   <main>
     <div class="banner banner-style-1">
       <div class="container">
-        <div class="row align-items-end align-items-xl-start">
-          <div class="col-lg-6">
+        <div class="row align-items-end align-items-xl-end">
+          <div class="col-lg-6 pb-5">
             <div class="banner-content">
               <div class="animate__animated fadeInUp" style="animation-duration: 1s;">
                 <h1 class="title">A Touch of Class for Your <span class="gradient-text-light">Digital Presence</span>.</h1>
@@ -16,7 +16,7 @@
                   and drive innovation. As a leading provider of comprehensive IT solutions, we specialize in a wide
                   range of services tailored to meet the diverse needs of our clients.
                 </p>
-                <!-- <a class="amor-btn btn-fill-primary btn-large" href="/">Get Started</a> -->
+                <a class="amor-btn btn-fill-primary btn-large" href="/">Get Started</a>
               </div>
             </div>
           </div>
@@ -76,7 +76,43 @@
               </div>
             </div>
           </div>
-          <div class="col-lg-4 mt--100 mt_md--0">
+          <div class="col-lg-4 mt--0">
+            <div class="services-grid">
+              <div class="thumbnail"><img src="../assets/img/icon-4.png" alt="icon"></div>
+              <div class="content">
+                <h5 class="title"><a href="#">Design</a></h5>
+                <p>We consider design to be a cooperative activity that necessitates participation from all parties
+                  involved in order to produce effective and scalable solutions.</p><a class="more-btn d-none"
+                  href="">Find out
+                  more</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 mt--200 mt--0">
+            <div class="services-grid">
+              <div class="thumbnail"><img src="../assets/img/icon-5.png" alt="icon"></div>
+              <div class="content">
+                <h5 class="title"><a href="#">Development</a></h5>
+                <p>We assist you in converting any type of design into useful digital goods, including business
+                  solutions, mobile apps, and websites. </p><a class="more-btn d-none" href="">Find out
+                  more</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-4 mt--0">
+            <div class="services-grid">
+              <div class="thumbnail"><img src="../assets/img/icon-3.png" alt="icon"></div>
+              <div class="content">
+                <h5 class="title"><a href="#">Research</a></h5>
+                <p>We offer insightful and useful data-driven information that speaks to users' needs and aligns with
+                  corporate goals.</p><a class="more-btn d-none" href="">Find out
+                  more</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 mt--200 mt_md--0">
             <div class="services-grid">
               <div class="thumbnail"><img src="../assets/img/icon-4.png" alt="icon"></div>
               <div class="content">
