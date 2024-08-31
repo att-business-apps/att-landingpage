@@ -9,14 +9,13 @@
           <div class="col-lg-6">
             <div class="banner-content">
               <div class="animate__animated fadeInUp" style="animation-duration: 1s;">
-                <h1 class="title">Build beautiful website &amp; mobile apps.</h1>
-                <span class="subtitle">
+                <h1 class="title">A Touch of Class for Your <span class="gradient-text-light">Digital Presence</span>.</h1>
+                <h4>Sleek. <span class="gradient-text-light">Stylish.</span> Classy.</h4>
+                <p class="subtitle">
                   At Amortree Tech, we're passionate about harnessing the power of technology to transform businesses
-                  and drive
-                  innovation. As a leading provider of comprehensive IT solutions, we specialize in a wide range of
-                  services tailored to
-                  meet the diverse needs of our clients.
-                </span>
+                  and drive innovation. As a leading provider of comprehensive IT solutions, we specialize in a wide
+                  range of services tailored to meet the diverse needs of our clients.
+                </p>
                 <!-- <a class="amor-btn btn-fill-primary btn-large" href="/">Get Started</a> -->
               </div>
             </div>
@@ -58,9 +57,12 @@
       <div class="container">
         <div class="section-heading heading-left mb--20 mb_md--70 ">
           <div class="subtitle">What We Can Do For You</div>
-          <h2 class="title">Services we can <br> help you with</h2>
-          <p>Our expert team crafts visually stunning and user-friendly websites that not only captivate audiences but
-            also drive conversions and enhance brand visibility.</p>
+          <h2 class="title"><span class="gradient-text-light">Services we can help</span> you with</h2>
+          <p>
+            Unlock your business's full potential with Amortree Tech. Our wide range of IT services, including
+            website design, UI/UX, Sass products, and mobile app development, are designed to drive innovation and
+            growth. Experience the power of technology-driven transformation.
+          </p>
         </div>
         <div class="row">
           <div class="col-lg-4 mt--200 mt_md--0">
@@ -100,8 +102,10 @@
         </div>
       </div>
       <ul class="shape-group-7 list-unstyled">
+        <li class="shape shape-1"><img src="../assets/img/circle-1.png" alt="Line"></li>
         <li class="shape shape-2"><img src="../assets/img/bubble-2.png" alt="Line"></li>
         <li class="shape shape-3"><img src="../assets/img/bubble-1.png" alt="Line"></li>
+        <li class="shape shape-4"><img src="../assets/img/we-do.png" alt="Line"></li>
       </ul>
     </div>
 
@@ -111,7 +115,7 @@
           <div class="col-lg-6">
             <div class="about-us">
               <div class="section-heading heading-left mb-0"><span class="subtitle">About Us</span>
-                <h2 class="title mb--40">We do design, code &amp; develop.</h2>
+                <h2 class="title mb--40">We do <span class="gradient-text-light">design, code</span> &amp; develop.</h2>
                 <p>
                   At Amortree Tech, we're more than just an IT consulting firm; we're your strategic partner in
                   leveraging cutting-edge technologies to drive innovation and transformation. Specializing in
@@ -181,13 +185,13 @@
         </div>
       </div>
       <ul class="list-unstyled shape-group-9">
-        <li class="shape shape-1"><img src="../assets/img/bubble-12.png" alt="Comments"></li>
-        <li class="shape shape-2"><img src="../assets/img/bubble-16.png" alt="Comments"></li>
-        <li class="shape shape-3"><img src="../assets/img/bubble-13.png" alt="Comments"></li>
-        <li class="shape shape-4"><img src="../assets/img/bubble-14.png" alt="Comments"></li>
-        <li class="shape shape-5"><img src="../assets/img/bubble-16.png" alt="Comments"></li>
-        <li class="shape shape-6"><img src="../assets/img/bubble-15.png" alt="Comments"></li>
-        <li class="shape shape-7"><img src="../assets/img/bubble-16.png" alt="Comments"></li>
+        <li class="shape shape-1"><img src="../assets/img/bubble-12.png" alt="amortree"></li>
+        <li class="shape shape-2"><img src="../assets/img/bubble-16.png" alt="amortree"></li>
+        <li class="shape shape-3"><img src="../assets/img/bubble-13.png" alt="amortree"></li>
+        <li class="shape shape-4"><img src="../assets/img/bubble-14.png" alt="amortree"></li>
+        <li class="shape shape-5"><img src="../assets/img/bubble-16.png" alt="amortree"></li>
+        <li class="shape shape-6"><img src="../assets/img/bubble-15.png" alt="amortree"></li>
+        <li class="shape shape-7"><img src="../assets/img/bubble-16.png" alt="amortree"></li>
       </ul>
     </div>
   </main>

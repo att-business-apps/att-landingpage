@@ -18,7 +18,7 @@
         margin-bottom: 60px;
 
         .subtitle {
-            color: var(--color-rose);
+            color: var(--color-primaryY);
             font-weight: 500;
             font-size: 20px;
             margin-bottom: 15px;
@@ -31,12 +31,21 @@
             @media #{$md-layout} {
                 width: 100% !important;
             }
+
+            .gradient-text-light {
+                background: linear-gradient(270deg, var(--color-light) 21.9%, var(--color-primaryY) 53.55%);
+                background-clip: text;
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+            }
         }
+
+        
 
         p {
             color: var(--color-white);
             margin: 0 0 40px;
-            width: 40%;
+            width: 64%;
             opacity: .6;
             font-size: var(--font-body-1);
         }

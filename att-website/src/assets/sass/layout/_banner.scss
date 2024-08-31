@@ -157,7 +157,7 @@
             }
             .title {
                 font-size: 78px;
-                line-height: 1;
+                line-height: 1.2;
                 @media #{$laptop-device} {
                     font-size: 68px;
                 }
@@ -169,6 +169,21 @@
                 }
                 @media #{$sm-layout} {
                     font-size: 40px;
+                }
+                .gradient-text-light {
+                    background: linear-gradient(270deg, var(--color-dark) 21.9%, var(--color-primary) 53.55%);
+                    background-clip: text;
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent;
+                }
+            }
+
+            h4 {
+                .gradient-text-light {
+                    background: linear-gradient(270deg, var(--color-dark) 21.9%, var(--color-primary) 53.55%);
+                    background-clip: text;
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent;
                 }
             }
         }

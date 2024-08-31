@@ -1,11 +1,11 @@
 /* Amortree Tech Landing Page */
 /* 6 Jun 2022 */
 
-/* Code by DInesh */
+/* Code by Dinesh */
 
 // Landing Page SASS to CSS
 // Bootstrap Included inside the SASS folder and Customized
-// Compile Path sass --watch sass/customSass.scss:css/customSass.css
+// Compile Path sass --watch sass/style.scss:css/style.css
 
 
 // Bootstrap-override
@@ -36,6 +36,8 @@
 
 // Layout
 @import "layout/header";
+@import "layout/nav";
+// @import "layout/menu";
 @import "layout/banner";
 @import "layout/serviceSec";
 @import "layout/caseStudy";
@@ -45,7 +47,6 @@
 @import "layout/about";
 @import "layout/section";
 @import "layout/footerWhite";
-@import "layout/nav";
 @import "layout/contact";
 // @import "layout/intro";
 // @import "layout/btn";
