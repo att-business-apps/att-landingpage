@@ -16501,6 +16501,12 @@ input {
   top: 40%;
   right: 33%;
 }
+@media only screen and (max-width: 991px) {
+  .shape-group-7 .shape.shape-1 {
+    top: 38%;
+    right: 0%;
+  }
+}
 .shape-group-7 .shape.shape-2 {
   top: 210px;
   left: 60%;
@@ -16514,6 +16520,12 @@ input {
   top: 46%;
   left: 170px;
 }
+@media only screen and (max-width: 991px) {
+  .shape-group-7 .shape.shape-3 {
+    top: 44%;
+    left: 180px;
+  }
+}
 .shape-group-7 .shape.shape-4 {
   top: 84%;
   left: 60%;
@@ -16522,11 +16534,22 @@ input {
 @media only screen and (max-width: 991px) {
   .shape-group-7 .shape.shape-4 {
     top: 70%;
+    left: 40%;
   }
 }
 .shape-group-7 .shape.shape-4 img {
   animation: rotate-image linear;
   animation-timeline: scroll();
+}
+.shape-group-7 .shape.shape-5 {
+  top: 55%;
+  left: 47%;
+}
+@media only screen and (max-width: 991px) {
+  .shape-group-7 .shape.shape-5 {
+    top: 60%;
+    left: 74%;
+  }
 }
 
 @keyframes rotate-image {
