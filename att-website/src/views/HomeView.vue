@@ -9,7 +9,8 @@
           <div class="col-lg-6 pb-5">
             <div class="banner-content">
               <div class="animate__animated fadeInUp" style="animation-duration: 1s;">
-                <h1 class="title">A Touch of Class for Your <span class="gradient-text-light">Digital Presence</span>.</h1>
+                <h1 class="title">A Touch of Class for Your <span class="gradient-text-light">Digital Presence</span>.
+                </h1>
                 <h4>Sleek. <span class="gradient-text-light">Stylish.</span> Classy.</h4>
                 <p class="subtitle">
                   At Amortree Tech, we're passionate about harnessing the power of technology to transform businesses
@@ -78,7 +79,7 @@
           </div>
           <div class="col-lg-4 mt--0">
             <div class="services-grid">
-              <div class="thumbnail"><img src="../assets/img/icon-4.png" alt="icon"></div>
+              <div class="thumbnail"><img src="../assets/img/icon-27.png" alt="icon"></div>
               <div class="content">
                 <h5 class="title"><a href="#">Design</a></h5>
                 <p>We consider design to be a cooperative activity that necessitates participation from all parties
@@ -90,7 +91,7 @@
           </div>
           <div class="col-lg-4 mt--200 mt--0">
             <div class="services-grid">
-              <div class="thumbnail"><img src="../assets/img/icon-5.png" alt="icon"></div>
+              <div class="thumbnail"><img src="../assets/img/icon-30.png" alt="icon"></div>
               <div class="content">
                 <h5 class="title"><a href="#">Development</a></h5>
                 <p>We assist you in converting any type of design into useful digital goods, including business
@@ -103,34 +104,33 @@
         <div class="row">
           <div class="col-lg-4 mt--0">
             <div class="services-grid">
-              <div class="thumbnail"><img src="../assets/img/icon-3.png" alt="icon"></div>
+              <div class="thumbnail"><img src="../assets/img/icon-28.png" alt="icon"></div>
               <div class="content">
-                <h5 class="title"><a href="#">Research</a></h5>
-                <p>We offer insightful and useful data-driven information that speaks to users' needs and aligns with
-                  corporate goals.</p><a class="more-btn d-none" href="">Find out
+                <h5 class="title"><a href="#">Logo Design</a></h5>
+                <p>Get a unique, professional logo that defines your brand. Stand out with our expert design services.
+                  Start your logo journey today!</p><a class="more-btn d-none" href="">Find out
                   more</a>
               </div>
             </div>
           </div>
           <div class="col-lg-4 mt--200 mt_md--0">
             <div class="services-grid">
-              <div class="thumbnail"><img src="../assets/img/icon-4.png" alt="icon"></div>
+              <div class="thumbnail"><img src="../assets/img/icon-31.png" alt="icon"></div>
               <div class="content">
-                <h5 class="title"><a href="#">Design</a></h5>
-                <p>We consider design to be a cooperative activity that necessitates participation from all parties
-                  involved in order to produce effective and scalable solutions.</p><a class="more-btn d-none"
-                  href="">Find out
+                <h5 class="title"><a href="#">Brochure Design</a></h5>
+                <p>Enhance your marketing with our custom brochure design services. Create eye-catching brochures that
+                  engage and inform. Start your design today!</p><a class="more-btn d-none" href="">Find out
                   more</a>
               </div>
             </div>
           </div>
           <div class="col-lg-4 mt--0">
             <div class="services-grid">
-              <div class="thumbnail"><img src="../assets/img/icon-5.png" alt="icon"></div>
+              <div class="thumbnail"><img src="../assets/img/icon-32.png" alt="icon"></div>
               <div class="content">
-                <h5 class="title"><a href="#">Development</a></h5>
-                <p>We assist you in converting any type of design into useful digital goods, including business
-                  solutions, mobile apps, and websites. </p><a class="more-btn d-none" href="">Find out
+                <h5 class="title"><a href="#">SEO</a></h5>
+                <p>Boost your online visibility with our expert SEO services. Drive traffic, increase rankings, and grow
+                  your business effectively. Start now! </p><a class="more-btn d-none" href="">Find out
                   more</a>
               </div>
             </div>
@@ -140,6 +140,7 @@
       <ul class="shape-group-7 list-unstyled">
         <li class="shape shape-1"><img src="../assets/img/circle-1.png" alt="Line"></li>
         <li class="shape shape-2"><img src="../assets/img/bubble-2.png" alt="Line"></li>
+        <li class="shape shape-5"><img src="../assets/img/bubble-2.png" alt="Line"></li>
         <li class="shape shape-3"><img src="../assets/img/bubble-1.png" alt="Line"></li>
         <li class="shape shape-4"><img src="../assets/img/we-do.png" alt="Line"></li>
       </ul>
@@ -151,7 +152,7 @@
           <div class="col-lg-6">
             <div class="about-us">
               <div class="section-heading heading-left mb-0"><span class="subtitle">About Us</span>
-                <h2 class="title mb--40">We do <span class="gradient-text-light">design, code</span> &amp; develop.</h2>
+                <h2 class="title mb--40">We do <span class="gradient-text-light">design, code</span> &amp; devops.</h2>
                 <p>
                   At Amortree Tech, we're more than just an IT consulting firm; we're your strategic partner in
                   leveraging cutting-edge technologies to drive innovation and transformation. Specializing in
