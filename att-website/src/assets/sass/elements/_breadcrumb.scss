@@ -3,7 +3,7 @@
 -------------------------*/
 .breadcrum-area {
     background: var(--gradient-primary);
-    padding: 200px 0 100px;
+    padding: 50vh 0 2vh;
     position: relative;
     z-index: 1;
     @media #{$sm-layout} {
@@ -54,7 +54,7 @@
 }
 
 .breadcrumb-banner {
-    padding: 280px 0 200px;
+    padding: 50vh 0 2vh;
     @media #{$smlg-device} {
         padding: 200px 0 50px;
     }

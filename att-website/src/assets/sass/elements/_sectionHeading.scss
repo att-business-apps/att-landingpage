@@ -13,7 +13,7 @@
         margin-bottom: 50px;
     }
     .subtitle {
-        color: var(--color-primaryG);
+        color: var(--color-primaryR);
         font-weight: 500;
         font-size: 20px;
         font-family: var(--font-primary);
@@ -277,7 +277,7 @@
             // top: 90px;
             // right: 200px;
             top: 40%;
-            right: 33%;
+            right: 32%;
             @media #{$md-layout} {
                 top: 38%;
                 right: 0%;
@@ -314,7 +314,7 @@
         }
         &.shape-5 {
             top: 55%;
-            left: 47%;
+            left: 48%;
             @media #{$md-layout} {
                 top: 60%;
                 left: 74%;

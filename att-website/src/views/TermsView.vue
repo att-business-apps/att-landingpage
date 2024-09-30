@@ -1,22 +1,23 @@
 <template>
   <div class="breadcrum-area breadcrumb-banner">
     <div class="container">
-      <div class="section-heading heading-left">
-        <h1 class="title h2">Terms Of Use</h1>
-        <p>Your Guide to Using Amortree Safely and Responsibly
-        </p>
+      <div class="breadcrumb">
+        <ul class="list-unstyled">
+          <li><a href="/">Home</a></li>
+          <li class="active">Terms</li>
+        </ul>
+        <div class="section-heading heading-left">
+          <h1 class="title h2 mb-0">Terms Of Use</h1>
+          <p>Your Guide to Using amortree Safely and Responsibly</p>
+        </div>
       </div>
       <div class="banner-thumbnail ">
         <div class=""
           style="position: relative; will-change: transform; transform: perspective(2000px) rotateX(-0.32deg) rotateY(-11.76deg) scale3d(1, 1, 1);">
-          <img src="../assets/img/banner-thumb-1.png" alt="Illustration"></div>
+          <img src="../assets/img/amorboy/am-privacy.png" class="w-75 animate__animated slideInRight" style="animation-duration: 3s" alt="Illustration"></div>
       </div>
     </div>
     <ul class="shape-group-8 list-unstyled">
-
-      <li class="shape shape-1 sal-animate" data-sal="slide-right" data-sal-duration="500" data-sal-delay="100">
-        <img src="../assets/img/bubble-9.png" alt="circle">
-      </li>
       <li class="shape shape-2 sal-animate" data-sal="slide-left" data-sal-duration="500" data-sal-delay="200">
         <img src="../assets/img/bubble-21.png" alt="circle">
       </li>
@@ -107,9 +108,9 @@
             <h2>10. Contact Us</h2>
             <p>If you have any questions or concerns about these Terms of Use, please contact us at:</p>
             <address>
-              <strong>Amortree Tech Pvt. Ltd.</strong><br>
+              <strong>amortree Tech Pvt. Ltd.</strong><br>
               <!-- [Insert Company Address]<br> -->
-              <a href="mailto:amortreetech@gmail.com">amortreetech@gmail.com</a><br>
+              <a href="mailto:hi@amortree.com">hi@amortree.com</a><br>
               <a href="tel:+917975859061">+91 79758 59061</a>
             </address>
           </div>

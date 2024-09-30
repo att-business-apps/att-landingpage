@@ -59,6 +59,18 @@ input {
         height: auto;
         padding: 0;
     }
+    &:before {
+        content: url(../../assets/img/message.png);
+        position: absolute;
+        left: 30px;
+        top: 24px;
+        z-index: 1;
+
+        @media #{$sm-layout} {
+            left: 16px;
+            top: 18px;
+        }
+    }
     .mail-icon {
         position: absolute;
         left: 30px;

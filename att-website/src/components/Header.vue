@@ -1,3 +1,19 @@
+<!-- <script setup>
+new Vue({
+    el: "#app",
+    data(){
+        return {
+          showMenu: false
+        }
+    },
+    methods: {
+        showOffcanvasMenu(){
+            this.showMenu ? this.showMenu = false : this.showMenu = true;
+        }
+    }
+})
+</script> -->
+
 <template>
     <div class="header amor-header header-style-3">
         <nav class="amor-mainmenu navbar navbar-fixed-top">
@@ -14,15 +30,24 @@
                     <div class="header-main-nav">
                         <nav class="mainmenu-nav">
                             <ul class="mainmenu">
-                                <li><a href="#whatWeDo">What we do</a></li>
-                                <li><a href="#about">Who we are</a></li>
-                                <!-- <li><a href="/about">Our Work</a></li> -->
-                                <li><a href="#contact">Contact</a></li>
+                                <li><a href="whatWeDo"><span class="text-lb">What</span> we do</a></li>
+                                <li><a href="whoWeAre"><span class="text-lg">Who</span> we are</a></li>
+                                <!-- <li><a href="whyUs"><span class="text-lr">Why</span> us</a></li> -->
+                                <li><a href="whereToFind"><span class="text-lr">Where</span> to find</a></li>
+                            </ul>
+                        </nav>
+
+                        <nav class="mainmenu-nav offcanvas offcanvas-start" tabindex="-1" id="mobilemenu" aria-labelledby="mobilemenuleLabel">
+                            <ul class="mainmenu">
+                                <li><a href="whatWeDo"><span class="text-lb">What</span> we do</a></li>
+                                <li><a href="whoWeAre"><span class="text-lg">Who</span> we are</a></li>
+                                <!-- <li><a href="whyUs"><span class="text-lr">Why</span> us</a></li> -->
+                                <li><a href="whereToFind"><span class="text-lr">Where</span> to find</a></li>
                             </ul>
                         </nav>
                     </div>
-                    <div class="menu d-none" id="menu">
-                        <ul class="menu-list">
+                    <div class="menu" id="menu">
+                        <ul class="menu-list d-none">
                             <li class="menu-item">
                                 <a href="#whatWeDo" class="menu-link is-active">
                                     <i class="menu-icon ion-md-home"></i>
@@ -36,7 +61,7 @@
                                 </a>
                             </li>
                             <li class="menu-item">
-                                <a href="#contact" class="menu-link">
+                                <a href="contact" class="menu-link">
                                     <i class="menu-icon ion-md-cart"></i>
                                     <span class="menu-name">Contact</span>
                                 </a>
@@ -76,7 +101,7 @@
                                             </svg>
                                         </a>
                                     </li>
-                                    <li>
+                                    <li class="d-none">
                                         <a href="https://www.threads.net/@amortreetech" target="_blank">
                                             <svg stroke="currentColor" fill="currentColor" stroke-width="0" height="1em"
                                                 width="1em" xmlns="http://www.w3.org/2000/svg"
@@ -89,29 +114,34 @@
                                     </li>
                                 </ul>
                             </li>
-                            <li class="sidemenu-btn d-none">
-                                <button class="btn-wrap"><span></span><span></span><span></span></button>
+                            <li class="sidemenu-btn me-2">
+                                <a href="https://wa.me/917975859061/?text=I'm%20inquiring%20about%20the%20website%20service."
+                                target="_blank" class="">
+                                    <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="48" height="48"
+                                        viewBox="0 0 48 48">
+                                        <path fill="#fff"
+                                            d="M4.868,43.303l2.694-9.835C5.9,30.59,5.026,27.324,5.027,23.979C5.032,13.514,13.548,5,24.014,5c5.079,0.002,9.845,1.979,13.43,5.566c3.584,3.588,5.558,8.356,5.556,13.428c-0.004,10.465-8.522,18.98-18.986,18.98c-0.001,0,0,0,0,0h-0.008c-3.177-0.001-6.3-0.798-9.073-2.311L4.868,43.303z">
+                                        </path>
+                                        <path fill="#fff"
+                                            d="M4.868,43.803c-0.132,0-0.26-0.052-0.355-0.148c-0.125-0.127-0.174-0.312-0.127-0.483l2.639-9.636c-1.636-2.906-2.499-6.206-2.497-9.556C4.532,13.238,13.273,4.5,24.014,4.5c5.21,0.002,10.105,2.031,13.784,5.713c3.679,3.683,5.704,8.577,5.702,13.781c-0.004,10.741-8.746,19.48-19.486,19.48c-3.189-0.001-6.344-0.788-9.144-2.277l-9.875,2.589C4.953,43.798,4.911,43.803,4.868,43.803z">
+                                        </path>
+                                        <path fill="#cfd8dc"
+                                            d="M24.014,5c5.079,0.002,9.845,1.979,13.43,5.566c3.584,3.588,5.558,8.356,5.556,13.428c-0.004,10.465-8.522,18.98-18.986,18.98h-0.008c-3.177-0.001-6.3-0.798-9.073-2.311L4.868,43.303l2.694-9.835C5.9,30.59,5.026,27.324,5.027,23.979C5.032,13.514,13.548,5,24.014,5 M24.014,42.974C24.014,42.974,24.014,42.974,24.014,42.974C24.014,42.974,24.014,42.974,24.014,42.974 M24.014,42.974C24.014,42.974,24.014,42.974,24.014,42.974C24.014,42.974,24.014,42.974,24.014,42.974 M24.014,4C24.014,4,24.014,4,24.014,4C12.998,4,4.032,12.962,4.027,23.979c-0.001,3.367,0.849,6.685,2.461,9.622l-2.585,9.439c-0.094,0.345,0.002,0.713,0.254,0.967c0.19,0.192,0.447,0.297,0.711,0.297c0.085,0,0.17-0.011,0.254-0.033l9.687-2.54c2.828,1.468,5.998,2.243,9.197,2.244c11.024,0,19.99-8.963,19.995-19.98c0.002-5.339-2.075-10.359-5.848-14.135C34.378,6.083,29.357,4.002,24.014,4L24.014,4z">
+                                        </path>
+                                        <path fill="#40c351"
+                                            d="M35.176,12.832c-2.98-2.982-6.941-4.625-11.157-4.626c-8.704,0-15.783,7.076-15.787,15.774c-0.001,2.981,0.833,5.883,2.413,8.396l0.376,0.597l-1.595,5.821l5.973-1.566l0.577,0.342c2.422,1.438,5.2,2.198,8.032,2.199h0.006c8.698,0,15.777-7.077,15.78-15.776C39.795,19.778,38.156,15.814,35.176,12.832z">
+                                        </path>
+                                        <path fill="#fff" fill-rule="evenodd"
+                                            d="M19.268,16.045c-0.355-0.79-0.729-0.806-1.068-0.82c-0.277-0.012-0.593-0.011-0.909-0.011c-0.316,0-0.83,0.119-1.265,0.594c-0.435,0.475-1.661,1.622-1.661,3.956c0,2.334,1.7,4.59,1.937,4.906c0.237,0.316,3.282,5.259,8.104,7.161c4.007,1.58,4.823,1.266,5.693,1.187c0.87-0.079,2.807-1.147,3.202-2.255c0.395-1.108,0.395-2.057,0.277-2.255c-0.119-0.198-0.435-0.316-0.909-0.554s-2.807-1.385-3.242-1.543c-0.435-0.158-0.751-0.237-1.068,0.238c-0.316,0.474-1.225,1.543-1.502,1.859c-0.277,0.317-0.554,0.357-1.028,0.119c-0.474-0.238-2.002-0.738-3.815-2.354c-1.41-1.257-2.362-2.81-2.639-3.285c-0.277-0.474-0.03-0.731,0.208-0.968c0.213-0.213,0.474-0.554,0.712-0.831c0.237-0.277,0.316-0.475,0.474-0.791c0.158-0.317,0.079-0.594-0.04-0.831C20.612,19.329,19.69,16.983,19.268,16.045z"
+                                            clip-rule="evenodd"></path>
+                                    </svg>
+                                </a>
                             </li>
-                            <li class="my_switcher d-none">
-                                <button>
-                                    <span class="setColor dark">
-                                        <svg stroke="currentColor" fill="currentColor" stroke-width="0"
-                                            viewBox="0 0 352 512" height="1em" width="1em"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <path
-                                                d="M96.06 454.35c.01 6.29 1.87 12.45 5.36 17.69l17.09 25.69a31.99 31.99 0 0 0 26.64 14.28h61.71a31.99 31.99 0 0 0 26.64-14.28l17.09-25.69a31.989 31.989 0 0 0 5.36-17.69l.04-38.35H96.01l.05 38.35zM0 176c0 44.37 16.45 84.85 43.56 115.78 16.52 18.85 42.36 58.23 52.21 91.45.04.26.07.52.11.78h160.24c.04-.26.07-.51.11-.78 9.85-33.22 35.69-72.6 52.21-91.45C335.55 260.85 352 220.37 352 176 352 78.61 272.91-.3 175.45 0 73.44.31 0 82.97 0 176zm176-80c-44.11 0-80 35.89-80 80 0 8.84-7.16 16-16 16s-16-7.16-16-16c0-61.76 50.24-112 112-112 8.84 0 16 7.16 16 16s-7.16 16-16 16z">
-                                            </path>
-                                        </svg>
-                                    </span>
-                                    <span class="setColor light">
-                                        <svg stroke="currentColor" fill="currentColor" stroke-width="0"
-                                            viewBox="0 0 512 512" height="1em" width="1em"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <path
-                                                d="M283.211 512c78.962 0 151.079-35.925 198.857-94.792 7.068-8.708-.639-21.43-11.562-19.35-124.203 23.654-238.262-71.576-238.262-196.954 0-72.222 38.662-138.635 101.498-174.394 9.686-5.512 7.25-20.197-3.756-22.23A258.156 258.156 0 0 0 283.211 0c-141.309 0-256 114.511-256 256 0 141.309 114.511 256 256 256z">
-                                            </path>
-                                        </svg>
-                                    </span>
+                            <li class="mobile-menu-btn sidemenu-btn d-lg-none d-block">
+                                <button class="btn-wrap" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobilemenu" aria-controls="mobilemenu">
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
                                 </button>
                             </li>
                         </ul>
