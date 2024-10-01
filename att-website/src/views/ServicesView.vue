@@ -93,9 +93,8 @@
               </div>
               <div class="content">
                 <h5 class="title">User Research</h5>
-                <p class="mb-2">Understanding user behavior is key to designing effective solutions. We gather insights
-                  through
-                  surveys, interviews, and user testing to ensure that your brand resonates with your target audience.
+                <p class="mb-2">Understanding user behavior is key to design effective solutions. We gather insights
+                  through surveys, interviews, and user testing to ensure that your brand resonates with your target audience.
                 </p>
               </div>
             </div>

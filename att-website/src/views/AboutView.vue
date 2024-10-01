@@ -216,7 +216,7 @@
 </template>
 
 
-<style scss scoped>
+<style scoped>
   .section-heading .subtitle {
     color: #5cb04e;
   }

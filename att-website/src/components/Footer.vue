@@ -141,8 +141,7 @@
             <div class="footer-widget border-end">
               <div class="footer-newsletter">
                 <h2 class="title">Get in touch!</h2>
-                <p>Fusce varius, dolor tempor interdum tristique, dui urna bib
-                  endum magna, ut ullamcorper purus</p>
+                <p>Subscribe now for the latest updates, insights, and exclusive offers delivered straight to your inbox! Stay connected with us.</p>
                 <form>
                   <div class="input-group">
                     <input type="email" class="form-control" placeholder="Email address">
