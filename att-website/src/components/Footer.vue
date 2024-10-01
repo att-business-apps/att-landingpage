@@ -16,10 +16,10 @@
           </div>
           <ul class="list-unstyled small-thumb">
             <li class="shape shape-1" data-sal="slide-right" data-sal-duration="800" data-sal-delay="400">
-              <img class="paralax-image" src="../assets/img/laptop-poses.png" alt="Laptop" />
+              <img class="paralax-image" src="../assets/img/amorboy/laptop-poses.png" alt="Laptop" />
             </li>
             <li class="shape shape-2" data-sal="slide-left" data-sal-duration="800" data-sal-delay="300">
-              <img class="paralax-image" src="../assets/img/bill-pay.png" alt="Bill" />
+              <img class="paralax-image" src="../assets/img/amorboy/bill-pay.png" alt="Bill" />
             </li>
           </ul>
         </div>
