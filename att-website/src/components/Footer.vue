@@ -7,7 +7,8 @@
         <div class="section-heading heading-light">
           <span class="subtitle">Let's Work Together</span>
           <h2 class="title">Need a successful project?</h2>
-          <a class="amor-btn btn-large btn-fill-white" href="estimate">Estimate Project</a>
+          <!-- <a class="amor-btn btn-large btn-fill-white" href="estimate">Estimate Project</a> -->
+          <a class="amor-btn btn-large btn-fill-white" href="whereToFind">Let's talk.</a>
         </div>
         <div class="thumbnail">
           <div class="larg-thumb" data-sal="zoom-in" data-sal-duration="600" data-sal-delay="100">
@@ -135,7 +136,7 @@
         </div>
       </div>
       <div class="footer-main pt-md-5 pt-0">
-        <div class="row d-none">
+        <div class="row">
           <div class="col-xl-6 col-lg-5 sal-animate" data-sal="slide-right" data-sal-duration="800"
             data-sal-delay="100">
             <div class="footer-widget border-end">
@@ -159,12 +160,12 @@
                   <h6 class="widget-title">What we do</h6>
                   <div class="footer-menu-link">
                     <ul class="list-unstyled">
-                      <li><a href="/">Research</a></li>
-                      <li><a href="/">Branding</a></li>
-                      <li><a href="/">Website UI/UX</a></li>
-                      <li><a href="/">Mobile App UI/UX</a></li>
-                      <li><a href="/">Design Sysytem</a></li>
-                      <li><a href="/">Logo Design</a></li>
+                      <li><a href="whatWeDo#research">Research</a></li>
+                      <li><a href="whatWeDo#branding">Branding</a></li>
+                      <li><a href="whatWeDo#logoDesign">Logo Design</a></li>
+                      <li><a href="whatWeDo#website">Website UI/UX</a></li>
+                      <li><a href="whatWeDo#mobileAppUiUx">Mobile App UI/UX</a></li>
+                      <li><a href="whatWeDo#devOps">DevOps</a></li>
                     </ul>
                   </div>
                 </div>
@@ -174,9 +175,9 @@
                   <h6 class="widget-title">Resourses &amp; Support</h6>
                   <div class="footer-menu-link">
                     <ul class="list-unstyled">
-                      <li><a href="blog">Blog</a></li>
+                      <!-- <li><a href="blog">Blog</a></li>
                       <li><a href="case-study">Case Studies</a></li>
-                      <li><a href="portfolio">Portfolio</a></li>
+                      <li><a href="portfolio">Portfolio</a></li> -->
                       <li><a href="whereToFind">Where to find</a></li>
                       <li><a href="privacy">Privacy Policy</a></li>
                       <li><a href="terms">Terms of Use</a></li>

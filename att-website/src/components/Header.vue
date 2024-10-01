@@ -1,23 +1,23 @@
-<!-- <script setup>
-new Vue({
-    el: "#app",
-    data(){
-        return {
-          showMenu: false
-        }
-    },
-    methods: {
-        showOffcanvasMenu(){
-            this.showMenu ? this.showMenu = false : this.showMenu = true;
-        }
-    }
-})
-</script> -->
+<script setup>
+    // new Vue({
+    //     el: "#mobileMenu",
+    //     data(){
+    //         return {
+    //         showMenu: false
+    //         }
+    //     },
+    //     methods: {
+    //         showOffcanvasMenu(){
+    //             this.showMenu ? this.showMenu = false : this.showMenu = true;
+    //         }
+    //     }
+    // })
+</script>
 
 <template>
     <div class="header amor-header header-style-3">
         <nav class="amor-mainmenu navbar navbar-fixed-top">
-            <div class="container">
+            <div class="container" id="mobileMenu">
                 <div class="header-navbar">
                     <div class="header-logo">
                         <a href="/">
@@ -37,13 +37,19 @@ new Vue({
                             </ul>
                         </nav>
 
-                        <nav class="mainmenu-nav offcanvas offcanvas-start" tabindex="-1" id="mobilemenu" aria-labelledby="mobilemenuleLabel">
-                            <ul class="mainmenu">
-                                <li><a href="whatWeDo"><span class="text-lb">What</span> we do</a></li>
-                                <li><a href="whoWeAre"><span class="text-lg">Who</span> we are</a></li>
-                                <!-- <li><a href="whyUs"><span class="text-lr">Why</span> us</a></li> -->
-                                <li><a href="whereToFind"><span class="text-lr">Where</span> to find</a></li>
-                            </ul>
+                        <nav class="offcanvas offcanvas-start" :class="showMenu ? 'show' : ''" tabindex="-1" :style="{ visibility: showMenu ? 'visible' : 'hidden' }">
+                            <div class="offcanvas-header">
+                                <h5 class="offcanvas-title" id="">Menu</h5>
+                                <button type="button" class="btn-close text-reset" @click.prevent="showOffcanvasMenu()"></button>
+                            </div>
+                            <div class="offcanvas-body">
+                                <ul class="mainmenu">
+                                    <li><a href="whatWeDo"><span class="text-lb">What</span> we do</a></li>
+                                    <li><a href="whoWeAre"><span class="text-lg">Who</span> we are</a></li>
+                                    <!-- <li><a href="whyUs"><span class="text-lr">Why</span> us</a></li> -->
+                                    <li><a href="whereToFind"><span class="text-lr">Where</span> to find</a></li>
+                                </ul>
+                            </div>
                         </nav>
                     </div>
                     <div class="menu" id="menu">
@@ -138,7 +144,7 @@ new Vue({
                                 </a>
                             </li>
                             <li class="mobile-menu-btn sidemenu-btn d-lg-none d-block">
-                                <button class="btn-wrap" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobilemenu" aria-controls="mobilemenu">
+                                <button class="btn-wrap" type="button" @click.prevent="showOffcanvasMenu()">
                                     <span></span>
                                     <span></span>
                                     <span></span>

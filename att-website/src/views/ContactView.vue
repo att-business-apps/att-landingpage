@@ -1,5 +1,72 @@
-<template>
+<script setup>
+import { ref } from "vue";
 
+const disableBtn=ref(false);
+const from_name = ref("");
+const email = ref("");
+const phoneNumber = ref("");
+const message = ref("");
+
+function sendMail() {
+  var params = {
+    from_name: from_name.value,
+    to_name: "Admin",
+    email: email.value,
+    phoneNumber: phoneNumber.value,
+    message: message.value,
+  };
+
+  const serviceID = "service_77crg6o";
+
+  if (!params.from_name) {
+    alert("Please enter your name");
+    return;
+  }
+  if (!params.email) {
+    alert("Please enter your email");
+    return;
+  }
+  if (!params.phoneNumber) {
+    alert("Please enter your phone number");
+    return;
+  }
+  if (!params.message) {
+    alert("Please enter your requirement");
+    return;
+  }
+
+  disableBtn.value = true;
+  emailjs
+    .send(serviceID, getTemplate('admin'), params)
+    .then((res) => {
+      from_name.value = "";
+      email.value = "";
+      phoneNumber.value = "";
+      message.value = "";
+      console.log(res);
+      disableBtn.value = false;
+    })
+    .catch((err) => console.log(err));
+  emailjs
+    .send(serviceID, getTemplate('customer'), params)
+    .then((res) => {
+      from_name.value = "";
+      email.value = "";
+      phoneNumber.value = "";
+      message.value = "";
+      console.log(res);
+      disableBtn.value = false;
+    })
+    .catch((err) => console.log(err));
+}
+
+function getTemplate(target){
+  if(target=='admin')return 'template_tcauze5';
+  if(target=='customer')return 'template_svj7071';
+}
+</script>
+
+<template>
     <div class="breadcrum-area breadcrumb-banner">
         <div class="container">
             <div class="breadcrumb">
@@ -37,18 +104,32 @@
                     <div class="contact-form-box shadow-box mb--30">
                         <h3 class="title">Get a free amortree tech quote now</h3>
                         <form class="amor-contact-form">
-                            <div class="form-group"><label>Name</label><input type="text" class="form-control"
-                                    name="contact-name" required=""></div>
-                            <div class="form-group"><label>Email</label><input type="email" class="form-control"
-                                    name="contact-email" required=""></div>
-                            <div class="form-group"><label>Phone</label><input type="tel" class="form-control"
-                                    name="contact-phone" required=""></div>
-                            <div class="form-group mb--40"><label>How can we help you?</label><textarea
-                                    class="form-control" name="contact-message" rows="4"></textarea></div>
-                            <div class="form-group"><button type="submit"
-                                    class="amor-btn btn-fill-primary btn-fluid btn-primary" name="submit-btn">Get
-                                    Pricing
-                                    Now</button></div>
+                            <div class="form-group">
+                            <label>Name</label>
+                            <input type="text" v-model="from_name" class="form-control" name="contact-name"
+                                placeholder="John Smith" required="" />
+                            </div>
+                            <div class="form-group">
+                            <label>Email</label>
+                            <input type="email" v-model="email" class="form-control" name="contact-email"
+                                placeholder="example@mail.com" required />
+                            </div>
+                            <div class="form-group mb--40">
+                            <label>Phone</label>
+                            <input type="tel" class="form-control" v-model="phoneNumber" name="contact-phone"
+                                placeholder="+123456789" required />
+                            </div>
+                            <div class="form-group mb--40">
+                            <label>How can we help you?</label>
+                            <textarea name="contact-message" id="message" class="form-control textarea" v-model="message"
+                                cols="30" rows="6" required></textarea>
+                            </div>
+                            <div class="form-group">
+                            <button @click="sendMail" type="button" class="amor-btn btn-fill-primary btn-fluid btn-primary"
+                                name="submit-btn" :disabled="disableBtn">
+                                Send
+                            </button>
+                            </div>
                             <div class="form-group"></div>
                         </form>
                     </div>

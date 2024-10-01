@@ -235,6 +235,7 @@
             padding: 40px 15px;
         }
         @media #{$md-layout} {
+            display: grid;
             padding: 40px 25px;
         }
         &:after {
@@ -257,7 +258,7 @@
         }
         .thumbnail {
             margin-right: 25px;
-            max-width: 85px;
+            max-width: 140px;
             perspective: 1000px;
 
             img {
@@ -265,10 +266,10 @@
                 animation-timeline: scroll();
             }
             @media #{$smlg-device} {
-                max-width: 60px;
+                max-width: 120px;
             }
             @media #{$md-layout} {
-                width: 60px;
+                width: 120px;
                 margin-right: 15px;
             }
         }
@@ -351,11 +352,11 @@
                 p {
                     color: var(--color-body);
                     opacity: 1;
-                    overflow: hidden;
-                    text-overflow: ellipsis;
-                    display: -webkit-box;
-                    -webkit-line-clamp: 3;
-                    -webkit-box-orient: vertical;
+                    // overflow: hidden;
+                    // text-overflow: ellipsis;
+                    // display: -webkit-box;
+                    // -webkit-line-clamp: 3;
+                    // -webkit-box-orient: vertical;
                 }
                 .more-btn {
                     color: var(--color-body);
@@ -382,7 +383,14 @@
 
 .service-scroll-navigation-area {
 	position: relative;
-	padding-top: 90px;
+    scroll-margin-top: 140px;
+
+    .section {
+        scroll-margin-top: 100px !important;
+        @media #{$sm-layout} {
+            scroll-margin-top: 100px !important;
+        }
+    }
 }
 .service-scroll-nav {
 	background-color: var(--color-white);
@@ -418,17 +426,17 @@
 		border-bottom: 1px solid var(--color-mercury);
 
         @media #{$md-layout} {
-            display: flex; /* [1] */
-            flex-wrap: nowrap; /* [1] */
-            overflow-x: auto; /* [1] */
-            -webkit-overflow-scrolling: touch; /* [4] */
-            -ms-overflow-style: -ms-autohiding-scrollbar; /* [5] */ 
+            display: flex; 
+            flex-wrap: nowrap; 
+            overflow-x: auto; 
+            -webkit-overflow-scrolling: touch; 
+            -ms-overflow-style: -ms-autohiding-scrollbar;
             justify-content: space-between;
             scroll-snap-type: x mandatory;
         }
 		li {
 			margin: 0 10px;
-            scroll-margin-top: 100px;
+            scroll-margin-top: 140px;
 
             @media #{$md-layout} {
                 flex: 1;
@@ -442,7 +450,7 @@
 				color: var(--color-dark);
 				position: relative;
 
-                @media #{$md-layout} {
+                @media #{$sm-layout} {
 				    padding: 20px 10px;
                 }
 				&::after {

@@ -102,7 +102,7 @@ function getTemplate(target){
               </div>
               <div class="animate__animated slideInRight" style="animation-duration: 2s">
                 <div class="large-thumb-2">
-                  <img src="../assets/img/laptop-poses-banner.png" alt="Laptop" />
+                  <img src="../assets/img/amorboy/laptop-poses-banner.png" alt="Laptop" />
                 </div>
               </div>
               <ul class="list-unstyled shape-group">
@@ -160,10 +160,10 @@ function getTemplate(target){
           <div class="col-lg-4 mt--200 mt_md--0">
             <div class="services-grid">
               <div class="thumbnail">
-                <img src="../assets/img/icon-3.png" alt="icon" />
+                <img src="../assets/img/icon/research-1.png" alt="icon" />
               </div>
               <div class="content">
-                <h5 class="title"><a href="#">Research</a></h5>
+                <h5 class="title"><a href="whatWeDo">Research</a></h5>
                 <p>
                   Research and strategy are the foundation for informed decision-making, helping amortree Tech deliver
                   tailored solutions that drive business success.
@@ -175,10 +175,10 @@ function getTemplate(target){
           <div class="col-lg-4 mt--0">
             <div class="services-grid">
               <div class="thumbnail">
-                <img src="../assets/img/icon-31.png" alt="icon" />
+                <img src="../assets/img/icon/brand-2.png" alt="icon" />
               </div>
               <div class="content">
-                <h5 class="title"><a href="#">Branding</a></h5>
+                <h5 class="title"><a href="whatWeDo">Branding</a></h5>
                 <p>
                   Branding shapes your business identity, connects with audiences, and tells your story. Let amortree
                   Tech help you stand out!
@@ -190,10 +190,10 @@ function getTemplate(target){
           <div class="col-lg-4 mt--200 mt--0">
             <div class="services-grid">
               <div class="thumbnail">
-                <img src="../assets/img/icon-4.png" alt="icon" />
+                <img src="../assets/img/icon/logo-1.png" alt="icon" />
               </div>
               <div class="content">
-                <h5 class="title"><a href="#">Logo Design</a></h5>
+                <h5 class="title"><a href="whatWeDo">Logo Design</a></h5>
                 <p>
                   A logo is more than just a symbol; it’s the face of your brand. amortree Tech creates impactful logos
                   that define identities.
@@ -207,10 +207,10 @@ function getTemplate(target){
           <div class="col-lg-4 mt--0">
             <div class="services-grid">
               <div class="thumbnail">
-                <img src="../assets/img/icon-27.png" alt="icon" />
+                <img src="../assets/img/icon/web-2.png" alt="icon" />
               </div>
               <div class="content">
-                <h5 class="title"><a href="#">Website UI/UX</a></h5>
+                <h5 class="title"><a href="whatWeDo">Website</a></h5>
                 <p>
                   amortree Tech delivers intuitive Web UI/UX design and seamless development, ensuring user-friendly,
                   responsive, and engaging digital experiences for your brand.
@@ -222,14 +222,13 @@ function getTemplate(target){
           <div class="col-lg-4 mt--200 mt_md--0">
             <div class="services-grid">
               <div class="thumbnail">
-                <img src="../assets/img/icon-28.png" alt="icon" />
+                <img src="../assets/img/icon/mob-7.png" alt="icon" />
               </div>
               <div class="content">
-                <h5 class="title"><a href="#">Mobile App UI/UX</a></h5>
+                <h5 class="title"><a href="whatWeDo">Mobile App UI/UX</a></h5>
                 <p>
-                  Boost your online visibility with our expert SEO services.
-                  Drive traffic, increase rankings, and grow your business
-                  effectively. Start now!
+                  Mobile App UI/UX design focuses on creating intuitive, user-friendly interfaces that enhance
+                  engagement, ensuring seamless navigation and functionality.
                 </p>
                 <a class="more-btn" href="whatWeDo">Find out more</a>
               </div>
@@ -238,13 +237,13 @@ function getTemplate(target){
           <div class="col-lg-4 mt--0">
             <div class="services-grid">
               <div class="thumbnail">
-                <img src="../assets/img/icon-31.png" alt="icon" />
+                <img src="../assets/img/icon/devops-1.png" alt="icon" />
               </div>
               <div class="content">
-                <h5 class="title"><a href="#">Design System</a></h5>
+                <h5 class="title"><a href="whatWeDo">DevOps</a></h5>
                 <p>
-                  A design system ensures consistency and efficiency in your brand's visual language. amortree Tech
-                  crafts unified, scalable systems for cohesive digital experiences.
+                  DevOps streamlines collaboration between development and operations teams, ensuring efficient software
+                  delivery, automation, and continuous integration for seamless performance.
                 </p>
                 <a class="more-btn" href="whatWeDo">Find out more</a>
               </div>
@@ -255,7 +254,7 @@ function getTemplate(target){
       <ul class="shape-group-7 list-unstyled">
         <li class="shape shape-1"><img src="../assets/img/circle-1.png" alt="Line"></li>
         <li class="shape shape-3"><img src="../assets/img/bubble-1.png" alt="Line"></li>
-        <li class="shape shape-4"><img src="../assets/img/we-do.png" alt="Line"></li>
+        <li class="shape shape-4"><img src="../assets/img/amorboy/we-do.png" alt="Line"></li>
         <li class="shape shape-5"><img src="../assets/img/bubble-15.png" alt="Line"></li>
         <li class="shape shape-1">
           <img src="../assets/img/circle-1.png" alt="Line" />
@@ -270,12 +269,12 @@ function getTemplate(target){
           <img src="../assets/img/bubble-1.png" alt="Line" />
         </li>
         <li class="shape shape-4">
-          <img src="../assets/img/we-do.png" alt="Line" />
+          <img src="../assets/img/amorboy/we-do.png" alt="Line" />
         </li>
       </ul>
     </div>
 
-    <section class="section section-padding-equal bg-color-light" id="about">
+    <section class="section section-padding-equal bg-color-light pb-0" id="about">
       <div class="container">
         <div class="row align-items-center">
           <div class="col-lg-6">
@@ -310,11 +309,12 @@ function getTemplate(target){
                   and let's embark on a journey of innovation and success
                   together.
                 </p>
+                <a href="whoWeAre" class="amor-btn btn-fill-primary btn-large" tabindex="0">Find out more</a>
               </div>
             </div>
           </div>
           <div class="col-xl-5 col-lg-6 offset-xl-1">
-            <div class="contact-form-box">
+            <div class="contact-form-box d-none">
               <h3 class="title">Describe your project</h3>
               <form class="amor-contact-form">
                 <div class="form-group">
@@ -346,6 +346,7 @@ function getTemplate(target){
                 <div class="form-group"></div>
               </form>
             </div>
+            <img src="../assets/img/amorboy/am-home-abt.png" alt="Bubble" />
           </div>
         </div>
       </div>
