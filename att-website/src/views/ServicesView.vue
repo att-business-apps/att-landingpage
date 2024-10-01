@@ -12,7 +12,7 @@
         </div>
         <ul class="list-unstyled">
           <li><a href="/">Home</a></li>
-          <li class="active">What We Do</li>
+          <li class="active text-lb">What We Do</li>
         </ul>
       </div>
       <div class="banner-thumbnail bottom-0">
@@ -439,8 +439,9 @@
               </div>
               <div class="content">
                 <h5 class="title">Responsive Web Design</h5>
-                <p class="mb-2">We build websites that are fully responsive, ensuring that your site looks and performs
-                  flawlessly on desktops, tablets, and mobile devices.</p>
+                <p class="mb-2">We build websites adapt to various screen sizes and devices, providing an optimal user
+                  experience, improving accessibility, and maintaining consistency across desktops, tablets, and
+                  smartphones.</p>
               </div>
             </div>
           </div>

@@ -76,7 +76,7 @@ function getTemplate(target){
                 </div>
                 <ul class="list-unstyled">
                     <li><a href="/">Home</a></li>
-                    <li class="active">Where to find</li>
+                    <li class="active text-lr">Where to find</li>
                 </ul>
             </div>
             <div class="banner-thumbnail">
@@ -89,7 +89,7 @@ function getTemplate(target){
         </div>
         <ul class="shape-group-8 list-unstyled">
             <li class="shape shape-2 sal-animate" data-sal="slide-left" data-sal-duration="500" data-sal-delay="200">
-                <img src="../assets/img/bubble-21.png" alt="circle">
+                <img src="../assets/img/bubble-22.png" alt="circle">
             </li>
             <li class="shape shape-3 sal-animate" data-sal="slide-up" data-sal-duration="500" data-sal-delay="300">
                 <img src="../assets/img/line-1.png" alt="circle">
@@ -159,5 +159,7 @@ function getTemplate(target){
 </template>
 
 <style>
-@media (min-width: 1024px) {}
+h4.phone-number a {
+    color: #dc3c2d;
+}
 </style>

@@ -8,7 +8,7 @@
         </div>
         <ul class="list-unstyled">
           <li><a href="/">Home</a></li>
-          <li class="active">Who we are</li>
+          <li class="active text-lg">Who we are</li>
         </ul>
       </div>
       <div class="banner-thumbnail ">
@@ -32,16 +32,16 @@
   <div class="section section-padding case-study-featured-area pb-0">
     <div class="container">
       <div class="row align-items-end">
-        <div class="col-xl-7 col-lg-6">
-          <div class="case-study-featured-thumb text-start"><img src="../assets/img/amorboy/am-aboutatt.png"
+        <div class="col-xl-7 col-lg-6 order-lg-first order-last">
+          <div class="case-study-featured-thumb text-start mb-0"><img src="../assets/img/amorboy/am-aboutatt.png"
               class="w-100" alt="travel">
           </div>
         </div>
-        <div class="col-xl-5 col-lg-6">
+        <div class="col-xl-5 col-lg-6 order-lg-last order-first">
           <div class="case-study-featured">
             <div class="section-heading heading-left">
               <!-- <span class="subtitle">Who we are</span> -->
-              <h2 class="title">We do design, code &amp; devOps.</h2>
+              <h2 class="title">We do <span class="text-lg">design</span>, code &amp; devOps.</h2>
               <p>
                 At amortree Tech, we specialize in designing, coding, and DevOps to help businesses grow in the digital
                 age. From web and mobile UI/UX design to branding and development, we create solutions that make a
@@ -79,7 +79,7 @@
       <div class="section-heading heading-left heading-light-left mb--100">
         <div class="subtitle">Our Values</div>
         <h2 class="title">
-          <span class="gradient-text yellow-light">Why should you</span> work with us?
+          <span class="gradient-text green-light">Why should you</span> work with us?
         </h2>
         <p>
           With a passion for innovation and a dedication to excellence, amortree Tech is committed to delivering
@@ -139,8 +139,8 @@
 
   <div class="section section-padding bg-color-light pb--70">
     <div class="section-heading  mb--90">
-      <div class="subtitle">Process</div>
-      <h2 class="title">The Comprehensive Brand Development Process</h2>
+      <div class="subtitle">Structured Workflow</div>
+      <h2 class="title">Complete Brand Growth Process</h2>
       <p>Our Comprehensive Brand Development Process combines research, branding, and design to create cohesive brand
         identities, engaging user experiences, and continuous improvements, ensuring your brand thrives in the digital
         landscape.</p>
@@ -213,7 +213,11 @@
       <li class="shape shape-6"><img src="../assets/img/line-5.png" alt="Line"></li>
     </ul>
   </div>
-
-
-
 </template>
+
+
+<style scss scoped>
+  .section-heading .subtitle {
+    color: #5cb04e;
+  }
+</style>

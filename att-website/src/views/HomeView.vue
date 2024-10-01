@@ -309,7 +309,7 @@ function getTemplate(target){
                   and let's embark on a journey of innovation and success
                   together.
                 </p>
-                <a href="whoWeAre" class="amor-btn btn-fill-primary btn-large" tabindex="0">Find out more</a>
+                <a href="whoWeAre" class="amor-btn btn-fill-primary btn-sm" tabindex="0">Find out more</a>
               </div>
             </div>
           </div>

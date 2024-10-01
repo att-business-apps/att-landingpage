@@ -1,6 +1,5 @@
 <template>
 
-
   <div class="section call-to-action-area pb-0">
     <div class="container">
       <div class="call-to-action">
@@ -51,7 +50,7 @@
   </div>
 
 
-  <div class="footer-area" id="contact">
+  <div class="footer-area pb-lg-0 pb-5 mb-lg-0 mb-4" id="contact">
     <div class="container">
       <div class="footer-top d-md-none d-block pt-5">
         <div class="footer-social-link">
@@ -227,4 +226,15 @@
       </div>
     </div>
   </div>
+
+  <ul class="mobilemenu mainmenu d-lg-none d-flex">
+      <li><a href="whatWeDo"><span class="text-lb">What</span> we do</a></li>
+      <li><a href="whoWeAre"><span class="text-lg">Who</span> we are</a></li>
+      <!-- <li><a href="whyUs"><span class="text-lr">Why</span> us</a></li> -->
+      <li><a href="whereToFind"><span class="text-lr">Where</span> to find</a></li>
+  </ul>
 </template>
+
+<style scoped>
+  
+</style>

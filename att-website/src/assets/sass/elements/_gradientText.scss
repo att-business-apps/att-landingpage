@@ -26,8 +26,26 @@
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
     }
-}
 
+    &.green-light {
+        background: linear-gradient(270deg, var(--color-light) 21.9%, var(--color-primaryG) 53.55%);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+    &.green-dark {
+        background: linear-gradient(270deg, var(--color-dark) 21.9%, var(--color-primaryG) 53.55%);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+}
+.text-ll {
+    background: linear-gradient(270deg, var(--color-dark) 21.9%, var(--logo-light) 53.55%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
 .text-lb {
     background: linear-gradient(270deg, var(--color-dark) 21.9%, var(--color-primary) 53.55%);
     background-clip: text;

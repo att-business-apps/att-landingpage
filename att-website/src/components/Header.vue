@@ -1,17 +1,5 @@
 <script setup>
-    // new Vue({
-    //     el: "#mobileMenu",
-    //     data(){
-    //         return {
-    //         showMenu: false
-    //         }
-    //     },
-    //     methods: {
-    //         showOffcanvasMenu(){
-    //             this.showMenu ? this.showMenu = false : this.showMenu = true;
-    //         }
-    //     }
-    // })
+    
 </script>
 
 <template>
@@ -35,21 +23,6 @@
                                 <!-- <li><a href="whyUs"><span class="text-lr">Why</span> us</a></li> -->
                                 <li><a href="whereToFind"><span class="text-lr">Where</span> to find</a></li>
                             </ul>
-                        </nav>
-
-                        <nav class="offcanvas offcanvas-start" :class="showMenu ? 'show' : ''" tabindex="-1" :style="{ visibility: showMenu ? 'visible' : 'hidden' }">
-                            <div class="offcanvas-header">
-                                <h5 class="offcanvas-title" id="">Menu</h5>
-                                <button type="button" class="btn-close text-reset" @click.prevent="showOffcanvasMenu()"></button>
-                            </div>
-                            <div class="offcanvas-body">
-                                <ul class="mainmenu">
-                                    <li><a href="whatWeDo"><span class="text-lb">What</span> we do</a></li>
-                                    <li><a href="whoWeAre"><span class="text-lg">Who</span> we are</a></li>
-                                    <!-- <li><a href="whyUs"><span class="text-lr">Why</span> us</a></li> -->
-                                    <li><a href="whereToFind"><span class="text-lr">Where</span> to find</a></li>
-                                </ul>
-                            </div>
                         </nav>
                     </div>
                     <div class="menu" id="menu">
@@ -143,7 +116,7 @@
                                     </svg>
                                 </a>
                             </li>
-                            <li class="mobile-menu-btn sidemenu-btn d-lg-none d-block">
+                            <li class="mobile-menu-btn sidemenu-btn d-lg-none d-none">
                                 <button class="btn-wrap" type="button" @click.prevent="showOffcanvasMenu()">
                                     <span></span>
                                     <span></span>
