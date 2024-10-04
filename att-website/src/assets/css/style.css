@@ -15885,6 +15885,12 @@ input {
     left: 40%;
   }
 }
+@media only screen and (max-width: 767px) {
+  .shape-group-7 .shape.shape-4 {
+    top: 69%;
+    left: 40%;
+  }
+}
 .shape-group-7 .shape.shape-4 img {
   animation: rotate-image linear;
   animation-timeline: scroll();
@@ -15896,6 +15902,12 @@ input {
 @media only screen and (max-width: 991px) {
   .shape-group-7 .shape.shape-5 {
     top: 60%;
+    left: 74%;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .shape-group-7 .shape.shape-5 {
+    top: 40%;
     left: 74%;
   }
 }

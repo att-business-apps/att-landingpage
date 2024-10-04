@@ -187,7 +187,7 @@ function getTemplate(target){
               </div>
             </div>
           </div>
-          <div class="col-lg-4 mt--200 mt--0">
+          <div class="col-lg-4 mt--200 mt_md--0">
             <div class="services-grid">
               <div class="thumbnail">
                 <img src="../assets/img/icon/logo-1.png" alt="icon" />
@@ -252,25 +252,14 @@ function getTemplate(target){
         </div>
       </div>
       <ul class="shape-group-7 list-unstyled">
-        <li class="shape shape-1"><img src="../assets/img/circle-1.png" alt="Line"></li>
-        <li class="shape shape-3"><img src="../assets/img/bubble-1.png" alt="Line"></li>
+        <li class="shape shape-1 d-lg-block d-none"><img src="../assets/img/circle-1.png" alt="Line"></li>
+        <li class="shape shape-3 d-lg-block d-none"><img src="../assets/img/bubble-1.png" alt="Line"></li>
         <li class="shape shape-4"><img src="../assets/img/amorboy/we-do.png" alt="Line"></li>
         <li class="shape shape-5"><img src="../assets/img/bubble-15.png" alt="Line"></li>
-        <li class="shape shape-1">
-          <img src="../assets/img/circle-1.png" alt="Line" />
-        </li>
-        <li class="shape shape-2">
-          <img src="../assets/img/bubble-2.png" alt="Line" />
-        </li>
-        <li class="shape shape-5">
-          <img src="../assets/img/bubble-2.png" alt="Line" />
-        </li>
-        <li class="shape shape-3">
-          <img src="../assets/img/bubble-1.png" alt="Line" />
-        </li>
-        <li class="shape shape-4">
-          <img src="../assets/img/amorboy/we-do.png" alt="Line" />
-        </li>
+        <li class="shape shape-2"><img src="../assets/img/bubble-2.png" alt="Line" /></li>
+        <li class="shape shape-5 d-lg-block d-none"><img src="../assets/img/bubble-2.png" alt="Line" /></li>
+        <li class="shape shape-3 d-lg-block d-none"><img src="../assets/img/bubble-1.png" alt="Line" /></li>
+        <li class="shape shape-4"><img src="../assets/img/amorboy/we-do.png" alt="Line" /></li>
       </ul>
     </div>
 

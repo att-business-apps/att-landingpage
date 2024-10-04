@@ -306,6 +306,10 @@
                 top: 70%;
                 left: 40%;
             }
+            @media #{$sm-layout} {
+                top: 69%;
+                left: 40%;
+            }
 
             img {
                 animation: rotate-image linear;
@@ -317,6 +321,10 @@
             left: 48%;
             @media #{$md-layout} {
                 top: 60%;
+                left: 74%;
+            }
+            @media #{$sm-layout} {
+                top: 40%;
                 left: 74%;
             }
         }
