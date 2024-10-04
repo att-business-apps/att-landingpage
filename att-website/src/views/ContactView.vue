@@ -71,7 +71,7 @@ function getTemplate(target){
         <div class="container">
             <div class="breadcrumb">
                 <div class="section-heading heading-left">
-                    <h1 class="title h2 mb-0">Need Assistance? Let’s Connect!</h1>
+                    <h1 class="title h2 mb-0">Let’s craft something extraordinary together!</h1>
                     <p>We’re here to help with all your branding, design and development needs.</p>
                 </div>
                 <ul class="list-unstyled">
@@ -100,44 +100,52 @@ function getTemplate(target){
     <div class="section section-padding">
         <div class="container">
             <div class="row">
-                <div class="col-xl-5 col-lg-6">
+                <div class="col-lg-6">
                     <div class="contact-form-box shadow-box mb--30">
-                        <h3 class="title">Get a free amortree tech quote now</h3>
                         <form class="amor-contact-form">
+                            <h4 class="mb-2">We’d love to know more about your project needs!</h4>
+                            <p class="mb-3">Submit your query, and we’ll reach out to you shortly!</p>
+                            <div class="form-group mb--40">
+                                <!-- <label>How can we help you?</label> -->
+                                <textarea name="contact-message" id="message" class="form-control textarea"
+                                    v-model="message" cols="30" rows="6" placeholder="How can we help you?"
+                                    required></textarea>
+                            </div>
+
+
+                            <h4 class="mt-3 mb-2">Your Contact Details</h4>
+                            <p class="mb-3">For project discussions only, thank you!</p>
                             <div class="form-group">
-                            <label>Name</label>
-                            <input type="text" v-model="from_name" class="form-control" name="contact-name"
-                                placeholder="John Smith" required="" />
+                                <!-- <label>Name</label> -->
+                                <input type="text" v-model="from_name" class="form-control" name="contact-name"
+                                    placeholder="Your Name" required="" />
                             </div>
                             <div class="form-group">
-                            <label>Email</label>
-                            <input type="email" v-model="email" class="form-control" name="contact-email"
-                                placeholder="example@mail.com" required />
+                                <!-- <label>Email</label> -->
+                                <input type="email" v-model="email" class="form-control" name="contact-email"
+                                    placeholder="Your Email" required />
                             </div>
                             <div class="form-group mb--40">
-                            <label>Phone</label>
-                            <input type="tel" class="form-control" v-model="phoneNumber" name="contact-phone"
-                                placeholder="+123456789" required />
-                            </div>
-                            <div class="form-group mb--40">
-                            <label>How can we help you?</label>
-                            <textarea name="contact-message" id="message" class="form-control textarea" v-model="message"
-                                cols="30" rows="6" required></textarea>
+                                <!-- <label>Phone</label> -->
+                                <input type="tel" class="form-control" v-model="phoneNumber" name="contact-phone"
+                                    placeholder="Your Phone" required />
                             </div>
                             <div class="form-group">
-                            <button @click="sendMail" type="button" class="amor-btn btn-fill-primary btn-fluid btn-primary"
-                                name="submit-btn" :disabled="disableBtn">
-                                Send
-                            </button>
+                                <button @click="sendMail" type="button"
+                                    class="amor-btn btn-fill-primary btn-fluid btn-primary" name="submit-btn"
+                                    :disabled="disableBtn">
+                                    Send
+                                </button>
                             </div>
                             <div class="form-group"></div>
                         </form>
                     </div>
                 </div>
-                <div class="col-xl-5 col-lg-6 offset-xl-1">
+                <div class="col-xl-4 col-lg-6 offset-xl-1">
                     <div class="contact-info mb--100 mb_md--30 mt_md--0 mt--150">
                         <h4 class="title">Phone</h4>
-                        <p>Reach out for any queries; our experts are here to assist and resolve your concerns promptly.</p>
+                        <p>Reach out for any queries; our experts are here to assist and resolve your concerns promptly.
+                        </p>
                         <h4 class="phone-number"><a href="tel:+917975859061">+91 79758 59061</a></h4>
                     </div>
 
@@ -153,7 +161,13 @@ function getTemplate(target){
         <ul class="list-unstyled shape-group-12">
             <li class="shape shape-1"><img src="../assets/img/bubble-2.png" alt="Bubble"></li>
             <li class="shape shape-2"><img src="../assets/img/bubble-1.png" alt="Bubble"></li>
-            <li class="shape shape-3"><img src="../assets/img/circle-3.png" alt="Circle"></li>
+            <li class="shape shape-3"><img src="../assets/img/circle-1.png" alt="Circle"></li>
+            <li class="shape shape-3"><img src="../assets/img/circle-1.png" alt="Circle"></li>
+            <li class="shape shape-3"><img src="../assets/img/circle-1.png" alt="Circle"></li>
+            <li class="shape shape-3"><img src="../assets/img/circle-1.png" alt="Circle"></li>
+            <li class="shape shape-3"><img src="../assets/img/circle-1.png" alt="Circle"></li>
+            <li class="shape shape-3"><img src="../assets/img/circle-1.png" alt="Circle"></li>
+            <li class="shape shape-3"><img src="../assets/img/circle-1.png" alt="Circle"></li>
         </ul>
     </div>
 </template>
