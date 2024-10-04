@@ -168,9 +168,11 @@
                     font-size: 55px;
                 }
                 @media #{$sm-layout} {
-                    font-size: 40px;
+                    font-size: 46px;
+                    margin-bottom: 1rem;
                 }
                 .gradient-text-light {
+                    display: inline;
                     background: linear-gradient(270deg, var(--color-dark) 21.9%, var(--color-primary) 53.55%);
                     background-clip: text;
                     -webkit-background-clip: text;
@@ -179,6 +181,10 @@
             }
 
             h4 {
+                margin-top: 1rem;
+                @media #{$sm-layout} {
+                    margin-top: 1.5rem;
+                }
                 .gradient-text-light {
                     background: linear-gradient(270deg, var(--color-dark) 21.9%, var(--color-primary) 53.55%);
                     background-clip: text;

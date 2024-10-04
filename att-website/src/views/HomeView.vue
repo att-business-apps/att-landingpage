@@ -74,7 +74,7 @@ function getTemplate(target){
           <div class="col-lg-6 pb-5">
             <div class="banner-content">
               <div class="animate__animated fadeInUp" style="animation-duration: 1s">
-                <h1 class="title">
+                <h1 class="title d-inline">
                   A Touch of Class for Your
                   <span class="gradient-text-light">Digital Presence</span>.
                 </h1>

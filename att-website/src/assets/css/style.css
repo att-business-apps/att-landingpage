@@ -15881,7 +15881,7 @@ input {
 }
 @media only screen and (max-width: 991px) {
   .shape-group-7 .shape.shape-4 {
-    top: 70%;
+    top: 66%;
     left: 40%;
   }
 }
@@ -15901,7 +15901,7 @@ input {
 }
 @media only screen and (max-width: 991px) {
   .shape-group-7 .shape.shape-5 {
-    top: 60%;
+    top: 38%;
     left: 74%;
   }
 }
@@ -18628,14 +18628,24 @@ Pagination
 }
 @media only screen and (max-width: 767px) {
   .banner.banner-style-1 .banner-content .title {
-    font-size: 40px;
+    font-size: 46px;
+    margin-bottom: 1rem;
   }
 }
 .banner.banner-style-1 .banner-content .title .gradient-text-light {
+  display: inline;
   background: linear-gradient(270deg, var(--color-dark) 21.9%, var(--color-primary) 53.55%);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+.banner.banner-style-1 .banner-content h4, .banner.banner-style-1 .banner-content .h4 {
+  margin-top: 1rem;
+}
+@media only screen and (max-width: 767px) {
+  .banner.banner-style-1 .banner-content h4, .banner.banner-style-1 .banner-content .h4 {
+    margin-top: 1.5rem;
+  }
 }
 .banner.banner-style-1 .banner-content h4 .gradient-text-light, .banner.banner-style-1 .banner-content .h4 .gradient-text-light {
   background: linear-gradient(270deg, var(--color-dark) 21.9%, var(--color-primary) 53.55%);
