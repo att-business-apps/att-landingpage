@@ -1,12 +1,13 @@
 .mobilemenu {
     width: 100%;
     position: fixed;
-    display: flex;
+    // display: flex;
     left: 0;
     bottom: 0;
     background-color: var(--color-dark);
     z-index: 99;
     justify-content: space-around;
+    align-items: center;
     box-shadow: 0 -24px 48px -15px rgba(33, 34, 34, 0.5);
 
     li {
