@@ -490,9 +490,25 @@
     .shape {
         position: absolute;
         z-index: -1;
+        &.shape-0 {
+            top: -6%;
+            left: 21%;
+            z-index: 1;
+
+            @media #{$sm-layout} {
+                top: -1%;
+                left: 39%;
+                width: 50%;
+            }
+        }
         &.shape-1 {
             top: 4%;
             left: 46%;
+            @media #{$sm-layout} {
+                top: 1%;
+                left: 0%;
+                width: 25%;
+            }
         }
         &.shape-2 {
             left: 60px;

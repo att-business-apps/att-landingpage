@@ -16063,9 +16063,28 @@ input {
   position: absolute;
   z-index: -1;
 }
+.shape-group-12 .shape.shape-0 {
+  top: -6%;
+  left: 21%;
+  z-index: 1;
+}
+@media only screen and (max-width: 767px) {
+  .shape-group-12 .shape.shape-0 {
+    top: -1%;
+    left: 39%;
+    width: 50%;
+  }
+}
 .shape-group-12 .shape.shape-1 {
   top: 4%;
   left: 46%;
+}
+@media only screen and (max-width: 767px) {
+  .shape-group-12 .shape.shape-1 {
+    top: 1%;
+    left: 0%;
+    width: 25%;
+  }
 }
 .shape-group-12 .shape.shape-2 {
   left: 60px;

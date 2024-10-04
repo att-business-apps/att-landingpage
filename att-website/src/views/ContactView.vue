@@ -159,6 +159,7 @@ function getTemplate(target){
             </div>
         </div>
         <ul class="list-unstyled shape-group-12">
+            <li class="shape shape-0"><img src="../assets/img/amorboy/am-contact-form.png" alt="Bubble"></li>
             <li class="shape shape-1"><img src="../assets/img/bubble-2.png" alt="Bubble"></li>
             <li class="shape shape-2"><img src="../assets/img/bubble-1.png" alt="Bubble"></li>
             <li class="shape shape-3"><img src="../assets/img/circle-1.png" alt="Circle"></li>
