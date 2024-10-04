@@ -16068,6 +16068,27 @@ input {
   left: 21%;
   z-index: 1;
 }
+@media only screen and (min-width: 1200px) and (max-width: 1599px) {
+  .shape-group-12 .shape.shape-0 {
+    top: -6%;
+    left: 12%;
+    width: 50%;
+  }
+}
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  .shape-group-12 .shape.shape-0 {
+    top: -5%;
+    left: 8%;
+    width: 40%;
+  }
+}
+@media only screen and (max-width: 991px) {
+  .shape-group-12 .shape.shape-0 {
+    top: -2%;
+    left: 13%;
+    width: 40%;
+  }
+}
 @media only screen and (max-width: 767px) {
   .shape-group-12 .shape.shape-0 {
     top: -1%;
@@ -16078,6 +16099,13 @@ input {
 .shape-group-12 .shape.shape-1 {
   top: 4%;
   left: 46%;
+}
+@media only screen and (max-width: 991px) {
+  .shape-group-12 .shape.shape-1 {
+    top: 0%;
+    left: 82%;
+    width: 40%;
+  }
 }
 @media only screen and (max-width: 767px) {
   .shape-group-12 .shape.shape-1 {

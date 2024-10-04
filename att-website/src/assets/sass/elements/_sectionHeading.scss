@@ -494,7 +494,21 @@
             top: -6%;
             left: 21%;
             z-index: 1;
-
+            @media #{$laptop-device} {
+                top: -6%;
+                left: 12%;
+                width: 50%;
+            }
+            @media #{$lg-layout} {
+                top: -5%;
+                left: 8%;
+                width: 40%;
+            }
+            @media #{$md-layout} {
+                top: -2%;
+                left: 13%;
+                width: 40%;
+            }
             @media #{$sm-layout} {
                 top: -1%;
                 left: 39%;
@@ -504,6 +518,11 @@
         &.shape-1 {
             top: 4%;
             left: 46%;
+            @media #{$md-layout} {
+                top: 0%;
+                left: 82%;
+                width: 40%;
+            }
             @media #{$sm-layout} {
                 top: 1%;
                 left: 0%;
