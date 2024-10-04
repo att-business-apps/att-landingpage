@@ -17203,12 +17203,23 @@ Pagination
   position: fixed;
   z-index: 10;
   height: 0.2rem;
-  top: 80px;
+  top: 83px;
   left: 0;
   width: 100%;
   background: var(--color-primary);
+  -webkit-animation: scroll-progress linear;
+  -moz-animation: scroll-progress linear;
+  -ms-animation: scroll-progress linear;
   animation: scroll-progress linear;
+  -webkit-animation-timeline: scroll();
+  -moz-animation-timeline: scroll();
+  -ms-animation-timeline: scroll();
   animation-timeline: scroll();
+}
+@media only screen and (max-width: 991px) {
+  .scroll-progress {
+    top: 80px;
+  }
 }
 
 @keyframes scroll-progress {

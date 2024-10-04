@@ -2,13 +2,23 @@
     position: fixed;
     z-index: 10;
     height: .2rem;
-    top: 80px;
+    top: 83px;
     left: 0;
     width: 100%;
     background: var(--color-primary);
     // background: linear-gradient(90deg, var(--logo-light) 0%, var(--logo-blue) 25%, var(--logo-green) 50%, var(--logo-red) 75%, var(--logo-yellow) 100%);
+    -webkit-animation: scroll-progress linear;
+    -moz-animation: scroll-progress linear;
+    -ms-animation: scroll-progress linear;
     animation: scroll-progress linear;
+    -webkit-animation-timeline: scroll();
+    -moz-animation-timeline: scroll();
+    -ms-animation-timeline: scroll();
     animation-timeline: scroll();
+
+    @media #{$md-layout} {
+      top: 80px;
+    }
 }
   
 @keyframes scroll-progress {
