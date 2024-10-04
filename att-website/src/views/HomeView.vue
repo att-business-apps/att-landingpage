@@ -145,7 +145,7 @@ function getTemplate(target){
         <div class="section-heading heading-left mb--20 mb_md--70">
           <div class="subtitle">What we do</div>
           <h2 class="title">
-            <span class="gradient-text yellow-light">Services we can help</span> you
+            <span class="gradient-text blue-light">Services we can help</span> you
             with
           </h2>
           <p>

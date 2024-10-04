@@ -19068,7 +19068,7 @@ Pagination
   margin-bottom: 60px;
 }
 .serviceSec .section-heading .subtitle {
-  color: var(--color-primaryY);
+  color: var(--color-primary);
   font-weight: 500;
   font-size: 20px;
   margin-bottom: 15px;
@@ -19084,7 +19084,7 @@ Pagination
   }
 }
 .serviceSec .section-heading .title .gradient-text-light {
-  background: linear-gradient(270deg, var(--color-light) 21.9%, var(--color-primaryY) 53.55%);
+  background: linear-gradient(270deg, var(--color-light) 21.9%, var(--color-primary) 53.55%);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
