@@ -134,7 +134,7 @@ function getTemplate(target){
                                 <button @click="sendMail" type="button"
                                     class="amor-btn btn-fill-primary btn-fluid btn-primary" name="submit-btn"
                                     :disabled="disableBtn">
-                                    Send
+                                    Send Enquiry
                                 </button>
                             </div>
                             <div class="form-group"></div>
