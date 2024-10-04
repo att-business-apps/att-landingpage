@@ -286,6 +286,15 @@
             // right: 200px;
             top: 40%;
             right: 32%;
+            @media #{$extra-device} {
+                right: 28%;
+            }
+            @media #{$laptop-device} {
+                right: 22%;
+            }
+            @media #{$lg-layout} {
+                right: 20%;
+            }
             @media #{$md-layout} {
                 top: 38%;
                 right: 0%;
@@ -301,6 +310,12 @@
         &.shape-3 {
             top: 46%;
             left: 170px;
+            @media #{$laptop-device} {
+                left: 6%;
+            }
+            @media #{$lg-layout} {
+                left: 10%;
+            }
             @media #{$md-layout} {
                 top: 44%;
                 left: 180px;

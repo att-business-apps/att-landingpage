@@ -142,7 +142,7 @@
             }
         }
         &:hover, &.active{
-            box-shadow: 0 24px 48px -15px rgba(153, 161, 170, 0.25);
+            box-shadow: 0 24px 48px -15px rgba(45, 46, 46, 0.25);
 
             &:after {
                 visibility: visible;
@@ -428,7 +428,7 @@ Service
 		-webkit-box-pack: center;
 		-webkit-justify-content: center;
 		-ms-flex-pack: center;
-		justify-content: center;
+		justify-content: space-evenly;
 		-webkit-box-flex: 1;
 		-webkit-flex: 1;
 		-ms-flex: 1;
@@ -439,6 +439,7 @@ Service
             display: flex; 
             flex-wrap: nowrap; 
             overflow-x: auto; 
+            overflow-y: hidden;
             -webkit-overflow-scrolling: touch; 
             -ms-overflow-style: -ms-autohiding-scrollbar;
             justify-content: space-between;
