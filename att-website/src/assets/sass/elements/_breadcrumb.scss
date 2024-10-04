@@ -54,15 +54,24 @@
 }
 
 .breadcrumb-banner {
-    padding: 50vh 0 2vh;
+    padding: 56vh 0 2vh;
+    @media #{$extra-device} {
+        padding: 54vh 0 2vh;
+    }
+    @media #{$laptop-device} {
+        padding: 54vh 0 2vh;
+    }
+    @media #{$lg-layout} {
+        padding: 56vh 0 2vh;
+    }
     @media #{$smlg-device} {
-        padding: 200px 0 50px;
+        // padding: 200px 0 50px;
     }
     @media #{$md-layout} {
-        padding: 150px 0 40px;
+        padding: 20vh 0 0px;
     }
     @media #{$sm-layout} {
-        padding: 180px 0 0px;
+        padding: 22vh 0 0px;
     }
     .section-heading {
         .title {

@@ -16775,21 +16775,31 @@ body.active-dark-mode .my_switcher button span.dark {
 }
 
 .breadcrumb-banner {
-  padding: 50vh 0 2vh;
+  padding: 56vh 0 2vh;
 }
-@media only screen and (max-width: 1199px) {
+@media only screen and (min-width: 1600px) and (max-width: 1919px) {
   .breadcrumb-banner {
-    padding: 200px 0 50px;
+    padding: 54vh 0 2vh;
+  }
+}
+@media only screen and (min-width: 1200px) and (max-width: 1599px) {
+  .breadcrumb-banner {
+    padding: 54vh 0 2vh;
+  }
+}
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  .breadcrumb-banner {
+    padding: 56vh 0 2vh;
   }
 }
 @media only screen and (max-width: 991px) {
   .breadcrumb-banner {
-    padding: 150px 0 40px;
+    padding: 20vh 0 0px;
   }
 }
 @media only screen and (max-width: 767px) {
   .breadcrumb-banner {
-    padding: 180px 0 0px;
+    padding: 22vh 0 0px;
   }
 }
 .breadcrumb-banner .section-heading .title {
