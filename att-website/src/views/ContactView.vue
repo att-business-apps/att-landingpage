@@ -177,4 +177,10 @@ function getTemplate(target){
 h4.phone-number a {
     color: #dc3c2d;
 }
+
+@media only screen and (max-width: 767px) {
+    .section-padding {
+        padding: 120px 0 30px;
+    }
+}
 </style>
