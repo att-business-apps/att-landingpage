@@ -326,11 +326,11 @@
             left: 60%;
             perspective: 1000px;
             @media #{$md-layout} {
-                top: 66%;
+                top: 52%;
                 left: 40%;
             }
             @media #{$sm-layout} {
-                top: 69%;
+                top: 53%;
                 left: 40%;
             }
 
@@ -343,11 +343,11 @@
             top: 55%;
             left: 48%;
             @media #{$md-layout} {
-                top: 38%;
+                top: 14%;
                 left: 74%;
             }
             @media #{$sm-layout} {
-                top: 40%;
+                top: 14%;
                 left: 74%;
             }
         }
