@@ -2,14 +2,14 @@
   <div class="breadcrum-area breadcrumb-banner">
     <div class="container">
       <div class="breadcrumb">
-        <div class="section-heading heading-left">
-          <h1 class="title h2 mb-0">amortree Studio</h1>
-          <p>We do design, code &amp; devOps. More Than a Team – We’re Your Creative Partners</p>
-        </div>
         <ul class="list-unstyled">
           <li><a href="/">Home</a></li>
           <li class="active text-lg">Who we are</li>
         </ul>
+        <div class="section-heading heading-left">
+          <h1 class="title h2 mb-0">amortree Studio</h1>
+          <p>We do design, code &amp; devOps. More Than a Team – We’re Your Creative Partners</p>
+        </div>
       </div>
       <div class="banner-thumbnail ">
         <div class=""

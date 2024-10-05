@@ -70,14 +70,14 @@ function getTemplate(target){
     <div class="breadcrum-area breadcrumb-banner">
         <div class="container">
             <div class="breadcrumb">
-                <div class="section-heading heading-left">
-                    <h1 class="title h2 mb-0">Let’s craft something extraordinary together!</h1>
-                    <p>We’re here to help with all your branding, design and development needs.</p>
-                </div>
                 <ul class="list-unstyled">
                     <li><a href="/">Home</a></li>
                     <li class="active text-lr">Where to find</li>
                 </ul>
+                <div class="section-heading heading-left">
+                    <h1 class="title h2 mb-0">Let’s craft something extraordinary together!</h1>
+                    <p>We’re here to help with all your branding, design and development needs.</p>
+                </div>
             </div>
             <div class="banner-thumbnail">
                 <div class=""

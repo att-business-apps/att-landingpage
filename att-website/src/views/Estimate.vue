@@ -2,14 +2,14 @@
     <div class="breadcrum-area breadcrumb-banner">
       <div class="container">
         <div class="breadcrumb">
-          <div class="section-heading heading-left">
-            <h1 class="title h2">We love projects.</h1>
-                    <p>Do you have anything interesting for us?</p>
-          </div>
           <ul class="list-unstyled">
             <li><a href="/">Home</a></li>
             <li class="active">Estimate</li>
           </ul>
+          <div class="section-heading heading-left">
+            <h1 class="title h2">We love projects.</h1>
+                    <p>Do you have anything interesting for us?</p>
+          </div>
         </div>
         <div class="banner-thumbnail">
           <div class=""

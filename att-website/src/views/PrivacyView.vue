@@ -2,14 +2,14 @@
   <div class="breadcrum-area breadcrumb-banner">
     <div class="container">
       <div class="breadcrumb">
-        <div class="section-heading heading-left">
-          <h1 class="title h2 mb-0">Privacy Policy</h1>
-          <p>Your Privacy, Our Priority</p>
-        </div>
         <ul class="list-unstyled">
           <li><a href="/">Home</a></li>
           <li class="active">Privacy</li>
         </ul>
+        <div class="section-heading heading-left">
+          <h1 class="title h2 mb-0">Privacy Policy</h1>
+          <p>Your Privacy, Our Priority</p>
+        </div>
       </div>
       <div class="banner-thumbnail">
         <div class=""

@@ -6,14 +6,14 @@
   <div class="breadcrum-area breadcrumb-banner">
     <div class="container">
       <div class="breadcrumb">
-        <div class="section-heading heading-left">
-          <h1 class="title h2 mb-0">Your Partner in Digital Success!</h1>
-          <p>At amortree Tech, we combine creativity and technology to deliver seamless digital experiences.</p>
-        </div>
         <ul class="list-unstyled">
           <li><a href="/">Home</a></li>
           <li class="active text-lb">What We Do</li>
         </ul>
+        <div class="section-heading heading-left">
+          <h1 class="title h2 mb-0">Your Partner in Digital Success!</h1>
+          <p>At amortree Tech, we combine creativity and technology to deliver seamless digital experiences.</p>
+        </div>
       </div>
       <div class="banner-thumbnail bottom-0">
         <div class=""
