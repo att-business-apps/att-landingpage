@@ -17780,15 +17780,22 @@ Pagination
 }
 .header-action .social-icon-list li a {
   font-size: 20px;
-  color: var(--color-body);
+}
+.header-action .social-icon-list li a img {
+  filter: grayscale(0.75);
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 @media only screen and (max-width: 991px) {
   .header-action .social-icon-list li a {
     color: var(--color-dark);
   }
 }
-.header-action .social-icon-list li a:hover {
-  color: var(--color-primary);
+.header-action .social-icon-list li a:hover img {
+  filter: grayscale(0);
 }
 .header-action .header-btn {
   margin-right: 0;

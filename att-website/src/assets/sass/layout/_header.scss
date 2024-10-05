@@ -506,12 +506,19 @@
             margin: 15px;
             a {
                 font-size: 20px;
-                color: var(--color-body);
+                // color: var(--color-body);
+                img {
+                    filter: grayscale(.75);
+                    @include transition($all);
+                }
                 @media #{$md-layout} {
                     color: var(--color-dark);
                 }
                 &:hover {
-                    color: var(--color-primary);
+                    // color: var(--color-primary);
+                    img {
+                        filter: grayscale(0);
+                    }
                 }
             }
         }
