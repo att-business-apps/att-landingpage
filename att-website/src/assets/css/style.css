@@ -17776,7 +17776,7 @@ Pagination
   margin: -15px;
 }
 .header-action .social-icon-list li {
-  margin: 15px;
+  margin: 0.5rem;
 }
 .header-action .social-icon-list li a {
   font-size: 20px;

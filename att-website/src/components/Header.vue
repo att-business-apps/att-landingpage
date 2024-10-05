@@ -52,23 +52,23 @@
                             <li class="header-social-link">
                                 <ul class="social-icon-list list-unstyled">
                                     <li>
-                                        <a href="https://www.instagram.com/amortreetech/" target="_blank">
-                                            <img src="../assets/img/icon/sm-i.png" width="36" alt="amortree instagram"/>
-                                        </a>
-                                    </li>
-                                    <li>
                                         <a href="https://in.linkedin.com/company/amortree-tech" target="_blank">
-                                            <img src="../assets/img/icon/sm-l.png" width="36" alt="amortree linkedin"/>
+                                            <img src="../assets/img/icon/sm-l.png" width="40" alt="amortree linkedin"/>
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="https://dribbble.com/amortreetech" target="_blank">
-                                            <img src="../assets/img/icon/sm-d.png" width="36" alt="amortree dribbble"/>
+                                        <a href="https://www.instagram.com/amortreetech/" target="_blank">
+                                            <img src="../assets/img/icon/sm-i.png" width="40" alt="amortree instagram"/>
                                         </a>
                                     </li>
                                     <li>
                                         <a href="https://www.facebook.com/amortreetech/" target="_blank">
-                                            <img src="../assets/img/icon/sm-f.png" width="36" alt="amortree facebook"/>
+                                            <img src="../assets/img/icon/sm-f.png" width="40" alt="amortree facebook"/>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="https://dribbble.com/amortreetech" target="_blank">
+                                            <img src="../assets/img/icon/sm-d.png" width="40" alt="amortree dribbble"/>
                                         </a>
                                     </li>
                                 </ul>
