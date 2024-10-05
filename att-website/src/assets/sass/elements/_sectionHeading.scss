@@ -325,6 +325,8 @@
             top: 84%;
             left: 60%;
             perspective: 1000px;
+            animation: rotate-image linear;
+                animation-timeline: scroll();
             @media #{$md-layout} {
                 top: 52%;
                 left: 40%;

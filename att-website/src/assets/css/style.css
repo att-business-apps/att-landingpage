@@ -15899,6 +15899,8 @@ input {
   top: 84%;
   left: 60%;
   perspective: 1000px;
+  animation: rotate-image linear;
+  animation-timeline: scroll();
 }
 @media only screen and (max-width: 991px) {
   .shape-group-7 .shape.shape-4 {
