@@ -56,7 +56,7 @@
     -------------------------*/
     .services-grid {
         display: flex;
-        padding: 50px 50px 40px;
+        padding: 1.75rem 1.4rem 1.75rem;
         border-radius: 30px;
         transition: var(--transition);
         margin-bottom: 40px;
@@ -92,18 +92,18 @@
         }
         .thumbnail {
             margin-right: 25px;
-            max-width: 85px;
+            width: 110px;
             perspective: 1000px;
 
             img {
                 animation: rotate-image linear;
                 animation-timeline: scroll();
             }
-            @media #{$smlg-device} {
-                max-width: 60px;
+            @media #{$lg-layout} {
+                width: 80px;
             }
             @media #{$md-layout} {
-                width: 60px;
+                width: 180px;
                 margin-right: 15px;
             }
         }
