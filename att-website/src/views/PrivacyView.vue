@@ -121,7 +121,6 @@
       </div>
     </div>
   </section>
-  <hr>
 </template>
 
 <style scoped>
