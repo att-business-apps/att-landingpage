@@ -54,6 +54,9 @@
 }
 
 .footer-newsletter {
+    @media #{$sm-layout} {
+        display: none;
+    }
     .title {
         margin-bottom: 20px;
         letter-spacing: -0.045em;

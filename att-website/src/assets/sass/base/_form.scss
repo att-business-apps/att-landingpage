@@ -111,6 +111,8 @@ input {
         @media #{$small-mobile} {
             margin-top: 15px;
             padding: 14px 30px;
+            display: block;
+            width: 100%;
         }
     }
 }

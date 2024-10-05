@@ -138,7 +138,7 @@
         <div class="row">
           <div class="col-xl-6 col-lg-5 sal-animate" data-sal="slide-right" data-sal-duration="800"
             data-sal-delay="100">
-            <div class="footer-widget border-end">
+            <div class="footer-widget border-end d-none d-lg-block">
               <div class="footer-newsletter">
                 <h2 class="title">Get in touch!</h2>
                 <p>Subscribe now for the latest updates, insights, and exclusive offers delivered straight to your inbox! Stay connected with us.</p>
