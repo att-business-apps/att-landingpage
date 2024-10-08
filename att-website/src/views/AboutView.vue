@@ -64,7 +64,7 @@
               </div>
               <div class="single-counterup">
                 <h2 class="count-number">
-                  <div><span class="number count"><span>100%</span></span></div><span class="symbol">+</span>
+                  <div><span class="number count"><span>100</span></span></div><span class="symbol">%</span>
                 </h2><span class="counter-title">Client Satisfaction</span>
               </div>
             </div>
