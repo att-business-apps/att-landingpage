@@ -62,8 +62,8 @@ input {
     &:before {
         content: url(../../assets/img/message.png);
         position: absolute;
-        left: 30px;
-        top: 24px;
+        left: 6px;
+        top: 4px;
         z-index: 1;
 
         @media #{$sm-layout} {
