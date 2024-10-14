@@ -89,10 +89,10 @@ function getTemplate(target){
         </div>
         <ul class="shape-group-8 list-unstyled">
             <li class="shape shape-2 sal-animate" data-sal="slide-left" data-sal-duration="500" data-sal-delay="200">
-                <img src="../assets/img/bubble-22.png" alt="circle">
+                <img src="../assets/img/shapes/bubble-22.png" alt="circle">
             </li>
             <li class="shape shape-3 sal-animate" data-sal="slide-up" data-sal-duration="500" data-sal-delay="300">
-                <img src="../assets/img/line-1.png" alt="circle">
+                <img src="../assets/img/shapes/line-1.png" alt="circle">
             </li>
         </ul>
     </div>
@@ -160,15 +160,15 @@ function getTemplate(target){
         </div>
         <ul class="list-unstyled shape-group-12">
             <li class="shape shape-0"><img src="../assets/img/amorboy/am-contact-form.png" alt="Bubble"></li>
-            <li class="shape shape-1"><img src="../assets/img/bubble-2.png" alt="Bubble"></li>
-            <li class="shape shape-2"><img src="../assets/img/bubble-1.png" alt="Bubble"></li>
-            <li class="shape shape-3"><img src="../assets/img/circle-1.png" alt="Circle"></li>
-            <li class="shape shape-3"><img src="../assets/img/circle-1.png" alt="Circle"></li>
-            <li class="shape shape-3"><img src="../assets/img/circle-1.png" alt="Circle"></li>
-            <li class="shape shape-3"><img src="../assets/img/circle-1.png" alt="Circle"></li>
-            <li class="shape shape-3"><img src="../assets/img/circle-1.png" alt="Circle"></li>
-            <li class="shape shape-3"><img src="../assets/img/circle-1.png" alt="Circle"></li>
-            <li class="shape shape-3"><img src="../assets/img/circle-1.png" alt="Circle"></li>
+            <li class="shape shape-1"><img src="../assets/img/shapes/bubble-2.png" alt="Bubble"></li>
+            <li class="shape shape-2"><img src="../assets/img/shapes/bubble-1.png" alt="Bubble"></li>
+            <li class="shape shape-3"><img src="../assets/img/shapes/circle-1.png" alt="Circle"></li>
+            <li class="shape shape-3"><img src="../assets/img/shapes/circle-1.png" alt="Circle"></li>
+            <li class="shape shape-3"><img src="../assets/img/shapes/circle-1.png" alt="Circle"></li>
+            <li class="shape shape-3"><img src="../assets/img/shapes/circle-1.png" alt="Circle"></li>
+            <li class="shape shape-3"><img src="../assets/img/shapes/circle-1.png" alt="Circle"></li>
+            <li class="shape shape-3"><img src="../assets/img/shapes/circle-1.png" alt="Circle"></li>
+            <li class="shape shape-3"><img src="../assets/img/shapes/circle-1.png" alt="Circle"></li>
         </ul>
     </div>
 </template>

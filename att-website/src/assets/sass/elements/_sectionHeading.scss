@@ -401,6 +401,17 @@
             top: 115px;
             left: 0;
         }
+
+        &.shape-4 {
+            top: 0;
+            right: 0;
+            text-align: right;
+            img {
+                width: 100%;
+                height: 100vh;
+            }
+            
+        }
     }
 }
 

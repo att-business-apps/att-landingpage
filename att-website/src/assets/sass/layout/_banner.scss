@@ -146,6 +146,22 @@
         }
     }
     &.banner-style-1 {
+        background-image: url(../../assets/img/bg-wall.jpg);
+        background-attachment: fixed;
+        background-position: center center;
+        background-size: cover;
+        
+        &:after {
+            background: linear-gradient(180deg, var(--color-white) 25%, var(--color-light) 100%);
+            content: "";
+            height: 100%;
+            left: 0;
+            opacity: 0.80;
+            position: absolute;
+            top: 0;
+            width: 100%;
+            z-index: -2;
+        }
         .banner-content {
             margin-top: 60px;
             @media #{$smlg-device} {

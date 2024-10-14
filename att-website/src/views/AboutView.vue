@@ -1,7 +1,7 @@
 <template>
   <div class="breadcrum-area breadcrumb-banner">
     <div class="container">
-      <div class="breadcrumb">
+      <div class="breadcrumb animate__animated fadeInUp" style="animation-duration: 2s">
         <ul class="list-unstyled">
           <li><a href="/">Home</a></li>
           <li class="active text-lg">Who we are</li>
@@ -21,10 +21,10 @@
     </div>
     <ul class="shape-group-8 list-unstyled">
       <li class="shape shape-2 sal-animate" data-sal="slide-left" data-sal-duration="500" data-sal-delay="200">
-        <img src="../assets/img/bubble-21.png" alt="circle">
+        <img src="../assets/img/shapes/bubble-21.png" alt="circle">
       </li>
       <li class="shape shape-3 sal-animate" data-sal="slide-up" data-sal-duration="500" data-sal-delay="300">
-        <img src="../assets/img/line-5.png" alt="circle">
+        <img src="../assets/img/shapes/line-5.png" alt="circle">
       </li>
     </ul>
   </div>
@@ -130,9 +130,9 @@
       </div>
     </div>
     <ul class="list-unstyled shape-group-10">
-      <li class="shape shape-1"><img src="../assets/img/circle-1.png" alt="Circle"></li>
-      <li class="shape shape-2"><img src="../assets/img/line-3.png" alt="Circle"></li>
-      <li class="shape shape-3"><img src="../assets/img/bubble-6.png" alt="Circle"></li>
+      <li class="shape shape-1"><img src="../assets/img/shapes/circle-1.png" alt="Circle"></li>
+      <li class="shape shape-2"><img src="../assets/img/shapes/line-3.png" alt="Circle"></li>
+      <li class="shape shape-3"><img src="../assets/img/shapes/bubble-6.png" alt="Circle"></li>
     </ul>
   </div>
 
@@ -207,10 +207,10 @@
       </div>
     </div>
     <ul class="shape-group-17 list-unstyled">
-      <li class="shape shape-3"><img src="../assets/img/line-4.png" alt="Line"></li>
-      <li class="shape shape-4"><img src="../assets/img/line-5.png" alt="Line"></li>
-      <li class="shape shape-5"><img src="../assets/img/line-4.png" alt="Line"></li>
-      <li class="shape shape-6"><img src="../assets/img/line-5.png" alt="Line"></li>
+      <li class="shape shape-3"><img src="../assets/img/shapes/line-4.png" alt="Line"></li>
+      <li class="shape shape-4"><img src="../assets/img/shapes/line-5.png" alt="Line"></li>
+      <li class="shape shape-5"><img src="../assets/img/shapes/line-4.png" alt="Line"></li>
+      <li class="shape shape-6"><img src="../assets/img/shapes/line-5.png" alt="Line"></li>
     </ul>
   </div>
 </template>

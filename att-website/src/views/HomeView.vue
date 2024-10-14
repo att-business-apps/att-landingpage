@@ -118,25 +118,25 @@ function getTemplate(target){
       </div>
       <ul class="list-unstyled shape-group-21">
         <li class="shape shape-1">
-          <img src="../assets/img/bubble-39.png" alt="Bubble" />
+          <img src="../assets/img/shapes/bubble-39.png" alt="Bubble" />
         </li>
         <li class="shape shape-2">
-          <img src="../assets/img/bubble-38.png" alt="Bubble" />
+          <img src="../assets/img/shapes/bubble-38.png" alt="Bubble" />
         </li>
         <li class="shape shape-3">
-          <img src="../assets/img/bubble-14.png" alt="Bubble" />
+          <img src="../assets/img/shapes/bubble-14.png" alt="Bubble" />
         </li>
         <li class="shape shape-4">
-          <img src="../assets/img/bubble-14.png" alt="Bubble" />
+          <img src="../assets/img/shapes/bubble-14.png" alt="Bubble" />
         </li>
         <li class="shape shape-5">
-          <img src="../assets/img/bubble-14.png" alt="Bubble" />
+          <img src="../assets/img/shapes/bubble-14.png" alt="Bubble" />
         </li>
         <li class="shape shape-6">
-          <img src="../assets/img/bubble-40.png" alt="Bubble" />
+          <img src="../assets/img/shapes/bubble-40.png" alt="Bubble" />
         </li>
         <li class="shape shape-7">
-          <img src="../assets/img/bubble-41.png" alt="Bubble" />
+          <img src="../assets/img/shapes/bubble-41.png" alt="Bubble" />
         </li>
       </ul>
     </div>
@@ -252,13 +252,13 @@ function getTemplate(target){
         </div>
       </div>
       <ul class="shape-group-7 list-unstyled">
-        <li class="shape shape-1 d-lg-block d-none"><img src="../assets/img/circle-1.png" alt="Line"></li>
-        <li class="shape shape-3 d-lg-block d-none"><img src="../assets/img/bubble-1.png" alt="Line"></li>
+        <li class="shape shape-1 d-lg-block d-none"><img src="../assets/img/shapes/circle-1.png" alt="Line"></li>
+        <li class="shape shape-3 d-lg-block d-none"><img src="../assets/img/shapes/bubble-1.png" alt="Line"></li>
         <li class="shape shape-4"><img src="../assets/img/amorboy/we-do.png" alt="Line"></li>
-        <li class="shape shape-5"><img src="../assets/img/bubble-15.png" alt="Line"></li>
-        <li class="shape shape-2"><img src="../assets/img/bubble-2.png" alt="Line" /></li>
-        <li class="shape shape-5 d-lg-block d-none"><img src="../assets/img/bubble-2.png" alt="Line" /></li>
-        <li class="shape shape-3 d-lg-block d-none"><img src="../assets/img/bubble-1.png" alt="Line" /></li>
+        <li class="shape shape-5"><img src="../assets/img/shapes/bubble-15.png" alt="Line"></li>
+        <li class="shape shape-2"><img src="../assets/img/shapes/bubble-2.png" alt="Line" /></li>
+        <li class="shape shape-5 d-lg-block d-none"><img src="../assets/img/shapes/bubble-2.png" alt="Line" /></li>
+        <li class="shape shape-3 d-lg-block d-none"><img src="../assets/img/shapes/bubble-1.png" alt="Line" /></li>
         <li class="shape shape-4"><img src="../assets/img/amorboy/we-do.png" alt="Line" /></li>
       </ul>
     </div>
@@ -341,13 +341,13 @@ function getTemplate(target){
       </div>
       <ul class="shape-group-6 list-unstyled">
         <li class="shape shape-1">
-          <img src="../assets/img/line-2.png" alt="Bubble" />
+          <img src="../assets/img/shapes/line-2.png" alt="Bubble" />
         </li>
         <li class="shape shape-2">
-          <img src="../assets/img/line-7.png" alt="line" />
+          <img src="../assets/img/shapes/line-7.png" alt="line" />
         </li>
         <li class="shape shape-3">
-          <img src="../assets/img/line-8.png" alt="line" />
+          <img src="../assets/img/shapes/line-8.png" alt="line" />
         </li>
       </ul>
     </section>
