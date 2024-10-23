@@ -284,12 +284,10 @@ function getTemplate(target){
                   age.
                 </p>
                 <p>
-                  Our team of experts is committed to delivering tailored
-                  solutions that align with your unique needs and goals. Whether
-                  you're seeking to revolutionize your educational platforms,
-                  harness the power of AI for smarter decision-making, immerse
-                  your audience in captivating AR experiences, or craft stunning
-                  digital interfaces, we've got you covered.
+                  Our team of experts is dedicated to delivering customized solutions that align with your unique needs
+                  and objectives. Whether you're focused on enhancing your digital platforms, creating seamless user
+                  experiences, or crafting innovative technology solutions, we have the skills and expertise to bring
+                  your vision to life.
                 </p>
                 <p>
                   With a blend of creativity, technical expertise, and a
