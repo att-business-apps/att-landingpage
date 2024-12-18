@@ -84,7 +84,7 @@
 	-webkit-box-sizing:border-box;
 	   -moz-box-sizing:border-box;
 	        box-sizing:border-box;
-	min-width:100px;
+	// min-width:100px;
 	padding: 22px 33px;
 	// font-family: 'Lobster', cursive;
 	font-size: 20px;
@@ -145,5 +145,10 @@
            -moz-transition: 50ms linear;
              -o-transition: 50ms linear;
                 transition: 50ms linear;
+    }
+
+    
+    &.btn-fluid {
+        width: 100%;
     }
 }
