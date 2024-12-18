@@ -1,7 +1,7 @@
 <script setup>
 import { ref } from "vue";
 
-const disableBtn=ref(false);
+const disableBtn = ref(false);
 const from_name = ref("");
 const email = ref("");
 const phoneNumber = ref("");
@@ -60,9 +60,9 @@ function sendMail() {
     .catch((err) => console.log(err));
 }
 
-function getTemplate(target){
-  if(target=='admin')return 'template_tcauze5';
-  if(target=='customer')return 'template_svj7071';
+function getTemplate(target) {
+  if (target == 'admin') return 'template_tcauze5';
+  if (target == 'customer') return 'template_svj7071';
 }
 </script>
 

@@ -1,5 +1,5 @@
 <script setup>
-    
+
 </script>
 
 <template>
@@ -11,6 +11,7 @@
                         <a href="/">
                             <img class="light-version-logo" style="width:220px; margin: 0 auto;"
                                 src="../assets/img/att-logo-dark.svg" alt="amortree Tech logo" />
+                            <img src="../assets/img/fest/hat.png" class="img-fluid img-seasonal" alt="Santa Hat" />
                         </a>
                     </div>
                     <div class="header-main-nav">
@@ -51,30 +52,31 @@
                                 <ul class="social-icon-list list-unstyled">
                                     <li>
                                         <a href="https://in.linkedin.com/company/amortree-tech" target="_blank">
-                                            <img src="../assets/img/icon/sm-l.png" width="40" alt="amortree linkedin"/>
+                                            <img src="../assets/img/icon/sm-l.png" width="40" alt="amortree linkedin" />
                                         </a>
                                     </li>
                                     <li>
                                         <a href="https://www.instagram.com/amortreetech/" target="_blank">
-                                            <img src="../assets/img/icon/sm-i.png" width="40" alt="amortree instagram"/>
+                                            <img src="../assets/img/icon/sm-i.png" width="40"
+                                                alt="amortree instagram" />
                                         </a>
                                     </li>
                                     <li>
                                         <a href="https://www.facebook.com/amortreetech/" target="_blank">
-                                            <img src="../assets/img/icon/sm-f.png" width="40" alt="amortree facebook"/>
+                                            <img src="../assets/img/icon/sm-f.png" width="40" alt="amortree facebook" />
                                         </a>
                                     </li>
                                     <li>
                                         <a href="https://dribbble.com/amortreetech" target="_blank">
-                                            <img src="../assets/img/icon/sm-d.png" width="40" alt="amortree dribbble"/>
+                                            <img src="../assets/img/icon/sm-d.png" width="40" alt="amortree dribbble" />
                                         </a>
                                     </li>
                                 </ul>
                             </li>
                             <li class="sidemenu-btn me-2">
                                 <a href="https://wa.me/917975859061/?text=I'm%20inquiring%20about%20the%20website%20service."
-                                target="_blank" class="">
-                                    <img src="../assets/img/icon/whatsapp.png" width="54" alt="amortree facebook"/>
+                                    target="_blank" class="">
+                                    <img src="../assets/img/icon/whatsapp.png" width="54" alt="amortree facebook" />
                                 </a>
                             </li>
                             <li class="mobile-menu-btn sidemenu-btn d-lg-none d-none">
@@ -89,5 +91,32 @@
                 </div>
             </div>
         </nav>
+    </div>
+
+    <div class="christmas-lights-line">
+        <span style="--_pos: 1px" class="lightbulb"></span>
+        <span style="--_pos: 2px" class="lightbulb d-none d-md-block"></span>
+        <span style="--_pos: 3px" class="lightbulb"></span>
+        <span style="--_pos: 4px" class="lightbulb d-none d-md-block"></span>
+        <span style="--_pos: 5px" class="lightbulb"></span>
+        <span style="--_pos: 6px" class="lightbulb d-none d-md-block"></span>
+        <span style="--_pos: 7px" class="lightbulb"></span>
+        <span style="--_pos: 8px" class="lightbulb d-none d-md-block"></span>
+        <span style="--_pos: 9px" class="lightbulb"></span>
+        <span style="--_pos: 10px" class="lightbulb d-none d-md-block"></span>
+        <span style="--_pos: 11px" class="lightbulb"></span>
+        <span style="--_pos: 12px" class="lightbulb d-none d-md-block"></span>
+        <span style="--_pos: 11px" class="lightbulb"></span>
+        <span style="--_pos: 10px" class="lightbulb d-none d-md-block"></span>
+        <span style="--_pos: 9px" class="lightbulb"></span>
+        <span style="--_pos: 8px" class="lightbulb d-none d-md-block"></span>
+        <span style="--_pos: 7px" class="lightbulb"></span>
+        <span style="--_pos: 6px" class="lightbulb d-none d-md-block"></span>
+        <span style="--_pos: 5px" class="lightbulb"></span>
+        <span style="--_pos: 4px" class="lightbulb d-none d-md-block"></span>
+        <span style="--_pos: 3px" class="lightbulb"></span>
+        <span style="--_pos: 2px" class="lightbulb d-none d-md-block"></span>
+        <span style="--_pos: 1px" class="lightbulb"></span>
+        <span style="--_pos: 0px" class="lightbulb d-none d-md-block"></span>
     </div>
 </template>

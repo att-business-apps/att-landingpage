@@ -17,6 +17,10 @@
     animation-timeline: scroll();
 
     @media #{$md-layout} {
+      top: 82px;
+    }
+
+    @media #{$small-mobile} {
       top: 80px;
     }
 }

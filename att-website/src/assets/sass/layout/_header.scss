@@ -16,6 +16,23 @@
         .header-logo {
             a {
                 display: block;
+                position: relative;
+
+                img {
+
+                    &:is(.img-seasonal) {
+                        right: -14px;
+                        max-height: 28px;
+                        max-width: 28px;
+                        position: absolute;
+                        top: -1px;
+                        transform: rotateX(0deg) rotateY(0deg) rotate(25deg);
+                    }
+    
+                    @media #{$md-layout} {
+                        width: 150px;
+                    }
+                }
             }
             .dark-version-logo {
                 display: none;
@@ -23,12 +40,7 @@
             .sticky-logo {
                 display: none;
             }
-            img {
-                @media #{$md-layout} {
-                    width: 150px;
-                }
-            }
-
+            
             @media #{$small-mobile} {
                 // width: 100%;
                 // text-align: center;
@@ -933,5 +945,334 @@
     100% {
         margin-top: 0;
         opacity: 1;
+    }
+}
+
+
+
+// Light
+
+.christmas-lights-line {
+    // background-color: #12270c;
+    // bottom: 6px;
+    display: flex;
+    flex-wrap: wrap;
+    height: 3px;
+    justify-content: space-evenly;
+    overflow-x: clip;
+    position: fixed;
+    top: 86px;
+    width: 100%;
+    z-index: 99;
+    
+    @media #{$md-layout} {
+        top: 88px;
+    }
+    
+    @media #{$small-mobile} {
+        top: 82px;
+    }
+}
+
+.christmas-lights-line .lightbulb {
+    --_lightbulb-col-start-degree: 0deg;
+    --_lightbulb-pow-degree: 10deg;
+    --_lightbulb-offset: 0.45rem;
+    background-color: var(--_lightbulb-color);
+    border-radius: 0 0 100% 100%;
+    height: 10px;
+    position: relative;
+    width: 5px
+}
+
+.christmas-lights-line .lightbulb:after {
+    background-color: #12270c;
+    content: "";
+    height: var(--_pos);
+    position: absolute;
+    top: calc(var(--_pos)*-1);
+    inset-inline: 0;
+    margin: auto;
+    width: 3px
+}
+
+.christmas-lights-line .lightbulb:first-child,.christmas-lights-line .lightbulb:nth-child(13) {
+    --_lightbulb-color: var(--logo-red);
+}
+
+.christmas-lights-line .lightbulb:first-child:before,.christmas-lights-line .lightbulb:nth-child(13):before {
+    animation: blink 3s infinite both;
+    animation-delay: .1s;
+    background-color: inherit;
+    content: "";
+    filter: blur(.5rem);
+    -webkit-filter: blur(.5rem);
+    inset: -.3rem;
+    position: absolute;
+    z-index: -1
+}
+
+@media (prefers-reduced-motion) {
+    .christmas-lights-line .lightbulb:first-child:before,.christmas-lights-line .lightbulb:nth-child(13):before {
+        animation: none
+    }
+}
+
+.christmas-lights-line .lightbulb:nth-child(14),.christmas-lights-line .lightbulb:nth-child(2) {
+    --_lightbulb-color: #ff8000
+}
+
+.christmas-lights-line .lightbulb:nth-child(14):before,.christmas-lights-line .lightbulb:nth-child(2):before {
+    animation: blink 3s infinite both;
+    animation-delay: .2s;
+    background-color: inherit;
+    content: "";
+    filter: blur(.5rem);
+    -webkit-filter: blur(.5rem);
+    inset: -.3rem;
+    position: absolute;
+    z-index: -1
+}
+
+@media (prefers-reduced-motion) {
+    .christmas-lights-line .lightbulb:nth-child(14):before,.christmas-lights-line .lightbulb:nth-child(2):before {
+        animation: none
+    }
+}
+
+.christmas-lights-line .lightbulb:nth-child(15),.christmas-lights-line .lightbulb:nth-child(3) {
+    --_lightbulb-color: #ffa600
+}
+
+.christmas-lights-line .lightbulb:nth-child(15):before,.christmas-lights-line .lightbulb:nth-child(3):before {
+    animation: blink 3s infinite both;
+    animation-delay: .3s;
+    background-color: inherit;
+    content: "";
+    filter: blur(.5rem);
+    -webkit-filter: blur(.5rem);
+    inset: -.3rem;
+    position: absolute;
+    z-index: -1
+}
+
+@media (prefers-reduced-motion) {
+    .christmas-lights-line .lightbulb:nth-child(15):before,.christmas-lights-line .lightbulb:nth-child(3):before {
+        animation: none
+    }
+}
+
+.christmas-lights-line .lightbulb:nth-child(16),.christmas-lights-line .lightbulb:nth-child(4) {
+    --_lightbulb-color: #ffbf00
+}
+
+.christmas-lights-line .lightbulb:nth-child(16):before,.christmas-lights-line .lightbulb:nth-child(4):before {
+    animation: blink 3s infinite both;
+    animation-delay: .4s;
+    background-color: inherit;
+    content: "";
+    filter: blur(.5rem);
+    -webkit-filter: blur(.5rem);
+    inset: -.3rem;
+    position: absolute;
+    z-index: -1
+}
+
+@media (prefers-reduced-motion) {
+    .christmas-lights-line .lightbulb:nth-child(16):before,.christmas-lights-line .lightbulb:nth-child(4):before {
+        animation: none
+    }
+}
+// background: linear-gradient(90deg, var(--logo-light) 0%, var(--logo-blue) 25%, var(--logo-green) 50%, var(--logo-red) 75%, var(--logo-yellow) 100%);
+
+.christmas-lights-line .lightbulb:nth-child(17),.christmas-lights-line .lightbulb:nth-child(5) {
+    --_lightbulb-color: var(--logo-yellow);
+}
+
+.christmas-lights-line .lightbulb:nth-child(17):before,.christmas-lights-line .lightbulb:nth-child(5):before {
+    animation: blink 3s infinite both;
+    animation-delay: .5s;
+    background-color: inherit;
+    content: "";
+    filter: blur(.5rem);
+    -webkit-filter: blur(.5rem);
+    inset: -.3rem;
+    position: absolute;
+    z-index: -1
+}
+
+@media (prefers-reduced-motion) {
+    .christmas-lights-line .lightbulb:nth-child(17):before,.christmas-lights-line .lightbulb:nth-child(5):before {
+        animation: none
+    }
+}
+
+.christmas-lights-line .lightbulb:nth-child(18),.christmas-lights-line .lightbulb:nth-child(6) {
+    --_lightbulb-color: #99cd32
+}
+
+.christmas-lights-line .lightbulb:nth-child(18):before,.christmas-lights-line .lightbulb:nth-child(6):before {
+    animation: blink 3s infinite both;
+    animation-delay: .6s;
+    background-color: inherit;
+    content: "";
+    filter: blur(.5rem);
+    -webkit-filter: blur(.5rem);
+    inset: -.3rem;
+    position: absolute;
+    z-index: -1
+}
+
+@media (prefers-reduced-motion) {
+    .christmas-lights-line .lightbulb:nth-child(18):before,.christmas-lights-line .lightbulb:nth-child(6):before {
+        animation: none
+    }
+}
+
+.christmas-lights-line .lightbulb:nth-child(19),.christmas-lights-line .lightbulb:nth-child(7) {
+    --_lightbulb-color: var(--logo-green);
+}
+
+.christmas-lights-line .lightbulb:nth-child(19):before,.christmas-lights-line .lightbulb:nth-child(7):before {
+    animation: blink 3s infinite both;
+    animation-delay: .7s;
+    background-color: inherit;
+    content: "";
+    filter: blur(.5rem);
+    -webkit-filter: blur(.5rem);
+    inset: -.3rem;
+    position: absolute;
+    z-index: -1
+}
+
+@media (prefers-reduced-motion) {
+    .christmas-lights-line .lightbulb:nth-child(19):before,.christmas-lights-line .lightbulb:nth-child(7):before {
+        animation: none
+    }
+}
+
+.christmas-lights-line .lightbulb:nth-child(20),.christmas-lights-line .lightbulb:nth-child(8) {
+    --_lightbulb-color: #3cb472
+}
+
+.christmas-lights-line .lightbulb:nth-child(20):before,.christmas-lights-line .lightbulb:nth-child(8):before {
+    animation: blink 3s infinite both;
+    animation-delay: .8s;
+    background-color: inherit;
+    content: "";
+    filter: blur(.5rem);
+    -webkit-filter: blur(.5rem);
+    inset: -.3rem;
+    position: absolute;
+    z-index: -1
+}
+
+@media (prefers-reduced-motion) {
+    .christmas-lights-line .lightbulb:nth-child(20):before,.christmas-lights-line .lightbulb:nth-child(8):before {
+        animation: none
+    }
+}
+
+.christmas-lights-line .lightbulb:nth-child(21),.christmas-lights-line .lightbulb:nth-child(9) {
+    --_lightbulb-color: var(--color-primary);
+}
+
+.christmas-lights-line .lightbulb:nth-child(21):before,.christmas-lights-line .lightbulb:nth-child(9):before {
+    animation: blink 3s infinite both;
+    animation-delay: .9s;
+    background-color: inherit;
+    content: "";
+    filter: blur(.5rem);
+    -webkit-filter: blur(.5rem);
+    inset: -.3rem;
+    position: absolute;
+    z-index: -1
+}
+
+@media (prefers-reduced-motion) {
+    .christmas-lights-line .lightbulb:nth-child(21):before,.christmas-lights-line .lightbulb:nth-child(9):before {
+        animation: none
+    }
+}
+
+.christmas-lights-line .lightbulb:nth-child(10),.christmas-lights-line .lightbulb:nth-child(22) {
+    --_lightbulb-color: #8a2ce2
+}
+
+.christmas-lights-line .lightbulb:nth-child(10):before,.christmas-lights-line .lightbulb:nth-child(22):before {
+    animation: blink 3s infinite both;
+    animation-delay: 1s;
+    background-color: inherit;
+    content: "";
+    filter: blur(.5rem);
+    -webkit-filter: blur(.5rem);
+    inset: -.3rem;
+    position: absolute;
+    z-index: -1
+}
+
+@media (prefers-reduced-motion) {
+    .christmas-lights-line .lightbulb:nth-child(10):before,.christmas-lights-line .lightbulb:nth-child(22):before {
+        animation: none
+    }
+}
+
+.christmas-lights-line .lightbulb:nth-child(11),.christmas-lights-line .lightbulb:nth-child(23) {
+    --_lightbulb-color: #480080
+}
+
+.christmas-lights-line .lightbulb:nth-child(11):before,.christmas-lights-line .lightbulb:nth-child(23):before {
+    animation: blink 3s infinite both;
+    animation-delay: 1.1s;
+    background-color: inherit;
+    content: "";
+    filter: blur(.5rem);
+    -webkit-filter: blur(.5rem);
+    inset: -.3rem;
+    position: absolute;
+    z-index: -1
+}
+
+@media (prefers-reduced-motion) {
+    .christmas-lights-line .lightbulb:nth-child(11):before,.christmas-lights-line .lightbulb:nth-child(23):before {
+        animation: none
+    }
+}
+
+.christmas-lights-line .lightbulb:nth-child(12),.christmas-lights-line .lightbulb:nth-child(24) {
+    --_lightbulb-color: #c61585
+}
+
+.christmas-lights-line .lightbulb:nth-child(12):before,.christmas-lights-line .lightbulb:nth-child(24):before {
+    animation: blink 3s infinite both;
+    animation-delay: 1.2s;
+    background-color: inherit;
+    content: "";
+    filter: blur(.5rem);
+    -webkit-filter: blur(.5rem);
+    inset: -.3rem;
+    position: absolute;
+    z-index: -1
+}
+
+@media (prefers-reduced-motion) {
+    .christmas-lights-line .lightbulb:nth-child(12):before,.christmas-lights-line .lightbulb:nth-child(24):before {
+        animation: none
+    }
+}
+
+@supports (transform: scale(cos(0deg))) {
+    .christmas-lights-line .lightbulb {
+        transform:translateY(calc(var(--_pos, 10px)*.76604))
+    }
+}
+
+@keyframes blink {
+    0%,to {
+        opacity: 1
+    }
+
+    50% {
+        opacity: .5
     }
 }
