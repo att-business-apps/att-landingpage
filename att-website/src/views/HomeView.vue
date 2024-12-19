@@ -289,12 +289,12 @@ function getTemplate(target) {
             <div class="col-md-6 project branding">
               <div class="project-grid">
                 <div class="thumbnail">
-                  <a href="https://uaelinks.ae/">
+                  <a href="https://uaelinks.ae/" target="_blank">
                     <img src="../assets/img/project/c1/project-thum-uaeLinks.png" alt="project">
                   </a>
                 </div>
                 <div class="content">
-                  <h4 class="title"><a href="https://uaelinks.ae/">UAE Links</a></h4>
+                  <h4 class="title"><a href="https://uaelinks.ae/" target="_blank">UAE Links</a></h4>
                   <span class="subtitle">UI/UX Design, Website</span>
                 </div>
               </div>
@@ -302,12 +302,13 @@ function getTemplate(target) {
             <div class="col-md-6 project branding">
               <div class="project-grid">
                 <div class="thumbnail">
-                  <a href="https://solvedcubeitsolutions.com/">
+                  <a href="https://solvedcubeitsolutions.com/" target="_blank">
                     <img src="../assets/img/project/c2/project-thum-sc.png" alt="project">
                   </a>
                 </div>
                 <div class="content">
-                  <h4 class="title"><a href="https://solvedcubeitsolutions.com/">Solved Cude IT Solutions</a></h4>
+                  <h4 class="title"><a href="https://solvedcubeitsolutions.com/" target="_blank">Solved Cude IT
+                      Solutions</a></h4>
                   <span class="subtitle">Logo, Branding, UI/UX Design, Website, GMB</span>
                 </div>
               </div>
@@ -315,12 +316,12 @@ function getTemplate(target) {
             <div class="col-md-6 project branding">
               <div class="project-grid">
                 <div class="thumbnail">
-                  <a href="https://steadyasset.com/">
+                  <a href="https://steadyasset.com/" target="_blank">
                     <img src="../assets/img/project/c3/project-thum-sa.png" alt="project">
                   </a>
                 </div>
                 <div class="content">
-                  <h4 class="title"><a href="https://steadyasset.com/">SteadyAsset</a></h4>
+                  <h4 class="title"><a href="https://steadyasset.com/" target="_blank">SteadyAsset</a></h4>
                   <span class="subtitle">Logo, Branding, UI/UX Design, Website</span>
                 </div>
               </div>
@@ -328,12 +329,12 @@ function getTemplate(target) {
             <div class="col-md-6 project branding">
               <div class="project-grid">
                 <div class="thumbnail">
-                  <a href="http://alshamil.co:8082/">
+                  <a href="http://alshamil.co:8082/" target="_blank">
                     <img src="../assets/img/project/c4/project-thum-als.png" alt="project">
                   </a>
                 </div>
                 <div class="content">
-                  <h4 class="title"><a href="http://alshamil.co:8082/">Al-Shamil Computers Tr.</a></h4>
+                  <h4 class="title"><a href="http://alshamil.co:8082/" target="_blank">Al-Shamil Computers Tr.</a></h4>
                   <span class="subtitle">Website</span>
                 </div>
               </div>
