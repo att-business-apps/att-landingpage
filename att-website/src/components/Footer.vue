@@ -118,8 +118,7 @@
                   <h6 class="widget-title">Resourses &amp; Support</h6>
                   <div class="footer-menu-link">
                     <ul class="list-unstyled">
-                      <li><a href="blog">Blog</a></li>
-                      <li><a href="case-study">Case Studies</a></li>
+                      <!-- <li><a href="blog">Blog</a></li> -->
                       <li><a href="portfolio">Portfolio</a></li>
                       <li><a href="whereToFind">Where to find</a></li>
                       <li><a href="privacy">Privacy Policy</a></li>

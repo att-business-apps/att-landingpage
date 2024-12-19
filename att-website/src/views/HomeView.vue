@@ -1,5 +1,4 @@
 <script setup>
-import isotope from 'vueisotope';
 import { ref } from "vue";
 
 const disableBtn = ref(false);
@@ -268,23 +267,11 @@ function getTemplate(target) {
     <section class="section section-padding-2 bg-color-white">
       <div class="container">
         <div class="section-heading heading-left">
-          <span class="subtitle">Our Project</span>
+          <span class="subtitle">Portfolio</span>
           <h2 class="title">Some of our <br> finest work.</h2>
         </div>
 
-        <!-- <isotope :options='getOptions()' :list="list" @filter="filterOption = arguments[0]"
-          @sort="sortOption = arguments[0]">
-          <div v-for="element in list" :key="element.id">
-            {{ element.name }}
-          </div>
-        </isotope> -->
-
         <div class="">
-          <!-- <div class="isotope-button isotope-project-btn">
-            <button data-filter="*" class="is-checked"><span class="filter-text">All Works</span></button>
-            <button data-filter=".branding" class=""><span class="filter-text">Branding</span></button>
-            <button data-filter=".mobile" class=""><span class="filter-text">Mobile</span></button>
-          </div> -->
           <div class="row row-35 isotope-list">
             <div class="col-md-6 project branding">
               <div class="project-grid">
@@ -307,8 +294,7 @@ function getTemplate(target) {
                   </a>
                 </div>
                 <div class="content">
-                  <h4 class="title"><a href="https://solvedcubeitsolutions.com/" target="_blank">Solved Cude IT
-                      Solutions</a></h4>
+                  <h4 class="title"><a href="https://solvedcubeitsolutions.com/" target="_blank">Solved Cude</a></h4>
                   <span class="subtitle">Logo, Branding, UI/UX Design, Website, GMB</span>
                 </div>
               </div>
@@ -334,7 +320,7 @@ function getTemplate(target) {
                   </a>
                 </div>
                 <div class="content">
-                  <h4 class="title"><a href="http://alshamil.co:8082/" target="_blank">Al-Shamil Computers Tr.</a></h4>
+                  <h4 class="title"><a href="http://alshamil.co:8082/" target="_blank">Al-Shamil</a></h4>
                   <span class="subtitle">UI/UX Design, Website</span>
                 </div>
               </div>
@@ -343,9 +329,9 @@ function getTemplate(target) {
         </div>
       </div>
       <ul class="shape-group-7 list-unstyled">
-        <li class="shape shape-1"><img src="../assets/img/shapes/bubble-1.png" alt="circle"></li>
+        <li class="shape shape-3"><img src="../assets/img/shapes/bubble-14.png" alt="circle"></li>
+        <li class="shape shape-2"><img src="../assets/img/shapes/line-9.png" alt="Line"></li>
         <li class="shape shape-2"><img src="../assets/img/shapes/bubble-2.png" alt="Line"></li>
-        <li class="shape shape-3"><img src="../assets/img/shapes/bubble-1.png" alt="Line"></li>
       </ul>
     </section>
 

@@ -28,9 +28,9 @@ const router = createRouter({
       component: () => import("../views/ContactView.vue"),
     },
     {
-      path: "/whyUs",
-      name: "projects",
-      component: () => import("../views/PrivacyView.vue"),
+      path: "/portfolio",
+      name: "portfolio",
+      component: () => import("../views/ProjectView.vue"),
     },
     {
       path: "/privacy",
@@ -45,13 +45,22 @@ const router = createRouter({
     {
       path: "/estimate",
       name: "estimate",
-      component: () => import("../views/Estimate.vue"),
+      component: () => import("../views/EstimateView.vue"),
     },
-
     {
-      path: "/project/solved-cube-it-solutions",
+      path: "/projects/uae-links",
+      name: "uae-links",
+      component: () => import("../views/project/ProjectUAELinksView.vue"),
+    },
+    {
+      path: "/projects/solved-cube-it-solutions",
       name: "solved-cube-it-solutions",
-      component: () => import("../views/project/Solvedcube.vue"),
+      component: () => import("../views/project/ProjectSolvedCubeView.vue"),
+    },
+    {
+      path: "/projects/al-shamil-comupters",
+      name: "al-shamil",
+      component: () => import("../views/project/ProjectAlShamilView.vue"),
     },
     {
       path: "/pageNotFound",
