@@ -1,4 +1,5 @@
 <script setup>
+import isotope from 'vueisotope';
 import { ref } from "vue";
 
 const disableBtn = ref(false);
@@ -140,6 +141,7 @@ function getTemplate(target) {
         </li>
       </ul>
     </div>
+
     <div class="section serviceSec section-padding" id="whatWeDo">
       <div class="container">
         <div class="section-heading heading-left mb--20 mb_md--70">
@@ -262,6 +264,89 @@ function getTemplate(target) {
         <li class="shape shape-4"><img src="../assets/img/amorboy/we-do.png" alt="Line" /></li>
       </ul>
     </div>
+
+    <section class="section section-padding-2 bg-color-white">
+      <div class="container">
+        <div class="section-heading heading-left">
+          <span class="subtitle">Our Project</span>
+          <h2 class="title">Some of our <br> finest work.</h2>
+        </div>
+
+        <!-- <isotope :options='getOptions()' :list="list" @filter="filterOption = arguments[0]"
+          @sort="sortOption = arguments[0]">
+          <div v-for="element in list" :key="element.id">
+            {{ element.name }}
+          </div>
+        </isotope> -->
+
+        <div class="">
+          <!-- <div class="isotope-button isotope-project-btn">
+            <button data-filter="*" class="is-checked"><span class="filter-text">All Works</span></button>
+            <button data-filter=".branding" class=""><span class="filter-text">Branding</span></button>
+            <button data-filter=".mobile" class=""><span class="filter-text">Mobile</span></button>
+          </div> -->
+          <div class="row row-35 isotope-list">
+            <div class="col-md-6 project branding">
+              <div class="project-grid">
+                <div class="thumbnail">
+                  <a href="https://uaelinks.ae/">
+                    <img src="../assets/img/project/c1/project-thum-uaeLinks.png" alt="project">
+                  </a>
+                </div>
+                <div class="content">
+                  <h4 class="title"><a href="https://uaelinks.ae/">UAE Links</a></h4>
+                  <span class="subtitle">UI/UX Design, Website</span>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 project branding">
+              <div class="project-grid">
+                <div class="thumbnail">
+                  <a href="https://solvedcubeitsolutions.com/">
+                    <img src="../assets/img/project/c2/project-thum-sc.png" alt="project">
+                  </a>
+                </div>
+                <div class="content">
+                  <h4 class="title"><a href="https://solvedcubeitsolutions.com/">Solved Cude IT Solutions</a></h4>
+                  <span class="subtitle">Logo, Branding, UI/UX Design, Website, GMB</span>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 project branding">
+              <div class="project-grid">
+                <div class="thumbnail">
+                  <a href="https://steadyasset.com/">
+                    <img src="../assets/img/project/c3/project-thum-sa.png" alt="project">
+                  </a>
+                </div>
+                <div class="content">
+                  <h4 class="title"><a href="https://steadyasset.com/">SteadyAsset</a></h4>
+                  <span class="subtitle">Logo, Branding, UI/UX Design, Website</span>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 project branding">
+              <div class="project-grid">
+                <div class="thumbnail">
+                  <a href="http://alshamil.co:8082/">
+                    <img src="../assets/img/project/c4/project-thum-als.png" alt="project">
+                  </a>
+                </div>
+                <div class="content">
+                  <h4 class="title"><a href="http://alshamil.co:8082/">Al-Shamil Computers Tr.</a></h4>
+                  <span class="subtitle">Website</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <ul class="shape-group-7 list-unstyled">
+        <li class="shape shape-1"><img src="../assets/img/shapes/bubble-1.png" alt="circle"></li>
+        <li class="shape shape-2"><img src="../assets/img/shapes/bubble-2.png" alt="Line"></li>
+        <li class="shape shape-3"><img src="../assets/img/shapes/bubble-1.png" alt="Line"></li>
+      </ul>
+    </section>
 
     <section class="section section-padding-equal bg-color-light pb-0" id="about">
       <div class="container">

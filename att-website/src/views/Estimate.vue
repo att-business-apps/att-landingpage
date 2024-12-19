@@ -1,31 +1,32 @@
 <template>
     <div class="breadcrum-area breadcrumb-banner">
-      <div class="container">
-        <div class="breadcrumb">
-          <ul class="list-unstyled">
-            <li><a href="/">Home</a></li>
-            <li class="active">Estimate</li>
-          </ul>
-          <div class="section-heading heading-left">
-            <h1 class="title h2">We love projects.</h1>
+        <div class="container">
+            <div class="breadcrumb">
+                <ul class="list-unstyled">
+                    <li><a href="/">Home</a></li>
+                    <li class="active">Estimate</li>
+                </ul>
+                <div class="section-heading heading-left">
+                    <h1 class="title h2">We love projects.</h1>
                     <p>Do you have anything interesting for us?</p>
-          </div>
+                </div>
+            </div>
+            <div class="banner-thumbnail">
+                <div class=""
+                    style="position: relative; will-change: transform; transform: perspective(2000px) rotateX(-0.32deg) rotateY(-11.76deg) scale3d(1, 1, 1);">
+                    <img src="../assets/img/amorboy/am-estimate.png" class="w-75 animate__animated slideInRight"
+                        style="animation-duration: 3s" alt="Illustration">
+                </div>
+            </div>
         </div>
-        <div class="banner-thumbnail">
-          <div class=""
-            style="position: relative; will-change: transform; transform: perspective(2000px) rotateX(-0.32deg) rotateY(-11.76deg) scale3d(1, 1, 1);">
-            <img src="../assets/img/amorboy/am-estimate.png" class="w-75 animate__animated slideInRight" style="animation-duration: 3s" alt="Illustration">
-          </div>
-        </div>
-      </div>
-      <ul class="shape-group-8 list-unstyled">
-        <li class="shape shape-2 sal-animate" data-sal="slide-left" data-sal-duration="500" data-sal-delay="200">
-          <img src="../assets/img/shapes/bubble-21.png" alt="circle">
-        </li>
-        <li class="shape shape-3 sal-animate" data-sal="slide-up" data-sal-duration="500" data-sal-delay="300">
-          <img src="../assets/img/shapes/line-1.png" alt="circle">
-        </li>
-      </ul>
+        <ul class="shape-group-8 list-unstyled">
+            <li class="shape shape-2 sal-animate" data-sal="slide-left" data-sal-duration="500" data-sal-delay="200">
+                <img src="../assets/img/shapes/bubble-21.png" alt="circle">
+            </li>
+            <li class="shape shape-3 sal-animate" data-sal="slide-up" data-sal-duration="500" data-sal-delay="300">
+                <img src="../assets/img/shapes/line-1.png" alt="circle">
+            </li>
+        </ul>
     </div>
 
 
@@ -58,19 +59,22 @@
                                 <div class="col-lg-6">
                                     <div class="form-group">
                                         <label>Website</label>
-                                        <input type="text" class="form-control" name="website" placeholder="www.example.com">
+                                        <input type="text" class="form-control" name="website"
+                                            placeholder="www.example.com">
                                     </div>
                                 </div>
                                 <div class="col-lg-6">
                                     <div class="form-group">
                                         <label>Email</label>
-                                        <input type="email" class="form-control" name="name" placeholder="example@mail.com">
+                                        <input type="email" class="form-control" name="name"
+                                            placeholder="example@mail.com">
                                     </div>
                                 </div>
                                 <div class="col-lg-12">
                                     <div class="form-group mb--30">
                                         <label>How can we help you?</label>
-                                        <textarea name="message" id="message" class="form-control textarea" cols="30" rows="4"></textarea>
+                                        <textarea name="message" id="message" class="form-control textarea" cols="30"
+                                            rows="4"></textarea>
                                     </div>
                                 </div>
                             </div>
@@ -88,10 +92,12 @@
                             </div>
                             <div class="form-group mb--40">
                                 <label>How can we help you?</label>
-                                <textarea name="contact-message" id="contact-message" class="form-control textarea" cols="30" rows="4"></textarea>
+                                <textarea name="contact-message" id="contact-message" class="form-control textarea"
+                                    cols="30" rows="4"></textarea>
                             </div>
                             <div class="form-group">
-                                <button type="submit" class="amor-btn btn-fill-primary btn-fluid btn-primary" name="submit-btn">Get Pricing Now</button>
+                                <button type="submit" class="amor-btn btn-fill-primary btn-fluid btn-primary"
+                                    name="submit-btn">Get Pricing Now</button>
                             </div>
                         </form>
                     </div>
