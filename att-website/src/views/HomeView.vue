@@ -335,7 +335,7 @@ function getTemplate(target) {
                 </div>
                 <div class="content">
                   <h4 class="title"><a href="http://alshamil.co:8082/" target="_blank">Al-Shamil Computers Tr.</a></h4>
-                  <span class="subtitle">Website</span>
+                  <span class="subtitle">UI/UX Design, Website</span>
                 </div>
               </div>
             </div>
