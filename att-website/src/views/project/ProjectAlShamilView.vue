@@ -4,12 +4,14 @@
             <div class="breadcrumb animate__animated fadeInUp" style="animation-duration: 2s">
                 <ul class="list-unstyled">
                     <li><a href="/">Home</a></li>
-                    <li><a href="/project">Protfolio</a></li>
+                    <li><a href="/portfolio">Protfolio</a></li>
                     <li class="active text-lg">Al-Shamil Computers</li>
                 </ul>
                 <div class="section-heading heading-left">
-                    <img src="../../assets/img/project/c2/icon-sc.svg" alt="circle">
-                    <h1 class="title h2 mb-0">Al-Shamil Computers Tr.</h1>
+                    <div class="d-flex align-items-center">
+                        <img src="../../assets/img/project/c4/icon-als.svg" alt="circle">
+                        <h1 class="title h2 mb-0 ms-2">Al-Shamil Computers Tr.</h1>
+                    </div>
                     <p>We do design, code &amp; devOps. More Than a Team – We’re Your Creative Partners</p>
                 </div>
             </div>

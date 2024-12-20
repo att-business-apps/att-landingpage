@@ -17589,59 +17589,6 @@ Pagination
     width: 70%;
   }
 }
-.isotope-project-btn {
-  margin-bottom: 55px;
-}
-
-.isotope-project-btn button {
-  border: none;
-  background-color: transparent;
-  font-size: 20px;
-  font-weight: 500;
-  color: var(--color-body);
-  font-family: var(--font-primary);
-  margin-right: 100px;
-  padding: 8px 0;
-  position: relative;
-}
-
-@media only screen and (max-width: 575px) {
-  .isotope-project-btn button {
-    margin-right: 50px;
-    font-size: 18px;
-  }
-}
-.isotope-project-btn button:focus-visible {
-  outline: none;
-}
-
-.isotope-project-btn button:after {
-  content: "";
-  height: 2px;
-  width: 100%;
-  background-color: var(--color-primary);
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  visibility: hidden;
-  opacity: 0;
-  -webkit-transition: var(--transition);
-  transition: var(--transition);
-}
-
-.isotope-project-btn button.is-checked {
-  color: var(--color-dark);
-}
-
-.isotope-project-btn button.is-checked:after {
-  visibility: visible;
-  opacity: 1;
-}
-
-.isotope-project-btn button:last-child {
-  margin-right: 0;
-}
-
 @media only screen and (max-width: 991px) {
   .single-portfolio-area .why-choose-us {
     margin-top: 50px;

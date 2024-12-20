@@ -58,6 +58,11 @@ const router = createRouter({
       component: () => import("../views/project/ProjectSolvedCubeView.vue"),
     },
     {
+      path: "/projects/steadyasset",
+      name: "solved-cube-it-solutions",
+      component: () => import("../views/project/ProjectSteadyAssetView.vue"),
+    },
+    {
       path: "/projects/al-shamil-comupters",
       name: "al-shamil",
       component: () => import("../views/project/ProjectAlShamilView.vue"),
