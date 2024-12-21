@@ -14,7 +14,9 @@
       <div class="banner-thumbnail ">
         <div class=""
           style="position: relative; will-change: transform; transform: perspective(2000px) rotateX(-0.32deg) rotateY(-11.76deg) scale3d(1, 1, 1);">
-          <img src="../assets/img/amorboy/am-privacy.png" class="w-75 animate__animated slideInRight" style="animation-duration: 3s" alt="Illustration"></div>
+          <img src="../assets/img/amorboy/am-privacy.png" class="w-75 animate__animated slideInRight"
+            style="animation-duration: 3s" alt="Illustration">
+        </div>
       </div>
     </div>
     <ul class="shape-group-8 list-unstyled">
@@ -111,7 +113,7 @@
               <strong>amortree Tech Pvt. Ltd.</strong><br>
               <!-- [Insert Company Address]<br> -->
               <a href="mailto:hi@amortree.com">hi@amortree.com</a><br>
-              <a href="tel:+917975859061">+91 79758 59061</a>
+              <a href="tel:+919916846647">+91 99168 46647</a>
             </address>
           </div>
         </div>
@@ -126,9 +128,11 @@ h2 {
   margin-bottom: .5rem;
   margin-top: 3rem;
 }
+
 p {
   margin-bottom: 1rem;
 }
+
 a {
   color: #0d6efd;
 }

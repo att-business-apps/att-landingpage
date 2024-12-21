@@ -47,6 +47,8 @@ const router = createRouter({
       name: "estimate",
       component: () => import("../views/EstimateView.vue"),
     },
+
+    // Projects
     {
       path: "/projects/uae-links",
       name: "uae-links",

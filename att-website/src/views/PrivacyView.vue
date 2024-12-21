@@ -114,7 +114,7 @@
               <strong>amortree Tech Pvt. Ltd.</strong><br>
               <!-- [Insert Company Address]<br> -->
               <a href="mailto:hi@amortree.com">hi@amortree.com</a><br>
-              <a href="tel:+917975859061">+91 79758 59061</a>
+              <a href="tel:+919916846647">+91 99168 46647</a>
             </address>
           </div>
         </div>

@@ -1,68 +1,68 @@
 <script setup>
 import { ref } from "vue";
 
-const disableBtn=ref(false);
+const disableBtn = ref(false);
 const from_name = ref("");
 const email = ref("");
 const phoneNumber = ref("");
 const message = ref("");
 
 function sendMail() {
-  var params = {
-    from_name: from_name.value,
-    to_name: "Admin",
-    email: email.value,
-    phoneNumber: phoneNumber.value,
-    message: message.value,
-  };
+    var params = {
+        from_name: from_name.value,
+        to_name: "Admin",
+        email: email.value,
+        phoneNumber: phoneNumber.value,
+        message: message.value,
+    };
 
-  const serviceID = "service_77crg6o";
+    const serviceID = "service_77crg6o";
 
-  if (!params.from_name) {
-    alert("Please enter your name");
-    return;
-  }
-  if (!params.email) {
-    alert("Please enter your email");
-    return;
-  }
-  if (!params.phoneNumber) {
-    alert("Please enter your phone number");
-    return;
-  }
-  if (!params.message) {
-    alert("Please enter your requirement");
-    return;
-  }
+    if (!params.from_name) {
+        alert("Please enter your name");
+        return;
+    }
+    if (!params.email) {
+        alert("Please enter your email");
+        return;
+    }
+    if (!params.phoneNumber) {
+        alert("Please enter your phone number");
+        return;
+    }
+    if (!params.message) {
+        alert("Please enter your requirement");
+        return;
+    }
 
-  disableBtn.value = true;
-  emailjs
-    .send(serviceID, getTemplate('admin'), params)
-    .then((res) => {
-      from_name.value = "";
-      email.value = "";
-      phoneNumber.value = "";
-      message.value = "";
-      console.log(res);
-      disableBtn.value = false;
-    })
-    .catch((err) => console.log(err));
-  emailjs
-    .send(serviceID, getTemplate('customer'), params)
-    .then((res) => {
-      from_name.value = "";
-      email.value = "";
-      phoneNumber.value = "";
-      message.value = "";
-      console.log(res);
-      disableBtn.value = false;
-    })
-    .catch((err) => console.log(err));
+    disableBtn.value = true;
+    emailjs
+        .send(serviceID, getTemplate('admin'), params)
+        .then((res) => {
+            from_name.value = "";
+            email.value = "";
+            phoneNumber.value = "";
+            message.value = "";
+            console.log(res);
+            disableBtn.value = false;
+        })
+        .catch((err) => console.log(err));
+    emailjs
+        .send(serviceID, getTemplate('customer'), params)
+        .then((res) => {
+            from_name.value = "";
+            email.value = "";
+            phoneNumber.value = "";
+            message.value = "";
+            console.log(res);
+            disableBtn.value = false;
+        })
+        .catch((err) => console.log(err));
 }
 
-function getTemplate(target){
-  if(target=='admin')return 'template_tcauze5';
-  if(target=='customer')return 'template_svj7071';
+function getTemplate(target) {
+    if (target == 'admin') return 'template_tcauze5';
+    if (target == 'customer') return 'template_svj7071';
 }
 </script>
 
@@ -146,7 +146,7 @@ function getTemplate(target){
                         <h4 class="title">Phone</h4>
                         <p>Reach out for any queries; our experts are here to assist and resolve your concerns promptly.
                         </p>
-                        <h4 class="phone-number"><a href="tel:+917975859061">+91 79758 59061</a></h4>
+                        <h4 class="phone-number"><a href="tel:+919916846647">+91 99168 46647</a></h4>
                     </div>
 
                     <div class="contact-info mb--30">
