@@ -11,7 +11,6 @@
                         <a href="/">
                             <img class="light-version-logo" style="width:220px; margin: 0 auto;"
                                 src="../assets/img/att-logo-dark.svg" alt="amortree Tech logo" />
-                            <img src="../assets/img/fest/hat.png" class="img-fluid img-seasonal" alt="Santa Hat" />
                         </a>
                     </div>
                     <div class="header-main-nav">
@@ -93,7 +92,7 @@
         </nav>
     </div>
 
-    <div class="christmas-lights-line">
+    <div class="christmas-lights-line d-none">
         <span style="--_pos: 1px" class="lightbulb"></span>
         <span style="--_pos: 2px" class="lightbulb d-none d-md-block"></span>
         <span style="--_pos: 3px" class="lightbulb"></span>

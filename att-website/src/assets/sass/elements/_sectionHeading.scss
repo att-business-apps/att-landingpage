@@ -941,9 +941,10 @@
             }
         }
         &.shape-2 {
-            top: 200px;
+            top: 120px;
             right: 200px;
             text-align: right;
+            z-index: -2;
             @media #{$laptop-device} {
                 top: 120px;
                 right: 15px;

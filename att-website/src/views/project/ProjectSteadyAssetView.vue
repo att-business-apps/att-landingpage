@@ -1,5 +1,5 @@
 <template>
-    <div class="breadcrum-area breadcrumb-banner">
+    <section class="breadcrum-area breadcrumb-banner">
         <div class="container">
             <div class="breadcrumb animate__animated fadeInUp" style="animation-duration: 2s">
                 <ul class="list-unstyled">
@@ -32,6 +32,20 @@
                 <img src="../../assets/img/shapes/line-5.png" alt="circle">
             </li>
         </ul>
+    </section>
+
+    <div class="container monitor_hero_container section-padding">
+        <div class="row">
+            <div class="col-12">
+                <div class="iframe-website">
+                    <iframe src="https://steadyasset.com/" class="website"></iframe>
+                </div>
+                <img src="https://cdn.prod.website-files.com/672dc217e27ecc7b1096daa2/6745e66e2db240c02c207d50_frame_monitor_video_mockup.webp"
+                    loading="lazy" sizes="(max-width: 1450px) 100vw, 1450px"
+                    srcset="https://cdn.prod.website-files.com/672dc217e27ecc7b1096daa2/6745e66e2db240c02c207d50_frame_monitor_video_mockup-p-500.webp 500w, https://cdn.prod.website-files.com/672dc217e27ecc7b1096daa2/6745e66e2db240c02c207d50_frame_monitor_video_mockup-p-800.webp 800w, https://cdn.prod.website-files.com/672dc217e27ecc7b1096daa2/6745e66e2db240c02c207d50_frame_monitor_video_mockup-p-1080.webp 1080w, https://cdn.prod.website-files.com/672dc217e27ecc7b1096daa2/6745e66e2db240c02c207d50_frame_monitor_video_mockup.webp 1450w"
+                    alt="" class="frame_monitor_mockup">
+            </div>
+        </div>
     </div>
 
     <div class="container-fluid">

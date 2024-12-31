@@ -227,3 +227,48 @@
 .project-column-4 .project-grid .content {
     padding: 40px 30px;
 }
+
+
+
+
+
+
+.monitor_hero_container {
+    width: var(--column-width--9);
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+}
+
+.frame_monitor_mockup {
+    pointer-events: none;
+    display: block;
+    position: relative;
+    margin-bottom: -7% !important;
+}
+
+.iframe-website {
+    aspect-ratio: 2;
+    background-color: var(--color-white);
+    object-fit: cover;
+    border-radius: 2%;
+    width: 100%;
+    position: absolute;
+    inset: 0% 0% auto;
+    overflow: hidden;
+    margin: 100px auto 0px;
+
+    &::after,
+    &::before {
+        content: " ";
+        grid-area: 1 / 1 / 2 / 2;
+        display: table;
+    }
+
+    .website {
+        width: 100vw;
+        height: 100vh;
+        transform-origin: 0 0;
+        transform: scale(0.7);
+    }
+}

@@ -178,7 +178,7 @@
         <div class="content"><span class="subtitle">Step Three</span>
           <h3 class="title">Experience Crafting</h3>
           <p>With a solid identity in place, focus on designing user-centric interfaces that captivate and engage users.
-            Wireframes and prototypes will be developed to ensure that the website’s UI/UX reflects the brand’s ethos
+            Wireframes and prototypes will be developed to ensure that the website's UI/UX reflects the brand's ethos
             while providing a seamless experience.</p>
         </div>
       </div>
@@ -217,7 +217,7 @@
 
 
 <style scoped>
-  .section-heading .subtitle {
-    color: #5cb04e;
-  }
+.section-heading .subtitle {
+  color: #5cb04e;
+}
 </style>

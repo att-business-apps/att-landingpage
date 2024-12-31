@@ -64,6 +64,10 @@ function getTemplate(target) {
   if (target == 'admin') return 'template_tcauze5';
   if (target == 'customer') return 'template_svj7071';
 }
+
+
+// New Year
+
 </script>
 
 <template>
@@ -74,6 +78,7 @@ function getTemplate(target) {
           <div class="col-lg-6 pb-5">
             <div class="banner-content">
               <div class="animate__animated fadeInUp" style="animation-duration: 1s">
+                <p class="m-0 h5">🎉 Happy New Year 2025! 🎉</p>
                 <h1 class="title d-inline">
                   A Touch of Class for Your
                   <span class="gradient-text-light">Digital Presence</span>.
@@ -89,12 +94,50 @@ function getTemplate(target) {
                   specialize in a wide range of services tailored to meet the
                   diverse needs of our clients.
                 </p>
-                <a class="amor-btn btn-fill-primary btn-large" href="whereToFind">Get Started</a>
+                <a class="amor-btn btn-fill-primary btn-large" href="portfolio">View Portfolio</a>
               </div>
             </div>
           </div>
           <div class="col-lg-6">
-            <div class="banner-thumbnail">
+            <div class="contact-form-box banner-form">
+              <h4 class="title">Unlock Your Online Potential</h4>
+              <form class="amor-contact-form">
+                <h5 class="mb-2">We’d love to know more about your project needs!</h5>
+                <p class="mb-3">Submit your query, and we’ll reach out to you shortly!</p>
+                <div class="form-group mb--40">
+                  <!-- <label>How can we help you?</label> -->
+                  <textarea name="contact-message" id="message" class="form-control textarea" v-model="message"
+                    cols="30" rows="2" placeholder="How can we help you?" required></textarea>
+                </div>
+
+
+                <h5 class="mt-3 mb-2">Your Contact Details</h5>
+                <p class="mb-3">For project discussions only, thank you!</p>
+                <div class="form-group">
+                  <!-- <label>Name</label> -->
+                  <input type="text" v-model="from_name" class="form-control" name="contact-name"
+                    placeholder="Your Name" required="" />
+                </div>
+                <div class="form-group">
+                  <!-- <label>Email</label> -->
+                  <input type="email" v-model="email" class="form-control" name="contact-email" placeholder="Your Email"
+                    required />
+                </div>
+                <div class="form-group mb--40">
+                  <!-- <label>Phone</label> -->
+                  <input type="tel" class="form-control" v-model="phoneNumber" name="contact-phone"
+                    placeholder="Your Phone" required />
+                </div>
+                <div class="form-group">
+                  <button @click="sendMail" type="button" class="amor-btn btn-borderd btn-fluid light" name="submit-btn"
+                    :disabled="disableBtn">
+                    Send Message
+                  </button>
+                </div>
+                <div class="form-group"></div>
+              </form>
+            </div>
+            <div class="banner-thumbnail d-none">
               <div class="animate__animated zoomIn" style="animation-duration: 2s">
                 <div class="large-thumb">
                   <img src="../assets/img/window.png" alt="Laptop" />
@@ -373,38 +416,6 @@ function getTemplate(target) {
             </div>
           </div>
           <div class="col-xl-5 col-lg-6 offset-xl-1">
-            <div class="contact-form-box d-none">
-              <h3 class="title">Describe your project</h3>
-              <form class="amor-contact-form">
-                <div class="form-group">
-                  <label>Name</label>
-                  <input type="text" v-model="from_name" class="form-control" name="contact-name"
-                    placeholder="John Smith" required="" />
-                </div>
-                <div class="form-group">
-                  <label>Email</label>
-                  <input type="email" v-model="email" class="form-control" name="contact-email"
-                    placeholder="example@mail.com" required />
-                </div>
-                <div class="form-group mb--40">
-                  <label>Phone</label>
-                  <input type="tel" class="form-control" v-model="phoneNumber" name="contact-phone"
-                    placeholder="+123456789" required />
-                </div>
-                <div class="form-group mb--40">
-                  <label>How can we help you?</label>
-                  <textarea name="contact-message" id="message" class="form-control textarea" v-model="message"
-                    cols="30" rows="6" required></textarea>
-                </div>
-                <div class="form-group">
-                  <button @click="sendMail" type="button" class="amor-btn btn-fill-primary btn-fluid btn-primary"
-                    name="submit-btn" :disabled="disableBtn">
-                    Send
-                  </button>
-                </div>
-                <div class="form-group"></div>
-              </form>
-            </div>
             <img src="../assets/img/amorboy/am-home-abt.png" alt="Bubble" />
           </div>
         </div>

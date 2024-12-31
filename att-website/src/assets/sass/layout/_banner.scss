@@ -2,23 +2,23 @@
     Banner
 -------------------------*/
 .banner {
-    padding: 255px 0 0;
+    padding: 150px 0 0;
     position: relative;
     z-index: 2;
     min-height: 800px;
     @media #{$laptop-device} {
-        padding: 220px 0 0;
+        padding: 160px 0 0;
     }
     @media #{$smlg-device} {
-        padding: 200px 0 0;
+        padding: 100px 0 0;
         min-height: 100%;
     }
     
     @media #{$md-layout} {
-        padding: 160px 0 0;
+        padding: 120px 0 0;
     } 
     @media #{$sm-layout} {
-        padding: 150px 0 0;
+        padding: 100px 0 0;
     }
 
     .banner-content {
@@ -513,6 +513,7 @@
             }
             .contact-form-box {
                 max-width: 450px;
+                
                 @media #{$md-layout}{
                     max-width: 100%;
                 }

@@ -25,7 +25,7 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
   font-size: 100%;
   font: inherit;
   vertical-align: baseline;
-  font-weight: 400;
+  font-weight: 500;
 }
 
 /* HTML5 display-role reset for older browsers */
@@ -34,10 +34,6 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   display: block;
 }
 
-body {
-  font-family: "Open Sans", sans-serif;
-  line-height: 1;
-}
 
 ol, ul {
   list-style: none;
@@ -97,36 +93,13 @@ a:focus {
   color: $cdark;
 }
 
-body {
-  margin: 0;
-  padding: 0;
-  font-family: $body-font;
-  font-size: 16px;
-  line-height: 1.5;
-  -webkit-font-smoothing: antialiased;
-  background: #fff;
-  outline: 0;
-  color: $cdark;
-  // &::-webkit-scrollbar-track {
-  //     background-color: #fff;
-  // }
-  // &::-webkit-scrollbar {
-  //     width: 10px;
-  //     background-color: #fff;
-  // }
-  // &::-webkit-scrollbar-thumb {
-  //     border-radius: 4px;
-  //     background-color: $cdark;
-  // }
-
-  img {
-    border: none;
-    max-width: 100%;
-    -webkit-user-select: none;
-    -khtml-user-select: none;
-    -moz-user-select: none;
-    -o-user-select: none;
-    user-select: none;
-  }
+img {
+  border: none;
+  max-width: 100%;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -o-user-select: none;
+  user-select: none;
 }
 

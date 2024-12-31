@@ -61,7 +61,7 @@ const router = createRouter({
     },
     {
       path: "/projects/steadyasset",
-      name: "solved-cube-it-solutions",
+      name: "steadyasset",
       component: () => import("../views/project/ProjectSteadyAssetView.vue"),
     },
     {

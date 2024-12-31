@@ -10,7 +10,7 @@ body {
     font-size: var(--font-body-2);
     line-height: var(--line-height-b1);
     color: var(--color-body);
-    font-weight: 400;
+    font-weight: 500;
     height: 100%;
     vertical-align: baseline;
     -webkit-font-smoothing: antialiased;
@@ -66,10 +66,10 @@ h1,
     font-size: var(--h1);
     line-height: 1.2;
     @media #{$laptop-device} {
-        font-size: 68px;
+        font-size: 56px;
     }
     @media #{$smlg-device} {
-        font-size: 68px;
+        font-size: 56px;
     }
     @media #{$sm-layout} {
         font-size: 48px;
@@ -81,10 +81,10 @@ h2,
     font-size: var(--h2);
     line-height: 1.2;
     @media #{$laptop-device} {
-        font-size: 56px;
+        font-size: 48px;
     }
     @media #{$smlg-device} {
-        font-size: 56px;
+        font-size: 48px;
     }
     @media #{$sm-layout} {
         font-size: 38px;
