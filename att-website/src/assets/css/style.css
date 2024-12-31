@@ -19167,12 +19167,12 @@ Pagination
 }
 @media only screen and (max-width: 991px) {
   .banner .banner-content {
-    margin-bottom: 90px;
+    margin-bottom: 40px;
   }
 }
 @media only screen and (max-width: 767px) {
   .banner .banner-content {
-    margin-bottom: 60px;
+    margin-bottom: 40px;
   }
 }
 @media only screen and (max-width: 575px) {
