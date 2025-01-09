@@ -154,8 +154,7 @@
         <div class="row">
           <div class="col-md-6">
             <div class="footer-copyright">
-              <span class="copyright-text">Copyright ©
-                <script>document.write(new Date().getFullYear());</script>. amortree Tech. All rights reserved.
+              <span class="copyright-text">Copyright © 2025. amortree Tech. All rights reserved.
               </span>
             </div>
           </div>
