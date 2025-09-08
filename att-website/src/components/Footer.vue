@@ -7,7 +7,7 @@
           <span class="subtitle">Let's Work Together</span>
           <h2 class="title">Need a successful project?</h2>
           <!-- <a class="amor-btn btn-large btn-fill-white" href="estimate">Estimate Project</a> -->
-          <a class="amor-btn btn-large btn-fill-white" href="whereToFind">Let's talk.</a>
+          <a class="amor-btn btn-large btn-fill-white" href="/whereToFind">Let's talk.</a>
         </div>
         <div class="thumbnail">
           <div class="larg-thumb" data-sal="zoom-in" data-sal-duration="600" data-sal-delay="100">
@@ -105,12 +105,12 @@
                   <h6 class="widget-title">What we do</h6>
                   <div class="footer-menu-link">
                     <ul class="list-unstyled">
-                      <li><a href="whatWeDo#research">Research</a></li>
-                      <li><a href="whatWeDo#branding">Branding</a></li>
-                      <li><a href="whatWeDo#logoDesign">Logo Design</a></li>
-                      <li><a href="whatWeDo#website">Website UI/UX</a></li>
-                      <li><a href="whatWeDo#mobileAppUiUx">Mobile App UI/UX</a></li>
-                      <li><a href="whatWeDo#devOps">DevOps</a></li>
+                      <li><a href="/whatWeDo#research">Research</a></li>
+                      <li><a href="/whatWeDo#branding">Branding</a></li>
+                      <li><a href="/whatWeDo#logoDesign">Logo Design</a></li>
+                      <li><a href="/whatWeDo#website">Website UI/UX</a></li>
+                      <li><a href="/whatWeDo#mobileAppUiUx">Mobile App UI/UX</a></li>
+                      <li><a href="/whatWeDo#devOps">DevOps</a></li>
                     </ul>
                   </div>
                 </div>
@@ -121,10 +121,10 @@
                   <div class="footer-menu-link">
                     <ul class="list-unstyled">
                       <!-- <li><a href="blog">Blog</a></li> -->
-                      <li><a href="portfolio">Portfolio</a></li>
-                      <li><a href="whereToFind">Where to find</a></li>
-                      <li><a href="privacy">Privacy Policy</a></li>
-                      <li><a href="terms">Terms of Use</a></li>
+                      <li><a href="/portfolio">Portfolio</a></li>
+                      <li><a href="/whereToFind">Where to find</a></li>
+                      <li><a href="/privacy">Privacy Policy</a></li>
+                      <li><a href="/terms">Terms of Use</a></li>
                     </ul>
                   </div>
                 </div>
@@ -188,10 +188,10 @@
         </svg>
       </a>
     </li>
-    <li><a href="whatWeDo"><span class="text-lb">What</span> we do</a></li>
-    <li><a href="whoWeAre"><span class="text-lg">Who</span> we are</a></li>
+    <li><a href="/whatWeDo"><span class="text-lb">What</span> we do</a></li>
+    <li><a href="/whoWeAre"><span class="text-lg">Who</span> we are</a></li>
     <!-- <li><a href="whyUs"><span class="text-lr">Why</span> us</a></li> -->
-    <li><a href="whereToFind"><span class="text-lr">Where</span> to find</a></li>
+    <li><a href="/whereToFind"><span class="text-lr">Where</span> to find</a></li>
   </ul>
 </template>
 
