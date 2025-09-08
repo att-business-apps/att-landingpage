@@ -20350,11 +20350,6 @@ Service
 }
 .case-study-featured .section-heading .title {
   letter-spacing: -0.045em;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  display: -webkit-box;
-  -webkit-line-clamp: 3;
-  -webkit-box-orient: vertical;
   padding-bottom: 5px;
 }
 @media only screen and (max-width: 575px) {
