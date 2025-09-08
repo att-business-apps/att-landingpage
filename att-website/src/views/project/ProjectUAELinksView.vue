@@ -281,6 +281,16 @@
         padding: 2rem;
     }
 
+    .cta-buttons {
+        display: block;
+    }
+
+    .cta-buttons a {
+        display: block;
+        margin-bottom: 1rem;
+        margin-right: 0 !important;
+    }
+
     .result-number {
         font-size: 2.5rem;
     }
