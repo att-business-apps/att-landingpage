@@ -496,7 +496,7 @@ function getTemplate(target) {
                 and expertise. Your efforts have not gone unnoticed and I'm grateful for your contributions. Thank you
                 again for a job well done!"</p>
               <div class="small text-muted">Client – Solved Cube IT Solution</div>
-              <div class="fw-bold">Sadeep</div>
+              <div class="fw-bold">Sandeep L</div>
             </div>
           </div>
           <div class="col-lg-4 col-md-6 mb-4">
