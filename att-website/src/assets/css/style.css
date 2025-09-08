@@ -16887,11 +16887,6 @@ body.active-dark-mode .my_switcher button span.dark {
 }
 .breadcrumb-banner .section-heading p {
   width: 40%;
-  display: -webkit-box;
-  -webkit-line-clamp: 2;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-  text-overflow: ellipsis;
 }
 @media only screen and (max-width: 991px) {
   .breadcrumb-banner .section-heading p {
