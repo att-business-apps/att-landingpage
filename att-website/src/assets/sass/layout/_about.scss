@@ -20,7 +20,7 @@
     &.banner-form {
         background-color: var(--color-dark);
         position: relative;
-        margin-bottom: -120px;
+        margin-bottom: -60px;
         @include transition($all);
 
         h4, h5, p, button, input, textarea {

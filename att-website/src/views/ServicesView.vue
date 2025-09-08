@@ -11,8 +11,10 @@
           <li class="active text-lb">What We Do</li>
         </ul>
         <div class="section-heading heading-left">
-          <h1 class="title h2 mb-0">Your Partner in Digital Success!</h1>
-          <p>At amortree Tech, we combine creativity and technology to deliver seamless digital experiences.</p>
+          <h1 class="title h2 mb-0">Professional Web Development & IT Services Company</h1>
+          <p>Leading web development company specializing in custom website design, UI/UX services, mobile app
+            development, and DevOps solutions. We combine creativity and technology to deliver seamless digital
+            experiences.</p>
         </div>
       </div>
       <div class="banner-thumbnail bottom-0">
@@ -94,7 +96,8 @@
               <div class="content">
                 <h5 class="title">User Research</h5>
                 <p class="mb-2">Understanding user behavior is key to design effective solutions. We gather insights
-                  through surveys, interviews, and user testing to ensure that your brand resonates with your target audience.
+                  through surveys, interviews, and user testing to ensure that your brand resonates with your target
+                  audience.
                 </p>
               </div>
             </div>
@@ -780,14 +783,15 @@
 </template>
 
 <style scss scoped>
-  .service-scroll-navigation-area {
-    position: relative;
-  }
-  .section-heading .subtitle {
-    color: #0d6efd;
-  }
+.service-scroll-navigation-area {
+  position: relative;
+}
 
-  .services-grid .thumbnail {
-    max-width: 140px;
-  }
+.section-heading .subtitle {
+  color: #0d6efd;
+}
+
+.services-grid .thumbnail {
+  max-width: 140px;
+}
 </style>

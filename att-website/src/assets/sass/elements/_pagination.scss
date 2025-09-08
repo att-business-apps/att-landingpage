@@ -62,3 +62,90 @@ Pagination
     }
 }
  
+
+/* -----------------------
+Frequently Asked Questions 
+--------------------------*/
+.faqSec {
+    position: relative;
+    // background-color: $cwhite !important;
+
+    .faq-style {
+        position: relative;
+        z-index: 1;
+
+        .title {
+            font-weight: 400;
+            font-size: 42px;
+            margin-bottom: 2rem;
+            color: $cdark !important;
+
+            @include md-updown {
+                margin-top: 1.65rem;
+            }
+
+            @include md-down {
+                margin-top: 1.65rem;
+            }
+        }
+    }
+
+    .accordion {
+        .accordion-item {
+            background: $cwhite;
+            border: none;
+            margin-top: 15px;
+            box-shadow: 0 25px 70px rgb(0 0 0 / 7%) !important;
+            border-radius: 8px;
+
+            &:first-child {
+                margin-top: 0;
+            }
+
+            .accordion-header {
+                margin: 0;
+                border: none;
+
+                .accordion-button {
+                    color: $cdark;
+                    font-size: 18px;
+                    font-weight: 400;
+                    background: $cwhite !important;
+                    padding: 25px 60px 25px 25px !important;
+                    position: relative;
+                    border-radius: 8px !important;
+                    box-shadow: inherit;
+                    border-bottom: 1px solid transparent !important;
+                    
+                    &:not(.collapsed) {
+                        background: $cdark !important;
+                        border-radius: 8px 8px 0 0!important;
+                        color: $cwhite!important;
+
+                        &:after {
+                            background: transparent;
+                            content: "\ea99";
+                            font-family: IcoFont;
+                            font-weight: 100;
+                            font-size: 25px;
+                            position: absolute;
+                            top: 33px;
+                            right: 20px;
+                        }
+                    }
+
+                    &:after {
+                        background: transparent;
+                        content: "\ea99";
+                        font-family: IcoFont;
+                        font-weight: 100;
+                        font-size: 25px;
+                        position: absolute;
+                        top: 22px;
+                        right: 25px;
+                    }
+                }
+            }
+        }
+    }
+}

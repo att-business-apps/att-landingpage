@@ -5,16 +5,17 @@
                 <ul class="list-unstyled">
                     <li><a href="/">Home</a></li>
                     <li><a href="/portfolio">Portfolio</a></li>
-                    <li class="active text-lg">Al-Shamil Computers</li>
+                    <li class="active text-lg">Microrelic Technologies</li>
                 </ul>
                 <div class="section-heading heading-left">
                     <div class="d-flex align-items-center">
-                        <img src="../../assets/img/project/c5/icon-als.svg" alt="circle">
-                        <h1 class="title h2 mb-0 ms-2">Al‑Shamil Computers Tr.</h1>
+                        <img src="../../assets/img/project/c3/icon-mr.svg" alt="Microrelic Technologies">
+                        <h1 class="title h2 mb-0 ms-2">Microrelic Technologies </h1>
                     </div>
-                    <h5 class="mb-1 mt-3">IT Solutions & Services</h5>
-                    <p>End‑to‑end IT partner providing networking, CCTV, hardware, and managed support services for
-                        growing businesses in the UAE.</p>
+                    <h5 class="mb-1 mt-3">Digital Product Development</h5>
+                    <p>Transforming ideas into digital reality. We built a modern, responsive website showcasing
+                        Microrelic’s multi-domain expertise and services across Web, Mobile, PWA, and Consultancy—
+                        optimized for performance, clarity, and conversion.</p>
                 </div>
             </div>
             <div class="banner-thumbnail ">
@@ -42,91 +43,76 @@
                 <div class="col-lg-6">
                     <div class="project-overview">
                         <h2 class="title mb-4">Project Overview</h2>
-                        <p class="mb-4"><strong>Al‑Shamil Computers Tr.</strong> provides comprehensive IT services
-                            including IT infrastructure setup, networking and CCTV, hardware procurement, and annual
-                            maintenance contracts. We designed and developed a clean, informative website to present
-                            offerings clearly and drive inquiries.
+                        <p class="mb-4">
+                            <strong>Microrelic</strong> is a digital products company delivering solutions across
+                            Healthcare, Pharma/CRO, Education, and Supply Chain. The goal was to present clear value
+                            propositions for services such as Web Development, Mobile Development, Progressive Web App
+                            (PWA), Business Consultancy, Digital Marketing, and Training—grounded in social proof like
+                            500+ projects, 50+ clients, and 5+ years of experience.
                         </p>
                         <div class="project-details">
                             <div class="detail-item mb-3">
                                 <h5 class="title">Client</h5>
-                                <p>Al‑Shamil Computers Tr.</p>
+                                <p>Microrelic Technologies Pvt Ltd</p>
                             </div>
                             <div class="detail-item mb-3">
                                 <h5 class="title">Services Provided</h5>
-                                <p>Website Design & Development, UI/UX, Content Structure, On‑page SEO</p>
+                                <p>Website, UI/UX, Progressive Web App (PWA), Mobile App UI, Business Consultancy</p>
                             </div>
                             <div class="detail-item mb-3">
-                                <h5 class="title">Technology</h5>
-                                <p>Modern Web Stack, Responsive UI, Performance Optimization</p>
+                                <h5 class="title">Industry</h5>
+                                <p>Healthcare, Pharma/CRO, Education, Supply Chain</p>
                             </div>
                             <div class="detail-item">
-                                <h5 class="title">Live Website</h5>
-                                <p><a href="http://alshamil.co:8082/" target="_blank"
-                                        class="text-primary">alshamil.co</a>
-                                </p>
+                                <h5 class="title">Website</h5>
+                                <p><a href="https://microrelic.com/" target="_blank">microrelic.com</a></p>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-6">
                     <div class="project-image">
-                        <img src="../../assets/img/project/c5/project-als.png" class="w-100 rounded"
-                            alt="Al‑Shamil Computers IT Services Website">
+                        <img src="../../assets/img/project/c3/project-mr.png" class="w-100 rounded"
+                            alt="Microrelic Technologies - Complete Brand Identity and Web Development Project">
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Key Services Section -->
+    <!-- Project Objectives Section -->
     <section class="section section-padding bg-color-light">
         <div class="container">
             <div class="section-heading heading-center mb-5">
-                <h2 class="title">Key Services & Solutions</h2>
-                <p>Clear service taxonomy optimized for discoverability and conversion</p>
+                <h2 class="title">Services Scope & Objectives</h2>
+                <p>Clear messaging and conversion-focused IA for multi-domain services</p>
             </div>
             <div class="row">
-                <div class="col-lg-4 col-md-6 mb-4">
-                    <div class="feature-card">
-                        <div class="feature-icon mb-3"><i class="icofont-ui-network"></i></div>
-                        <h5 class="title">IT Infrastructure Setup</h5>
-                        <p>Servers, workstations, structured cabling, and secure network architectures.</p>
+                <div class="col-lg-4 mb-4">
+                    <div class="objective-card">
+                        <div class="objective-icon mb-3">
+                            <i class="icofont-code"></i>
+                        </div>
+                        <h5 class="title">Web Development</h5>
+                        <p>Responsive, scalable website with clear service taxonomy and CTAs that drive inquiries.</p>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6 mb-4">
-                    <div class="feature-card">
-                        <div class="feature-icon mb-3"><i class="icofont-cctv"></i></div>
-                        <h5 class="title">Networking & CCTV</h5>
-                        <p>Enterprise Wi‑Fi, switching, surveillance deployment, and monitoring solutions.</p>
+                <div class="col-lg-4 mb-4">
+                    <div class="objective-card">
+                        <div class="objective-icon mb-3">
+                            <i class="icofont-smart-phone"></i>
+                        </div>
+                        <h5 class="title">Mobile & PWA</h5>
+                        <p>Highlight cross-platform Mobile and PWA benefits: offline, installable, fast experiences.</p>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6 mb-4">
-                    <div class="feature-card">
-                        <div class="feature-icon mb-3"><i class="icofont-tools"></i></div>
-                        <h5 class="title">Annual Maintenance (AMC)</h5>
-                        <p>Proactive maintenance, SLAs, and on‑site/remote support to minimize downtime.</p>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 mb-4">
-                    <div class="feature-card">
-                        <div class="feature-icon mb-3"><i class="icofont-cloud"></i></div>
-                        <h5 class="title">Cloud & Email</h5>
-                        <p>Business email, backups, and secure cloud services with best‑practice setup.</p>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 mb-4">
-                    <div class="feature-card">
-                        <div class="feature-icon mb-3"><i class="icofont-web"></i></div>
-                        <h5 class="title">Web & Software</h5>
-                        <p>Informational websites and line‑of‑business software integrations as needed.</p>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 mb-4">
-                    <div class="feature-card">
-                        <div class="feature-icon mb-3"><i class="icofont-computer"></i></div>
-                        <h5 class="title">Hardware & Peripherals</h5>
-                        <p>Procurement and installation of PCs, printers, and accessories with warranty support.</p>
+                <div class="col-lg-4 mb-4">
+                    <div class="objective-card">
+                        <div class="objective-icon mb-3">
+                            <i class="icofont-briefcase"></i>
+                        </div>
+                        <h5 class="title">Consultancy & Marketing</h5>
+                        <p>Surface Business Consultancy and Digital Marketing to support growth and adoption.</p>
                     </div>
                 </div>
             </div>
@@ -138,35 +124,35 @@
         <div class="container">
             <div class="section-heading heading-center mb-5">
                 <h2 class="title">Project Results & Impact</h2>
-                <p>Operational clarity and improved inbound lead generation</p>
+                <p>Social proof and capability signals aligned with website goals</p>
             </div>
             <div class="row">
                 <div class="col-lg-3 col-md-6 mb-4">
                     <div class="result-card text-center">
-                        <div class="result-number">99.9%</div>
-                        <h5 class="title">Uptime Targets</h5>
-                        <p>Industry‑standard reliability for managed systems</p>
+                        <div class="result-number">500+</div>
+                        <h5 class="title">Projects Delivered</h5>
+                        <p>Demonstrates breadth of execution across domains</p>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6 mb-4">
                     <div class="result-card text-center">
-                        <div class="result-number">30%</div>
-                        <h5 class="title">Faster Response</h5>
-                        <p>Streamlined contact flows and clearer CTAs</p>
+                        <div class="result-number">50+</div>
+                        <h5 class="title">Happy Clients</h5>
+                        <p>Trust built through consistent delivery</p>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6 mb-4">
                     <div class="result-card text-center">
-                        <div class="result-number">24/7</div>
-                        <h5 class="title">Availability</h5>
-                        <p>Always‑on access to company information</p>
+                        <div class="result-number">5+</div>
+                        <h5 class="title">Years Experience</h5>
+                        <p>Reliable partner with steady growth</p>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6 mb-4">
                     <div class="result-card text-center">
-                        <div class="result-number">SLA</div>
-                        <h5 class="title">Support Quality</h5>
-                        <p>SLA‑backed services communicated up‑front</p>
+                        <div class="result-number">PWA</div>
+                        <h5 class="title">App-like Web</h5>
+                        <p>Installable and offline-ready experiences</p>
                     </div>
                 </div>
             </div>
@@ -179,9 +165,9 @@
             <div class="row">
                 <div class="col-lg-8 offset-lg-2 text-center">
                     <div class="cta-content">
-                        <h2 class="title mb-4">Need Reliable IT Services in the UAE?</h2>
-                        <p class="mb-4">Let’s plan your infrastructure, security, and support roadmap with
-                            Al‑Shamil Computers.</p>
+                        <h2 class="title mb-4">Ready to Build Your Next Digital Product?</h2>
+                        <p class="mb-4">From strategy to launch, we build Web, Mobile, and PWA solutions that scale
+                            and convert. Let’s create something your community loves.</p>
                         <div class="cta-buttons">
                             <a href="/whereToFind" class="amor-btn btn-fill-primary me-3">Get Started</a>
                             <a href="/portfolio" class="amor-btn btn-borderd">View More Projects</a>
@@ -194,7 +180,18 @@
 </template>
 
 <style scoped>
-.feature-card {
+.project-details .detail-item {
+    border-left: 3px solid #0d6efd;
+    padding-left: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.project-details .detail-item h5 {
+    color: #0d6efd;
+    margin-bottom: 0.5rem;
+}
+
+.objective-card {
     background: white;
     padding: 2rem;
     border-radius: 10px;
@@ -203,11 +200,11 @@
     transition: transform 0.3s ease;
 }
 
-.feature-card:hover {
+.objective-card:hover {
     transform: translateY(-5px);
 }
 
-.feature-icon {
+.objective-icon {
     font-size: 2.5rem;
     color: #0d6efd;
 }
@@ -234,16 +231,6 @@
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
 }
 
-.project-details .detail-item {
-    border-left: 3px solid #0d6efd;
-    padding-left: 1rem;
-}
-
-.project-details .detail-item h5 {
-    color: #0d6efd;
-    margin-bottom: 0.5rem;
-}
-
 .cta-buttons {
     display: flex;
     gap: .5rem;
@@ -253,7 +240,7 @@
 
 @media (max-width: 768px) {
 
-    .feature-card,
+    .objective-card,
     .result-card {
         margin-bottom: 1.5rem;
     }

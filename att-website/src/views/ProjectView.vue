@@ -36,12 +36,12 @@
         <div class="col-md-6">
           <div class="project-grid">
             <div class="thumbnail">
-              <a href="https://uaelinks.ae/" target="_blank">
+              <a href="project/uae-links">
                 <img src="../assets/img/project/c1/project-thum-uaeLinks.png" alt="project">
               </a>
             </div>
             <div class="content">
-              <h4 class="title"><a href="https://uaelinks.ae/" target="_blank">UAE Links</a></h4>
+              <h4 class="title"><a href="project/uae-links">UAE Links</a></h4>
               <span class="subtitle">UI/UX Design, Website</span>
             </div>
           </div>
@@ -49,12 +49,12 @@
         <div class="col-md-6">
           <div class="project-grid">
             <div class="thumbnail">
-              <a href="https://solvedcubeitsolutions.com/" target="_blank">
+              <a href="project/solved-cube-it-solutions">
                 <img src="../assets/img/project/c2/project-thum-sc.png" alt="project">
               </a>
             </div>
             <div class="content">
-              <h4 class="title"><a href="https://solvedcubeitsolutions.com/" target="_blank">Solved Cude</a></h4>
+              <h4 class="title"><a href="project/solved-cube-it-solutions">Solved Cude</a></h4>
               <span class="subtitle">Logo, Branding, UI/UX Design, Website, GMB</span>
             </div>
           </div>
@@ -62,26 +62,52 @@
         <div class="col-md-6">
           <div class="project-grid">
             <div class="thumbnail">
-              <a href="https://steadyasset.com/" target="_blank">
-                <img src="../assets/img/project/c3/project-thum-sa.png" alt="project">
+              <a href="project/microrelic">
+                <img src="../assets/img/project/c3/project-thum-mr.png" alt="project">
               </a>
             </div>
             <div class="content">
-              <h4 class="title"><a href="https://steadyasset.com/" target="_blank">SteadyAsset</a></h4>
-              <span class="subtitle">Logo, Branding, UI/UX Design, Website</span>
+              <h4 class="title"><a href="project/microrelic">Microrelic</a></h4>
+              <span class="subtitle">Branding, UI/UX Design, Website, GMB</span>
             </div>
           </div>
         </div>
         <div class="col-md-6">
           <div class="project-grid">
             <div class="thumbnail">
-              <a href="http://alshamil.co:8082/" target="_blank">
-                <img src="../assets/img/project/c4/project-thum-als.png" alt="project">
+              <a href="project/steadyasset">
+                <img src="../assets/img/project/c4/project-thum-sa.png" alt="project">
               </a>
             </div>
             <div class="content">
-              <h4 class="title"><a href="http://alshamil.co:8082/" target="_blank">Al-Shamil</a></h4>
+              <h4 class="title"><a href="project/steadyasset">SteadyAsset</a></h4>
+              <span class="subtitle">Logo, Branding, UI/UX Design, Website, GMB</span>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="project-grid">
+            <div class="thumbnail">
+              <a href="project/al-shamil-comupters">
+                <img src="../assets/img/project/c5/project-thum-als.png" alt="project">
+              </a>
+            </div>
+            <div class="content">
+              <h4 class="title"><a href="project/al-shamil-comupters">Al-Shamil</a></h4>
               <span class="subtitle">UI/UX Design, Website</span>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="project-grid">
+            <div class="thumbnail">
+              <a href="project/samsiddhidesigns">
+                <img src="../assets/img/project/c9/project-thum-sd.png" alt="project">
+              </a>
+            </div>
+            <div class="content">
+              <h4 class="title"><a href="project/samsiddhidesigns">Samsiddhi Designs</a></h4>
+              <span class="subtitle">Logo, Branding, UI/UX Design, Website, GMB</span>
             </div>
           </div>
         </div>

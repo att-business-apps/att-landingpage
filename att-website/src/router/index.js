@@ -50,24 +50,35 @@ const router = createRouter({
 
     // Projects
     {
-      path: "/projects/uae-links",
+      path: "/project/uae-links",
       name: "uae-links",
       component: () => import("../views/project/ProjectUAELinksView.vue"),
     },
     {
-      path: "/projects/solved-cube-it-solutions",
+      path: "/project/solved-cube-it-solutions",
       name: "solved-cube-it-solutions",
       component: () => import("../views/project/ProjectSolvedCubeView.vue"),
     },
     {
-      path: "/projects/steadyasset",
+      path: "/project/microrelic",
+      name: "microrelic",
+      component: () => import("../views/project/ProjectMicrorelicView.vue"),
+    },
+    {
+      path: "/project/steadyasset",
       name: "steadyasset",
       component: () => import("../views/project/ProjectSteadyAssetView.vue"),
     },
     {
-      path: "/projects/al-shamil-comupters",
+      path: "/project/al-shamil-comupters",
       name: "al-shamil",
       component: () => import("../views/project/ProjectAlShamilView.vue"),
+    },
+    {
+      path: "/project/samsiddhidesigns",
+      name: "samsiddhidesigns",
+      component: () =>
+        import("../views/project/ProjectSamsiddhiDesignsView.vue"),
     },
     {
       path: "/pageNotFound",

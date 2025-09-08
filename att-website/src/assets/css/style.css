@@ -17205,6 +17205,83 @@ Pagination
   color: var(--color-dark) !important;
 }
 
+/* -----------------------
+Frequently Asked Questions 
+--------------------------*/
+.faqSec {
+  position: relative;
+}
+.faqSec .faq-style {
+  position: relative;
+  z-index: 1;
+}
+.faqSec .faq-style .title {
+  font-weight: 400;
+  font-size: 42px;
+  margin-bottom: 2rem;
+  color: #27272E !important;
+}
+@media only screen and (max-width: 768px) {
+  .faqSec .faq-style .title {
+    margin-top: 1.65rem;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .faqSec .faq-style .title {
+    margin-top: 1.65rem;
+  }
+}
+.faqSec .accordion .accordion-item {
+  background: #ffffff;
+  border: none;
+  margin-top: 15px;
+  box-shadow: 0 25px 70px rgba(0, 0, 0, 0.07) !important;
+  border-radius: 8px;
+}
+.faqSec .accordion .accordion-item:first-child {
+  margin-top: 0;
+}
+.faqSec .accordion .accordion-item .accordion-header {
+  margin: 0;
+  border: none;
+}
+.faqSec .accordion .accordion-item .accordion-header .accordion-button {
+  color: #27272E;
+  font-size: 18px;
+  font-weight: 400;
+  background: #ffffff !important;
+  padding: 25px 60px 25px 25px !important;
+  position: relative;
+  border-radius: 8px !important;
+  box-shadow: inherit;
+  border-bottom: 1px solid transparent !important;
+}
+.faqSec .accordion .accordion-item .accordion-header .accordion-button:not(.collapsed) {
+  background: #27272E !important;
+  border-radius: 8px 8px 0 0 !important;
+  color: #ffffff !important;
+}
+.faqSec .accordion .accordion-item .accordion-header .accordion-button:not(.collapsed):after {
+  background: transparent;
+  content: "\ea99";
+  font-family: IcoFont;
+  font-weight: 100;
+  font-size: 25px;
+  position: absolute;
+  top: 33px;
+  right: 20px;
+}
+.faqSec .accordion .accordion-item .accordion-header .accordion-button:after {
+  background: transparent;
+  content: "\ea99";
+  font-family: IcoFont;
+  font-weight: 100;
+  font-size: 25px;
+  position: absolute;
+  top: 22px;
+  right: 25px;
+}
+
 /*-------------------------
     Slick 
 -------------------------*/
@@ -19339,27 +19416,27 @@ Pagination
   }
 }
 .banner.banner-style-1 .banner-content .title {
-  font-size: 78px;
+  font-size: 68px;
   line-height: 1.2;
 }
 @media only screen and (min-width: 1200px) and (max-width: 1599px) {
   .banner.banner-style-1 .banner-content .title {
-    font-size: 68px;
+    font-size: 58px;
   }
 }
 @media only screen and (max-width: 1199px) {
   .banner.banner-style-1 .banner-content .title {
-    font-size: 60px;
+    font-size: 50px;
   }
 }
 @media only screen and (max-width: 991px) {
   .banner.banner-style-1 .banner-content .title {
-    font-size: 55px;
+    font-size: 45px;
   }
 }
 @media only screen and (max-width: 767px) {
   .banner.banner-style-1 .banner-content .title {
-    font-size: 46px;
+    font-size: 36px;
     margin-bottom: 1rem;
   }
 }
@@ -20884,7 +20961,7 @@ Service
 .contact-form-box.banner-form {
   background-color: var(--color-dark);
   position: relative;
-  margin-bottom: -120px;
+  margin-bottom: -60px;
   -webkit-transition: all 0.3s ease-in-out;
   -moz-transition: all 0.3s ease-in-out;
   -ms-transition: all 0.3s ease-in-out;

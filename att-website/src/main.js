@@ -1,17 +1,18 @@
-import './assets/css/animate.css'
-import './assets/css/magnific-popup.css'
-import './assets/css/ionicons.min.css'
-import './assets/css/icofont.css'
-import './assets/css/style.css'
+import "./assets/css/animate.css";
+import "./assets/css/magnific-popup.css";
+import "./assets/css/ionicons.min.css";
+import "./assets/css/icofont.css";
+import "./assets/css/style.css";
 
-import { createApp } from 'vue'
+import "bootstrap/dist/js/bootstrap.bundle.min.js";
 
-import App from './App.vue'
-import router from './router'
+import { createApp } from "vue";
 
-const app = createApp(App)
+import App from "./App.vue";
+import router from "./router";
 
-app.use(router)
+const app = createApp(App);
 
-app.mount('#app')
+app.use(router);
 
+app.mount("#app");

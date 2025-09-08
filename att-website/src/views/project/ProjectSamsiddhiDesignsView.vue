@@ -5,16 +5,18 @@
                 <ul class="list-unstyled">
                     <li><a href="/">Home</a></li>
                     <li><a href="/portfolio">Portfolio</a></li>
-                    <li class="active text-lg">Al-Shamil Computers</li>
+                    <li class="active text-lg">Samsiddhi Designs</li>
                 </ul>
                 <div class="section-heading heading-left">
                     <div class="d-flex align-items-center">
-                        <img src="../../assets/img/project/c5/icon-als.svg" alt="circle">
-                        <h1 class="title h2 mb-0 ms-2">Al‑Shamil Computers Tr.</h1>
+                        <img src="../../assets/img/project/c9/icon-sd.svg" alt="Samsiddhi Designs Project">
+                        <h1 class="title h2 mb-0 ms-2">Samsiddhi Designs</h1>
                     </div>
-                    <h5 class="mb-1 mt-3">IT Solutions & Services</h5>
-                    <p>End‑to‑end IT partner providing networking, CCTV, hardware, and managed support services for
-                        growing businesses in the UAE.</p>
+
+                    <h5 class="mb-1 mt-3">Complete Brand Identity</h5>
+                    <p>Comprehensive branding, web development, and digital transformation project. Complete brand
+                        identity design, website development, and Google Analytics integration showcasing our expertise
+                        in creating cohesive digital solutions.</p>
                 </div>
             </div>
             <div class="banner-thumbnail ">
@@ -42,91 +44,83 @@
                 <div class="col-lg-6">
                     <div class="project-overview">
                         <h2 class="title mb-4">Project Overview</h2>
-                        <p class="mb-4"><strong>Al‑Shamil Computers Tr.</strong> provides comprehensive IT services
-                            including IT infrastructure setup, networking and CCTV, hardware procurement, and annual
-                            maintenance contracts. We designed and developed a clean, informative website to present
-                            offerings clearly and drive inquiries.
+                        <p class="mb-4">
+                            <strong>Samsiddhi Designs</strong> required a complete digital transformation including
+                            brand identity, website development, and analytics integration. This project demonstrates
+                            our expertise in creating cohesive and memorable brand experiences that drive business
+                            growth.
                         </p>
                         <div class="project-details">
                             <div class="detail-item mb-3">
                                 <h5 class="title">Client</h5>
-                                <p>Al‑Shamil Computers Tr.</p>
+                                <p>Samsiddhi Designs</p>
                             </div>
                             <div class="detail-item mb-3">
                                 <h5 class="title">Services Provided</h5>
-                                <p>Website Design & Development, UI/UX, Content Structure, On‑page SEO</p>
+                                <p>Brand Logo, Complete Website, Branding Assets, Google Analytics Integration</p>
                             </div>
                             <div class="detail-item mb-3">
-                                <h5 class="title">Technology</h5>
-                                <p>Modern Web Stack, Responsive UI, Performance Optimization</p>
+                                <h5 class="title">Industry</h5>
+                                <p>Design Services, Creative Agency, Branding</p>
                             </div>
                             <div class="detail-item">
-                                <h5 class="title">Live Website</h5>
-                                <p><a href="http://alshamil.co:8082/" target="_blank"
-                                        class="text-primary">alshamil.co</a>
-                                </p>
+                                <h5 class="title">Project Duration</h5>
+                                <p>Complete brand identity and web development</p>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-6">
                     <div class="project-image">
-                        <img src="../../assets/img/project/c5/project-als.png" class="w-100 rounded"
-                            alt="Al‑Shamil Computers IT Services Website">
+                        <img src="../../assets/img/project/c9/project-sd.png" class="w-100 rounded"
+                            alt="Samsiddhi Designs - Complete Brand Identity and Web Development Project">
                     </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col">
+                    <img src="../../assets/img/project/c9/sd-mockup.png" class="img-fluid rounded mt-5"
+                        alt="Samsiddhi Designs Project">
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Key Services Section -->
+    <!-- Project Objectives Section -->
     <section class="section section-padding bg-color-light">
         <div class="container">
             <div class="section-heading heading-center mb-5">
-                <h2 class="title">Key Services & Solutions</h2>
-                <p>Clear service taxonomy optimized for discoverability and conversion</p>
+                <h2 class="title">Project Scope & Objectives</h2>
+                <p>Strategic goals and comprehensive deliverables</p>
             </div>
             <div class="row">
-                <div class="col-lg-4 col-md-6 mb-4">
-                    <div class="feature-card">
-                        <div class="feature-icon mb-3"><i class="icofont-ui-network"></i></div>
-                        <h5 class="title">IT Infrastructure Setup</h5>
-                        <p>Servers, workstations, structured cabling, and secure network architectures.</p>
+                <div class="col-lg-4 mb-4">
+                    <div class="objective-card">
+                        <div class="objective-icon mb-3">
+                            <i class="icofont-paint-brush"></i>
+                        </div>
+                        <h5 class="title">Brand Identity</h5>
+                        <p>Establish a cohesive and memorable brand identity reflecting the client's vision and values.
+                        </p>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6 mb-4">
-                    <div class="feature-card">
-                        <div class="feature-icon mb-3"><i class="icofont-cctv"></i></div>
-                        <h5 class="title">Networking & CCTV</h5>
-                        <p>Enterprise Wi‑Fi, switching, surveillance deployment, and monitoring solutions.</p>
+                <div class="col-lg-4 mb-4">
+                    <div class="objective-card">
+                        <div class="objective-icon mb-3">
+                            <i class="icofont-web"></i>
+                        </div>
+                        <h5 class="title">Online Presence</h5>
+                        <p>Provide a polished, user-friendly online presence via a professional website.</p>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6 mb-4">
-                    <div class="feature-card">
-                        <div class="feature-icon mb-3"><i class="icofont-tools"></i></div>
-                        <h5 class="title">Annual Maintenance (AMC)</h5>
-                        <p>Proactive maintenance, SLAs, and on‑site/remote support to minimize downtime.</p>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 mb-4">
-                    <div class="feature-card">
-                        <div class="feature-icon mb-3"><i class="icofont-cloud"></i></div>
-                        <h5 class="title">Cloud & Email</h5>
-                        <p>Business email, backups, and secure cloud services with best‑practice setup.</p>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 mb-4">
-                    <div class="feature-card">
-                        <div class="feature-icon mb-3"><i class="icofont-web"></i></div>
-                        <h5 class="title">Web & Software</h5>
-                        <p>Informational websites and line‑of‑business software integrations as needed.</p>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 mb-4">
-                    <div class="feature-card">
-                        <div class="feature-icon mb-3"><i class="icofont-computer"></i></div>
-                        <h5 class="title">Hardware & Peripherals</h5>
-                        <p>Procurement and installation of PCs, printers, and accessories with warranty support.</p>
+                <div class="col-lg-4 mb-4">
+                    <div class="objective-card">
+                        <div class="objective-icon mb-3">
+                            <i class="icofont-chart-line"></i>
+                        </div>
+                        <h5 class="title">Data Analytics</h5>
+                        <p>Enable data-driven insights through Google Analytics for ongoing optimization.</p>
                     </div>
                 </div>
             </div>
@@ -138,35 +132,35 @@
         <div class="container">
             <div class="section-heading heading-center mb-5">
                 <h2 class="title">Project Results & Impact</h2>
-                <p>Operational clarity and improved inbound lead generation</p>
+                <p>Measurable outcomes and business benefits</p>
             </div>
             <div class="row">
                 <div class="col-lg-3 col-md-6 mb-4">
                     <div class="result-card text-center">
-                        <div class="result-number">99.9%</div>
-                        <h5 class="title">Uptime Targets</h5>
-                        <p>Industry‑standard reliability for managed systems</p>
+                        <div class="result-number">100%</div>
+                        <h5 class="title">Brand Identity</h5>
+                        <p>Complete brand system delivered</p>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6 mb-4">
                     <div class="result-card text-center">
-                        <div class="result-number">30%</div>
-                        <h5 class="title">Faster Response</h5>
-                        <p>Streamlined contact flows and clearer CTAs</p>
+                        <div class="result-number">5</div>
+                        <h5 class="title">Website Pages</h5>
+                        <p>Strategic page architecture</p>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6 mb-4">
                     <div class="result-card text-center">
-                        <div class="result-number">24/7</div>
-                        <h5 class="title">Availability</h5>
-                        <p>Always‑on access to company information</p>
+                        <div class="result-number">GA4</div>
+                        <h5 class="title">Analytics</h5>
+                        <p>Complete tracking setup</p>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6 mb-4">
                     <div class="result-card text-center">
-                        <div class="result-number">SLA</div>
-                        <h5 class="title">Support Quality</h5>
-                        <p>SLA‑backed services communicated up‑front</p>
+                        <div class="result-number">Mobile</div>
+                        <h5 class="title">Responsive</h5>
+                        <p>Optimized for all devices</p>
                     </div>
                 </div>
             </div>
@@ -179,9 +173,9 @@
             <div class="row">
                 <div class="col-lg-8 offset-lg-2 text-center">
                     <div class="cta-content">
-                        <h2 class="title mb-4">Need Reliable IT Services in the UAE?</h2>
-                        <p class="mb-4">Let’s plan your infrastructure, security, and support roadmap with
-                            Al‑Shamil Computers.</p>
+                        <h2 class="title mb-4">Ready to Transform Your Brand Identity?</h2>
+                        <p class="mb-4">Let our expert team help you create a comprehensive brand identity and digital
+                            presence that drives business growth.</p>
                         <div class="cta-buttons">
                             <a href="/whereToFind" class="amor-btn btn-fill-primary me-3">Get Started</a>
                             <a href="/portfolio" class="amor-btn btn-borderd">View More Projects</a>
@@ -194,7 +188,18 @@
 </template>
 
 <style scoped>
-.feature-card {
+.project-details .detail-item {
+    border-left: 3px solid #0d6efd;
+    padding-left: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.project-details .detail-item h5 {
+    color: #0d6efd;
+    margin-bottom: 0.5rem;
+}
+
+.objective-card {
     background: white;
     padding: 2rem;
     border-radius: 10px;
@@ -203,11 +208,11 @@
     transition: transform 0.3s ease;
 }
 
-.feature-card:hover {
+.objective-card:hover {
     transform: translateY(-5px);
 }
 
-.feature-icon {
+.objective-icon {
     font-size: 2.5rem;
     color: #0d6efd;
 }
@@ -234,16 +239,6 @@
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
 }
 
-.project-details .detail-item {
-    border-left: 3px solid #0d6efd;
-    padding-left: 1rem;
-}
-
-.project-details .detail-item h5 {
-    color: #0d6efd;
-    margin-bottom: 0.5rem;
-}
-
 .cta-buttons {
     display: flex;
     gap: .5rem;
@@ -253,7 +248,7 @@
 
 @media (max-width: 768px) {
 
-    .feature-card,
+    .objective-card,
     .result-card {
         margin-bottom: 1.5rem;
     }

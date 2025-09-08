@@ -75,8 +75,9 @@ function getTemplate(target) {
                     <li class="active text-lr">Where to find</li>
                 </ul>
                 <div class="section-heading heading-left">
-                    <h1 class="title h2 mb-0">Let’s craft something extraordinary together!</h1>
-                    <p>We’re here to help with all your branding, design and development needs.</p>
+                    <h1 class="title h2 mb-0">Professional Web Development & IT Services Contact</h1>
+                    <p>Leading web development company ready to help with all your custom website design, UI/UX
+                        services, mobile app development, and DevOps consulting needs.</p>
                 </div>
             </div>
             <div class="banner-thumbnail">

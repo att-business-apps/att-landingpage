@@ -87,10 +87,12 @@
                 <h2 class="title">Get in touch!</h2>
                 <p>Subscribe now for the latest updates, insights, and exclusive offers delivered straight to your
                   inbox! Stay connected with us.</p>
-                <form>
+                <form @submit.prevent="handleSubscribe">
                   <div class="input-group">
-                    <input type="email" class="form-control" placeholder="Email address">
-                    <button class="subscribe-btn" type="submit">Subscribe</button>
+                    <input type="email" class="form-control" placeholder="Email address" v-model="subscribeEmail">
+                    <button class="subscribe-btn" type="submit" :disabled="submitting">
+                      {{ submitting ? 'Subscribing...' : 'Subscribe' }}
+                    </button>
                   </div>
                 </form>
               </div>
@@ -192,5 +194,41 @@
     <li><a href="whereToFind"><span class="text-lr">Where</span> to find</a></li>
   </ul>
 </template>
+
+<script setup>
+import { ref } from 'vue'
+
+const subscribeEmail = ref('')
+const submitting = ref(false)
+
+function isValidEmail(email) {
+  return /[^\s@]+@[^\s@]+\.[^\s@]+/.test(email)
+}
+
+async function handleSubscribe() {
+  if (!subscribeEmail.value || !isValidEmail(subscribeEmail.value)) {
+    alert('Please enter a valid email address')
+    return
+  }
+  try {
+    submitting.value = true
+    // Example: send to your backend or a service like EmailJS/Mailchimp endpoint
+    // Replace this fetch with your actual subscription API endpoint
+    const res = await fetch('https://api.emailjs.com/api/v1.0/email/send', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ email: subscribeEmail.value })
+    })
+    if (!res.ok) throw new Error('Subscription failed')
+    alert('Thanks for subscribing!')
+    subscribeEmail.value = ''
+  } catch (e) {
+    console.error(e)
+    alert('Unable to subscribe right now. Please try again later.')
+  } finally {
+    submitting.value = false
+  }
+}
+</script>
 
 <style scoped></style>

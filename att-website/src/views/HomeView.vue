@@ -78,19 +78,25 @@ function getTemplate(target) {
           <div class="col-lg-6 pb-5">
             <div class="banner-content">
               <div class="animate__animated fadeInUp" style="animation-duration: 1s">
-                <h1 class="title d-inline">
-                  A Touch of Class for Your
-                  <span class="gradient-text-light">Digital Presence</span>.
-                </h1>
-                <h4>
+                <h6 class="mb-1">
                   Sleek.
                   <span class="gradient-text blue-dark">Stylish.</span> Classy.
+                </h6>
+                <h1 class="title d-inline">
+                  Professional <span class="gradient-text-light">Web Development</span> &
+                  <span class="gradient-text-light">UI/UX Design</span> Services
+                </h1>
+                <h4>
+                  Custom <span class="gradient-text blue-dark">Website Development</span>.
+                  <span class="gradient-text blue-dark">Mobile App Design</span>.
+                  <span class="gradient-text blue-dark">DevOps Solutions</span>.
                 </h4>
                 <p class="subtitle">
                   At amortree Tech, we're passionate about harnessing the power
                   of technology to transform businesses and drive innovation. As
-                  a leading provider of comprehensive IT solutions, we
-                  specialize in a wide range of services tailored to meet the
+                  a leading <strong>web development company</strong> and <strong>IT solutions provider</strong>, we
+                  specialize in <strong>custom website design</strong>, <strong>UI/UX services</strong>,
+                  <strong>mobile app development</strong>, and <strong>DevOps consulting</strong> tailored to meet the
                   diverse needs of our clients.
                 </p>
                 <a class="amor-btn btn-fill-primary btn-large" href="portfolio">View Portfolio</a>
@@ -186,17 +192,18 @@ function getTemplate(target) {
     <div class="section serviceSec section-padding" id="whatWeDo">
       <div class="container">
         <div class="section-heading heading-left mb--20 mb_md--70">
-          <div class="subtitle">What we do</div>
+          <div class="subtitle">Our Services</div>
           <h2 class="title">
-            <span class="gradient-text blue-light">Services we can help</span> you
-            with
+            <span class="gradient-text blue-light">Professional IT Services</span> for
+            Digital Transformation
           </h2>
           <p>
-            Unlock your business's full potential with amortree Tech. Our wide
-            range of IT services, including website design, UI/UX, Sass
-            products, and mobile app development, are designed to drive
-            innovation and growth. Experience the power of technology-driven
-            transformation.
+            Unlock your business's full potential with amortree Tech. Our comprehensive
+            range of <strong>IT consulting services</strong>, including <strong>custom website development</strong>,
+            <strong>UI/UX design</strong>, <strong>mobile app development</strong>, and <strong>DevOps
+              solutions</strong>,
+            are designed to drive innovation and growth. Experience the power of
+            <strong>technology-driven transformation</strong> with our expert team.
           </p>
         </div>
         <div class="row">
@@ -206,10 +213,11 @@ function getTemplate(target) {
                 <img src="../assets/img/icon/research-1.png" alt="icon" />
               </div>
               <div class="content">
-                <h5 class="title"><a href="whatWeDo">Research</a></h5>
+                <h5 class="title"><a href="whatWeDo">Research & Strategy</a></h5>
                 <p>
-                  Research and strategy are the foundation for informed decision-making, helping amortree Tech deliver
-                  tailored solutions that drive business success.
+                  <strong>Market research</strong> and <strong>strategic planning</strong> are the foundation for
+                  informed decision-making, helping amortree Tech deliver
+                  tailored <strong>IT solutions</strong> that drive business success and digital transformation.
                 </p>
                 <a class="more-btn" href="whatWeDo">Find out more</a>
               </div>
@@ -221,10 +229,11 @@ function getTemplate(target) {
                 <img src="../assets/img/icon/brand-2.png" alt="icon" />
               </div>
               <div class="content">
-                <h5 class="title"><a href="whatWeDo">Branding</a></h5>
+                <h5 class="title"><a href="whatWeDo">Brand Identity Design</a></h5>
                 <p>
-                  Branding shapes your business identity, connects with audiences, and tells your story. Let amortree
-                  Tech help you stand out!
+                  <strong>Professional branding services</strong> shape your business identity, connect with audiences,
+                  and tell your story. Let amortree
+                  Tech help you create a <strong>memorable brand identity</strong> that stands out in the market!
                 </p>
                 <a class="more-btn" href="whatWeDo">Find out more</a>
               </div>
@@ -236,10 +245,11 @@ function getTemplate(target) {
                 <img src="../assets/img/icon/logo-1.png" alt="icon" />
               </div>
               <div class="content">
-                <h5 class="title"><a href="whatWeDo">Logo Design</a></h5>
+                <h5 class="title"><a href="whatWeDo">Custom Logo Design</a></h5>
                 <p>
-                  A logo is more than just a symbol; it’s the face of your brand. amortree Tech creates impactful logos
-                  that define identities.
+                  A <strong>professional logo</strong> is more than just a symbol; it's the face of your brand. amortree
+                  Tech creates impactful <strong>custom logo designs</strong>
+                  that define brand identities and make lasting impressions.
                 </p>
                 <a class="more-btn" href="whatWeDo">Find out more</a>
               </div>
@@ -253,10 +263,11 @@ function getTemplate(target) {
                 <img src="../assets/img/icon/web-2.png" alt="icon" />
               </div>
               <div class="content">
-                <h5 class="title"><a href="whatWeDo">Website</a></h5>
+                <h5 class="title"><a href="whatWeDo">Website Development</a></h5>
                 <p>
-                  amortree Tech delivers intuitive Web UI/UX design and seamless development, ensuring user-friendly,
-                  responsive, and engaging digital experiences for your brand.
+                  amortree Tech delivers intuitive <strong>web UI/UX design</strong> and seamless <strong>website
+                    development</strong>, ensuring user-friendly,
+                  responsive, and engaging <strong>digital experiences</strong> for your brand and business growth.
                 </p>
                 <a class="more-btn" href="whatWeDo">Find out more</a>
               </div>
@@ -268,10 +279,11 @@ function getTemplate(target) {
                 <img src="../assets/img/icon/mob-7.png" alt="icon" />
               </div>
               <div class="content">
-                <h5 class="title"><a href="whatWeDo">Mobile App UI/UX</a></h5>
+                <h5 class="title"><a href="whatWeDo">Mobile App Development</a></h5>
                 <p>
-                  Mobile App UI/UX design focuses on creating intuitive, user-friendly interfaces that enhance
-                  engagement, ensuring seamless navigation and functionality.
+                  <strong>Mobile app UI/UX design</strong> focuses on creating intuitive, user-friendly interfaces that
+                  enhance
+                  engagement, ensuring seamless navigation and functionality for <strong>mobile applications</strong>.
                 </p>
                 <a class="more-btn" href="whatWeDo">Find out more</a>
               </div>
@@ -283,10 +295,12 @@ function getTemplate(target) {
                 <img src="../assets/img/icon/devops-1.png" alt="icon" />
               </div>
               <div class="content">
-                <h5 class="title"><a href="whatWeDo">DevOps</a></h5>
+                <h5 class="title"><a href="whatWeDo">DevOps Consulting</a></h5>
                 <p>
-                  DevOps streamlines collaboration between development and operations teams, ensuring efficient software
-                  delivery, automation, and continuous integration for seamless performance.
+                  <strong>DevOps consulting services</strong> streamline collaboration between development and
+                  operations teams, ensuring efficient software
+                  delivery, automation, and continuous integration for seamless performance and <strong>cloud
+                    infrastructure management</strong>.
                 </p>
                 <a class="more-btn" href="whatWeDo">Find out more</a>
               </div>
@@ -309,8 +323,9 @@ function getTemplate(target) {
     <section class="section section-padding-2 bg-color-white">
       <div class="container">
         <div class="section-heading heading-left">
-          <span class="subtitle">Portfolio</span>
-          <h2 class="title">Some of our <br> finest work.</h2>
+          <span class="subtitle">Our Portfolio</span>
+          <h2 class="title">Professional <span class="gradient-text blue-dark">Web Development</span> <br> & Design
+            Projects</h2>
         </div>
 
         <div class="">
@@ -318,25 +333,12 @@ function getTemplate(target) {
             <div class="col-md-6 project branding">
               <div class="project-grid">
                 <div class="thumbnail">
-                  <a href="https://uaelinks.ae/" target="_blank">
-                    <img src="../assets/img/project/c1/project-thum-uaeLinks.png" alt="project">
+                  <a href="project/steadyasset">
+                    <img src="../assets/img/project/c4/project-thum-sa.png" alt="project">
                   </a>
                 </div>
                 <div class="content">
-                  <h4 class="title"><a href="https://uaelinks.ae/" target="_blank">UAE Links</a></h4>
-                  <span class="subtitle">UI/UX Design, Website</span>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-6 project branding">
-              <div class="project-grid">
-                <div class="thumbnail">
-                  <a href="https://solvedcubeitsolutions.com/" target="_blank">
-                    <img src="../assets/img/project/c2/project-thum-sc.png" alt="project">
-                  </a>
-                </div>
-                <div class="content">
-                  <h4 class="title"><a href="https://solvedcubeitsolutions.com/" target="_blank">Solved Cude</a></h4>
+                  <h4 class="title"><a href="project/steadyasset">SteadyAsset</a></h4>
                   <span class="subtitle">Logo, Branding, UI/UX Design, Website, GMB</span>
                 </div>
               </div>
@@ -344,30 +346,48 @@ function getTemplate(target) {
             <div class="col-md-6 project branding">
               <div class="project-grid">
                 <div class="thumbnail">
-                  <a href="https://steadyasset.com/" target="_blank">
-                    <img src="../assets/img/project/c3/project-thum-sa.png" alt="project">
+                  <a href="project/samsiddhidesigns">
+                    <img src="../assets/img/project/c9/project-thum-sd.png" alt="project">
                   </a>
                 </div>
                 <div class="content">
-                  <h4 class="title"><a href="https://steadyasset.com/" target="_blank">SteadyAsset</a></h4>
-                  <span class="subtitle">Logo, Branding, UI/UX Design, Website</span>
+                  <h4 class="title"><a href="project/samsiddhidesigns">Samsiddhi Designs</a></h4>
+                  <span class="subtitle">Logo, Branding, UI/UX Design, Website, GMB</span>
                 </div>
               </div>
             </div>
             <div class="col-md-6 project branding">
               <div class="project-grid">
                 <div class="thumbnail">
-                  <a href="http://alshamil.co:8082/" target="_blank">
-                    <img src="../assets/img/project/c4/project-thum-als.png" alt="project">
+                  <a href="project/uae-links">
+                    <img src="../assets/img/project/c1/project-thum-uaeLinks.png" alt="project">
                   </a>
                 </div>
                 <div class="content">
-                  <h4 class="title"><a href="http://alshamil.co:8082/" target="_blank">Al-Shamil</a></h4>
+                  <h4 class="title"><a href="project/uae-links">UAE Links</a></h4>
                   <span class="subtitle">UI/UX Design, Website</span>
                 </div>
               </div>
             </div>
+            <div class="col-md-6 project branding">
+              <div class="project-grid">
+                <div class="thumbnail">
+                  <a href="project/solved-cube-it-solutions">
+                    <img src="../assets/img/project/c2/project-thum-sc.png" alt="project">
+                  </a>
+                </div>
+                <div class="content">
+                  <h4 class="title"><a href="project/solved-cube-it-solutions">Solved Cude</a></h4>
+                  <span class="subtitle">Logo, Branding, UI/UX Design, Website, GMB</span>
+                </div>
+              </div>
+            </div>
           </div>
+
+          <div class="d-flex justify-content-center">
+            <a class="amor-btn btn-fill-primary btn-large" href="portfolio">View Portfolio</a>
+          </div>
+
         </div>
       </div>
       <ul class="shape-group-7 list-unstyled">
@@ -385,20 +405,21 @@ function getTemplate(target) {
               <div class="section-heading heading-left mb-0">
                 <span class="subtitle">Who we are</span>
                 <h2 class="title mb--40">
-                  We do
-                  <span class="gradient-text-light">design, code</span> &amp;
-                  devops.
+                  Professional <span class="gradient-text-light">Web Development</span> &amp;
+                  <span class="gradient-text-light">IT Solutions</span> Provider
                 </h2>
                 <p>
-                  At amortree Tech, we're more than just an IT consulting firm;
+                  At amortree Tech, we're more than just an <strong>IT consulting company</strong>;
                   we're your strategic partner in leveraging cutting-edge
                   technologies to drive innovation and transformation.
-                  Specializing in Website/App Design and Development, we're
+                  Specializing in <strong>custom website development</strong>, <strong>UI/UX design</strong>, and
+                  <strong>mobile app development</strong>, we're
                   dedicated to empowering businesses to thrive in the digital
                   age.
                 </p>
                 <p>
-                  Our team of experts is dedicated to delivering customized solutions that align with your unique needs
+                  Our team of <strong>expert developers</strong> and <strong>designers</strong> is dedicated to
+                  delivering customized <strong>IT solutions</strong> that align with your unique needs
                   and objectives. Whether you're focused on enhancing your digital platforms, creating seamless user
                   experiences, or crafting innovative technology solutions, we have the skills and expertise to bring
                   your vision to life.
@@ -407,7 +428,7 @@ function getTemplate(target) {
                   With a blend of creativity, technical expertise, and a
                   customer-centric approach, we strive to exceed expectations
                   and deliver measurable results. Partner with amortree Tech,
-                  and let's embark on a journey of innovation and success
+                  and let's embark on a journey of <strong>digital transformation</strong> and success
                   together.
                 </p>
                 <a href="whoWeAre" class="amor-btn btn-fill-primary btn-sm" tabindex="0">Find out more</a>
@@ -415,7 +436,8 @@ function getTemplate(target) {
             </div>
           </div>
           <div class="col-xl-5 col-lg-6 offset-xl-1">
-            <img src="../assets/img/amorboy/am-home-abt.png" alt="Bubble" />
+            <img src="../assets/img/amorboy/am-home-abt.png"
+              alt="Professional Web Development Team - Custom Website Design Services" />
           </div>
         </div>
       </div>
@@ -430,6 +452,168 @@ function getTemplate(target) {
           <img src="../assets/img/shapes/line-8.png" alt="line" />
         </li>
       </ul>
+    </section>
+
+    <section class="section section-padding bg-color-white" id="reviews">
+      <div class="container">
+        <div class="section-heading heading-center">
+          <span class="subtitle">What our clients say on Google Reviews</span>
+          <h2 class="title">Client Reviews</h2>
+        </div>
+        <div class="row">
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="review-card p-4 h-100"
+              style="background:#fff; border-radius:10px; box-shadow:0 5px 15px rgba(0,0,0,0.1);">
+              <div class="stars mb-2" aria-label="5 star rating">
+                <i class="icofont-star text-warning"></i>
+                <i class="icofont-star text-warning"></i>
+                <i class="icofont-star text-warning"></i>
+                <i class="icofont-star text-warning"></i>
+                <i class="icofont-star text-warning"></i>
+              </div>
+              <a class="small text-success mb-2" href="https://share.google/VbfvZxWgqZZY3wKnD" target="_blank">Google
+                Review <i class="icofont-link"></i></a>
+              <p class="mb-3">"Amortree is a very professional and end-to-end service provider. They have good
+                understanding of the clients needs and work in a timely and efficient manner."</p>
+              <div class="small text-muted">Client – SteadyAsset</div>
+              <div class="fw-bold">Menaka Reddy</div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="review-card p-4 h-100"
+              style="background:#fff; border-radius:10px; box-shadow:0 5px 15px rgba(0,0,0,0.1);">
+              <div class="stars mb-2" aria-label="5 star rating">
+                <i class="icofont-star text-warning"></i>
+                <i class="icofont-star text-warning"></i>
+                <i class="icofont-star text-warning"></i>
+                <i class="icofont-star text-warning"></i>
+                <i class="icofont-star text-warning"></i>
+              </div>
+              <a class="small text-success mb-2" href="https://share.google/8H1Msp6toe6G2KbDN" target="_blank">Google
+                Review <i class="icofont-link"></i></a>
+              <p class="mb-3">"Hi, I just wanted to take a moment to express my sincere appreciation for the outstanding
+                work you've done. Completing it on time and to such a high standard is a testament to your dedication
+                and expertise. Your efforts have not gone unnoticed and I'm grateful for your contributions. Thank you
+                again for a job well done!"</p>
+              <div class="small text-muted">Client – Solved Cube IT Solution</div>
+              <div class="fw-bold">Sadeep</div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="review-card p-4 h-100"
+              style="background:#fff; border-radius:10px; box-shadow:0 5px 15px rgba(0,0,0,0.1);">
+              <div class="stars mb-2" aria-label="5 star rating">
+                <i class="icofont-star text-warning"></i>
+                <i class="icofont-star text-warning"></i>
+                <i class="icofont-star text-warning"></i>
+                <i class="icofont-star text-warning"></i>
+                <i class="icofont-star text-warning"></i>
+              </div>
+              <a class="small text-success mb-2" href="https://share.google/NG4IIyDdLP6yMJ5tN" target="_blank">Google
+                Review <i class="icofont-link"></i></a>
+              <p class="mb-3">"Amortree Tech is a pleasure to work with. They're responsive, professional, and always
+                willing to go the extra mile. I highly recommend their services."</p>
+              <div class="small text-muted">Client – Samsiddhi Designs</div>
+              <div class="fw-bold">Bharathkumar MS</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SEO-Enhanced FAQ Section -->
+    <section class="section section-padding faqSec bg-color-light">
+      <div class="container">
+        <div class="section-heading heading-center faq-style">
+          <span class="subtitle">Frequently Asked Questions</span>
+          <h2 class="title">Web Development & IT Services FAQ</h2>
+          <p>Get answers to common questions about our professional web development, UI/UX design, and DevOps consulting
+            services.</p>
+        </div>
+        <div class="row">
+          <div class="col-lg-8 offset-lg-2">
+            <div class="accordion" id="faqAccordion">
+              <div class="accordion-item">
+                <h3 class="accordion-header">
+                  <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
+                    What web development services do you offer?
+                  </button>
+                </h3>
+                <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+                  <div class="accordion-body">
+                    We offer comprehensive <strong>custom website development</strong> services including responsive web
+                    design, e-commerce development, CMS integration, and web application development. Our <strong>web
+                      development company</strong> specializes in creating user-friendly, SEO-optimized websites that
+                    drive business growth.
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h3 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#faq2">
+                    Do you provide UI/UX design services?
+                  </button>
+                </h3>
+                <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                  <div class="accordion-body">
+                    Yes, we provide comprehensive <strong>UI/UX design services</strong> including user research,
+                    wireframing, prototyping, and visual design. Our <strong>professional designers</strong> create
+                    intuitive and engaging user experiences that improve conversion rates and user satisfaction.
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h3 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#faq3">
+                    What is your experience with mobile app development?
+                  </button>
+                </h3>
+                <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                  <div class="accordion-body">
+                    We have extensive experience in <strong>mobile app development</strong> for both iOS and Android
+                    platforms. Our services include native app development, cross-platform solutions, and mobile app
+                    UI/UX design. We ensure your mobile applications are scalable, secure, and user-friendly.
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h3 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#faq4">
+                    How can DevOps consulting benefit my business?
+                  </button>
+                </h3>
+                <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                  <div class="accordion-body">
+                    Our <strong>DevOps consulting services</strong> help streamline your development and deployment
+                    processes, improve collaboration between teams, and ensure faster, more reliable software delivery.
+                    We implement CI/CD pipelines, cloud infrastructure management, and automation solutions to optimize
+                    your operations.
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h3 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#faq5">
+                    What makes your IT solutions different?
+                  </button>
+                </h3>
+                <div id="faq5" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                  <div class="accordion-body">
+                    Our <strong>IT solutions</strong> are tailored to your specific business needs and goals. We combine
+                    cutting-edge technology with creative design to deliver solutions that not only look great but also
+                    drive measurable business results. Our team provides ongoing support and maintenance to ensure
+                    long-term success.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
   </main>
 </template>

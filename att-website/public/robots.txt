@@ -1,0 +1,20 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://amortree.com/sitemap.xml
+
+# Disallow admin areas (if any)
+Disallow: /admin/
+Disallow: /private/
+
+# Allow all other content
+Allow: /whatWeDo
+Allow: /whoWeAre
+Allow: /whereToFind
+Allow: /portfolio
+Allow: /estimate
+Allow: /projects/
+
+# Crawl-delay for respectful crawling
+Crawl-delay: 1

@@ -7,8 +7,9 @@
           <li class="active text-lg">Who we are</li>
         </ul>
         <div class="section-heading heading-left">
-          <h1 class="title h2 mb-0">amortree Studio</h1>
-          <p>We do design, code &amp; devOps. More Than a Team – We’re Your Creative Partners</p>
+          <h1 class="title h2 mb-0">Professional Web Development & IT Solutions Company</h1>
+          <p>Leading web development company specializing in custom website design, UI/UX services, and DevOps
+            solutions. More Than a Team – We're Your Creative Partners</p>
         </div>
       </div>
       <div class="banner-thumbnail ">
@@ -41,20 +42,27 @@
           <div class="case-study-featured">
             <div class="section-heading heading-left">
               <!-- <span class="subtitle">Who we are</span> -->
-              <h2 class="title">We do <span class="text-lg">design</span>, code &amp; devOps.</h2>
+              <h2 class="title">Professional <span class="text-lg">Web Development</span>, Design &amp; DevOps Services
+              </h2>
               <p>
-                At amortree Tech, we specialize in designing, coding, and DevOps to help businesses grow in the digital
-                age. From web and mobile UI/UX design to branding and development, we create solutions that make a
+                At amortree Tech, we specialize in <strong>custom web development</strong>, <strong>UI/UX
+                  design</strong>, and <strong>DevOps consulting</strong> to help businesses grow in the digital
+                age. From <strong>responsive website design</strong> and <strong>mobile app development</strong> to
+                <strong>branding services</strong> and <strong>cloud infrastructure</strong>, we create solutions that
+                make a
                 difference. Our team is passionate about bringing your ideas to life with innovation and precision.
               </p>
               <p>
-                Our team of experts is dedicated to delivering customized solutions that align with your unique needs
+                Our team of <strong>expert developers</strong> and <strong>designers</strong> is dedicated to delivering
+                customized <strong>IT solutions</strong> that align with your unique needs
                 and objectives. Whether you're focused on enhancing your digital platforms, creating seamless user
                 experiences, or crafting innovative technology solutions, we have the skills and expertise to bring your
                 vision to life.
               </p>
-              <p>Let us help you navigate the world of digital transformation, with services tailored to your needs and
-                vision.</p>
+              <p>Let us help you navigate the world of <strong>digital transformation</strong>, with
+                <strong>professional IT services</strong> tailored to your needs and
+                vision.
+              </p>
             </div>
             <div class="case-study-counterup">
               <div class="single-counterup">

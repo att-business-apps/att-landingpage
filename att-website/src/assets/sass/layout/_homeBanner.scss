@@ -32,21 +32,21 @@
                 padding-bottom: 0;
             }
             .title {
-                font-size: 78px;
+                font-size: 68px;
                 line-height: 1;
                 font-weight: 700;
                 color: var(--color-dark);
                 @media #{$laptop-device} {
-                    font-size: 68px;
+                    font-size: 58px;
                 }
                 @media #{$smlg-device} {
-                    font-size: 60px;
+                    font-size: 50px;
                 }
                 @media #{$md-layout} {
-                    font-size: 55px;
+                    font-size: 45px;
                 }
                 @media #{$sm-layout} {
-                    font-size: 40px;
+                    font-size: 34px;
                 }
             }
         }
