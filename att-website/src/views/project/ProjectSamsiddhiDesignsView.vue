@@ -64,8 +64,10 @@
                                 <p>Interior Design, Decor, Furniture, Raw Materials</p>
                             </div>
                             <div class="detail-item">
-                                <h5 class="title">Project Duration</h5>
-                                <p>Complete brand identity and web development</p>
+                                <h5 class="title">Live Website</h5>
+                                <p><a href="https://samsiddhidesigns.com/" target="_blank"
+                                        class="text-primary">samsiddhidesigns.com</a>
+                                </p>
                             </div>
                         </div>
                     </div>
