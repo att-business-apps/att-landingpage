@@ -13,7 +13,7 @@
                         <h1 class="title h2 mb-0 ms-2">Samsiddhi Designs</h1>
                     </div>
 
-                    <h5 class="mb-1 mt-3">Complete Brand Identity</h5>
+                    <h5 class="mb-1 mt-3">Industrial Interior Design Style</h5>
                     <p>Comprehensive branding, web development, and digital transformation project. Complete brand
                         identity design, website development, and Google Analytics integration showcasing our expertise
                         in creating cohesive digital solutions.</p>
@@ -61,7 +61,7 @@
                             </div>
                             <div class="detail-item mb-3">
                                 <h5 class="title">Industry</h5>
-                                <p>Design Services, Creative Agency, Branding</p>
+                                <p>Interior Design, Decor, Furniture, Raw Materials</p>
                             </div>
                             <div class="detail-item">
                                 <h5 class="title">Project Duration</h5>
