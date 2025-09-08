@@ -57,14 +57,15 @@
                             </div>
                             <div class="detail-item mb-3">
                                 <h5 class="title">Services Provided</h5>
-                                <p>Website, UI/UX, Progressive Web App (PWA), Mobile App UI, Business Consultancy</p>
+                                <p>Website, UI/UX, Progressive Web App (PWA), Content Structure, On‑page SEO, Google
+                                    Analytics Integration</p>
                             </div>
                             <div class="detail-item mb-3">
                                 <h5 class="title">Industry</h5>
                                 <p>Healthcare, Pharma/CRO, Education, Supply Chain</p>
                             </div>
                             <div class="detail-item">
-                                <h5 class="title">Website</h5>
+                                <h5 class="title">Live Website</h5>
                                 <p><a href="https://microrelic.com/" target="_blank">microrelic.com</a></p>
                             </div>
                         </div>

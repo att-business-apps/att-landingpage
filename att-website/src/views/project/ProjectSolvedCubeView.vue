@@ -57,7 +57,8 @@
                             </div>
                             <div class="detail-item mb-3">
                                 <h5 class="title">Services Provided</h5>
-                                <p>Logo Design, Branding, UI/UX Design, Website Development, GMB Setup</p>
+                                <p>Logo Design, Branding, UI/UX Design, Website Development, Google Analytics
+                                    Integration, GMB Setup</p>
                             </div>
                             <div class="detail-item mb-3">
                                 <h5 class="title">Industry</h5>

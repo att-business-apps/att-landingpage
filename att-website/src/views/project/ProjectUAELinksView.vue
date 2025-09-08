@@ -57,7 +57,8 @@
                             </div>
                             <div class="detail-item mb-3">
                                 <h5 class="title">Services Provided</h5>
-                                <p>Web Development, UI/UX Design, Government Portal Integration</p>
+                                <p>Web Development, UI/UX Design, Government Portal Integration, Google Analytics
+                                    Integration</p>
                             </div>
                             <div class="detail-item mb-3">
                                 <h5 class="title">Technology</h5>
