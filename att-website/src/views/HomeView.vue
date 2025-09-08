@@ -475,8 +475,14 @@ function getTemplate(target) {
                 Review <i class="icofont-link"></i></a>
               <p class="mb-3">"Amortree is a very professional and end-to-end service provider. They have good
                 understanding of the clients needs and work in a timely and efficient manner."</p>
-              <div class="small text-muted">Client – SteadyAsset</div>
-              <div class="fw-bold">Menaka Reddy</div>
+              <div class="d-flex">
+                <img src="../assets/img/project/c4/icon-sa.svg" class="m-0" style="height: 40px"
+                  alt="SteadyAsset Logo" />
+                <div class="ms-2">
+                  <div class="small text-muted">Client – SteadyAsset</div>
+                  <div class="fw-bold">Menaka Reddy</div>
+                </div>
+              </div>
             </div>
           </div>
           <div class="col-lg-4 col-md-6 mb-4">
@@ -495,8 +501,15 @@ function getTemplate(target) {
                 work you've done. Completing it on time and to such a high standard is a testament to your dedication
                 and expertise. Your efforts have not gone unnoticed and I'm grateful for your contributions. Thank you
                 again for a job well done!"</p>
-              <div class="small text-muted">Client – Solved Cube IT Solution</div>
-              <div class="fw-bold">Sandeep L</div>
+              <div class="d-flex">
+                <img src="../assets/img/project/c2/icon-sc.svg" class="m-0" style="height: 40px"
+                  alt="SteadyAsset Logo" />
+                <div class="ms-2">
+                  <div class="small text-muted">Client – Solved Cube IT Solution</div>
+                  <div class="fw-bold">Sandeep L</div>
+                </div>
+              </div>
+
             </div>
           </div>
           <div class="col-lg-4 col-md-6 mb-4">
@@ -513,8 +526,15 @@ function getTemplate(target) {
                 Review <i class="icofont-link"></i></a>
               <p class="mb-3">"Amortree Tech is a pleasure to work with. They're responsive, professional, and always
                 willing to go the extra mile. I highly recommend their services."</p>
-              <div class="small text-muted">Client – Samsiddhi Designs</div>
-              <div class="fw-bold">Bharathkumar MS</div>
+              <div class="d-flex">
+                <img src="../assets/img/project/c9/icon-sd.svg" class="m-0" style="height: 40px"
+                  alt="SteadyAsset Logo" />
+                <div class="ms-2">
+                  <div class="small text-muted">Client – Samsiddhi Designs</div>
+                  <div class="fw-bold">Bharathkumar MS</div>
+                </div>
+              </div>
+
             </div>
           </div>
         </div>
