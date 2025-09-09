@@ -75,35 +75,39 @@ function getTemplate(target) {
     <div class="banner banner-style-1">
       <div class="container">
         <div class="row align-items-end align-items-xl-end">
-          <div class="col-lg-6 pb-5">
-            <div class="banner-content">
+          <div class="col-lg-12 mx-auto pb-5">
+            <div class="banner-content text-center">
               <div class="animate__animated fadeInUp" style="animation-duration: 1s">
                 <h6 class="mb-1">
                   Sleek.
                   <span class="gradient-text blue-dark">Stylish.</span> Classy.
                 </h6>
                 <h1 class="title d-inline">
-                  Professional <span class="gradient-text-light">Web Development</span> &
-                  <span class="gradient-text-light">UI/UX Design</span> Services
+                  Top <span class="gradient-text-light">UI/UX Design</span> & <span class="gradient-text-light">Web
+                    Development Agency</span> in Bengaluru
                 </h1>
-                <h4>
-                  Custom <span class="gradient-text blue-dark">Website Development</span>.
-                  <span class="gradient-text blue-dark">Mobile App Design</span>.
-                  <span class="gradient-text blue-dark">DevOps Solutions</span>.
-                </h4>
+                <h2 class="h4">
+                  Custom <span class="gradient-text-light">Web Development</span> & <span
+                    class="gradient-text-light">User Experience Design</span> for Business Growth
+                </h2>
                 <p class="subtitle">
                   At amortree Tech, we're passionate about harnessing the power
                   of technology to transform businesses and drive innovation. As
                   a leading <strong>web development company</strong> and <strong>IT solutions provider</strong>, we
                   specialize in <strong>custom website design</strong>, <strong>UI/UX services</strong>,
-                  <strong>mobile app development</strong>, and <strong>DevOps consulting</strong> tailored to meet the
+                  <strong>mobile app UI/IX Design</strong>, and <strong>DevOps consulting</strong> tailored to meet the
                   diverse needs of our clients.
                 </p>
-                <a class="amor-btn btn-fill-primary btn-large" href="portfolio">View Portfolio</a>
+                <div class="d-flex justify-content-center gap-3 mt-5">
+                  <a class="amor-btn btn-fill-primary btn-large"
+                    href="https://wa.me/917975859061/?text=I'm%20inquiring%20about%20the%20website%20service.">Let's
+                    Chat</a>
+                  <a href="/portfolio" class="amor-btn btn-borderd">View Portfolio</a>
+                </div>
               </div>
             </div>
           </div>
-          <div class="col-lg-6">
+          <div class="col-lg-6 mx-auto">
             <div class="contact-form-box banner-form">
               <h4 class="title">Unlock Your Online Potential</h4>
               <form class="amor-contact-form">
@@ -194,7 +198,7 @@ function getTemplate(target) {
         <div class="section-heading heading-left mb--20 mb_md--70">
           <div class="subtitle">Our Services</div>
           <h2 class="title">
-            <span class="gradient-text blue-light">Professional IT Services</span> for
+            <span class="gradient-text blue-light">Top IT Services</span> for
             Digital Transformation
           </h2>
           <p>
@@ -323,7 +327,7 @@ function getTemplate(target) {
     <section class="section section-padding-2 bg-color-white">
       <div class="container">
         <div class="section-heading heading-left">
-          <span class="subtitle">Our Portfolio</span>
+          <span class="subtitle">Our Recent Clients</span>
           <h2 class="title">Professional <span class="gradient-text blue-dark">Web Development</span> <br> & Design
             Projects</h2>
         </div>

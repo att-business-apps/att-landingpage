@@ -17046,15 +17046,19 @@ body.active-dark-mode .my_switcher button span.dark {
 -------------------------*/
 .amor-btn {
   border-radius: 20px;
-  font-size: 16px;
-  font-weight: 500;
-  letter-spacing: -0.04em;
-  padding: 18px 55px;
+  font-size: 1.15rem;
+  font-weight: 600;
+  padding: 1.275rem 3rem !important;
   height: auto;
   text-align: center;
   transition: var(--transition);
   position: relative;
   z-index: 1;
+}
+@media only screen and (max-width: 767px) {
+  .amor-btn {
+    font-size: 1rem;
+  }
 }
 .amor-btn.btn-borderd {
   border: var(--border-gray);
@@ -19281,6 +19285,12 @@ Frequently Asked Questions
   font-size: var(--font-body-1);
   margin-bottom: 40px;
   width: 90%;
+  font-size: 1.2rem;
+}
+@media only screen and (max-width: 767px) {
+  .banner .banner-content .subtitle {
+    width: 100%;
+  }
 }
 .banner .banner-content .amor-btn {
   padding: 28px 45px;
@@ -19380,7 +19390,7 @@ Frequently Asked Questions
   color: var(--color-primary);
 }
 .banner.banner-style-1 {
-  background-image: url(../../assets/img/bg-wall.jpg);
+  background-image: url(../../assets/img/bg-wall.png);
   background-attachment: fixed;
   background-position: center center;
   background-size: cover;
@@ -19390,7 +19400,7 @@ Frequently Asked Questions
   content: "";
   height: 100%;
   left: 0;
-  opacity: 0.8;
+  opacity: 0.9;
   position: absolute;
   top: 0;
   width: 100%;

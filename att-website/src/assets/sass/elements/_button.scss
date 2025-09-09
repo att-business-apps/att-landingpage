@@ -3,15 +3,17 @@
 -------------------------*/
 .amor-btn {
     border-radius: 20px;
-    font-size: 16px;
-    font-weight: 500;
-    letter-spacing: -0.04em;
-    padding: 18px 55px;
+    font-size: 1.15rem;
+    font-weight: 600;
+    padding: 1.275rem 3rem !important;
     height: auto;
     text-align: center;
     transition: var(--transition);
     position: relative;
     z-index: 1;
+    @media #{$sm-layout} {
+        font-size: 1rem;
+    }
     &.btn-borderd {
         border: var(--border-gray);
         color: var(--color-dark);

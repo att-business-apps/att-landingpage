@@ -79,7 +79,7 @@
         </div>
       </div>
       <div class="footer-main pt-md-5 pt-0">
-        <div class="row">
+        <div class="row d-none">
           <div class="col-xl-6 col-lg-5 sal-animate" data-sal="slide-right" data-sal-duration="800"
             data-sal-delay="100">
             <div class="footer-widget border-end d-none d-lg-block">
