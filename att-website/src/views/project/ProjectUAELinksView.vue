@@ -107,7 +107,7 @@
     </section>
 
     <!-- Key Features Section -->
-    <section class="section section-padding bg-color-light">
+    <section class="section section-padding">
         <div class="container">
             <div class="section-heading heading-center mb-5">
                 <h2 class="title text-start">Result</h2>
