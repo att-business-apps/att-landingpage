@@ -123,7 +123,7 @@
                     <ul class="list-unstyled">
                       <!-- <li><a href="blog">Blog</a></li> -->
                       <li><a href="/portfolio">Portfolio</a></li>
-                      <li><a href="/whereToFind">Where to find</a></li>
+                      <li><a href="/contact">Where to find</a></li>
                       <li><a href="/privacy">Privacy Policy</a></li>
                       <li><a href="/terms">Terms of Use</a></li>
                     </ul>
@@ -192,7 +192,7 @@
     <li><a href="/whatWeDo"><span class="text-lb">What</span> we do</a></li>
     <li><a href="/whoWeAre"><span class="text-lg">Who</span> we are</a></li>
     <!-- <li><a href="whyUs"><span class="text-lr">Why</span> us</a></li> -->
-    <li><a href="/whereToFind"><span class="text-lr">Where</span> to find</a></li>
+    <li><a href="/contact"><span class="text-lr">Where</span> to find</a></li>
   </ul>
 </template>
 

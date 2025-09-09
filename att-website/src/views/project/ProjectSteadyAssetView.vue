@@ -291,7 +291,7 @@
                         <p class="mb-4">Let our expert team help you create a comprehensive fintech solution for your
                             organization's needs.</p>
                         <div class="cta-buttons">
-                            <a href="/whereToFind" class="amor-btn btn-fill-primary me-3">Get Started</a>
+                            <a href="/contact" class="amor-btn btn-fill-primary me-3">Get Started</a>
                             <a href="/portfolio" class="amor-btn btn-borderd">View More Projects</a>
                         </div>
                     </div>

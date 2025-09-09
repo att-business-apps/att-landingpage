@@ -170,7 +170,7 @@
                         <p class="mb-4">From strategy to launch, we build Web, Mobile, and PWA solutions that scale
                             and convert. Let’s create something your community loves.</p>
                         <div class="cta-buttons">
-                            <a href="/whereToFind" class="amor-btn btn-fill-primary me-3">Get Started</a>
+                            <a href="/contact" class="amor-btn btn-fill-primary me-3">Get Started</a>
                             <a href="/portfolio" class="amor-btn btn-borderd">View More Projects</a>
                         </div>
                     </div>

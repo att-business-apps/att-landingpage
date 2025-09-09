@@ -11,7 +11,7 @@ Disallow: /private/
 # Allow all other content
 Allow: /whatWeDo
 Allow: /whoWeAre
-Allow: /whereToFind
+Allow: /contact
 Allow: /portfolio
 Allow: /estimate
 Allow: /projects/

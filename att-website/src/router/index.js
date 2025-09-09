@@ -23,11 +23,6 @@ const router = createRouter({
       component: () => import("../views/AboutView.vue"),
     },
     {
-      path: "/whereToFind",
-      name: "contact",
-      component: () => import("../views/ContactView.vue"),
-    },
-    {
       path: "/contact",
       name: "contact",
       component: () => import("../views/ContactView.vue"),
