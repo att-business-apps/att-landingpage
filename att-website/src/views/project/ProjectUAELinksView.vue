@@ -83,7 +83,7 @@
     </section>
 
     <!-- Key Features Section -->
-    <section class="section section-padding bg-color-dark">
+    <section class="section section-padding bg-color-light">
         <div class="container">
             <div class="section-heading heading-center mb-5">
                 <h2 class="title text-start">Our Process</h2>
@@ -140,5 +140,9 @@ h2 {
 .project-details .detail-item h5 {
     color: var(--logo-green);
     margin-bottom: 0.5rem;
+}
+
+.section-padding p {
+    width: 100%;
 }
 </style>
