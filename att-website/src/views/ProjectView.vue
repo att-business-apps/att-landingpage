@@ -42,7 +42,7 @@
             </div>
             <div class="content">
               <h4 class="title"><a href="project/uae-links">UAE Links</a></h4>
-              <span class="subtitle">UI/UX Design, Website</span>
+              <span class="subtitle">UI/UX Design, Website, Google Analytics Integration</span>
             </div>
           </div>
         </div>

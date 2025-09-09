@@ -77,7 +77,7 @@ function getTemplate(target) {
                 <div class="section-heading heading-left">
                     <h1 class="title h2 mb-0">Professional Web Development & IT Services Contact</h1>
                     <p>Leading web development company ready to help with all your custom website design, UI/UX
-                        services, mobile app development, and DevOps consulting needs.</p>
+                        services, mobile app UI/UX Design, and DevOps consulting needs.</p>
                 </div>
             </div>
             <div class="banner-thumbnail">

@@ -95,7 +95,7 @@ function getTemplate(target) {
                   of technology to transform businesses and drive innovation. As
                   a leading <strong>web development company</strong> and <strong>IT solutions provider</strong>, we
                   specialize in <strong>custom website design</strong>, <strong>UI/UX services</strong>,
-                  <strong>mobile app UI/IX Design</strong>, and <strong>DevOps consulting</strong> tailored to meet the
+                  <strong>mobile app UI/UX Design</strong>, and <strong>DevOps consulting</strong> tailored to meet the
                   diverse needs of our clients.
                 </p>
                 <div class="d-flex justify-content-center gap-3 mt-5">
@@ -204,7 +204,7 @@ function getTemplate(target) {
           <p>
             Unlock your business's full potential with amortree Tech. Our comprehensive
             range of <strong>IT consulting services</strong>, including <strong>custom website development</strong>,
-            <strong>UI/UX design</strong>, <strong>mobile app development</strong>, and <strong>DevOps
+            <strong>UI/UX design</strong>, <strong>mobile app UI/UX Design</strong>, and <strong>DevOps
               solutions</strong>,
             are designed to drive innovation and growth. Experience the power of
             <strong>technology-driven transformation</strong> with our expert team.
@@ -283,7 +283,7 @@ function getTemplate(target) {
                 <img src="../assets/img/icon/mob-7.png" alt="icon" />
               </div>
               <div class="content">
-                <h5 class="title"><a href="whatWeDo">Mobile App Development</a></h5>
+                <h5 class="title"><a href="whatWeDo">Mobile App UI/UX Design</a></h5>
                 <p>
                   <strong>Mobile app UI/UX design</strong> focuses on creating intuitive, user-friendly interfaces that
                   enhance
@@ -369,7 +369,7 @@ function getTemplate(target) {
                 </div>
                 <div class="content">
                   <h4 class="title"><a href="project/uae-links">UAE Links</a></h4>
-                  <span class="subtitle">UI/UX Design, Website</span>
+                  <span class="subtitle">UI/UX Design, Website, Google Analytics Integration</span>
                 </div>
               </div>
             </div>
@@ -401,64 +401,7 @@ function getTemplate(target) {
       </ul>
     </section>
 
-    <section class="section section-padding-equal bg-color-light pb-0" id="about">
-      <div class="container">
-        <div class="row align-items-center">
-          <div class="col-lg-6">
-            <div class="about-us">
-              <div class="section-heading heading-left mb-0">
-                <span class="subtitle">Who we are</span>
-                <h2 class="title mb--40">
-                  Professional <span class="gradient-text-light">Web Development</span> &amp;
-                  <span class="gradient-text-light">IT Solutions</span> Provider
-                </h2>
-                <p>
-                  At amortree Tech, we're more than just an <strong>IT consulting company</strong>;
-                  we're your strategic partner in leveraging cutting-edge
-                  technologies to drive innovation and transformation.
-                  Specializing in <strong>custom website development</strong>, <strong>UI/UX design</strong>, and
-                  <strong>mobile app development</strong>, we're
-                  dedicated to empowering businesses to thrive in the digital
-                  age.
-                </p>
-                <p>
-                  Our team of <strong>expert developers</strong> and <strong>designers</strong> is dedicated to
-                  delivering customized <strong>IT solutions</strong> that align with your unique needs
-                  and objectives. Whether you're focused on enhancing your digital platforms, creating seamless user
-                  experiences, or crafting innovative technology solutions, we have the skills and expertise to bring
-                  your vision to life.
-                </p>
-                <p>
-                  With a blend of creativity, technical expertise, and a
-                  customer-centric approach, we strive to exceed expectations
-                  and deliver measurable results. Partner with amortree Tech,
-                  and let's embark on a journey of <strong>digital transformation</strong> and success
-                  together.
-                </p>
-                <a href="whoWeAre" class="amor-btn btn-fill-primary btn-sm" tabindex="0">Find out more</a>
-              </div>
-            </div>
-          </div>
-          <div class="col-xl-5 col-lg-6 offset-xl-1">
-            <img src="../assets/img/amorboy/am-home-abt.png"
-              alt="Professional Web Development Team - Custom Website Design Services" />
-          </div>
-        </div>
-      </div>
-      <ul class="shape-group-6 list-unstyled">
-        <li class="shape shape-1">
-          <img src="../assets/img/shapes/line-2.png" alt="Bubble" />
-        </li>
-        <li class="shape shape-2">
-          <img src="../assets/img/shapes/line-7.png" alt="line" />
-        </li>
-        <li class="shape shape-3">
-          <img src="../assets/img/shapes/line-8.png" alt="line" />
-        </li>
-      </ul>
-    </section>
-
-    <section class="section section-padding bg-color-white" id="reviews">
+    <section class="section section-padding bg-color-light" id="reviews">
       <div class="container">
         <div class="section-heading heading-center">
           <span class="subtitle">What our clients say on Google Reviews</span>
@@ -545,6 +488,63 @@ function getTemplate(target) {
       </div>
     </section>
 
+    <section class="section section-padding-equal bg-color-white pb-0" id="about">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-6">
+            <div class="about-us">
+              <div class="section-heading heading-left mb-0">
+                <span class="subtitle">Who we are</span>
+                <h2 class="title mb--40">
+                  Professional <span class="gradient-text-light">Web Development</span> &amp;
+                  <span class="gradient-text-light">IT Solutions</span> Provider
+                </h2>
+                <p>
+                  At amortree Tech, we're more than just an <strong>IT consulting company</strong>;
+                  we're your strategic partner in leveraging cutting-edge
+                  technologies to drive innovation and transformation.
+                  Specializing in <strong>custom website development</strong>, <strong>UI/UX design</strong>, and
+                  <strong>mobile app UI/UX Design</strong>, we're
+                  dedicated to empowering businesses to thrive in the digital
+                  age.
+                </p>
+                <p>
+                  Our team of <strong>expert developers</strong> and <strong>designers</strong> is dedicated to
+                  delivering customized <strong>IT solutions</strong> that align with your unique needs
+                  and objectives. Whether you're focused on enhancing your digital platforms, creating seamless user
+                  experiences, or crafting innovative technology solutions, we have the skills and expertise to bring
+                  your vision to life.
+                </p>
+                <p>
+                  With a blend of creativity, technical expertise, and a
+                  customer-centric approach, we strive to exceed expectations
+                  and deliver measurable results. Partner with amortree Tech,
+                  and let's embark on a journey of <strong>digital transformation</strong> and success
+                  together.
+                </p>
+                <a href="whoWeAre" class="amor-btn btn-fill-primary btn-sm" tabindex="0">Find out more</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-5 col-lg-6 offset-xl-1">
+            <img src="../assets/img/amorboy/am-home-abt.png"
+              alt="Professional Web Development Team - Custom Website Design Services" />
+          </div>
+        </div>
+      </div>
+      <ul class="shape-group-6 list-unstyled">
+        <li class="shape shape-1">
+          <img src="../assets/img/shapes/line-2.png" alt="Bubble" />
+        </li>
+        <li class="shape shape-2">
+          <img src="../assets/img/shapes/line-7.png" alt="line" />
+        </li>
+        <li class="shape shape-3">
+          <img src="../assets/img/shapes/line-8.png" alt="line" />
+        </li>
+      </ul>
+    </section>
+
     <!-- SEO-Enhanced FAQ Section -->
     <section class="section section-padding faqSec bg-color-light">
       <div class="container">
@@ -591,13 +591,13 @@ function getTemplate(target) {
                 <h3 class="accordion-header">
                   <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                     data-bs-target="#faq3">
-                    What is your experience with mobile app development?
+                    What is your experience with mobile app UI/UX Design?
                   </button>
                 </h3>
                 <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
                   <div class="accordion-body">
-                    We have extensive experience in <strong>mobile app development</strong> for both iOS and Android
-                    platforms. Our services include native app development, cross-platform solutions, and mobile app
+                    We have extensive experience in <strong>mobile app UI/UX Design</strong> for both iOS and Android
+                    platforms. Our services include native app UI/UX Design, cross-platform solutions, and mobile app
                     UI/UX design. We ensure your mobile applications are scalable, secure, and user-friendly.
                   </div>
                 </div>

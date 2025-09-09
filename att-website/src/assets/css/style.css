@@ -17045,7 +17045,7 @@ body.active-dark-mode .my_switcher button span.dark {
     Button
 -------------------------*/
 .amor-btn {
-  border-radius: 20px;
+  border-radius: 1rem;
   font-size: 1.15rem;
   font-weight: 600;
   padding: 1.275rem 3rem !important;
@@ -19290,6 +19290,7 @@ Frequently Asked Questions
 @media only screen and (max-width: 767px) {
   .banner .banner-content .subtitle {
     width: 100%;
+    font-size: 1rem;
   }
 }
 .banner .banner-content .amor-btn {
@@ -19441,7 +19442,7 @@ Frequently Asked Questions
 }
 @media only screen and (max-width: 767px) {
   .banner.banner-style-1 .banner-content .title {
-    font-size: 36px;
+    font-size: 40px;
     margin-bottom: 1rem;
   }
 }

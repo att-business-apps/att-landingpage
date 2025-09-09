@@ -47,7 +47,7 @@
               <p>
                 At amortree Tech, we specialize in <strong>custom web development</strong>, <strong>UI/UX
                   design</strong>, and <strong>DevOps consulting</strong> to help businesses grow in the digital
-                age. From <strong>responsive website design</strong> and <strong>mobile app development</strong> to
+                age. From <strong>responsive website design</strong> and <strong>mobile app UI/UX Design</strong> to
                 <strong>branding services</strong> and <strong>cloud infrastructure</strong>, we create solutions that
                 make a
                 difference. Our team is passionate about bringing your ideas to life with innovation and precision.

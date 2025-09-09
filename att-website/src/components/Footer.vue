@@ -7,7 +7,8 @@
           <span class="subtitle">Let's Work Together</span>
           <h2 class="title">Need a successful project?</h2>
           <!-- <a class="amor-btn btn-large btn-fill-white" href="estimate">Estimate Project</a> -->
-          <a class="amor-btn btn-large btn-fill-white" href="/whereToFind">Let's talk.</a>
+          <a class="amor-btn btn-large btn-fill-white"
+            href="https://wa.me/917975859061/?text=I'm%20inquiring%20about%20the%20website%20service.">Let's Chat</a>
         </div>
         <div class="thumbnail">
           <div class="larg-thumb" data-sal="zoom-in" data-sal-duration="600" data-sal-delay="100">

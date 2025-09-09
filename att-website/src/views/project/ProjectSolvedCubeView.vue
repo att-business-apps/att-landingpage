@@ -112,7 +112,7 @@
                             <i class="icofont-mobile-phone"></i>
                         </div>
                         <h5 class="title">Mobile Applications</h5>
-                        <p>Intuitive and responsive mobile app development for iOS and Android platforms.</p>
+                        <p>Intuitive and responsive mobile app UI/UX Design for iOS and Android platforms.</p>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6 mb-4">
