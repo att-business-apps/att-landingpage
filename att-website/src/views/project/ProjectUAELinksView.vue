@@ -83,216 +83,62 @@
     </section>
 
     <!-- Key Features Section -->
-    <section class="section section-padding bg-color-light">
+    <section class="section section-padding bg-color-dark">
         <div class="container">
             <div class="section-heading heading-center mb-5">
-                <h2 class="title">Key Features & Functionality</h2>
-                <p>Comprehensive government services integration with user-friendly navigation</p>
+                <h2 class="title text-start">Our Process</h2>
+                <p class="text-start">At Amortree Tech, we built UAE Links as a unified gateway to
+                    essential UAE government
+                    services. Our process began with research and requirement analysis, identifying user pain points and
+                    key categories like Labour, Visa, Pension, and Medical Fitness. We then designed a clean information
+                    architecture, wireframed navigation, and created a minimalist, responsive interface for quick
+                    access. Development focused on speed, security, and seamless linking to official portals. After
+                    rigorous usability testing, we launched the platform with Google Analytics integration, enabling
+                    data-driven enhancements. The result is a simple, reliable, and scalable digital hub.</p>
             </div>
+
             <div class="row">
-                <div class="col-lg-4 col-md-6 mb-4">
-                    <div class="feature-card">
-                        <div class="feature-icon mb-3">
-                            <i class="icofont-worker"></i>
-                        </div>
-                        <h5 class="title">Labour Applications (MOHRE)</h5>
-                        <p>Direct access to Tas-heel, Tad-beer, Taw-jeeh services, technical support, and complaint
-                            submission systems.</p>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 mb-4">
-                    <div class="feature-card">
-                        <div class="feature-icon mb-3">
-                            <i class="icofont-id-card"></i>
-                        </div>
-                        <h5 class="title">Emirates ID & Visa (ICP)</h5>
-                        <p>ICP portal login, visa validity checks, company and application status verification services.
-                        </p>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 mb-4">
-                    <div class="feature-card">
-                        <div class="feature-icon mb-3">
-                            <i class="icofont-heart-beat"></i>
-                        </div>
-                        <h5 class="title">Medical Fitness</h5>
-                        <p>Integration with EHS, Salem, and Laiq systems for comprehensive medical fitness services.</p>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 mb-4">
-                    <div class="feature-card">
-                        <div class="feature-icon mb-3">
-                            <i class="icofont-building"></i>
-                        </div>
-                        <h5 class="title">Health Authority Portals</h5>
-                        <p>Access to health services for each emirate: Ministry, Abu Dhabi, Dubai, Sharjah, Ajman, Ras
-                            Al-Khaimah.</p>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 mb-4">
-                    <div class="feature-card">
-                        <div class="feature-icon mb-3">
-                            <i class="icofont-money"></i>
-                        </div>
-                        <h5 class="title">Pension Services</h5>
-                        <p>UAE and GCC pension services with streamlined access and user-friendly interface.</p>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 mb-4">
-                    <div class="feature-card">
-                        <div class="feature-icon mb-3">
-                            <i class="icofont-passport"></i>
-                        </div>
-                        <h5 class="title">Dubai Visa (GDRFA)</h5>
-                        <p>Home page access, portal login, and visa inquiry services for Dubai residents and visitors.
-                        </p>
-                    </div>
+                <div class="col">
+                    <img src="../../assets/img/project/c1/project-uae-mob.png" class="img-fluid rounded mt-5"
+                        alt="UAE Links Mobile View - Responsive Government Portal Design">
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Project Results Section -->
-    <section class="section section-padding">
-        <div class="container">
-            <div class="section-heading heading-center mb-5">
-                <h2 class="title">Project Results & Impact</h2>
-                <p>Measurable outcomes and user benefits</p>
-            </div>
-            <div class="row">
-                <div class="col-lg-3 col-md-6 mb-4">
-                    <div class="result-card text-center">
-                        <div class="result-number">100%</div>
-                        <h5 class="title">Service Coverage</h5>
-                        <p>Complete coverage of active UAE government services</p>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 mb-4">
-                    <div class="result-card text-center">
-                        <div class="result-number">50%</div>
-                        <h5 class="title">Reduced Navigation Time</h5>
-                        <p>Faster access to government services through centralized hub</p>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 mb-4">
-                    <div class="result-card text-center">
-                        <div class="result-number">24/7</div>
-                        <h5 class="title">Availability</h5>
-                        <p>Round-the-clock access to government services</p>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 mb-4">
-                    <div class="result-card text-center">
-                        <div class="result-number">Mobile</div>
-                        <h5 class="title">Responsive Design</h5>
-                        <p>Optimized experience across all devices</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Call to Action Section -->
+    <!-- Key Features Section -->
     <section class="section section-padding bg-color-light">
         <div class="container">
-            <div class="row">
-                <div class="col-lg-8 offset-lg-2 text-center">
-                    <div class="cta-content">
-                        <h2 class="title mb-4">Ready to Start Your Government Portal Project?</h2>
-                        <p class="mb-4">Let our expert team help you create a comprehensive digital solution for your
-                            organization's needs.</p>
-                        <div class="cta-buttons">
-                            <a href="/contact" class="amor-btn btn-fill-primary me-3">Get Started</a>
-                            <a href="/portfolio" class="amor-btn btn-borderd">View More Projects</a>
-                        </div>
-                    </div>
-                </div>
+            <div class="section-heading heading-center mb-5">
+                <h2 class="title text-start">Result</h2>
+                <p class="text-start">The launch of UAE Links delivered a seamless, centralized access point to critical
+                    UAE
+                    government services, significantly reducing the time users spend searching across multiple portals.
+                    Early analytics revealed high engagement with Labour, Visa, and Emirates ID categories, validating
+                    the platform’s structure. Mobile responsiveness improved accessibility for on-the-go users, while
+                    Google Analytics insights enabled ongoing optimization. The client gained a scalable foundation to
+                    expand into new service areas, reinforcing UAE Links as a trusted digital gateway.</p>
             </div>
+            <!-- <div class="cta-buttons mt-5">
+                <a href="/portfolio" class="amor-btn btn-borderd">View More Projects</a>
+                <a href="/contact" class="amor-btn btn-fill-primary me-3">Get Started</a>
+            </div> -->
         </div>
     </section>
 </template>
 
 <style scoped>
-.feature-card {
-    background: white;
-    padding: 2rem;
-    border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-    height: 100%;
-    transition: transform 0.3s ease;
-}
-
-.feature-card:hover {
-    transform: translateY(-5px);
-}
-
-.feature-icon {
-    font-size: 2.5rem;
-    color: #0d6efd;
-}
-
-.result-card {
-    background: white;
-    padding: 2rem;
-    border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-    height: 100%;
-}
-
-.result-number {
-    font-size: 3rem;
-    font-weight: bold;
-    color: #0d6efd;
-    margin-bottom: 1rem;
-}
-
-.cta-content {
-    background: white;
-    padding: 3rem;
-    border-radius: 15px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+h2 {
+    color: var(--logo-green);
 }
 
 .project-details .detail-item {
-    border-left: 3px solid #0d6efd;
+    border-left: 3px solid var(--logo-green);
     padding-left: 1rem;
 }
 
 .project-details .detail-item h5 {
-    color: #0d6efd;
+    color: var(--logo-green);
     margin-bottom: 0.5rem;
-}
-
-.cta-buttons {
-    display: flex;
-    gap: .5rem;
-    justify-content: center;
-    align-items: center;
-}
-
-@media (max-width: 768px) {
-
-    .feature-card,
-    .result-card {
-        margin-bottom: 1.5rem;
-    }
-
-    .cta-content {
-        padding: 2rem;
-    }
-
-    .cta-buttons {
-        display: block;
-    }
-
-    .cta-buttons a {
-        display: block;
-        margin-bottom: 1rem;
-        margin-right: 0 !important;
-    }
-
-    .result-number {
-        font-size: 2.5rem;
-    }
 }
 </style>
