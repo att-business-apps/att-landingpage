@@ -147,7 +147,7 @@
           <div class="col-xl-6 col-lg-7">
             <div class="contact-info mb--50">
               <h4 class="title">Email</h4>
-              <p>Our support team will get back to in 24-h during standard business hours.</p>
+              <p>Our support team will get back to you in 24-h during standard business days (Mon-Sat).</p>
               <h4 class="phone-number"><a href="mailto:hi@amortree.com">hi@amortree.com</a></h4>
             </div>
           </div>
