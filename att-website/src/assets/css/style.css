@@ -19498,6 +19498,11 @@ Frequently Asked Questions
   background-position: center center;
   background-size: cover;
 }
+@media only screen and (max-width: 991px) {
+  .banner.banner-style-1 {
+    background-image: url(../../assets/img/bg-wall-mob.png);
+  }
+}
 .banner.banner-style-1:after {
   background: linear-gradient(180deg, var(--color-light) 25%, var(--color-light) 100%);
   content: "";
