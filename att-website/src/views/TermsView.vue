@@ -134,6 +134,10 @@ p {
 }
 
 a {
-  color: #0d6efd;
+  color: var(--logo-yellow);
+}
+
+a:hover {
+  color: var(--logo-blue) !important;
 }
 </style>

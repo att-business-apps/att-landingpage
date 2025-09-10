@@ -85,6 +85,7 @@ a {
   text-decoration: none;
   color: $cdark;
   @include transition($all);
+  color: var(--logo-yellow);
 }
 
 a:hover,

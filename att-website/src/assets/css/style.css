@@ -17136,8 +17136,8 @@ body.active-dark-mode .my_switcher button span.dark {
   font-size: 1.65rem;
 }
 .amor-btn.btn-fill-primary {
-  background-color: var(--color-dark);
-  color: var(--color-white);
+  background-color: var(--logo-yellow);
+  color: var(--color-dark);
   border: 1px solid var(--color-dark);
   overflow: hidden;
 }
@@ -17145,7 +17145,7 @@ body.active-dark-mode .my_switcher button span.dark {
   content: "";
   height: 300px;
   width: 300px;
-  background-color: var(--color-link);
+  background-color: var(--color-dark);
   border-radius: 50%;
   position: absolute;
   top: 50%;
@@ -17155,12 +17155,18 @@ body.active-dark-mode .my_switcher button span.dark {
   z-index: -1;
 }
 .amor-btn.btn-fill-primary:hover {
-  background-color: var(--color-link);
+  background-color: var(--color-dark);
   border-color: var(--color-link);
-  color: var(--color-dark);
+  color: var(--logo-yellow);
 }
 .amor-btn.btn-fill-primary:hover::after {
   transform: translateY(-50%) translateX(-50%) scale(1);
+}
+@media only screen and (max-width: 767px) {
+  .amor-btn.btn-fill-primary {
+    display: block;
+    width: 100%;
+  }
 }
 .amor-btn.btn-fill-white {
   color: var(--color-dark);
@@ -20454,6 +20460,13 @@ Service
     font-size: 14px;
   }
 }
+.project-overview a.text-primary {
+  color: var(--logo-yellow) !important;
+}
+.project-overview a.text-primary:hover {
+  color: var(--logo-blue) !important;
+}
+
 /*-------------------------
    Case Study
 -------------------------*/

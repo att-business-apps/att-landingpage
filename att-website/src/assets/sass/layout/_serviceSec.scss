@@ -535,3 +535,15 @@ Service
 		}
 	}
 }
+
+.project-overview {
+    a {
+        &.text-primary {
+            color: var(--logo-yellow) !important;
+
+            &:hover {
+                color: var(--logo-blue) !important;
+            }
+        }
+    }
+}
