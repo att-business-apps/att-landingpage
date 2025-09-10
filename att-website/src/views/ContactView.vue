@@ -151,7 +151,7 @@ function getTemplate(target) {
 
                     <div class="contact-info mb--30">
                         <h4 class="title">Email</h4>
-                        <p>Our support team will get back to in 24-h during standard business hours.</p>
+                        <p>Our support team will get back to you in 24-h during standard business days (Mon-Sat).</p>
                         <h5 class="text-white mb-0">Say hi to,</h5>
                         <h4 class="phone-number"><a href="mailto:hi@amortree.com">hi@amortree.com</a></h4>
                     </div>
