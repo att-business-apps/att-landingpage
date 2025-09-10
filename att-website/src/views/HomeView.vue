@@ -522,7 +522,7 @@ function getTemplate(target) {
                   and let's embark on a journey of <strong>digital transformation</strong> and success
                   together.
                 </p>
-                <a href="whoWeAre" class="amor-btn btn-fill-primary btn-sm" tabindex="0">Know more</a>
+                <a href="whoWeAre" class="amor-btn btn-borderd light" tabindex="0">Know more</a>
               </div>
             </div>
           </div>
