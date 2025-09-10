@@ -388,7 +388,7 @@ function getTemplate(target) {
             </div>
           </div>
 
-          <div class="d-flex justify-content-center">
+          <div class="d-lg-flex justify-content-center">
             <a class="amor-btn btn-fill-primary btn-large" href="portfolio">View Portfolio</a>
           </div>
 
