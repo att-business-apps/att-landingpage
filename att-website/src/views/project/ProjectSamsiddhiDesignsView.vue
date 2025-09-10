@@ -5,7 +5,7 @@
                 <ul class="list-unstyled">
                     <li><a href="/">Home</a></li>
                     <li><a href="/portfolio">Portfolio</a></li>
-                    <li class="active text-lg">Samsiddhi Designs</li>
+                    <li class="active text-ly">Samsiddhi Designs</li>
                 </ul>
                 <div class="section-heading heading-left">
                     <div class="d-flex align-items-center">
@@ -13,16 +13,13 @@
                         <h1 class="title h2 mb-0 ms-2">Samsiddhi Designs</h1>
                     </div>
 
-                    <h5 class="mb-1 mt-3">Industrial Interior Design Style</h5>
-                    <p>Comprehensive branding, web development, and digital transformation project. Complete brand
-                        identity design, website development, and Google Analytics integration showcasing our expertise
-                        in creating cohesive digital solutions.</p>
+                    <h5 class="mb-1 mt-3">Interior Design Company</h5>
                 </div>
             </div>
             <div class="banner-thumbnail ">
                 <div class=""
                     style="position: relative; will-change: transform; transform: perspective(2000px) rotateX(-0.32deg) rotateY(-11.76deg) scale3d(1, 1, 1);">
-                    <img src="../../assets/img/amorboy/am-doing-1.png" class="w-100 animate__animated slideInRight"
+                    <img src="../../assets/img/amorboy/am-doing-1.png" class="w-75 animate__animated slideInRight"
                         style="animation-duration: 3s" alt="Illustration">
                 </div>
             </div>
@@ -80,198 +77,75 @@
                     </div>
                 </div>
             </div>
-
-            <div class="row">
-                <div class="col">
-                    <img src="../../assets/img/project/c9/sd-mockup.png" class="img-fluid rounded mt-5"
-                        alt="Samsiddhi Designs Project">
-                </div>
-            </div>
         </div>
     </section>
 
-    <!-- Project Objectives Section -->
+    <!-- Our Process Section -->
     <section class="section section-padding bg-color-light">
         <div class="container">
             <div class="section-heading heading-center mb-5">
-                <h2 class="title">Project Scope & Objectives</h2>
-                <p>Strategic goals and comprehensive deliverables</p>
+                <h2 class="title text-start">Our Process</h2>
+                <p class="text-start">At Amortree Tech, we collaborated with Samsiddhi Designs to build a complete and
+                    professional brand identity. Our process began with designing a unique logo that reflects creativity
+                    and elegance. We extended the identity through branding assets including business cards,
+                    letterheads, company signboards, and a detailed company portfolio to ensure consistency across all
+                    touchpoints. To strengthen online presence, we set up and optimized their Google My Business (GMB)
+                    profile, enhancing local discoverability. Finally, we integrated Google Analytics into their
+                    website, enabling performance tracking and data-driven decision-making.</p>
             </div>
+
             <div class="row">
-                <div class="col-lg-4 mb-4">
-                    <div class="objective-card">
-                        <div class="objective-icon mb-3">
-                            <i class="icofont-paint-brush"></i>
-                        </div>
-                        <h5 class="title">Brand Identity</h5>
-                        <p>Establish a cohesive and memorable brand identity reflecting the client's vision and values.
-                        </p>
-                    </div>
+                <div class="col-12">
+                    <img src="../../assets/img/project/c9/project-sd-mob.png" class="img-fluid rounded mb-5"
+                        alt="Samsiddhi Designs Project - Mobile View">
                 </div>
-                <div class="col-lg-4 mb-4">
-                    <div class="objective-card">
-                        <div class="objective-icon mb-3">
-                            <i class="icofont-web"></i>
-                        </div>
-                        <h5 class="title">Online Presence</h5>
-                        <p>Provide a polished, user-friendly online presence via a professional website.</p>
-                    </div>
-                </div>
-                <div class="col-lg-4 mb-4">
-                    <div class="objective-card">
-                        <div class="objective-icon mb-3">
-                            <i class="icofont-chart-line"></i>
-                        </div>
-                        <h5 class="title">Data Analytics</h5>
-                        <p>Enable data-driven insights through Google Analytics for ongoing optimization.</p>
-                    </div>
+                <div class="col-12">
+                    <img src="../../assets/img/project/c9/sd-mockup.png" class="img-fluid rounded"
+                        alt="Samsiddhi Designs Project - Signboard, Business Card, Letterhead, Company Portfolio">
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Project Results Section -->
+    <!-- Result Section -->
     <section class="section section-padding">
         <div class="container">
             <div class="section-heading heading-center mb-5">
-                <h2 class="title">Project Results & Impact</h2>
-                <p>Measurable outcomes and business benefits</p>
+                <h2 class="title text-start">Result</h2>
+                <p class="text-start">Our collaboration with Samsiddhi Designs delivered a cohesive and professional
+                    brand presence across both physical and digital platforms. The logo and branding assets (business
+                    card, letterhead, signboard, and company portfolio) established consistency and reinforced brand
+                    credibility. With a well-optimized Google My Business profile, the company improved its local
+                    visibility and search presence. Integration of Google Analytics provided actionable insights into
+                    website traffic and user behavior, empowering the client to make informed marketing decisions and
+                    build stronger engagement with potential customers.</p>
             </div>
-            <div class="row">
-                <div class="col-lg-3 col-md-6 mb-4">
-                    <div class="result-card text-center">
-                        <div class="result-number">100%</div>
-                        <h5 class="title">Brand Identity</h5>
-                        <p>Complete brand system delivered</p>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 mb-4">
-                    <div class="result-card text-center">
-                        <div class="result-number">5</div>
-                        <h5 class="title">Website Pages</h5>
-                        <p>Strategic page architecture</p>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 mb-4">
-                    <div class="result-card text-center">
-                        <div class="result-number">GA4</div>
-                        <h5 class="title">Analytics</h5>
-                        <p>Complete tracking setup</p>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 mb-4">
-                    <div class="result-card text-center">
-                        <div class="result-number">Mobile</div>
-                        <h5 class="title">Responsive</h5>
-                        <p>Optimized for all devices</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Call to Action Section -->
-    <section class="section section-padding bg-color-light">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-8 offset-lg-2 text-center">
-                    <div class="cta-content">
-                        <h2 class="title mb-4">Ready to Transform Your Brand Identity?</h2>
-                        <p class="mb-4">Let our expert team help you create a comprehensive brand identity and digital
-                            presence that drives business growth.</p>
-                        <div class="cta-buttons">
-                            <a href="/contact" class="amor-btn btn-fill-primary me-3">Get Started</a>
-                            <a href="/portfolio" class="amor-btn btn-borderd">View More Projects</a>
-                        </div>
-                    </div>
-                </div>
+            <div class="cta-buttons mt-5">
+                <a href="/project/al-shamil-computers" class="amor-btn light"> <i
+                        class="icofont-rounded-double-left me-3"></i> Al-Shamil</a>
+                <a href="/contact" class="amor-btn btn-fill-primary me-3">Get Started</a>
             </div>
         </div>
     </section>
 </template>
 
 <style scoped>
+h2 {
+    color: #009490;
+    font-weight: 500;
+}
+
 .project-details .detail-item {
-    border-left: 3px solid #0d6efd;
+    border-left: 3px solid #009490;
     padding-left: 1rem;
-    margin-bottom: 1.5rem;
 }
 
 .project-details .detail-item h5 {
-    color: #0d6efd;
+    color: #009490;
     margin-bottom: 0.5rem;
 }
 
-.objective-card {
-    background: white;
-    padding: 2rem;
-    border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-    height: 100%;
-    transition: transform 0.3s ease;
-}
-
-.objective-card:hover {
-    transform: translateY(-5px);
-}
-
-.objective-icon {
-    font-size: 2.5rem;
-    color: #0d6efd;
-}
-
-.result-card {
-    background: white;
-    padding: 2rem;
-    border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-    height: 100%;
-}
-
-.result-number {
-    font-size: 3rem;
-    font-weight: bold;
-    color: #0d6efd;
-    margin-bottom: 1rem;
-}
-
-.cta-content {
-    background: white;
-    padding: 3rem;
-    border-radius: 15px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-}
-
-.cta-buttons {
-    display: flex;
-    gap: .5rem;
-    justify-content: center;
-    align-items: center;
-}
-
-@media (max-width: 768px) {
-
-    .objective-card,
-    .result-card {
-        margin-bottom: 1.5rem;
-    }
-
-    .cta-content {
-        padding: 2rem;
-    }
-
-    .cta-buttons {
-        display: block;
-    }
-
-    .cta-buttons a {
-        display: block;
-        margin-bottom: 1rem;
-        margin-right: 0 !important;
-    }
-
-    .result-number {
-        font-size: 2.5rem;
-    }
+.section-padding p {
+    width: 100%;
 }
 </style>

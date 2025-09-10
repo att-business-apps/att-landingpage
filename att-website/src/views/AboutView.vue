@@ -15,7 +15,7 @@
       <div class="banner-thumbnail ">
         <div class=""
           style="position: relative; will-change: transform; transform: perspective(2000px) rotateX(-0.32deg) rotateY(-11.76deg) scale3d(1, 1, 1);">
-          <img src="../assets/img/amorboy/am-about.png" class="w-100 animate__animated slideInRight"
+          <img src="../assets/img/amorboy/am-about.png" class="w-75 animate__animated slideInRight"
             style="animation-duration: 3s" alt="Illustration">
         </div>
       </div>
@@ -146,14 +146,14 @@
 
 
   <div class="section section-padding bg-color-light pb--70">
-    <div class="section-heading  mb--90">
-      <div class="subtitle">Structured Workflow</div>
-      <h2 class="title">Complete Brand Growth Process</h2>
-      <p>Our Comprehensive Brand Development Process combines research, branding, and design to create cohesive brand
-        identities, engaging user experiences, and continuous improvements, ensuring your brand thrives in the digital
-        landscape.</p>
-    </div>
     <div class="container">
+      <div class="section-heading  mb--90">
+        <div class="subtitle">Structured Workflow</div>
+        <h2 class="title">Complete Brand Growth Process</h2>
+        <p>Our Comprehensive Brand Development Process combines research, branding, and design to create cohesive brand
+          identities, engaging user experiences, and continuous improvements, ensuring your brand thrives in the digital
+          landscape.</p>
+      </div>
       <div class="process-work ">
         <div class=""
           style="position: relative; will-change: transform; transform: perspective(2000px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1);">

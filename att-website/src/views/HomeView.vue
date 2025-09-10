@@ -102,7 +102,7 @@ function getTemplate(target) {
                   <a class="amor-btn btn-fill-primary btn-large"
                     href="https://wa.me/917975859061/?text=I'm%20inquiring%20about%20the%20website%20service.">Let's
                     Chat</a>
-                  <a href="/portfolio" class="amor-btn btn-borderd">View Portfolio</a>
+                  <a href="/portfolio" class="amor-btn btn-borderd light">View Portfolio</a>
                 </div>
               </div>
             </div>
@@ -410,7 +410,7 @@ function getTemplate(target) {
         <div class="row">
           <div class="col-lg-4 col-md-6 mb-4">
             <div class="review-card p-4 h-100"
-              style="background:#fff; border-radius:10px; box-shadow:0 5px 15px rgba(0,0,0,0.1);">
+              style="background:#2d2d32; border-radius:10px; box-shadow:0 5px 15px rgba(0,0,0,0.1);">
               <div class="stars mb-2" aria-label="5 star rating">
                 <i class="icofont-star text-warning"></i>
                 <i class="icofont-star text-warning"></i>
@@ -426,7 +426,7 @@ function getTemplate(target) {
                 <img src="../assets/img/project/c4/icon-sa.svg" class="m-0" style="height: 40px"
                   alt="SteadyAsset Logo" />
                 <div class="ms-2">
-                  <div class="small text-muted">Client – SteadyAsset</div>
+                  <div class="small">Client – SteadyAsset</div>
                   <div class="fw-bold">Menaka Reddy</div>
                 </div>
               </div>
@@ -434,7 +434,7 @@ function getTemplate(target) {
           </div>
           <div class="col-lg-4 col-md-6 mb-4">
             <div class="review-card p-4 h-100"
-              style="background:#fff; border-radius:10px; box-shadow:0 5px 15px rgba(0,0,0,0.1);">
+              style="background:#2d2d32; border-radius:10px; box-shadow:0 5px 15px rgba(0,0,0,0.1);">
               <div class="stars mb-2" aria-label="5 star rating">
                 <i class="icofont-star text-warning"></i>
                 <i class="icofont-star text-warning"></i>
@@ -452,7 +452,7 @@ function getTemplate(target) {
                 <img src="../assets/img/project/c2/icon-sc.svg" class="m-0" style="height: 40px"
                   alt="SteadyAsset Logo" />
                 <div class="ms-2">
-                  <div class="small text-muted">Client – Solved Cube IT Solution</div>
+                  <div class="small">Client – Solved Cube IT Solution</div>
                   <div class="fw-bold">Sandeep L</div>
                 </div>
               </div>
@@ -461,7 +461,7 @@ function getTemplate(target) {
           </div>
           <div class="col-lg-4 col-md-6 mb-4">
             <div class="review-card p-4 h-100"
-              style="background:#fff; border-radius:10px; box-shadow:0 5px 15px rgba(0,0,0,0.1);">
+              style="background:#2d2d32; border-radius:10px; box-shadow:0 5px 15px rgba(0,0,0,0.1);">
               <div class="stars mb-2" aria-label="5 star rating">
                 <i class="icofont-star text-warning"></i>
                 <i class="icofont-star text-warning"></i>
@@ -477,7 +477,7 @@ function getTemplate(target) {
                 <img src="../assets/img/project/c9/icon-sd.svg" class="m-0" style="height: 40px"
                   alt="SteadyAsset Logo" />
                 <div class="ms-2">
-                  <div class="small text-muted">Client – Samsiddhi Designs</div>
+                  <div class="small">Client – Samsiddhi Designs</div>
                   <div class="fw-bold">Bharathkumar MS</div>
                 </div>
               </div>

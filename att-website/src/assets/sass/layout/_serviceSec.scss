@@ -33,7 +33,7 @@
             }
 
             .gradient-text-light {
-                background: linear-gradient(270deg, var(--color-light) 21.9%, var(--color-primary) 53.55%);
+                background: linear-gradient(270deg, var(--color-white) 21.9%, var(--color-primary) 53.55%);
                 background-clip: text;
                 -webkit-background-clip: text;
                 -webkit-text-fill-color: transparent;
@@ -43,11 +43,18 @@
         
 
         p {
-            color: var(--color-white);
+            color: var(--color-text-dark);
             margin: 0 0 40px;
             width: 64%;
-            opacity: .6;
+            // opacity: .6;
             font-size: var(--font-body-1);
+
+            @media #{$md-layout} {
+                font-size: var(--font-body-2);
+            }
+            @media #{$sm-layout} {
+                font-size: var(--font-body-2);
+            }
         }
     }
 
@@ -155,7 +162,7 @@
             }
             .content {
                 p {
-                    color: var(--color-light);
+                    color: var(--color-white);
                     opacity: 1;
                 }
                 .more-btn {
@@ -167,10 +174,10 @@
             }
         }
         &.service-style-2 {
-            background: linear-gradient(180deg, #F8F8F8 0%, rgba(255, 255, 255, 0) 100%);
+            background: linear-gradient(180deg, var(--color-light) 0%, rgba(255, 255, 255, 0) 100%);
             border: 1px solid;
-            border-image-source: linear-gradient(90deg, #ECF2F6 0%, rgba(236, 242, 246, 0) 70.31%);
-            background-color: var(--color-white);
+            border-image-source: linear-gradient(90deg, var(--color-light) 0%, rgba(236, 242, 246, 0) 70.31%);
+            background-color: var(--color-light);
             margin-bottom: 30px;
             &:after {
                 display: none;
@@ -327,7 +334,7 @@ Service
         }
         .content {
             p {
-                color: var(--color-light);
+                color: var(--color-white);
                 opacity: 1;
             }
             .more-btn {
@@ -339,10 +346,10 @@ Service
         }
     }
     &.service-style-2 {
-        background: linear-gradient(180deg, #F8F8F8 0%, rgba(255, 255, 255, 0) 100%);
+        background: linear-gradient(180deg, var(--color-light) 0%, rgba(255, 255, 255, 0) 100%);
         border: 1px solid;
-        border-image-source: linear-gradient(90deg, #ECF2F6 0%, rgba(236, 242, 246, 0) 70.31%);
-        background-color: var(--color-white);
+        border-image-source: linear-gradient(90deg, var(--color-light) 0%, rgba(236, 242, 246, 0) 70.31%);
+        background-color: var(--color-ship-gray);
         margin-bottom: 30px;
         &:after {
             display: none;
@@ -375,7 +382,7 @@ Service
         }
         &:hover, &.active {
             background-color: var(--color-light);
-            box-shadow: 0 24px 48px -15px rgba(153, 161, 170, 0.25);
+            box-shadow: 0 24px 48px -15px rgba(70, 72, 74, 0.25);
 
             .content {
                 .more-btn {

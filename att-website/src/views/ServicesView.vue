@@ -788,7 +788,7 @@
 }
 
 .section-heading .subtitle {
-  color: #0d6efd;
+  color: var(--logo-yellow);
 }
 
 .services-grid .thumbnail {

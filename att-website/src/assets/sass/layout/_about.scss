@@ -10,7 +10,7 @@
 }
 
 .contact-form-box {
-    background-color: var(--color-white);
+    background-color: var(--color-light);
     padding: 50px;
     border-radius: 30px;
     @media #{$sm-layout} {
@@ -74,7 +74,7 @@
         }
     }
     &.shadow-box {
-        box-shadow: 0 20px 48px 0 rgba(153,161,170,.25);
+        box-shadow: 0 18px 36px 0 rgba(0, 0, 0, 0.25);
     }
 }
 

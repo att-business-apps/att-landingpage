@@ -47,6 +47,7 @@
         }
     }
     .title {
+        font-weight: 500;
         @media #{$smlg-device} {
             font-size: 60px;
         }
@@ -60,7 +61,7 @@
             font-size: 34px;
         }
         .gradient-text-light {
-            background: linear-gradient(270deg, var(--color-dark) 21.9%, var(--color-primaryG) 53.55%);
+            background: linear-gradient(270deg, var(--color-white) 21.9%, var(--color-primaryG) 53.55%);
             background-clip: text;
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
@@ -68,8 +69,8 @@
     }
     p {
         font-size: var(--font-body-1);
-        width: 50%;
-        margin: 0 auto 40px;
+        width: 100%;
+        // margin: 0 auto 40px;
         @media #{$md-layout} {
             font-size: 16px;
             width: 100% !important;
@@ -1138,7 +1139,7 @@ body.active-dark-mode {
 // Wrapper 
 .main-wrapper {
     overflow: hidden;
-    background-color: var(--color-white);
+    background-color: #23232a;
 }
 
 

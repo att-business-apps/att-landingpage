@@ -5,7 +5,7 @@
                 <ul class="list-unstyled">
                     <li><a href="/">Home</a></li>
                     <li><a href="/portfolio">Portfolio</a></li>
-                    <li class="active text-lg">SteadyAsset</li>
+                    <li class="active text-ly">SteadyAsset</li>
                 </ul>
                 <div class="section-heading heading-left">
                     <div class="d-flex align-items-center">
@@ -14,14 +14,12 @@
                         <h1 class="title h2 mb-0 ms-2">SteadyAsset</h1>
                     </div>
                     <h5 class="mb-1 mt-3">Investment Platform</h5>
-                    <p>Fintech platform enabling access to premium low-risk investments. Our work spanned Logo, Website,
-                        and UI/UX to deliver a secure, user-friendly experience.</p>
                 </div>
             </div>
             <div class="banner-thumbnail ">
                 <div class=""
                     style="position: relative; will-change: transform; transform: perspective(2000px) rotateX(-0.32deg) rotateY(-11.76deg) scale3d(1, 1, 1);">
-                    <img src="../../assets/img/amorboy/am-doing-1.png" class="w-100 animate__animated slideInRight"
+                    <img src="../../assets/img/amorboy/am-doing-1.png" class="w-75 animate__animated slideInRight"
                         style="animation-duration: 3s" alt="Professional Web Development Services Illustration">
                 </div>
             </div>
@@ -76,6 +74,22 @@
                     </div>
                 </div>
             </div>
+        </div>
+    </section>
+
+    <!-- Our Process Section -->
+    <section class="section section-padding bg-color-light">
+        <div class="container">
+            <div class="section-heading heading-center mb-5">
+                <h2 class="title text-start">Our Process</h2>
+                <p class="text-start">At Amortree Tech, we partnered with SteadyAsset to establish a strong and credible
+                    digital presence in the alternative investment space. We began with a logo design that reflects
+                    stability, growth, and trust—core values of their brand. Next, we developed a modern, responsive
+                    website to showcase investment opportunities clearly and attract both retail and HNI investors. To
+                    enable data-driven decisions, we integrated Google Analytics for performance tracking and insights.
+                    Finally, we initiated a monthly blog strategy to educate investors, improve SEO, and build thought
+                    leadership.</p>
+            </div>
 
             <div class="row">
                 <div class="col">
@@ -87,11 +101,11 @@
     </section>
 
     <!-- Color Palette & Typography -->
-    <section class="section section-padding bg-color-light">
+    <section class="section section-padding bg-color-dark">
         <div class="container">
             <div class="section-heading heading-center mb-5">
-                <h2 class="title">Color Palette & Typography</h2>
-                <p>Modern, trustworthy visual language designed for a fintech audience</p>
+                <h2 class="title text-start mb-3">Color Palette & Typography</h2>
+                <p class="text-start">Modern, trustworthy visual language designed for a fintech audience</p>
             </div>
 
             <div class="row align-items-stretch color-palette mb-5">
@@ -156,7 +170,7 @@
                     <div class="type-card h-100">
                         <div class="type-eyebrow">Headings</div>
                         <div class="meta">Font Family - Outfit</div>
-                        <h1 class="display-6 mb-1" style="color:#0a2540">SteadyAsset</h1>
+                        <h1 class="display-6 mb-1">SteadyAsset</h1>
                         <h2 class="h3 mb-1" style="color:#00bfa6">Investment Platform</h2>
                         <h3 class="h5" style="color:#6c757d">Trust • Transparency • Accessibility</h3>
                         <div class="meta mt-3">Weights: 600–700 · Tight tracking</div>
@@ -165,7 +179,7 @@
                 <div class="col-md-6 mb-4">
                     <div class="type-card h-100">
                         <div class="type-eyebrow">Body & UI</div>
-                        <p class="mb-2" style="color:#0a2540">Clean, high‑contrast interface with ample whitespace
+                        <p class="mb-2">Clean, high‑contrast interface with ample whitespace
                             for confident decision‑making.</p>
                         <p class="small mb-0" style="color:#6c757d">Base: 16–18px · Line height: 1.6 · Emphasis via
                             color/weight. Links use #0D6EFD.</p>
@@ -175,127 +189,24 @@
         </div>
     </section>
 
-    <!-- Key Features Section -->
+    <!-- Result Section -->
     <section class="section section-padding">
         <div class="container">
             <div class="section-heading heading-center mb-5">
-                <h2 class="title">Key Features & Functionality</h2>
-                <p>Fintech platform features focused on security, access, and clarity</p>
+                <h2 class="title text-start">Result</h2>
+                <p class="text-start">Our collaboration with SteadyAsset delivered a strong, professional brand identity
+                    and a user-friendly digital platform. The logo reinforced trust and recognition, while the website
+                    provided seamless navigation and clear presentation of investment options, boosting user engagement.
+                    With Google Analytics integration, the client gained actionable insights into traffic sources, user
+                    behavior, and top-performing pages. The monthly blog strategy enhanced organic reach, improved SEO
+                    rankings, and positioned SteadyAsset as a thought leader in alternative investments, building
+                    credibility and attracting a growing investor community.</p>
             </div>
-            <div class="row">
-                <div class="col-lg-4 col-md-6 mb-4">
-                    <div class="feature-card">
-                        <div class="feature-icon mb-3">
-                            <i class="icofont-rupee"></i>
-                        </div>
-                        <h5 class="title">Fixed-Income Products</h5>
-                        <p>Corporate and government bonds with accessible entry points from ₹5,000.</p>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 mb-4">
-                    <div class="feature-card">
-                        <div class="feature-icon mb-3">
-                            <i class="icofont-building"></i>
-                        </div>
-                        <h5 class="title">Fractional CRE</h5>
-                        <p>Institutional-grade properties with entry from ₹10 lakhs for retail and HNIs.</p>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 mb-4">
-                    <div class="feature-card">
-                        <div class="feature-icon mb-3">
-                            <i class="icofont-shield"></i>
-                        </div>
-                        <h5 class="title">Capital Protection</h5>
-                        <p>Low-risk approach, transparency, and secure transactions (256-bit SHA).</p>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 mb-4">
-                    <div class="feature-card">
-                        <div class="feature-icon mb-3">
-                            <i class="icofont-handshake-deal"></i>
-                        </div>
-                        <h5 class="title">Partnerships</h5>
-                        <p>Backed by reputable platforms like hBits, Restack, GoldenPi, and PropShare.</p>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 mb-4">
-                    <div class="feature-card">
-                        <div class="feature-icon mb-3">
-                            <i class="icofont-id-card"></i>
-                        </div>
-                        <h5 class="title">KYC & Onboarding</h5>
-                        <p>Streamlined KYC and investment workflow: register → select → verify → fund → monitor.</p>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 mb-4">
-                    <div class="feature-card">
-                        <div class="feature-icon mb-3">
-                            <i class="icofont-user"></i>
-                        </div>
-                        <h5 class="title">Personalized Strategy</h5>
-                        <p>Risk-profile based recommendations and transparent performance insights.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Project Results Section -->
-    <section class="section section-padding bg-color-light">
-        <div class="container">
-            <div class="section-heading heading-center mb-5">
-                <h2 class="title">Project Results & Impact</h2>
-                <p>Measurable outcomes and user benefits</p>
-            </div>
-            <div class="row">
-                <div class="col-lg-3 col-md-6 mb-4">
-                    <div class="result-card text-center">
-                        <div class="result-number">₹5K</div>
-                        <h5 class="title">Minimum Investment</h5>
-                        <p>Access to bonds with low entry threshold</p>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 mb-4">
-                    <div class="result-card text-center">
-                        <div class="result-number">₹10L</div>
-                        <h5 class="title">CRE Entry</h5>
-                        <p>Fractional ownership in premium real estate</p>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 mb-4">
-                    <div class="result-card text-center">
-                        <div class="result-number">18%</div>
-                        <h5 class="title">Track Record</h5>
-                        <p>Partner IRR benchmark demonstrating strong returns</p>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 mb-4">
-                    <div class="result-card text-center">
-                        <div class="result-number">Secure</div>
-                        <h5 class="title">Transactions</h5>
-                        <p>256-bit encryption and transparent processes</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Call to Action Section -->
-    <section class="section section-padding">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-8 offset-lg-2 text-center">
-                    <div class="cta-content">
-                        <h2 class="title mb-4">Ready to Build Your Investment Platform?</h2>
-                        <p class="mb-4">Let our expert team help you create a comprehensive fintech solution for your
-                            organization's needs.</p>
-                        <div class="cta-buttons">
-                            <a href="/contact" class="amor-btn btn-fill-primary me-3">Get Started</a>
-                            <a href="/portfolio" class="amor-btn btn-borderd">View More Projects</a>
-                        </div>
-                    </div>
-                </div>
+            <div class="cta-buttons mt-5">
+                <a href="/project/microrelic" class="amor-btn light"><i class="icofont-rounded-double-left me-3"></i>
+                    Microrelic</a>
+                <a href="/project/al-shamil-computers" class="amor-btn light">Al-Shamil <i
+                        class="icofont-rounded-double-right ms-3"></i></a>
             </div>
         </div>
     </section>
@@ -304,61 +215,31 @@
 <style scoped>
 @import url(https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap);
 
-.feature-card {
-    background: white;
-    padding: 2rem;
-    border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-    height: 100%;
-    transition: transform 0.3s ease;
-}
-
-.feature-card:hover {
-    transform: translateY(-5px);
-}
-
-.feature-icon {
-    font-size: 2.5rem;
-    color: #0d6efd;
-}
-
-.result-card {
-    background: white;
-    padding: 2rem;
-    border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-    height: 100%;
-}
-
-.result-number {
-    font-size: 2.2rem;
-    font-weight: bold;
-    color: #0d6efd;
-    margin-bottom: 0.5rem;
-}
-
-.cta-content {
-    background: white;
-    padding: 3rem;
-    border-radius: 15px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+h2 {
+    color: #008B8B;
+    font-weight: 500;
 }
 
 .project-details .detail-item {
-    border-left: 3px solid #0d6efd;
+    border-left: 3px solid #008B8B;
     padding-left: 1rem;
 }
 
 .project-details .detail-item h5 {
-    color: #0d6efd;
+    color: #008B8B;
     margin-bottom: 0.5rem;
 }
 
-.cta-buttons {
-    display: flex;
-    gap: .5rem;
-    justify-content: center;
-    align-items: center;
+.section-padding p {
+    width: 100%;
+}
+
+.type-card {
+    background: var(--color-black);
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+    padding: 1.25rem 1.5rem;
+    font-family: "Outfit", sans-serif;
 }
 
 /* Color & Type section */
@@ -387,53 +268,5 @@
     font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
     font-size: .85rem;
     color: #6c757d;
-}
-
-.type-card {
-    background: white;
-    border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
-    padding: 1.25rem 1.5rem;
-    font-family: "Outfit", sans-serif;
-}
-
-.type-card h1,
-.type-card h2,
-.type-card h3 {
-    font-family: "Outfit", sans-serif;
-}
-
-.type-eyebrow {
-    text-transform: uppercase;
-    font-size: .75rem;
-    letter-spacing: .08em;
-    color: #0a2540;
-    margin-bottom: .5rem;
-}
-
-@media (max-width: 768px) {
-
-    .feature-card,
-    .result-card {
-        margin-bottom: 1.5rem;
-    }
-
-    .cta-content {
-        padding: 2rem;
-    }
-
-    .cta-buttons {
-        display: block;
-    }
-
-    .cta-buttons a {
-        display: block;
-        margin-bottom: 1rem;
-        margin-right: 0 !important;
-    }
-
-    .result-number {
-        font-size: 2rem;
-    }
 }
 </style>

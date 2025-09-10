@@ -2,7 +2,7 @@
    Project
 -------------------------*/
 .project-grid {
-    box-shadow: 0 55px 86px -35px #ECF2F6;
+    box-shadow: 0 55px 86px -35px var(--color-light);
     border-radius: 30px;
     margin-bottom: 40px;
 }
@@ -28,7 +28,7 @@
 }
 
 .project-grid .content {
-    background-color: var(--color-white);
+    background-color: var(--color-light);
     border-radius: 0 0 30px 30px;
     padding: 40px 50px;
 }
@@ -271,4 +271,26 @@
         transform-origin: 0 0;
         transform: scale(0.7);
     }
+}
+
+.cta-buttons {
+    display: flex;
+    gap: .5rem;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid var(--color-ship-gray);
+    padding-top: 3rem;
+    @media #{$md-layout} {
+        display: flex;
+    }
+    @media #{$sm-layout} {
+        display: block;
+
+        a {
+            display: block;
+            margin-bottom: 1rem;
+            margin-right: 0 !important;
+        }
+    }
+    
 }

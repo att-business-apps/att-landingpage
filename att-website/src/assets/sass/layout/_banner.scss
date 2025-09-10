@@ -34,7 +34,7 @@
         .title {
             font-size: 80px;
             font-weight: 500;
-            color: var(--color-dark);
+            color: var(--color-white);
             @media #{$laptop-device} {
                 font-size: 68px;
             }
@@ -60,7 +60,7 @@
         }
         .amor-btn {
             padding: 28px 45px;
-            box-shadow: 0 44px 84px -24px #5956e9;
+            box-shadow: 0 44px 84px -24px #4f4e5a;
             @media #{$md-layout} {
                 padding: 20px 35px;
             }
@@ -157,11 +157,11 @@
         background-size: cover;
         
         &:after {
-            background: linear-gradient(180deg, var(--color-white) 25%, var(--color-light) 100%);
+            background: linear-gradient(180deg, var(--color-light) 25%, var(--color-light) 100%);
             content: "";
             height: 100%;
             left: 0;
-            opacity: 0.9;
+            opacity: 0.965;
             position: absolute;
             top: 0;
             width: 100%;
@@ -194,7 +194,7 @@
                 }
                 .gradient-text-light {
                     display: inline;
-                    background: linear-gradient(270deg, var(--color-dark) 21.9%, var(--color-primary) 53.55%);
+                    background: linear-gradient(270deg, var(--color-white) 21.9%, var(--color-primary) 53.55%);
                     background-clip: text;
                     -webkit-background-clip: text;
                     -webkit-text-fill-color: transparent;
@@ -207,7 +207,7 @@
                     margin-top: 1.5rem;
                 }
                 .gradient-text-light {
-                    background: linear-gradient(270deg, var(--color-dark) 21.9%, var(--color-primary) 53.55%);
+                    background: linear-gradient(270deg, var(--color-white) 21.9%, var(--color-primary) 53.55%);
                     background-clip: text;
                     -webkit-background-clip: text;
                     -webkit-text-fill-color: transparent;

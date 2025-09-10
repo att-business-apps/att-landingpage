@@ -141,9 +141,16 @@ h6,
 
 
 p {
-    font-size: var(--font-body-2);
+    font-size: 1.1rem;
     line-height: var(--line-height-b1);
     margin: 0 0 40px 0;
+
+    @media #{$md-layout} {
+        font-size: var(--font-body-2);
+    }
+    @media #{$sm-layout} {
+        font-size: var(--font-body-2);
+    }
 }
 
 .body-font1 {

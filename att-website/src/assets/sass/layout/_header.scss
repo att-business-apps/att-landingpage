@@ -190,7 +190,7 @@
                     border-color: var(--color-gray-4);  
                 }
                 a {
-                    color: var(--color-light);
+                    color: var(--color-white);
                     &::before {
                         background-color: var(--color-white);
                     }
@@ -273,7 +273,7 @@
             margin: 0 11px;
         }
         >a {
-            color: var(--color-dark);
+            color: var(--color-white);
             font-weight: 400;
             font-size: var(--font-body-1);
             font-family: var(--font-primary);

@@ -5,7 +5,7 @@
                 <ul class="list-unstyled">
                     <li><a href="/">Home</a></li>
                     <li><a href="/portfolio">Portfolio</a></li>
-                    <li class="active text-lg">Al-Shamil Computers</li>
+                    <li class="active text-ly">Al-Shamil Computers</li>
                 </ul>
                 <div class="section-heading heading-left">
                     <div class="d-flex align-items-center">
@@ -13,14 +13,12 @@
                         <h1 class="title h2 mb-0 ms-2">Al‑Shamil Computers Tr.</h1>
                     </div>
                     <h5 class="mb-1 mt-3">IT Solutions & Services</h5>
-                    <p>End‑to‑end IT partner providing networking, CCTV, hardware, and managed support services for
-                        growing businesses in the UAE.</p>
                 </div>
             </div>
             <div class="banner-thumbnail ">
                 <div class=""
                     style="position: relative; will-change: transform; transform: perspective(2000px) rotateX(-0.32deg) rotateY(-11.76deg) scale3d(1, 1, 1);">
-                    <img src="../../assets/img/amorboy/am-doing-1.png" class="w-100 animate__animated slideInRight"
+                    <img src="../../assets/img/amorboy/am-doing-1.png" class="w-75 animate__animated slideInRight"
                         style="animation-duration: 3s" alt="Illustration">
                 </div>
             </div>
@@ -79,201 +77,68 @@
         </div>
     </section>
 
-    <!-- Key Services Section -->
+    <!-- Our Process Section -->
     <section class="section section-padding bg-color-light">
         <div class="container">
             <div class="section-heading heading-center mb-5">
-                <h2 class="title">Key Services & Solutions</h2>
-                <p>Clear service taxonomy optimized for discoverability and conversion</p>
+                <h2 class="title text-start">Our Process</h2>
+                <p class="text-start">At Amortree Tech, we worked with Al Shamil, a UAE-based company, to craft a
+                    professional and impactful digital presence. Our process began with requirement gathering and brand
+                    understanding, ensuring the design and functionality aligned with the client’s industry and
+                    audience. We then designed a modern, responsive website optimized for performance and accessibility,
+                    reflecting the company’s credibility. To enhance visibility, we integrated SEO best practices and
+                    tracking tools, enabling data-driven insights. Every stage—from strategy to execution—focused on
+                    delivering a scalable platform tailored to the UAE market.</p>
             </div>
+
             <div class="row">
-                <div class="col-lg-4 col-md-6 mb-4">
-                    <div class="feature-card">
-                        <div class="feature-icon mb-3"><i class="icofont-ui-network"></i></div>
-                        <h5 class="title">IT Infrastructure Setup</h5>
-                        <p>Servers, workstations, structured cabling, and secure network architectures.</p>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 mb-4">
-                    <div class="feature-card">
-                        <div class="feature-icon mb-3"><i class="icofont-cctv"></i></div>
-                        <h5 class="title">Networking & CCTV</h5>
-                        <p>Enterprise Wi‑Fi, switching, surveillance deployment, and monitoring solutions.</p>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 mb-4">
-                    <div class="feature-card">
-                        <div class="feature-icon mb-3"><i class="icofont-tools"></i></div>
-                        <h5 class="title">Annual Maintenance (AMC)</h5>
-                        <p>Proactive maintenance, SLAs, and on‑site/remote support to minimize downtime.</p>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 mb-4">
-                    <div class="feature-card">
-                        <div class="feature-icon mb-3"><i class="icofont-cloud"></i></div>
-                        <h5 class="title">Cloud & Email</h5>
-                        <p>Business email, backups, and secure cloud services with best‑practice setup.</p>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 mb-4">
-                    <div class="feature-card">
-                        <div class="feature-icon mb-3"><i class="icofont-web"></i></div>
-                        <h5 class="title">Web & Software</h5>
-                        <p>Informational websites and line‑of‑business software integrations as needed.</p>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 mb-4">
-                    <div class="feature-card">
-                        <div class="feature-icon mb-3"><i class="icofont-computer"></i></div>
-                        <h5 class="title">Hardware & Peripherals</h5>
-                        <p>Procurement and installation of PCs, printers, and accessories with warranty support.</p>
-                    </div>
+                <div class="col">
+                    <img src="../../assets/img/project/c5/project-alshamil-web.png" class="img-fluid"
+                        alt="Solved Cube IT Solutions Project">
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Project Results Section -->
+    <!-- Result Section -->
     <section class="section section-padding">
         <div class="container">
             <div class="section-heading heading-center mb-5">
-                <h2 class="title">Project Results & Impact</h2>
-                <p>Operational clarity and improved inbound lead generation</p>
+                <h2 class="title text-start">Result</h2>
+                <p class="text-start">Our work with Al Shamil resulted in a polished, responsive website that reflects
+                    the company’s professionalism and enhances its credibility in the UAE market. The new platform
+                    improved accessibility across devices and streamlined navigation, allowing users to explore services
+                    with ease. With SEO optimization and tracking in place, Al Shamil gained better visibility on search
+                    engines and valuable insights into user behavior. These outcomes provided a strong digital
+                    foundation, enabling the company to attract more clients and strengthen its market presence.</p>
             </div>
-            <div class="row">
-                <div class="col-lg-3 col-md-6 mb-4">
-                    <div class="result-card text-center">
-                        <div class="result-number">99.9%</div>
-                        <h5 class="title">Uptime Targets</h5>
-                        <p>Industry‑standard reliability for managed systems</p>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 mb-4">
-                    <div class="result-card text-center">
-                        <div class="result-number">30%</div>
-                        <h5 class="title">Faster Response</h5>
-                        <p>Streamlined contact flows and clearer CTAs</p>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 mb-4">
-                    <div class="result-card text-center">
-                        <div class="result-number">24/7</div>
-                        <h5 class="title">Availability</h5>
-                        <p>Always‑on access to company information</p>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 mb-4">
-                    <div class="result-card text-center">
-                        <div class="result-number">SLA</div>
-                        <h5 class="title">Support Quality</h5>
-                        <p>SLA‑backed services communicated up‑front</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Call to Action Section -->
-    <section class="section section-padding bg-color-light">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-8 offset-lg-2 text-center">
-                    <div class="cta-content">
-                        <h2 class="title mb-4">Need Reliable IT Services in the UAE?</h2>
-                        <p class="mb-4">Let’s plan your infrastructure, security, and support roadmap with
-                            Al‑Shamil Computers.</p>
-                        <div class="cta-buttons">
-                            <a href="/contact" class="amor-btn btn-fill-primary me-3">Get Started</a>
-                            <a href="/portfolio" class="amor-btn btn-borderd">View More Projects</a>
-                        </div>
-                    </div>
-                </div>
+            <div class="cta-buttons mt-5">
+                <a href="/project/steadyasset" class="amor-btn light"><i class="icofont-rounded-double-left me-3"></i>
+                    SteadyAsset </a>
+                <a href="/project/samsiddhidesigns" class="amor-btn light">Samsiddhi Designs <i
+                        class="icofont-rounded-double-right ms-3"></i></a>
             </div>
         </div>
     </section>
 </template>
 
 <style scoped>
-.feature-card {
-    background: white;
-    padding: 2rem;
-    border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-    height: 100%;
-    transition: transform 0.3s ease;
-}
-
-.feature-card:hover {
-    transform: translateY(-5px);
-}
-
-.feature-icon {
-    font-size: 2.5rem;
-    color: #0d6efd;
-}
-
-.result-card {
-    background: white;
-    padding: 2rem;
-    border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-    height: 100%;
-}
-
-.result-number {
-    font-size: 3rem;
-    font-weight: bold;
-    color: #0d6efd;
-    margin-bottom: 1rem;
-}
-
-.cta-content {
-    background: white;
-    padding: 3rem;
-    border-radius: 15px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+h2 {
+    color: #c60e49;
+    font-weight: 500;
 }
 
 .project-details .detail-item {
-    border-left: 3px solid #0d6efd;
+    border-left: 3px solid #c60e49;
     padding-left: 1rem;
 }
 
 .project-details .detail-item h5 {
-    color: #0d6efd;
+    color: #c60e49;
     margin-bottom: 0.5rem;
 }
 
-.cta-buttons {
-    display: flex;
-    gap: .5rem;
-    justify-content: center;
-    align-items: center;
-}
-
-@media (max-width: 768px) {
-
-    .feature-card,
-    .result-card {
-        margin-bottom: 1.5rem;
-    }
-
-    .cta-content {
-        padding: 2rem;
-    }
-
-    .cta-buttons {
-        display: block;
-    }
-
-    .cta-buttons a {
-        display: block;
-        margin-bottom: 1rem;
-        margin-right: 0 !important;
-    }
-
-    .result-number {
-        font-size: 2.5rem;
-    }
+.section-padding p {
+    width: 100%;
 }
 </style>

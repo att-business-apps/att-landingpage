@@ -5,7 +5,7 @@
                 <ul class="list-unstyled">
                     <li><a href="/">Home</a></li>
                     <li><a href="/portfolio">Portfolio</a></li>
-                    <li class="active text-lg">Solved Cube</li>
+                    <li class="active text-ly">Solved Cube</li>
                 </ul>
                 <div class="section-heading heading-left">
                     <div class="d-flex align-items-center">
@@ -14,15 +14,12 @@
                         <h1 class="title h2 mb-0 ms-2">Solved Cube IT Solutions</h1>
                     </div>
                     <h5 class="mb-1 mt-3">Complete Brand Identity</h5>
-                    <p>Comprehensive branding, web development, and digital transformation project for a promising new
-                        IT solutions company. Complete brand identity design and web development showcasing our
-                        expertise in creating impactful digital solutions.</p>
                 </div>
             </div>
             <div class="banner-thumbnail ">
                 <div class=""
                     style="position: relative; will-change: transform; transform: perspective(2000px) rotateX(-0.32deg) rotateY(-11.76deg) scale3d(1, 1, 1);">
-                    <img src="../../assets/img/amorboy/am-doing-1.png" class="w-100 animate__animated slideInRight"
+                    <img src="../../assets/img/amorboy/am-doing-1.png" class="w-75 animate__animated slideInRight"
                         style="animation-duration: 3s" alt="Illustration">
                 </div>
             </div>
@@ -79,6 +76,25 @@
                     </div>
                 </div>
             </div>
+        </div>
+    </section>
+
+    <!-- Our Process Section -->
+    <section class="section section-padding bg-color-light">
+        <div class="container">
+            <div class="section-heading heading-center mb-5">
+                <h2 class="title text-start">Our Process</h2>
+                <p class="text-start">At Amortree Tech, we partnered with Solved Cube IT Solutions to establish a strong
+                    digital presence. Our process began with discovery sessions, identifying their core services—web,
+                    mobile, game, and HRM solutions—and understanding their brand vision. We then created a modern logo
+                    and branding system to reflect innovation and trust. The website was designed with a clean,
+                    responsive layout, showcasing services with clarity and easy navigation. Finally, we integrated
+                    Google Analytics to track user engagement and performance, we optimized their Google My Business
+                    (GMB) profile to
+                    improve local visibility and credibility, enabling Solved Cube to make data-driven
+                    business decisions. Our team then established a DevOps framework to streamline
+                    deployment, ensure scalability, and support continuous integration.</p>
+            </div>
 
             <div class="row">
                 <div class="col">
@@ -89,215 +105,46 @@
         </div>
     </section>
 
-    <!-- Services Portfolio Section -->
-    <section class="section section-padding bg-color-light">
-        <div class="container">
-            <div class="section-heading heading-center mb-5">
-                <h2 class="title">Comprehensive Service Portfolio</h2>
-                <p>Tailored IT solutions spanning multiple technology domains</p>
-            </div>
-            <div class="row">
-                <div class="col-lg-4 col-md-6 mb-4">
-                    <div class="service-card">
-                        <div class="service-icon mb-3">
-                            <i class="icofont-web"></i>
-                        </div>
-                        <h5 class="title">Web Services</h5>
-                        <p>Complete web design, development, and maintenance services for businesses of all sizes.</p>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 mb-4">
-                    <div class="service-card">
-                        <div class="service-icon mb-3">
-                            <i class="icofont-mobile-phone"></i>
-                        </div>
-                        <h5 class="title">Mobile Applications</h5>
-                        <p>Intuitive and responsive mobile app UI/UX Design for iOS and Android platforms.</p>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 mb-4">
-                    <div class="service-card">
-                        <div class="service-icon mb-3">
-                            <i class="icofont-game-controller"></i>
-                        </div>
-                        <h5 class="title">Game Applications</h5>
-                        <p>Immersive gaming experiences with cutting-edge technology and engaging gameplay.</p>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 mb-4">
-                    <div class="service-card">
-                        <div class="service-icon mb-3">
-                            <i class="icofont-code"></i>
-                        </div>
-                        <h5 class="title">Web Applications</h5>
-                        <p>Scalable, custom-built web applications tailored to specific business requirements.</p>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 mb-4">
-                    <div class="service-card">
-                        <div class="service-icon mb-3">
-                            <i class="icofont-users"></i>
-                        </div>
-                        <h5 class="title">HRM Solutions</h5>
-                        <p>End-to-end HR management systems for recruitment, onboarding, payroll, and performance
-                            tracking.</p>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 mb-4">
-                    <div class="service-card">
-                        <div class="service-icon mb-3">
-                            <i class="icofont-cog"></i>
-                        </div>
-                        <h5 class="title">Custom Solutions</h5>
-                        <p>Tailored IT solutions designed to meet specific business needs and objectives.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Project Results Section -->
+    <!-- Result Section -->
     <section class="section section-padding">
         <div class="container">
             <div class="section-heading heading-center mb-5">
-                <h2 class="title">Project Results & Impact</h2>
-                <p>Measurable outcomes and business benefits</p>
+                <h2 class="title text-start">Result</h2>
+                <p class="text-start">The launch of Solved Cube IT Solutions’ new brand identity and website established
+                    them as a credible, forward-looking IT solutions provider. The modern logo and cohesive branding
+                    improved recognition across digital channels, while the responsive website enhanced user experience
+                    and effectively showcased services like web, mobile, game, and HRM solutions. With Google Analytics
+                    integration, the client gained actionable insights into visitor behavior, top-performing pages, and
+                    traffic sources. This empowered Solved Cube to refine marketing strategies, boost engagement, and
+                    build stronger client trust.</p>
             </div>
-            <div class="row">
-                <div class="col-lg-3 col-md-6 mb-4">
-                    <div class="result-card text-center">
-                        <div class="result-number">100%</div>
-                        <h5 class="title">Brand Identity</h5>
-                        <p>Complete brand identity package delivered</p>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 mb-4">
-                    <div class="result-card text-center">
-                        <div class="result-number">6</div>
-                        <h5 class="title">Service Categories</h5>
-                        <p>Comprehensive service portfolio developed</p>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 mb-4">
-                    <div class="result-card text-center">
-                        <div class="result-number">Mobile</div>
-                        <h5 class="title">Responsive Design</h5>
-                        <p>Optimized for all devices and platforms</p>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 mb-4">
-                    <div class="result-card text-center">
-                        <div class="result-number">GMB</div>
-                        <h5 class="title">Local SEO</h5>
-                        <p>Google My Business setup and optimization</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Call to Action Section -->
-    <section class="section section-padding bg-color-light">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-8 offset-lg-2 text-center">
-                    <div class="cta-content">
-                        <h2 class="title mb-4">Ready to Transform Your IT Business?</h2>
-                        <p class="mb-4">Let our expert team help you create a comprehensive digital solution and brand
-                            identity for your IT company.</p>
-                        <div class="cta-buttons">
-                            <a href="/contact" class="amor-btn btn-fill-primary me-3">Get Started</a>
-                            <a href="/portfolio" class="amor-btn btn-borderd">View More Projects</a>
-                        </div>
-                    </div>
-                </div>
+            <div class="cta-buttons mt-5">
+                <a href="/project/uae-links" class="amor-btn light"><i class="icofont-rounded-double-left me-3"></i> UAE
+                    Links</a>
+                <a href="/project/microrelic" class="amor-btn light">Microrelic <i
+                        class="icofont-rounded-double-right ms-3"></i></a>
             </div>
         </div>
     </section>
 </template>
 
 <style scoped>
+h2 {
+    color: #0DDAFF;
+    font-weight: 500;
+}
+
 .project-details .detail-item {
-    border-left: 3px solid #0d6efd;
+    border-left: 3px solid #0DDAFF;
     padding-left: 1rem;
-    margin-bottom: 1.5rem;
 }
 
 .project-details .detail-item h5 {
-    color: #0d6efd;
+    color: #0DDAFF;
     margin-bottom: 0.5rem;
 }
 
-.service-card {
-    background: white;
-    padding: 2rem;
-    border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-    height: 100%;
-    transition: transform 0.3s ease;
-}
-
-.service-card:hover {
-    transform: translateY(-5px);
-}
-
-.service-icon {
-    font-size: 2.5rem;
-    color: #0d6efd;
-}
-
-.result-card {
-    background: white;
-    padding: 2rem;
-    border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-    height: 100%;
-}
-
-.result-number {
-    font-size: 3rem;
-    font-weight: bold;
-    color: #0d6efd;
-    margin-bottom: 1rem;
-}
-
-.cta-content {
-    background: white;
-    padding: 3rem;
-    border-radius: 15px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-}
-
-.cta-buttons {
-    display: flex;
-    gap: .5rem;
-    justify-content: center;
-    align-items: center;
-}
-
-@media (max-width: 768px) {
-
-    .service-card,
-    .result-card {
-        margin-bottom: 1.5rem;
-    }
-
-    .cta-content {
-        padding: 2rem;
-    }
-
-    .cta-buttons {
-        display: block;
-    }
-
-    .cta-buttons a {
-        display: block;
-        margin-bottom: 1rem;
-        margin-right: 0 !important;
-    }
-
-    .result-number {
-        font-size: 2.5rem;
-    }
+.section-padding p {
+    width: 100%;
 }
 </style>

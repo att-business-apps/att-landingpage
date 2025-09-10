@@ -88,12 +88,12 @@
         <div class="col-md-6">
           <div class="project-grid">
             <div class="thumbnail">
-              <a href="project/al-shamil-comupters">
+              <a href="project/al-shamil-computers">
                 <img src="../assets/img/project/c5/project-thum-als.png" alt="project">
               </a>
             </div>
             <div class="content">
-              <h4 class="title"><a href="project/al-shamil-comupters">Al-Shamil</a></h4>
+              <h4 class="title"><a href="project/al-shamil-computers">Al-Shamil</a></h4>
               <span class="subtitle">UI/UX Design, Website</span>
             </div>
           </div>

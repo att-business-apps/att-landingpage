@@ -5,7 +5,7 @@
                 <ul class="list-unstyled">
                     <li><a href="/">Home</a></li>
                     <li><a href="/portfolio">Portfolio</a></li>
-                    <li class="active text-lg">UAE Links</li>
+                    <li class="active text-ly">UAE Links</li>
                 </ul>
                 <div class="section-heading heading-left">
                     <div class="d-flex align-items-center">
@@ -14,15 +14,12 @@
                         <h1 class="title h2 mb-0 ms-2">UAE Links</h1>
                     </div>
                     <h5 class="mb-1 mt-3">Government Portal Development</h5>
-                    <p>Streamlined government services hub providing centralized access to official UAE government
-                        portals. A comprehensive web development project showcasing our expertise in creating
-                        user-friendly digital solutions.</p>
                 </div>
             </div>
             <div class="banner-thumbnail ">
                 <div class=""
                     style="position: relative; will-change: transform; transform: perspective(2000px) rotateX(-0.32deg) rotateY(-11.76deg) scale3d(1, 1, 1);">
-                    <img src="../../assets/img/amorboy/am-doing-1.png" class="w-100 animate__animated slideInRight"
+                    <img src="../../assets/img/amorboy/am-doing-1.png" class="w-75 animate__animated slideInRight"
                         style="animation-duration: 3s" alt="Professional Web Development Services Illustration">
                 </div>
             </div>
@@ -45,10 +42,9 @@
                     <div class="project-overview">
                         <h2 class="title mb-4">Project Overview</h2>
                         <p class="mb-4">
-                            <strong>UAE Links (uaelinks.ae)</strong> functions as a streamlined hub offering direct
-                            access to a wide range of official UAE government services. This project demonstrates our
-                            expertise in creating user-centric digital solutions that simplify complex government
-                            processes.
+                            <strong>UAE Links</strong> functions as a streamlined hub offering direct access to a wide
+                            range of official UAE government services. This project demonstrates our expertise in
+                            creating user-centric digital solutions that simplify complex government processes.
                         </p>
                         <div class="project-details">
                             <div class="detail-item mb-3">
@@ -82,7 +78,7 @@
         </div>
     </section>
 
-    <!-- Key Features Section -->
+    <!-- Our Process Section -->
     <section class="section section-padding bg-color-light">
         <div class="container">
             <div class="section-heading heading-center mb-5">
@@ -106,7 +102,7 @@
         </div>
     </section>
 
-    <!-- Key Features Section -->
+    <!-- Result Section -->
     <section class="section section-padding">
         <div class="container">
             <div class="section-heading heading-center mb-5">
@@ -119,10 +115,11 @@
                     Google Analytics insights enabled ongoing optimization. The client gained a scalable foundation to
                     expand into new service areas, reinforcing UAE Links as a trusted digital gateway.</p>
             </div>
-            <!-- <div class="cta-buttons mt-5">
-                <a href="/portfolio" class="amor-btn btn-borderd">View More Projects</a>
+            <div class="cta-buttons mt-5">
                 <a href="/contact" class="amor-btn btn-fill-primary me-3">Get Started</a>
-            </div> -->
+                <a href="/project/solved-cube-it-solutions" class="amor-btn light">Solved Cube <i
+                        class="icofont-rounded-double-right ms-3"></i></a>
+            </div>
         </div>
     </section>
 </template>
@@ -130,6 +127,7 @@
 <style scoped>
 h2 {
     color: var(--logo-green);
+    font-weight: 500;
 }
 
 .project-details .detail-item {

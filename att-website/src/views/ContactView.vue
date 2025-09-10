@@ -132,9 +132,8 @@ function getTemplate(target) {
                                     placeholder="Your Phone" required />
                             </div>
                             <div class="form-group">
-                                <button @click="sendMail" type="button"
-                                    class="amor-btn btn-fill-primary btn-fluid btn-primary" name="submit-btn"
-                                    :disabled="disableBtn">
+                                <button @click="sendMail" type="button" class="amor-btn btn-borderd btn-fluid light"
+                                    name="submit-btn" :disabled="disableBtn">
                                     Send Enquiry
                                 </button>
                             </div>

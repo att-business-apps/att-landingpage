@@ -70,7 +70,7 @@ const router = createRouter({
       component: () => import("../views/project/ProjectSteadyAssetView.vue"),
     },
     {
-      path: "/project/al-shamil-comupters",
+      path: "/project/al-shamil-computers",
       name: "al-shamil",
       component: () => import("../views/project/ProjectAlShamilView.vue"),
     },

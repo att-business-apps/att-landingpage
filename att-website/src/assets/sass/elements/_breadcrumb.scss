@@ -54,12 +54,12 @@
 }
 
 .breadcrumb-banner {
-    padding: 56vh 0 2vh;
+    padding: 30vh 0 2vh;
     @media #{$extra-device} {
-        padding: 54vh 0 2vh;
+        padding: 30vh 0 2vh;
     }
     @media #{$laptop-device} {
-        padding: 54vh 0 2vh;
+        padding: 30vh 0 2vh;
     }
     @media #{$lg-layout} {
         padding: 56vh 0 2vh;
@@ -75,7 +75,7 @@
     }
     .section-heading {
         .title {
-            color: #000248;
+            color: var(--color-text-dark);
             width: 55%;
             margin-bottom: 40px;
             @media #{$md-layout} {

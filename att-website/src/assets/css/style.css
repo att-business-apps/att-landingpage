@@ -6,22 +6,22 @@
 @import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
 :root {
   --logo-light: #CCCCCC;
-  --logo-blue: #43658C;
+  --logo-blue: #689edd;
   --logo-green: #5CB04D;
   --logo-red: #DB3C2D;
   --logo-yellow: #E4C535;
-  --color-primary: #0d6efd;
+  --color-primary: #689edd;
   --color-primaryY: #e5c535;
   --color-primaryG: #5cb04e;
   --color-primaryR: #dc3c2d;
   --color-white: #ffffff;
-  --color-black: #000000;
-  --color-light: #f3f6f9;
+  --color-black: #2d2d32;
+  --color-light: #292930;
   --color-dark: #27272E;
-  --color-text-dark: #292930;
+  --color-text-dark: #cad3dc;
   --color-accent2: #FAB8C4;
   --color-blue-shade: #6865FF;
-  --color-link: #003DA5;
+  --color-link: var(--logo-yellow);
   --color-mabel: #DBF8FF;
   --color-fog: #DBDEFF;
   --color-pink-shade: #FFD3DB;
@@ -29,7 +29,7 @@
   --color-rose: #DB3C2D;
   --color-chart1: #896BA7;
   --color-chart2: #BADEFF;
-  --color-body: #313137;
+  --color-body: #cad3dc;
   --color-gray-1: #757589;
   --color-gray-2: #999FAE;
   --color-gray-3: #999AB8;
@@ -37,20 +37,20 @@
   --color-ship-gray: #42424A;
   --color-ghost: #C7C7D5;
   --color-mercury: #E5E5E5;
-  --gradient-primary: linear-gradient(90deg, #ECF2F6 0%, rgba(236, 242, 246, 0) 70.31%);
+  --gradient-primary: linear-gradient(90deg, var(--color-light) 0%, rgba(44, 45, 46, 0.5) 70.31%);
   --gradient-blue: linear-gradient(145.92deg, #5956E9 20.18%, #9991FF 76.9%);
   --gradient-accent: linear-gradient(180deg, #FAB8C4 0%, #FFEDF0 100%);
   --gradient-white: linear-gradient(266.3deg, rgba(236, 242, 246, 0) 7.84%, #ECF2F6 29.1%, rgba(236, 242, 246, 0) 64.32%);
   --gradient-dark: linear-gradient(180deg, #27272E 0%, #303035 100%);
   --border-light: 1px solid #E3E6E9;
-  --border-lighter: 1px solid #ECF2F6;
+  --border-lighter: 1px solid #42424A;
   --border-dark: 1px solid var(--color-ship-gray);
   --border-gray: 1px solid var(--color-gray-4);
   --font-primary: "Rubik", sans-serif;
   --font-secondary: "Manrope", sans-serif;
   --font-awesome: "Font Awesome 5 Pro";
   --transition: all 0.3s ease-in-out;
-  --font-body-1: 16px;
+  --font-body-1: 1.1rem;
   --font-body-2: 16px;
   --font-body-3: 14px;
   --font-body-4: 12px;
@@ -12010,6 +12010,10 @@ ol.list-style li::marker {
     padding-right: 45px;
   }
 }
+.rounded {
+  border-radius: 1.5rem !important;
+}
+
 /*-------------------------
     Typography
 -------------------------*/
@@ -12199,9 +12203,19 @@ h6,
 }
 
 p {
-  font-size: var(--font-body-2);
+  font-size: 1.1rem;
   line-height: var(--line-height-b1);
   margin: 0 0 40px 0;
+}
+@media only screen and (max-width: 991px) {
+  p {
+    font-size: var(--font-body-2);
+  }
+}
+@media only screen and (max-width: 767px) {
+  p {
+    font-size: var(--font-body-2);
+  }
 }
 
 .body-font1 {
@@ -15497,72 +15511,72 @@ input {
   }
 }
 .gradient-text.yellow-light {
-  background: linear-gradient(270deg, var(--color-light) 21.9%, var(--color-primaryY) 53.55%);
+  background: linear-gradient(270deg, var(--color-white) 21.9%, var(--color-primaryY) 53.55%);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 .gradient-text.yello-dark {
-  background: linear-gradient(270deg, var(--color-dark) 21.9%, var(--color-primaryY) 53.55%);
+  background: linear-gradient(270deg, var(--color-white) 21.9%, var(--color-primaryY) 53.55%);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 .gradient-text.blue-light {
-  background: linear-gradient(270deg, var(--color-light) 21.9%, var(--color-primary) 53.55%);
+  background: linear-gradient(270deg, var(--color-white) 21.9%, var(--color-primary) 53.55%);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 .gradient-text.blue-dark {
-  background: linear-gradient(270deg, var(--color-dark) 21.9%, var(--color-primary) 53.55%);
+  background: linear-gradient(270deg, var(--color-white) 21.9%, var(--color-primary) 53.55%);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 .gradient-text.green-light {
-  background: linear-gradient(270deg, var(--color-light) 21.9%, var(--color-primaryG) 53.55%);
+  background: linear-gradient(270deg, var(--color-white) 21.9%, var(--color-primaryG) 53.55%);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 .gradient-text.green-dark {
-  background: linear-gradient(270deg, var(--color-dark) 21.9%, var(--color-primaryG) 53.55%);
+  background: linear-gradient(270deg, var(--color-white) 21.9%, var(--color-primaryG) 53.55%);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
 .text-ll {
-  background: linear-gradient(270deg, var(--color-dark) 21.9%, var(--logo-light) 53.55%);
+  background: linear-gradient(270deg, var(--color-white) 21.9%, var(--logo-light) 53.55%);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
 .text-lb {
-  background: linear-gradient(270deg, var(--color-dark) 21.9%, var(--color-primary) 53.55%);
+  background: linear-gradient(270deg, var(--color-white) 21.9%, var(--color-primary) 53.55%);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
 .text-lg {
-  background: linear-gradient(270deg, var(--color-dark) 21.9%, var(--logo-green) 53.55%);
+  background: linear-gradient(270deg, var(--color-white) 21.9%, var(--logo-green) 53.55%);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
 .text-lr {
-  background: linear-gradient(270deg, var(--color-dark) 21.9%, var(--logo-red) 53.55%);
+  background: linear-gradient(270deg, var(--color-white) 21.9%, var(--logo-red) 53.55%);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
 .text-ly {
-  background: linear-gradient(270deg, var(--color-dark) 21.9%, var(--logo-yellow) 53.55%);
+  background: linear-gradient(270deg, var(--color-white) 21.9%, var(--logo-yellow) 53.55%);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -15609,6 +15623,9 @@ input {
 .section-heading .subtitle span:last-child:after {
   display: none;
 }
+.section-heading .title {
+  font-weight: 500;
+}
 @media only screen and (max-width: 1199px) {
   .section-heading .title {
     font-size: 60px;
@@ -15630,15 +15647,14 @@ input {
   }
 }
 .section-heading .title .gradient-text-light {
-  background: linear-gradient(270deg, var(--color-dark) 21.9%, var(--color-primaryG) 53.55%);
+  background: linear-gradient(270deg, var(--color-white) 21.9%, var(--color-primaryG) 53.55%);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 .section-heading p {
   font-size: var(--font-body-1);
-  width: 50%;
-  margin: 0 auto 40px;
+  width: 100%;
 }
 @media only screen and (max-width: 991px) {
   .section-heading p {
@@ -16725,7 +16741,7 @@ body.active-dark-mode .my_switcher button span.dark {
 
 .main-wrapper {
   overflow: hidden;
-  background-color: var(--color-white);
+  background-color: #23232a;
 }
 
 /*-------------------------
@@ -16847,16 +16863,16 @@ body.active-dark-mode .my_switcher button span.dark {
 }
 
 .breadcrumb-banner {
-  padding: 56vh 0 2vh;
+  padding: 30vh 0 2vh;
 }
 @media only screen and (min-width: 1600px) and (max-width: 1919px) {
   .breadcrumb-banner {
-    padding: 54vh 0 2vh;
+    padding: 30vh 0 2vh;
   }
 }
 @media only screen and (min-width: 1200px) and (max-width: 1599px) {
   .breadcrumb-banner {
-    padding: 54vh 0 2vh;
+    padding: 30vh 0 2vh;
   }
 }
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
@@ -16875,7 +16891,7 @@ body.active-dark-mode .my_switcher button span.dark {
   }
 }
 .breadcrumb-banner .section-heading .title {
-  color: #000248;
+  color: var(--color-text-dark);
   width: 55%;
   margin-bottom: 40px;
 }
@@ -17062,23 +17078,62 @@ body.active-dark-mode .my_switcher button span.dark {
 }
 .amor-btn.btn-borderd {
   border: var(--border-gray);
-  color: var(--color-dark);
+  color: var(--color-white);
   background-color: transparent;
+}
+.amor-btn.btn-borderd::after {
+  content: "";
+  height: 300px;
+  width: 300px;
+  background-color: var(--border-gray);
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateY(-50%) translateX(-50%) scale(0);
+  transition: 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  z-index: -1;
 }
 .amor-btn.btn-borderd:hover {
   background-color: var(--color-dark);
   color: var(--color-white);
   border-color: var(--color-dark);
 }
+.amor-btn.btn-borderd:hover::after {
+  transform: translateY(-50%) translateX(-50%) scale(1);
+}
 .amor-btn.light {
-  border-color: var(--logo-red);
-  color: var(--logo-red) !important;
+  border: 1px solid var(--logo-yellow);
+  color: var(--logo-yellow) !important;
   background-color: transparent;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.amor-btn.light::after {
+  content: "";
+  height: 300px;
+  width: 300px;
+  background-color: var(--logo-yellow);
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateY(-50%) translateX(-50%) scale(0);
+  transition: 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  z-index: -1;
 }
 .amor-btn.light:hover {
-  background-color: var(--logo-red);
-  color: var(--color-white) !important;
-  border-color: var(--logo-red);
+  background-color: var(--logo-yellow);
+  color: var(--color-dark) !important;
+  border-color: var(--logo-yellow);
+}
+.amor-btn.light:hover::after {
+  transform: translateY(-50%) translateX(-50%) scale(1);
+}
+.amor-btn.light i {
+  font-size: 1.65rem;
 }
 .amor-btn.btn-fill-primary {
   background-color: var(--color-dark);
@@ -17102,6 +17157,7 @@ body.active-dark-mode .my_switcher button span.dark {
 .amor-btn.btn-fill-primary:hover {
   background-color: var(--color-link);
   border-color: var(--color-link);
+  color: var(--color-dark);
 }
 .amor-btn.btn-fill-primary:hover::after {
   transform: translateY(-50%) translateX(-50%) scale(1);
@@ -17110,10 +17166,27 @@ body.active-dark-mode .my_switcher button span.dark {
   color: var(--color-dark);
   background-color: var(--color-white);
   box-shadow: 0px 48px 48px 0px rgba(0, 0, 0, 0.12);
+  border: 1px solid var(--color-ship-gray);
+}
+.amor-btn.btn-fill-white::after {
+  content: "";
+  height: 300px;
+  width: 300px;
+  background-color: var(--color-link);
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateY(-50%) translateX(-50%) scale(0);
+  transition: 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  z-index: -1;
 }
 .amor-btn.btn-fill-white:hover {
   background-color: var(--color-dark);
-  color: var(--color-white);
+  color: var(--color-dark);
+}
+.amor-btn.btn-fill-white:hover::after {
+  transform: translateY(-50%) translateX(-50%) scale(1);
 }
 .amor-btn.btn-large {
   padding: 23px 55px;
@@ -17218,7 +17291,7 @@ Frequently Asked Questions
   font-weight: 400;
   font-size: 42px;
   margin-bottom: 2rem;
-  color: #27272E !important;
+  color: #ffffff !important;
 }
 @media only screen and (max-width: 768px) {
   .faqSec .faq-style .title {
@@ -17245,19 +17318,19 @@ Frequently Asked Questions
   border: none;
 }
 .faqSec .accordion .accordion-item .accordion-header .accordion-button {
-  color: #27272E;
+  color: #ffffff;
   font-size: 18px;
   font-weight: 400;
-  background: #ffffff !important;
+  background: #1a1a22 !important;
   padding: 25px 60px 25px 25px !important;
   position: relative;
-  border-radius: 8px !important;
+  border-radius: 6px !important;
   box-shadow: inherit;
   border-bottom: 1px solid transparent !important;
 }
 .faqSec .accordion .accordion-item .accordion-header .accordion-button:not(.collapsed) {
-  background: #27272E !important;
-  border-radius: 8px 8px 0 0 !important;
+  background: #1a1a22 !important;
+  border-radius: 6px 6px 0 0 !important;
   color: #ffffff !important;
 }
 .faqSec .accordion .accordion-item .accordion-header .accordion-button:not(.collapsed):after {
@@ -17432,7 +17505,7 @@ Frequently Asked Questions
    Project
 -------------------------*/
 .project-grid {
-  box-shadow: 0 55px 86px -35px #ECF2F6;
+  box-shadow: 0 55px 86px -35px var(--color-light);
   border-radius: 30px;
   margin-bottom: 40px;
 }
@@ -17458,7 +17531,7 @@ Frequently Asked Questions
 }
 
 .project-grid .content {
-  background-color: var(--color-white);
+  background-color: var(--color-light);
   border-radius: 0 0 30px 30px;
   padding: 40px 50px;
 }
@@ -17681,6 +17754,30 @@ Frequently Asked Questions
   transform: scale(0.7);
 }
 
+.cta-buttons {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid var(--color-ship-gray);
+  padding-top: 3rem;
+}
+@media only screen and (max-width: 991px) {
+  .cta-buttons {
+    display: flex;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .cta-buttons {
+    display: block;
+  }
+  .cta-buttons a {
+    display: block;
+    margin-bottom: 1rem;
+    margin-right: 0 !important;
+  }
+}
+
 /*-------------------------
    Header Styles
 -------------------------*/
@@ -17844,7 +17941,7 @@ Frequently Asked Questions
   }
 }
 .amor-header.header-style-4 .mainmenu li a {
-  color: var(--color-light);
+  color: var(--color-white);
 }
 .amor-header.header-style-4 .mainmenu li a::before {
   background-color: var(--color-white);
@@ -17917,7 +18014,7 @@ Frequently Asked Questions
   }
 }
 .mainmenu > li > a {
-  color: var(--color-dark);
+  color: var(--color-white);
   font-weight: 400;
   font-size: var(--font-body-1);
   font-family: var(--font-primary);
@@ -18917,12 +19014,12 @@ Frequently Asked Questions
   display: block;
   width: 100%;
   left: 0;
-  background-color: rgba(255, 255, 255, 0.7);
+  background-color: rgba(39, 39, 47, 0.9);
   -webkit-backdrop-filter: blur(6px);
   -moz-backdrop-filter: blur(6px);
   -ms-backdrop-filter: blur(6px);
   backdrop-filter: blur(6px);
-  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.35);
 }
 
 .navbar-toggler-icon {
@@ -19190,22 +19287,22 @@ Frequently Asked Questions
   box-shadow: 0 -24px 48px -15px rgba(33, 34, 34, 0.5);
 }
 .mobilemenu li a {
-  color: var(--color-light);
+  color: var(--color-white);
 }
 .mobilemenu li a .text-lb {
-  background: linear-gradient(270deg, var(--color-light) 21.9%, var(--color-primary) 53.55%);
+  background: linear-gradient(270deg, var(--color-white) 21.9%, var(--color-primary) 53.55%);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 .mobilemenu li a .text-lg {
-  background: linear-gradient(270deg, var(--color-light) 21.9%, var(--logo-green) 53.55%);
+  background: linear-gradient(270deg, var(--color-white) 21.9%, var(--logo-green) 53.55%);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 .mobilemenu li a .text-lr {
-  background: linear-gradient(270deg, var(--color-light) 21.9%, var(--logo-red) 53.55%);
+  background: linear-gradient(270deg, var(--color-white) 21.9%, var(--logo-red) 53.55%);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -19259,7 +19356,7 @@ Frequently Asked Questions
 .banner .banner-content .title {
   font-size: 80px;
   font-weight: 500;
-  color: var(--color-dark);
+  color: var(--color-white);
 }
 @media only screen and (min-width: 1200px) and (max-width: 1599px) {
   .banner .banner-content .title {
@@ -19295,7 +19392,7 @@ Frequently Asked Questions
 }
 .banner .banner-content .amor-btn {
   padding: 28px 45px;
-  box-shadow: 0 44px 84px -24px #5956e9;
+  box-shadow: 0 44px 84px -24px #4f4e5a;
 }
 @media only screen and (max-width: 991px) {
   .banner .banner-content .amor-btn {
@@ -19397,11 +19494,11 @@ Frequently Asked Questions
   background-size: cover;
 }
 .banner.banner-style-1:after {
-  background: linear-gradient(180deg, var(--color-white) 25%, var(--color-light) 100%);
+  background: linear-gradient(180deg, var(--color-light) 25%, var(--color-light) 100%);
   content: "";
   height: 100%;
   left: 0;
-  opacity: 0.9;
+  opacity: 0.965;
   position: absolute;
   top: 0;
   width: 100%;
@@ -19448,7 +19545,7 @@ Frequently Asked Questions
 }
 .banner.banner-style-1 .banner-content .title .gradient-text-light {
   display: inline;
-  background: linear-gradient(270deg, var(--color-dark) 21.9%, var(--color-primary) 53.55%);
+  background: linear-gradient(270deg, var(--color-white) 21.9%, var(--color-primary) 53.55%);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -19462,7 +19559,7 @@ Frequently Asked Questions
   }
 }
 .banner.banner-style-1 .banner-content h4 .gradient-text-light, .banner.banner-style-1 .banner-content .h4 .gradient-text-light {
-  background: linear-gradient(270deg, var(--color-dark) 21.9%, var(--color-primary) 53.55%);
+  background: linear-gradient(270deg, var(--color-white) 21.9%, var(--color-primary) 53.55%);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -19904,17 +20001,26 @@ Frequently Asked Questions
   }
 }
 .serviceSec .section-heading .title .gradient-text-light {
-  background: linear-gradient(270deg, var(--color-light) 21.9%, var(--color-primary) 53.55%);
+  background: linear-gradient(270deg, var(--color-white) 21.9%, var(--color-primary) 53.55%);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 .serviceSec .section-heading p {
-  color: var(--color-white);
+  color: var(--color-text-dark);
   margin: 0 0 40px;
   width: 64%;
-  opacity: 0.6;
   font-size: var(--font-body-1);
+}
+@media only screen and (max-width: 991px) {
+  .serviceSec .section-heading p {
+    font-size: var(--font-body-2);
+  }
+}
+@media only screen and (max-width: 767px) {
+  .serviceSec .section-heading p {
+    font-size: var(--font-body-2);
+  }
 }
 .serviceSec .services-grid {
   display: flex;
@@ -20022,7 +20128,7 @@ Frequently Asked Questions
   transform: scale(1);
 }
 .serviceSec .services-grid:hover .content p, .serviceSec .services-grid.active .content p {
-  color: var(--color-light);
+  color: var(--color-white);
   opacity: 1;
 }
 .serviceSec .services-grid:hover .content .more-btn, .serviceSec .services-grid.active .content .more-btn {
@@ -20032,10 +20138,10 @@ Frequently Asked Questions
   background-color: var(--logo-yellow);
 }
 .serviceSec .services-grid.service-style-2 {
-  background: linear-gradient(180deg, #F8F8F8 0%, rgba(255, 255, 255, 0) 100%);
+  background: linear-gradient(180deg, var(--color-light) 0%, rgba(255, 255, 255, 0) 100%);
   border: 1px solid;
-  border-image-source: linear-gradient(90deg, #ECF2F6 0%, rgba(236, 242, 246, 0) 70.31%);
-  background-color: var(--color-white);
+  border-image-source: linear-gradient(90deg, var(--color-light) 0%, rgba(236, 242, 246, 0) 70.31%);
+  background-color: var(--color-light);
   margin-bottom: 30px;
 }
 .serviceSec .services-grid.service-style-2:after {
@@ -20188,7 +20294,7 @@ Service
   transform: scale(1);
 }
 .services-grid:hover .content p, .services-grid.active .content p {
-  color: var(--color-light);
+  color: var(--color-white);
   opacity: 1;
 }
 .services-grid:hover .content .more-btn, .services-grid.active .content .more-btn {
@@ -20198,10 +20304,10 @@ Service
   background-color: var(--logo-yellow);
 }
 .services-grid.service-style-2 {
-  background: linear-gradient(180deg, #F8F8F8 0%, rgba(255, 255, 255, 0) 100%);
+  background: linear-gradient(180deg, var(--color-light) 0%, rgba(255, 255, 255, 0) 100%);
   border: 1px solid;
-  border-image-source: linear-gradient(90deg, #ECF2F6 0%, rgba(236, 242, 246, 0) 70.31%);
-  background-color: var(--color-white);
+  border-image-source: linear-gradient(90deg, var(--color-light) 0%, rgba(236, 242, 246, 0) 70.31%);
+  background-color: var(--color-ship-gray);
   margin-bottom: 30px;
 }
 .services-grid.service-style-2:after {
@@ -20225,7 +20331,7 @@ Service
 }
 .services-grid.service-style-2:hover, .services-grid.service-style-2.active {
   background-color: var(--color-light);
-  box-shadow: 0 24px 48px -15px rgba(153, 161, 170, 0.25);
+  box-shadow: 0 24px 48px -15px rgba(70, 72, 74, 0.25);
 }
 .services-grid.service-style-2:hover .content .more-btn, .services-grid.service-style-2.active .content .more-btn {
   color: var(--color-primary);
@@ -20459,11 +20565,6 @@ Service
     margin-bottom: 50px;
   }
 }
-.process-work .thumbnail {
-  background-color: var(--color-white);
-  border-radius: 30px;
-  text-align: center;
-}
 @media only screen and (max-width: 991px) {
   .process-work .thumbnail {
     width: 300px;
@@ -20506,7 +20607,7 @@ Service
   }
 }
 .process-work .content p {
-  color: #737387;
+  color: var(--color-text-dark);
   width: 60%;
   margin-bottom: 0;
 }
@@ -20587,7 +20688,7 @@ Service
 }
 
 .call-to-action {
-  border-bottom: 1px solid #e7e7e7;
+  border-bottom: 1px solid var(--color-ship-gray);
 }
 .call-to-action .section-heading {
   margin-bottom: 65px;
@@ -20950,7 +21051,7 @@ Service
 }
 
 .contact-form-box {
-  background-color: var(--color-white);
+  background-color: var(--color-light);
   padding: 50px;
   border-radius: 30px;
 }
@@ -21013,7 +21114,7 @@ Service
   width: calc(100% + 50px);
 }
 .contact-form-box.shadow-box {
-  box-shadow: 0 20px 48px 0 rgba(153, 161, 170, 0.25);
+  box-shadow: 0 18px 36px 0 rgba(0, 0, 0, 0.25);
 }
 
 .about-expert {
@@ -21673,7 +21774,7 @@ Service
 }
 
 .footer-bottom {
-  border-top: 1px solid var(--color-ghost);
+  border-top: 1px solid var(--color-ship-gray);
   padding: 25px 0;
 }
 
@@ -21684,10 +21785,10 @@ Service
   }
 }
 .footer-copyright .copyright-text {
-  color: var(--color-gray-1);
+  color: var(--color-white);
 }
 .footer-copyright .copyright-text a {
-  color: var(--color-gray-1);
+  color: var(--color-white);
 }
 .footer-copyright .copyright-text a:hover {
   color: var(--color-primary);
@@ -21724,10 +21825,10 @@ Service
   display: none;
 }
 .footer-bottom-link ul li a {
-  color: var(--color-gray-1);
+  color: var(--color-white);
 }
 .footer-bottom-link ul li a:hover {
-  color: var(--color-link);
+  color: var(--logo-yellow);
 }
 
 .footer-dark {

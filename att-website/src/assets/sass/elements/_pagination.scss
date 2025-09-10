@@ -78,7 +78,7 @@ Frequently Asked Questions
             font-weight: 400;
             font-size: 42px;
             margin-bottom: 2rem;
-            color: $cdark !important;
+            color: $cwhite !important;
 
             @include md-updown {
                 margin-top: 1.65rem;
@@ -107,19 +107,19 @@ Frequently Asked Questions
                 border: none;
 
                 .accordion-button {
-                    color: $cdark;
+                    color: $cwhite;
                     font-size: 18px;
                     font-weight: 400;
-                    background: $cwhite !important;
+                    background: #1a1a22 !important;
                     padding: 25px 60px 25px 25px !important;
                     position: relative;
-                    border-radius: 8px !important;
+                    border-radius: 6px !important;
                     box-shadow: inherit;
                     border-bottom: 1px solid transparent !important;
                     
                     &:not(.collapsed) {
-                        background: $cdark !important;
-                        border-radius: 8px 8px 0 0!important;
+                        background: #1a1a22 !important;
+                        border-radius: 6px 6px 0 0!important;
                         color: $cwhite!important;
 
                         &:after {

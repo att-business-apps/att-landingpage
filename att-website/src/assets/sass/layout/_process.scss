@@ -10,9 +10,9 @@
         margin-bottom: 50px;
     }
     .thumbnail {
-        background-color: var(--color-white);
-        border-radius: 30px;
-        text-align: center;
+        // background-color: var(--color-dark);
+        // border-radius: 30px;
+        // text-align: center;
         @media #{$md-layout} {
            width: 300px;
         }
@@ -46,7 +46,7 @@
             }
         }
         p {
-            color: #737387;
+            color: var(--color-text-dark);
             width: 60%;
             margin-bottom: 0;
             @media #{$smlg-device} {

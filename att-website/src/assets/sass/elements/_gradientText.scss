@@ -2,70 +2,70 @@
 
 .gradient-text {
     &.yellow-light {
-        background: linear-gradient(270deg, var(--color-light) 21.9%, var(--color-primaryY) 53.55%);
+        background: linear-gradient(270deg, var(--color-white) 21.9%, var(--color-primaryY) 53.55%);
         background-clip: text;
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
     }
     &.yello-dark {
-        background: linear-gradient(270deg, var(--color-dark) 21.9%, var(--color-primaryY) 53.55%);
+        background: linear-gradient(270deg, var(--color-white) 21.9%, var(--color-primaryY) 53.55%);
         background-clip: text;
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
     }
 
     &.blue-light {
-        background: linear-gradient(270deg, var(--color-light) 21.9%, var(--color-primary) 53.55%);
+        background: linear-gradient(270deg, var(--color-white) 21.9%, var(--color-primary) 53.55%);
         background-clip: text;
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
     }
     &.blue-dark {
-        background: linear-gradient(270deg, var(--color-dark) 21.9%, var(--color-primary) 53.55%);
+        background: linear-gradient(270deg, var(--color-white) 21.9%, var(--color-primary) 53.55%);
         background-clip: text;
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
     }
 
     &.green-light {
-        background: linear-gradient(270deg, var(--color-light) 21.9%, var(--color-primaryG) 53.55%);
+        background: linear-gradient(270deg, var(--color-white) 21.9%, var(--color-primaryG) 53.55%);
         background-clip: text;
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
     }
     &.green-dark {
-        background: linear-gradient(270deg, var(--color-dark) 21.9%, var(--color-primaryG) 53.55%);
+        background: linear-gradient(270deg, var(--color-white) 21.9%, var(--color-primaryG) 53.55%);
         background-clip: text;
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
     }
 }
 .text-ll {
-    background: linear-gradient(270deg, var(--color-dark) 21.9%, var(--logo-light) 53.55%);
+    background: linear-gradient(270deg, var(--color-white) 21.9%, var(--logo-light) 53.55%);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 .text-lb {
-    background: linear-gradient(270deg, var(--color-dark) 21.9%, var(--color-primary) 53.55%);
+    background: linear-gradient(270deg, var(--color-white) 21.9%, var(--color-primary) 53.55%);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 .text-lg {
-    background: linear-gradient(270deg, var(--color-dark) 21.9%, var(--logo-green) 53.55%);
+    background: linear-gradient(270deg, var(--color-white) 21.9%, var(--logo-green) 53.55%);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 .text-lr {
-    background: linear-gradient(270deg, var(--color-dark) 21.9%, var(--logo-red) 53.55%);
+    background: linear-gradient(270deg, var(--color-white) 21.9%, var(--logo-red) 53.55%);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 .text-ly {
-    background: linear-gradient(270deg, var(--color-dark) 21.9%, var(--logo-yellow) 53.55%);
+    background: linear-gradient(270deg, var(--color-white) 21.9%, var(--logo-yellow) 53.55%);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;

@@ -10,7 +10,7 @@
                     <div class="header-logo">
                         <a href="/">
                             <img class="light-version-logo" style="width:220px; margin: 0 auto;"
-                                src="../assets/img/att-logo-dark.svg" alt="amortree Tech logo" />
+                                src="../assets/img/att-logo-light.svg" alt="amortree Tech logo" />
                         </a>
                     </div>
                     <div class="header-main-nav">
