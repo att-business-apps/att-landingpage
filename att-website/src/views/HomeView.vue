@@ -328,7 +328,7 @@ function getTemplate(target) {
       <div class="container">
         <div class="section-heading heading-left">
           <span class="subtitle">Our Recent Clients</span>
-          <h2 class="title">Professional <span class="gradient-text blue-dark">Web Development</span> <br> & Design
+          <h2 class="title">Professional <span class="gradient-text yello-dark">Web Development</span> <br> & Design
             Projects</h2>
         </div>
 
