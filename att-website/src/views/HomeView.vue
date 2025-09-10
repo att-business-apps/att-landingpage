@@ -389,7 +389,7 @@ function getTemplate(target) {
           </div>
 
           <div class="d-lg-flex justify-content-center">
-            <a class="amor-btn btn-fill-primary btn-large" href="portfolio">View Portfolio</a>
+            <a class="amor-btn btn-borderd light" href="portfolio">View Portfolio</a>
           </div>
 
         </div>
@@ -488,7 +488,7 @@ function getTemplate(target) {
       </div>
     </section>
 
-    <section class="section section-padding-equal bg-color-white pb-0" id="about">
+    <section class="section section-padding-equal bg-color-white" id="about">
       <div class="container">
         <div class="row align-items-center">
           <div class="col-lg-6">
@@ -522,7 +522,7 @@ function getTemplate(target) {
                   and let's embark on a journey of <strong>digital transformation</strong> and success
                   together.
                 </p>
-                <a href="whoWeAre" class="amor-btn btn-fill-primary btn-sm" tabindex="0">Find out more</a>
+                <a href="whoWeAre" class="amor-btn btn-fill-primary btn-sm" tabindex="0">Know more</a>
               </div>
             </div>
           </div>
