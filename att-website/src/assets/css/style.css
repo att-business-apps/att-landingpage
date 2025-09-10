@@ -17165,7 +17165,6 @@ body.active-dark-mode .my_switcher button span.dark {
 @media only screen and (max-width: 767px) {
   .amor-btn.btn-fill-primary {
     display: block;
-    width: 100%;
   }
 }
 .amor-btn.btn-fill-white {
