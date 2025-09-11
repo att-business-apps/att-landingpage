@@ -971,6 +971,9 @@
             @media #{$laptop-device} {
                 display: none;
             }
+            @media #{$md-layout}{
+                display: none;
+            }
         }
         &.shape-4 {
             left: 220px;

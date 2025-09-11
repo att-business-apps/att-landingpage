@@ -38,6 +38,9 @@
         font-size: 64px;
         color: var(--color-primaryY);
         margin-bottom: 0;
+        @include recScreen {
+            font-size: 54px;
+        }
         @media #{$smlg-device} {
             font-size: 42px;
         }

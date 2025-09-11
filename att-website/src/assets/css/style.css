@@ -16578,6 +16578,11 @@ input {
     display: none;
   }
 }
+@media only screen and (max-width: 991px) {
+  .shape-group-21 .shape.shape-3 {
+    display: none;
+  }
+}
 .shape-group-21 .shape.shape-4 {
   left: 220px;
   top: 45%;
@@ -21919,6 +21924,11 @@ Service
   font-size: 64px;
   color: var(--color-primaryY);
   margin-bottom: 0;
+}
+@media (max-width: 1300px) and (min-width: 1200px) {
+  .contact-info .phone-number {
+    font-size: 54px;
+  }
 }
 @media only screen and (max-width: 1199px) {
   .contact-info .phone-number {

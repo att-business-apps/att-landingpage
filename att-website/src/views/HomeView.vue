@@ -411,7 +411,7 @@ function getTemplate(target) {
       <div class="container-fluid">
         <div class="section-heading heading-center">
           <span class="subtitle">What our clients say on Google Reviews</span>
-          <h2 class="title">Client <span class="gradient-text yello-dark">Reviews</span></h2>
+          <h2 class="title"><span class="gradient-text yello-dark">Client</span> Reviews</h2>
         </div>
         <div class="row">
           <div class="col-lg-4 col-md-6 mb-4">
