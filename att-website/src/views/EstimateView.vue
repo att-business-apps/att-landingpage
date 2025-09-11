@@ -1,6 +1,6 @@
 <template>
     <div class="breadcrum-area breadcrumb-banner">
-        <div class="container">
+        <div class="container-fluid">
             <div class="breadcrumb">
                 <ul class="list-unstyled">
                     <li><a href="/">Home</a></li>
@@ -31,7 +31,7 @@
 
 
     <section class="section section-padding">
-        <div class="container">
+        <div class="container-fluid">
             <div class="row">
                 <div class="col-xl-8 col-lg-6 mx-lg-auto">
                     <div class="contact-form-box shadow-box mb--30">

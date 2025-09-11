@@ -14,7 +14,7 @@
       <div class="banner-thumbnail ">
         <div class=""
           style="position: relative; will-change: transform; transform: perspective(2000px) rotateX(-0.32deg) rotateY(-11.76deg) scale3d(1, 1, 1);">
-          <img src="../assets/img/amorboy/am-privacy.png" class="w-75 animate__animated slideInRight"
+          <img src="../assets/img/amorboy/am-privacy.png" class="w-50 animate__animated slideInRight"
             style="animation-duration: 3s" alt="Illustration">
         </div>
       </div>

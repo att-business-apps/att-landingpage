@@ -61,7 +61,7 @@
             font-size: 34px;
         }
         .gradient-text-light {
-            background: linear-gradient(270deg, var(--color-white) 21.9%, var(--color-primaryG) 53.55%);
+            background: linear-gradient(270deg, var(--logo-light) 21.9%, var(--color-primaryG) 53.55%);
             background-clip: text;
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
@@ -81,7 +81,7 @@
 .heading-light-left {
     text-align: left;
     .title {
-        color: var(--color-white);
+        color: var(--logo-light);
         margin-bottom: 35px;
         width: 50%;
         @media #{$smlg-device} {
@@ -109,7 +109,7 @@
 
 .heading-light {
     .title {
-        color: var(--color-white);
+        color: var(--logo-light);
     }
     p {
         color: var(--color-gray-4);

@@ -44,6 +44,10 @@ ol.list-style {
         padding-left: 30px;
         padding-right: 30px;
     }
+
+    .container-fluid {
+        padding: 0px 3rem;
+    }
 }
 
 .row {
@@ -64,29 +68,8 @@ ol.list-style {
 }
 
 @media only screen and (min-width: 1400px) {
-    .row-35 {
-        margin-left: -35px;
-        margin-right: -35px;
-        >[class*="col"] {
-            padding-left: 35px;
-            padding-right: 35px;
-        }
-    }
-    .row-40 {
-        margin-left: -40px;
-        margin-right: -40px;
-        >[class*="col"] {
-            padding-left: 40px;
-            padding-right: 40px;
-        }
-    }
-    .row-45 {
-        margin-left: -45px;
-        margin-right: -45px;
-        >[class*="col"] {
-            padding-left: 45px;
-            padding-right: 45px;
-        }
+    .container-fluid {
+        padding: 0px 3rem;
     }
 }
 

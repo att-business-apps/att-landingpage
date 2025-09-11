@@ -4,7 +4,7 @@
 
 <template>
   <div class="breadcrum-area breadcrumb-banner">
-    <div class="container">
+    <div class="container-fluid">
       <div class="breadcrumb">
         <ul class="list-unstyled">
           <li><a href="/">Home</a></li>
@@ -20,7 +20,7 @@
       <div class="banner-thumbnail bottom-0">
         <div class=""
           style="position: relative; will-change: transform; transform: perspective(2000px) rotateX(-0.32deg) rotateY(-11.76deg) scale3d(1, 1, 1);">
-          <img src="../assets/img/amorboy/am-service.png" class="w-75 animate__animated slideInRight"
+          <img src="../assets/img/amorboy/am-service.png" class="w-50 animate__animated slideInRight"
             style="animation-duration: 3s" alt="Illustration">
         </div>
       </div>
@@ -38,7 +38,7 @@
   <div class="service-scroll-navigation-area">
     <!-- Service Nav -->
     <nav id="onepagenav" class="service-scroll-nav navbar onepagefixed">
-      <div class="container">
+      <div class="container-fluid">
         <ul class="nav nav-pills">
           <li class="nav-item current">
             <a class="nav-link" href="#research">Research</a>
@@ -65,7 +65,7 @@
     <div class="section section-padding" id="research">
       <div class="container">
         <div class="section-heading heading-left">
-          <h2 class="title">Research &amp; Strategy</h2>
+          <h2 class="title text-lb">Research &amp; Strategy</h2>
           <p>We believe that great design and development are born from thorough research and strategic planning. Our
             research-driven approach helps us craft solutions that are not only visually appealing but also aligned with
             market trends, user needs, and business goals.</p>
@@ -185,7 +185,7 @@
     <div class="section section-padding bg-color-light" id="branding">
       <div class="container">
         <div class="section-heading heading-left">
-          <h2 class="title">Branding Identity</h2>
+          <h2 class="title text-lr">Branding Identity</h2>
           <p>We help businesses create a unique and impactful brand identity. Branding is more than just visuals—it's
             the essence of your business, connecting with your target audience on an emotional level. Our holistic
             approach ensures that every element of your brand is cohesive and aligned with your core values.</p>
@@ -299,7 +299,7 @@
     <div class="section section-padding" id="logoDesign">
       <div class="container">
         <div class="section-heading heading-left">
-          <h2 class="title">Logo Design</h2>
+          <h2 class="title text-ly">Logo Design</h2>
           <p>We understand that a logo is the face of your brand. It’s the first impression, and it speaks volumes about
             your business. Our logo design services are crafted to ensure your brand stands out and leaves a lasting
             impact.</p>
@@ -411,7 +411,7 @@
     <div class="section section-padding bg-color-light" id="website">
       <div class="container">
         <div class="section-heading heading-left">
-          <h2 class="title">Website UI/UX &amp; Development</h2>
+          <h2 class="title text-lg">Website UI/UX &amp; Development</h2>
           <p>We create websites that not only look stunning but also provide an intuitive and seamless user experience.
             Our holistic approach to UI/UX design and development ensures that your website is both visually compelling
             and functionally optimized to engage your audience and drive business growth.</p>
@@ -541,7 +541,7 @@
     <div class="section section-padding" id="mobileAppUiUx">
       <div class="container">
         <div class="section-heading heading-left">
-          <h2 class="title">Mobile App UI/UX Wireframe</h2>
+          <h2 class="title text-ll">Mobile App UI/UX Wireframe</h2>
           <p>we specialize in creating detailed and intuitive mobile app wireframes that serve as the blueprint for your
             app's user interface and experience. Our wireframes are designed with a deep understanding of user behavior
             and market trends, ensuring a seamless, user-friendly experience before moving into development.</p>
@@ -654,7 +654,7 @@
     <div class="section section-padding bg-color-light" id="devOps">
       <div class="container">
         <div class="section-heading heading-left">
-          <h2 class="title">DevOps</h2>
+          <h2 class="title text-lb">DevOps</h2>
           <p>Our DevOps services bridge the gap between development and operations, streamlining your processes and
             ensuring faster, more reliable software delivery. We leverage automation, continuous integration, and
             continuous deployment (CI/CD) practices to optimize your infrastructure, enabling your teams to collaborate

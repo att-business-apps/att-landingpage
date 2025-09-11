@@ -75,10 +75,7 @@ Frequently Asked Questions
         z-index: 1;
 
         .title {
-            font-weight: 400;
-            font-size: 42px;
             margin-bottom: 2rem;
-            color: $cwhite !important;
 
             @include md-updown {
                 margin-top: 1.65rem;

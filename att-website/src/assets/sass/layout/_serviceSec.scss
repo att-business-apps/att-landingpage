@@ -25,7 +25,7 @@
         }
 
         .title {
-            color: var(--color-white);
+            color: var(--logo-light);
             margin-bottom: 35px;
             width: 50%;
             @media #{$md-layout} {
@@ -33,7 +33,7 @@
             }
 
             .gradient-text-light {
-                background: linear-gradient(270deg, var(--color-white) 21.9%, var(--color-primary) 53.55%);
+                background: linear-gradient(270deg, var(--logo-light) 21.9%, var(--color-primary) 53.55%);
                 background-clip: text;
                 -webkit-background-clip: text;
                 -webkit-text-fill-color: transparent;

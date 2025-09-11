@@ -68,7 +68,7 @@ function getTemplate(target) {
 
 <template>
     <div class="breadcrum-area breadcrumb-banner">
-        <div class="container">
+        <div class="container-fluid">
             <div class="breadcrumb">
                 <ul class="list-unstyled">
                     <li><a href="/">Home</a></li>
@@ -83,7 +83,7 @@ function getTemplate(target) {
             <div class="banner-thumbnail">
                 <div class=""
                     style="position: relative; will-change: transform; transform: perspective(2000px) rotateX(-0.32deg) rotateY(-11.76deg) scale3d(1, 1, 1);">
-                    <img src="../assets/img/amorboy/am-contact.png" class="w-75 animate__animated slideInRight"
+                    <img src="../assets/img/amorboy/am-contact.png" class="w-50 animate__animated slideInRight"
                         style="animation-duration: 3s" alt="Illustration">
                 </div>
             </div>
@@ -99,7 +99,7 @@ function getTemplate(target) {
     </div>
 
     <div class="section section-padding">
-        <div class="container">
+        <div class="container-fluid">
             <div class="row">
                 <div class="col-lg-6">
                     <div class="contact-form-box shadow-box mb--30">

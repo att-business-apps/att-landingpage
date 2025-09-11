@@ -1,7 +1,7 @@
 <template>
 
   <div class="section call-to-action-area pb-0">
-    <div class="container">
+    <div class="container-fluid">
       <div class="call-to-action">
         <div class="section-heading heading-light">
           <span class="subtitle">Let's Work Together</span>
@@ -52,7 +52,7 @@
 
 
   <div class="footer-area pb-lg-0 pb-5 mb-lg-0 mb-4" id="contact">
-    <div class="container">
+    <div class="container-fluid">
       <div class="footer-top d-md-none d-block pt-5">
         <div class="footer-social-link">
           <ul class="list-unstyled">
@@ -135,7 +135,7 @@
         </div>
 
         <div class="row">
-          <div class="col-xl-6 col-lg-5">
+          <div class="col-xl-6 col-lg-6">
             <div class="contact-info mb--50">
               <h4 class="title">Phone</h4>
               <p>Reach out for any queries; our experts are here to assist and resolve your concerns promptly.</p>
@@ -144,7 +144,7 @@
               </h4>
             </div>
           </div>
-          <div class="col-xl-6 col-lg-7">
+          <div class="col-xl-6 col-lg-6">
             <div class="contact-info mb--50">
               <h4 class="title">Email</h4>
               <p>Our support team will get back to you in 24-h during standard business days (Mon-Sat).</p>
@@ -152,16 +152,22 @@
             </div>
           </div>
         </div>
+
+        <div class="row">
+          <div class="col">
+            <img src="../assets/img/bg-wall.png" class="w-100 rounded mb-5" alt="Amortree Tech Pvt Ltd" />
+          </div>
+        </div>
       </div>
       <div class="footer-bottom">
         <div class="row">
-          <div class="col-md-6">
+          <div class="col-md-6 order-2 order-md-1">
             <div class="footer-copyright">
               <span class="copyright-text">Copyright © 2025. amortree Tech. All rights reserved.
               </span>
             </div>
           </div>
-          <div class="col-md-6">
+          <div class="col-md-6 order-1 order-md-2">
             <div class="footer-bottom-link">
               <ul class="list-unstyled">
                 <li><a href="/privacy">Privacy Policy</a></li>

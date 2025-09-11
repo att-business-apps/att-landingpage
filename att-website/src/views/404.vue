@@ -1,14 +1,16 @@
 <template>
     <div class="error-page onepage-screen-area">
-        <div class="container">
+        <div class="container-fluid">
             <div class="row align-items-center">
                 <div class="col-lg-6">
                     <div class="animate__animated slideInUp" style="animation-duration: 1s;">
                         <div class="content">
                             <h2 class="title">Oops! Page Not Found</h2>
-                            <p>It seems the page you're looking for doesn't exist or has been moved. Let’s get you back on track!</p>
+                            <p>It seems the page you're looking for doesn't exist or has been moved. Let’s get you back
+                                on track!</p>
                             <a class="amor-btn btn-fill-primary" href="/">Go Back</a>
-                            <p class="mt-5">Explore our <a href="/whatWeDo">services</a> or <a href="whereToFind">contact us</a> for help.</p>
+                            <p class="mt-5">Explore our <a href="/whatWeDo">services</a> or <a
+                                    href="whereToFind">contact us</a> for help.</p>
                         </div>
                     </div>
                 </div>

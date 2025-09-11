@@ -73,7 +73,7 @@ function getTemplate(target) {
 <template>
   <main>
     <div class="banner banner-style-1">
-      <div class="container">
+      <div class="container-fluid">
         <div class="row align-items-end align-items-xl-end">
           <div class="col-lg-12 mx-auto pb-5">
             <div class="banner-content text-center">
@@ -194,7 +194,7 @@ function getTemplate(target) {
     </div>
 
     <div class="section serviceSec section-padding" id="whatWeDo">
-      <div class="container">
+      <div class="container-fluid">
         <div class="section-heading heading-left mb--20 mb_md--70">
           <div class="subtitle">Our Services</div>
           <h2 class="title">
@@ -325,7 +325,7 @@ function getTemplate(target) {
     </div>
 
     <section class="section section-padding-2 bg-color-white">
-      <div class="container">
+      <div class="container-fluid">
         <div class="section-heading heading-left">
           <span class="subtitle">Our Recent Clients</span>
           <h2 class="title">Professional <span class="gradient-text yello-dark">Web Development</span> <br> & Design
@@ -333,7 +333,7 @@ function getTemplate(target) {
         </div>
 
         <div class="">
-          <div class="row row-35 isotope-list">
+          <div class="row">
             <div class="col-md-6 project branding">
               <div class="project-grid">
                 <div class="thumbnail">
@@ -402,10 +402,10 @@ function getTemplate(target) {
     </section>
 
     <section class="section section-padding bg-color-light" id="reviews">
-      <div class="container">
+      <div class="container-fluid">
         <div class="section-heading heading-center">
           <span class="subtitle">What our clients say on Google Reviews</span>
-          <h2 class="title">Client Reviews</h2>
+          <h2 class="title">Client <span class="gradient-text yello-dark">Reviews</span></h2>
         </div>
         <div class="row">
           <div class="col-lg-4 col-md-6 mb-4">
@@ -548,14 +548,14 @@ function getTemplate(target) {
     <!-- SEO-Enhanced FAQ Section -->
     <section class="section section-padding faqSec bg-color-light">
       <div class="container">
-        <div class="section-heading heading-center faq-style">
-          <span class="subtitle">Frequently Asked Questions</span>
-          <h2 class="title">Web Development & IT Services FAQ</h2>
-          <p>Get answers to common questions about our professional web development, UI/UX design, and DevOps consulting
-            services.</p>
-        </div>
         <div class="row">
           <div class="col-lg-8 offset-lg-2">
+            <div class="section-heading heading-center faq-style">
+              <span class="subtitle">Frequently Asked Questions</span>
+              <h2 class="title">Web Development & IT Services <span class="gradient-text yello-dark">FAQ</span></h2>
+              <p class="px-lg-5">Get answers to common questions about our professional web development, UI/UX design,
+                and DevOps consulting services.</p>
+            </div>
             <div class="accordion" id="faqAccordion">
               <div class="accordion-item">
                 <h3 class="accordion-header">

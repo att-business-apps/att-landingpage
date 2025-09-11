@@ -35,17 +35,17 @@
         width: 80%;
     }
     .phone-number {
-        font-size: 34px;
+        font-size: 64px;
         color: var(--color-primaryY);
         margin-bottom: 0;
         @media #{$smlg-device} {
             font-size: 42px;
         }
         @media #{$md-layout} {
-            font-size: 34px;
+            font-size: 38px;
         }
         @media #{$sm-layout} {
-            font-size: 22px;
+            font-size: 34px;
         }
         a {
             &:hover {

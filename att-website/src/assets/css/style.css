@@ -11966,6 +11966,9 @@ ol.list-style li::marker {
     padding-left: 30px;
     padding-right: 30px;
   }
+  .container-fluid, .container-sm, .container-md, .container-lg, .container-xl, .container-xxl {
+    padding: 0px 3rem;
+  }
 }
 .row {
   margin-left: -15px;
@@ -11985,29 +11988,8 @@ ol.list-style li::marker {
 }
 
 @media only screen and (min-width: 1400px) {
-  .row-35 {
-    margin-left: -35px;
-    margin-right: -35px;
-  }
-  .row-35 > [class*=col] {
-    padding-left: 35px;
-    padding-right: 35px;
-  }
-  .row-40 {
-    margin-left: -40px;
-    margin-right: -40px;
-  }
-  .row-40 > [class*=col] {
-    padding-left: 40px;
-    padding-right: 40px;
-  }
-  .row-45 {
-    margin-left: -45px;
-    margin-right: -45px;
-  }
-  .row-45 > [class*=col] {
-    padding-left: 45px;
-    padding-right: 45px;
+  .container-fluid, .container-sm, .container-md, .container-lg, .container-xl, .container-xxl {
+    padding: 0px 3rem;
   }
 }
 .rounded {
@@ -15511,72 +15493,72 @@ input {
   }
 }
 .gradient-text.yellow-light {
-  background: linear-gradient(270deg, var(--color-white) 21.9%, var(--color-primaryY) 53.55%);
+  background: linear-gradient(270deg, var(--logo-light) 21.9%, var(--color-primaryY) 53.55%);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 .gradient-text.yello-dark {
-  background: linear-gradient(270deg, var(--color-white) 21.9%, var(--color-primaryY) 53.55%);
+  background: linear-gradient(270deg, var(--logo-light) 21.9%, var(--color-primaryY) 53.55%);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 .gradient-text.blue-light {
-  background: linear-gradient(270deg, var(--color-white) 21.9%, var(--color-primary) 53.55%);
+  background: linear-gradient(270deg, var(--logo-light) 21.9%, var(--color-primary) 53.55%);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 .gradient-text.blue-dark {
-  background: linear-gradient(270deg, var(--color-white) 21.9%, var(--color-primary) 53.55%);
+  background: linear-gradient(270deg, var(--logo-light) 21.9%, var(--color-primary) 53.55%);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 .gradient-text.green-light {
-  background: linear-gradient(270deg, var(--color-white) 21.9%, var(--color-primaryG) 53.55%);
+  background: linear-gradient(270deg, var(--logo-light) 21.9%, var(--color-primaryG) 53.55%);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 .gradient-text.green-dark {
-  background: linear-gradient(270deg, var(--color-white) 21.9%, var(--color-primaryG) 53.55%);
+  background: linear-gradient(270deg, var(--logo-light) 21.9%, var(--color-primaryG) 53.55%);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
 .text-ll {
-  background: linear-gradient(270deg, var(--color-white) 21.9%, var(--logo-light) 53.55%);
+  background: linear-gradient(270deg, var(--logo-light) 21.9%, var(--logo-light) 53.55%);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
 .text-lb {
-  background: linear-gradient(270deg, var(--color-white) 21.9%, var(--color-primary) 53.55%);
+  background: linear-gradient(270deg, var(--logo-light) 21.9%, var(--color-primary) 53.55%);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
 .text-lg {
-  background: linear-gradient(270deg, var(--color-white) 21.9%, var(--logo-green) 53.55%);
+  background: linear-gradient(270deg, var(--logo-light) 21.9%, var(--logo-green) 53.55%);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
 .text-lr {
-  background: linear-gradient(270deg, var(--color-white) 21.9%, var(--logo-red) 53.55%);
+  background: linear-gradient(270deg, var(--logo-light) 21.9%, var(--logo-red) 53.55%);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
 .text-ly {
-  background: linear-gradient(270deg, var(--color-white) 21.9%, var(--logo-yellow) 53.55%);
+  background: linear-gradient(270deg, var(--logo-light) 21.9%, var(--logo-yellow) 53.55%);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -15647,7 +15629,7 @@ input {
   }
 }
 .section-heading .title .gradient-text-light {
-  background: linear-gradient(270deg, var(--color-white) 21.9%, var(--color-primaryG) 53.55%);
+  background: linear-gradient(270deg, var(--logo-light) 21.9%, var(--color-primaryG) 53.55%);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -15667,7 +15649,7 @@ input {
   text-align: left;
 }
 .heading-light-left .title {
-  color: var(--color-white);
+  color: var(--logo-light);
   margin-bottom: 35px;
   width: 50%;
 }
@@ -15699,7 +15681,7 @@ input {
 }
 
 .heading-light .title {
-  color: var(--color-white);
+  color: var(--logo-light);
 }
 .heading-light p {
   color: var(--color-gray-4);
@@ -16894,6 +16876,9 @@ body.active-dark-mode .my_switcher button span.dark {
   color: var(--color-text-dark);
   width: 55%;
   margin-bottom: 40px;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-image: linear-gradient(318deg, var(--color-gray-1) 5%, var(--color-white) 74%, var(--color-gray-4) 93%);
 }
 @media only screen and (max-width: 991px) {
   .breadcrumb-banner .section-heading .title {
@@ -17293,10 +17278,7 @@ Frequently Asked Questions
   z-index: 1;
 }
 .faqSec .faq-style .title {
-  font-weight: 400;
-  font-size: 42px;
   margin-bottom: 2rem;
-  color: #ffffff !important;
 }
 @media only screen and (max-width: 768px) {
   .faqSec .faq-style .title {
@@ -19529,33 +19511,37 @@ Frequently Asked Questions
   }
 }
 .banner.banner-style-1 .banner-content .title {
-  font-size: 68px;
+  font-size: 88px;
   line-height: 1.2;
+  display: inline-block;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-image: linear-gradient(318deg, var(--color-gray-2) 5%, rgb(193, 195, 198) 74%, rgb(255, 255, 255) 93%);
 }
 @media only screen and (min-width: 1200px) and (max-width: 1599px) {
   .banner.banner-style-1 .banner-content .title {
-    font-size: 58px;
+    font-size: 74px;
   }
 }
 @media only screen and (max-width: 1199px) {
   .banner.banner-style-1 .banner-content .title {
-    font-size: 50px;
+    font-size: 68px;
   }
 }
 @media only screen and (max-width: 991px) {
   .banner.banner-style-1 .banner-content .title {
-    font-size: 54px;
+    font-size: 64px;
   }
 }
 @media only screen and (max-width: 767px) {
   .banner.banner-style-1 .banner-content .title {
-    font-size: 40px;
+    font-size: 48px;
     margin-bottom: 1rem;
   }
 }
 .banner.banner-style-1 .banner-content .title .gradient-text-light {
   display: inline;
-  background: linear-gradient(270deg, var(--color-white) 21.9%, var(--color-primary) 53.55%);
+  background: linear-gradient(270deg, var(--logo-light) 21.9%, var(--logo-blue) 53.55%);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -20001,7 +19987,7 @@ Frequently Asked Questions
   margin-bottom: 15px;
 }
 .serviceSec .section-heading .title {
-  color: var(--color-white);
+  color: var(--logo-light);
   margin-bottom: 35px;
   width: 50%;
 }
@@ -20011,7 +19997,7 @@ Frequently Asked Questions
   }
 }
 .serviceSec .section-heading .title .gradient-text-light {
-  background: linear-gradient(270deg, var(--color-white) 21.9%, var(--color-primary) 53.55%);
+  background: linear-gradient(270deg, var(--logo-light) 21.9%, var(--color-primary) 53.55%);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -20721,6 +20707,9 @@ Service
 .call-to-action .section-heading .title {
   width: 60%;
   margin: 0 auto 55px;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-image: linear-gradient(318deg, var(--color-gray-1) 5%, var(--color-white) 74%, var(--color-gray-4) 93%);
 }
 @media only screen and (max-width: 991px) {
   .call-to-action .section-heading .title {
@@ -21817,6 +21806,7 @@ Service
 @media only screen and (max-width: 767px) {
   .footer-bottom-link {
     text-align: center;
+    margin-bottom: 1.5rem;
   }
 }
 .footer-bottom-link ul {
@@ -21910,7 +21900,7 @@ Service
   width: 80%;
 }
 .contact-info .phone-number {
-  font-size: 34px;
+  font-size: 64px;
   color: var(--color-primaryY);
   margin-bottom: 0;
 }
@@ -21921,12 +21911,12 @@ Service
 }
 @media only screen and (max-width: 991px) {
   .contact-info .phone-number {
-    font-size: 34px;
+    font-size: 38px;
   }
 }
 @media only screen and (max-width: 767px) {
   .contact-info .phone-number {
-    font-size: 22px;
+    font-size: 34px;
   }
 }
 .contact-info .phone-number a:hover {
