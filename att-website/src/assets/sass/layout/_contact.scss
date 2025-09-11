@@ -34,6 +34,26 @@
         color: var(--color-gray-2);
         width: 80%;
     }
+    &.footer-contact {
+        
+        @media #{$md-layout} {
+            display: none;
+        }
+        @media #{$sm-layout} {
+            display: none;
+        }
+        h4.phone-number {
+            font-size: 44px;
+            margin-bottom: 0;
+            a {
+                font-size: 44px;
+                color: var(--color-primaryY);
+                &:hover {
+                    color: var(--color-white);
+                }
+            }
+        }
+    }
     .phone-number {
         font-size: 64px;
         color: var(--color-primaryY);

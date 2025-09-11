@@ -142,14 +142,14 @@ function getTemplate(target) {
                     </div>
                 </div>
                 <div class="col-xl-4 col-lg-6 offset-xl-1">
-                    <div class="contact-info mb--100 mb_md--30 mt_md--0 mt--150">
+                    <div class="contact-info footer-contact mb--100 mb_md--30 mt_md--0 mt--150">
                         <h4 class="title">Phone</h4>
                         <p>Reach out for any queries; our experts are here to assist and resolve your concerns promptly.
                         </p>
                         <h4 class="phone-number"><a href="tel:+919916846647">+91 99168 46647</a></h4>
                     </div>
 
-                    <div class="contact-info mb--30">
+                    <div class="contact-info footer-contact mb--30">
                         <h4 class="title">Email</h4>
                         <p>Our support team will get back to you in 24-h during standard business days (Mon-Sat).</p>
                         <h5 class="text-white mb-0">Say hi to,</h5>

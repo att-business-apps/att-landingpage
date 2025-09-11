@@ -19534,6 +19534,7 @@ Frequently Asked Questions
 .banner.banner-style-1 .banner-content .title {
   font-size: 88px;
   line-height: 1.2;
+  font-weight: 600;
   display: inline-block;
   background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -21919,6 +21920,27 @@ Service
 .contact-info p {
   color: var(--color-gray-2);
   width: 80%;
+}
+@media only screen and (max-width: 991px) {
+  .contact-info.footer-contact {
+    display: none;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .contact-info.footer-contact {
+    display: none;
+  }
+}
+.contact-info.footer-contact h4.phone-number, .contact-info.footer-contact .phone-number.h4 {
+  font-size: 44px;
+  margin-bottom: 0;
+}
+.contact-info.footer-contact h4.phone-number a, .contact-info.footer-contact .phone-number.h4 a {
+  font-size: 44px;
+  color: var(--color-primaryY);
+}
+.contact-info.footer-contact h4.phone-number a:hover, .contact-info.footer-contact .phone-number.h4 a:hover {
+  color: var(--color-white);
 }
 .contact-info .phone-number {
   font-size: 64px;
