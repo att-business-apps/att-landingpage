@@ -155,7 +155,7 @@
 
         <div class="row">
           <div class="col">
-            <img src="../assets/img/bg-wall.png" class="w-100 rounded mb-5" alt="Amortree Tech Pvt Ltd" />
+            <img src="../assets/img/footer-logo.png" class="w-100 rounded mb-5" alt="Amortree Tech Pvt Ltd" />
           </div>
         </div>
       </div>

@@ -16540,8 +16540,8 @@ input {
   }
 }
 .shape-group-21 .shape.shape-2 {
-  top: 120px;
-  right: 200px;
+  top: 10px;
+  right: 160px;
   text-align: right;
   z-index: -2;
 }
@@ -16568,8 +16568,8 @@ input {
   }
 }
 .shape-group-21 .shape.shape-3 {
-  right: 100px;
-  top: 45%;
+  right: 200px;
+  top: 30%;
   height: 53px;
   width: 53px;
 }
@@ -16581,22 +16581,23 @@ input {
 .shape-group-21 .shape.shape-4 {
   left: 220px;
   top: 45%;
-  height: 20px;
-  width: 20px;
+  height: 24px;
+  width: 24px;
   animation: movingleftright1 infinite 25000ms;
 }
 .shape-group-21 .shape.shape-5 {
-  left: 45%;
+  left: 40%;
   bottom: 130px;
   height: 20px;
   width: 20px;
-  animation: movingleftright3 infinite 20000ms;
+  animation: movingleftright3 infinite 28000ms;
 }
 .shape-group-21 .shape.shape-6 {
   right: 230px;
-  bottom: 40%;
-  height: 20px;
-  width: 20px;
+  bottom: 50%;
+  height: 24px;
+  width: 24px;
+  animation: movingleftright3 infinite 16000ms;
 }
 @media only screen and (max-width: 1199px) {
   .shape-group-21 .shape.shape-6 {
@@ -16604,15 +16605,30 @@ input {
   }
 }
 .shape-group-21 .shape.shape-7 {
-  right: 250px;
+  right: 30%;
   top: 40%;
   height: 20px;
   width: 20px;
+  animation: movingleftright3 infinite 22000ms;
 }
 @media only screen and (max-width: 1199px) {
   .shape-group-21 .shape.shape-7 {
     display: none;
   }
+}
+.shape-group-21 .shape.shape-8 {
+  left: 40%;
+  top: 25%;
+  height: 24px;
+  width: 24px;
+  animation: movingleftright1 infinite 35000ms;
+}
+.shape-group-21 .shape.shape-9 {
+  left: 30%;
+  top: 20%;
+  height: 20px;
+  width: 20px;
+  animation: movingleftright3 infinite 26000ms;
 }
 
 @keyframes movingleftright1 {
@@ -19367,8 +19383,8 @@ Frequently Asked Questions
 }
 .banner .banner-content .subtitle {
   font-size: var(--font-body-1);
-  margin-bottom: 40px;
-  width: 90%;
+  margin: 0 auto 40px;
+  width: 80%;
   font-size: 1.2rem;
 }
 @media only screen and (max-width: 767px) {

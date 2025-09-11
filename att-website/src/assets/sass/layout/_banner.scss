@@ -50,8 +50,8 @@
         }
         .subtitle {
             font-size: var(--font-body-1);
-            margin-bottom: 40px;
-            width: 90%;
+            margin:0 auto 40px;
+            width: 80%;
             font-size: 1.2rem;
             @media #{$sm-layout} {
                 width: 100%;

@@ -76,7 +76,7 @@ function getTemplate(target) {
       <div class="container-fluid">
         <div class="row align-items-end align-items-xl-end">
           <div class="col-lg-12 mx-auto pb-5">
-            <div class="banner-content text-center">
+            <div class="home-banner banner-content text-center">
               <div class="animate__animated fadeInUp" style="animation-duration: 1s">
                 <h6 class="mb-1">
                   Sleek.
@@ -189,6 +189,12 @@ function getTemplate(target) {
         </li>
         <li class="shape shape-7">
           <img src="../assets/img/shapes/bubble-41.png" alt="Bubble" />
+        </li>
+        <li class="shape shape-8">
+          <img src="../assets/img/shapes/bubble-14.png" alt="Bubble" />
+        </li>
+        <li class="shape shape-9">
+          <img src="../assets/img/shapes/bubble-40.png" alt="Bubble" />
         </li>
       </ul>
     </div>
