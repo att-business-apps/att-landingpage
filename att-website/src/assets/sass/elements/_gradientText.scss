@@ -3,70 +3,91 @@
 .gradient-text {
     &.yellow-light {
         background: linear-gradient(270deg, var(--logo-light) 21.9%, var(--color-primaryY) 53.55%);
+        background-size: 200% 200%;
         background-clip: text;
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
+        animation: gradientShift 3s ease-in-out infinite;
     }
     &.yello-dark {
         background: linear-gradient(270deg, var(--logo-light) 21.9%, var(--color-primaryY) 53.55%);
+        background-size: 200% 200%;
         background-clip: text;
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
+        animation: gradientShift 3s ease-in-out infinite;
     }
 
     &.blue-light {
         background: linear-gradient(270deg, var(--logo-light) 21.9%, var(--color-primary) 53.55%);
+        background-size: 200% 200%;
         background-clip: text;
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
+        animation: gradientShift 3s ease-in-out infinite;
     }
     &.blue-dark {
         background: linear-gradient(270deg, var(--logo-light) 21.9%, var(--color-primary) 53.55%);
+        background-size: 200% 200%;
         background-clip: text;
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
+        animation: gradientShift 3s ease-in-out infinite;
     }
 
     &.green-light {
         background: linear-gradient(270deg, var(--logo-light) 21.9%, var(--color-primaryG) 53.55%);
+        background-size: 200% 200%;
         background-clip: text;
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
+        animation: gradientShift 3s ease-in-out infinite;
     }
     &.green-dark {
         background: linear-gradient(270deg, var(--logo-light) 21.9%, var(--color-primaryG) 53.55%);
         background-clip: text;
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
+        animation: gradientShift 3s ease-in-out infinite;
     }
 }
 .text-ll {
     background: linear-gradient(270deg, var(--logo-light) 21.9%, var(--logo-light) 53.55%);
+    background-size: 200% 200%;
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    animation: gradientShift 3s ease-in-out infinite;
 }
 .text-lb {
     background: linear-gradient(270deg, var(--logo-light) 21.9%, var(--color-primary) 53.55%);
+    background-size: 200% 200%;
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    animation: gradientShift 3s ease-in-out infinite;
 }
 .text-lg {
     background: linear-gradient(270deg, var(--logo-light) 21.9%, var(--logo-green) 53.55%);
+    background-size: 200% 200%;
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    animation: gradientShift 3s ease-in-out infinite;
 }
 .text-lr {
     background: linear-gradient(270deg, var(--logo-light) 21.9%, var(--logo-red) 53.55%);
+    background-size: 200% 200%;
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    animation: gradientShift 3s ease-in-out infinite;
 }
 .text-ly {
     background: linear-gradient(270deg, var(--logo-light) 21.9%, var(--logo-yellow) 53.55%);
+    background-size: 200% 200%;
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    animation: gradientShift 3s ease-in-out infinite;
 }

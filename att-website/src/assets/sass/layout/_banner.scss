@@ -164,11 +164,14 @@
             content: "";
             height: 100%;
             left: 0;
-            opacity: 0.925;
+            opacity: 0.9;
             position: absolute;
             top: 0;
             width: 100%;
             z-index: -2;
+            @media #{$sm-layout} {
+                opacity: 0.85;
+            }
         }
         .banner-content {
             margin-top: 60px;
@@ -187,6 +190,9 @@
                 background-clip: text;
                 -webkit-text-fill-color: transparent;
                 background-image: linear-gradient(318deg, var(--color-gray-2) 5%, rgb(193, 195, 198) 74%, rgb(255, 255, 255) 93%);
+                background-size: 200% 200%;
+                animation: gradientShift 3s ease-in-out infinite;
+
                 @media #{$laptop-device} {
                     font-size: 74px;
                 }
@@ -206,6 +212,8 @@
                     background-clip: text;
                     -webkit-background-clip: text;
                     -webkit-text-fill-color: transparent;
+                    background-size: 200% 200%;
+                    animation: gradientShift 3s ease-in-out infinite;
                 }
             }
 
@@ -219,6 +227,8 @@
                     background-clip: text;
                     -webkit-background-clip: text;
                     -webkit-text-fill-color: transparent;
+                    background-size: 200% 200%;
+                    animation: gradientShift 3s ease-in-out infinite;
                 }
             }
         }

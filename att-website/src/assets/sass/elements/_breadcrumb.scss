@@ -81,6 +81,8 @@
             background-clip: text;
             -webkit-text-fill-color: transparent;
             background-image: linear-gradient(318deg, var(--color-gray-1) 5%, var(--color-white) 74%, var(--color-gray-4) 93%);
+            background-size: 200% 200%;
+            animation: gradientShift 3s ease-in-out infinite;
             @media #{$md-layout} {
                 width: 100%;
                 margin-bottom: 30px;

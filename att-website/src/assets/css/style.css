@@ -15492,76 +15492,105 @@ input {
     background-position: 0 0;
   }
 }
+@keyframes gradientShift {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
 .gradient-text.yellow-light {
   background: linear-gradient(270deg, var(--logo-light) 21.9%, var(--color-primaryY) 53.55%);
+  background-size: 200% 200%;
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  animation: gradientShift 3s ease-in-out infinite;
 }
 .gradient-text.yello-dark {
   background: linear-gradient(270deg, var(--logo-light) 21.9%, var(--color-primaryY) 53.55%);
+  background-size: 200% 200%;
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  animation: gradientShift 3s ease-in-out infinite;
 }
 .gradient-text.blue-light {
   background: linear-gradient(270deg, var(--logo-light) 21.9%, var(--color-primary) 53.55%);
+  background-size: 200% 200%;
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  animation: gradientShift 3s ease-in-out infinite;
 }
 .gradient-text.blue-dark {
   background: linear-gradient(270deg, var(--logo-light) 21.9%, var(--color-primary) 53.55%);
+  background-size: 200% 200%;
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  animation: gradientShift 3s ease-in-out infinite;
 }
 .gradient-text.green-light {
   background: linear-gradient(270deg, var(--logo-light) 21.9%, var(--color-primaryG) 53.55%);
+  background-size: 200% 200%;
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  animation: gradientShift 3s ease-in-out infinite;
 }
 .gradient-text.green-dark {
   background: linear-gradient(270deg, var(--logo-light) 21.9%, var(--color-primaryG) 53.55%);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  animation: gradientShift 3s ease-in-out infinite;
 }
 
 .text-ll {
   background: linear-gradient(270deg, var(--logo-light) 21.9%, var(--logo-light) 53.55%);
+  background-size: 200% 200%;
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  animation: gradientShift 3s ease-in-out infinite;
 }
 
 .text-lb {
   background: linear-gradient(270deg, var(--logo-light) 21.9%, var(--color-primary) 53.55%);
+  background-size: 200% 200%;
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  animation: gradientShift 3s ease-in-out infinite;
 }
 
 .text-lg {
   background: linear-gradient(270deg, var(--logo-light) 21.9%, var(--logo-green) 53.55%);
+  background-size: 200% 200%;
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  animation: gradientShift 3s ease-in-out infinite;
 }
 
 .text-lr {
   background: linear-gradient(270deg, var(--logo-light) 21.9%, var(--logo-red) 53.55%);
+  background-size: 200% 200%;
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  animation: gradientShift 3s ease-in-out infinite;
 }
 
 .text-ly {
   background: linear-gradient(270deg, var(--logo-light) 21.9%, var(--logo-yellow) 53.55%);
+  background-size: 200% 200%;
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  animation: gradientShift 3s ease-in-out infinite;
 }
 
 /*-------------------------
@@ -16900,6 +16929,8 @@ body.active-dark-mode .my_switcher button span.dark {
   background-clip: text;
   -webkit-text-fill-color: transparent;
   background-image: linear-gradient(318deg, var(--color-gray-1) 5%, var(--color-white) 74%, var(--color-gray-4) 93%);
+  background-size: 200% 200%;
+  animation: gradientShift 3s ease-in-out infinite;
 }
 @media only screen and (max-width: 991px) {
   .breadcrumb-banner .section-heading .title {
@@ -19511,11 +19542,16 @@ Frequently Asked Questions
   content: "";
   height: 100%;
   left: 0;
-  opacity: 0.925;
+  opacity: 0.9;
   position: absolute;
   top: 0;
   width: 100%;
   z-index: -2;
+}
+@media only screen and (max-width: 767px) {
+  .banner.banner-style-1:after {
+    opacity: 0.85;
+  }
 }
 .banner.banner-style-1 .banner-content {
   margin-top: 60px;
@@ -19539,6 +19575,8 @@ Frequently Asked Questions
   background-clip: text;
   -webkit-text-fill-color: transparent;
   background-image: linear-gradient(318deg, var(--color-gray-2) 5%, rgb(193, 195, 198) 74%, rgb(255, 255, 255) 93%);
+  background-size: 200% 200%;
+  animation: gradientShift 3s ease-in-out infinite;
 }
 @media only screen and (min-width: 1200px) and (max-width: 1599px) {
   .banner.banner-style-1 .banner-content .title {
@@ -19567,6 +19605,8 @@ Frequently Asked Questions
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  background-size: 200% 200%;
+  animation: gradientShift 3s ease-in-out infinite;
 }
 .banner.banner-style-1 .banner-content h4, .banner.banner-style-1 .banner-content .h4 {
   margin-top: 1rem;
@@ -19581,6 +19621,8 @@ Frequently Asked Questions
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  background-size: 200% 200%;
+  animation: gradientShift 3s ease-in-out infinite;
 }
 .banner.banner-style-1 .banner-thumbnail {
   z-index: 5;
