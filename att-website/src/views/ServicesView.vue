@@ -179,8 +179,9 @@
             market insights with creative thinking, we ensure that every project is guided by a well-defined plan,
             tailored to meet your unique business needs.</p>
         </div>
-        <div class="d-lg-flex justify-content-center">
-          <a class="amor-btn btn-borderd light" href="contact">Get Started</a>
+        <div class="d-flex justify-content-center gap-3 mt-5">
+          <a class="amor-btn btn-fill-primary btn-large" href="contact">Get Started</a>
+          <a href="/portfolio" class="amor-btn btn-borderd light">View Portfolio</a>
         </div>
       </div>
     </div>
@@ -296,8 +297,9 @@
           <p>At amortree Tech, we go beyond creating beautiful visuals. We focus on building a brand that resonates with
             your audience, creates a strong emotional connection, and helps you achieve long-term business success.</p>
         </div>
-        <div class="d-lg-flex justify-content-center">
-          <a class="amor-btn btn-borderd light" href="contact">Get Started</a>
+        <div class="d-flex justify-content-center gap-3 mt-5">
+          <a class="amor-btn btn-fill-primary btn-large" href="contact">Get Started</a>
+          <a href="/portfolio" class="amor-btn btn-borderd light">View Portfolio</a>
         </div>
       </div>
     </div>
@@ -411,8 +413,9 @@
             also resonate with your audience. At amortree Tech, we help your brand make a statement from the very first
             glance.</p>
         </div>
-        <div class="d-lg-flex justify-content-center">
-          <a class="amor-btn btn-borderd light" href="contact">Get Started</a>
+        <div class="d-flex justify-content-center gap-3 mt-5">
+          <a class="amor-btn btn-fill-primary btn-large" href="contact">Get Started</a>
+          <a href="/portfolio" class="amor-btn btn-borderd light">View Portfolio</a>
         </div>
       </div>
     </div>
@@ -544,8 +547,9 @@
             our team is committed to bringing your vision to life with a focus on usability, scalability, and
             performance.</p>
         </div>
-        <div class="d-lg-flex justify-content-center">
-          <a class="amor-btn btn-borderd light" href="contact">Get Started</a>
+        <div class="d-flex justify-content-center gap-3 mt-5">
+          <a class="amor-btn btn-fill-primary btn-large" href="contact">Get Started</a>
+          <a href="/portfolio" class="amor-btn btn-borderd light">View Portfolio</a>
         </div>
       </div>
     </div>
@@ -660,8 +664,9 @@
             outstanding user experience. By concentrating on UI/UX design, we ensure that your app is visually engaging,
             easy to navigate, and primed for success when it moves into development.</p>
         </div>
-        <div class="d-lg-flex justify-content-center">
-          <a class="amor-btn btn-borderd light" href="contact">Get Started</a>
+        <div class="d-flex justify-content-center gap-3 mt-5">
+          <a class="amor-btn btn-fill-primary btn-large" href="contact">Get Started</a>
+          <a href="/portfolio" class="amor-btn btn-borderd light">View Portfolio</a>
         </div>
       </div>
     </div>
@@ -791,8 +796,9 @@
             reduce operational complexities, and scale your systems to meet the demands of a dynamic business
             environment.</p>
         </div>
-        <div class="d-lg-flex justify-content-center">
-          <a class="amor-btn btn-borderd light" href="contact">Get Started</a>
+        <div class="d-flex justify-content-center gap-3 mt-5">
+          <a class="amor-btn btn-fill-primary btn-large" href="contact">Get Started</a>
+          <a href="/portfolio" class="amor-btn btn-borderd light">View Portfolio</a>
         </div>
       </div>
     </div>
