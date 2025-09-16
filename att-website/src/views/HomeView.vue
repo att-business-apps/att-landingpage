@@ -84,7 +84,7 @@ function getTemplate(target) {
                 </h6>
                 <h1 class="title d-inline">
                   Top <span class="gradient-text-light">UI/UX Design</span> & <span class="gradient-text-light">Web
-                    Development Agency</span> in Bengaluru
+                    Development</span> Studio in Bengaluru
                 </h1>
                 <h2 class="h4">
                   Custom <span class="gradient-text-light">Web Development</span> & <span
@@ -502,8 +502,8 @@ function getTemplate(target) {
               <div class="section-heading heading-left mb-0">
                 <span class="subtitle">Who we are</span>
                 <h2 class="title mb--40">
-                  Professional <span class="gradient-text-light">Web Development</span> &amp;
-                  <span class="gradient-text-light">IT Solutions</span> Provider
+                  Professional <span class="gradient-text-light text-lg">Web Development</span> &amp;
+                  <span class="gradient-text-light text-lg">IT Solutions</span> Provider
                 </h2>
                 <p>
                   At amortree Tech, we're more than just an <strong>IT consulting company</strong>;

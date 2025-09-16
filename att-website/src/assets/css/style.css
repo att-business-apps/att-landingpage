@@ -15660,8 +15660,10 @@ input {
 .section-heading .title .gradient-text-light {
   background: linear-gradient(270deg, var(--logo-light) 21.9%, var(--color-primaryG) 53.55%);
   background-clip: text;
+  background-size: 200% 200%;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  animation: gradientShift 3s ease-in-out infinite;
 }
 .section-heading p {
   font-size: var(--font-body-1);
@@ -15885,7 +15887,7 @@ input {
 }
 @media only screen and (min-width: 1600px) and (max-width: 1919px) {
   .shape-group-7 .shape.shape-1 {
-    right: 28%;
+    right: 30%;
   }
 }
 @media only screen and (min-width: 1200px) and (max-width: 1599px) {
@@ -18292,7 +18294,7 @@ Frequently Asked Questions
   font-size: 20px;
 }
 .header-action .social-icon-list li a img {
-  filter: grayscale(0.75);
+  filter: grayscale(1);
   -webkit-transition: all 0.3s ease-in-out;
   -moz-transition: all 0.3s ease-in-out;
   -ms-transition: all 0.3s ease-in-out;
@@ -19542,7 +19544,7 @@ Frequently Asked Questions
   content: "";
   height: 100%;
   left: 0;
-  opacity: 0.9;
+  opacity: 0.8;
   position: absolute;
   top: 0;
   width: 100%;
@@ -20059,12 +20061,6 @@ Frequently Asked Questions
   .serviceSec .section-heading .title {
     width: 100% !important;
   }
-}
-.serviceSec .section-heading .title .gradient-text-light {
-  background: linear-gradient(270deg, var(--logo-light) 21.9%, var(--color-primary) 53.55%);
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
 }
 .serviceSec .section-heading p {
   color: var(--color-text-dark);

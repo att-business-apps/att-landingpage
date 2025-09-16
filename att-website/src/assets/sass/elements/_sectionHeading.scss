@@ -63,8 +63,10 @@
         .gradient-text-light {
             background: linear-gradient(270deg, var(--logo-light) 21.9%, var(--color-primaryG) 53.55%);
             background-clip: text;
+            background-size: 200% 200%;
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
+            animation: gradientShift 3s ease-in-out infinite;
         }
     }
     p {
@@ -288,7 +290,7 @@
             top: 40%;
             right: 32%;
             @media #{$extra-device} {
-                right: 28%;
+                right: 30%;
             }
             @media #{$laptop-device} {
                 right: 22%;
