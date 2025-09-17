@@ -137,17 +137,17 @@
 
 <style scoped>
 h2 {
-    color: #9acdf6;
+    color: #2071B7;
     font-weight: 500;
 }
 
 .project-details .detail-item {
-    border-left: 3px solid #9acdf6;
+    border-left: 3px solid #2071B7;
     padding-left: 1rem;
 }
 
 .project-details .detail-item h5 {
-    color: #9acdf6;
+    color: #2071B7;
     margin-bottom: 0.5rem;
 }
 
