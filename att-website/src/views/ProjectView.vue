@@ -66,10 +66,12 @@
 
 <script setup>
 import { ref, computed } from "vue";
-
-function asset(path) {
-  return new URL(path, import.meta.url).href;
-}
+import imgUaeLinks from "../assets/img/project/c1/project-thum-uaeLinks.png";
+import imgSolvedCube from "../assets/img/project/c2/project-thum-sc.png";
+import imgMicrorelic from "../assets/img/project/c3/project-thum-mr.png";
+import imgSteadyAsset from "../assets/img/project/c4/project-thum-sa.png";
+import imgAlShamil from "../assets/img/project/c5/project-thum-als.png";
+import imgSamsiddhi from "../assets/img/project/c9/project-thum-sd.png";
 
 const categories = [
   "All",
@@ -86,7 +88,7 @@ const projects = ref([
     id: "uae-links",
     title: "UAE Links",
     href: "project/uae-links",
-    img: asset("../assets/img/project/c1/project-thum-uaeLinks.png"),
+    img: imgUaeLinks,
     subtitle: "UI/UX Design, Website, Google Analytics Integration",
     categories: ["UI/UX Design", "Website"],
   },
@@ -94,7 +96,7 @@ const projects = ref([
     id: "solved-cube",
     title: "Solved Cude",
     href: "project/solved-cube-it-solutions",
-    img: asset("../assets/img/project/c2/project-thum-sc.png"),
+    img: imgSolvedCube,
     subtitle: "Logo, Branding, UI/UX Design, Website, GMB",
     categories: ["Branding", "Graphics", "UI/UX Design", "Website"],
   },
@@ -102,7 +104,7 @@ const projects = ref([
     id: "microrelic",
     title: "Microrelic",
     href: "project/microrelic",
-    img: asset("../assets/img/project/c3/project-thum-mr.png"),
+    img: imgMicrorelic,
     subtitle: "Branding, UI/UX Design, Website, GMB",
     categories: ["Branding", "Graphics", "UI/UX Design", "Website"],
   },
@@ -110,7 +112,7 @@ const projects = ref([
     id: "steadyasset",
     title: "SteadyAsset",
     href: "project/steadyasset",
-    img: asset("../assets/img/project/c4/project-thum-sa.png"),
+    img: imgSteadyAsset,
     subtitle: "Logo, Branding, UI/UX Design, Website, GMB",
     categories: ["Branding", "Graphics", "UI/UX Design", "Website"],
   },
@@ -118,7 +120,7 @@ const projects = ref([
     id: "al-shamil",
     title: "Al-Shamil",
     href: "project/al-shamil-computers",
-    img: asset("../assets/img/project/c5/project-thum-als.png"),
+    img: imgAlShamil,
     subtitle: "UI/UX Design, Website",
     categories: ["UI/UX Design", "Website"],
   },
@@ -126,7 +128,7 @@ const projects = ref([
     id: "samsiddhi-designs",
     title: "Samsiddhi Designs",
     href: "project/samsiddhidesigns",
-    img: asset("../assets/img/project/c9/project-thum-sd.png"),
+    img: imgSamsiddhi,
     subtitle: "Logo, Branding, UI/UX Design, Website, GMB",
     categories: ["Branding", "Graphics", "UI/UX Design", "Website"],
   },
