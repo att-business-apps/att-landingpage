@@ -76,7 +76,7 @@
                 <div class="col-lg-6">
                     <div class="project-image">
                         <img src="../../assets/img/project/c7/project-sd.png" class="w-100 rounded"
-                            alt="Microrelic Technologies - Complete Brand Identity and Web Development Project">
+                            alt="SaveDesk Dashboard UI/UX Redesign Project">
                     </div>
                 </div>
             </div>
@@ -101,11 +101,11 @@
             <div class="row">
                 <div class="col-12">
                     <img src="../../assets/img/project/c7/project-sd-widgets.png" class="img-fluid mb-5"
-                        alt="Solved Cube IT Solutions Project">
+                        alt="SaveDesk Project - Dashboard Widgets">
                 </div>
                 <div class="col-12">
                     <img src="../../assets/img/project/c7/project-sd-screen.png" class="img-fluid mb-5"
-                        alt="Solved Cube IT Solutions Project">
+                        alt="SaveDesk Project - Dashboard Screens">
                 </div>
             </div>
         </div>
