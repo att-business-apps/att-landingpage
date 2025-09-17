@@ -17546,7 +17546,7 @@ Frequently Asked Questions
    Project
 -------------------------*/
 .project-grid {
-  box-shadow: 0 55px 86px -35px var(--color-light);
+  box-shadow: 0 0px 50px -40px var(--color-light);
   border-radius: 30px;
   margin-bottom: 40px;
 }
@@ -20510,6 +20510,38 @@ Service
 }
 .project-overview a.text-primary:hover {
   color: var(--logo-blue) !important;
+}
+
+.att-filter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+@media only screen and (max-width: 991px) {
+  .att-filter {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+    -ms-overflow-style: -ms-autohiding-scrollbar;
+    justify-content: space-between;
+    scroll-snap-type: x mandatory;
+  }
+}
+.att-filter button {
+  padding: 6px 20px;
+}
+@media only screen and (max-width: 991px) {
+  .att-filter button {
+    flex: 1;
+    -webkit-flex: 1;
+    text-align: center;
+    min-width: max-content;
+    scroll-snap-align: start;
+  }
 }
 
 /*-------------------------

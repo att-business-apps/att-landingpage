@@ -547,3 +547,34 @@ Service
         }
     }
 }
+
+.att-filter {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap; 
+    gap: 1rem;
+
+    @media #{$md-layout} {
+        display: flex; 
+        flex-wrap: nowrap; 
+        overflow-x: auto; 
+        overflow-y: hidden;
+        -webkit-overflow-scrolling: touch; 
+        -ms-overflow-style: -ms-autohiding-scrollbar;
+        justify-content: space-between;
+        scroll-snap-type: x mandatory;
+
+    }
+
+    button {
+        padding: 6px 20px;
+        @media #{$md-layout} {
+            flex: 1;
+            -webkit-flex: 1;
+            text-align: center;
+            min-width: max-content;
+            scroll-snap-align: start;
+        }
+    }
+}

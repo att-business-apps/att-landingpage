@@ -113,7 +113,7 @@
                     <div class="color-swatch">
                         <div class="swatch" style="background:#20B2AA"></div>
                         <div class="swatch-meta">
-                            <div class="label">Primary</div>
+                            <div class="text-dark">Primary</div>
                             <div class="hex">#20B2AA</div>
                         </div>
                     </div>
@@ -122,7 +122,7 @@
                     <div class="color-swatch">
                         <div class="swatch" style="background:#008B8B"></div>
                         <div class="swatch-meta">
-                            <div class="label">Secondary</div>
+                            <div class="text-dark">Secondary</div>
                             <div class="hex">#008B8B</div>
                         </div>
                     </div>
@@ -131,7 +131,7 @@
                     <div class="color-swatch">
                         <div class="swatch" style="background:#f0b90b"></div>
                         <div class="swatch-meta">
-                            <div class="label">Accent</div>
+                            <div class="text-dark">Accent</div>
                             <div class="hex">#F0B90B</div>
                         </div>
                     </div>
@@ -140,7 +140,7 @@
                     <div class="color-swatch">
                         <div class="swatch" style="background:#04505F"></div>
                         <div class="swatch-meta">
-                            <div class="label">Dark</div>
+                            <div class="text-dark">Dark</div>
                             <div class="hex">#04505F</div>
                         </div>
                     </div>
@@ -149,7 +149,7 @@
                     <div class="color-swatch">
                         <div class="swatch" style="background:#404040"></div>
                         <div class="swatch-meta">
-                            <div class="label">Gray</div>
+                            <div class="text-dark">Gray</div>
                             <div class="hex">#404040</div>
                         </div>
                     </div>
@@ -158,7 +158,7 @@
                     <div class="color-swatch">
                         <div class="swatch" style="background:#EBF1F0; border:1px solid #e9ecef"></div>
                         <div class="swatch-meta">
-                            <div class="label">Background</div>
+                            <div class="text-dark">Background</div>
                             <div class="hex">#EBF1F0</div>
                         </div>
                     </div>
@@ -265,8 +265,7 @@ h2 {
 }
 
 .color-swatch .hex {
-    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
     font-size: .85rem;
-    color: #6c757d;
+    color: var(--color-dark);
 }
 </style>

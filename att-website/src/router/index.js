@@ -75,7 +75,12 @@ const router = createRouter({
       component: () => import("../views/project/ProjectAlShamilView.vue"),
     },
     {
-      path: "/project/samsiddhidesigns",
+      path: "/project/savedesk",
+      name: "SaveDesk",
+      component: () => import("../views/project/ProjectSaveDeskView.vue"),
+    },
+    {
+      path: "/project/samsiddhi-designs",
       name: "samsiddhidesigns",
       component: () =>
         import("../views/project/ProjectSamsiddhiDesignsView.vue"),

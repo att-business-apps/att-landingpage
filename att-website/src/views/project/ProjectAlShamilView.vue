@@ -115,7 +115,7 @@
             <div class="cta-buttons mt-5">
                 <a href="/project/steadyasset" class="amor-btn light"><i class="icofont-rounded-double-left me-3"></i>
                     SteadyAsset </a>
-                <a href="/project/samsiddhidesigns" class="amor-btn light">Samsiddhi Designs <i
+                <a href="/project/savedesk" class="amor-btn light">SaveDesk <i
                         class="icofont-rounded-double-right ms-3"></i></a>
             </div>
         </div>

@@ -356,12 +356,12 @@ function getTemplate(target) {
             <div class="col-md-6 project branding">
               <div class="project-grid">
                 <div class="thumbnail">
-                  <a href="project/samsiddhidesigns">
+                  <a href="project/samsiddhi-designs">
                     <img src="../assets/img/project/c9/project-thum-sd.png" alt="project">
                   </a>
                 </div>
                 <div class="content">
-                  <h4 class="title"><a href="project/samsiddhidesigns">Samsiddhi Designs</a></h4>
+                  <h4 class="title"><a href="project/samsiddhi-designs">Samsiddhi Designs</a></h4>
                   <span class="subtitle">Logo, Branding, UI/UX Design, Website, GMB</span>
                 </div>
               </div>
