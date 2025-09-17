@@ -4,7 +4,7 @@
 .call-to-action-area {
     padding: 140px 0 100px;
     position: relative;
-    z-index: 1;
+    z-index: 0;
     @media #{$smlg-device} {
        padding: 100px 0;
     }
