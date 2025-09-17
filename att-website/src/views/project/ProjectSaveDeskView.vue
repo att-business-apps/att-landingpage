@@ -104,8 +104,18 @@
                         alt="SaveDesk - FinTech Dashboard Redesign Project">
                 </div>
                 <div class="col-12">
-                    <img src="../../assets/img/project/c7/project-sd-screen.png" class="img-fluid mt-5"
+                    <img src="../../assets/img/project/c7/project-sd-screen.png" class="img-fluid my-5"
                         alt="SaveDesk - FinTech Dashboard Redesign Project">
+                </div>
+            </div>
+
+            <div class="section-heading heading-center mt-5 mb-0">
+                <h2 class="title text-start">Dark Theme</h2>
+                <div class="row">
+                    <div class="col-12">
+                        <img src="../../assets/img/project/c7/sd-db-dr.png" class="img-fluid"
+                            alt="SaveDesk - FinTech Dashboard Redesign Project">
+                    </div>
                 </div>
             </div>
         </div>
