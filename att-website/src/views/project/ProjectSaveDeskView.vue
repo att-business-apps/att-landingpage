@@ -135,6 +135,142 @@
     </section>
 </template>
 
+<script setup>
+import { onMounted, onBeforeUnmount } from 'vue'
+
+const cleanupFunctions = []
+
+function initializeThemeSlide(container) {
+    if (!container || container.dataset.tsInited === '1') return
+    const images = container.querySelectorAll('img')
+    if (!images || images.length < 2) return
+
+    container.dataset.tsInited = '1'
+    container.classList.add('ts-ready')
+
+    const bottomImage = images[0]
+    const topImage = images[1]
+
+    // Ensure bottom image defines the height
+    bottomImage.classList.add('ts-bottom')
+
+    // Create overlay wrapper and move top image inside
+    const overlay = document.createElement('div')
+    overlay.className = 'ts-overlay'
+    topImage.parentNode.insertBefore(overlay, topImage)
+    overlay.appendChild(topImage)
+
+    // Create drag handle
+    const handle = document.createElement('div')
+    handle.className = 'ts-handle'
+    container.appendChild(handle)
+
+    let rect = null
+    let isDragging = false
+    let value = 0.5
+
+    function clamp(v) {
+        if (v < 0) return 0
+        if (v > 1) return 1
+        return v
+    }
+
+    function setValue(v) {
+        value = clamp(v)
+        const percent = (value * 100).toFixed(4) + '%'
+        overlay.style.width = percent
+        handle.style.left = percent
+    }
+
+    function updateRect() {
+        rect = container.getBoundingClientRect()
+    }
+
+    function getClientX(e) {
+        if (e.touches && e.touches[0]) return e.touches[0].clientX
+        return e.clientX
+    }
+
+    function move(e) {
+        if (!rect) updateRect()
+        const x = getClientX(e)
+        const relative = (x - rect.left) / rect.width
+        setValue(relative)
+    }
+
+    function onPointerDown(e) {
+        isDragging = true
+        container.classList.add('ts-dragging')
+        updateRect()
+        move(e)
+        window.addEventListener('mousemove', onPointerMove)
+        window.addEventListener('mouseup', onPointerUp)
+        window.addEventListener('touchmove', onPointerMove, { passive: false })
+        window.addEventListener('touchend', onPointerUp)
+    }
+
+    function onPointerMove(e) {
+        if (!isDragging) return
+        if (e.cancelable) e.preventDefault()
+        move(e)
+    }
+
+    function onPointerUp() {
+        isDragging = false
+        container.classList.remove('ts-dragging')
+        window.removeEventListener('mousemove', onPointerMove)
+        window.removeEventListener('mouseup', onPointerUp)
+        window.removeEventListener('touchmove', onPointerMove)
+        window.removeEventListener('touchend', onPointerUp)
+    }
+
+    // Start drag from handle
+    handle.addEventListener('mousedown', onPointerDown)
+    handle.addEventListener('touchstart', onPointerDown, { passive: false })
+
+    // Clicking anywhere on the image also moves the handle
+    container.addEventListener('mousedown', function (e) {
+        if (e.target === handle) return
+        onPointerDown(e)
+    })
+    container.addEventListener('touchstart', function (e) {
+        if (e.target === handle) return
+        onPointerDown(e)
+    }, { passive: false })
+
+    const onResize = () => {
+        updateRect()
+        setValue(value)
+    }
+    window.addEventListener('resize', onResize)
+
+    // Initialize centered
+    setValue(0.5)
+
+    return () => {
+        handle.removeEventListener('mousedown', onPointerDown)
+        handle.removeEventListener('touchstart', onPointerDown)
+        container.removeEventListener('mousedown', onPointerDown)
+        container.removeEventListener('touchstart', onPointerDown)
+        window.removeEventListener('resize', onResize)
+    }
+}
+
+onMounted(() => {
+    const containers = document.querySelectorAll('.theme-slide')
+    containers.forEach((el) => {
+        const cleanup = initializeThemeSlide(el)
+        if (typeof cleanup === 'function') cleanupFunctions.push(cleanup)
+    })
+})
+
+onBeforeUnmount(() => {
+    cleanupFunctions.forEach((fn) => {
+        try { fn() } catch (e) { /* noop */ }
+    })
+})
+</script>
+
 <style scoped>
 h2 {
     color: #2071B7;
@@ -153,5 +289,74 @@ h2 {
 
 .section-padding p {
     width: 100%;
+}
+
+/* Image comparison slider */
+.theme-slide {
+    position: relative;
+    display: block;
+    max-width: 100%;
+    overflow: hidden;
+    border-radius: 12px;
+}
+
+.theme-slide img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.theme-slide .ts-overlay {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 50%;
+    overflow: hidden;
+}
+
+.theme-slide .ts-overlay img {
+    width: 100%;
+    height: auto;
+}
+
+.theme-slide .ts-handle {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 100%;
+    width: 2px;
+    background: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1), 0 0 8px rgba(0, 0, 0, 0.15);
+    cursor: ew-resize;
+}
+
+.theme-slide .ts-handle::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.95);
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.25);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.theme-slide .ts-handle::after {
+    content: '\2194';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 16px;
+    color: #2071B7;
+}
+
+.theme-slide.ts-dragging .ts-handle::before {
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.35);
 }
 </style>
