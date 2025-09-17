@@ -10,6 +10,13 @@
         <div class="section-heading heading-left">
           <h1 class="title h2">Creative courage drives our story</h1>
           <p>Gain first-hand insight into how our processes come to life across every project we undertake.</p>
+          <div class="mt-3">
+            <div class="d-flex flex-wrap gap-2">
+              <button v-for="cat in categories" :key="cat" type="button" class="amor-btn" :class="activeCategory === cat ? 'btn-fill-primary' : 'btn-borderd light'" @click="activeCategory = cat">
+                {{ cat }}
+              </button>
+            </div>
+          </div>
         </div>
       </div>
       <div class="banner-thumbnail">
@@ -32,13 +39,6 @@
 
   <section class="section section-padding">
     <div class="container-fluid">
-      <div class="mb-4">
-        <div class="d-flex flex-wrap gap-2">
-          <button v-for="cat in categories" :key="cat" type="button" class="amor-btn" :class="activeCategory === cat ? 'btn-fill-primary' : 'btn-borderd light'" @click="activeCategory = cat">
-            {{ cat }}
-          </button>
-        </div>
-      </div>
       <div class="row">
         <div class="col-md-6" v-for="item in filteredProjects" :key="item.id">
           <div class="project-grid">
