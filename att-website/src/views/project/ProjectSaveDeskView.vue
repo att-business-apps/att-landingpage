@@ -76,7 +76,7 @@
                 <div class="col-lg-6">
                     <div class="project-image">
                         <img src="../../assets/img/project/c7/project-sd.png" class="w-100 rounded"
-                            alt="Microrelic Technologies - Complete Brand Identity and Web Development Project">
+                            alt="SaveDesk - FinTech Dashboard Redesign Project">
                     </div>
                 </div>
             </div>
@@ -101,11 +101,11 @@
             <div class="row">
                 <div class="col-12">
                     <img src="../../assets/img/project/c7/project-sd-widgets.png" class="img-fluid mb-5"
-                        alt="Solved Cube IT Solutions Project">
+                        alt="SaveDesk - FinTech Dashboard Redesign Project">
                 </div>
                 <div class="col-12">
-                    <img src="../../assets/img/project/c7/project-sd-screen.png" class="img-fluid mb-5"
-                        alt="Solved Cube IT Solutions Project">
+                    <img src="../../assets/img/project/c7/project-sd-screen.png" class="img-fluid mt-5"
+                        alt="SaveDesk - FinTech Dashboard Redesign Project">
                 </div>
             </div>
         </div>
@@ -126,10 +126,10 @@
             </div>
             <div class="cta-buttons mt-5">
                 <a href="/project/al-shamil-computers" class="amor-btn light"><i
-                        class="icofont-rounded-double-left me-3"></i>
+                        class="icofont-rounded-double-left me-3" alt="Previous Project"></i>
                     Al-Shamil</a>
                 <a href="/project/samsiddhi-designs" class="amor-btn light">Samsiddhi Designs <i
-                        class="icofont-rounded-double-right ms-3"></i></a>
+                        class="icofont-rounded-double-right ms-3" alt="Next Project"></i></a>
             </div>
         </div>
     </section>
