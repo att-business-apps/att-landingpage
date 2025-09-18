@@ -1,4 +1,4 @@
-<script setup lang="ts">
+<script setup>
 import { VueCompareImage } from 'vue3-compare-image'
 
 // cassets
