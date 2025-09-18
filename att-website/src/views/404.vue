@@ -9,8 +9,8 @@
                             <p>It seems the page you're looking for doesn't exist or has been moved. Let’s get you back
                                 on track!</p>
                             <a class="amor-btn btn-fill-primary" href="/">Go Back</a>
-                            <p class="mt-5">Explore our <a href="/whatWeDo">services</a> or <a
-                                    href="whereToFind">contact us</a> for help.</p>
+                            <p class="mt-5">Explore our <a href="/whatWeDo">services</a> or <a href="contact">contact
+                                    us</a> for help.</p>
                         </div>
                     </div>
                 </div>
