@@ -31,7 +31,7 @@
   </div>
 
   <section class="section section-padding">
-    <div class="containe">
+    <div class="">
       <div class="row align-items-center justify-content-center">
         <div class="col">
           <div class="my-lg-5 my-4">
@@ -93,7 +93,7 @@ const projects = ref([
     title: "UAE Links",
     href: "project/uae-links",
     img: new URL("../assets/img/project/c1/project-thum-uaeLinks.png", import.meta.url).href,
-    subtitle: "UI/UX Design, Website, Google Analytics Integration",
+    subtitle: "UI/UX Design, Website, GA",
     categories: ["UI/UX Design", "Website"],
   },
   {
@@ -101,7 +101,7 @@ const projects = ref([
     title: "Solved Cude",
     href: "project/solved-cube-it-solutions",
     img: new URL("../assets/img/project/c2/project-thum-sc.png", import.meta.url).href,
-    subtitle: "Logo, Branding, UI/UX Design, Website, GMB",
+    subtitle: "Logo, Branding, UI/UX Design, Website, GMB, GA",
     categories: ["Branding", "Logo", "UI/UX Design", "Website", "GMB"],
   },
   {
@@ -109,7 +109,7 @@ const projects = ref([
     title: "Microrelic",
     href: "project/microrelic",
     img: new URL("../assets/img/project/c3/project-thum-mr.png", import.meta.url).href,
-    subtitle: "Branding, UI/UX Design, Website, GMB",
+    subtitle: "Branding, UI/UX Design, Website, Redesign, GMB, GA",
     categories: ["UI/UX Design", "Website", "GMB"],
   },
   {
@@ -117,7 +117,7 @@ const projects = ref([
     title: "SteadyAsset",
     href: "project/steadyasset",
     img: new URL("../assets/img/project/c4/project-thum-sa.png", import.meta.url).href,
-    subtitle: "Logo, Branding, UI/UX Design, Website, GMB",
+    subtitle: "Logo, Branding, UI/UX Design, Website, GMB, GA",
     categories: ["Branding", "Logo", "UI/UX Design", "Website", "GMB"],
   },
   {
@@ -125,7 +125,7 @@ const projects = ref([
     title: "Al-Shamil",
     href: "project/al-shamil-computers",
     img: new URL("../assets/img/project/c5/project-thum-als.png", import.meta.url).href,
-    subtitle: "UI/UX Design, Website",
+    subtitle: "UI/UX Design, Website, GA",
     categories: ["UI/UX Design", "Website"],
   },
   {
@@ -133,7 +133,7 @@ const projects = ref([
     title: "SaveDesk",
     href: "project/savedesk",
     img: new URL("../assets/img/project/c7/project-thum-sd.png", import.meta.url).href,
-    subtitle: "UI/UX Design, Information Architecture, Wireframing, High-Fidelity Prototypes",
+    subtitle: "edesign, UI/UX Design, Wireframing, High-Fidelity Prototype",
     categories: ["UI/UX Design"],
   },
   {
@@ -141,7 +141,7 @@ const projects = ref([
     title: "Samsiddhi Designs",
     href: "project/samsiddhi-designs",
     img: new URL("../assets/img/project/c9/project-thum-sd.png", import.meta.url).href,
-    subtitle: "Logo, Branding, UI/UX Design, Website, GMB",
+    subtitle: "Logo, Branding, UI/UX Design, Website, GMB, GA",
     categories: ["Branding", "Logo", "UI/UX Design", "Website", "GMB"],
   },
 ]);

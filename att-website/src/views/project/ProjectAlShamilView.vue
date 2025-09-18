@@ -52,7 +52,7 @@
                             </div>
                             <div class="detail-item mb-3">
                                 <h5 class="title">Services Provided</h5>
-                                <p>Website Design & Development, UI/UX, Google Analytics Integration</p>
+                                <p>Website Design & Development, UI/UX, GA</p>
                             </div>
                             <div class="detail-item mb-3">
                                 <h5 class="title">Technology</h5>

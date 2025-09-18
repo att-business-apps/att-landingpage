@@ -67,8 +67,8 @@ import after from '@/assets/img/project/c7/after.png'
                             </div>
                             <div class="detail-item mb-3">
                                 <h5 class="title">Services Provided</h5>
-                                <p>User Research & Requirement Analysis, Information Architecture, Wireframing &
-                                    High-Fidelity Prototypes, UI/UX Design, Design Handoff & Support</p>
+                                <p>Redesign, User Research & Requirement Analysis, Information Architecture, Wireframing
+                                    & High-Fidelity Prototypes, UI/UX Design, Design Handoff & Support</p>
                             </div>
                             <div class="detail-item mb-3">
                                 <h5 class="title">Industry</h5>
@@ -97,17 +97,6 @@ import after from '@/assets/img/project/c7/after.png'
     <section class="section section-padding bg-color-light">
         <div class="container">
             <div class="section-heading heading-center mb-5">
-                <h2 class="title text-start">Before & After</h2>
-                <div class="row">
-                    <div class="col-12">
-                        <div style="width: auto; height: auto;" class="mb-5">
-                            <VueCompareImage :left-image="before" :right-image="after" />
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="section-heading heading-center mb-5">
                 <h2 class="title text-start">Our Process</h2>
                 <p class="text-start">At Amortree Tech, we partnered with SaveDesk to enhance user engagement and
                     usability by redesigning their dashboard UI/UX. Our process began with stakeholder discussions and
@@ -117,6 +106,15 @@ import after from '@/assets/img/project/c7/after.png'
                     interface with streamlined workflows and visual consistency. The redesigned dashboard ensures that
                     complex banking data is presented simply, empowering users to make faster, data-driven financial
                     decisions.</p>
+            </div>
+
+            <div class="row">
+                <h4 class="title text-start">Before & After</h4>
+                <div class="col-12">
+                    <div style="width: auto; height: auto;" class="mb-5">
+                        <VueCompareImage :left-image="before" :right-image="after" />
+                    </div>
+                </div>
             </div>
 
             <div class="row">
@@ -162,7 +160,8 @@ import after from '@/assets/img/project/c7/after.png'
 </template>
 
 <style scoped>
-h2 {
+h2,
+h4 {
     color: #2071B7;
     font-weight: 500;
 }

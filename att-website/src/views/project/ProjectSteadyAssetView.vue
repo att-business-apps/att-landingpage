@@ -53,7 +53,7 @@
                             </div>
                             <div class="detail-item mb-3">
                                 <h5 class="title">Services Provided</h5>
-                                <p>Logo, Website, UI/UX, Google Analytics Integration, GMB Setup</p>
+                                <p>Logo, Website, UI/UX, GA, GMB Setup</p>
                             </div>
                             <div class="detail-item mb-3">
                                 <h5 class="title">Technology</h5>
@@ -197,7 +197,7 @@
                 <p class="text-start">Our collaboration with SteadyAsset delivered a strong, professional brand identity
                     and a user-friendly digital platform. The logo reinforced trust and recognition, while the website
                     provided seamless navigation and clear presentation of investment options, boosting user engagement.
-                    With Google Analytics integration, the client gained actionable insights into traffic sources, user
+                    With Google Analytics Integration, the client gained actionable insights into traffic sources, user
                     behavior, and top-performing pages. The monthly blog strategy enhanced organic reach, improved SEO
                     rankings, and positioned SteadyAsset as a thought leader in alternative investments, building
                     credibility and attracting a growing investor community.</p>

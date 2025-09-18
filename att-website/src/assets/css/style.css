@@ -20523,7 +20523,6 @@ Service
   width: 100%;
   margin: 0 auto;
   padding: 1rem;
-  left: 0.9rem;
   z-index: 999;
   background-color: rgba(39, 39, 47, 0.9);
   -webkit-backdrop-filter: blur(6px);
@@ -20533,6 +20532,7 @@ Service
 }
 @media only screen and (max-width: 991px) {
   .att-filter {
+    left: 0.9rem;
     display: flex;
     flex-wrap: nowrap;
     overflow-x: auto;

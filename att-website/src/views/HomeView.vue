@@ -349,7 +349,7 @@ function getTemplate(target) {
                 </div>
                 <div class="content">
                   <h4 class="title"><a href="project/steadyasset">SteadyAsset</a></h4>
-                  <span class="subtitle">Logo, Branding, UI/UX Design, Website, GMB</span>
+                  <span class="subtitle">Logo, Branding, UI/UX Design, Website, GMB, GA</span>
                 </div>
               </div>
             </div>
@@ -362,8 +362,7 @@ function getTemplate(target) {
                 </div>
                 <div class="content">
                   <h4 class="title"><a href="project/savedesk">SaveDesk</a></h4>
-                  <span class="subtitle">UI/UX Design, Information Architecture, Wireframing, High-Fidelity
-                    Prototypes</span>
+                  <span class="subtitle">Redesign, UI/UX Design, Wireframing, High-Fidelity Prototype</span>
                 </div>
               </div>
             </div>
@@ -376,7 +375,7 @@ function getTemplate(target) {
                 </div>
                 <div class="content">
                   <h4 class="title"><a href="project/samsiddhi-designs">Samsiddhi Designs</a></h4>
-                  <span class="subtitle">Logo, Branding, UI/UX Design, Website, GMB</span>
+                  <span class="subtitle">Logo, Branding, UI/UX Design, Website, GMB, GA</span>
                 </div>
               </div>
             </div>
@@ -389,7 +388,7 @@ function getTemplate(target) {
                 </div>
                 <div class="content">
                   <h4 class="title"><a href="project/uae-links">UAE Links</a></h4>
-                  <span class="subtitle">UI/UX Design, Website, Google Analytics Integration</span>
+                  <span class="subtitle">UI/UX Design, Website, GA</span>
                 </div>
               </div>
             </div>

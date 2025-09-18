@@ -62,8 +62,8 @@ import after from '@/assets/img/project/c3/peoject-mr-web.png'
                             </div>
                             <div class="detail-item mb-3">
                                 <h5 class="title">Services Provided</h5>
-                                <p>Website, UI/UX, Progressive Web App (PWA), Content Structure, On‑page SEO, Google
-                                    Analytics Integration</p>
+                                <p>Redesign, Website, UI/UX, Progressive Web App (PWA), Content Structure, On‑page SEO,
+                                    GA</p>
                             </div>
                             <div class="detail-item mb-3">
                                 <h5 class="title">Industry</h5>
@@ -102,7 +102,7 @@ import after from '@/assets/img/project/c3/peoject-mr-web.png'
 
             <div class="row">
                 <div class="col-12">
-                    <h5 class="title text-start">Before & After</h5>
+                    <h4 class="title text-start">Before & After</h4>
                     <div style="width: auto; height: auto;" class="mb-5">
                         <VueCompareImage :left-image="before" :right-image="after" />
                     </div>
@@ -138,7 +138,8 @@ import after from '@/assets/img/project/c3/peoject-mr-web.png'
 </template>
 
 <style scoped>
-h2 {
+h2,
+h4 {
     color: #9acdf6;
     font-weight: 500;
 }

@@ -97,7 +97,7 @@ import uaeDr from '@/assets/img/project/c1/uae-dr.png'
                     key categories like Labour, Visa, Pension, and Medical Fitness. We then designed a clean information
                     architecture, wireframed navigation, and created a minimalist, responsive interface for quick
                     access. Development focused on speed, security, and seamless linking to official portals. After
-                    rigorous usability testing, we launched the platform with Google Analytics integration, enabling
+                    rigorous usability testing, we launched the platform with GA, enabling
                     data-driven enhancements. The result is a simple, reliable, and scalable digital hub.</p>
             </div>
 

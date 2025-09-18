@@ -54,7 +54,7 @@
                             </div>
                             <div class="detail-item mb-3">
                                 <h5 class="title">Services Provided</h5>
-                                <p>Brand Logo, Complete Website, Branding Assets, Google Analytics Integration, GMB
+                                <p>Brand Logo, Complete Website, Branding Assets, GA, GMB
                                     Setup</p>
                             </div>
                             <div class="detail-item mb-3">
