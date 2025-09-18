@@ -356,6 +356,20 @@ function getTemplate(target) {
             <div class="col-md-6 project branding">
               <div class="project-grid">
                 <div class="thumbnail">
+                  <a href="project/savedesk">
+                    <img src="../assets/img/project/c7/project-thum-sd.png" alt="project">
+                  </a>
+                </div>
+                <div class="content">
+                  <h4 class="title"><a href="project/savedesk">SaveDesk</a></h4>
+                  <span class="subtitle">UI/UX Design, Information Architecture, Wireframing, High-Fidelity
+                    Prototypes</span>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 project branding">
+              <div class="project-grid">
+                <div class="thumbnail">
                   <a href="project/samsiddhi-designs">
                     <img src="../assets/img/project/c9/project-thum-sd.png" alt="project">
                   </a>
@@ -376,19 +390,6 @@ function getTemplate(target) {
                 <div class="content">
                   <h4 class="title"><a href="project/uae-links">UAE Links</a></h4>
                   <span class="subtitle">UI/UX Design, Website, Google Analytics Integration</span>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-6 project branding">
-              <div class="project-grid">
-                <div class="thumbnail">
-                  <a href="project/solved-cube-it-solutions">
-                    <img src="../assets/img/project/c2/project-thum-sc.png" alt="project">
-                  </a>
-                </div>
-                <div class="content">
-                  <h4 class="title"><a href="project/solved-cube-it-solutions">Solved Cude</a></h4>
-                  <span class="subtitle">Logo, Branding, UI/UX Design, Website, GMB</span>
                 </div>
               </div>
             </div>

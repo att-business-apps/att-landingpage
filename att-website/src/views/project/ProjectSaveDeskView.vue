@@ -1,3 +1,13 @@
+<script setup lang="ts">
+import { VueCompareImage } from 'vue3-compare-image'
+
+// cassets
+import sdLi from '@/assets/img/project/c7/sd-db-li.png'
+import sdDr from '@/assets/img/project/c7/sd-db-dr.png'
+import before from '@/assets/img/project/c7/before.png'
+import after from '@/assets/img/project/c7/after.png'
+</script>
+
 <template>
     <div class="breadcrum-area breadcrumb-banner">
         <div class="container-fluid">
@@ -87,6 +97,17 @@
     <section class="section section-padding bg-color-light">
         <div class="container">
             <div class="section-heading heading-center mb-5">
+                <h2 class="title text-start">Before & After</h2>
+                <div class="row">
+                    <div class="col-12">
+                        <div style="width: auto; height: auto;" class="mb-5">
+                            <VueCompareImage :left-image="before" :right-image="after" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section-heading heading-center mb-5">
                 <h2 class="title text-start">Our Process</h2>
                 <p class="text-start">At Amortree Tech, we partnered with SaveDesk to enhance user engagement and
                     usability by redesigning their dashboard UI/UX. Our process began with stakeholder discussions and
@@ -100,22 +121,17 @@
 
             <div class="row">
                 <div class="col-12">
-                    <img src="../../assets/img/project/c7/project-sd-widgets.png" class="img-fluid mb-5"
+                    <img src="../../assets/img/project/c7/project-sd-widgets.png" class="img-fluid"
                         alt="SaveDesk - FinTech Dashboard Redesign Project">
                 </div>
-                <div class="col-12">
-                    <img src="../../assets/img/project/c7/project-sd-screen.png" class="img-fluid my-5"
-                        alt="SaveDesk - FinTech Dashboard Redesign Project">
-                </div>
-            </div>
 
-            <div class="section-heading heading-center mt-5 mb-0">
-                <h2 class="title text-start">Dark Theme</h2>
-                <div class="row">
-                    <div class="col-12">
-                        <img src="../../assets/img/project/c7/sd-db-dr.png" class="img-fluid"
-                            alt="SaveDesk - FinTech Dashboard Redesign Project">
-                    </div>
+                <div class="my-5">
+                    <VueCompareImage :left-image="sdLi" :right-image="sdDr" />
+                </div>
+
+                <div class="col-12">
+                    <img src="../../assets/img/project/c7/project-sd-screen.png" class="img-fluid"
+                        alt="SaveDesk - FinTech Dashboard Redesign Project">
                 </div>
             </div>
         </div>

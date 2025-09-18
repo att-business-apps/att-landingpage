@@ -1,3 +1,11 @@
+<script setup lang="ts">
+import { VueCompareImage } from 'vue3-compare-image'
+
+// cassets
+import uaeLi from '@/assets/img/project/c1/uae-li.png'
+import uaeDr from '@/assets/img/project/c1/uae-dr.png'
+</script>
+
 <template>
     <div class="breadcrum-area breadcrumb-banner">
         <div class="container-fluid">
@@ -95,6 +103,10 @@
 
             <div class="row">
                 <div class="col">
+                    <div style="width: auto; height: auto;">
+                        <VueCompareImage :left-image="uaeLi" :right-image="uaeDr" />
+                    </div>
+
                     <img src="../../assets/img/project/c1/project-uae-mob.png" class="img-fluid rounded mt-5"
                         alt="UAE Links Mobile View - Responsive Government Portal Design">
                 </div>
