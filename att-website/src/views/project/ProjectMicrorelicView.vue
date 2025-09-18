@@ -1,3 +1,11 @@
+<script setup>
+import { VueCompareImage } from 'vue3-compare-image'
+
+// cassets
+import before from '@/assets/img/project/c3/before.png'
+import after from '@/assets/img/project/c3/peoject-mr-web.png'
+</script>
+
 <template>
     <div class="breadcrum-area breadcrumb-banner">
         <div class="container-fluid">
@@ -94,8 +102,10 @@
 
             <div class="row">
                 <div class="col-12">
-                    <img src="../../assets/img/project/c3/peoject-mr-web.png" class="img-fluid mb-5"
-                        alt="Solved Cube IT Solutions Project">
+                    <h5 class="title text-start">Before & After</h5>
+                    <div style="width: auto; height: auto;" class="mb-5">
+                        <VueCompareImage :left-image="before" :right-image="after" />
+                    </div>
                 </div>
                 <div class="col-12">
                     <img src="../../assets/img/project/c3/peoject-mr-mob.png" class="img-fluid"
