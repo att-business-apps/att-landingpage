@@ -133,7 +133,7 @@ const projects = ref([
     title: "SaveDesk",
     href: "project/savedesk",
     img: new URL("../assets/img/project/c7/project-thum-sd.png", import.meta.url).href,
-    subtitle: "edesign, UI/UX Design, Wireframing, High-Fidelity Prototype",
+    subtitle: "Redesign, UI/UX Design, Wireframing, High-Fidelity Prototype",
     categories: ["UI/UX Design"],
   },
   {
