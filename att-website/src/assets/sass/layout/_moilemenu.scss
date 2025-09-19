@@ -19,18 +19,24 @@
                 background-clip: text;
                 -webkit-background-clip: text;
                 -webkit-text-fill-color: transparent;
+                background-size: 200% 200%;
+                animation: gradientShift 3s ease-in-out infinite;
             }
             .text-lg {
                 background: linear-gradient(270deg, var(--color-white) 21.9%, var(--logo-green) 53.55%);
                 background-clip: text;
                 -webkit-background-clip: text;
                 -webkit-text-fill-color: transparent;
+                background-size: 200% 200%;
+                animation: gradientShift 3s ease-in-out infinite;
             }
             .text-lr {
                 background: linear-gradient(270deg, var(--color-white) 21.9%, var(--logo-red) 53.55%);
                 background-clip: text;
                 -webkit-background-clip: text;
                 -webkit-text-fill-color: transparent;
+                background-size: 200% 200%;
+                animation: gradientShift 3s ease-in-out infinite;
             }
         }
     }
