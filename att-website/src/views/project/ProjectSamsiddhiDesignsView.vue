@@ -94,13 +94,27 @@
                     website, enabling performance tracking and data-driven decision-making.</p>
             </div>
 
-            <div class="row">
-                <div class="col-12">
-                    <img src="../../assets/img/project/c9/project-sd-mob.png" class="img-fluid rounded mb-5"
-                        alt="Samsiddhi Designs Project - Mobile View">
-                </div>
+            <div class="row mb-5 mb-md-4 mb-lg-5">
                 <div class="col-12">
                     <img src="../../assets/img/project/c9/sd-mockup.png" class="img-fluid rounded"
+                        alt="Samsiddhi Designs Project - Mobile View">
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-6">
+                    <img src="../../assets/img/project/c9/sd-logo-p.png" class="img-fluid rounded"
+                        alt="Samsiddhi Designs Company Profile Design">
+                </div>
+                <div class="col-md-6">
+                    <img src="../../assets/img/project/c9/sd-profile.png" class="img-fluid rounded mt-5 mt-md-0"
+                        alt="Samsiddhi Designs Broucher Design">
+                </div>
+            </div>
+
+            <div class="row mt-5 mt-md-4 mt-lg-5">
+                <div class="col-12">
+                    <img src="../../assets/img/project/c9/project-sd-mob.png" class="img-fluid rounded"
                         alt="Samsiddhi Designs Project - Signboard, Business Card, Letterhead, Company Portfolio">
                 </div>
             </div>

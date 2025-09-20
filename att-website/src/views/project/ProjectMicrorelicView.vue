@@ -109,7 +109,7 @@ import after from '@/assets/img/project/c3/peoject-mr-web.png'
                 </div>
                 <div class="col-12">
                     <img src="../../assets/img/project/c3/peoject-mr-mob.png" class="img-fluid"
-                        alt="Solved Cube IT Solutions Project">
+                        alt="Microrelic Technologies Mobile View">
                 </div>
             </div>
         </div>

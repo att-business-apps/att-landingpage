@@ -13,7 +13,7 @@
                             alt="Solved Cube IT Solutions Project">
                         <h1 class="title h2 mb-0 ms-2">Solved Cube IT Solutions</h1>
                     </div>
-                    <h5 class="mb-1 mt-3">Complete Brand Identity</h5>
+                    <h5 class="mb-1 mt-3">HR & IT Consultancy</h5>
                 </div>
             </div>
             <div class="banner-thumbnail ">
@@ -98,8 +98,30 @@
 
             <div class="row">
                 <div class="col">
-                    <img src="../../assets/img/project/c2/mockup.png" class="img-fluid rounded mt-5"
+                    <img src="../../assets/img/project/c2/mockup.png" class="img-fluid rounded"
                         alt="Solved Cube IT Solutions Project">
+                </div>
+            </div>
+
+            <div class="row mt-5 mt-md-4 mt-lg-5">
+                <div class="col-md-6">
+                    <img src="../../assets/img/project/c2/sc-id.png" class="img-fluid rounded"
+                        alt="Solved Cube IT Solutions ID Card Design">
+                </div>
+                <div class="col-md-6">
+                    <img src="../../assets/img/project/c2/sc-broucher.png" class="img-fluid rounded mt-5 mt-md-0"
+                        alt="Solved Cube IT Solutions Broucher Design">
+                </div>
+            </div>
+
+            <div class="row mt-5 mt-md-4 mt-lg-5">
+                <div class="col-md-6">
+                    <img src="../../assets/img/project/c2/sc-bc.png" class="img-fluid rounded"
+                        alt="Solved Cube IT Solutions Business Card Design">
+                </div>
+                <div class="col-md-6">
+                    <img src="../../assets/img/project/c2/sc-poster.png" class="img-fluid rounded mt-5 mt-md-0"
+                        alt="Solved Cube IT Solutions Poster Design">
                 </div>
             </div>
         </div>

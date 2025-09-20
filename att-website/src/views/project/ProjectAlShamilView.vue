@@ -94,7 +94,18 @@
             <div class="row">
                 <div class="col">
                     <img src="../../assets/img/project/c5/project-alshamil-web.png" class="img-fluid"
-                        alt="Solved Cube IT Solutions Project">
+                        alt="Al-Shamil Computers Website Design">
+                </div>
+            </div>
+
+            <div class="row mt-5 mt-md-4 mt-lg-5">
+                <div class="col-md-6">
+                    <img src="../../assets/img/project/c5/als-profile.png" class="img-fluid rounded"
+                        alt="Al-Shamil Computers Company Profile Design">
+                </div>
+                <div class="col-md-6">
+                    <img src="../../assets/img/project/c5/als-book.png" class="img-fluid rounded mt-5 mt-md-0"
+                        alt="Al-Shamil Computers Broucher Design">
                 </div>
             </div>
         </div>
