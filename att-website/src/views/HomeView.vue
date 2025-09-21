@@ -78,25 +78,20 @@ function getTemplate(target) {
           <div class="col-lg-12 mx-auto pb-5">
             <div class="home-banner banner-content text-center">
               <div class="animate__animated fadeInUp" style="animation-duration: 1s">
-                <h6 class="mb-1">
-                  Sleek.
-                  <span class="gradient-text blue-dark">Stylish.</span> Classy.
-                </h6>
                 <h1 class="title d-inline">
                   Top <span class="gradient-text-light">UI/UX Design</span> & <span class="gradient-text-light">Web
                     Development</span> Studio in Bengaluru
                 </h1>
                 <h2 class="h4">
-                  Custom <span class="gradient-text-light">Web Development</span> & <span
-                    class="gradient-text-light">User Experience Design</span> for Business Growth
+                  <span class="gradient-text blue-dark">Sleek.</span> <span
+                    class="gradient-text yello-dark">Stylish.</span> <span
+                    class="gradient-text blue-dark">Classy.</span>
                 </h2>
                 <p class="subtitle">
-                  At amortree Tech, we're passionate about harnessing the power
-                  of technology to transform businesses and drive innovation. As
-                  a leading <strong>web development company</strong> and <strong>IT solutions provider</strong>, we
-                  specialize in <strong>custom website design</strong>, <strong>UI/UX services</strong>,
-                  <strong>mobile app UI/UX Design</strong>, and <strong>DevOps consulting</strong> tailored to meet the
-                  diverse needs of our clients.
+                  At Amortree Tech, we use the power of technology to help businesses grow and innovate. As a trusted
+                  web development and IT solutions partner, we design custom websites, create seamless UI/UX
+                  experiences, build mobile app interfaces, and provide DevOps consulting—all tailored to fit your
+                  unique business needs.
                 </p>
                 <div class="d-flex justify-content-center gap-3 mt-5">
                   <a class="amor-btn btn-fill-primary btn-large"
@@ -109,7 +104,8 @@ function getTemplate(target) {
           </div>
           <div class="col-lg-6 mx-auto">
             <div class="contact-form-box banner-form">
-              <h4 class="title">Unlock Your Online Potential</h4>
+              <h4 class="title text-center"><span class="gradient-text blue-dark">Unlock</span> Your Online <span
+                  class="gradient-text yello-dark">Potential</span></h4>
               <form class="amor-contact-form">
                 <h5 class="mb-2">We’d love to know more about your project needs!</h5>
                 <p class="mb-3">Submit your query, and we’ll reach out to you shortly!</p>

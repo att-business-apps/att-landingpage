@@ -19429,7 +19429,7 @@ Frequently Asked Questions
   font-size: var(--font-body-1);
   margin: 0 auto 40px;
   width: 80%;
-  font-size: 1.2rem;
+  font-size: 1.35rem;
 }
 @media only screen and (max-width: 767px) {
   .banner .banner-content .subtitle {
