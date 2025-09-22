@@ -5,32 +5,60 @@
     box-shadow: 0 0px 50px -40px var(--color-light);
     border-radius: 30px;
     margin-bottom: 40px;
-}
 
-.project-grid .thumbnail {
-    overflow: hidden;
-    border-radius: 30px 30px 0 0;
-    position: relative;
-}
+    .thumbnail {
+        overflow: hidden;
+        border-radius: 30px 30px 0 0;
+        position: relative;
 
-.project-grid .thumbnail img {
-    border-radius: 30px 30px 0 0;
-    width: 100%;
-    -webkit-transition: var(--transition);
-    transition: var(--transition);
-    -webkit-transform: scale(1);
-    -ms-transform: scale(1);
-    transform: scale(1);
-    -webkit-transition: -webkit-transform 2s cubic-bezier(0.2, 0.96, 0.34, 1);
-    transition: -webkit-transform 2s cubic-bezier(0.2, 0.96, 0.34, 1);
-    transition: transform 2s cubic-bezier(0.2, 0.96, 0.34, 1);
-    transition: transform 2s cubic-bezier(0.2, 0.96, 0.34, 1), -webkit-transform 2s cubic-bezier(0.2, 0.96, 0.34, 1);
-}
+        img {
+            border-radius: 30px 30px 0 0;
+            width: 100%;
+            -webkit-transition: var(--transition);
+            transition: var(--transition);
+            -webkit-transform: scale(1);
+            -ms-transform: scale(1);
+            transform: scale(1);
+            -webkit-transition: -webkit-transform 2s cubic-bezier(0.2, 0.96, 0.34, 1);
+            transition: -webkit-transform 2s cubic-bezier(0.2, 0.96, 0.34, 1);
+            transition: transform 2s cubic-bezier(0.2, 0.96, 0.34, 1);
+            transition: transform 2s cubic-bezier(0.2, 0.96, 0.34, 1), -webkit-transform 2s cubic-bezier(0.2, 0.96, 0.34, 1);
+        }
+    }
 
-.project-grid .content {
-    background-color: var(--color-light);
-    border-radius: 0 0 30px 30px;
-    padding: 40px 50px;
+    .content {
+        background-color: var(--color-light);
+        border-radius: 0 0 30px 30px;
+        padding: 40px 50px;
+        transition: var(--transition);
+
+        .title {
+            letter-spacing: -0.045em;
+            margin-bottom: 10px;
+
+            a {
+                &:hover {
+                    color: var(--color-link);
+                }
+            }
+        }
+    }
+
+    &:hover {
+        cursor: pointer;
+
+        .content {
+            background-color: #323241;
+        }
+
+        .thumbnail {
+            img {
+                -webkit-transform: scale(1.2);
+                -ms-transform: scale(1.2);
+                transform: scale(1.2);
+            }
+        }
+    }
 }
 
 @media only screen and (max-width: 1199px) {
@@ -42,234 +70,6 @@
 @media only screen and (max-width: 767px) {
     .project-grid .content {
         padding: 30px;
-    }
-}
-
-.project-grid .content .title {
-    letter-spacing: -0.045em;
-    margin-bottom: 10px;
-}
-
-.project-grid .content .title a:hover {
-    color: var(--color-link);
-}
-
-.project-grid:hover .thumbnail img {
-    -webkit-transform: scale(1.2);
-    -ms-transform: scale(1.2);
-    transform: scale(1.2);
-}
-
-.project-grid.project-style-2 {
-    box-shadow: none;
-    position: relative;
-    margin-bottom: 60px;
-}
-
-.project-grid.project-style-2 .thumbnail {
-    border-radius: 30px;
-}
-
-.project-grid.project-style-2 .thumbnail img {
-    border-radius: 30px;
-}
-
-.project-grid.project-style-2 .content {
-    background-color: transparent;
-    border-radius: 0;
-    padding: 0;
-    position: absolute;
-    top: 50px;
-    left: 50px;
-}
-
-@media only screen and (max-width: 991px) {
-    .project-grid.project-style-2 .content {
-        top: 30px;
-        left: 30px;
-    }
-}
-
-.project-grid.project-style-2 .content .subtitle {
-    font-size: 18px;
-    margin-bottom: 15px;
-}
-
-.more-project-btn {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-    -webkit-justify-content: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    margin-top: 20px;
-}
-
-@media only screen and (max-width: 767px) {
-    .more-project-btn {
-        margin-top: 0;
-    }
-}
-
-.more-project-btn .axil-btn {
-    padding: 24px 80px;
-    color: var(--color-dark);
-    display: block;
-}
-
-.more-project-btn .axil-btn.btn-fill-primary {
-    color: var(--color-white);
-}
-
-@media only screen and (max-width: 767px) {
-    .more-project-btn .axil-btn {
-        padding: 18px 40px;
-        font-size: 15px;
-    }
-}
-
-.project-add-banner {
-    background-color: var(--color-peach);
-    border-radius: 30px;
-    padding: 50px 60px 50px 50px;
-    margin-bottom: 120px;
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-    -webkit-align-items: center;
-    -ms-flex-align: center;
-    align-items: center;
-}
-
-@media only screen and (max-width: 991px) {
-    .project-add-banner {
-        padding: 40px 20px;
-        margin-bottom: 100px;
-    }
-}
-
-@media only screen and (max-width: 575px) {
-    .project-add-banner {
-        display: block;
-    }
-}
-
-.project-add-banner .content {
-    -webkit-box-flex: 1;
-    -webkit-flex: 1;
-    -ms-flex: 1;
-    flex: 1;
-    padding-right: 50px;
-}
-
-@media only screen and (max-width: 575px) {
-    .project-add-banner .content {
-        padding-right: 0;
-    }
-}
-
-.project-add-banner .content .subtitle {
-    font-size: var(--font-body-1);
-    margin-bottom: 15px;
-}
-
-.project-add-banner .content .title {
-    width: 80%;
-    letter-spacing: -0.045em;
-    margin-bottom: 110px;
-}
-
-@media only screen and (max-width: 1199px) {
-    .project-add-banner .content .title {
-        width: 100%;
-    }
-}
-
-@media only screen and (max-width: 991px) {
-    .project-add-banner .content .title {
-        margin-bottom: 60px;
-    }
-}
-
-.project-add-banner .thumbnail {
-    margin: -170px 0 -110px;
-}
-
-@media only screen and (max-width: 1199px) {
-    .project-add-banner .thumbnail {
-        width: 50%;
-    }
-}
-
-@media only screen and (max-width: 767px) {
-    .project-add-banner .thumbnail {
-        width: 30%;
-    }
-}
-
-@media only screen and (max-width: 575px) {
-    .project-add-banner .thumbnail {
-        margin: 40px auto 0;
-        width: 70%;
-    }
-}
-
-@media only screen and (max-width: 991px) {
-    .single-portfolio-area .why-choose-us {
-        margin-top: 50px;
-    }
-}
-
-.project-column-4 .project-grid .content {
-    padding: 40px 30px;
-}
-
-
-
-
-
-
-.monitor_hero_container {
-    width: var(--column-width--9);
-    margin-left: auto;
-    margin-right: auto;
-    position: relative;
-}
-
-.frame_monitor_mockup {
-    pointer-events: none;
-    display: block;
-    position: relative;
-    margin-bottom: -7% !important;
-}
-
-.iframe-website {
-    aspect-ratio: 2;
-    background-color: var(--color-white);
-    object-fit: cover;
-    border-radius: 2%;
-    width: 100%;
-    position: absolute;
-    inset: 0% 0% auto;
-    overflow: hidden;
-    margin: 100px auto 0px;
-
-    &::after,
-    &::before {
-        content: " ";
-        grid-area: 1 / 1 / 2 / 2;
-        display: table;
-    }
-
-    .website {
-        width: 100vw;
-        height: 100vh;
-        transform-origin: 0 0;
-        transform: scale(0.7);
     }
 }
 
@@ -292,5 +92,4 @@
             margin-right: 0 !important;
         }
     }
-    
 }

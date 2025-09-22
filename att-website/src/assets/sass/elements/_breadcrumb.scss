@@ -2,10 +2,29 @@
     Breadcrumb
 -------------------------*/
 .breadcrum-area {
-    background: var(--gradient-primary);
+    // background: var(--gradient-primary);
+    background-image: url(../../assets/img/banner-bg.svg);
+    background-attachment: fixed;
+    background-position: center -10rem;
+    background-size: cover;
+    background-repeat: no-repeat;
     padding: 50vh 0 2vh;
     position: relative;
     z-index: 1;
+    &:after {
+        content: "";
+        height: 100%;
+        left: 0;
+        opacity: 0.8;
+        background: linear-gradient(180deg, var(--color-light) 25%, var(--color-light) 100%);
+        position: absolute;
+        top: 0;
+        width: 100%;
+        z-index: -2;
+        @media #{$sm-layout} {
+            opacity: 0.85;
+        }
+    }
     @media #{$sm-layout} {
         padding: 150px 0 40px;
     }
