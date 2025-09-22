@@ -20769,6 +20769,11 @@ Service
   padding: 140px 0 100px;
   position: relative;
   z-index: 0;
+  background-image: url(../../assets/img/footer-bg.svg);
+  background-attachment: fixed;
+  background-position: center 8rem;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 @media only screen and (max-width: 1199px) {
   .call-to-action-area {
@@ -20786,7 +20791,6 @@ Service
   }
 }
 .call-to-action-area:before {
-  content: "";
   height: 730px;
   width: 100%;
   background-color: var(--color-dark);
