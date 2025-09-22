@@ -16563,7 +16563,7 @@ input {
 }
 .shape-group-21 .shape.shape-1 {
   top: 0;
-  left: 0;
+  right: -5rem;
 }
 @media only screen and (max-width: 991px) {
   .shape-group-21 .shape.shape-1 img {
@@ -16571,10 +16571,13 @@ input {
   }
 }
 .shape-group-21 .shape.shape-2 {
-  top: 10px;
-  right: 160px;
+  bottom: 43%;
+  left: 12%;
   text-align: right;
   z-index: -2;
+}
+.shape-group-21 .shape.shape-2 img {
+  width: 50%;
 }
 @media only screen and (min-width: 1200px) and (max-width: 1599px) {
   .shape-group-21 .shape.shape-2 {
@@ -19540,10 +19543,11 @@ Frequently Asked Questions
   color: var(--color-primary);
 }
 .banner.banner-style-1 {
-  background-image: url(../../assets/img/bg-wall.png);
+  background-image: url(../../assets/img/banner-bg.svg);
   background-attachment: fixed;
-  background-position: center center;
+  background-position: center -8.625rem;
   background-size: cover;
+  background-repeat: no-repeat;
 }
 .banner.banner-style-1:after {
   background: linear-gradient(180deg, var(--color-light) 25%, var(--color-light) 100%);

@@ -151,10 +151,12 @@
         }
     }
     &.banner-style-1 {
-        background-image: url(../../assets/img/bg-wall.png);
+        background-image: url(../../assets/img/banner-bg.svg);
         background-attachment: fixed;
-        background-position: center center;
+        background-position: center -8.625rem;
         background-size: cover;
+        background-repeat: no-repeat;
+
         
         &:after {
             background: linear-gradient(180deg, var(--color-light) 25%, var(--color-light) 100%);
