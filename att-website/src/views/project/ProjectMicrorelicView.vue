@@ -31,7 +31,7 @@ import after from '@/assets/img/project/c3/peoject-mr-web.png'
                 </div>
             </div>
         </div>
-        <ul class="shape-group-8 list-unstyled">
+        <ul class="shape-group-breadcrum-1 list-unstyled">
             <li class="shape shape-2 sal-animate" data-sal="slide-left" data-sal-duration="500" data-sal-delay="200">
                 <img src="../../assets/img/shapes/bubble-21.png" alt="circle">
             </li>

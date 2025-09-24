@@ -75,10 +75,10 @@
 .breadcrumb-banner {
     padding: 30vh 0 2vh;
     @media #{$extra-device} {
-        padding: 30vh 0 2vh;
+        padding: 36vh 0 2vh;
     }
     @media #{$laptop-device} {
-        padding: 30vh 0 2vh;
+        padding: 36vh 0 2vh;
     }
     @media #{$lg-layout} {
         padding: 56vh 0 2vh;
@@ -200,7 +200,7 @@
             }
         }
     }
-    .shape-group-8 {
+    .shape-group-breadcrum-1 {
         .shape.shape-2 {
             @media #{$smlg-device} {
                 img {

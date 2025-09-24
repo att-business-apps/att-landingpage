@@ -21,7 +21,7 @@
                 </div>
             </div>
         </div>
-        <ul class="shape-group-8 list-unstyled">
+        <ul class="shape-group-breadcrum-1 list-unstyled">
             <li class="shape shape-1"><img src="../assets/img/shapes/bubble-9.png" alt="Bubble"></li>
             <li class="shape shape-4"><img src="../assets/img/shapes/bubble-27.png" alt="Bubble"></li>
             <li class="shape shape-3"><img src="../assets/img/shapes/line-4.png" alt="Line"></li>

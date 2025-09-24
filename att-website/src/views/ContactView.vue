@@ -88,7 +88,7 @@ function getTemplate(target) {
                 </div>
             </div>
         </div>
-        <ul class="shape-group-8 list-unstyled">
+        <ul class="shape-group-breadcrum-1 list-unstyled">
             <li class="shape shape-2 sal-animate" data-sal="slide-left" data-sal-duration="500" data-sal-delay="200">
                 <img src="../assets/img/shapes/bubble-22.png" alt="circle">
             </li>
@@ -158,8 +158,9 @@ function getTemplate(target) {
                 </div>
             </div>
         </div>
-        <ul class="list-unstyled shape-group-12">
-            <li class="shape shape-0"><img src="../assets/img/amorboy/am-contact-form.png" alt="Bubble"></li>
+        <ul class="list-unstyled shape-group-contact">
+            <li class="shape shape-0" style="opacity: 1;"><img src="../assets/img/amorboy/am-contact-form.png"
+                    alt="Bubble"></li>
             <li class="shape shape-1"><img src="../assets/img/shapes/bubble-2.png" alt="Bubble"></li>
             <li class="shape shape-2"><img src="../assets/img/shapes/bubble-1.png" alt="Bubble"></li>
             <li class="shape shape-3"><img src="../assets/img/shapes/circle-1.png" alt="Circle"></li>

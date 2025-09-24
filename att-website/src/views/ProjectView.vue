@@ -20,7 +20,7 @@
         </div>
       </div>
     </div>
-    <ul class="shape-group-8 list-unstyled">
+    <ul class="shape-group-breadcrum-1 list-unstyled">
       <li class="shape shape-2 sal-animate" data-sal="slide-left" data-sal-duration="500" data-sal-delay="200">
         <img src="../assets/img/shapes/bubble-21.png" alt="circle">
       </li>
@@ -63,7 +63,7 @@
         </div>
       </div>
     </div>
-    <ul class="shape-group-7 list-unstyled">
+    <ul class="shape-group-services list-unstyled">
       <li class="shape shape-3"><img src="../assets/img/shapes/bubble-14.png" alt="circle"></li>
       <li class="shape shape-2"><img src="../assets/img/shapes/line-9.png" alt="Line"></li>
       <li class="shape shape-2"><img src="../assets/img/shapes/bubble-2.png" alt="Line"></li>

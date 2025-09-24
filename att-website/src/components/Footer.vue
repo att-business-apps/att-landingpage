@@ -25,7 +25,7 @@
         </div>
       </div>
     </div>
-    <ul class="list-unstyled shape-group-9">
+    <ul class="list-unstyled shape-group-footer">
       <li class="shape shape-1">
         <img src="../assets/img/shapes/bubble-12.png" alt="amortree" />
       </li>

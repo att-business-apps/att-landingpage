@@ -20,10 +20,10 @@
         </div>
       </div>
     </div>
-    <ul class="shape-group-8 list-unstyled">
-      <li class="shape shape-2 sal-animate" data-sal="slide-left" data-sal-duration="500" data-sal-delay="200">
+    <ul class="shape-group-breadcrum-1 list-unstyled">
+      <!-- <li class="shape shape-2 sal-animate" data-sal="slide-left" data-sal-duration="500" data-sal-delay="200">
         <img src="../assets/img/shapes/bubble-21.png" alt="circle">
-      </li>
+      </li> -->
       <li class="shape shape-3 sal-animate" data-sal="slide-up" data-sal-duration="500" data-sal-delay="300">
         <img src="../assets/img/shapes/line-5.png" alt="circle">
       </li>
@@ -137,7 +137,7 @@
         </div>
       </div>
     </div>
-    <ul class="list-unstyled shape-group-10">
+    <ul class="list-unstyled shape-group-abt">
       <li class="shape shape-1"><img src="../assets/img/shapes/circle-1.png" alt="Circle"></li>
       <li class="shape shape-2"><img src="../assets/img/shapes/line-3.png" alt="Circle"></li>
       <li class="shape shape-3"><img src="../assets/img/shapes/bubble-6.png" alt="Circle"></li>
@@ -214,7 +214,7 @@
         </div>
       </div>
     </div>
-    <ul class="shape-group-17 list-unstyled">
+    <ul class="shape-group-abt-step list-unstyled">
       <li class="shape shape-3"><img src="../assets/img/shapes/line-4.png" alt="Line"></li>
       <li class="shape shape-4"><img src="../assets/img/shapes/line-5.png" alt="Line"></li>
       <li class="shape shape-5"><img src="../assets/img/shapes/line-4.png" alt="Line"></li>
