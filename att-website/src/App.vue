@@ -51,7 +51,7 @@ watch(isLoading, (loading) => {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: rgba(0, 0, 0, 0.85);
+  background: #000000;
   z-index: 9999;
   transition: opacity 120ms ease-in-out;
 }
