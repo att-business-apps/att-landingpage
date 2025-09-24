@@ -1,8 +1,9 @@
 <script setup>
-import { ref, onMounted } from 'vue'
+import { ref, onMounted, watch } from 'vue'
 import { RouterView, useRouter } from 'vue-router'
 import HeaderSec from './components/Header.vue'
 import FooterSec from './components/Footer.vue'
+import logoUrl from './assets/logo.svg'
 
 const isLoading = ref(true)
 const router = useRouter()
@@ -28,13 +29,16 @@ onMounted(() => {
     isLoading.value = false
   })
 })
+
+watch(isLoading, (loading) => {
+  document.body.style.overflow = loading ? 'hidden' : ''
+})
 </script>
 
 <template>
   <HeaderSec />
   <div v-if="isLoading" class="global-loader" role="status" aria-live="polite" aria-busy="true">
-    <div class="loader-spinner"></div>
-    <span class="visually-hidden">Loading</span>
+    <img :src="logoUrl" alt="Loading" class="loader-logo" />
   </div>
   <RouterView />
   <FooterSec />
@@ -52,19 +56,11 @@ onMounted(() => {
   transition: opacity 120ms ease-in-out;
 }
 
-.loader-spinner {
-  width: 48px;
-  height: 48px;
-  border-radius: 50%;
-  border: 4px solid rgba(255, 255, 255, 0.15);
-  border-top-color: #0073AA;
-  animation: spin 0.8s linear infinite;
-  box-shadow: 0 0 12px rgba(0, 115, 170, 0.35);
-}
-
-@keyframes spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+.loader-logo {
+  width: 140px;
+  height: auto;
+  opacity: 0.95;
+  filter: drop-shadow(0 4px 18px rgba(0, 0, 0, 0.5));
 }
 
 .visually-hidden {
