@@ -152,12 +152,6 @@
             </div>
           </div>
         </div>
-
-        <div class="row d-none">
-          <div class="col">
-            <img src="../assets/img/footer-logo.png" class="w-100 rounded mb-5" alt="Amortree Tech Pvt Ltd" />
-          </div>
-        </div>
       </div>
       <div class="footer-bottom">
         <div class="row">
