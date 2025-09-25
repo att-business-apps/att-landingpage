@@ -15749,12 +15749,12 @@ input {
 }
 .shape-group-banner .shape.shape-2 {
   bottom: 43%;
-  left: 12%;
+  left: 22%;
   text-align: right;
   z-index: -2;
 }
 .shape-group-banner .shape.shape-2 img {
-  width: 50%;
+  width: 150px;
 }
 @media only screen and (min-width: 1200px) and (max-width: 1599px) {
   .shape-group-banner .shape.shape-2 {
@@ -15762,7 +15762,7 @@ input {
     right: 15px;
   }
   .shape-group-banner .shape.shape-2 img {
-    width: 90%;
+    width: 120px;
   }
 }
 @media only screen and (max-width: 1199px) {
@@ -15770,7 +15770,7 @@ input {
     right: 15px;
   }
   .shape-group-banner .shape.shape-2 img {
-    width: 50%;
+    width: 120px;
   }
 }
 @media only screen and (max-width: 991px) {

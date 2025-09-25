@@ -152,23 +152,23 @@
         }
         &.shape-2 {
             bottom: 43%;
-            left: 12%;
+            left: 22%;
             text-align: right;
             z-index: -2;
             img {
-                width: 50%;
+                width: 150px;
             }
             @media #{$laptop-device} {
                 top: 120px;
                 right: 15px;
                 img {
-                    width: 90%;
+                    width: 120px;
                 }
             }
             @media #{$smlg-device}{
                 right: 15px;
                 img {
-                    width: 50%;
+                    width: 120px;
                 }
             }
             @media #{$md-layout}{
