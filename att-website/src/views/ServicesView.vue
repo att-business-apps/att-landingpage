@@ -5,7 +5,7 @@
 <template>
   <div class="breadcrum-area breadcrumb-banner">
     <div class="container-fluid">
-      <div class="breadcrumb">
+      <div class="breadcrumb animate__animated fadeInUp" style="animation-duration: 2s">
         <ul class="list-unstyled">
           <li><a href="/">Home</a></li>
           <li class="active text-lb">What We Do</li>

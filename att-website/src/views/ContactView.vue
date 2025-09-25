@@ -69,7 +69,7 @@ function getTemplate(target) {
 <template>
     <div class="breadcrum-area breadcrumb-banner">
         <div class="container-fluid">
-            <div class="breadcrumb">
+            <div class="breadcrumb animate__animated fadeInUp" style="animation-duration: 2s">
                 <ul class="list-unstyled">
                     <li><a href="/">Home</a></li>
                     <li class="active text-lr">Where to find</li>
@@ -102,7 +102,8 @@ function getTemplate(target) {
         <div class="container-fluid">
             <div class="row">
                 <div class="col-lg-6">
-                    <div class="contact-form-box shadow-box mb--30">
+                    <div class="contact-form-box shadow-box mb--30 animate__animated fadeInUp"
+                        style="animation-duration: 2s">
                         <form class="amor-contact-form">
                             <h4 class="mb-2">We’d love to know more about your project needs!</h4>
                             <p class="mb-3">Submit your query, and we’ll reach out to you shortly!</p>

@@ -102,7 +102,7 @@ function getTemplate(target) {
               </div>
             </div>
           </div>
-          <div class="col-lg-6 col-md-10 mx-auto">
+          <div class="col-lg-6 col-md-10 mx-auto animate__animated fadeInUp" style="animation-duration: 2s">
             <div class="contact-form-box banner-form">
               <h4 class="title text-center"><span class="gradient-text blue-dark">Unlock</span> Your Online <span
                   class="gradient-text yello-dark">Potential</span></h4>
