@@ -1,7 +1,14 @@
 .mobilemenu {
     width: 100%;
     position: fixed;
-    // display: flex;
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+    -ms-overflow-style: -ms-autohiding-scrollbar;
+    justify-content: space-between;
+    scroll-snap-type: x mandatory;
     left: 0;
     bottom: 0;
     background-color: var(--color-dark);
@@ -9,6 +16,7 @@
     justify-content: space-around;
     align-items: center;
     box-shadow: 0 -24px 48px -15px rgba(33, 34, 34, 0.5);
+    
 
     li {
         a {

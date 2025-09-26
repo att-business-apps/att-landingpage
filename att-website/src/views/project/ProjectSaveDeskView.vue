@@ -63,7 +63,7 @@ import after from '@/assets/img/project/c7/after.png'
                         <div class="project-details">
                             <div class="detail-item mb-3">
                                 <h5 class="title">Client</h5>
-                                <p>White Matter Advisory India Pvt Ltd</p>
+                                <p>Savedesk Analytics India Pvt Ltd</p>
                             </div>
                             <div class="detail-item mb-3">
                                 <h5 class="title">Services Provided</h5>

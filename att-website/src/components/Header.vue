@@ -18,32 +18,10 @@
                             <ul class="mainmenu">
                                 <li><a href="/whatWeDo"><span class="text-lb">What</span> we do</a></li>
                                 <li><a href="/whoWeAre"><span class="text-lg">Who</span> we are</a></li>
-                                <!-- <li><a href="/whyUs"><span class="text-lr">Why</span> us</a></li> -->
+                                <!-- <li><a href="/whyUs"><span class="text-ly">Blog</span></a></li> -->
                                 <li><a href="/contact"><span class="text-lr">Where</span> to find</a></li>
                             </ul>
                         </nav>
-                    </div>
-                    <div class="menu" id="menu">
-                        <ul class="menu-list d-none">
-                            <li class="menu-item">
-                                <a href="#whatWeDo" class="menu-link is-active">
-                                    <i class="menu-icon ion-md-home"></i>
-                                    <span class="menu-name">What we do</span>
-                                </a>
-                            </li>
-                            <li class="menu-item">
-                                <a href="#about" class="menu-link">
-                                    <i class="menu-icon ion-md-search"></i>
-                                    <span class="menu-name">Who we are</span>
-                                </a>
-                            </li>
-                            <li class="menu-item">
-                                <a href="contact" class="menu-link">
-                                    <i class="menu-icon ion-md-cart"></i>
-                                    <span class="menu-name">Contact</span>
-                                </a>
-                            </li>
-                        </ul>
                     </div>
                     <div class="header-action">
                         <ul class="list-unstyled">

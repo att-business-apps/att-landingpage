@@ -579,7 +579,7 @@ function getTemplate(target) {
           <div class="col-lg-8 offset-lg-2">
             <div class="section-heading heading-center faq-style">
               <span class="subtitle">Frequently Asked Questions</span>
-              <h2 class="title">Web Development & IT Services <span class="gradient-text yello-dark">FAQ</span></h2>
+              <h2 class="title">Need <span class="gradient-text yello-dark">Clarity?</span> We’ve Got You</h2>
               <p class="px-lg-5">Get answers to common questions about our professional web development, UI/UX design,
                 and DevOps consulting services.</p>
             </div>
@@ -587,15 +587,21 @@ function getTemplate(target) {
               <div class="accordion-item">
                 <h3 class="accordion-header">
                   <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
-                    What web development services do you offer?
+                    What services do you provide?
                   </button>
                 </h3>
                 <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
                   <div class="accordion-body">
-                    We offer comprehensive <strong>custom website development</strong> services including responsive web
-                    design, e-commerce development, CMS integration, and web application development. Our <strong>web
-                      development company</strong> specializes in creating user-friendly, SEO-optimized websites that
-                    drive business growth.
+                    We offer <b>end-to-end digital solutions</b>, including:
+
+                    <ul class="mt-2">
+                      <li><b>UI/UX Design</b> – wireframes, prototypes, and user-friendly interfaces</li>
+                      <li><b>Website Design & Development</b> – responsive, SEO-ready websites</li>
+                      <li><b>E-commerce Solutions</b> – custom online stores with secure payments</li>
+                      <li><b>Web & Mobile Apps</b> – scalable apps with modern tech stacks</li>
+                      <li><b>IT Consulting & Cloud Services</b> – strategy, hosting, and DevOps support</li>
+                      <li><b>Ongoing Maintenance & Support</b> – updates, security, and performance optimization</li>
+                    </ul>
                   </div>
                 </div>
               </div>
@@ -633,15 +639,13 @@ function getTemplate(target) {
                 <h3 class="accordion-header">
                   <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                     data-bs-target="#faq4">
-                    How can DevOps consulting benefit my business?
+                    How much does a project cost?
                   </button>
                 </h3>
                 <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
                   <div class="accordion-body">
-                    Our <strong>DevOps consulting services</strong> help streamline your development and deployment
-                    processes, improve collaboration between teams, and ensure faster, more reliable software delivery.
-                    We implement CI/CD pipelines, cloud infrastructure management, and automation solutions to optimize
-                    your operations.
+                    Costs vary based on features, design, and complexity. After a free consultation, we provide a clear,
+                    tailored quote with no hidden charges.
                   </div>
                 </div>
               </div>
@@ -649,15 +653,64 @@ function getTemplate(target) {
                 <h3 class="accordion-header">
                   <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                     data-bs-target="#faq5">
-                    What makes your IT solutions different?
+                    How long will my project take?
                   </button>
                 </h3>
                 <div id="faq5" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
                   <div class="accordion-body">
-                    Our <strong>IT solutions</strong> are tailored to your specific business needs and goals. We combine
-                    cutting-edge technology with creative design to deliver solutions that not only look great but also
-                    drive measurable business results. Our team provides ongoing support and maintenance to ensure
-                    long-term success.
+                    <p class="mb-2">Timelines depend on scope:</p>
+                    <ul>
+                      <li><b>UI/UX Design:</b> Typically 1–3 weeks, depending on the number of screens and complexity of
+                        interactions.</li>
+                      <li><b>Website Design:</b> Usually 2–4 weeks for standard corporate or portfolio sites.</li>
+                      <li><b>Website Development:</b> Around 4–8 weeks, depending on features like e-commerce,
+                        integrations, or
+                        custom functionality.</li>
+                      <li><b>Large applications:</b> 3+ months</li>
+                    </ul>
+                    <p class="mb-0">We always define timelines upfront and keep you updated at every stage with progress
+                      milestones.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h3 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#faq6">
+                    Do you provide support after launch?
+                  </button>
+                </h3>
+                <div id="faq6" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                  <div class="accordion-body">
+                    Yes, we offer <b>maintenance, updates, security, and IT support packages</b> so your system stays
+                    reliable and up-to-date.
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h3 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#faq7">
+                    Will my website be mobile-friendly?
+                  </button>
+                </h3>
+                <div id="faq7" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                  <div class="accordion-body">
+                    Absolutely. Every site we build is <b>responsive, fast, and optimized for all devices</b>.
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h3 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#faq8">
+                    Do you work with international clients?
+                  </button>
+                </h3>
+                <div id="faq8" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                  <div class="accordion-body">
+                    Yes! We collaborate with businesses across <b>India and worldwide</b>, ensuring smooth communication
+                    and delivery.
                   </div>
                 </div>
               </div>
