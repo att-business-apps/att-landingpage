@@ -336,55 +336,55 @@ function getTemplate(target) {
 
         <div class="">
           <div class="row">
-            <div class="col-md-6 project branding">
+            <div class="col-md-10 mx-md-auto col-lg-6 project branding">
               <div class="project-grid">
                 <div class="thumbnail">
                   <a href="project/steadyasset">
                     <img src="../assets/img/project/c4/project-thum-sa.png" alt="project">
+                    <div class="content">
+                      <h4 class="title"><a href="project/steadyasset">SteadyAsset</a></h4>
+                      <span class="subtitle">Logo, Branding, UI/UX Design, Website, GMB, GA</span>
+                    </div>
                   </a>
-                </div>
-                <div class="content">
-                  <h4 class="title"><a href="project/steadyasset">SteadyAsset</a></h4>
-                  <span class="subtitle">Logo, Branding, UI/UX Design, Website, GMB, GA</span>
                 </div>
               </div>
             </div>
-            <div class="col-md-6 project branding">
+            <div class="col-md-10 mx-md-auto col-lg-6 project branding">
               <div class="project-grid">
                 <div class="thumbnail">
                   <a href="project/savedesk">
                     <img src="../assets/img/project/c7/project-thum-sd.png" alt="project">
+                    <div class="content">
+                      <h4 class="title"><a href="project/savedesk">SaveDesk</a></h4>
+                      <span class="subtitle">Redesign, UI/UX Design, Wireframing, High-Fidelity Prototype</span>
+                    </div>
                   </a>
-                </div>
-                <div class="content">
-                  <h4 class="title"><a href="project/savedesk">SaveDesk</a></h4>
-                  <span class="subtitle">Redesign, UI/UX Design, Wireframing, High-Fidelity Prototype</span>
                 </div>
               </div>
             </div>
-            <div class="col-md-6 project branding">
+            <div class="col-md-10 mx-md-auto col-lg-6 project branding">
               <div class="project-grid">
                 <div class="thumbnail">
                   <a href="project/samsiddhi-designs">
                     <img src="../assets/img/project/c9/project-thum-sd.png" alt="project">
+                    <div class="content">
+                      <h4 class="title"><a href="project/samsiddhi-designs">Samsiddhi Designs</a></h4>
+                      <span class="subtitle">Logo, Branding, UI/UX Design, Website, GMB, GA</span>
+                    </div>
                   </a>
-                </div>
-                <div class="content">
-                  <h4 class="title"><a href="project/samsiddhi-designs">Samsiddhi Designs</a></h4>
-                  <span class="subtitle">Logo, Branding, UI/UX Design, Website, GMB, GA</span>
                 </div>
               </div>
             </div>
-            <div class="col-md-6 project branding">
+            <div class="col-md-10 mx-md-auto col-lg-6 project branding">
               <div class="project-grid">
                 <div class="thumbnail">
                   <a href="project/uae-links">
                     <img src="../assets/img/project/c1/project-thum-uaeLinks.png" alt="project">
+                    <div class="content">
+                      <h4 class="title"><a href="project/uae-links">UAE Links</a></h4>
+                      <span class="subtitle">UI/UX Design, Website, GA</span>
+                    </div>
                   </a>
-                </div>
-                <div class="content">
-                  <h4 class="title"><a href="project/uae-links">UAE Links</a></h4>
-                  <span class="subtitle">UI/UX Design, Website, GA</span>
                 </div>
               </div>
             </div>

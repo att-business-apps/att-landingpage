@@ -48,16 +48,16 @@
     </div>
     <div class="container-fluid">
       <div class="row">
-        <div class="col-md-6" v-for="item in filteredProjects" :key="item.id">
+        <div class="col-md-8 mx-md-auto col-lg-6" v-for="item in filteredProjects" :key="item.id">
           <div class="project-grid h-100">
             <div class="thumbnail">
               <a :href="item.href">
                 <img :src="item.img" alt="project">
+                <div class="content">
+                  <h4 class="title"><a :href="item.href">{{ item.title }}</a></h4>
+                  <span class="subtitle">{{ item.subtitle }}</span>
+                </div>
               </a>
-            </div>
-            <div class="content">
-              <h4 class="title"><a :href="item.href">{{ item.title }}</a></h4>
-              <span class="subtitle">{{ item.subtitle }}</span>
             </div>
           </div>
         </div>
@@ -109,8 +109,8 @@ const projects = ref([
     title: "Microrelic",
     href: "project/microrelic",
     img: new URL("../assets/img/project/c3/project-thum-mr.png", import.meta.url).href,
-    subtitle: "Branding, UI/UX Design, Website, Redesign, GMB, GA",
-    categories: ["UI/UX Design", "Website", "GMB"],
+    subtitle: "Branding, UI/UX Design, Website, Redesign, GA",
+    categories: ["UI/UX Design", "Website",],
   },
   {
     id: "steadyasset",
