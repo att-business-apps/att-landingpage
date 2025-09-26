@@ -16869,12 +16869,17 @@ Frequently Asked Questions
   color: #ffffff;
   font-size: 18px;
   font-weight: 400;
-  background: #1a1a22 !important;
+  background: var(--color-black) !important;
   padding: 25px 60px 25px 25px !important;
   position: relative;
   border-radius: 6px !important;
   box-shadow: inherit;
   border-bottom: 1px solid transparent !important;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 .faqSec .accordion .accordion-item .accordion-header .accordion-button:not(.collapsed) {
   background: #1a1a22 !important;
@@ -16900,6 +16905,9 @@ Frequently Asked Questions
   position: absolute;
   top: 22px;
   right: 25px;
+}
+.faqSec .accordion .accordion-item .accordion-header .accordion-button:hover {
+  background: #1a1a22 !important;
 }
 
 /*-------------------------
