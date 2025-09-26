@@ -65,11 +65,15 @@
         display: flex;
         padding: 1.75rem 1.4rem 1.75rem;
         border-radius: 30px;
-        transition: var(--transition);
         margin-bottom: 40px;
         position: relative;
         z-index: 1;
         transition: var(--transition);
+        background-color: rgba(39, 39, 47, 0.5);
+        -webkit-backdrop-filter: blur(2px);
+        -moz-backdrop-filter: blur(2px);
+        -ms-backdrop-filter: blur(2px);
+        backdrop-filter: blur(2px);
         @media #{$laptop-device} {
             padding: 50px 30px 40px;
         }
@@ -153,7 +157,7 @@
 
             &:after {
                 visibility: visible;
-                opacity: 1;
+                opacity: 0.9;
             }
             .thumbnail {
                 &::after {
@@ -227,13 +231,12 @@
 }
 
 /*-------------------------
-Service
+Service Page
 -------------------------*/
 .services-grid {
     display: flex;
     padding: 50px 50px 40px;
     border-radius: 30px;
-    transition: var(--transition);
     margin-bottom: 40px;
     position: relative;
     z-index: 1;
@@ -410,18 +413,20 @@ Service
     }
 }
 .service-scroll-nav {
-	background-color: var(--color-white);
-	z-index: 3;
-	-webkit-transition: var(--transition);
-	transition: var(--transition);
-	padding-top: 5px;
-	padding-bottom: 0;
-	// position: absolute;
 	width: 100%;
+    height: auto;
     top: 83px;
     position: fixed;
     z-index: 2;
-    height: auto;
+	padding-top: 5px;
+	padding-bottom: 0;
+    background-color: rgba(39, 39, 47, 0.8);
+    -webkit-backdrop-filter: blur(8px);
+    -moz-backdrop-filter: blur(8px);
+    -ms-backdrop-filter: blur(8px);
+    backdrop-filter: blur(8px);
+	-webkit-transition: var(--transition);
+	transition: var(--transition);
 
     @media #{$md-layout} {
         top: 80px;
@@ -440,7 +445,6 @@ Service
 		-webkit-flex: 1;
 		-ms-flex: 1;
 		flex: 1;
-		border-bottom: 1px solid var(--color-mercury);
 
         @media #{$md-layout} {
             display: flex; 
@@ -464,8 +468,9 @@ Service
                 scroll-snap-align: start;
             }
 			a {
+                font-size: 1rem;
 				padding: 20px 10px;
-				color: var(--color-dark);
+				color: var(--color-white);
 				position: relative;
 
                 @media #{$sm-layout} {
@@ -559,12 +564,12 @@ Service
     width: 100%;
     margin: 0 auto;
     padding: 1rem;
-    z-index: 999;
-    background-color: rgba(39, 39, 47, 0.9);
-    -webkit-backdrop-filter: blur(6px);
-    -moz-backdrop-filter: blur(6px);
-    -ms-backdrop-filter: blur(6px);
-    backdrop-filter: blur(6px);
+    z-index: 4;
+    background-color: rgba(39, 39, 47, 0.8);
+    -webkit-backdrop-filter: blur(8px);
+    -moz-backdrop-filter: blur(8px);
+    -ms-backdrop-filter: blur(8px);
+    backdrop-filter: blur(8px);
 
     @media #{$md-layout} {
         left: 0.9rem;
