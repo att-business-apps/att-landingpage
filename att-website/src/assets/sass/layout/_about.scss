@@ -19,10 +19,11 @@
     }
 
     &.banner-form {
-        background-color: var(--color-dark);
+        background-color: var(--color-black);
         position: relative;
         margin-bottom: -60px;
         @include transition($all);
+        box-shadow: 0 9px 40px -10px rgba(0, 0, 0, 0.15);
 
         h4, h5, p, button, input, textarea {
             color: var(--color-white);
