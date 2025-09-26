@@ -16834,6 +16834,9 @@ Frequently Asked Questions
 .faqSec {
   position: relative;
 }
+.faqSec .subtitle {
+  color: var(--logo-blue);
+}
 .faqSec .faq-style {
   position: relative;
   z-index: 1;

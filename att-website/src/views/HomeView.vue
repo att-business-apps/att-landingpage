@@ -330,8 +330,10 @@ function getTemplate(target) {
       <div class="container-fluid">
         <div class="section-heading heading-left">
           <span class="subtitle">Our Recent Clients</span>
-          <h2 class="title">Professional <span class="gradient-text yello-dark">Web Development</span> <br> & Design
-            Projects</h2>
+          <h2 class="title">
+            <span class="gradient-text yellow-light">Trusted </span> by <span
+              class="gradient-text yellow-light">Leading</span> Businesses
+          </h2>
         </div>
 
         <div class="">
@@ -406,8 +408,9 @@ function getTemplate(target) {
     <section class="section section-padding bg-color-light" id="reviews">
       <div class="container-fluid">
         <div class="section-heading heading-center">
-          <span class="subtitle">What our clients say on Google Reviews</span>
-          <h2 class="title"><span class="gradient-text yello-dark">Client</span> Reviews</h2>
+          <span class="subtitle">What Clients Say</span>
+          <h2 class="title"><span class="gradient-text yello-dark">Feedback</span> That <span
+              class="gradient-text yello-dark">Inspires</span> Us</h2>
         </div>
         <div class="row">
           <div class="col-lg-4 col-md-6 mb-4">
@@ -521,8 +524,7 @@ function getTemplate(target) {
               <div class="section-heading heading-left mb-0">
                 <span class="subtitle">Who we are</span>
                 <h2 class="title mb--40">
-                  Professional <span class="gradient-text-light text-lg">Web Development</span> &amp;
-                  <span class="gradient-text-light text-lg">IT Solutions</span> Provider
+                  Your <span class="gradient-text-light text-lg">Digital Growth</span> Partner
                 </h2>
                 <p>
                   At amortree Tech, we're more than just an <strong>IT consulting company</strong>;
@@ -547,7 +549,7 @@ function getTemplate(target) {
                   and let's embark on a journey of <strong>digital transformation</strong> and success
                   together.
                 </p>
-                <div class="d-flex justify-content-center gap-3 mt-5">
+                <div class="d-flex justify-content-start gap-3 mt-5">
                   <a href="whoWeAre" class="amor-btn btn-borderd light" tabindex="0">Know more</a>
                 </div>
               </div>
@@ -560,14 +562,11 @@ function getTemplate(target) {
         </div>
       </div>
       <ul class="shape-group-service list-unstyled">
-        <li class="shape shape-1">
-          <img src="../assets/img/shapes/line-2.png" alt="Bubble" />
-        </li>
         <li class="shape shape-2">
-          <img src="../assets/img/shapes/line-7.png" alt="line" />
+          <img src="../assets/img/shapes/line-6.png" alt="line" />
         </li>
         <li class="shape shape-3">
-          <img src="../assets/img/shapes/line-8.png" alt="line" />
+          <img src="../assets/img/shapes/line-5.png" alt="line" />
         </li>
       </ul>
     </section>
@@ -579,7 +578,7 @@ function getTemplate(target) {
           <div class="col-lg-8 offset-lg-2">
             <div class="section-heading heading-center faq-style">
               <span class="subtitle">Frequently Asked Questions</span>
-              <h2 class="title">Need <span class="gradient-text yello-dark">Clarity?</span> We’ve Got You</h2>
+              <h2 class="title">Need <span class="gradient-text blue-light">Clarity?</span> We’ve Got You</h2>
               <p class="px-lg-5">Get answers to common questions about our professional web development, UI/UX design,
                 and DevOps consulting services.</p>
             </div>
@@ -721,9 +720,6 @@ function getTemplate(target) {
       <ul class="shape-group-service list-unstyled">
         <li class="shape shape-1">
           <img src="../assets/img/shapes/line-2.png" alt="Bubble" />
-        </li>
-        <li class="shape shape-2">
-          <img src="../assets/img/shapes/line-7.png" alt="line" />
         </li>
         <li class="shape shape-3">
           <img src="../assets/img/shapes/bubble-5.png" alt="line" />

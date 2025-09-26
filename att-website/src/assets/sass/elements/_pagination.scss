@@ -70,6 +70,10 @@ Frequently Asked Questions
     position: relative;
     // background-color: $cwhite !important;
 
+    .subtitle {
+        color: var(--logo-blue);
+    }
+
     .faq-style {
         position: relative;
         z-index: 1;
