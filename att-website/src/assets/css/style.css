@@ -19771,6 +19771,7 @@ Service Page
   border-image-source: linear-gradient(90deg, var(--color-light) 0%, rgba(236, 242, 246, 0) 70.31%);
   background-color: var(--color-ship-gray);
   margin-bottom: 30px;
+  height: -webkit-fill-available;
 }
 .services-grid.service-style-2:after {
   display: none;
