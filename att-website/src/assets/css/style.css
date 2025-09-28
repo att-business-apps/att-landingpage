@@ -19612,7 +19612,9 @@ Frequently Asked Questions
   transition: var(--transition);
 }
 .serviceSec .services-grid:hover, .serviceSec .services-grid.active {
+  background: linear-gradient(125deg, var(--color-light) 0%, rgba(255, 255, 255, 0) 100%);
   box-shadow: 0 24px 48px -15px rgba(45, 46, 46, 0.25);
+  transform: scale(1.05);
 }
 .serviceSec .services-grid:hover:after, .serviceSec .services-grid.active:after {
   visibility: visible;
@@ -19630,47 +19632,6 @@ Frequently Asked Questions
 }
 .serviceSec .services-grid:hover .content .more-btn:before, .serviceSec .services-grid.active .content .more-btn:before {
   background-color: var(--logo-yellow);
-}
-.serviceSec .services-grid.service-style-2 {
-  background: linear-gradient(180deg, var(--color-light) 0%, rgba(255, 255, 255, 0) 100%);
-  border: 1px solid;
-  border-image-source: linear-gradient(90deg, var(--color-light) 0%, rgba(236, 242, 246, 0) 70.31%);
-  background-color: var(--color-light);
-  margin-bottom: 30px;
-}
-.serviceSec .services-grid.service-style-2:after {
-  display: none;
-}
-.serviceSec .services-grid.service-style-2 .content .title a {
-  color: var(--color-text-dark);
-}
-.serviceSec .services-grid.service-style-2 .content .title a:hover {
-  color: var(--color-primary);
-}
-.serviceSec .services-grid.service-style-2 .content p {
-  color: var(--color-body);
-  opacity: 1;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  display: -webkit-box;
-  -webkit-line-clamp: 3;
-  -webkit-box-orient: vertical;
-}
-.serviceSec .services-grid.service-style-2 .content .more-btn {
-  color: var(--color-body);
-}
-.serviceSec .services-grid.service-style-2 .content .more-btn:before {
-  background-color: var(--color-body);
-}
-.serviceSec .services-grid.service-style-2:hover, .serviceSec .services-grid.service-style-2.active {
-  background-color: var(--color-light);
-  box-shadow: 0 24px 48px -15px rgba(153, 161, 170, 0.25);
-}
-.serviceSec .services-grid.service-style-2:hover .content .more-btn, .serviceSec .services-grid.service-style-2.active .content .more-btn {
-  color: var(--color-primary);
-}
-.serviceSec .services-grid.service-style-2:hover .content .more-btn:before, .serviceSec .services-grid.service-style-2.active .content .more-btn:before {
-  background-color: var(--color-primary);
 }
 
 /*-------------------------
@@ -19777,6 +19738,7 @@ Service Page
   transition: var(--transition);
 }
 .services-grid:hover, .services-grid.active {
+  background: linear-gradient(315deg, var(--logo-blue) 0%, rgba(255, 255, 255, 0) 100%);
   box-shadow: 0 24px 48px -15px rgba(153, 161, 170, 0.25);
 }
 .services-grid:hover:after, .services-grid.active:after {
@@ -19796,41 +19758,41 @@ Service Page
 .services-grid:hover .content .more-btn:before, .services-grid.active .content .more-btn:before {
   background-color: var(--logo-yellow);
 }
-.services-grid.service-style-2 {
-  background: linear-gradient(180deg, var(--color-light) 0%, rgba(255, 255, 255, 0) 100%);
-  border: 1px solid;
-  border-image-source: linear-gradient(90deg, var(--color-light) 0%, rgba(236, 242, 246, 0) 70.31%);
+.services-grid.service-card-style {
+  background: linear-gradient(315deg, var(--color-light) 0%, rgba(255, 255, 255, 0) 100%);
   background-color: var(--color-ship-gray);
   margin-bottom: 30px;
   height: -webkit-fill-available;
+  transition: var(--transition);
 }
-.services-grid.service-style-2:after {
+.services-grid.service-card-style:after {
   display: none;
 }
-.services-grid.service-style-2 .content .title a {
+.services-grid.service-card-style .content .title a {
   color: var(--color-text-dark);
 }
-.services-grid.service-style-2 .content .title a:hover {
+.services-grid.service-card-style .content .title a:hover {
   color: var(--color-primary);
 }
-.services-grid.service-style-2 .content p {
+.services-grid.service-card-style .content p {
   color: var(--color-body);
   opacity: 1;
 }
-.services-grid.service-style-2 .content .more-btn {
+.services-grid.service-card-style .content .more-btn {
   color: var(--color-body);
 }
-.services-grid.service-style-2 .content .more-btn:before {
+.services-grid.service-card-style .content .more-btn:before {
   background-color: var(--color-body);
 }
-.services-grid.service-style-2:hover, .services-grid.service-style-2.active {
-  background-color: var(--color-light);
-  box-shadow: 0 24px 48px -15px rgba(70, 72, 74, 0.25);
+.services-grid.service-card-style:hover, .services-grid.service-card-style.active {
+  background: linear-gradient(125deg, var(--color-dark) 0%, var(--color-ship-gray) 100%);
+  box-shadow: 0 24px 48px -28px rgba(70, 72, 74, 0.15);
+  transform: scale(1.05);
 }
-.services-grid.service-style-2:hover .content .more-btn, .services-grid.service-style-2.active .content .more-btn {
+.services-grid.service-card-style:hover .content .more-btn, .services-grid.service-card-style.active .content .more-btn {
   color: var(--color-primary);
 }
-.services-grid.service-style-2:hover .content .more-btn:before, .services-grid.service-style-2.active .content .more-btn:before {
+.services-grid.service-card-style:hover .content .more-btn:before, .services-grid.service-card-style.active .content .more-btn:before {
   background-color: var(--color-primary);
 }
 
@@ -21464,7 +21426,7 @@ Service Page
   background-color: var(--color-dark);
   border-radius: 1.5rem;
   padding: 60px 50px;
-  box-shadow: 0 9px 18px 0 rgba(0, 0, 0, 0.25);
+  box-shadow: 0 9px 18px -10px rgba(0, 0, 0, 0.25);
   position: relative;
 }
 .contact-info:hover::before, .contact-info:hover::after {

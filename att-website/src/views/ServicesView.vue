@@ -75,7 +75,7 @@
         </div>
         <div class="row">
           <div class="col-md-6 sal-animate" data-sal="slide-up" data-sal-duration="800" data-sal-delay="100">
-            <div class="services-grid service-style-2">
+            <div class="services-grid service-card-style">
               <div class="thumbnail">
                 <img src="../assets/img/icon/research-1.png" alt="icon">
               </div>
@@ -89,7 +89,7 @@
           </div>
 
           <div class="col-md-6 sal-animate" data-sal="slide-up" data-sal-duration="800" data-sal-delay="200">
-            <div class="services-grid service-style-2">
+            <div class="services-grid service-card-style">
               <div class="thumbnail">
                 <img src="../assets/img/icon/research-2.png" alt="icon">
               </div>
@@ -104,7 +104,7 @@
           </div>
 
           <div class="col-md-6 sal-animate" data-sal="slide-up" data-sal-duration="800" data-sal-delay="300">
-            <div class="services-grid service-style-2">
+            <div class="services-grid service-card-style">
               <div class="thumbnail">
                 <img src="../assets/img/icon/research-3.png" alt="icon">
               </div>
@@ -118,7 +118,7 @@
           </div>
 
           <div class="col-md-6 sal-animate" data-sal="slide-up" data-sal-duration="800" data-sal-delay="100">
-            <div class="services-grid service-style-2">
+            <div class="services-grid service-card-style">
               <div class="thumbnail">
                 <img src="../assets/img/icon/research-4.png" alt="icon">
               </div>
@@ -132,7 +132,7 @@
           </div>
 
           <div class="col-md-6 sal-animate" data-sal="slide-up" data-sal-duration="800" data-sal-delay="200">
-            <div class="services-grid service-style-2">
+            <div class="services-grid service-card-style">
               <div class="thumbnail">
                 <img src="../assets/img/icon/research-5.png" alt="icon">
               </div>
@@ -146,7 +146,7 @@
           </div>
 
           <div class="col-md-6 sal-animate" data-sal="slide-up" data-sal-duration="800" data-sal-delay="200">
-            <div class="services-grid service-style-2">
+            <div class="services-grid service-card-style">
               <div class="thumbnail">
                 <img src="../assets/img/icon/research-6.png" alt="icon">
               </div>
@@ -160,7 +160,7 @@
           </div>
 
           <div class="col-md-6 sal-animate" data-sal="slide-up" data-sal-duration="800" data-sal-delay="200">
-            <div class="services-grid service-style-2">
+            <div class="services-grid service-card-style">
               <div class="thumbnail">
                 <img src="../assets/img/icon/research-7.png" alt="icon">
               </div>
@@ -199,7 +199,7 @@
         </div>
         <div class="row">
           <div class="col-md-6 sal-animate" data-sal="slide-up" data-sal-duration="800" data-sal-delay="100">
-            <div class="services-grid service-style-2">
+            <div class="services-grid service-card-style">
               <div class="thumbnail">
                 <img src="../assets/img/icon/brand-1.png" alt="icon">
               </div>
@@ -213,7 +213,7 @@
           </div>
 
           <div class="col-md-6 sal-animate" data-sal="slide-up" data-sal-duration="800" data-sal-delay="200">
-            <div class="services-grid service-style-2">
+            <div class="services-grid service-card-style">
               <div class="thumbnail">
                 <img src="../assets/img/icon/brand-2.png" alt="icon">
               </div>
@@ -227,7 +227,7 @@
           </div>
 
           <div class="col-md-6 sal-animate" data-sal="slide-up" data-sal-duration="800" data-sal-delay="300">
-            <div class="services-grid service-style-2">
+            <div class="services-grid service-card-style">
               <div class="thumbnail">
                 <img src="../assets/img/icon/brand-3.png" alt="icon">
               </div>
@@ -241,7 +241,7 @@
           </div>
 
           <div class="col-md-6 sal-animate" data-sal="slide-up" data-sal-duration="800" data-sal-delay="100">
-            <div class="services-grid service-style-2">
+            <div class="services-grid service-card-style">
               <div class="thumbnail">
                 <img src="../assets/img/icon/brand-4.png" alt="icon">
               </div>
@@ -254,7 +254,7 @@
           </div>
 
           <div class="col-md-6 sal-animate" data-sal="slide-up" data-sal-duration="800" data-sal-delay="200">
-            <div class="services-grid service-style-2">
+            <div class="services-grid service-card-style">
               <div class="thumbnail">
                 <img src="../assets/img/icon/brand-5.png" alt="icon">
               </div>
@@ -267,7 +267,7 @@
           </div>
 
           <div class="col-md-6 sal-animate" data-sal="slide-up" data-sal-duration="800" data-sal-delay="200">
-            <div class="services-grid service-style-2">
+            <div class="services-grid service-card-style">
               <div class="thumbnail">
                 <img src="../assets/img/icon/brand-6.png" alt="icon">
               </div>
@@ -280,7 +280,7 @@
           </div>
 
           <div class="col-md-6 sal-animate" data-sal="slide-up" data-sal-duration="800" data-sal-delay="200">
-            <div class="services-grid service-style-2">
+            <div class="services-grid service-card-style">
               <div class="thumbnail">
                 <img src="../assets/img/icon/brand-7.png" alt="icon">
               </div>
@@ -317,7 +317,7 @@
         </div>
         <div class="row">
           <div class="col-md-6 sal-animate" data-sal="slide-up" data-sal-duration="800" data-sal-delay="100">
-            <div class="services-grid service-style-2">
+            <div class="services-grid service-card-style">
               <div class="thumbnail">
                 <img src="../assets/img/icon/logo-1.png" alt="icon">
               </div>
@@ -330,7 +330,7 @@
           </div>
 
           <div class="col-md-6 sal-animate" data-sal="slide-up" data-sal-duration="800" data-sal-delay="200">
-            <div class="services-grid service-style-2">
+            <div class="services-grid service-card-style">
               <div class="thumbnail">
                 <img src="../assets/img/icon/logo-2.png" alt="icon">
               </div>
@@ -343,7 +343,7 @@
           </div>
 
           <div class="col-md-6 sal-animate" data-sal="slide-up" data-sal-duration="800" data-sal-delay="300">
-            <div class="services-grid service-style-2">
+            <div class="services-grid service-card-style">
               <div class="thumbnail">
                 <img src="../assets/img/icon/logo-3.png" alt="icon">
               </div>
@@ -356,7 +356,7 @@
           </div>
 
           <div class="col-md-6 sal-animate" data-sal="slide-up" data-sal-duration="800" data-sal-delay="100">
-            <div class="services-grid service-style-2">
+            <div class="services-grid service-card-style">
               <div class="thumbnail">
                 <img src="../assets/img/icon/logo-4.png" alt="icon">
               </div>
@@ -369,7 +369,7 @@
           </div>
 
           <div class="col-md-6 sal-animate" data-sal="slide-up" data-sal-duration="800" data-sal-delay="200">
-            <div class="services-grid service-style-2">
+            <div class="services-grid service-card-style">
               <div class="thumbnail">
                 <img src="../assets/img/icon/logo-5.png" alt="icon">
               </div>
@@ -382,7 +382,7 @@
           </div>
 
           <div class="col-md-6 sal-animate" data-sal="slide-up" data-sal-duration="800" data-sal-delay="200">
-            <div class="services-grid service-style-2">
+            <div class="services-grid service-card-style">
               <div class="thumbnail">
                 <img src="../assets/img/icon/logo-6.png" alt="icon">
               </div>
@@ -395,7 +395,7 @@
           </div>
 
           <div class="col-md-6 sal-animate" data-sal="slide-up" data-sal-duration="800" data-sal-delay="200">
-            <div class="services-grid service-style-2">
+            <div class="services-grid service-card-style">
               <div class="thumbnail">
                 <img src="../assets/img/icon/logo-7.png" alt="icon">
               </div>
@@ -433,7 +433,7 @@
         </div>
         <div class="row">
           <div class="col-md-6 sal-animate" data-sal="slide-up" data-sal-duration="800" data-sal-delay="100">
-            <div class="services-grid service-style-2">
+            <div class="services-grid service-card-style">
               <div class="thumbnail">
                 <img src="../assets/img/icon/web-1.png" alt="icon">
               </div>
@@ -447,7 +447,7 @@
           </div>
 
           <div class="col-md-6 sal-animate" data-sal="slide-up" data-sal-duration="800" data-sal-delay="200">
-            <div class="services-grid service-style-2">
+            <div class="services-grid service-card-style">
               <div class="thumbnail">
                 <img src="../assets/img/icon/web-2.png" alt="icon">
               </div>
@@ -461,7 +461,7 @@
           </div>
 
           <div class="col-md-6 sal-animate" data-sal="slide-up" data-sal-duration="800" data-sal-delay="300">
-            <div class="services-grid service-style-2">
+            <div class="services-grid service-card-style">
               <div class="thumbnail">
                 <img src="../assets/img/icon/web-3.png" alt="icon">
               </div>
@@ -475,7 +475,7 @@
           </div>
 
           <div class="col-md-6 sal-animate" data-sal="slide-up" data-sal-duration="800" data-sal-delay="100">
-            <div class="services-grid service-style-2">
+            <div class="services-grid service-card-style">
               <div class="thumbnail">
                 <img src="../assets/img/icon/web-4.png" alt="icon">
               </div>
@@ -489,7 +489,7 @@
           </div>
 
           <div class="col-md-6 sal-animate" data-sal="slide-up" data-sal-duration="800" data-sal-delay="200">
-            <div class="services-grid service-style-2">
+            <div class="services-grid service-card-style">
               <div class="thumbnail">
                 <img src="../assets/img/icon/web-5.png" alt="icon">
               </div>
@@ -502,7 +502,7 @@
           </div>
 
           <div class="col-md-6 sal-animate" data-sal="slide-up" data-sal-duration="800" data-sal-delay="200">
-            <div class="services-grid service-style-2">
+            <div class="services-grid service-card-style">
               <div class="thumbnail">
                 <img src="../assets/img/icon/web-6.png" alt="icon">
               </div>
@@ -515,7 +515,7 @@
           </div>
 
           <div class="col-md-6 sal-animate" data-sal="slide-up" data-sal-duration="800" data-sal-delay="200">
-            <div class="services-grid service-style-2">
+            <div class="services-grid service-card-style">
               <div class="thumbnail">
                 <img src="../assets/img/icon/web-7.png" alt="icon">
               </div>
@@ -528,7 +528,7 @@
           </div>
 
           <div class="col-md-6 sal-animate" data-sal="slide-up" data-sal-duration="800" data-sal-delay="200">
-            <div class="services-grid service-style-2">
+            <div class="services-grid service-card-style">
               <div class="thumbnail">
                 <img src="../assets/img/icon/web-8.png" alt="icon">
               </div>
@@ -567,7 +567,7 @@
         </div>
         <div class="row">
           <div class="col-md-6 sal-animate" data-sal="slide-up" data-sal-duration="800" data-sal-delay="100">
-            <div class="services-grid service-style-2">
+            <div class="services-grid service-card-style">
               <div class="thumbnail">
                 <img src="../assets/img/icon/mob-1.png" alt="icon">
               </div>
@@ -580,7 +580,7 @@
           </div>
 
           <div class="col-md-6 sal-animate" data-sal="slide-up" data-sal-duration="800" data-sal-delay="200">
-            <div class="services-grid service-style-2">
+            <div class="services-grid service-card-style">
               <div class="thumbnail">
                 <img src="../assets/img/icon/mob-2.png" alt="icon">
               </div>
@@ -594,7 +594,7 @@
           </div>
 
           <div class="col-md-6 sal-animate" data-sal="slide-up" data-sal-duration="800" data-sal-delay="300">
-            <div class="services-grid service-style-2">
+            <div class="services-grid service-card-style">
               <div class="thumbnail">
                 <img src="../assets/img/icon/mob-3.png" alt="icon">
               </div>
@@ -607,7 +607,7 @@
           </div>
 
           <div class="col-md-6 sal-animate" data-sal="slide-up" data-sal-duration="800" data-sal-delay="100">
-            <div class="services-grid service-style-2">
+            <div class="services-grid service-card-style">
               <div class="thumbnail">
                 <img src="../assets/img/icon/mob-4.png" alt="icon">
               </div>
@@ -620,7 +620,7 @@
           </div>
 
           <div class="col-md-6 sal-animate" data-sal="slide-up" data-sal-duration="800" data-sal-delay="200">
-            <div class="services-grid service-style-2">
+            <div class="services-grid service-card-style">
               <div class="thumbnail">
                 <img src="../assets/img/icon/mob-5.png" alt="icon">
               </div>
@@ -633,7 +633,7 @@
           </div>
 
           <div class="col-md-6 sal-animate" data-sal="slide-up" data-sal-duration="800" data-sal-delay="200">
-            <div class="services-grid service-style-2">
+            <div class="services-grid service-card-style">
               <div class="thumbnail">
                 <img src="../assets/img/icon/mob-6.png" alt="icon">
               </div>
@@ -646,7 +646,7 @@
           </div>
 
           <div class="col-md-6 sal-animate" data-sal="slide-up" data-sal-duration="800" data-sal-delay="200">
-            <div class="services-grid service-style-2">
+            <div class="services-grid service-card-style">
               <div class="thumbnail">
                 <img src="../assets/img/icon/mob-7.png" alt="icon">
               </div>
@@ -685,7 +685,7 @@
         </div>
         <div class="row">
           <div class="col-md-6 sal-animate" data-sal="slide-up" data-sal-duration="800" data-sal-delay="100">
-            <div class="services-grid service-style-2">
+            <div class="services-grid service-card-style">
               <div class="thumbnail">
                 <img src="../assets/img/icon/devops-1.png" alt="icon">
               </div>
@@ -698,7 +698,7 @@
           </div>
 
           <div class="col-md-6 sal-animate" data-sal="slide-up" data-sal-duration="800" data-sal-delay="200">
-            <div class="services-grid service-style-2">
+            <div class="services-grid service-card-style">
               <div class="thumbnail">
                 <img src="../assets/img/icon/devops-2.png" alt="icon">
               </div>
@@ -711,7 +711,7 @@
           </div>
 
           <div class="col-md-6 sal-animate" data-sal="slide-up" data-sal-duration="800" data-sal-delay="300">
-            <div class="services-grid service-style-2">
+            <div class="services-grid service-card-style">
               <div class="thumbnail">
                 <img src="../assets/img/icon/devops-3.png" alt="icon">
               </div>
@@ -724,7 +724,7 @@
           </div>
 
           <div class="col-md-6 sal-animate" data-sal="slide-up" data-sal-duration="800" data-sal-delay="100">
-            <div class="services-grid service-style-2">
+            <div class="services-grid service-card-style">
               <div class="thumbnail">
                 <img src="../assets/img/icon/devops-4.png" alt="icon">
               </div>
@@ -738,7 +738,7 @@
           </div>
 
           <div class="col-md-6 sal-animate" data-sal="slide-up" data-sal-duration="800" data-sal-delay="200">
-            <div class="services-grid service-style-2">
+            <div class="services-grid service-card-style">
               <div class="thumbnail">
                 <img src="../assets/img/icon/devops-5.png" alt="icon">
               </div>
@@ -751,7 +751,7 @@
           </div>
 
           <div class="col-md-6 sal-animate" data-sal="slide-up" data-sal-duration="800" data-sal-delay="200">
-            <div class="services-grid service-style-2">
+            <div class="services-grid service-card-style">
               <div class="thumbnail">
                 <img src="../assets/img/icon/devops-6.png" alt="icon">
               </div>
@@ -764,7 +764,7 @@
           </div>
 
           <div class="col-md-6 sal-animate" data-sal="slide-up" data-sal-duration="800" data-sal-delay="200">
-            <div class="services-grid service-style-2">
+            <div class="services-grid service-card-style">
               <div class="thumbnail">
                 <img src="../assets/img/icon/devops-7.png" alt="icon">
               </div>
@@ -777,7 +777,7 @@
           </div>
 
           <div class="col-md-6 sal-animate" data-sal="slide-up" data-sal-duration="800" data-sal-delay="200">
-            <div class="services-grid service-style-2">
+            <div class="services-grid service-card-style">
               <div class="thumbnail">
                 <img src="../assets/img/icon/devops-8.png" alt="icon">
               </div>

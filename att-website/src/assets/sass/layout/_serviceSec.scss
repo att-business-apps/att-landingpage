@@ -74,6 +74,7 @@
         -moz-backdrop-filter: blur(2px);
         -ms-backdrop-filter: blur(2px);
         backdrop-filter: blur(2px);
+        
         @media #{$laptop-device} {
             padding: 50px 30px 40px;
         }
@@ -153,7 +154,9 @@
             }
         }
         &:hover, &.active{
+            background: linear-gradient(125deg, var(--color-light) 0%, rgba(255, 255, 255, 0) 100%);
             box-shadow: 0 24px 48px -15px rgba(45, 46, 46, 0.25);
+            transform: scale(1.05);
 
             &:after {
                 visibility: visible;
@@ -175,55 +178,6 @@
                         background-color: var(--logo-yellow);
                     }
                 }
-            }
-        }
-        &.service-style-2 {
-            background: linear-gradient(180deg, var(--color-light) 0%, rgba(255, 255, 255, 0) 100%);
-            border: 1px solid;
-            border-image-source: linear-gradient(90deg, var(--color-light) 0%, rgba(236, 242, 246, 0) 70.31%);
-            background-color: var(--color-light);
-            margin-bottom: 30px;
-            &:after {
-                display: none;
-            }
-            .content {
-                .title {
-                    a {
-                        color: var(--color-text-dark);
-                        &:hover {
-                            color: var(--color-primary);
-                        }
-
-                    }
-                }
-                p {
-                    color: var(--color-body);
-                    opacity: 1;
-                    overflow: hidden;
-                    text-overflow: ellipsis;
-                    display: -webkit-box;
-                    -webkit-line-clamp: 3;
-                    -webkit-box-orient: vertical;
-                }
-                .more-btn {
-                    color: var(--color-body);
-                    &:before {
-                        background-color: var(--color-body);
-                    }
-                }
-            }
-            &:hover, &.active {
-                background-color: var(--color-light);
-                box-shadow: 0 24px 48px -15px rgba(153, 161, 170, 0.25);
-                .content {
-                    .more-btn {
-                        color: var(--color-primary);
-                        &:before {
-                            background-color: var(--color-primary);
-                        }
-                    }
-                }
-                
             }
         }
     }
@@ -324,6 +278,7 @@ Service Page
         }
     }
     &:hover, &.active{
+        background: linear-gradient(315deg, var(--logo-blue) 0%, rgba(255, 255, 255, 0) 100%);
         box-shadow: 0 24px 48px -15px rgba(153, 161, 170, 0.25);
 
         &:after {
@@ -348,13 +303,13 @@ Service Page
             }
         }
     }
-    &.service-style-2 {
-        background: linear-gradient(180deg, var(--color-light) 0%, rgba(255, 255, 255, 0) 100%);
-        border: 1px solid;
-        border-image-source: linear-gradient(90deg, var(--color-light) 0%, rgba(236, 242, 246, 0) 70.31%);
+    &.service-card-style {
+        background: linear-gradient(315deg, var(--color-light) 0%, rgba(255, 255, 255, 0) 100%);
         background-color: var(--color-ship-gray);
         margin-bottom: 30px;
         height: -webkit-fill-available;
+        transition: var(--transition);
+
         &:after {
             display: none;
         }
@@ -385,8 +340,9 @@ Service Page
             }
         }
         &:hover, &.active {
-            background-color: var(--color-light);
-            box-shadow: 0 24px 48px -15px rgba(70, 72, 74, 0.25);
+            background: linear-gradient(125deg, var(--color-dark) 0%, var(--color-ship-gray) 100%);
+            box-shadow: 0 24px 48px -28px rgba(70, 72, 74, 0.15);
+            transform: scale(1.05);
 
             .content {
                 .more-btn {
