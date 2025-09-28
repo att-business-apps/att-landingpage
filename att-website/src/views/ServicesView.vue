@@ -20,14 +20,14 @@
       <div class="banner-thumbnail bottom-0">
         <div class=""
           style="position: relative; will-change: transform; transform: perspective(2000px) rotateX(-0.32deg) rotateY(-11.76deg) scale3d(1, 1, 1);">
-          <img src="../assets/img/amorboy/am-service.png" class="w-50 animate__animated slideInRight"
+          <img src="../assets/img/amorboy/am-service.png" class="w-75 animate__animated slideInRight"
             style="animation-duration: 3s" alt="Illustration">
         </div>
       </div>
     </div>
     <ul class="shape-group-breadcrum-1 list-unstyled">
       <li class="shape shape-2 sal-animate" data-sal="slide-left" data-sal-duration="500" data-sal-delay="200">
-        <img src="../assets/img/shapes/bubble-20.png" alt="circle">
+        <img src="../assets/img/shapes/bubble-10.png" alt="circle">
       </li>
       <li class="shape shape-3 sal-animate" data-sal="slide-up" data-sal-duration="500" data-sal-delay="300">
         <img src="../assets/img/shapes/line-5.png" alt="circle">
