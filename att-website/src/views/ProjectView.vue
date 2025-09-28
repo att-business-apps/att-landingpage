@@ -48,10 +48,10 @@
         <div class="col-md-8 mx-md-auto col-lg-6" v-for="item in filteredProjects" :key="item.id">
           <div class="project-grid h-100">
             <div class="thumbnail">
-              <a :href="item.href">
+              <a :href="item.href" :aria-label="item.arial">
                 <img :src="item.img" alt="project">
                 <div class="content">
-                  <h4 class="title"><a :href="item.href">{{ item.title }}</a></h4>
+                  <h4 class="title"><a :href="item.href" :aria-label="item.arial">{{ item.title }}</a></h4>
                   <span class="subtitle">{{ item.subtitle }}</span>
                 </div>
               </a>
@@ -89,6 +89,7 @@ const projects = ref([
     id: "uae-links",
     title: "UAE Links",
     href: "project/uae-links",
+    arial: "UAE Links",
     img: new URL("../assets/img/project/c1/project-thum-uaeLinks.png", import.meta.url).href,
     subtitle: "UI/UX Design, Website, GA",
     categories: ["UI/UX Design", "Website"],
@@ -97,6 +98,7 @@ const projects = ref([
     id: "solved-cube",
     title: "Solved Cude",
     href: "project/solved-cube-it-solutions",
+    arial: "Solved Cude",
     img: new URL("../assets/img/project/c2/project-thum-sc.png", import.meta.url).href,
     subtitle: "Logo, Branding, UI/UX Design, Website, GMB, GA",
     categories: ["Branding", "Logo", "UI/UX Design", "Website", "GMB"],
@@ -105,6 +107,7 @@ const projects = ref([
     id: "microrelic",
     title: "Microrelic",
     href: "project/microrelic",
+    arial: "Microrelic",
     img: new URL("../assets/img/project/c3/project-thum-mr.png", import.meta.url).href,
     subtitle: "Branding, UI/UX Design, Website, Redesign, GA",
     categories: ["UI/UX Design", "Website",],
@@ -113,6 +116,7 @@ const projects = ref([
     id: "steadyasset",
     title: "SteadyAsset",
     href: "project/steadyasset",
+    arial: "SteadyAsset",
     img: new URL("../assets/img/project/c4/project-thum-sa.png", import.meta.url).href,
     subtitle: "Logo, Branding, UI/UX Design, Website, GMB, GA",
     categories: ["Branding", "Logo", "UI/UX Design", "Website", "GMB"],
@@ -121,6 +125,7 @@ const projects = ref([
     id: "al-shamil",
     title: "Al-Shamil",
     href: "project/al-shamil-computers",
+    arial: "Al-Shamil",
     img: new URL("../assets/img/project/c5/project-thum-als.png", import.meta.url).href,
     subtitle: "UI/UX Design, Website, GA",
     categories: ["UI/UX Design", "Website"],
@@ -129,6 +134,7 @@ const projects = ref([
     id: "savedesk",
     title: "SaveDesk",
     href: "project/savedesk",
+    arial: "SaveDesk",
     img: new URL("../assets/img/project/c7/project-thum-sd.png", import.meta.url).href,
     subtitle: "Redesign, UI/UX Design, Wireframing, High-Fidelity Prototype",
     categories: ["UI/UX Design"],
@@ -137,6 +143,7 @@ const projects = ref([
     id: "samsiddhi-designs",
     title: "Samsiddhi Designs",
     href: "project/samsiddhi-designs",
+    arial: "Samsiddhi Designs",
     img: new URL("../assets/img/project/c9/project-thum-sd.png", import.meta.url).href,
     subtitle: "Logo, Branding, UI/UX Design, Website, GMB, GA",
     categories: ["Branding", "Logo", "UI/UX Design", "Website", "GMB"],

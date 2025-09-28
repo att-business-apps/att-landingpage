@@ -341,7 +341,7 @@ function getTemplate(target) {
             <div class="col-md-10 mx-md-auto col-lg-6 project branding">
               <div class="project-grid">
                 <div class="thumbnail">
-                  <a href="project/steadyasset">
+                  <a href="project/steadyasset" aria-label="SteadyAsset">
                     <img src="../assets/img/project/c4/project-thum-sa.png" alt="project">
                     <div class="content">
                       <h4 class="title"><a href="project/steadyasset">SteadyAsset</a></h4>
@@ -354,7 +354,7 @@ function getTemplate(target) {
             <div class="col-md-10 mx-md-auto col-lg-6 project branding">
               <div class="project-grid">
                 <div class="thumbnail">
-                  <a href="project/savedesk">
+                  <a href="project/savedesk" aria-label="SaveDesk">
                     <img src="../assets/img/project/c7/project-thum-sd.png" alt="project">
                     <div class="content">
                       <h4 class="title"><a href="project/savedesk">SaveDesk</a></h4>
@@ -367,7 +367,7 @@ function getTemplate(target) {
             <div class="col-md-10 mx-md-auto col-lg-6 project branding">
               <div class="project-grid">
                 <div class="thumbnail">
-                  <a href="project/samsiddhi-designs">
+                  <a href="project/samsiddhi-designs" aria-label="Samsiddhi Designs">
                     <img src="../assets/img/project/c9/project-thum-sd.png" alt="project">
                     <div class="content">
                       <h4 class="title"><a href="project/samsiddhi-designs">Samsiddhi Designs</a></h4>
@@ -380,7 +380,7 @@ function getTemplate(target) {
             <div class="col-md-10 mx-md-auto col-lg-6 project branding">
               <div class="project-grid">
                 <div class="thumbnail">
-                  <a href="project/uae-links">
+                  <a href="project/uae-links" aria-label="UAE Links">
                     <img src="../assets/img/project/c1/project-thum-uaeLinks.png" alt="project">
                     <div class="content">
                       <h4 class="title"><a href="project/uae-links">UAE Links</a></h4>
@@ -415,15 +415,17 @@ function getTemplate(target) {
         <div class="row">
           <div class="col-lg-4 col-md-6 mb-4">
             <div class="review-card p-4 h-100">
-              <div class="stars mb-2" aria-label="5 star rating">
-                <i class="icofont-star text-warning"></i>
-                <i class="icofont-star text-warning"></i>
-                <i class="icofont-star text-warning"></i>
-                <i class="icofont-star text-warning"></i>
-                <i class="icofont-star text-warning"></i>
+              <div class="d-flex justify-content-between">
+                <div class="stars mb-2" aria-label="5 star rating">
+                  <i class="icofont-star text-warning"></i>
+                  <i class="icofont-star text-warning"></i>
+                  <i class="icofont-star text-warning"></i>
+                  <i class="icofont-star text-warning"></i>
+                  <i class="icofont-star text-warning"></i>
+                </div>
+                <a class="small text-success mb-2" href="https://share.google/VbfvZxWgqZZY3wKnD" target="_blank">Google
+                  Review <i class="icofont-link"></i></a>
               </div>
-              <a class="small text-success mb-2" href="https://share.google/VbfvZxWgqZZY3wKnD" target="_blank">Google
-                Review <i class="icofont-link"></i></a>
               <p class="mb-3">"Amortree is a very professional and end-to-end service provider. They have good
                 understanding of the clients needs and work in a timely and efficient manner."</p>
               <div class="d-flex">
@@ -438,15 +440,17 @@ function getTemplate(target) {
           </div>
           <div class="col-lg-4 col-md-6 mb-4">
             <div class="review-card p-4 h-100">
-              <div class="stars mb-2" aria-label="5 star rating">
-                <i class="icofont-star text-warning"></i>
-                <i class="icofont-star text-warning"></i>
-                <i class="icofont-star text-warning"></i>
-                <i class="icofont-star text-warning"></i>
-                <i class="icofont-star text-warning"></i>
+              <div class="d-flex justify-content-between">
+                <div class="stars mb-2" aria-label="5 star rating">
+                  <i class="icofont-star text-warning"></i>
+                  <i class="icofont-star text-warning"></i>
+                  <i class="icofont-star text-warning"></i>
+                  <i class="icofont-star text-warning"></i>
+                  <i class="icofont-star text-warning"></i>
+                </div>
+                <a class="small text-success mb-2" href="https://share.google/8H1Msp6toe6G2KbDN" target="_blank">Google
+                  Review <i class="icofont-link"></i></a>
               </div>
-              <a class="small text-success mb-2" href="https://share.google/8H1Msp6toe6G2KbDN" target="_blank">Google
-                Review <i class="icofont-link"></i></a>
               <p class="mb-3">"Hi, I just wanted to take a moment to express my sincere appreciation for the outstanding
                 work you've done. Completing it on time and to such a high standard is a testament to your dedication
                 and expertise. Your efforts have not gone unnoticed and I'm grateful for your contributions. Thank you
@@ -459,20 +463,21 @@ function getTemplate(target) {
                   <div class="fw-bold">Sandeep L</div>
                 </div>
               </div>
-
             </div>
           </div>
           <div class="col-lg-4 col-md-6 mb-4">
             <div class="review-card p-4 h-100">
-              <div class="stars mb-2" aria-label="5 star rating">
-                <i class="icofont-star text-warning"></i>
-                <i class="icofont-star text-warning"></i>
-                <i class="icofont-star text-warning"></i>
-                <i class="icofont-star text-warning"></i>
-                <i class="icofont-star text-warning"></i>
+              <div class="d-flex justify-content-between">
+                <div class="stars mb-2" aria-label="5 star rating">
+                  <i class="icofont-star text-warning"></i>
+                  <i class="icofont-star text-warning"></i>
+                  <i class="icofont-star text-warning"></i>
+                  <i class="icofont-star text-warning"></i>
+                  <i class="icofont-star text-warning"></i>
+                </div>
+                <a class="small text-success mb-2" href="https://share.google/NG4IIyDdLP6yMJ5tN" target="_blank">Google
+                  Review <i class="icofont-link"></i></a>
               </div>
-              <a class="small text-success mb-2" href="https://share.google/NG4IIyDdLP6yMJ5tN" target="_blank">Google
-                Review <i class="icofont-link"></i></a>
               <p class="mb-3">"Amortree Tech is a pleasure to work with. They're responsive, professional, and always
                 willing to go the extra mile. I highly recommend their services."</p>
               <div class="d-flex">
@@ -483,7 +488,6 @@ function getTemplate(target) {
                   <div class="fw-bold">Bharathkumar MS</div>
                 </div>
               </div>
-
             </div>
           </div>
         </div>
