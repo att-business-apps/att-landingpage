@@ -154,10 +154,10 @@
                 margin: 0 0 60px;
             }
             a {
-                border-radius: 30px;
+                border-radius: 1.5rem;
                 box-shadow: 0 60px 86px -30px rgba(153,159,174, .4);
                 img {
-                    border-radius: 30px;
+                    border-radius: 1.5rem;
                 }
             }
             &.slick-active.slick-center {
@@ -209,7 +209,7 @@
             display: block;
         }
         .thumb {
-            border-radius: 30px;
+            border-radius: 1.5rem;
             display: block;
             margin-bottom: 40px;
             box-shadow: 0 78px 40px -58px rgba(153,161,170, 0.5);
@@ -228,7 +228,7 @@
                 transform: skewX(-25deg);
             }
             img {
-                border-radius: 30px;
+                border-radius: 1.5rem;
                 transition: transform 2s cubic-bezier(0.2, 0.96, 0.34, 1);
                 width: 100%;
             }
@@ -335,7 +335,7 @@
 
 .why-buy-box {
     background-color: var(--color-white);
-    border-radius: 30px;
+    border-radius: 1.5rem;
     padding: 35px;
     margin-bottom: 80px;
     border: var(--border-light);
@@ -377,7 +377,7 @@
         z-index: 1;
         background-color: var(--color-white);
         border: var(--border-light);
-        border-radius: 30px;
+        border-radius: 1.5rem;
         overflow: hidden;
     }
     .inner {

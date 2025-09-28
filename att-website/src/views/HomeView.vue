@@ -414,8 +414,7 @@ function getTemplate(target) {
         </div>
         <div class="row">
           <div class="col-lg-4 col-md-6 mb-4">
-            <div class="review-card p-4 h-100"
-              style="background:#2d2d32; border-radius:10px; box-shadow:0 5px 15px rgba(0,0,0,0.1);">
+            <div class="review-card p-4 h-100">
               <div class="stars mb-2" aria-label="5 star rating">
                 <i class="icofont-star text-warning"></i>
                 <i class="icofont-star text-warning"></i>
@@ -438,8 +437,7 @@ function getTemplate(target) {
             </div>
           </div>
           <div class="col-lg-4 col-md-6 mb-4">
-            <div class="review-card p-4 h-100"
-              style="background:#2d2d32; border-radius:10px; box-shadow:0 5px 15px rgba(0,0,0,0.1);">
+            <div class="review-card p-4 h-100">
               <div class="stars mb-2" aria-label="5 star rating">
                 <i class="icofont-star text-warning"></i>
                 <i class="icofont-star text-warning"></i>
@@ -465,8 +463,7 @@ function getTemplate(target) {
             </div>
           </div>
           <div class="col-lg-4 col-md-6 mb-4">
-            <div class="review-card p-4 h-100"
-              style="background:#2d2d32; border-radius:10px; box-shadow:0 5px 15px rgba(0,0,0,0.1);">
+            <div class="review-card p-4 h-100">
               <div class="stars mb-2" aria-label="5 star rating">
                 <i class="icofont-star text-warning"></i>
                 <i class="icofont-star text-warning"></i>

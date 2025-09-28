@@ -101,7 +101,7 @@ function getTemplate(target) {
     <div class="section section-padding">
         <div class="container-fluid">
             <div class="row">
-                <div class="col-lg-6">
+                <div class="col-lg-5 offset-xl-1">
                     <div class="contact-form-box shadow-box mb--30 animate__animated fadeInUp"
                         style="animation-duration: 2s">
                         <form class="amor-contact-form">

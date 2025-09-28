@@ -64,7 +64,7 @@
     .services-grid {
         display: flex;
         padding: 1.75rem 1.4rem 1.75rem;
-        border-radius: 30px;
+        border-radius: 1.5rem;
         margin-bottom: 40px;
         position: relative;
         z-index: 1;
@@ -90,7 +90,7 @@
             background: var(--gradient-dark);
             border: 1px solid;
             border-image-source: linear-gradient(0deg, #27272E 64.45%, rgba(74, 75, 86, 0.72) 100%);
-            border-radius: 30px;
+            border-radius: 1.5rem;
             position: absolute;
             top: 0;
             bottom: 0;
@@ -236,7 +236,7 @@ Service Page
 .services-grid {
     display: flex;
     padding: 50px 50px 40px;
-    border-radius: 30px;
+    border-radius: 1.5rem;
     margin-bottom: 40px;
     position: relative;
     z-index: 1;
@@ -258,7 +258,7 @@ Service Page
         background: var(--gradient-dark);
         border: 1px solid;
         border-image-source: linear-gradient(0deg, #27272E 64.45%, rgba(74, 75, 86, 0.72) 100%);
-        border-radius: 30px;
+        border-radius: 1.5rem;
         position: absolute;
         top: 0;
         bottom: 0;

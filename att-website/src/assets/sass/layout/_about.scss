@@ -11,9 +11,10 @@
 }
 
 .contact-form-box {
+    position: relative;
     background-color: var(--color-light);
     padding: 50px;
-    border-radius: 30px;
+    border-radius: 1.5rem;
     @media #{$sm-layout} {
         padding: 40px 30px;
     }
@@ -39,20 +40,21 @@
             &::after {
                 content: '';
                 position: absolute;
-                left: -2px;
-                top: -2px;
+                left: -1px;
+                top: -1px;
                 background: linear-gradient(45deg, #fb0094, #0000ff, #00ff00,#ffff00, #ff0000, #fb0094, 
                     #0000ff, #00ff00,#ffff00, #ff0000);
+                // background: conic-gradient(from 90deg, #CCCCCC 0deg, #689edd 90deg, #5CB04D 180deg, #DB3C2D 270deg, #E4C535 360deg);
                 background-size: 400%;
-                width: calc(100% + 4px);
-                height: calc(100% + 4px);
+                width: calc(100% + 2px);
+                height: calc(100% + 2px);
                 z-index: -1;
-                animation: steam 20s linear infinite;
-                border-radius: 30px;
+                animation: steam 30s linear infinite;
+                border-radius: 1.5rem;
             }
 
             &:after {
-                filter: blur(4px);
+                filter: blur(6px);
             }
         }
     }
@@ -78,6 +80,27 @@
     &.shadow-box {
         box-shadow: 0 18px 36px 0 rgba(0, 0, 0, 0.25);
     }
+
+    &:hover {
+        &::before,
+        &::after {
+            content: '';
+            position: absolute;
+            left: -1px;
+            top: -1px;
+            background: conic-gradient(from 90deg, #CCCCCC 0deg, #689edd 90deg, #5CB04D 180deg, #DB3C2D 270deg, #E4C535 360deg);
+            background-size: 400%;
+            width: calc(100% + 2px);
+            height: calc(100% + 2px);
+            z-index: -1;
+            animation: steam 30s linear infinite;
+            border-radius: 1.5rem;
+        }
+
+        &:after {
+            filter: blur(6px);
+        }
+    }
 }
 
 .about-expert {
@@ -86,10 +109,10 @@
     .thumbnail {
         position: relative;
         display: inline-block;
-        border-radius: 40px;
+        border-radius: 1.5rem;
         box-shadow: 0px 17px 26px 0px rgba(0,0,0,0.2);
         img {
-            border-radius: 40px;
+            border-radius: 1.5rem;
         }
         .popup-video {
             text-align: center;

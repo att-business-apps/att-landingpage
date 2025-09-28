@@ -3352,6 +3352,16 @@
 	}
 }
 
+@keyframes slowSpin {
+    0% {
+        transform: rotate(0deg)
+    }
+
+    to {
+        transform: rotate(1turn)
+    }
+}
+
 @keyframes gradientShift {
     0%,
     100% {
