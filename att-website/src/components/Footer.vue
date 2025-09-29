@@ -176,7 +176,7 @@
 
   <ul class="mobilemenu mainmenu d-lg-none d-flex">
     <li>
-      <a href="/">
+      <a href="/" aria-label="home">
         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" id="home">
           <g fill="#f3f6f9" transform="translate(2.5 2.004)">
             <path
@@ -189,9 +189,9 @@
         </svg>
       </a>
     </li>
-    <li><a href="/whatWeDo"><span class="text-lb">What</span> we do</a></li>
-    <li><a href="/whoWeAre"><span class="text-lg">Who</span> we are</a></li>
-    <li><a href="/contact"><span class="text-lr">Where</span> to find</a></li>
+    <li><a href="/whatWeDo" aria-label="what we do"><span class="text-lb">What</span> we do</a></li>
+    <li><a href="/whoWeAre" aria-label="who we are"><span class="text-lg">Who</span> we are</a></li>
+    <li><a href="/contact" aria-label="where to find"><span class="text-lr">Where</span> to find</a></li>
     <!-- <li><a href="whyUs"><span class="text-ly">Blog</span></a></li> -->
   </ul>
 </template>
