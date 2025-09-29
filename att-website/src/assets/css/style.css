@@ -21285,6 +21285,9 @@ Service Page
 .footer-social-link ul li a:hover {
   color: var(--color-primary);
 }
+.footer-social-link ul li a img {
+  max-width: 50px;
+}
 
 .footer-widget {
   margin-bottom: 80px;
