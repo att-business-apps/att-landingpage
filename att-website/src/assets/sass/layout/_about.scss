@@ -30,6 +30,10 @@
             color: var(--color-white);
         }
 
+        h4 {
+            font-size: 1.5rem;
+        }
+
         input:focus, textarea:focus {
             color: var(--color-dark);
         }

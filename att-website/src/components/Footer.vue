@@ -137,7 +137,7 @@
         <div class="row">
           <div class="col-xl-6 col-lg-6">
             <div class="contact-info mb--50">
-              <h4 class="title">Phone</h4>
+              <h3 class="title">Phone</h3>
               <p>Reach out for any queries; our experts are here to assist and resolve your concerns promptly.</p>
               <h4 class="phone-number">
                 <a href="tel:+919916846647">+91 99168 46647</a>
@@ -146,7 +146,7 @@
           </div>
           <div class="col-xl-6 col-lg-6">
             <div class="contact-info mb--50">
-              <h4 class="title">Email</h4>
+              <h3 class="title">Email</h3>
               <p>Our support team will get back to you in 24-h during standard business days (Mon-Sat).</p>
               <h4 class="phone-number"><a href="mailto:hi@amortree.com">hi@amortree.com</a></h4>
             </div>

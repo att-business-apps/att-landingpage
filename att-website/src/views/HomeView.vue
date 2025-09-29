@@ -104,10 +104,10 @@ function getTemplate(target) {
           </div>
           <div class="col-lg-5 col-md-10 mx-auto animate__animated fadeInUp" style="animation-duration: 2s">
             <div class="contact-form-box banner-form">
-              <h4 class="title text-center"><span class="gradient-text blue-dark">Unlock</span> Your Online <span
-                  class="gradient-text yello-dark">Potential</span></h4>
+              <h3 class="title text-center"><span class="gradient-text blue-dark">Unlock</span> Your Online <span
+                  class="gradient-text yello-dark">Potential</span></h3>
               <form class="amor-contact-form">
-                <h5 class="mb-2">We’d love to know more about your project needs!</h5>
+                <h4 class="mb-2">We’d love to know more about your project needs!</h4>
                 <p class="mb-3">Submit your query, and we’ll reach out to you shortly!</p>
                 <div class="form-group mb--40">
                   <!-- <label>How can we help you?</label> -->
@@ -116,7 +116,7 @@ function getTemplate(target) {
                 </div>
 
 
-                <h5 class="mt-3 mb-2">Your Contact Details</h5>
+                <h4 class="mt-3 mb-2">Your Contact Details</h4>
                 <p class="mb-3">For project discussions only, thank you!</p>
                 <div class="form-group">
                   <!-- <label>Name</label> -->
@@ -219,7 +219,7 @@ function getTemplate(target) {
                 <img src="../assets/img/icon/research-1.png" alt="icon" />
               </div>
               <div class="content">
-                <h5 class="title"><a href="whatWeDo">Research & Strategy</a></h5>
+                <h3 class="title"><a href="whatWeDo">Research & Strategy</a></h3>
                 <p>
                   <strong>Market research</strong> and <strong>strategic planning</strong> are the foundation for
                   informed decision-making, helping amortree Tech deliver
@@ -235,7 +235,7 @@ function getTemplate(target) {
                 <img src="../assets/img/icon/brand-2.png" alt="icon" />
               </div>
               <div class="content">
-                <h5 class="title"><a href="whatWeDo">Brand Identity Design</a></h5>
+                <h3 class="title"><a href="whatWeDo">Brand Identity Design</a></h3>
                 <p>
                   <strong>Professional branding services</strong> shape your business identity, connect with audiences,
                   and tell your story. Let amortree
@@ -251,7 +251,7 @@ function getTemplate(target) {
                 <img src="../assets/img/icon/logo-1.png" alt="icon" />
               </div>
               <div class="content">
-                <h5 class="title"><a href="whatWeDo">Custom Logo Design</a></h5>
+                <h3 class="title"><a href="whatWeDo">Custom Logo Design</a></h3>
                 <p>
                   A <strong>professional logo</strong> is more than just a symbol; it's the face of your brand. amortree
                   Tech creates impactful <strong>custom logo designs</strong>
@@ -269,7 +269,7 @@ function getTemplate(target) {
                 <img src="../assets/img/icon/web-2.png" alt="icon" />
               </div>
               <div class="content">
-                <h5 class="title"><a href="whatWeDo">Website Development</a></h5>
+                <h3 class="title"><a href="whatWeDo">Website Development</a></h3>
                 <p>
                   amortree Tech delivers intuitive <strong>web UI/UX design</strong> and seamless <strong>website
                     development</strong>, ensuring user-friendly,
@@ -285,7 +285,7 @@ function getTemplate(target) {
                 <img src="../assets/img/icon/mob-7.png" alt="icon" />
               </div>
               <div class="content">
-                <h5 class="title"><a href="whatWeDo">Mobile App UI/UX Design</a></h5>
+                <h3 class="title"><a href="whatWeDo">Mobile App UI/UX Design</a></h3>
                 <p>
                   <strong>Mobile app UI/UX design</strong> focuses on creating intuitive, user-friendly interfaces that
                   enhance
@@ -301,7 +301,7 @@ function getTemplate(target) {
                 <img src="../assets/img/icon/devops-1.png" alt="icon" />
               </div>
               <div class="content">
-                <h5 class="title"><a href="whatWeDo">DevOps Consulting</a></h5>
+                <h3 class="title"><a href="whatWeDo">DevOps Consulting</a></h3>
                 <p>
                   <strong>DevOps consulting services</strong> streamline collaboration between development and
                   operations teams, ensuring efficient software

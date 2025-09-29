@@ -17163,16 +17163,25 @@ Frequently Asked Questions
   }
 }
 .project-grid .thumbnail .content .title {
+  font-size: 2rem;
   letter-spacing: -0.045em;
   margin-bottom: 10px;
+  font-weight: 500;
+}
+@media only screen and (max-width: 991px) {
+  .project-grid .thumbnail .content .title {
+    font-size: 1.75rem;
+  }
 }
 @media only screen and (max-width: 767px) {
   .project-grid .thumbnail .content .title {
     margin-bottom: 8px;
+    font-size: 1.65rem;
   }
 }
 @media only screen and (max-width: 575px) {
   .project-grid .thumbnail .content .title {
+    font-size: 1.35rem;
     margin-bottom: 6px;
   }
 }
@@ -19582,6 +19591,9 @@ Frequently Asked Questions
 .serviceSec .services-grid .content {
   flex: 1;
 }
+.serviceSec .services-grid .content .title {
+  font-size: 1.5rem;
+}
 .serviceSec .services-grid .content .title a {
   color: var(--color-white);
 }
@@ -20600,6 +20612,9 @@ Service Page
 .contact-form-box.banner-form h4, .contact-form-box.banner-form .h4, .contact-form-box.banner-form h5, .contact-form-box.banner-form .h5, .contact-form-box.banner-form p, .contact-form-box.banner-form button, .contact-form-box.banner-form input, .contact-form-box.banner-form textarea {
   color: var(--color-white);
 }
+.contact-form-box.banner-form h4, .contact-form-box.banner-form .h4 {
+  font-size: 1.5rem;
+}
 .contact-form-box.banner-form input:focus, .contact-form-box.banner-form textarea:focus {
   color: var(--color-dark);
 }
@@ -21448,6 +21463,7 @@ Service Page
 .contact-info .title {
   color: var(--color-white);
   margin-bottom: 20px;
+  font-size: 2rem;
 }
 .contact-info p {
   color: var(--color-gray-2);
