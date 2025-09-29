@@ -344,7 +344,7 @@ function getTemplate(target) {
                   <a href="project/steadyasset" aria-label="SteadyAsset">
                     <img src="../assets/img/project/c4/project-thum-sa.png" alt="project">
                     <div class="content">
-                      <h4 class="title"><a href="project/steadyasset">SteadyAsset</a></h4>
+                      <h3 class="title"><a href="project/steadyasset">SteadyAsset</a></h3>
                       <span class="subtitle">Logo, Branding, UI/UX Design, Website, GMB, GA</span>
                     </div>
                   </a>
@@ -357,7 +357,7 @@ function getTemplate(target) {
                   <a href="project/savedesk" aria-label="SaveDesk">
                     <img src="../assets/img/project/c7/project-thum-sd.png" alt="project">
                     <div class="content">
-                      <h4 class="title"><a href="project/savedesk">SaveDesk</a></h4>
+                      <h3 class="title"><a href="project/savedesk">SaveDesk</a></h3>
                       <span class="subtitle">Redesign, UI/UX Design, Wireframing, High-Fidelity Prototype</span>
                     </div>
                   </a>
@@ -370,7 +370,7 @@ function getTemplate(target) {
                   <a href="project/samsiddhi-designs" aria-label="Samsiddhi Designs">
                     <img src="../assets/img/project/c9/project-thum-sd.png" alt="project">
                     <div class="content">
-                      <h4 class="title"><a href="project/samsiddhi-designs">Samsiddhi Designs</a></h4>
+                      <h3 class="title"><a href="project/samsiddhi-designs">Samsiddhi Designs</a></h3>
                       <span class="subtitle">Logo, Branding, UI/UX Design, Website, GMB, GA</span>
                     </div>
                   </a>
@@ -383,7 +383,7 @@ function getTemplate(target) {
                   <a href="project/uae-links" aria-label="UAE Links">
                     <img src="../assets/img/project/c1/project-thum-uaeLinks.png" alt="project">
                     <div class="content">
-                      <h4 class="title"><a href="project/uae-links">UAE Links</a></h4>
+                      <h3 class="title"><a href="project/uae-links">UAE Links</a></h3>
                       <span class="subtitle">UI/UX Design, Website, GA</span>
                     </div>
                   </a>
