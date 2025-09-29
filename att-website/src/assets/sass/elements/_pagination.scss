@@ -157,29 +157,27 @@ Frequently Asked Questions
 }
 
 .review-card {
-    background:#2d2d32; 
+    background-color: rgba(39, 39, 47, 0.5);
+    -webkit-backdrop-filter: blur(2px);
+    -moz-backdrop-filter: blur(2px);
+    -ms-backdrop-filter: blur(2px);
+    backdrop-filter: blur(2px);
     border-radius: 1.5rem;
     box-shadow:0 5px 15px rgba(0,0,0,0.1);
     position: relative;
+    @include transition($all);
+
+    a {
+        &.text-success {
+            color: var(--logo-green) !important;
+        }
+    }
 
     &:hover {
-        &::before,
-        &::after {
-            content: '';
-            position: absolute;
-            left: -1px;
-            top: -1px;
-            background: conic-gradient(from 90deg, #CCCCCC 0deg, #689edd 90deg, #5CB04D 180deg, #DB3C2D 270deg, #E4C535 360deg);
-            background-size: 400%;
-            width: calc(100% + 2px);
-            height: calc(100% + 2px);
-            z-index: -1;
-            animation: steam 30s linear infinite;
-            border-radius: 1.5rem;
-        }
-
-        &:after {
-            filter: blur(6px);
-        }
+        -webkit-backdrop-filter: blur(6px);
+        -moz-backdrop-filter: blur(6px);
+        -ms-backdrop-filter: blur(6px);
+        backdrop-filter: blur(6px);
+        transform: scale(1.05);
     }
 }
