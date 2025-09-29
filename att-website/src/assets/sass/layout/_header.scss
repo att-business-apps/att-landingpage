@@ -503,6 +503,10 @@
                 }
             }
         }
+
+        .wa {
+            max-width: 54px;
+        }
     }
     .header-social-link {
         @media #{$large-mobile} {
@@ -522,6 +526,7 @@
                 img {
                     filter: grayscale(1);
                     @include transition($all);
+                    max-width: 40px;
                 }
                 @media #{$md-layout} {
                     color: var(--color-dark);

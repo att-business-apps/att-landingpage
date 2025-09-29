@@ -17712,6 +17712,9 @@ Frequently Asked Questions
 .header-action .sidemenu-btn .btn-wrap.btn-dark span {
   background-color: var(--color-white);
 }
+.header-action .sidemenu-btn .wa {
+  max-width: 54px;
+}
 @media only screen and (max-width: 575px) {
   .header-action .header-social-link {
     display: none;
@@ -17736,6 +17739,7 @@ Frequently Asked Questions
   -ms-transition: all 0.3s ease-in-out;
   -o-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
+  max-width: 40px;
 }
 @media only screen and (max-width: 991px) {
   .header-action .social-icon-list li a {

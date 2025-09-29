@@ -29,23 +29,22 @@
                                 <ul class="social-icon-list list-unstyled">
                                     <li>
                                         <a href="https://in.linkedin.com/company/amortree-tech" target="_blank">
-                                            <img src="../assets/img/icon/sm-l.png" width="40" alt="amortree linkedin" />
+                                            <img src="../assets/img/icon/sm-l.png" alt="amortree linkedin" />
                                         </a>
                                     </li>
                                     <li>
                                         <a href="https://www.instagram.com/amortreetech/" target="_blank">
-                                            <img src="../assets/img/icon/sm-i.png" width="40"
-                                                alt="amortree instagram" />
+                                            <img src="../assets/img/icon/sm-i.png" alt="amortree instagram" />
                                         </a>
                                     </li>
                                     <li>
                                         <a href="https://www.facebook.com/amortreetech/" target="_blank">
-                                            <img src="../assets/img/icon/sm-f.png" width="40" alt="amortree facebook" />
+                                            <img src="../assets/img/icon/sm-f.png" alt="amortree facebook" />
                                         </a>
                                     </li>
                                     <li>
                                         <a href="https://dribbble.com/amortreetech" target="_blank">
-                                            <img src="../assets/img/icon/sm-d.png" width="40" alt="amortree dribbble" />
+                                            <img src="../assets/img/icon/sm-d.png" alt="amortree dribbble" />
                                         </a>
                                     </li>
                                 </ul>
@@ -53,7 +52,7 @@
                             <li class="sidemenu-btn me-2">
                                 <a href="https://wa.me/917975859061/?text=I'm%20inquiring%20about%20the%20website%20service."
                                     target="_blank" class="">
-                                    <img src="../assets/img/icon/whatsapp.png" width="54" alt="amortree facebook" />
+                                    <img src="../assets/img/icon/whatsapp.png" class="wa" alt="amortree facebook" />
                                 </a>
                             </li>
                             <li class="mobile-menu-btn sidemenu-btn d-lg-none d-none">
