@@ -15516,7 +15516,7 @@ input {
   -webkit-text-fill-color: transparent;
   animation: gradientShift 3s ease-in-out infinite;
 }
-.gradient-text.yello-dark {
+.gradient-text.yellow-dark {
   background: linear-gradient(270deg, var(--logo-light) 21.9%, var(--color-primaryY) 53.55%);
   background-size: 200% 200%;
   background-clip: text;

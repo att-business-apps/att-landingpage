@@ -80,11 +80,11 @@ function getTemplate(target) {
               <div class="animate__animated fadeInUp" style="animation-duration: 1s">
                 <h1 class="title d-inline">
                   Top <span class="gradient-text-light">UI/UX Design</span> & <span class="gradient-text-light">Web
-                    Development</span> Studio in Bengaluru
+                    Development</span> Studio in <span class="gradient-text yellow-dark">Bengaluru</span>
                 </h1>
                 <h2 class="h4">
                   <span class="gradient-text blue-dark">Sleek.</span> <span
-                    class="gradient-text yello-dark">Stylish.</span> <span
+                    class="gradient-text yellow-dark">Stylish.</span> <span
                     class="gradient-text blue-dark">Classy.</span>
                 </h2>
                 <p class="subtitle">
@@ -105,7 +105,7 @@ function getTemplate(target) {
           <div class="col-lg-5 col-md-10 mx-auto animate__animated fadeInUp" style="animation-duration: 2s">
             <div class="contact-form-box banner-form">
               <h3 class="title text-center"><span class="gradient-text blue-dark">Unlock</span> Your Online <span
-                  class="gradient-text yello-dark">Potential</span></h3>
+                  class="gradient-text yellow-dark">Potential</span></h3>
               <form class="amor-contact-form">
                 <h4 class="mb-2">We’d love to know more about your project needs!</h4>
                 <p class="mb-3">Submit your query, and we’ll reach out to you shortly!</p>
@@ -409,8 +409,8 @@ function getTemplate(target) {
       <div class="container-fluid">
         <div class="section-heading heading-center">
           <span class="subtitle">What Clients Say</span>
-          <h2 class="title"><span class="gradient-text yello-dark">Feedback</span> That <span
-              class="gradient-text yello-dark">Inspires</span> Us</h2>
+          <h2 class="title"><span class="gradient-text yellow-dark">Feedback</span> That <span
+              class="gradient-text yellow-dark">Inspires</span> Us</h2>
         </div>
         <div class="row">
           <div class="col-lg-4 col-md-6 mb-4">
