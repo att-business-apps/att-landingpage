@@ -11,14 +11,14 @@
             href="https://wa.me/917975859061/?text=I'm%20inquiring%20about%20the%20website%20service.">Let's Chat</a>
         </div>
         <div class="thumbnail">
-          <div class="larg-thumb" data-sal="zoom-in" data-sal-duration="600" data-sal-delay="100">
+          <div class="larg-thumb">
             <img class="paralax-image" src="../assets/img/chat-group.png" alt="Chat" />
           </div>
           <ul class="list-unstyled small-thumb">
-            <li class="shape shape-1" data-sal="slide-right" data-sal-duration="800" data-sal-delay="400">
+            <li class="shape shape-1">
               <img class="paralax-image" src="../assets/img/amorboy/laptop-poses.png" alt="Laptop" />
             </li>
-            <li class="shape shape-2" data-sal="slide-left" data-sal-duration="800" data-sal-delay="300">
+            <li class="shape shape-2">
               <img class="paralax-image" src="../assets/img/amorboy/bill-pay.png" alt="Bill" />
             </li>
           </ul>
