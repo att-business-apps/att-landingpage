@@ -9,6 +9,12 @@
         overflow: hidden;
         border-radius: 1.5rem;
         position: relative;
+        -webkit-transition: var(--transition);
+        transition: var(--transition);
+        -webkit-transition: -webkit-transform 2s cubic-bezier(0.2, 0.96, 0.34, 1);
+        transition: -webkit-transform 2s cubic-bezier(0.2, 0.96, 0.34, 1);
+        transition: transform 2s cubic-bezier(0.2, 0.96, 0.34, 1);
+        transition: transform 2s cubic-bezier(0.2, 0.96, 0.34, 1), -webkit-transform 2s cubic-bezier(0.2, 0.96, 0.34, 1);
 
         img {
             border-radius: 1.5rem;
@@ -98,6 +104,10 @@
         cursor: pointer;
 
         .thumbnail {
+            transform: perspective(500px) rotateY(-5deg);
+            @media #{$sm-layout} {
+                transform: perspective(0) rotateY(0);
+            }
             img {
                 -webkit-transform: scale(1.2);
                 -ms-transform: scale(1.2);
@@ -109,6 +119,10 @@
                 -moz-backdrop-filter: blur(10px);
                 -ms-backdrop-filter: blur(10px);
                 backdrop-filter: blur(10px);
+                transform: perspective(400px) rotateY(10deg);
+                @media #{$sm-layout} {
+                    transform: perspective(0) rotateY(0);
+                }
 
                 a {
                     color: var(--color-link);

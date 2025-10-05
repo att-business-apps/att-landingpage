@@ -5,11 +5,13 @@
     display: flex;
     align-items: center;
     margin-bottom: 80px;
+    transition: var(--transition);
     @media #{$sm-layout} {
         display: block;
         margin-bottom: 50px;
     }
     .thumbnail {
+        transition: var(--transition);
         // background-color: var(--color-dark);
         // border-radius: 1.5rem;
         // text-align: center;
@@ -67,6 +69,24 @@
             }
             p {
                 width: 100%;
+            }
+        }
+    }
+
+    &:hover {
+        .thumbnail {
+            transform: perspective(500px) rotateY(15deg);
+            @media #{$sm-layout} {
+                transform: perspective(0) rotateY(0);
+            }
+        }
+
+        &.content-reverse {
+            .thumbnail {
+                transform: perspective(500px) rotateY(-15deg);
+                @media #{$sm-layout} {
+                    transform: perspective(0) rotateY(0);
+                }
             }
         }
     }

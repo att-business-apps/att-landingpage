@@ -17105,6 +17105,12 @@ Frequently Asked Questions
   overflow: hidden;
   border-radius: 1.5rem;
   position: relative;
+  -webkit-transition: var(--transition);
+  transition: var(--transition);
+  -webkit-transition: -webkit-transform 2s cubic-bezier(0.2, 0.96, 0.34, 1);
+  transition: -webkit-transform 2s cubic-bezier(0.2, 0.96, 0.34, 1);
+  transition: transform 2s cubic-bezier(0.2, 0.96, 0.34, 1);
+  transition: transform 2s cubic-bezier(0.2, 0.96, 0.34, 1), -webkit-transform 2s cubic-bezier(0.2, 0.96, 0.34, 1);
 }
 .project-grid .thumbnail img {
   border-radius: 1.5rem;
@@ -17206,6 +17212,14 @@ Frequently Asked Questions
 .project-grid:hover {
   cursor: pointer;
 }
+.project-grid:hover .thumbnail {
+  transform: perspective(500px) rotateY(-5deg);
+}
+@media only screen and (max-width: 767px) {
+  .project-grid:hover .thumbnail {
+    transform: perspective(0) rotateY(0);
+  }
+}
 .project-grid:hover .thumbnail img {
   -webkit-transform: scale(1.2);
   -ms-transform: scale(1.2);
@@ -17216,6 +17230,12 @@ Frequently Asked Questions
   -moz-backdrop-filter: blur(10px);
   -ms-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
+  transform: perspective(400px) rotateY(10deg);
+}
+@media only screen and (max-width: 767px) {
+  .project-grid:hover .thumbnail .content {
+    transform: perspective(0) rotateY(0);
+  }
 }
 .project-grid:hover .thumbnail .content a {
   color: var(--color-link);
@@ -19577,10 +19597,38 @@ Frequently Asked Questions
 }
 .serviceSec .services-grid .thumbnail {
   margin-right: 25px;
-  width: 110px;
   perspective: 1000px;
+  width: 100%;
+  position: relative;
+  z-index: 3;
+  transition: 0.5s;
+}
+@media only screen and (max-width: 767px) {
+  .serviceSec .services-grid .thumbnail {
+    display: block;
+    transform: perspective(0) rotateY(0deg);
+  }
+}
+.serviceSec .services-grid .thumbnail::before {
+  position: absolute;
+  width: calc(100% + 2px);
+  height: calc(100% - 15px);
+  top: 25px;
+  content: "";
+  border-radius: 1rem;
+  z-index: -1;
+  right: 20px;
+  box-shadow: 0 5px 35px rgba(0, 2, 72, 0.1);
+  opacity: 0;
+  transition: all 0.5s;
+}
+@media only screen and (max-width: 767px) {
+  .serviceSec .services-grid .thumbnail::before {
+    display: none;
+  }
 }
 .serviceSec .services-grid .thumbnail img {
+  transition: 0.5s;
   animation: rotate-image linear;
   animation-timeline: scroll();
 }
@@ -19638,6 +19686,22 @@ Frequently Asked Questions
 .serviceSec .services-grid:hover:after, .serviceSec .services-grid.active:after {
   visibility: visible;
   opacity: 0.9;
+}
+.serviceSec .services-grid:hover .thumbnail, .serviceSec .services-grid.active .thumbnail {
+  transform: perspective(500px) rotateY(-5deg);
+}
+@media only screen and (max-width: 767px) {
+  .serviceSec .services-grid:hover .thumbnail, .serviceSec .services-grid.active .thumbnail {
+    transform: perspective(0) rotateY(0);
+  }
+}
+.serviceSec .services-grid:hover .thumbnail img, .serviceSec .services-grid.active .thumbnail img {
+  transform: perspective(400px) rotateY(20deg);
+}
+@media only screen and (max-width: 767px) {
+  .serviceSec .services-grid:hover .thumbnail img, .serviceSec .services-grid.active .thumbnail img {
+    transform: perspective(0) rotateY(0);
+  }
 }
 .serviceSec .services-grid:hover .thumbnail::after, .serviceSec .services-grid.active .thumbnail::after {
   transform: scale(1);
@@ -20095,12 +20159,16 @@ Service Page
   display: flex;
   align-items: center;
   margin-bottom: 80px;
+  transition: var(--transition);
 }
 @media only screen and (max-width: 767px) {
   .process-work {
     display: block;
     margin-bottom: 50px;
   }
+}
+.process-work .thumbnail {
+  transition: var(--transition);
 }
 @media only screen and (max-width: 991px) {
   .process-work .thumbnail {
@@ -20172,6 +20240,22 @@ Service Page
 }
 .process-work.content-reverse .content p {
   width: 100%;
+}
+.process-work:hover .thumbnail {
+  transform: perspective(500px) rotateY(15deg);
+}
+@media only screen and (max-width: 767px) {
+  .process-work:hover .thumbnail {
+    transform: perspective(0) rotateY(0);
+  }
+}
+.process-work:hover.content-reverse .thumbnail {
+  transform: perspective(500px) rotateY(-15deg);
+}
+@media only screen and (max-width: 767px) {
+  .process-work:hover.content-reverse .thumbnail {
+    transform: perspective(0) rotateY(0);
+  }
 }
 
 /*-------------------------
