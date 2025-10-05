@@ -78,7 +78,7 @@ function getTemplate(target) {
           <div class="col-lg-12 mx-auto pb-5">
             <div class="home-banner banner-content text-center">
               <div class="animate__animated fadeInUp" style="animation-duration: 1s">
-                <h1 class="title d-inline">
+                <h1 class="title d-inline" ref="myElement">
                   Top <span class="gradient-text-light">UI/UX Design</span> & <span class="gradient-text-light">Web
                     Development</span> Studio in <span class="gradient-text yellow-dark">Bengaluru</span>
                 </h1>
@@ -755,3 +755,9 @@ function getTemplate(target) {
     </section>
   </main>
 </template>
+
+
+<script>
+
+
+</script>

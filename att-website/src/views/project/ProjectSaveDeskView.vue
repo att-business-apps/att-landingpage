@@ -118,6 +118,15 @@ import after from '@/assets/img/project/c7/after.png'
             </div>
 
             <div class="row">
+                <h4 class="title text-start">Color Plates</h4>
+
+                <div class="col-12">
+                    <img src="../../assets/img/project/c7/color-plates.png" class="img-fluid mb-5"
+                        alt="SaveDesk - FinTech Dashboard Redesign Project">
+                </div>
+            </div>
+
+            <div class="row">
                 <div class="col-12">
                     <img src="../../assets/img/project/c7/project-sd-widgets.png" class="img-fluid"
                         alt="SaveDesk - FinTech Dashboard Redesign Project">
