@@ -755,9 +755,3 @@ function getTemplate(target) {
     </section>
   </main>
 </template>
-
-
-<script>
-
-
-</script>
