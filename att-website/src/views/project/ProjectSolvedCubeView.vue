@@ -143,6 +143,14 @@
                 <a href="/project/microrelic" class="amor-btn light">Microrelic <i
                         class="icofont-rounded-double-right ms-3"></i></a>
             </div>
+			<div class="d-flex justify-content-center gap-3 mt-5">
+				<a class="amor-btn btn-fill-primary btn-large" href="contact"
+				>Get Started</a
+				>
+				<a href="/portfolio" class="amor-btn btn-borderd light"
+				>View Portfolio</a
+				>
+			</div>
         </div>
     </section>
 </template>

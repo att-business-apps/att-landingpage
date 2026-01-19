@@ -18748,8 +18748,9 @@ Frequently Asked Questions
 /*---------- Media Queries ---------*/
 @media only screen and (max-width: 767px) {
   .navbar {
-    padding-top: 1rem;
-    height: 80px;
+    width: 94%;
+    left: 3%;
+    top: 0.875rem;
   }
   .navbar-default {
     border: 0px;
@@ -18836,7 +18837,7 @@ Frequently Asked Questions
   }
 }
 .mobilemenu {
-  width: 100%;
+  width: 94%;
   position: fixed;
   display: flex;
   flex-wrap: nowrap;
@@ -18846,16 +18847,39 @@ Frequently Asked Questions
   -ms-overflow-style: -ms-autohiding-scrollbar;
   justify-content: space-between;
   scroll-snap-type: x mandatory;
-  left: 0;
-  bottom: 0;
-  background-color: var(--color-dark);
+  left: 3%;
+  bottom: 0.875rem;
+  background-color: rgba(44, 44, 54, 0.692);
+  -webkit-backdrop-filter: blur(8px);
+  -moz-backdrop-filter: blur(8px);
+  -ms-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
+  border-radius: 0.875rem;
   z-index: 99;
   justify-content: space-around;
   align-items: center;
-  box-shadow: 0 -24px 48px -15px rgba(33, 34, 34, 0.5);
+  box-shadow: 0 -24px 48px -15px rgba(0, 0, 0, 0.35);
 }
 .mobilemenu li a {
+  position: relative;
+  font-size: 0.805rem;
   color: var(--color-white);
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  justify-items: center;
+  padding: 0.055rem 0.175rem;
+}
+.mobilemenu li a svg {
+  width: 30px;
+  height: 30px;
+  margin: 0;
+  padding: 0;
+}
+.mobilemenu li a span {
+  position: relative;
+  line-height: 1.175;
+  text-transform: lowercase;
 }
 .mobilemenu li a .text-lb {
   background: linear-gradient(270deg, var(--color-white) 21.9%, var(--color-primary) 53.55%);
