@@ -3,7 +3,7 @@
 <template>
   <div class="header amor-header header-style-3">
     <nav class="amor-mainmenu navbar navbar-fixed-top">
-      <div class="container-fluid" id="mobileMenu">
+      <div class="" id="mobileMenu">
         <div class="header-navbar">
           <div class="header-logo">
             <a href="/">
@@ -110,6 +110,7 @@
             </ul>
           </div>
         </div>
+        <div class="scroll-progress"></div>
       </div>
     </nav>
   </div>

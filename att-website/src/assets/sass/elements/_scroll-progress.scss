@@ -1,35 +1,36 @@
 .scroll-progress {
-    position: fixed;
-    z-index: 10;
-    height: .2rem;
-    top: 83px;
-    left: 0;
-    width: 100%;
-    background: var(--color-primary);
-    // background: linear-gradient(90deg, var(--logo-light) 0%, var(--logo-blue) 25%, var(--logo-green) 50%, var(--logo-red) 75%, var(--logo-yellow) 100%);
-    -webkit-animation: scroll-progress linear;
-    -moz-animation: scroll-progress linear;
-    -ms-animation: scroll-progress linear;
-    animation: scroll-progress linear;
-    -webkit-animation-timeline: scroll();
-    -moz-animation-timeline: scroll();
-    -ms-animation-timeline: scroll();
-    animation-timeline: scroll();
+  position: fixed;
+  z-index: 10;
+  height: 0.2rem;
+  top: 83px;
+  left: 0;
+  border-radius: 0.5rem;
+  width: 100%;
+  background: var(--color-primary);
+  // background: linear-gradient(90deg, var(--logo-light) 0%, var(--logo-blue) 25%, var(--logo-green) 50%, var(--logo-red) 75%, var(--logo-yellow) 100%);
+  -webkit-animation: scroll-progress linear;
+  -moz-animation: scroll-progress linear;
+  -ms-animation: scroll-progress linear;
+  animation: scroll-progress linear;
+  -webkit-animation-timeline: scroll();
+  -moz-animation-timeline: scroll();
+  -ms-animation-timeline: scroll();
+  animation-timeline: scroll();
 
-    @media #{$md-layout} {
-      top: 82px;
-    }
+  @media #{$md-layout} {
+    top: 82px;
+  }
 
-    @media #{$small-mobile} {
-      top: 80px;
-    }
+  @media #{$small-mobile} {
+    top: 80px;
+  }
 }
-  
+
 @keyframes scroll-progress {
-    from {
-      width: 0%;
-    }
-    to {
-      width: 100%;
-    }
-}  
+  from {
+    width: 0%;
+  }
+  to {
+    width: 100%;
+  }
+}
