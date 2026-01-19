@@ -20160,7 +20160,7 @@ Service Page
   }
 }
 .case-study-counterup .count-number {
-  color: var(--color-primaryG);
+  color: var(--color-primaryR);
   letter-spacing: -0.045em;
   margin-bottom: 0;
   padding: 0 6px;
@@ -20250,7 +20250,7 @@ Service Page
 }
 .process-work .content .subtitle {
   font-size: 20px;
-  color: var(--color-primaryG);
+  color: var(--color-primaryR);
   font-weight: 500;
   font-family: var(--font-primary);
   margin-bottom: 20px;
