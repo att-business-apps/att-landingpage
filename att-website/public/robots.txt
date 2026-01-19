@@ -9,8 +9,8 @@ Disallow: /admin/
 Disallow: /private/
 
 # Allow all other content
-Allow: /whatWeDo
-Allow: /whoWeAre
+Allow: /services
+Allow: /about
 Allow: /contact
 Allow: /portfolio
 Allow: /estimate
