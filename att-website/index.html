@@ -154,15 +154,28 @@
 </head>
 
 <body>
+  <template>
+    <noscript>
+      <img height="1" width="1" style="display: none"
+        src="https://www.facebook.com/tr?id=1478128983960889&ev=PageView&noscript=1" alt="Facebook Pixel" />
+    </noscript>
+  </template>
+
+  <script>
+    export default {
+      name: 'FacebookPixelNoScript',
+    }
+  </script>
+
   <div class="scroll-progress"></div>
   <div class="main-wrapper wrapper">
     <div id="app"></div>
   </div>
   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
   <script type="text/javascript">
-    (function () {
-      emailjs.init("3_KlZnH4fWr5SwZGV");
-    })();
+      (function () {
+        emailjs.init("3_KlZnH4fWr5SwZGV");
+      })();
   </script>
   <script type="module" src="/src/main.js"></script>
 </body>
