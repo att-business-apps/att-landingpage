@@ -75,10 +75,7 @@ function getTemplate(target) {
         <div class="row align-items-end align-items-xl-end">
           <div class="col-lg-12 mx-auto pb-5">
             <div class="home-banner banner-content text-center">
-              <div
-                class="animate__animated fadeInUp"
-                style="animation-duration: 1s"
-              >
+              <div class="animate__animated fadeInUp" style="animation-duration: 1s">
                 <h1 class="title d-inline" ref="myElement">
                   Top <span class="gradient-text-light">UI/UX Design</span> &
                   <span class="gradient-text-light">Web Development</span>
@@ -99,22 +96,22 @@ function getTemplate(target) {
                   business needs.
                 </p>
                 <div class="d-flex justify-content-center gap-3 mt-5">
-                  <a
-                    class="amor-btn btn-fill-primary btn-large"
-                    href="https://wa.me/917975859061/?text=I'm%20inquiring%20about%20the%20website%20service."
-                    >Let's Chat</a
-                  >
-                  <a href="/portfolio" class="amor-btn btn-borderd light"
-                    >View Portfolio</a
-                  >
+                  <a class="amor-btn btn-fill-primary btn-large"
+                    href="https://wa.me/917975859061/?text=I'm%20inquiring%20about%20the%20website%20service.">Let's
+                    Chat</a>
+                  <a href="/portfolio" class="amor-btn btn-borderd light">View Portfolio</a>
                 </div>
               </div>
             </div>
           </div>
-          <div
-            class="col-lg-5 col-md-10 mx-auto animate__animated fadeInUp"
-            style="animation-duration: 2s"
-          >
+        </div>
+        <div class="row align-items-end align-items-xl-end">
+          <div class="amorboy animate__animated animate__slideInDown" style="animation-duration: 8s">
+            <img src="../assets/img/amorboy/am-fly-1.png" alt="">
+            <img src="../assets/img/amorboy/am-doing.png" alt="">
+          </div>
+
+          <div class="col-lg-5 col-md-10 mx-auto animate__animated fadeInUp" style="animation-duration: 2s">
             <div class="contact-form-box banner-form">
               <h3 class="title text-center">
                 <span class="gradient-text blue-dark">Unlock</span> Your Online
@@ -129,61 +126,30 @@ function getTemplate(target) {
                 </p>
                 <div class="form-group mb--40">
                   <!-- <label>How can we help you?</label> -->
-                  <textarea
-                    name="contact-message"
-                    id="message"
-                    class="form-control textarea"
-                    v-model="message"
-                    cols="30"
-                    rows="2"
-                    placeholder="How can we help you?"
-                    required
-                  ></textarea>
+                  <textarea name="contact-message" id="message" class="form-control textarea" v-model="message"
+                    cols="30" rows="2" placeholder="How can we help you?" required></textarea>
                 </div>
 
                 <h4 class="mt-3 mb-2">Your Contact Details</h4>
                 <p class="mb-3">For project discussions only, thank you!</p>
                 <div class="form-group">
                   <!-- <label>Name</label> -->
-                  <input
-                    type="text"
-                    v-model="from_name"
-                    class="form-control"
-                    name="contact-name"
-                    placeholder="Your Name"
-                    required=""
-                  />
+                  <input type="text" v-model="from_name" class="form-control" name="contact-name"
+                    placeholder="Your Name" required="" />
                 </div>
                 <div class="form-group">
                   <!-- <label>Email</label> -->
-                  <input
-                    type="email"
-                    v-model="email"
-                    class="form-control"
-                    name="contact-email"
-                    placeholder="Your Email"
-                    required
-                  />
+                  <input type="email" v-model="email" class="form-control" name="contact-email" placeholder="Your Email"
+                    required />
                 </div>
                 <div class="form-group mb--40">
                   <!-- <label>Phone</label> -->
-                  <input
-                    type="tel"
-                    class="form-control"
-                    v-model="phoneNumber"
-                    name="contact-phone"
-                    placeholder="Your Phone"
-                    required
-                  />
+                  <input type="tel" class="form-control" v-model="phoneNumber" name="contact-phone"
+                    placeholder="Your Phone" required />
                 </div>
                 <div class="form-group">
-                  <button
-                    @click="sendMail"
-                    type="button"
-                    class="amor-btn btn-borderd btn-fluid light"
-                    name="submit-btn"
-                    :disabled="disableBtn"
-                  >
+                  <button @click="sendMail" type="button" class="amor-btn btn-borderd btn-fluid light" name="submit-btn"
+                    :disabled="disableBtn">
                     Send Message
                   </button>
                 </div>
@@ -191,37 +157,26 @@ function getTemplate(target) {
               </form>
             </div>
             <div class="banner-thumbnail d-none">
-              <div
-                class="animate__animated zoomIn"
-                style="animation-duration: 2s"
-              >
+              <div class="animate__animated zoomIn" style="animation-duration: 2s">
                 <div class="large-thumb">
                   <img src="../assets/img/window.png" alt="Laptop" />
                 </div>
               </div>
-              <div
-                class="animate__animated slideInRight"
-                style="animation-duration: 2s"
-              >
+              <div class="animate__animated slideInRight" style="animation-duration: 2s">
                 <div class="large-thumb-2">
-                  <img
-                    src="../assets/img/amorboy/laptop-poses-banner.png"
-                    alt="Laptop"
-                  />
+                  <img src="../assets/img/amorboy/laptop-poses-banner.png" alt="Laptop" />
                 </div>
               </div>
               <ul class="list-unstyled shape-group">
                 <li class="shape shape-1">
-                  <div
-                    class="animate__animated slideInLeft"
-                    style="animation-duration: 1s"
-                  >
+                  <div class="animate__animated slideInLeft" style="animation-duration: 1s">
                     <img src="../assets/img/chat-group-home.png" alt="chat" />
                   </div>
                 </li>
               </ul>
             </div>
           </div>
+
         </div>
       </div>
       <ul class="list-unstyled shape-group-banner">
@@ -439,17 +394,12 @@ function getTemplate(target) {
               <div class="project-grid">
                 <div class="thumbnail">
                   <a href="project/steadyasset" aria-label="SteadyAsset">
-                    <img
-                      src="../assets/img/project/c4/project-thum-sa.png"
-                      alt="project"
-                    />
+                    <img src="../assets/img/project/c4/project-thum-sa.png" alt="project" />
                     <div class="content">
                       <h3 class="title">
                         <a href="project/steadyasset">SteadyAsset</a>
                       </h3>
-                      <span class="subtitle"
-                        >Logo, Branding, UI/UX Design, Website, GMB, GA</span
-                      >
+                      <span class="subtitle">Logo, Branding, UI/UX Design, Website, GMB, GA</span>
                     </div>
                   </a>
                 </div>
@@ -459,18 +409,13 @@ function getTemplate(target) {
               <div class="project-grid">
                 <div class="thumbnail">
                   <a href="project/savedesk" aria-label="SaveDesk">
-                    <img
-                      src="../assets/img/project/c7/project-thum-sd.png"
-                      alt="project"
-                    />
+                    <img src="../assets/img/project/c7/project-thum-sd.png" alt="project" />
                     <div class="content">
                       <h3 class="title">
                         <a href="project/savedesk">SaveDesk</a>
                       </h3>
-                      <span class="subtitle"
-                        >Redesign, UI/UX Design, Wireframing, High-Fidelity
-                        Prototype</span
-                      >
+                      <span class="subtitle">Redesign, UI/UX Design, Wireframing, High-Fidelity
+                        Prototype</span>
                     </div>
                   </a>
                 </div>
@@ -479,23 +424,13 @@ function getTemplate(target) {
             <div class="col-md-10 mx-md-auto col-lg-6 project branding">
               <div class="project-grid">
                 <div class="thumbnail">
-                  <a
-                    href="project/samsiddhi-designs"
-                    aria-label="Samsiddhi Designs"
-                  >
-                    <img
-                      src="../assets/img/project/c9/project-thum-sd.png"
-                      alt="project"
-                    />
+                  <a href="project/samsiddhi-designs" aria-label="Samsiddhi Designs">
+                    <img src="../assets/img/project/c9/project-thum-sd.png" alt="project" />
                     <div class="content">
                       <h3 class="title">
-                        <a href="project/samsiddhi-designs"
-                          >Samsiddhi Designs</a
-                        >
+                        <a href="project/samsiddhi-designs">Samsiddhi Designs</a>
                       </h3>
-                      <span class="subtitle"
-                        >Logo, Branding, UI/UX Design, Website, GMB, GA</span
-                      >
+                      <span class="subtitle">Logo, Branding, UI/UX Design, Website, GMB, GA</span>
                     </div>
                   </a>
                 </div>
@@ -505,10 +440,7 @@ function getTemplate(target) {
               <div class="project-grid">
                 <div class="thumbnail">
                   <a href="project/uae-links" aria-label="UAE Links">
-                    <img
-                      src="../assets/img/project/c1/project-thum-uaeLinks.png"
-                      alt="project"
-                    />
+                    <img src="../assets/img/project/c1/project-thum-uaeLinks.png" alt="project" />
                     <div class="content">
                       <h3 class="title">
                         <a href="project/uae-links">UAE Links</a>
@@ -522,9 +454,7 @@ function getTemplate(target) {
           </div>
 
           <div class="d-lg-flex justify-content-center">
-            <a class="amor-btn btn-borderd light" href="portfolio"
-              >View Portfolio</a
-            >
+            <a class="amor-btn btn-borderd light" href="portfolio">View Portfolio</a>
           </div>
         </div>
       </div>
@@ -561,12 +491,8 @@ function getTemplate(target) {
                   <i class="icofont-star text-warning"></i>
                   <i class="icofont-star text-warning"></i>
                 </div>
-                <a
-                  class="small text-success mb-2"
-                  href="https://share.google/VbfvZxWgqZZY3wKnD"
-                  target="_blank"
-                  >Google Review <i class="icofont-link"></i
-                ></a>
+                <a class="small text-success mb-2" href="https://share.google/VbfvZxWgqZZY3wKnD" target="_blank">Google
+                  Review <i class="icofont-link"></i></a>
               </div>
               <p class="mb-3">
                 "Amortree is a very professional and end-to-end service
@@ -574,12 +500,8 @@ function getTemplate(target) {
                 work in a timely and efficient manner."
               </p>
               <div class="d-flex">
-                <img
-                  src="../assets/img/project/c4/icon-sa.svg"
-                  class="m-0"
-                  style="height: 40px"
-                  alt="SteadyAsset Logo"
-                />
+                <img src="../assets/img/project/c4/icon-sa.svg" class="m-0" style="height: 40px"
+                  alt="SteadyAsset Logo" />
                 <div class="ms-2">
                   <div class="small">Client – SteadyAsset</div>
                   <div class="fw-bold">Menaka Reddy</div>
@@ -597,12 +519,8 @@ function getTemplate(target) {
                   <i class="icofont-star text-warning"></i>
                   <i class="icofont-star text-warning"></i>
                 </div>
-                <a
-                  class="small text-success mb-2"
-                  href="https://share.google/8H1Msp6toe6G2KbDN"
-                  target="_blank"
-                  >Google Review <i class="icofont-link"></i
-                ></a>
+                <a class="small text-success mb-2" href="https://share.google/8H1Msp6toe6G2KbDN" target="_blank">Google
+                  Review <i class="icofont-link"></i></a>
               </div>
               <p class="mb-3">
                 "Hi, I just wanted to take a moment to express my sincere
@@ -613,12 +531,8 @@ function getTemplate(target) {
                 job well done!"
               </p>
               <div class="d-flex">
-                <img
-                  src="../assets/img/project/c2/icon-sc.svg"
-                  class="m-0"
-                  style="height: 40px"
-                  alt="SteadyAsset Logo"
-                />
+                <img src="../assets/img/project/c2/icon-sc.svg" class="m-0" style="height: 40px"
+                  alt="SteadyAsset Logo" />
                 <div class="ms-2">
                   <div class="small">Client – Solved Cube IT Solution</div>
                   <div class="fw-bold">Sandeep L</div>
@@ -636,12 +550,8 @@ function getTemplate(target) {
                   <i class="icofont-star text-warning"></i>
                   <i class="icofont-star text-warning"></i>
                 </div>
-                <a
-                  class="small text-success mb-2"
-                  href="https://share.google/NG4IIyDdLP6yMJ5tN"
-                  target="_blank"
-                  >Google Review <i class="icofont-link"></i
-                ></a>
+                <a class="small text-success mb-2" href="https://share.google/NG4IIyDdLP6yMJ5tN" target="_blank">Google
+                  Review <i class="icofont-link"></i></a>
               </div>
               <p class="mb-3">
                 "Amortree Tech is a pleasure to work with. They're responsive,
@@ -649,12 +559,8 @@ function getTemplate(target) {
                 recommend their services."
               </p>
               <div class="d-flex">
-                <img
-                  src="../assets/img/project/c9/icon-sd.svg"
-                  class="m-0"
-                  style="height: 40px"
-                  alt="SteadyAsset Logo"
-                />
+                <img src="../assets/img/project/c9/icon-sd.svg" class="m-0" style="height: 40px"
+                  alt="SteadyAsset Logo" />
                 <div class="ms-2">
                   <div class="small">Client – Samsiddhi Designs</div>
                   <div class="fw-bold">Bharathkumar MS</div>
@@ -698,9 +604,7 @@ function getTemplate(target) {
                 <span class="subtitle">Who we are</span>
                 <h2 class="title mb--40">
                   Your
-                  <span class="gradient-text-light text-lg"
-                    >Digital Growth</span
-                  >
+                  <span class="gradient-text-light text-lg">Digital Growth</span>
                   Partner
                 </h2>
                 <p>
@@ -730,21 +634,14 @@ function getTemplate(target) {
                   <strong>digital transformation</strong> and success together.
                 </p>
                 <div class="d-flex justify-content-start gap-3 mt-5">
-                  <a
-                    href="whoWeAre"
-                    class="amor-btn btn-borderd light"
-                    tabindex="0"
-                    >Know more</a
-                  >
+                  <a href="whoWeAre" class="amor-btn btn-borderd light" tabindex="0">Know more</a>
                 </div>
               </div>
             </div>
           </div>
           <div class="col-xl-5 col-lg-6 offset-xl-1">
-            <img
-              src="../assets/img/amorboy/am-home-abt.png"
-              alt="Professional Web Development Team - Custom Website Design Services"
-            />
+            <img src="../assets/img/amorboy/am-home-abt.png"
+              alt="Professional Web Development Team - Custom Website Design Services" />
           </div>
         </div>
       </div>
@@ -778,20 +675,11 @@ function getTemplate(target) {
             <div class="accordion" id="faqAccordion">
               <div class="accordion-item">
                 <h3 class="accordion-header">
-                  <button
-                    class="accordion-button"
-                    type="button"
-                    data-bs-toggle="collapse"
-                    data-bs-target="#faq1"
-                  >
+                  <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
                     What services do you provide?
                   </button>
                 </h3>
-                <div
-                  id="faq1"
-                  class="accordion-collapse collapse show"
-                  data-bs-parent="#faqAccordion"
-                >
+                <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
                   <div class="accordion-body">
                     We offer <b>end-to-end digital solutions</b>, including:
 
@@ -826,20 +714,12 @@ function getTemplate(target) {
               </div>
               <div class="accordion-item">
                 <h3 class="accordion-header">
-                  <button
-                    class="accordion-button collapsed"
-                    type="button"
-                    data-bs-toggle="collapse"
-                    data-bs-target="#faq2"
-                  >
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#faq2">
                     Do you provide UI/UX design services?
                   </button>
                 </h3>
-                <div
-                  id="faq2"
-                  class="accordion-collapse collapse"
-                  data-bs-parent="#faqAccordion"
-                >
+                <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
                   <div class="accordion-body">
                     Yes, we provide comprehensive
                     <strong>UI/UX design services</strong> including user
@@ -852,20 +732,12 @@ function getTemplate(target) {
               </div>
               <div class="accordion-item">
                 <h3 class="accordion-header">
-                  <button
-                    class="accordion-button collapsed"
-                    type="button"
-                    data-bs-toggle="collapse"
-                    data-bs-target="#faq3"
-                  >
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#faq3">
                     What is your experience with mobile app UI/UX Design?
                   </button>
                 </h3>
-                <div
-                  id="faq3"
-                  class="accordion-collapse collapse"
-                  data-bs-parent="#faqAccordion"
-                >
+                <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
                   <div class="accordion-body">
                     We have extensive experience in
                     <strong>mobile app UI/UX Design</strong> for both iOS and
@@ -878,20 +750,12 @@ function getTemplate(target) {
               </div>
               <div class="accordion-item">
                 <h3 class="accordion-header">
-                  <button
-                    class="accordion-button collapsed"
-                    type="button"
-                    data-bs-toggle="collapse"
-                    data-bs-target="#faq4"
-                  >
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#faq4">
                     How much does a project cost?
                   </button>
                 </h3>
-                <div
-                  id="faq4"
-                  class="accordion-collapse collapse"
-                  data-bs-parent="#faqAccordion"
-                >
+                <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
                   <div class="accordion-body">
                     Costs vary based on features, design, and complexity. After
                     a free consultation, we provide a clear, tailored quote with
@@ -901,20 +765,12 @@ function getTemplate(target) {
               </div>
               <div class="accordion-item">
                 <h3 class="accordion-header">
-                  <button
-                    class="accordion-button collapsed"
-                    type="button"
-                    data-bs-toggle="collapse"
-                    data-bs-target="#faq5"
-                  >
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#faq5">
                     How long will my project take?
                   </button>
                 </h3>
-                <div
-                  id="faq5"
-                  class="accordion-collapse collapse"
-                  data-bs-parent="#faqAccordion"
-                >
+                <div id="faq5" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
                   <div class="accordion-body">
                     <p class="mb-2">Timelines depend on scope:</p>
                     <ul>
@@ -942,46 +798,28 @@ function getTemplate(target) {
               </div>
               <div class="accordion-item">
                 <h3 class="accordion-header">
-                  <button
-                    class="accordion-button collapsed"
-                    type="button"
-                    data-bs-toggle="collapse"
-                    data-bs-target="#faq6"
-                  >
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#faq6">
                     Do you provide support after launch?
                   </button>
                 </h3>
-                <div
-                  id="faq6"
-                  class="accordion-collapse collapse"
-                  data-bs-parent="#faqAccordion"
-                >
+                <div id="faq6" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
                   <div class="accordion-body">
                     Yes, we offer
-                    <b
-                      >maintenance, updates, security, and IT support
-                      packages</b
-                    >
+                    <b>maintenance, updates, security, and IT support
+                      packages</b>
                     so your system stays reliable and up-to-date.
                   </div>
                 </div>
               </div>
               <div class="accordion-item">
                 <h3 class="accordion-header">
-                  <button
-                    class="accordion-button collapsed"
-                    type="button"
-                    data-bs-toggle="collapse"
-                    data-bs-target="#faq7"
-                  >
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#faq7">
                     Will my website be mobile-friendly?
                   </button>
                 </h3>
-                <div
-                  id="faq7"
-                  class="accordion-collapse collapse"
-                  data-bs-parent="#faqAccordion"
-                >
+                <div id="faq7" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
                   <div class="accordion-body">
                     Absolutely. Every site we build is
                     <b>responsive, fast, and optimized for all devices</b>.
@@ -990,20 +828,12 @@ function getTemplate(target) {
               </div>
               <div class="accordion-item">
                 <h3 class="accordion-header">
-                  <button
-                    class="accordion-button collapsed"
-                    type="button"
-                    data-bs-toggle="collapse"
-                    data-bs-target="#faq8"
-                  >
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#faq8">
                     Do you work with international clients?
                   </button>
                 </h3>
-                <div
-                  id="faq8"
-                  class="accordion-collapse collapse"
-                  data-bs-parent="#faqAccordion"
-                >
+                <div id="faq8" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
                   <div class="accordion-body">
                     Yes! We collaborate with businesses across
                     <b>India and worldwide</b>, ensuring smooth communication
@@ -1052,3 +882,22 @@ function getTemplate(target) {
     </section>
   </main>
 </template>
+
+
+<style lang="scss" scoped>
+.amorboy {
+  position: absolute;
+  width: 100%;
+  height: auto;
+  bottom: 8%;
+  left: 0;
+  z-index: -1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  img {
+    width: 30%;
+  }
+}
+</style>

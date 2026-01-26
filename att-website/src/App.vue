@@ -4,6 +4,7 @@ import { RouterView, useRouter } from 'vue-router'
 import HeaderSec from './components/Header.vue'
 import FooterSec from './components/Footer.vue'
 import logoUrl from './assets/img/shapes/bubble-2.png'
+import 'animate.css'
 
 const isLoading = ref(true)
 const router = useRouter()
