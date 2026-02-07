@@ -17209,7 +17209,7 @@ Service Page
     color: var(--color-white);
     transition: var(--transition); }
   .about-quality:hover .sl-number, .about-quality.active .sl-number {
-    background-color: var(--color-primaryG); }
+    background-color: var(--color-primaryR); }
   .about-quality:hover p, .about-quality.active p {
     opacity: 1; }
 
