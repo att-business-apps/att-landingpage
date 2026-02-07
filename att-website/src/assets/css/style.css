@@ -13947,19 +13947,22 @@ input {
   border-radius: 1rem;
   font-size: 1.15rem;
   font-weight: 600;
-  padding: .975rem 3rem !important;
+  padding: 0.975rem 3rem !important;
   height: auto;
   text-align: center;
   transition: var(--transition);
   position: relative;
-  z-index: 1; }
+  z-index: 1;
+  background-size: 300% 300%; }
   @media only screen and (max-width: 767px) {
     .amor-btn {
       font-size: 1rem; } }
   .amor-btn.btn-borderd {
     border: var(--border-gray);
     color: var(--color-white);
-    background-color: transparent; }
+    background-color: transparent;
+    animation: light 2s infinite;
+    background-image: linear-gradient(135deg, transparent, transparent 40%, #535353 50%, transparent 60%, transparent) !important; }
     .amor-btn.btn-borderd::after {
       content: "";
       height: 300px;
@@ -14012,7 +14015,9 @@ input {
     background-color: var(--logo-yellow);
     color: var(--color-dark);
     border: 1px solid var(--color-dark);
-    overflow: hidden; }
+    overflow: hidden;
+    animation: light 2s infinite;
+    background-image: linear-gradient(135deg, var(--logo-yellow), var(--logo-yellow) 40%, #e7e1c4 50%, var(--logo-yellow) 60%, var(--logo-yellow)) !important; }
     .amor-btn.btn-fill-primary::after {
       content: "";
       height: 300px;
@@ -14076,6 +14081,11 @@ input {
   clip-path: polygon(50% -50%, 100% 50%, 50% 150%, 0 50%);
   background: var(--color-dark); }
 
+@keyframes light {
+  0% {
+    background-position: 100% 100%; }
+  to {
+    background-position: 0 0; } }
 /* -----------------------
 Pagination 
 --------------------------*/
