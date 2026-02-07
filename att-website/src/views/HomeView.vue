@@ -238,7 +238,7 @@ function getTemplate(target) {
               </div>
               <div class="content">
                 <h3 class="title">
-                  <a href="whatWeDo">Research & Strategy</a>
+                  <a href="services">Research & Strategy</a>
                 </h3>
                 <p>
                   <strong>Market research</strong> and
@@ -247,7 +247,7 @@ function getTemplate(target) {
                   tailored <strong>IT solutions</strong> that drive business
                   success and digital transformation.
                 </p>
-                <a class="more-btn" href="whatWeDo">Find out more</a>
+                <a class="more-btn" href="services">Find out more</a>
               </div>
             </div>
           </div>
@@ -258,7 +258,7 @@ function getTemplate(target) {
               </div>
               <div class="content">
                 <h3 class="title">
-                  <a href="whatWeDo">Brand Identity Design</a>
+                  <a href="services">Brand Identity Design</a>
                 </h3>
                 <p>
                   <strong>Professional branding services</strong> shape your
@@ -267,7 +267,7 @@ function getTemplate(target) {
                   <strong>memorable brand identity</strong> that stands out in
                   the market!
                 </p>
-                <a class="more-btn" href="whatWeDo">Find out more</a>
+                <a class="more-btn" href="services">Find out more</a>
               </div>
             </div>
           </div>
@@ -277,14 +277,14 @@ function getTemplate(target) {
                 <img src="../assets/img/icon/logo-1.png" alt="icon" />
               </div>
               <div class="content">
-                <h3 class="title"><a href="whatWeDo">Custom Logo Design</a></h3>
+                <h3 class="title"><a href="services">Custom Logo Design</a></h3>
                 <p>
                   A <strong>professional logo</strong> is more than just a
                   symbol; it's the face of your brand. amortree Tech creates
                   impactful <strong>custom logo designs</strong>
                   that define brand identities and make lasting impressions.
                 </p>
-                <a class="more-btn" href="whatWeDo">Find out more</a>
+                <a class="more-btn" href="services">Find out more</a>
               </div>
             </div>
           </div>
@@ -297,7 +297,7 @@ function getTemplate(target) {
               </div>
               <div class="content">
                 <h3 class="title">
-                  <a href="whatWeDo">Website Development</a>
+                  <a href="services">Website Development</a>
                 </h3>
                 <p>
                   amortree Tech delivers intuitive
@@ -307,7 +307,7 @@ function getTemplate(target) {
                   <strong>digital experiences</strong> for your brand and
                   business growth.
                 </p>
-                <a class="more-btn" href="whatWeDo">Find out more</a>
+                <a class="more-btn" href="services">Find out more</a>
               </div>
             </div>
           </div>
@@ -318,7 +318,7 @@ function getTemplate(target) {
               </div>
               <div class="content">
                 <h3 class="title">
-                  <a href="whatWeDo">Mobile App UI/UX Design</a>
+                  <a href="services">Mobile App UI/UX Design</a>
                 </h3>
                 <p>
                   <strong>Mobile app UI/UX design</strong> focuses on creating
@@ -326,7 +326,7 @@ function getTemplate(target) {
                   ensuring seamless navigation and functionality for
                   <strong>mobile applications</strong>.
                 </p>
-                <a class="more-btn" href="whatWeDo">Find out more</a>
+                <a class="more-btn" href="services">Find out more</a>
               </div>
             </div>
           </div>
@@ -336,7 +336,7 @@ function getTemplate(target) {
                 <img src="../assets/img/icon/devops-1.png" alt="icon" />
               </div>
               <div class="content">
-                <h3 class="title"><a href="whatWeDo">DevOps Consulting</a></h3>
+                <h3 class="title"><a href="services">DevOps Consulting</a></h3>
                 <p>
                   <strong>DevOps consulting services</strong> streamline
                   collaboration between development and operations teams,
@@ -344,7 +344,7 @@ function getTemplate(target) {
                   continuous integration for seamless performance and
                   <strong>cloud infrastructure management</strong>.
                 </p>
-                <a class="more-btn" href="whatWeDo">Find out more</a>
+                <a class="more-btn" href="services">Find out more</a>
               </div>
             </div>
           </div>
@@ -634,7 +634,7 @@ function getTemplate(target) {
                   <strong>digital transformation</strong> and success together.
                 </p>
                 <div class="d-flex justify-content-start gap-3 mt-5">
-                  <a href="whoWeAre" class="amor-btn btn-borderd light" tabindex="0">Know more</a>
+                  <a href="about" class="amor-btn btn-borderd light" tabindex="0">Know more</a>
                 </div>
               </div>
             </div>
