@@ -219,8 +219,8 @@
 @media only screen and (max-width: 767px) {
   .navbar {
     width: 94%;
-	left: 3%;
-	top: .875rem;
+    left: 3%;
+    top: 0.875rem;
   }
 
   .navbar-default {
@@ -261,7 +261,7 @@
       transition: all 0.6s ease;
       height: 50px;
 
-      background-color: rgb(255 255 255 / 70%);
+      background-color: rgba(255, 255, 255, 0.7);
       backdrop-filter: blur(6px);
       background-position: 50% 50%;
       background-repeat: no-repeat;
