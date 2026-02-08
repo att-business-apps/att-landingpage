@@ -103,7 +103,7 @@
       #e7e5e5 50%,
       var(--logo-yellow) 60%,
       var(--logo-yellow)
-    ) !important;
+    );
     &::after {
       content: "";
       height: 300px;
@@ -120,7 +120,7 @@
     &:hover {
       background-color: var(--color-dark);
       border-color: var(--color-link);
-      color: var(--logo-yellow);
+      color: var(--color-dark);
       &::after {
         transform: translateY(-50%) translateX(-50%) scale(1);
         background: inherit;
