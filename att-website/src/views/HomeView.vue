@@ -1051,6 +1051,7 @@ function getTemplate(target) {
       </ul>
     </section>
 
+
     <section class="section section-padding bg-color-light" id="reviews">
       <div class="container-fluid">
         <div class="section-heading heading-center">
@@ -1060,7 +1061,152 @@ function getTemplate(target) {
             <span class="gradient-text yellow-dark">Inspires</span> Us
           </h2>
         </div>
-        <div class="row">
+
+        <div class="grid md:grid-cols-2 gap-8">
+          <div
+            class="glass-card p-10 rounded-3xl relative overflow-hidden group"
+          >
+            <div
+              class="absolute top-0 left-0 w-2 h-full bg-primary group-hover:w-full group-hover:opacity-5 transition-all duration-700"
+            ></div>
+            <div class="flex gap-1 text-ly mb-6">
+              <span class="material-symbols-outlined">star</span>
+              <span class="material-symbols-outlined">star</span>
+              <span class="material-symbols-outlined">star</span>
+              <span class="material-symbols-outlined">star</span>
+              <span class="material-symbols-outlined">star</span>
+            </div>
+            <p
+              class="text-xl text-white italic mb-10 leading-relaxed font-light"
+            >
+              "Amortree is a very professional and end-to-end service provider. They have good understanding of the clients needs and work in a timely and efficient manner."
+            </p>
+            <div class="flex items-center gap-4">
+              <img
+                  src="../assets/img/project/c4/icon-sa.svg"
+                  class="m-0"
+                  style="height: 40px"
+                  alt="SteadyAsset Logo"
+                />
+              <div>
+                <p
+                  class="font-bold text-white uppercase text-sm tracking-widest mb-1"
+                >
+                  Menaka Krishna
+                </p>
+                <p class="text-xs text-primary font-bold mb-0">CEO, SteadyAsset</p>
+              </div>
+            </div>
+          </div>
+          <div
+            class="glass-card p-10 rounded-3xl relative overflow-hidden group"
+          >
+            <div
+              class="absolute top-0 left-0 w-2 h-full bg-primary group-hover:w-full group-hover:opacity-5 transition-all duration-700"
+            ></div>
+            <div class="flex gap-1 text-primary mb-6">
+              <span class="material-symbols-outlined">star</span>
+              <span class="material-symbols-outlined">star</span>
+              <span class="material-symbols-outlined">star</span>
+              <span class="material-symbols-outlined">star</span>
+              <span class="material-symbols-outlined">star</span>
+            </div>
+            <p
+              class="text-xl text-white italic mb-10 leading-relaxed font-light"
+            >
+              "Hi, I just wanted to take a moment to express my sincere appreciation for the outstanding work you've done. Completing it on time and to such a high standard is a testament to your dedication and expertise. Your efforts have not gone unnoticed and I'm grateful for your contributions. Thank you again for a job well done!"
+            </p>
+            <div class="flex items-center gap-4">
+              <img
+                  src="../assets/img/project/c2/icon-sc.svg"
+                  class="m-0"
+                  style="height: 40px"
+                  alt="SteadyAsset Logo"
+                />
+              <div>
+                <p
+                  class="font-bold text-white uppercase text-sm tracking-widest mb-1"
+                >
+                  Sandeep L
+                </p>
+                <p class="text-xs text-primary font-bold mb-0">Co-Founder, Solved Cube IT Solution</p>
+              </div>
+            </div>
+          </div>
+          <div
+            class="glass-card p-10 rounded-3xl relative overflow-hidden group"
+          >
+            <div
+              class="absolute top-0 left-0 w-2 h-full bg-primary group-hover:w-full group-hover:opacity-5 transition-all duration-700"
+            ></div>
+            <div class="flex gap-1 text-primary mb-6">
+              <span class="material-symbols-outlined">star</span>
+              <span class="material-symbols-outlined">star</span>
+              <span class="material-symbols-outlined">star</span>
+              <span class="material-symbols-outlined">star</span>
+              <span class="material-symbols-outlined">star</span>
+            </div>
+            <p
+              class="text-xl text-white italic mb-10 leading-relaxed font-light"
+            >
+              "Amortree Tech is a pleasure to work with. They're responsive, professional, and always willing to go the extra mile. I highly recommend their services."
+            </p>
+            <div class="flex items-center gap-4">
+              <img
+                  src="../assets/img/project/c9/icon-sd.svg"
+                  class="m-0"
+                  style="height: 40px"
+                  alt="SteadyAsset Logo"
+                />
+              <div>
+                <p
+                  class="font-bold text-white uppercase text-sm tracking-widest mb-1"
+                >
+                  Bharathkumar MS
+                </p>
+                <p class="text-xs text-primary font-bold mb-0">Founder, Samsiddhi Designs</p>
+              </div>
+            </div>
+          </div>
+          <div
+            class="glass-card p-10 rounded-3xl relative overflow-hidden group"
+          >
+            <div
+              class="absolute top-0 left-0 w-2 h-full bg-primary group-hover:w-full group-hover:opacity-5 transition-all duration-700"
+            ></div>
+            <div class="flex gap-1 text-primary mb-6">
+              <span class="material-symbols-outlined">star</span>
+              <span class="material-symbols-outlined">star</span>
+              <span class="material-symbols-outlined">star</span>
+              <span class="material-symbols-outlined">star</span>
+              <span class="material-symbols-outlined">star</span>
+            </div>
+            <p
+              class="text-xl text-white italic mb-10 leading-relaxed font-light"
+            >
+              "Good understanding of the client's need. Very good professional and service provider.  you again for a job well done, All the best 👍👍💐💐"
+            </p>
+            <div class="flex items-center gap-4">
+              <img
+                  src="../assets/img/project/c6/spr-logo.svg"
+                  class="m-0"
+                  style="height: 40px"
+                  alt="SteadyAsset Logo"
+                />
+              <div>
+                <p
+                  class="font-bold text-white uppercase text-sm tracking-widest mb-1"
+                >
+                  Suresh Babu
+                </p>
+                <p class="text-xs text-primary font-bold mb-0">CEO, SPR Real Estate</p>
+              </div>
+            </div>
+          </div>
+          
+        </div>
+
+        <div class="d-none row">
           <div class="col-lg-4 col-md-6 mb-4">
             <div class="review-card p-4 h-100">
               <div class="d-flex justify-content-between">

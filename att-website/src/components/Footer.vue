@@ -4,12 +4,16 @@
       <div class="call-to-action">
         <div class="section-heading heading-light">
           <span class="subtitle">Let's Work Together</span>
-          <h2 class="title">Need a successful project?</h2>
+          <h2 class="title mb-3">Get Your Free Audit & Growth Plan!</h2>
+          <p>
+            No pressure, no sales pitch. Just actionable insights on how to grow
+            your business.
+          </p>
           <!-- <a class="amor-btn btn-large btn-fill-white" href="estimate">Estimate Project</a> -->
           <a
             class="amor-btn btn-large btn-fill-white"
             href="https://wa.me/917975859061/?text=I'm%20inquiring%20about%20the%20website%20service."
-            >Free Growth Audit</a
+            >Get Started Today</a
           >
         </div>
         <div class="thumbnail">
