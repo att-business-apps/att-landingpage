@@ -735,28 +735,28 @@ function getTemplate(target) {
         <div class="grid grid-cols-1 md:grid-cols-4 gap-0">
           <div class="step-arrow bg-slate-900 text-white p-8 mb-4 md:mb-0">
             <div class="text-4xl font-black mb-4 opacity-50">01</div>
-            <h5 class="font-bold text-lg mb-2">Audit &amp; Strategy</h5>
+            <h5 class="font-bold text-lg mb-2 d-block">Audit &amp; Strategy</h5>
             <small class="text-sm text-slate-300">
               Deep dive into your metrics and map out the growth path.
             </small>
           </div>
           <div class="step-arrow bg-slate-800 text-white p-8 mb-4 md:mb-0">
             <div class="text-4xl font-black mb-4 opacity-80">02</div>
-            <h5 class="font-bold text-lr mb-2">Design &amp; Build</h5>
+            <h5 class="font-bold text-lr mb-2 d-block">Design &amp; Build</h5>
             <small class="text-sm text-slate-300">
               Crafting your high-converting assets with precision.
             </small>
           </div>
           <div class="step-arrow bg-slate-700 text-white p-8 mb-4 md:mb-0">
             <div class="text-4xl font-black mb-4 opacity-80">03</div>
-            <h5 class="font-bold text-ly mb-2">Launch</h5>
+            <h5 class="font-bold text-ly mb-2 d-block">Launch</h5>
             <small class="text-sm text-slate-100">
               Deploying campaigns and monitoring live performance.
             </small>
           </div>
           <div class="step-arrow bg-slate-600 text-slate-900 p-8 mb-4 md:mb-0">
             <div class="text-4xl font-black mb-4 opacity-80">04</div>
-            <h5 class="font-bold text-lb mb-2">Optimize &amp; Scale</h5>
+            <h5 class="font-bold text-lb mb-2 d-block">Optimize &amp; Scale</h5>
             <small class="text-sm text-slate-300">
               Daily improvements to maximize your return on investment.
             </small>
