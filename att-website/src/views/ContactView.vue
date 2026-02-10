@@ -89,15 +89,7 @@ function getTemplate(target) {
         </div>
       </div>
       <div class="banner-thumbnail">
-        <div
-          class=""
-          style="
-            position: relative;
-            will-change: transform;
-            transform: perspective(2000px) rotateX(-0.32deg) rotateY(-11.76deg)
-              scale3d(1, 1, 1);
-          "
-        >
+        <div class="">
           <img
             src="../assets/img/amorboy/am-contact.png"
             class="w-50 animate__animated slideInRight"
@@ -199,7 +191,7 @@ function getTemplate(target) {
                   name="submit-btn"
                   :disabled="disableBtn"
                 >
-                  Send Enquiry
+                  Get My Free Audit
                 </button>
               </div>
               <div class="form-group"></div>
