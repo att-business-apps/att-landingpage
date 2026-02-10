@@ -1067,7 +1067,7 @@ function getTemplate(target) {
             class="glass-card p-10 rounded-3xl relative overflow-hidden group"
           >
             <div
-              class="absolute top-0 left-0 w-2 h-full bg-primary group-hover:w-full group-hover:opacity-5 transition-all duration-700"
+              class="absolute top-0 left-0 w-2 h-full bg-warning group-hover:w-full group-hover:opacity-5 transition-all duration-700"
             ></div>
             <div class="flex gap-1 text-ly mb-6">
               <span class="material-symbols-outlined">star</span>
@@ -1094,7 +1094,7 @@ function getTemplate(target) {
                 >
                   Menaka Krishna
                 </p>
-                <p class="text-xs text-primary font-bold mb-0">CEO, SteadyAsset</p>
+                <small class="text-xs text-ll font-bold mb-0">CEO, SteadyAsset</small>
               </div>
             </div>
           </div>
@@ -1102,9 +1102,9 @@ function getTemplate(target) {
             class="glass-card p-10 rounded-3xl relative overflow-hidden group"
           >
             <div
-              class="absolute top-0 left-0 w-2 h-full bg-primary group-hover:w-full group-hover:opacity-5 transition-all duration-700"
+              class="absolute top-0 left-0 w-2 h-full bg-warning group-hover:w-full group-hover:opacity-5 transition-all duration-700"
             ></div>
-            <div class="flex gap-1 text-primary mb-6">
+            <div class="flex gap-1 text-ly mb-6">
               <span class="material-symbols-outlined">star</span>
               <span class="material-symbols-outlined">star</span>
               <span class="material-symbols-outlined">star</span>
@@ -1129,7 +1129,7 @@ function getTemplate(target) {
                 >
                   Sandeep L
                 </p>
-                <p class="text-xs text-primary font-bold mb-0">Co-Founder, Solved Cube IT Solution</p>
+                <small class="text-xs text-ll font-bold mb-0">Co-Founder, Solved Cube IT Solution</small>
               </div>
             </div>
           </div>
@@ -1137,9 +1137,9 @@ function getTemplate(target) {
             class="glass-card p-10 rounded-3xl relative overflow-hidden group"
           >
             <div
-              class="absolute top-0 left-0 w-2 h-full bg-primary group-hover:w-full group-hover:opacity-5 transition-all duration-700"
+              class="absolute top-0 left-0 w-2 h-full bg-warning group-hover:w-full group-hover:opacity-5 transition-all duration-700"
             ></div>
-            <div class="flex gap-1 text-primary mb-6">
+            <div class="flex gap-1 text-ly mb-6">
               <span class="material-symbols-outlined">star</span>
               <span class="material-symbols-outlined">star</span>
               <span class="material-symbols-outlined">star</span>
@@ -1164,7 +1164,7 @@ function getTemplate(target) {
                 >
                   Bharathkumar MS
                 </p>
-                <p class="text-xs text-primary font-bold mb-0">Founder, Samsiddhi Designs</p>
+                <small class="text-xs text-ll font-bold mb-0">Founder, Samsiddhi Designs</small>
               </div>
             </div>
           </div>
@@ -1172,9 +1172,9 @@ function getTemplate(target) {
             class="glass-card p-10 rounded-3xl relative overflow-hidden group"
           >
             <div
-              class="absolute top-0 left-0 w-2 h-full bg-primary group-hover:w-full group-hover:opacity-5 transition-all duration-700"
+              class="absolute top-0 left-0 w-2 h-full bg-warning group-hover:w-full group-hover:opacity-5 transition-all duration-700"
             ></div>
-            <div class="flex gap-1 text-primary mb-6">
+            <div class="flex gap-1 text-ly mb-6">
               <span class="material-symbols-outlined">star</span>
               <span class="material-symbols-outlined">star</span>
               <span class="material-symbols-outlined">star</span>
@@ -1199,7 +1199,7 @@ function getTemplate(target) {
                 >
                   Suresh Babu
                 </p>
-                <p class="text-xs text-primary font-bold mb-0">CEO, SPR Real Estate</p>
+                <small class="text-xs text-ll font-bold mb-0">CEO, SPR Real Estate</small>
               </div>
             </div>
           </div>
