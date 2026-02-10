@@ -1,8 +1,10 @@
+import "tailwindcss";
 import "./assets/css/animate.css";
 import "./assets/css/magnific-popup.css";
 import "./assets/css/ionicons.min.css";
 import "./assets/css/icofont.css";
 import "./assets/css/style.css";
+import "./index.css";
 
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
 

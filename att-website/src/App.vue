@@ -1,44 +1,50 @@
 <script setup>
-import { ref, onMounted, watch } from 'vue'
-import { RouterView, useRouter } from 'vue-router'
-import HeaderSec from './components/Header.vue'
-import FooterSec from './components/Footer.vue'
-import logoUrl from './assets/img/shapes/bubble-2.png'
-import 'animate.css'
+import { ref, onMounted, watch } from "vue";
+import { RouterView, useRouter } from "vue-router";
+import HeaderSec from "./components/Header.vue";
+import FooterSec from "./components/Footer.vue";
+import logoUrl from "./assets/img/shapes/bubble-2.png";
+import "animate.css";
 
-const isLoading = ref(true)
-const router = useRouter()
+const isLoading = ref(true);
+const router = useRouter();
 
 router.beforeEach((_to, _from, next) => {
-  isLoading.value = true
-  next()
-})
+  isLoading.value = true;
+  next();
+});
 
 router.afterEach(() => {
   // Small delay to avoid flicker on super fast routes
   setTimeout(() => {
-    isLoading.value = false
-  }, 150)
-})
+    isLoading.value = false;
+  }, 150);
+});
 
 router.onError(() => {
-  isLoading.value = false
-})
+  isLoading.value = false;
+});
 
 onMounted(() => {
   router.isReady().then(() => {
-    isLoading.value = false
-  })
-})
+    isLoading.value = false;
+  });
+});
 
 watch(isLoading, (loading) => {
-  document.body.style.overflow = loading ? 'hidden' : ''
-})
+  document.body.style.overflow = loading ? "hidden" : "";
+});
 </script>
 
 <template>
   <HeaderSec />
-  <div v-if="isLoading" class="global-loader" role="status" aria-live="polite" aria-busy="true">
+  <div
+    v-if="isLoading"
+    class="global-loader"
+    role="status"
+    aria-live="polite"
+    aria-busy="true"
+  >
     <img :src="logoUrl" alt="Loading" class="loader-logo" />
   </div>
   <RouterView />

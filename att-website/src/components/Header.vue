@@ -37,77 +37,11 @@
             </nav>
           </div>
           <div class="header-action">
-            <ul class="list-unstyled">
-              <li class="header-social-link">
-                <ul class="social-icon-list list-unstyled">
-                  <li>
-                    <a
-                      href="https://in.linkedin.com/company/amortree-tech"
-                      target="_blank"
-                    >
-                      <img
-                        src="../assets/img/icon/sm-l.png"
-                        alt="amortree linkedin"
-                      />
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="https://www.instagram.com/amortreetech/"
-                      target="_blank"
-                    >
-                      <img
-                        src="../assets/img/icon/sm-i.png"
-                        alt="amortree instagram"
-                      />
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="https://www.facebook.com/amortreetech/"
-                      target="_blank"
-                    >
-                      <img
-                        src="../assets/img/icon/sm-f.png"
-                        alt="amortree facebook"
-                      />
-                    </a>
-                  </li>
-                  <li>
-                    <a href="https://dribbble.com/amortreetech" target="_blank">
-                      <img
-                        src="../assets/img/icon/sm-d.png"
-                        alt="amortree dribbble"
-                      />
-                    </a>
-                  </li>
-                </ul>
-              </li>
-              <li class="sidemenu-btn me-2">
-                <a
-                  href="https://wa.me/917975859061/?text=I'm%20inquiring%20about%20the%20website%20service."
-                  target="_blank"
-                  class=""
-                >
-                  <img
-                    src="../assets/img/icon/whatsapp.png"
-                    class="wa"
-                    alt="amortree facebook"
-                  />
-                </a>
-              </li>
-              <li class="mobile-menu-btn sidemenu-btn d-lg-none d-none">
-                <button
-                  class="btn-wrap"
-                  type="button"
-                  @click.prevent="showOffcanvasMenu()"
-                >
-                  <span></span>
-                  <span></span>
-                  <span></span>
-                </button>
-              </li>
-            </ul>
+            <a
+              class="amor-btn btn-borderd light uppercase text-xs font-bold tracking-widest"
+              href="https://wa.me/917975859061/?text=Get%20my%20free%20GROWTH%20Audit."
+              >Free Audit</a
+            >
           </div>
         </div>
         <div class="scroll-progress"></div>

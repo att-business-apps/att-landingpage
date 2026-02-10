@@ -1,335 +1,671 @@
 <template>
-	<div class="section call-to-action-area pb-0">
-		<div class="container-fluid">
-			<div class="call-to-action">
-				<div class="section-heading heading-light">
-					<span class="subtitle">Let's Work Together</span>
-					<h2 class="title">Need a successful project?</h2>
-					<!-- <a class="amor-btn btn-large btn-fill-white" href="estimate">Estimate Project</a> -->
-					<a class="amor-btn btn-large btn-fill-white"
-						href="https://wa.me/917975859061/?text=I'm%20inquiring%20about%20the%20website%20service.">Let's
-						Chat</a>
-				</div>
-				<div class="thumbnail">
-					<div class="larg-thumb">
-						<img class="paralax-image" src="../assets/img/chat-group.png" alt="Chat" />
-					</div>
-					<ul class="list-unstyled small-thumb">
-						<li class="shape shape-1">
-							<img class="paralax-image" src="../assets/img/amorboy/laptop-poses.png" alt="Laptop" />
-						</li>
-						<li class="shape shape-2">
-							<img class="paralax-image" src="../assets/img/amorboy/bill-pay.png" alt="Bill" />
-						</li>
-					</ul>
-				</div>
-			</div>
-		</div>
-		<ul class="list-unstyled shape-group-footer">
-			<li class="shape shape-1">
-				<img src="../assets/img/shapes/bubble-12.png" alt="amortree" />
-			</li>
-			<li class="shape shape-2">
-				<img src="../assets/img/shapes/bubble-16.png" alt="amortree" />
-			</li>
-			<li class="shape shape-3">
-				<img src="../assets/img/shapes/bubble-13.png" alt="amortree" />
-			</li>
-			<li class="shape shape-4">
-				<img src="../assets/img/shapes/bubble-14.png" alt="amortree" />
-			</li>
-			<li class="shape shape-5">
-				<img src="../assets/img/shapes/bubble-16.png" alt="amortree" />
-			</li>
-			<li class="shape shape-6">
-				<img src="../assets/img/shapes/bubble-15.png" alt="amortree" />
-			</li>
-			<li class="shape shape-7">
-				<img src="../assets/img/shapes/bubble-16.png" alt="amortree" />
-			</li>
-		</ul>
-	</div>
+  <div class="section call-to-action-area pb-0">
+    <div class="container-fluid">
+      <div class="call-to-action">
+        <div class="section-heading heading-light">
+          <span class="subtitle">Let's Work Together</span>
+          <h2 class="title">Need a successful project?</h2>
+          <!-- <a class="amor-btn btn-large btn-fill-white" href="estimate">Estimate Project</a> -->
+          <a
+            class="amor-btn btn-large btn-fill-white"
+            href="https://wa.me/917975859061/?text=I'm%20inquiring%20about%20the%20website%20service."
+            >Free Growth Audit</a
+          >
+        </div>
+        <div class="thumbnail">
+          <div class="larg-thumb">
+            <img
+              class="paralax-image"
+              src="../assets/img/chat-group.png"
+              alt="Chat"
+            />
+          </div>
+          <ul class="list-unstyled small-thumb">
+            <li class="shape shape-1">
+              <img
+                class="paralax-image"
+                src="../assets/img/amorboy/laptop-poses.png"
+                alt="Laptop"
+              />
+            </li>
+            <li class="shape shape-2">
+              <img
+                class="paralax-image"
+                src="../assets/img/amorboy/bill-pay.png"
+                alt="Bill"
+              />
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <ul class="list-unstyled shape-group-footer">
+      <li class="shape shape-1">
+        <img src="../assets/img/shapes/bubble-12.png" alt="amortree" />
+      </li>
+      <li class="shape shape-2">
+        <img src="../assets/img/shapes/bubble-16.png" alt="amortree" />
+      </li>
+      <li class="shape shape-3">
+        <img src="../assets/img/shapes/bubble-13.png" alt="amortree" />
+      </li>
+      <li class="shape shape-4">
+        <img src="../assets/img/shapes/bubble-14.png" alt="amortree" />
+      </li>
+      <li class="shape shape-5">
+        <img src="../assets/img/shapes/bubble-16.png" alt="amortree" />
+      </li>
+      <li class="shape shape-6">
+        <img src="../assets/img/shapes/bubble-15.png" alt="amortree" />
+      </li>
+      <li class="shape shape-7">
+        <img src="../assets/img/shapes/bubble-16.png" alt="amortree" />
+      </li>
+    </ul>
+  </div>
 
-	<div class="footer-area pb-lg-0 pb-5 mb-lg-0 mb-4" id="contact">
-		<div class="container-fluid">
-			<div class="footer-top d-md-none d-block pt-5">
-				<div class="footer-social-link">
-					<ul class="list-unstyled">
-						<li>
-							<a href="https://in.linkedin.com/company/amortree-tech" target="_blank">
-								<img src="../assets/img/icon/sm-l.png" alt="amortree linkedin" />
-							</a>
-						</li>
-						<li>
-							<a href="https://www.instagram.com/amortreetech/" target="_blank">
-								<img src="../assets/img/icon/sm-i.png" alt="amortree instagram" />
-							</a>
-						</li>
-						<li>
-							<a href="https://www.facebook.com/amortreetech/" target="_blank">
-								<img src="../assets/img/icon/sm-f.png" alt="amortree facebook" />
-							</a>
-						</li>
-						<li>
-							<a href="https://dribbble.com/amortreetech" target="_blank">
-								<img src="../assets/img/icon/sm-d.png" alt="amortree dribbble" />
-							</a>
-						</li>
-					</ul>
-				</div>
-			</div>
-			<div class="footer-main pt-md-5 pt-0">
-				<div class="row d-none">
-					<div class="col-xl-6 col-lg-5 sal-animate" data-sal="slide-right" data-sal-duration="800"
-						data-sal-delay="100">
-						<div class="footer-widget border-end d-none d-lg-block">
-							<div class="footer-newsletter">
-								<h2 class="title">Get in touch!</h2>
-								<p>
-									Subscribe now for the latest updates, insights, and exclusive
-									offers delivered straight to your inbox! Stay connected with
-									us.
-								</p>
-								<form @submit.prevent="handleSubscribe">
-									<div class="input-group">
-										<input type="email" class="form-control" placeholder="Email address"
-											v-model="subscribeEmail" />
-										<button class="subscribe-btn" type="submit" :disabled="submitting">
-											{{ submitting ? "Subscribing..." : "Subscribe" }}
-										</button>
-									</div>
-								</form>
-							</div>
-						</div>
-					</div>
-					<div class="col-xl-6 col-lg-7 sal-animate" data-sal="slide-left" data-sal-duration="800"
-						data-sal-delay="100">
-						<div class="row">
-							<div class="col-6">
-								<div class="footer-widget">
-									<h6 class="widget-title">What we do</h6>
-									<div class="footer-menu-link">
-										<ul class="list-unstyled">
-											<li><a href="/services#research">Research</a></li>
-											<li><a href="/services#branding">Branding</a></li>
-											<li><a href="/services#logoDesign">Logo Design</a></li>
-											<li><a href="/services#website">Website UI/UX</a></li>
-											<li>
-												<a href="/services#mobileAppUiUx">Mobile App UI/UX</a>
-											</li>
-											<li><a href="/services#devOps">DevOps</a></li>
-										</ul>
-									</div>
-								</div>
-							</div>
-							<div class="col-6">
-								<div class="footer-widget">
-									<h6 class="widget-title">Resourses &amp; Support</h6>
-									<div class="footer-menu-link">
-										<ul class="list-unstyled">
-											<!-- <li><a href="blog">Blog</a></li> -->
-											<li><a href="/portfolio">Portfolio</a></li>
-											<li><a href="/contact">Where to find</a></li>
-											<li><a href="/privacy">Privacy Policy</a></li>
-											<li><a href="/terms">Terms of Use</a></li>
-										</ul>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
+  <div class="footer-area pb-lg-0 pb-5 mb-lg-0 mb-4" id="contact">
+    <div class="container-fluid">
+      <div class="footer-top d-md-none d-block pt-5">
+        <div class="footer-social-link">
+          <ul class="list-unstyled">
+            <li>
+              <a
+                href="https://in.linkedin.com/company/amortree-tech"
+                target="_blank"
+              >
+                <img
+                  src="../assets/img/icon/sm-l.png"
+                  alt="amortree linkedin"
+                />
+              </a>
+            </li>
+            <li>
+              <a href="https://www.instagram.com/amortreetech/" target="_blank">
+                <img
+                  src="../assets/img/icon/sm-i.png"
+                  alt="amortree instagram"
+                />
+              </a>
+            </li>
+            <li>
+              <a href="https://www.facebook.com/amortreetech/" target="_blank">
+                <img
+                  src="../assets/img/icon/sm-f.png"
+                  alt="amortree facebook"
+                />
+              </a>
+            </li>
+            <li>
+              <a href="https://dribbble.com/amortreetech" target="_blank">
+                <img
+                  src="../assets/img/icon/sm-d.png"
+                  alt="amortree dribbble"
+                />
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-main pt-md-5 pt-0">
+        <div class="row d-none">
+          <div
+            class="col-xl-6 col-lg-5 sal-animate"
+            data-sal="slide-right"
+            data-sal-duration="800"
+            data-sal-delay="100"
+          >
+            <div class="footer-widget border-end d-none d-lg-block">
+              <div class="footer-newsletter">
+                <h2 class="title">Get in touch!</h2>
+                <p>
+                  Subscribe now for the latest updates, insights, and exclusive
+                  offers delivered straight to your inbox! Stay connected with
+                  us.
+                </p>
+                <form @submit.prevent="handleSubscribe">
+                  <div class="input-group">
+                    <input
+                      type="email"
+                      class="form-control"
+                      placeholder="Email address"
+                      v-model="subscribeEmail"
+                    />
+                    <button
+                      class="subscribe-btn"
+                      type="submit"
+                      :disabled="submitting"
+                    >
+                      {{ submitting ? "Subscribing..." : "Subscribe" }}
+                    </button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+          <div
+            class="col-xl-6 col-lg-7 sal-animate"
+            data-sal="slide-left"
+            data-sal-duration="800"
+            data-sal-delay="100"
+          >
+            <div class="row">
+              <div class="col-6">
+                <div class="footer-widget">
+                  <h6 class="widget-title">What we do</h6>
+                  <div class="footer-menu-link">
+                    <ul class="list-unstyled">
+                      <li><a href="/services#research">Research</a></li>
+                      <li><a href="/services#branding">Branding</a></li>
+                      <li><a href="/services#logoDesign">Logo Design</a></li>
+                      <li><a href="/services#website">Website UI/UX</a></li>
+                      <li>
+                        <a href="/services#mobileAppUiUx">Mobile App UI/UX</a>
+                      </li>
+                      <li><a href="/services#devOps">DevOps</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="col-6">
+                <div class="footer-widget">
+                  <h6 class="widget-title">Resourses &amp; Support</h6>
+                  <div class="footer-menu-link">
+                    <ul class="list-unstyled">
+                      <!-- <li><a href="blog">Blog</a></li> -->
+                      <li><a href="/portfolio">Portfolio</a></li>
+                      <li><a href="/contact">Where to find</a></li>
+                      <li><a href="/privacy">Privacy Policy</a></li>
+                      <li><a href="/terms">Terms of Use</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
 
-				<div class="row">
-					<div class="col-xl-6 col-lg-6">
-						<div class="contact-info mb--50">
-							<h3 class="title">Phone</h3>
-							<p>
-								Reach out for any queries; our experts are here to assist and
-								resolve your concerns promptly.
-							</p>
-							<h4 class="phone-number">
-								<a href="tel:+919916846647">+91 99168 46647</a>
-							</h4>
-						</div>
-					</div>
-					<div class="col-xl-6 col-lg-6">
-						<div class="contact-info mb--50">
-							<h3 class="title">Email</h3>
-							<p>
-								Our support team will get back to you in 24-h during standard
-								business days (Mon-Sat).
-							</p>
-							<h4 class="phone-number">
-								<a href="mailto:hi@amortree.com">hi@amortree.com</a>
-							</h4>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="footer-bottom">
-				<div class="row">
-					<div class="col-md-6 order-2 order-md-1">
-						<div class="footer-copyright">
-							<span class="copyright-text">Copyright © 2025. amortree Tech. All rights reserved.
-							</span>
-						</div>
-					</div>
-					<div class="col-md-6 order-1 order-md-2">
-						<div class="footer-bottom-link">
-							<ul class="list-unstyled">
-								<li><a href="/privacy">Privacy Policy</a></li>
-								<li><a href="/terms">Terms of Use</a></li>
-							</ul>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
+        <div class="row">
+          <div class="col-xl-6 col-lg-6">
+            <div class="contact-info mb--50">
+              <h3 class="title">Phone</h3>
+              <p>
+                Reach out for any queries; our experts are here to assist and
+                resolve your concerns promptly.
+              </p>
+              <h4 class="phone-number">
+                <a href="tel:+919916846647">+91 99168 46647</a>
+              </h4>
+            </div>
+          </div>
+          <div class="col-xl-6 col-lg-6">
+            <div class="contact-info mb--50">
+              <h3 class="title">Email</h3>
+              <p>
+                Our support team will get back to you in 24-h during standard
+                business days (Mon-Sat).
+              </p>
+              <h4 class="phone-number">
+                <a href="mailto:hi@amortree.com">hi@amortree.com</a>
+              </h4>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div class="row">
+          <div class="col-md-6 order-2 order-md-1">
+            <div class="footer-copyright">
+              <span class="copyright-text"
+                >Copyright © 2025. amortree Tech. All rights reserved.
+              </span>
+            </div>
+          </div>
+          <div class="col-md-6 order-1 order-md-2">
+            <div class="footer-bottom-link">
+              <ul class="list-unstyled">
+                <li><a href="/privacy">Privacy Policy</a></li>
+                <li><a href="/terms">Terms of Use</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 
-	<ul class="mobilemenu mainmenu d-lg-none d-flex">
-		<li>
-			<a href="/" aria-label="home">
-				<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" height="800px" width="800px" version="1.1" id="Layer_1" viewBox="0 0 512 512" xml:space="preserve">
-					<path style="fill:#FFDB6F;" d="M503.999,108.561L280,234.72c-14.606,8.21-32.435,8.21-47.04,0L8,108.561  c-4.97-2.869-8.023-8.181-8-13.92l0,0C0,82.137,10.136,72,22.64,72h466.72C501.863,72,512,82.136,512,94.64l0,0l0,0  C512.022,100.379,508.97,105.691,503.999,108.561z"/>
-					<path style="fill:#FFCB5B;" d="M503.999,108.561L280,234.72c-14.606,8.21-32.435,8.21-47.04,0L8,108.561  c-4.97-2.869-8.023-8.181-8-13.92v322.72C0,429.863,10.136,440,22.64,440l0,0h466.72c12.503,0,22.64-10.136,22.64-22.64l0,0V96.001  c0,0,0-0.48,0-0.8C511.826,100.739,508.8,105.792,503.999,108.561z"/>
-					<path style="fill:#F7B84E;" d="M511.999,95.201c-0.173,5.538-3.2,10.592-8,13.36L280,234.72c-14.606,8.21-32.435,8.21-47.04,0  l-11.52-6.48l0,0L8,108.561c-1.196-0.682-2.298-1.516-3.279-2.48c-0.817-0.825-1.541-1.737-2.16-2.72v-0.4  c-1.466-2.416-2.266-5.175-2.32-8H0v1.04v16c-0.011,5.528,2.832,10.67,7.52,13.6l205.44,128c0.669,2.875-0.176,5.891-2.24,8  c-3.5,3.372-3.602,8.944-0.229,12.443c1.152,1.195,2.618,2.04,4.229,2.437c4.727,1.13,7.642,5.879,6.512,10.605  c-0.074,0.31-0.165,0.615-0.272,0.914c-1.462,4.635,1.109,9.578,5.744,11.04c1.724,0.544,3.573,0.544,5.295,0  c4.672-1.339,9.545,1.364,10.884,6.035c0.027,0.094,0.052,0.189,0.076,0.285c1.202,4.709,5.994,7.552,10.703,6.35  c0.883-0.225,1.725-0.586,2.497-1.071v48.8c0,26.819-21.741,48.56-48.56,48.56c-0.053,0-0.106,0-0.161,0H72.001  c-17.674,0-32,14.327-32,32H489.36c12.503,0,22.64-10.136,22.64-22.64l0,0V96.001C511.999,96.001,511.999,95.521,511.999,95.201  L511.999,95.201z"/>
-					<path style="fill:#F19920;" d="M279.52,234.8c-14.606,8.21-32.435,8.21-47.04,0l-224-125.84c0.827,0.782,1.71,1.504,2.64,2.16  l219.36,136c15.507,9.629,35.133,9.629,50.639,0l219.36-136c0.93-0.656,1.812-1.378,2.64-2.16L279.52,234.8z"/>
-					<g>
-						<path style="fill:#FFE278;" d="M211.92,177.041L148.88,142c-7.733-4.276-10.535-14.011-6.259-21.744   c2.862-5.176,8.346-8.351,14.259-8.256H160c4.418,0,8-3.582,8-8c0-4.418-3.582-8-8-8H64.001c-2.869-0.011-5.525,1.515-6.96,4   c-2.143,3.864-0.749,8.733,3.114,10.877c0.002,0.001,0.004,0.002,0.006,0.003l144,80c3.543,2.639,8.556,1.905,11.194-1.639   c2.639-3.543,1.905-8.556-1.639-11.194C213.162,177.635,212.559,177.297,211.92,177.041z"/>
-						<path style="fill:#FFE278;" d="M192,96.001h48c4.418,0,8,3.582,8,8l0,0c0,4.418-3.582,8-8,8h-48c-4.418,0-8-3.582-8-8l0,0   C184,99.582,187.582,96.001,192,96.001z"/>
-					</g>
-					<path style="fill:#EE2C39;" d="M280,264.001h-48c-4.418,0-8,3.582-8,8v80c0.023,4.418,3.623,7.981,8.041,7.958  c1.551-0.008,3.065-0.466,4.358-1.319l19.6-13.04l19.6,13.04c3.69,2.43,8.651,1.409,11.081-2.281  c0.852-1.295,1.311-2.809,1.319-4.358v-80C288,267.582,284.418,264.001,280,264.001z"/>
-					<path style="fill:#CC202C;" d="M256,296c-11.82-0.027-23.214-4.414-32-12.32l0,0c-0.216,11.895,7.392,22.525,18.72,26.16l1.68,0.48  c6.879,1.677,11.689,7.88,11.6,14.96v20.32l19.6,13.04c3.69,2.43,8.651,1.409,11.081-2.281c0.852-1.295,1.311-2.809,1.319-4.358  v-68.32C279.214,291.587,267.82,295.973,256,296z"/>
-					<circle style="fill:#C97629;" cx="256.004" cy="239.999" r="56"/>
-					<circle style="fill:#A35425;" cx="256.004" cy="239.999" r="23.999"/>
-					<path style="fill:#DA8C36;" d="M288,232.001c4.418,0,8,3.582,8,8c0,22.091-17.908,40-40,40c-4.418,0-8-3.582-8-8s3.582-8,8-8  c13.255,0,24-10.745,24-24C280,235.582,283.582,232.001,288,232.001z"/>
-					<path style="fill:#B06328;" d="M224,248.001c-4.418,0-8-3.582-8-8c0-22.091,17.908-40,40-40c4.418,0,8,3.582,8,8  c0,4.418-3.582,8-8,8c-13.255,0-24,10.745-24,24C232,244.419,228.418,248.001,224,248.001z"/>
-				</svg>
-				<span class="text-white">Home</span>
-			</a>
-		</li>
-		<li>
-			<a href="/services" aria-label="what we do">
-				<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" height="800px" width="800px" version="1.1" id="Layer_1" viewBox="0 0 512.001 512.001" xml:space="preserve">
-					<path style="fill:#B06328;" d="M504,154.241L280,30c-14.637-8.087-32.403-8.087-47.04,0L8,154.241c-4.921,2.841-7.966,8.078-8,13.76  l0,0c0.437,5.248,3.429,9.945,8,12.56l224,126.16c14.606,8.21,32.435,8.21,47.04,0l224.96-126.16c4.571-2.615,7.563-7.312,8-12.56  l0,0C511.966,162.319,508.921,157.081,504,154.241z"/>
-					<path style="fill:#A35425;" d="M462.641,162.721l5.28-28.4L440,118.961V200l-171.44,74.4c-8.139,3.539-17.381,3.539-25.52,0  L0,168.64c0.634,5.014,3.601,9.433,8,11.92L232,306.8c14.606,8.21,32.435,8.21,47.04,0l160.96-90.8l0,0l13.84-8l0,0l50.16-27.44  c4.399-2.486,7.366-6.906,8-11.92l-27.2,11.68c-8.091,3.554-17.53-0.124-21.083-8.215  C462.422,169.157,462.046,165.887,462.641,162.721z"/>
-					<path style="fill:#FFCB5B;" d="M512,168.001c-0.437,5.248-3.429,9.945-8,12.56L280,306.721c-14.606,8.21-32.435,8.21-47.04,0  L8,180.56c-4.571-2.615-7.563-7.312-8-12.56l0,0v321.36c0,12.503,10.136,22.64,22.64,22.64l0,0h466.721  c12.503,0,22.64-10.136,22.64-22.64l0,0L512,168.001L512,168.001z"/>
-					<path style="fill:#E9E9E9;" d="M360,0.001H96C82.745,0.001,72,10.746,72,24v192.48l160,90.32c14.606,8.21,32.435,8.21,47.04,0  l160.96-90.32V80L360,0.001z"/>
-					<path style="fill:#595A66;" d="M199.84,64h112c4.418,0,8,3.582,8,8l0,0c0,4.418-3.582,8-8,8h-112c-4.418,0-8-3.582-8-8l0,0  C191.84,67.582,195.422,64,199.84,64z"/>
-					<path style="fill:#CAD1D8;" d="M384,80.001h56L360,0.001v56C360,69.256,370.745,80.001,384,80.001z"/>
-					<polygon style="fill:#DDDDDC;" points="439.841,80.001 383.84,80.001 439.841,136.001 "/>
-					<path style="fill:#DBDAD9;" d="M270.48,295.521c-0.612,0.309-1.256,0.55-1.92,0.72c-6.368,1.277-12.566-2.85-13.843-9.218  c-0.913-4.552,0.937-9.216,4.724-11.902c24.35-19.203,37.863-49.032,36.24-80.001c-4.093-52.861-50.265-92.394-103.126-88.301  C143.529,110.616,105.298,150.845,104,200c0.031,8.995,1.351,17.94,3.92,26.56L72.001,208v8.48l82.96,46.64l56.96,32l0,0L232,306.8  c14.606,8.21,32.435,8.21,47.04,0l160.96-90.32V208L270.48,295.521z"/>
-					<path style="fill:#F7B84E;" d="M512,168.001c-0.437,5.248-3.429,9.945-8,12.56L280,306.721c-14.606,8.21-32.435,8.21-47.04,0  L8,180.56c-1.167-0.657-2.242-1.465-3.2-2.4c-0.537-0.68-1.019-1.402-1.44-2.16l-0.8-1.04c-0.553-0.938-1.009-1.929-1.36-2.96v-0.48  c-0.498-0.944-0.899-1.936-1.2-2.96v-0.56l0,0c0,0,0-0.48,0-0.8c0-0.32,0,0.8,0,0.8v16c-0.011,5.528,2.832,10.67,7.52,13.6  L112,263.039v0.96l-67.28,68.72c-6.252,6.252-6.252,16.388,0,22.64c6.252,6.252,16.388,6.252,22.64,0l42.48-41.6l0,0l4-3.6  c18.4-16.004,45.105-18.084,65.76-5.12l51.04,32l2.56,1.6c14.228,8.776,22.865,24.323,22.8,41.04v51.76  c0,26.819-21.741,48.56-48.56,48.56H72c-17.674,0-32,14.327-32,32h449.36c12.503,0,22.64-10.136,22.64-22.64l0,0L512,168.001  L512,168.001z"/>
-					<path style="fill:#8D99A0;" d="M248.001,176.001h44.88c-1.436-5.496-3.363-10.851-5.76-16h-39.12c-4.418,0-8,3.582-8,8  S243.582,176.001,248.001,176.001z"/>
-					<g>
-						<path style="fill:#6F707E;" d="M143.841,120.001h112c4.418,0,8,3.582,8,8l0,0c0,4.418-3.582,8-8,8h-112c-4.418,0-8-3.582-8-8l0,0   C135.841,123.582,139.422,120.001,143.841,120.001z"/>
-						<path style="fill:#6F707E;" d="M143.841,200h168c4.418,0,8,3.582,8,8l0,0c0,4.418-3.582,8-8,8h-168c-4.418,0-8-3.582-8-8l0,0   C135.841,203.582,139.422,200,143.841,200z"/>
-						<path style="fill:#6F707E;" d="M143.841,160.001h72c4.418,0,8,3.582,8,8l0,0c0,4.418-3.582,8-8,8h-72c-4.418,0-8-3.582-8-8l0,0   C135.841,163.583,139.422,160.001,143.841,160.001z"/>
-						<path style="fill:#6F707E;" d="M327.84,160.001h56c4.418,0,8,3.582,8,8l0,0c0,4.418-3.582,8-8,8h-56c-4.418,0-8-3.582-8-8l0,0   C319.841,163.583,323.422,160.001,327.84,160.001z"/>
-						<path style="fill:#6F707E;" d="M247.84,160.001h48c4.418,0,8,3.582,8,8l0,0c0,4.418-3.582,8-8,8h-48c-4.418,0-8-3.582-8-8l0,0   C239.84,163.583,243.422,160.001,247.84,160.001z"/>
-						<path style="fill:#6F707E;" d="M343.84,200h40c4.418,0,8,3.582,8,8l0,0c0,4.418-3.582,8-8,8h-40c-4.418,0-8-3.582-8-8l0,0   C335.84,203.582,339.422,200,343.84,200z"/>
-						<path style="fill:#6F707E;" d="M287.841,120.001h96c4.418,0,8,3.582,8,8l0,0c0,4.418-3.582,8-8,8h-96c-4.418,0-8-3.582-8-8l0,0   C279.84,123.582,283.422,120.001,287.841,120.001z"/>
-					</g>
-					<path style="fill:#595A66;" d="M296,200H144c-4.418,0-8,3.582-8,8s3.582,8,8,8h150.401C295.378,210.722,295.914,205.369,296,200z"/>
-					<path style="fill:#2D4961;" d="M110.64,224L110.64,224c1.119,2.618,0.848,5.623-0.72,8c-2.704,5.035-4.695,10.419-5.92,16  l-67.52,68.72c-6.252,6.252-6.252,16.388,0,22.64c6.252,6.252,16.388,6.252,22.64,0L127.999,272c5.35-1.388,10.489-3.486,15.28-6.24  c2.377-1.568,5.382-1.839,8-0.72l0,0C133.095,256.898,118.603,242.264,110.64,224z"/>
-					<path style="fill:#123247;" d="M112,227.44c8.292,16.809,22.222,30.173,39.36,37.76l0,0c-2.618-1.119-5.623-0.848-8,0.72  c-4.825,2.705-9.991,4.75-15.36,6.08c0,0-21.52,21.28-26.24,25.76L112,227.44z"/>
-					<path style="fill:#953F27;" d="M104,248.001l-67.52,68.72c-6.252,6.252-6.252,16.388,0,22.64s16.388,6.252,22.64,0L128,272.001  L104,248.001z"/>
-					<path style="fill:#81301C;" d="M59.121,339.281l68.88-67.28l-12.48-12.48L48,328.001c-3.49,2.761-4.082,7.83-1.32,11.32  c2.761,3.49,7.83,4.082,11.32,1.32L59.121,339.281z"/>
-					<circle style="fill:#2D4961;" cx="191.844" cy="183.998" r="95.995"/>
-					<circle style="fill:#CDE3EA;" cx="191.844" cy="183.998" r="64.004"/>
-					<path style="fill:#44637F;" d="M192,264.001c-4.418,0-8-3.582-8-8c0-4.418,3.582-8,8-8c35.346,0,64-28.654,64-64  c0-4.418,3.582-8,8-8c4.418,0,8,3.582,8,8C272,228.183,236.183,264.001,192,264.001z"/>
-					<path style="fill:#123247;" d="M192,104.001c4.418,0,8,3.582,8,8s-3.582,8-8,8c-35.346,0-64,28.654-64,64c0,4.418-3.582,8-8,8  s-8-3.582-8-8C112,139.818,147.817,104.001,192,104.001z"/>
-					<path style="fill:#F5F6F6;" d="M232.001,184c4.418,0,8-3.582,8-8c0-22.091-17.908-40-40-40c-4.418,0-8,3.582-8,8  c0,4.418,3.582,8,8,8c13.255,0,24,10.745,24,24C224,180.419,227.582,184,232.001,184z"/>
-					<g>
-						<path style="fill:#6F707E;" d="M171.84,176.001h83.44c-1.031-8.456-3.751-16.618-8-24h-75.44c-6.565,0.088-11.841,5.434-11.84,12   l0,0C159.999,170.566,165.276,175.913,171.84,176.001z"/>
-						<path style="fill:#6F707E;" d="M160,212.001L160,212.001c0,6.628,5.373,12,12,12h69.92c5.651-7.062,9.74-15.242,12-24h-82.08   C165.276,200.088,159.999,205.436,160,212.001z"/>
-					</g>
-					<path style="fill:#CECECE;" d="M200,152.001c13.255,0,24,10.745,24,24h16c0-8.655-2.807-17.076-8-24L200,152.001L200,152.001z"/>
-				</svg>
-				<span class="text-lb">Services</span>
-			</a>
-		</li>
-		<li>
-			<a href="/portfolio" aria-label="What we done">
-				<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" viewBox="0 0 512 512" xml:space="preserve">
-					<path style="fill:#B06328;" d="M503.998,142.113L279.999,17.874c-14.637-8.087-32.402-8.087-47.04,0L8,142.113  c-4.921,2.841-7.965,8.078-8,13.76l0,0c0.437,5.248,3.429,9.945,8,12.56l223.999,126.159c14.606,8.21,32.435,8.21,47.04,0  l224.959-126.159c4.571-2.615,7.563-7.312,8-12.56l0,0C511.963,150.192,508.919,144.955,503.998,142.113z"/>
-					<path style="fill:#A35425;" d="M423.999,182.514v-84.56l-24-13.28v120.48l-131.2,57.12c-8.139,3.539-17.381,3.539-25.52,0L0,156.514  c0.634,5.014,3.601,9.433,8,11.92l223.999,126.159c14.606,8.21,32.435,8.21,47.04,0l224.959-126.159  c4.399-2.486,7.366-6.906,8-11.92l-76.8,33.36c-4.05,1.768-8.765-0.082-10.532-4.132  C424.222,184.724,423.995,183.624,423.999,182.514z"/>
-					<path style="fill:#3689C9;" d="M360.367,80.576l54.749,150.34c3.779,10.379-1.57,21.857-11.949,25.636l-225.511,82.124  c-10.379,3.779-21.857-1.57-25.636-11.949L97.271,176.388c-3.779-10.379,1.57-21.857,11.949-25.636l225.511-82.124  C345.11,64.848,356.587,70.198,360.367,80.576z"/>
-					<path style="fill:#1470B8;" d="M415.039,230.913l-15.04-41.36l0,0L359.998,80.593c-0.635-1.682-1.496-3.27-2.56-4.72h-42.639  L120,146.752v92.24l12.96,35.599c2.244,0.878,4.631,1.338,7.04,1.36h135.439c4.418,0.005,7.996,3.591,7.991,8.009  c-0.004,3.362-2.11,6.364-5.27,7.511l-94.56,34.4c-5.19,1.879-7.876,7.609-6,12.8l225.519-82.16  C413.467,252.721,418.797,241.273,415.039,230.913z M399.999,246.913v-28.08l5.68,15.52c1.851,5.056-0.67,10.667-5.68,12.64V246.913  z"/>
-					<path style="fill:#4C9CD6;" d="M399.999,63.873v159.999c0,11.046-8.955,20-20,20h-240c-11.046,0-20-8.955-20-20V63.873  c0-11.046,8.955-20,20-20h240C391.044,43.874,399.999,52.828,399.999,63.873z"/>
-					<rect x="139.996" y="63.879" style="fill:#ABE1FA;" width="239.998" height="159.998"/>
-					<circle style="fill:#F19F35;" cx="189.997" cy="103.873" r="20.002"/>
-					<path style="fill:#595A66;" d="M379.999,203.874l-72.959-72.96c-3.9-3.91-10.232-3.918-14.143-0.018  c-0.006,0.006-0.011,0.011-0.018,0.018L200,223.873h180v-19.999H379.999z"/>
-					<path style="fill:#35363E;" d="M339.999,173.873L339.999,173.873c-2.761,2.737-2.781,7.194-0.044,9.956  c0.015,0.015,0.029,0.029,0.044,0.044l5.84,5.84c9.092,9.038,14.192,21.339,14.16,34.16h20v-20L350,173.873  c-2.737-2.761-7.194-2.781-9.956-0.044C340.028,173.844,340.014,173.858,339.999,173.873z"/>
-					<path style="fill:#595A66;" d="M139.999,223.873h130l-62.48-71.36c-3.64-4.153-9.958-4.569-14.111-0.929  c-0.33,0.289-0.64,0.599-0.929,0.929l-52.48,51.359L139.999,223.873L139.999,223.873z"/>
-					<path style="fill:#35363E;" d="M262.08,191.873c-6.02-6.823-15.898-8.7-24-4.56l32,36.48h20L262.08,191.873z"/>
-					<g>
-						<path style="fill:#6F707E;" d="M291.558,144.173l2.206,2.206c1.344,1.344,1.344,3.522,0,4.864l-16.348,16.348   c-1.343,1.343-3.522,1.344-4.864,0l-2.206-2.206c-1.344-1.344-1.344-3.522,0-4.864l16.348-16.348   C288.037,142.829,290.214,142.829,291.558,144.173z"/>
-						<path style="fill:#6F707E;" d="M197.456,160.105l2.206,2.206c1.343,1.343,1.343,3.522,0,4.864l-16.348,16.348   c-1.343,1.343-3.522,1.343-4.864,0l-2.206-2.206c-1.343-1.343-1.343-3.522,0-4.864l16.348-16.348   C193.935,158.762,196.113,158.762,197.456,160.105z"/>
-					</g>
-					<g>
-						<path style="fill:#3689C9;" d="M389.999,73.874v149.999c0,5.523-4.477,10-10,10H149.999c-5.523,0-10,4.477-10,10h240   c11.046,0,20-8.955,20-20V63.873C394.476,63.873,389.999,68.351,389.999,73.874z"/>
-						<path style="fill:#3689C9;" d="M139.999,53.873c-5.523,0-10,4.477-10,10v149.999c0,5.523,4.477,10,10,10V63.873h240   c0-5.523-4.477-10-10-10H139.999z"/>
-					</g>
-					<path style="fill:#FFFFFF;" d="M325.039,103.873h-25.04c-2.761-0.35-4.716-2.873-4.367-5.633c0.289-2.281,2.086-4.077,4.367-4.367  h5.04c2.761-0.35,4.716-2.873,4.367-5.633c-0.289-2.281-2.085-4.077-4.367-4.367h-60c-2.761,0-5,2.238-5,5c0,2.761,2.238,5,5,5  h25.04c2.761,0,5,2.238,5,5c0,2.762-2.238,5-5,5h-5.04c-2.761,0-5,2.238-5,5c0,2.761,2.238,5,5,5h60  c2.762-0.35,4.716-2.873,4.367-5.633C329.116,105.959,327.319,104.162,325.039,103.873z"/>
-					<path style="fill:#FFCB5B;" d="M511.998,155.873c-0.437,5.248-3.429,9.945-8,12.56l-223.999,126.16  c-14.606,8.21-32.435,8.21-47.04,0L8,168.434c-4.571-2.615-7.563-7.312-8-12.56l0,0v321.358c0,12.503,10.136,22.64,22.64,22.64l0,0  h466.719c12.503,0,22.64-10.136,22.64-22.64l0,0V155.873H511.998z"/>
-					<g>
-						<path style="fill:#F7B84E;" d="M0,155.074c0,0,0,0.48,0,0.8c0,0.32,0-0.48,0-0.72l0,0V155.074z"/>
-						<path style="fill:#F7B84E;" d="M511.998,155.873c-0.437,5.248-3.429,9.945-8,12.56l-223.999,126.16   c-14.606,8.21-32.435,8.21-47.04,0L8,168.434c-1.167-0.657-2.242-1.465-3.2-2.4c-0.586-0.623-1.121-1.292-1.6-2l-0.8-1.04   c-0.508-0.995-0.91-2.041-1.2-3.12v-0.48c-0.498-0.944-0.899-1.936-1.2-2.96c0,0,0,0,0-0.56l0,0v16   c-0.011,5.528,2.832,10.67,7.52,13.6l223.039,139.359l2.56,1.6c14.382,8.831,23.068,24.565,22.88,41.44v51.76   c0,26.819-21.741,48.56-48.56,48.56H71.999c-17.673,0-32,14.327-32,32h449.358c12.503,0.001,22.641-10.134,22.642-22.638   c0-0.107-0.001-0.215-0.002-0.322L511.998,155.873L511.998,155.873z"/>
-					</g>
-				</svg>
-				<span class="text-lg">Portfolio</span>
-			</a>
-		</li>
-		<li>
-			<a href="/about" aria-label="who we are">
-				<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" height="800px" width="800px" version="1.1" id="Layer_1" viewBox="0 0 512.001 512.001" xml:space="preserve">
-					<path style="fill:#B06328;" d="M504,154.241L280,30c-14.637-8.087-32.403-8.087-47.04,0L8,154.241c-4.921,2.841-7.966,8.078-8,13.76  l0,0c0.437,5.248,3.429,9.945,8,12.56l224,126.16c14.606,8.21,32.435,8.21,47.04,0l224.96-126.16c4.571-2.615,7.563-7.312,8-12.56  l0,0C511.966,162.319,508.921,157.081,504,154.241z"/>
-					<path style="fill:#A35425;" d="M462.48,162.88l5.36-28.56L440,118.961V200l-171.2,74.4c-8.139,3.539-17.381,3.539-25.52,0L0,168.64  c0.634,5.014,3.601,9.433,8,11.92l224,126.16c14.606,8.21,32.435,8.21,47.04,0l160.96-90.24l0,0l7.52-4.24l56-32  c4.399-2.486,7.366-6.906,8-11.92l-27.12,11.76c-8.169,3.37-17.522-0.52-20.893-8.689  C462.397,168.702,462.042,165.758,462.48,162.88z"/>
-					<path style="fill:#FFCB5B;" d="M512,168.001c-0.437,5.248-3.429,9.945-8,12.56L280,306.721c-14.606,8.21-32.435,8.21-47.04,0  L8,180.56c-4.571-2.615-7.563-7.312-8-12.56l0,0v321.36c0,12.503,10.136,22.64,22.64,22.64l0,0h466.721  c12.503,0,22.64-10.136,22.64-22.64l0,0L512,168.001L512,168.001z"/>
-					<g>
-						<path style="fill:#F7B84E;" d="M0,167.2v0.8c0,0,0-0.48,0-0.72l0,0V167.2z"/>
-						<path style="fill:#F7B84E;" d="M512,168.001c-0.437,5.248-3.429,9.945-8,12.56L280,306.721c-14.606,8.21-32.435,8.21-47.04,0   L8,180.56c-1.167-0.657-2.242-1.465-3.2-2.4c-0.537-0.68-1.019-1.402-1.44-2.16l-0.8-1.04c-0.553-0.938-1.009-1.929-1.36-2.96   v-0.48c-0.498-0.944-0.899-1.936-1.2-2.96v-0.56l0,0v16c-0.011,5.528,2.832,10.67,7.52,13.6l223.04,139.36l2.56,1.6   c14.283,8.772,22.956,24.359,22.88,41.12v51.76c0,26.819-21.741,48.56-48.56,48.56H72c-17.674,0-32,14.327-32,32h449.36   c12.503,0,22.64-10.136,22.64-22.64l0,0L512,168.001L512,168.001z"/>
-					</g>
-					<path style="fill:#E9E9E9;" d="M360,0.001H96C82.745,0.001,72,10.746,72,24v192.48l160.48,90.32c14.606,8.21,32.435,8.21,47.04,0  l160.48-90.32V80L360,0.001z"/>
-					<path style="fill:#DBDAD9;" d="M241.28,295.521L72,208v8.48l160.48,90.32c14.606,8.21,32.435,8.21,47.04,0l160.48-90.32V208  l-169.28,87.521C261.489,300.303,250.511,300.303,241.28,295.521z"/>
-					<path style="fill:#CAD1D8;" d="M384,80.001h56L360,0.001v56C360,69.256,370.745,80.001,384,80.001z"/>
-					<polygon style="fill:#DDDDDC;" points="440,80.001 384,80.001 440,136.001 "/>
-					<path style="fill:#DBDAD9;" d="M264.001,252.001c-3.906,0.089-7.693-1.346-10.559-4.001l-68.64-67.68  c-22.091-21.645-22.453-57.1-0.809-79.192c0.267-0.272,0.536-0.542,0.809-0.809c10.843-10.637,25.45-16.56,40.64-16.48  c14.4,0,28,12.64,38.56,22.08c10.56-9.44,24-22.08,38.56-22.08c15.164-0.068,29.741,5.855,40.56,16.48  c22.091,21.645,22.453,57.1,0.809,79.192c-0.267,0.272-0.536,0.542-0.809,0.809L274.561,248  C271.694,250.655,267.906,252.089,264.001,252.001z"/>
-					<path style="fill:#EE2C39;" d="M256.001,236.001c-3.906,0.089-7.693-1.346-10.559-4l-68.64-67.68  c-22.091-21.645-22.453-57.1-0.809-79.192c0.267-0.272,0.536-0.542,0.809-0.809c10.869-10.578,25.473-16.443,40.64-16.32  c14.4,0,28,12.64,38.56,22.08c10.561-9.44,24-22.08,38.56-22.08c15.164-0.068,29.741,5.855,40.56,16.48  c22.091,21.645,22.453,57.1,0.809,79.192c-0.267,0.272-0.536,0.542-0.809,0.809L266.561,232  C263.694,234.655,259.906,236.089,256.001,236.001z"/>
-					<path style="fill:#CC202C;" d="M228.48,215.04L245.44,232c5.901,5.741,15.3,5.741,21.2,0l68.56-67.361  c22.091-21.645,22.453-57.1,0.809-79.192c-0.267-0.272-0.536-0.542-0.809-0.809c-2.56-2.071-5.625-3.425-8.88-3.92  c-36.4-8-70.32,22.48-70.32,60.56v45.92c0.177,15.286-12.071,27.822-27.358,27.999c-0.027,0-0.055,0.001-0.082,0.001l0,0  L228.48,215.04z"/>
-					<path style="fill:#F15B55;" d="M184,136.001c-4.418,0-8-3.582-8-8c0-22.091,17.908-40,40-40c4.418,0,8,3.582,8,8s-3.582,8-8,8  c-13.255,0-24,10.745-24,24C192,132.419,188.419,136.001,184,136.001z"/>
-				</svg>
-				<span class="text-lr">About</span>
-			</a>
-		</li>
-		<li>
-			<a href="/contact" aria-label="where to find">
-				<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" viewBox="0 0 512 512" xml:space="preserve">
-					<path style="fill:#FFCB5B;" d="M22.64,72H488c13.255,0,24,10.745,24,24V417.36c0,12.503-10.136,22.64-22.64,22.64l0,0H22.64  C10.136,440,0,429.864,0,417.36l0,0V94.64C0,82.136,10.136,72,22.64,72z"/>
-					<path style="fill:#F7B84E;" d="M488,176v44.64c-0.278,19.012-15.324,34.516-34.32,35.36c-1.397,0.101-2.786,0.288-4.16,0.56  c-15.214,3.49-25.877,17.196-25.52,32.8V384c0,17.674-14.327,32-32,32H56c-13.255,0-24,10.745-24,24h456c13.255,0,24-10.745,24-24  V152C498.745,152,488,162.745,488,176z"/>
-					<path style="fill:#FFDB6F;" d="M24,72C10.745,72,0,82.745,0,96V216c13.255,0,24-10.745,24-24v-2.96  c0.364-10.434,7.962-19.199,18.24-21.04h0.48c7.761-1.338,13.394-8.125,13.28-16v-32c0-13.255,10.745-24,24-24H168  c13.255,0,24-10.745,24-24H24V72z"/>
-					<g>
-						<path style="fill:#B06328;" d="M64,344h112c4.418,0,8,3.582,8,8l0,0c0,4.418-3.582,8-8,8H64c-4.418,0-8-3.582-8-8l0,0   C56,347.582,59.582,344,64,344z"/>
-						<path style="fill:#B06328;" d="M64,304h72c4.418,0,8,3.582,8,8l0,0c0,4.418-3.582,8-8,8H64c-4.418,0-8-3.582-8-8l0,0   C56,307.582,59.582,304,64,304z"/>
-						<path style="fill:#B06328;" d="M168,304h48c4.418,0,8,3.582,8,8l0,0c0,4.418-3.582,8-8,8h-48c-4.418,0-8-3.582-8-8l0,0   C160,307.582,163.582,304,168,304z"/>
-					</g>
-					<g>
-						<path style="fill:#E78825;" d="M290.961,153.84c-11.295,8.335-26.704,8.335-38,0c-17.148-13.001-40.852-13.001-58,0   c-3.533,2.653-4.245,7.669-1.591,11.201c2.653,3.533,7.669,4.245,11.201,1.591c0.134-0.1,0.263-0.204,0.39-0.312   c11.295-8.335,26.704-8.335,37.999,0c17.148,13.001,40.852,13.001,58,0c3.532-2.653,4.245-7.669,1.591-11.201   c-2.653-3.532-7.669-4.245-11.201-1.591C291.217,153.628,291.087,153.732,290.961,153.84z"/>
-						<path style="fill:#E78825;" d="M205.041,134.32c11.295-8.335,26.704-8.335,38,0c17.148,13.001,40.852,13.001,58,0   c3.532-2.653,4.245-7.669,1.591-11.201c-2.653-3.533-7.669-4.245-11.201-1.591c-0.134,0.1-0.263,0.205-0.39,0.312   c-11.295,8.335-26.704,8.335-37.999,0c-17.148-13.001-40.852-13.001-58,0c-3.36,2.869-3.758,7.919-0.889,11.278   C196.895,136.331,201.663,136.858,205.041,134.32z"/>
-					</g>
-					<path style="fill:#ECF0F9;" d="M464,192v-8c-4.418,0-8-3.582-8-8s3.582-8,8-8v-8c-4.418,0-8-3.582-8-8s3.582-8,8-8v-8  c-4.418,0-8-3.582-8-8c0-4.418,3.582-8,8-8v-8c-4.418,0-8-3.582-8-8h-8c0,4.418-3.582,8-8,8c-4.418,0-8-3.582-8-8h-8  c0,4.418-3.582,8-8,8c-4.418,0-8-3.582-8-8h-8c0,4.418-3.582,8-8,8v8c4.418,0,8,3.582,8,8c0,4.418-3.582,8-8,8v8  c4.418,0,8,3.582,8,8s-3.582,8-8,8v8c4.418,0,8,3.582,8,8s-3.582,8-8,8v8c4.418,0,8,3.582,8,8h8c0-4.418,3.582-8,8-8  c4.418,0,8,3.582,8,8h8c0-4.418,3.582-8,8-8c4.418,0,8,3.582,8,8h8C456,195.582,459.582,192,464,192z"/>
-					<rect x="408.001" y="120.004" style="fill:#F04B4D;" width="40.005" height="64.004"/>
-					<path style="fill:#E78825;" d="M344,176c-17.674,0-32-14.327-32-32s14.327-32,32-32c17.674,0,32,14.327,32,32S361.674,176,344,176z   M344,128c-8.837,0-16,7.163-16,16c0,8.837,7.163,16,16,16s16-7.163,16-16C360,135.163,352.837,128,344,128z"/>
-					<polygon style="fill:#DE333F;" points="448,136 408.001,152 408.001,168 448,152 "/>
-				</svg>
-				<span class="text-ly">Contact</span>
-			</a>
-		</li>
-		<!-- <li><a href="whyUs"><span class="text-ly">Blog</span></a></li> -->
-	</ul>
+  <ul class="mobilemenu mainmenu d-lg-none d-flex">
+    <li>
+      <a href="/" aria-label="home">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          xmlns:xlink="http://www.w3.org/1999/xlink"
+          height="800px"
+          width="800px"
+          version="1.1"
+          id="Layer_1"
+          viewBox="0 0 512 512"
+          xml:space="preserve"
+        >
+          <path
+            style="fill: #ffdb6f"
+            d="M503.999,108.561L280,234.72c-14.606,8.21-32.435,8.21-47.04,0L8,108.561  c-4.97-2.869-8.023-8.181-8-13.92l0,0C0,82.137,10.136,72,22.64,72h466.72C501.863,72,512,82.136,512,94.64l0,0l0,0  C512.022,100.379,508.97,105.691,503.999,108.561z"
+          />
+          <path
+            style="fill: #ffcb5b"
+            d="M503.999,108.561L280,234.72c-14.606,8.21-32.435,8.21-47.04,0L8,108.561  c-4.97-2.869-8.023-8.181-8-13.92v322.72C0,429.863,10.136,440,22.64,440l0,0h466.72c12.503,0,22.64-10.136,22.64-22.64l0,0V96.001  c0,0,0-0.48,0-0.8C511.826,100.739,508.8,105.792,503.999,108.561z"
+          />
+          <path
+            style="fill: #f7b84e"
+            d="M511.999,95.201c-0.173,5.538-3.2,10.592-8,13.36L280,234.72c-14.606,8.21-32.435,8.21-47.04,0  l-11.52-6.48l0,0L8,108.561c-1.196-0.682-2.298-1.516-3.279-2.48c-0.817-0.825-1.541-1.737-2.16-2.72v-0.4  c-1.466-2.416-2.266-5.175-2.32-8H0v1.04v16c-0.011,5.528,2.832,10.67,7.52,13.6l205.44,128c0.669,2.875-0.176,5.891-2.24,8  c-3.5,3.372-3.602,8.944-0.229,12.443c1.152,1.195,2.618,2.04,4.229,2.437c4.727,1.13,7.642,5.879,6.512,10.605  c-0.074,0.31-0.165,0.615-0.272,0.914c-1.462,4.635,1.109,9.578,5.744,11.04c1.724,0.544,3.573,0.544,5.295,0  c4.672-1.339,9.545,1.364,10.884,6.035c0.027,0.094,0.052,0.189,0.076,0.285c1.202,4.709,5.994,7.552,10.703,6.35  c0.883-0.225,1.725-0.586,2.497-1.071v48.8c0,26.819-21.741,48.56-48.56,48.56c-0.053,0-0.106,0-0.161,0H72.001  c-17.674,0-32,14.327-32,32H489.36c12.503,0,22.64-10.136,22.64-22.64l0,0V96.001C511.999,96.001,511.999,95.521,511.999,95.201  L511.999,95.201z"
+          />
+          <path
+            style="fill: #f19920"
+            d="M279.52,234.8c-14.606,8.21-32.435,8.21-47.04,0l-224-125.84c0.827,0.782,1.71,1.504,2.64,2.16  l219.36,136c15.507,9.629,35.133,9.629,50.639,0l219.36-136c0.93-0.656,1.812-1.378,2.64-2.16L279.52,234.8z"
+          />
+          <g>
+            <path
+              style="fill: #ffe278"
+              d="M211.92,177.041L148.88,142c-7.733-4.276-10.535-14.011-6.259-21.744   c2.862-5.176,8.346-8.351,14.259-8.256H160c4.418,0,8-3.582,8-8c0-4.418-3.582-8-8-8H64.001c-2.869-0.011-5.525,1.515-6.96,4   c-2.143,3.864-0.749,8.733,3.114,10.877c0.002,0.001,0.004,0.002,0.006,0.003l144,80c3.543,2.639,8.556,1.905,11.194-1.639   c2.639-3.543,1.905-8.556-1.639-11.194C213.162,177.635,212.559,177.297,211.92,177.041z"
+            />
+            <path
+              style="fill: #ffe278"
+              d="M192,96.001h48c4.418,0,8,3.582,8,8l0,0c0,4.418-3.582,8-8,8h-48c-4.418,0-8-3.582-8-8l0,0   C184,99.582,187.582,96.001,192,96.001z"
+            />
+          </g>
+          <path
+            style="fill: #ee2c39"
+            d="M280,264.001h-48c-4.418,0-8,3.582-8,8v80c0.023,4.418,3.623,7.981,8.041,7.958  c1.551-0.008,3.065-0.466,4.358-1.319l19.6-13.04l19.6,13.04c3.69,2.43,8.651,1.409,11.081-2.281  c0.852-1.295,1.311-2.809,1.319-4.358v-80C288,267.582,284.418,264.001,280,264.001z"
+          />
+          <path
+            style="fill: #cc202c"
+            d="M256,296c-11.82-0.027-23.214-4.414-32-12.32l0,0c-0.216,11.895,7.392,22.525,18.72,26.16l1.68,0.48  c6.879,1.677,11.689,7.88,11.6,14.96v20.32l19.6,13.04c3.69,2.43,8.651,1.409,11.081-2.281c0.852-1.295,1.311-2.809,1.319-4.358  v-68.32C279.214,291.587,267.82,295.973,256,296z"
+          />
+          <circle style="fill: #c97629" cx="256.004" cy="239.999" r="56" />
+          <circle style="fill: #a35425" cx="256.004" cy="239.999" r="23.999" />
+          <path
+            style="fill: #da8c36"
+            d="M288,232.001c4.418,0,8,3.582,8,8c0,22.091-17.908,40-40,40c-4.418,0-8-3.582-8-8s3.582-8,8-8  c13.255,0,24-10.745,24-24C280,235.582,283.582,232.001,288,232.001z"
+          />
+          <path
+            style="fill: #b06328"
+            d="M224,248.001c-4.418,0-8-3.582-8-8c0-22.091,17.908-40,40-40c4.418,0,8,3.582,8,8  c0,4.418-3.582,8-8,8c-13.255,0-24,10.745-24,24C232,244.419,228.418,248.001,224,248.001z"
+          />
+        </svg>
+        <span class="text-white">Home</span>
+      </a>
+    </li>
+    <li>
+      <a href="/services" aria-label="what we do">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          xmlns:xlink="http://www.w3.org/1999/xlink"
+          height="800px"
+          width="800px"
+          version="1.1"
+          id="Layer_1"
+          viewBox="0 0 512.001 512.001"
+          xml:space="preserve"
+        >
+          <path
+            style="fill: #b06328"
+            d="M504,154.241L280,30c-14.637-8.087-32.403-8.087-47.04,0L8,154.241c-4.921,2.841-7.966,8.078-8,13.76  l0,0c0.437,5.248,3.429,9.945,8,12.56l224,126.16c14.606,8.21,32.435,8.21,47.04,0l224.96-126.16c4.571-2.615,7.563-7.312,8-12.56  l0,0C511.966,162.319,508.921,157.081,504,154.241z"
+          />
+          <path
+            style="fill: #a35425"
+            d="M462.641,162.721l5.28-28.4L440,118.961V200l-171.44,74.4c-8.139,3.539-17.381,3.539-25.52,0  L0,168.64c0.634,5.014,3.601,9.433,8,11.92L232,306.8c14.606,8.21,32.435,8.21,47.04,0l160.96-90.8l0,0l13.84-8l0,0l50.16-27.44  c4.399-2.486,7.366-6.906,8-11.92l-27.2,11.68c-8.091,3.554-17.53-0.124-21.083-8.215  C462.422,169.157,462.046,165.887,462.641,162.721z"
+          />
+          <path
+            style="fill: #ffcb5b"
+            d="M512,168.001c-0.437,5.248-3.429,9.945-8,12.56L280,306.721c-14.606,8.21-32.435,8.21-47.04,0  L8,180.56c-4.571-2.615-7.563-7.312-8-12.56l0,0v321.36c0,12.503,10.136,22.64,22.64,22.64l0,0h466.721  c12.503,0,22.64-10.136,22.64-22.64l0,0L512,168.001L512,168.001z"
+          />
+          <path
+            style="fill: #e9e9e9"
+            d="M360,0.001H96C82.745,0.001,72,10.746,72,24v192.48l160,90.32c14.606,8.21,32.435,8.21,47.04,0  l160.96-90.32V80L360,0.001z"
+          />
+          <path
+            style="fill: #595a66"
+            d="M199.84,64h112c4.418,0,8,3.582,8,8l0,0c0,4.418-3.582,8-8,8h-112c-4.418,0-8-3.582-8-8l0,0  C191.84,67.582,195.422,64,199.84,64z"
+          />
+          <path
+            style="fill: #cad1d8"
+            d="M384,80.001h56L360,0.001v56C360,69.256,370.745,80.001,384,80.001z"
+          />
+          <polygon
+            style="fill: #dddddc"
+            points="439.841,80.001 383.84,80.001 439.841,136.001 "
+          />
+          <path
+            style="fill: #dbdad9"
+            d="M270.48,295.521c-0.612,0.309-1.256,0.55-1.92,0.72c-6.368,1.277-12.566-2.85-13.843-9.218  c-0.913-4.552,0.937-9.216,4.724-11.902c24.35-19.203,37.863-49.032,36.24-80.001c-4.093-52.861-50.265-92.394-103.126-88.301  C143.529,110.616,105.298,150.845,104,200c0.031,8.995,1.351,17.94,3.92,26.56L72.001,208v8.48l82.96,46.64l56.96,32l0,0L232,306.8  c14.606,8.21,32.435,8.21,47.04,0l160.96-90.32V208L270.48,295.521z"
+          />
+          <path
+            style="fill: #f7b84e"
+            d="M512,168.001c-0.437,5.248-3.429,9.945-8,12.56L280,306.721c-14.606,8.21-32.435,8.21-47.04,0  L8,180.56c-1.167-0.657-2.242-1.465-3.2-2.4c-0.537-0.68-1.019-1.402-1.44-2.16l-0.8-1.04c-0.553-0.938-1.009-1.929-1.36-2.96v-0.48  c-0.498-0.944-0.899-1.936-1.2-2.96v-0.56l0,0c0,0,0-0.48,0-0.8c0-0.32,0,0.8,0,0.8v16c-0.011,5.528,2.832,10.67,7.52,13.6  L112,263.039v0.96l-67.28,68.72c-6.252,6.252-6.252,16.388,0,22.64c6.252,6.252,16.388,6.252,22.64,0l42.48-41.6l0,0l4-3.6  c18.4-16.004,45.105-18.084,65.76-5.12l51.04,32l2.56,1.6c14.228,8.776,22.865,24.323,22.8,41.04v51.76  c0,26.819-21.741,48.56-48.56,48.56H72c-17.674,0-32,14.327-32,32h449.36c12.503,0,22.64-10.136,22.64-22.64l0,0L512,168.001  L512,168.001z"
+          />
+          <path
+            style="fill: #8d99a0"
+            d="M248.001,176.001h44.88c-1.436-5.496-3.363-10.851-5.76-16h-39.12c-4.418,0-8,3.582-8,8  S243.582,176.001,248.001,176.001z"
+          />
+          <g>
+            <path
+              style="fill: #6f707e"
+              d="M143.841,120.001h112c4.418,0,8,3.582,8,8l0,0c0,4.418-3.582,8-8,8h-112c-4.418,0-8-3.582-8-8l0,0   C135.841,123.582,139.422,120.001,143.841,120.001z"
+            />
+            <path
+              style="fill: #6f707e"
+              d="M143.841,200h168c4.418,0,8,3.582,8,8l0,0c0,4.418-3.582,8-8,8h-168c-4.418,0-8-3.582-8-8l0,0   C135.841,203.582,139.422,200,143.841,200z"
+            />
+            <path
+              style="fill: #6f707e"
+              d="M143.841,160.001h72c4.418,0,8,3.582,8,8l0,0c0,4.418-3.582,8-8,8h-72c-4.418,0-8-3.582-8-8l0,0   C135.841,163.583,139.422,160.001,143.841,160.001z"
+            />
+            <path
+              style="fill: #6f707e"
+              d="M327.84,160.001h56c4.418,0,8,3.582,8,8l0,0c0,4.418-3.582,8-8,8h-56c-4.418,0-8-3.582-8-8l0,0   C319.841,163.583,323.422,160.001,327.84,160.001z"
+            />
+            <path
+              style="fill: #6f707e"
+              d="M247.84,160.001h48c4.418,0,8,3.582,8,8l0,0c0,4.418-3.582,8-8,8h-48c-4.418,0-8-3.582-8-8l0,0   C239.84,163.583,243.422,160.001,247.84,160.001z"
+            />
+            <path
+              style="fill: #6f707e"
+              d="M343.84,200h40c4.418,0,8,3.582,8,8l0,0c0,4.418-3.582,8-8,8h-40c-4.418,0-8-3.582-8-8l0,0   C335.84,203.582,339.422,200,343.84,200z"
+            />
+            <path
+              style="fill: #6f707e"
+              d="M287.841,120.001h96c4.418,0,8,3.582,8,8l0,0c0,4.418-3.582,8-8,8h-96c-4.418,0-8-3.582-8-8l0,0   C279.84,123.582,283.422,120.001,287.841,120.001z"
+            />
+          </g>
+          <path
+            style="fill: #595a66"
+            d="M296,200H144c-4.418,0-8,3.582-8,8s3.582,8,8,8h150.401C295.378,210.722,295.914,205.369,296,200z"
+          />
+          <path
+            style="fill: #2d4961"
+            d="M110.64,224L110.64,224c1.119,2.618,0.848,5.623-0.72,8c-2.704,5.035-4.695,10.419-5.92,16  l-67.52,68.72c-6.252,6.252-6.252,16.388,0,22.64c6.252,6.252,16.388,6.252,22.64,0L127.999,272c5.35-1.388,10.489-3.486,15.28-6.24  c2.377-1.568,5.382-1.839,8-0.72l0,0C133.095,256.898,118.603,242.264,110.64,224z"
+          />
+          <path
+            style="fill: #123247"
+            d="M112,227.44c8.292,16.809,22.222,30.173,39.36,37.76l0,0c-2.618-1.119-5.623-0.848-8,0.72  c-4.825,2.705-9.991,4.75-15.36,6.08c0,0-21.52,21.28-26.24,25.76L112,227.44z"
+          />
+          <path
+            style="fill: #953f27"
+            d="M104,248.001l-67.52,68.72c-6.252,6.252-6.252,16.388,0,22.64s16.388,6.252,22.64,0L128,272.001  L104,248.001z"
+          />
+          <path
+            style="fill: #81301c"
+            d="M59.121,339.281l68.88-67.28l-12.48-12.48L48,328.001c-3.49,2.761-4.082,7.83-1.32,11.32  c2.761,3.49,7.83,4.082,11.32,1.32L59.121,339.281z"
+          />
+          <circle style="fill: #2d4961" cx="191.844" cy="183.998" r="95.995" />
+          <circle style="fill: #cde3ea" cx="191.844" cy="183.998" r="64.004" />
+          <path
+            style="fill: #44637f"
+            d="M192,264.001c-4.418,0-8-3.582-8-8c0-4.418,3.582-8,8-8c35.346,0,64-28.654,64-64  c0-4.418,3.582-8,8-8c4.418,0,8,3.582,8,8C272,228.183,236.183,264.001,192,264.001z"
+          />
+          <path
+            style="fill: #123247"
+            d="M192,104.001c4.418,0,8,3.582,8,8s-3.582,8-8,8c-35.346,0-64,28.654-64,64c0,4.418-3.582,8-8,8  s-8-3.582-8-8C112,139.818,147.817,104.001,192,104.001z"
+          />
+          <path
+            style="fill: #f5f6f6"
+            d="M232.001,184c4.418,0,8-3.582,8-8c0-22.091-17.908-40-40-40c-4.418,0-8,3.582-8,8  c0,4.418,3.582,8,8,8c13.255,0,24,10.745,24,24C224,180.419,227.582,184,232.001,184z"
+          />
+          <g>
+            <path
+              style="fill: #6f707e"
+              d="M171.84,176.001h83.44c-1.031-8.456-3.751-16.618-8-24h-75.44c-6.565,0.088-11.841,5.434-11.84,12   l0,0C159.999,170.566,165.276,175.913,171.84,176.001z"
+            />
+            <path
+              style="fill: #6f707e"
+              d="M160,212.001L160,212.001c0,6.628,5.373,12,12,12h69.92c5.651-7.062,9.74-15.242,12-24h-82.08   C165.276,200.088,159.999,205.436,160,212.001z"
+            />
+          </g>
+          <path
+            style="fill: #cecece"
+            d="M200,152.001c13.255,0,24,10.745,24,24h16c0-8.655-2.807-17.076-8-24L200,152.001L200,152.001z"
+          />
+        </svg>
+        <span class="text-lb">Services</span>
+      </a>
+    </li>
+    <li>
+      <a href="/portfolio" aria-label="What we done">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          xmlns:xlink="http://www.w3.org/1999/xlink"
+          version="1.1"
+          id="Layer_1"
+          viewBox="0 0 512 512"
+          xml:space="preserve"
+        >
+          <path
+            style="fill: #b06328"
+            d="M503.998,142.113L279.999,17.874c-14.637-8.087-32.402-8.087-47.04,0L8,142.113  c-4.921,2.841-7.965,8.078-8,13.76l0,0c0.437,5.248,3.429,9.945,8,12.56l223.999,126.159c14.606,8.21,32.435,8.21,47.04,0  l224.959-126.159c4.571-2.615,7.563-7.312,8-12.56l0,0C511.963,150.192,508.919,144.955,503.998,142.113z"
+          />
+          <path
+            style="fill: #a35425"
+            d="M423.999,182.514v-84.56l-24-13.28v120.48l-131.2,57.12c-8.139,3.539-17.381,3.539-25.52,0L0,156.514  c0.634,5.014,3.601,9.433,8,11.92l223.999,126.159c14.606,8.21,32.435,8.21,47.04,0l224.959-126.159  c4.399-2.486,7.366-6.906,8-11.92l-76.8,33.36c-4.05,1.768-8.765-0.082-10.532-4.132  C424.222,184.724,423.995,183.624,423.999,182.514z"
+          />
+          <path
+            style="fill: #3689c9"
+            d="M360.367,80.576l54.749,150.34c3.779,10.379-1.57,21.857-11.949,25.636l-225.511,82.124  c-10.379,3.779-21.857-1.57-25.636-11.949L97.271,176.388c-3.779-10.379,1.57-21.857,11.949-25.636l225.511-82.124  C345.11,64.848,356.587,70.198,360.367,80.576z"
+          />
+          <path
+            style="fill: #1470b8"
+            d="M415.039,230.913l-15.04-41.36l0,0L359.998,80.593c-0.635-1.682-1.496-3.27-2.56-4.72h-42.639  L120,146.752v92.24l12.96,35.599c2.244,0.878,4.631,1.338,7.04,1.36h135.439c4.418,0.005,7.996,3.591,7.991,8.009  c-0.004,3.362-2.11,6.364-5.27,7.511l-94.56,34.4c-5.19,1.879-7.876,7.609-6,12.8l225.519-82.16  C413.467,252.721,418.797,241.273,415.039,230.913z M399.999,246.913v-28.08l5.68,15.52c1.851,5.056-0.67,10.667-5.68,12.64V246.913  z"
+          />
+          <path
+            style="fill: #4c9cd6"
+            d="M399.999,63.873v159.999c0,11.046-8.955,20-20,20h-240c-11.046,0-20-8.955-20-20V63.873  c0-11.046,8.955-20,20-20h240C391.044,43.874,399.999,52.828,399.999,63.873z"
+          />
+          <rect
+            x="139.996"
+            y="63.879"
+            style="fill: #abe1fa"
+            width="239.998"
+            height="159.998"
+          />
+          <circle style="fill: #f19f35" cx="189.997" cy="103.873" r="20.002" />
+          <path
+            style="fill: #595a66"
+            d="M379.999,203.874l-72.959-72.96c-3.9-3.91-10.232-3.918-14.143-0.018  c-0.006,0.006-0.011,0.011-0.018,0.018L200,223.873h180v-19.999H379.999z"
+          />
+          <path
+            style="fill: #35363e"
+            d="M339.999,173.873L339.999,173.873c-2.761,2.737-2.781,7.194-0.044,9.956  c0.015,0.015,0.029,0.029,0.044,0.044l5.84,5.84c9.092,9.038,14.192,21.339,14.16,34.16h20v-20L350,173.873  c-2.737-2.761-7.194-2.781-9.956-0.044C340.028,173.844,340.014,173.858,339.999,173.873z"
+          />
+          <path
+            style="fill: #595a66"
+            d="M139.999,223.873h130l-62.48-71.36c-3.64-4.153-9.958-4.569-14.111-0.929  c-0.33,0.289-0.64,0.599-0.929,0.929l-52.48,51.359L139.999,223.873L139.999,223.873z"
+          />
+          <path
+            style="fill: #35363e"
+            d="M262.08,191.873c-6.02-6.823-15.898-8.7-24-4.56l32,36.48h20L262.08,191.873z"
+          />
+          <g>
+            <path
+              style="fill: #6f707e"
+              d="M291.558,144.173l2.206,2.206c1.344,1.344,1.344,3.522,0,4.864l-16.348,16.348   c-1.343,1.343-3.522,1.344-4.864,0l-2.206-2.206c-1.344-1.344-1.344-3.522,0-4.864l16.348-16.348   C288.037,142.829,290.214,142.829,291.558,144.173z"
+            />
+            <path
+              style="fill: #6f707e"
+              d="M197.456,160.105l2.206,2.206c1.343,1.343,1.343,3.522,0,4.864l-16.348,16.348   c-1.343,1.343-3.522,1.343-4.864,0l-2.206-2.206c-1.343-1.343-1.343-3.522,0-4.864l16.348-16.348   C193.935,158.762,196.113,158.762,197.456,160.105z"
+            />
+          </g>
+          <g>
+            <path
+              style="fill: #3689c9"
+              d="M389.999,73.874v149.999c0,5.523-4.477,10-10,10H149.999c-5.523,0-10,4.477-10,10h240   c11.046,0,20-8.955,20-20V63.873C394.476,63.873,389.999,68.351,389.999,73.874z"
+            />
+            <path
+              style="fill: #3689c9"
+              d="M139.999,53.873c-5.523,0-10,4.477-10,10v149.999c0,5.523,4.477,10,10,10V63.873h240   c0-5.523-4.477-10-10-10H139.999z"
+            />
+          </g>
+          <path
+            style="fill: #ffffff"
+            d="M325.039,103.873h-25.04c-2.761-0.35-4.716-2.873-4.367-5.633c0.289-2.281,2.086-4.077,4.367-4.367  h5.04c2.761-0.35,4.716-2.873,4.367-5.633c-0.289-2.281-2.085-4.077-4.367-4.367h-60c-2.761,0-5,2.238-5,5c0,2.761,2.238,5,5,5  h25.04c2.761,0,5,2.238,5,5c0,2.762-2.238,5-5,5h-5.04c-2.761,0-5,2.238-5,5c0,2.761,2.238,5,5,5h60  c2.762-0.35,4.716-2.873,4.367-5.633C329.116,105.959,327.319,104.162,325.039,103.873z"
+          />
+          <path
+            style="fill: #ffcb5b"
+            d="M511.998,155.873c-0.437,5.248-3.429,9.945-8,12.56l-223.999,126.16  c-14.606,8.21-32.435,8.21-47.04,0L8,168.434c-4.571-2.615-7.563-7.312-8-12.56l0,0v321.358c0,12.503,10.136,22.64,22.64,22.64l0,0  h466.719c12.503,0,22.64-10.136,22.64-22.64l0,0V155.873H511.998z"
+          />
+          <g>
+            <path
+              style="fill: #f7b84e"
+              d="M0,155.074c0,0,0,0.48,0,0.8c0,0.32,0-0.48,0-0.72l0,0V155.074z"
+            />
+            <path
+              style="fill: #f7b84e"
+              d="M511.998,155.873c-0.437,5.248-3.429,9.945-8,12.56l-223.999,126.16   c-14.606,8.21-32.435,8.21-47.04,0L8,168.434c-1.167-0.657-2.242-1.465-3.2-2.4c-0.586-0.623-1.121-1.292-1.6-2l-0.8-1.04   c-0.508-0.995-0.91-2.041-1.2-3.12v-0.48c-0.498-0.944-0.899-1.936-1.2-2.96c0,0,0,0,0-0.56l0,0v16   c-0.011,5.528,2.832,10.67,7.52,13.6l223.039,139.359l2.56,1.6c14.382,8.831,23.068,24.565,22.88,41.44v51.76   c0,26.819-21.741,48.56-48.56,48.56H71.999c-17.673,0-32,14.327-32,32h449.358c12.503,0.001,22.641-10.134,22.642-22.638   c0-0.107-0.001-0.215-0.002-0.322L511.998,155.873L511.998,155.873z"
+            />
+          </g>
+        </svg>
+        <span class="text-lg">Portfolio</span>
+      </a>
+    </li>
+    <li>
+      <a href="/about" aria-label="who we are">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          xmlns:xlink="http://www.w3.org/1999/xlink"
+          height="800px"
+          width="800px"
+          version="1.1"
+          id="Layer_1"
+          viewBox="0 0 512.001 512.001"
+          xml:space="preserve"
+        >
+          <path
+            style="fill: #b06328"
+            d="M504,154.241L280,30c-14.637-8.087-32.403-8.087-47.04,0L8,154.241c-4.921,2.841-7.966,8.078-8,13.76  l0,0c0.437,5.248,3.429,9.945,8,12.56l224,126.16c14.606,8.21,32.435,8.21,47.04,0l224.96-126.16c4.571-2.615,7.563-7.312,8-12.56  l0,0C511.966,162.319,508.921,157.081,504,154.241z"
+          />
+          <path
+            style="fill: #a35425"
+            d="M462.48,162.88l5.36-28.56L440,118.961V200l-171.2,74.4c-8.139,3.539-17.381,3.539-25.52,0L0,168.64  c0.634,5.014,3.601,9.433,8,11.92l224,126.16c14.606,8.21,32.435,8.21,47.04,0l160.96-90.24l0,0l7.52-4.24l56-32  c4.399-2.486,7.366-6.906,8-11.92l-27.12,11.76c-8.169,3.37-17.522-0.52-20.893-8.689  C462.397,168.702,462.042,165.758,462.48,162.88z"
+          />
+          <path
+            style="fill: #ffcb5b"
+            d="M512,168.001c-0.437,5.248-3.429,9.945-8,12.56L280,306.721c-14.606,8.21-32.435,8.21-47.04,0  L8,180.56c-4.571-2.615-7.563-7.312-8-12.56l0,0v321.36c0,12.503,10.136,22.64,22.64,22.64l0,0h466.721  c12.503,0,22.64-10.136,22.64-22.64l0,0L512,168.001L512,168.001z"
+          />
+          <g>
+            <path
+              style="fill: #f7b84e"
+              d="M0,167.2v0.8c0,0,0-0.48,0-0.72l0,0V167.2z"
+            />
+            <path
+              style="fill: #f7b84e"
+              d="M512,168.001c-0.437,5.248-3.429,9.945-8,12.56L280,306.721c-14.606,8.21-32.435,8.21-47.04,0   L8,180.56c-1.167-0.657-2.242-1.465-3.2-2.4c-0.537-0.68-1.019-1.402-1.44-2.16l-0.8-1.04c-0.553-0.938-1.009-1.929-1.36-2.96   v-0.48c-0.498-0.944-0.899-1.936-1.2-2.96v-0.56l0,0v16c-0.011,5.528,2.832,10.67,7.52,13.6l223.04,139.36l2.56,1.6   c14.283,8.772,22.956,24.359,22.88,41.12v51.76c0,26.819-21.741,48.56-48.56,48.56H72c-17.674,0-32,14.327-32,32h449.36   c12.503,0,22.64-10.136,22.64-22.64l0,0L512,168.001L512,168.001z"
+            />
+          </g>
+          <path
+            style="fill: #e9e9e9"
+            d="M360,0.001H96C82.745,0.001,72,10.746,72,24v192.48l160.48,90.32c14.606,8.21,32.435,8.21,47.04,0  l160.48-90.32V80L360,0.001z"
+          />
+          <path
+            style="fill: #dbdad9"
+            d="M241.28,295.521L72,208v8.48l160.48,90.32c14.606,8.21,32.435,8.21,47.04,0l160.48-90.32V208  l-169.28,87.521C261.489,300.303,250.511,300.303,241.28,295.521z"
+          />
+          <path
+            style="fill: #cad1d8"
+            d="M384,80.001h56L360,0.001v56C360,69.256,370.745,80.001,384,80.001z"
+          />
+          <polygon
+            style="fill: #dddddc"
+            points="440,80.001 384,80.001 440,136.001 "
+          />
+          <path
+            style="fill: #dbdad9"
+            d="M264.001,252.001c-3.906,0.089-7.693-1.346-10.559-4.001l-68.64-67.68  c-22.091-21.645-22.453-57.1-0.809-79.192c0.267-0.272,0.536-0.542,0.809-0.809c10.843-10.637,25.45-16.56,40.64-16.48  c14.4,0,28,12.64,38.56,22.08c10.56-9.44,24-22.08,38.56-22.08c15.164-0.068,29.741,5.855,40.56,16.48  c22.091,21.645,22.453,57.1,0.809,79.192c-0.267,0.272-0.536,0.542-0.809,0.809L274.561,248  C271.694,250.655,267.906,252.089,264.001,252.001z"
+          />
+          <path
+            style="fill: #ee2c39"
+            d="M256.001,236.001c-3.906,0.089-7.693-1.346-10.559-4l-68.64-67.68  c-22.091-21.645-22.453-57.1-0.809-79.192c0.267-0.272,0.536-0.542,0.809-0.809c10.869-10.578,25.473-16.443,40.64-16.32  c14.4,0,28,12.64,38.56,22.08c10.561-9.44,24-22.08,38.56-22.08c15.164-0.068,29.741,5.855,40.56,16.48  c22.091,21.645,22.453,57.1,0.809,79.192c-0.267,0.272-0.536,0.542-0.809,0.809L266.561,232  C263.694,234.655,259.906,236.089,256.001,236.001z"
+          />
+          <path
+            style="fill: #cc202c"
+            d="M228.48,215.04L245.44,232c5.901,5.741,15.3,5.741,21.2,0l68.56-67.361  c22.091-21.645,22.453-57.1,0.809-79.192c-0.267-0.272-0.536-0.542-0.809-0.809c-2.56-2.071-5.625-3.425-8.88-3.92  c-36.4-8-70.32,22.48-70.32,60.56v45.92c0.177,15.286-12.071,27.822-27.358,27.999c-0.027,0-0.055,0.001-0.082,0.001l0,0  L228.48,215.04z"
+          />
+          <path
+            style="fill: #f15b55"
+            d="M184,136.001c-4.418,0-8-3.582-8-8c0-22.091,17.908-40,40-40c4.418,0,8,3.582,8,8s-3.582,8-8,8  c-13.255,0-24,10.745-24,24C192,132.419,188.419,136.001,184,136.001z"
+          />
+        </svg>
+        <span class="text-lr">About</span>
+      </a>
+    </li>
+    <li>
+      <a href="/contact" aria-label="where to find">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          xmlns:xlink="http://www.w3.org/1999/xlink"
+          version="1.1"
+          id="Layer_1"
+          viewBox="0 0 512 512"
+          xml:space="preserve"
+        >
+          <path
+            style="fill: #ffcb5b"
+            d="M22.64,72H488c13.255,0,24,10.745,24,24V417.36c0,12.503-10.136,22.64-22.64,22.64l0,0H22.64  C10.136,440,0,429.864,0,417.36l0,0V94.64C0,82.136,10.136,72,22.64,72z"
+          />
+          <path
+            style="fill: #f7b84e"
+            d="M488,176v44.64c-0.278,19.012-15.324,34.516-34.32,35.36c-1.397,0.101-2.786,0.288-4.16,0.56  c-15.214,3.49-25.877,17.196-25.52,32.8V384c0,17.674-14.327,32-32,32H56c-13.255,0-24,10.745-24,24h456c13.255,0,24-10.745,24-24  V152C498.745,152,488,162.745,488,176z"
+          />
+          <path
+            style="fill: #ffdb6f"
+            d="M24,72C10.745,72,0,82.745,0,96V216c13.255,0,24-10.745,24-24v-2.96  c0.364-10.434,7.962-19.199,18.24-21.04h0.48c7.761-1.338,13.394-8.125,13.28-16v-32c0-13.255,10.745-24,24-24H168  c13.255,0,24-10.745,24-24H24V72z"
+          />
+          <g>
+            <path
+              style="fill: #b06328"
+              d="M64,344h112c4.418,0,8,3.582,8,8l0,0c0,4.418-3.582,8-8,8H64c-4.418,0-8-3.582-8-8l0,0   C56,347.582,59.582,344,64,344z"
+            />
+            <path
+              style="fill: #b06328"
+              d="M64,304h72c4.418,0,8,3.582,8,8l0,0c0,4.418-3.582,8-8,8H64c-4.418,0-8-3.582-8-8l0,0   C56,307.582,59.582,304,64,304z"
+            />
+            <path
+              style="fill: #b06328"
+              d="M168,304h48c4.418,0,8,3.582,8,8l0,0c0,4.418-3.582,8-8,8h-48c-4.418,0-8-3.582-8-8l0,0   C160,307.582,163.582,304,168,304z"
+            />
+          </g>
+          <g>
+            <path
+              style="fill: #e78825"
+              d="M290.961,153.84c-11.295,8.335-26.704,8.335-38,0c-17.148-13.001-40.852-13.001-58,0   c-3.533,2.653-4.245,7.669-1.591,11.201c2.653,3.533,7.669,4.245,11.201,1.591c0.134-0.1,0.263-0.204,0.39-0.312   c11.295-8.335,26.704-8.335,37.999,0c17.148,13.001,40.852,13.001,58,0c3.532-2.653,4.245-7.669,1.591-11.201   c-2.653-3.532-7.669-4.245-11.201-1.591C291.217,153.628,291.087,153.732,290.961,153.84z"
+            />
+            <path
+              style="fill: #e78825"
+              d="M205.041,134.32c11.295-8.335,26.704-8.335,38,0c17.148,13.001,40.852,13.001,58,0   c3.532-2.653,4.245-7.669,1.591-11.201c-2.653-3.533-7.669-4.245-11.201-1.591c-0.134,0.1-0.263,0.205-0.39,0.312   c-11.295,8.335-26.704,8.335-37.999,0c-17.148-13.001-40.852-13.001-58,0c-3.36,2.869-3.758,7.919-0.889,11.278   C196.895,136.331,201.663,136.858,205.041,134.32z"
+            />
+          </g>
+          <path
+            style="fill: #ecf0f9"
+            d="M464,192v-8c-4.418,0-8-3.582-8-8s3.582-8,8-8v-8c-4.418,0-8-3.582-8-8s3.582-8,8-8v-8  c-4.418,0-8-3.582-8-8c0-4.418,3.582-8,8-8v-8c-4.418,0-8-3.582-8-8h-8c0,4.418-3.582,8-8,8c-4.418,0-8-3.582-8-8h-8  c0,4.418-3.582,8-8,8c-4.418,0-8-3.582-8-8h-8c0,4.418-3.582,8-8,8v8c4.418,0,8,3.582,8,8c0,4.418-3.582,8-8,8v8  c4.418,0,8,3.582,8,8s-3.582,8-8,8v8c4.418,0,8,3.582,8,8s-3.582,8-8,8v8c4.418,0,8,3.582,8,8h8c0-4.418,3.582-8,8-8  c4.418,0,8,3.582,8,8h8c0-4.418,3.582-8,8-8c4.418,0,8,3.582,8,8h8C456,195.582,459.582,192,464,192z"
+          />
+          <rect
+            x="408.001"
+            y="120.004"
+            style="fill: #f04b4d"
+            width="40.005"
+            height="64.004"
+          />
+          <path
+            style="fill: #e78825"
+            d="M344,176c-17.674,0-32-14.327-32-32s14.327-32,32-32c17.674,0,32,14.327,32,32S361.674,176,344,176z   M344,128c-8.837,0-16,7.163-16,16c0,8.837,7.163,16,16,16s16-7.163,16-16C360,135.163,352.837,128,344,128z"
+          />
+          <polygon
+            style="fill: #de333f"
+            points="448,136 408.001,152 408.001,168 448,152 "
+          />
+        </svg>
+        <span class="text-ly">Contact</span>
+      </a>
+    </li>
+    <!-- <li><a href="whyUs"><span class="text-ly">Blog</span></a></li> -->
+  </ul>
 </template>
 
 <script setup>
@@ -339,32 +675,32 @@ const subscribeEmail = ref("");
 const submitting = ref(false);
 
 function isValidEmail(email) {
-	return /[^\s@]+@[^\s@]+\.[^\s@]+/.test(email);
+  return /[^\s@]+@[^\s@]+\.[^\s@]+/.test(email);
 }
 
 async function handleSubscribe() {
-	if (!subscribeEmail.value || !isValidEmail(subscribeEmail.value)) {
-		alert("Please enter a valid email address");
-		return;
-	}
-	try {
-		submitting.value = true;
-		// Example: send to your backend or a service like EmailJS/Mailchimp endpoint
-		// Replace this fetch with your actual subscription API endpoint
-		const res = await fetch("https://api.emailjs.com/api/v1.0/email/send", {
-			method: "POST",
-			headers: { "Content-Type": "application/json" },
-			body: JSON.stringify({ email: subscribeEmail.value }),
-		});
-		if (!res.ok) throw new Error("Subscription failed");
-		alert("Thanks for subscribing!");
-		subscribeEmail.value = "";
-	} catch (e) {
-		console.error(e);
-		alert("Unable to subscribe right now. Please try again later.");
-	} finally {
-		submitting.value = false;
-	}
+  if (!subscribeEmail.value || !isValidEmail(subscribeEmail.value)) {
+    alert("Please enter a valid email address");
+    return;
+  }
+  try {
+    submitting.value = true;
+    // Example: send to your backend or a service like EmailJS/Mailchimp endpoint
+    // Replace this fetch with your actual subscription API endpoint
+    const res = await fetch("https://api.emailjs.com/api/v1.0/email/send", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ email: subscribeEmail.value }),
+    });
+    if (!res.ok) throw new Error("Subscription failed");
+    alert("Thanks for subscribing!");
+    subscribeEmail.value = "";
+  } catch (e) {
+    console.error(e);
+    alert("Unable to subscribe right now. Please try again later.");
+  } finally {
+    submitting.value = false;
+  }
 }
 </script>
 
