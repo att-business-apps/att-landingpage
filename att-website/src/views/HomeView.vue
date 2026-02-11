@@ -542,7 +542,7 @@ function getTemplate(target) {
               Most Popular
             </div>
             <div
-              class="w-14 h-14 bg-white/10 dark:bg-slate-900/10 text-white rounded-lg flex items-center justify-center mb-6"
+              class="w-14 h-14 bg-white/10 text-white rounded-lg flex items-center justify-center mb-6"
             >
               <span class="material-icons-outlined text-3xl">shopping_bag</span>
             </div>
@@ -552,43 +552,43 @@ function getTemplate(target) {
             >
               E-commerce Growth
             </h4>
-            <p class="text-slate-300 dark:text-slate-800 mb-6 flex-grow">
+            <p class="text-slate-300 mb-6 flex-grow">
               Aggressive scaling strategies for Shopify &amp; custom stores
               focusing on AOV and LTV.
             </p>
             <ul
-              class="space-y-3 mb-8 text-sm text-slate-200 dark:text-slate-900 font-medium p-0"
+              class="space-y-3 mb-8 text-sm text-slate-200  font-medium p-0"
             >
               <li class="flex items-center gap-2">
                 <span
-                  class="material-icons-outlined text-primary dark:text-slate-900 text-sm"
+                  class="material-icons-outlined text-primary  text-sm"
                   >check_circle</span
                 >
                 High-Converting Checkout UI
               </li>
               <li class="flex items-center gap-2">
                 <span
-                  class="material-icons-outlined text-primary dark:text-slate-900 text-sm"
+                  class="material-icons-outlined text-primary  text-sm"
                   >check_circle</span
                 >
                 Performance Creative Production
               </li>
               <li class="flex items-center gap-2">
                 <span
-                  class="material-icons-outlined text-primary dark:text-slate-900 text-sm"
+                  class="material-icons-outlined text-primary  text-sm"
                   >check_circle</span
                 >
                 Advanced Retention Flows
               </li>
             </ul>
-            <div class="pt-6 border-t border-white/20 dark:border-slate-900/20">
+            <div class="pt-6 border-t border-white/20">
               <p
-                class="text-xs uppercase font-bold text-slate-400 dark:text-slate-800 mb-2"
+                class="text-xs uppercase font-bold text-slate-400 mb-2"
               >
                 <small>Primary Outcome</small>
               </p>
               <h5
-                class="text-lg font-bold text-white dark:text-slate-900"
+                class="text-lg font-bold text-white "
                 style="font-weight: 600"
               >
                 Maximum ROAS Scaling
@@ -596,7 +596,7 @@ function getTemplate(target) {
             </div>
           </div>
           <div
-            class="group relative bg-background-light dark:bg-slate-800 p-8 rounded-xl border border-secondary transition-all hover:scale-[1.05] hover:shadow-2xl flex flex-col h-full"
+            class="group relative bg-background-light p-8 rounded-xl border border-secondary transition-all hover:scale-[1.05] hover:shadow-2xl flex flex-col h-full"
           >
             <div
               class="w-14 h-14 bg-purple-500/10 text-purple-500 rounded-lg flex items-center justify-center mb-6"
@@ -608,7 +608,7 @@ function getTemplate(target) {
             <h4 class="text-2xl font-bold mb-3" style="font-weight: 600">
               Startup Launch Kit
             </h4>
-            <p class="text-slate-300 dark:text-slate-400 mb-6 flex-grow">
+            <p class="text-slate-300 mb-6 flex-grow">
               From MVP to Market Leader. We build the foundation your vision
               needs to secure funding.
             </p>
@@ -632,7 +632,7 @@ function getTemplate(target) {
                 Modern Tech-Stack Deployment
               </li>
             </ul>
-            <div class="pt-6 border-t border-slate-200 dark:border-slate-700">
+            <div class="pt-6 border-t border-slate-200">
               <p class="text-xs uppercase font-bold text-slate-500 mb-2">
                 <small>Primary Outcome</small>
               </p>
@@ -830,7 +830,7 @@ function getTemplate(target) {
       </div>
     </section>
 
-    <section class="py-24 px-6 dark:bg-slate-950" id="process">
+    <section class="py-24 px-6" id="process">
       <div class="container mx-auto">
         <h2
           class="text-3xl font-display font-medium text-center mb-16"

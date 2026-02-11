@@ -1,28 +1,28 @@
 <template>
   <footer
-    class="bg-dark dark:bg-background-dark border-t border-slate-100 dark:border-slate-800 pt-32 pb-12"
+    class="bg-background-dark pt-32 pb-12"
   >
     <div class="max-w-7xl mx-auto px-6 lg:px-12">
       <div class="grid md:grid-cols-12 gap-16 mb-24">
         <div class="md:col-span-4 space-y-8">
           <div class="flex items-center gap-3">
             <div
-              class="w-8 h-8 bg-navy dark:bg-primary flex items-center justify-center rounded"
+              class="w-8 h-8 bg-primary flex items-center justify-center rounded"
             >
               <span class="text-white font-bold text-lg">A</span>
             </div>
             <span
-              class="text-xl font-bold tracking-tight text-navy dark:text-white uppercase"
+              class="text-xl font-bold tracking-tight text-white uppercase"
               >Amortree</span
             >
           </div>
-          <p class="text-slate-500 dark:text-slate-400 text-sm leading-relaxed">
+          <p class="text-slate-400 text-sm leading-relaxed">
             A tech-forward growth agency bridging the gap between sophisticated
             engineering and high-performance marketing.
           </p>
           <div class="flex gap-4">
             <a
-              class="w-10 h-10 rounded-full border border-slate-100 dark:border-slate-800 flex items-center justify-center text-slate-400 hover:text-navy dark:hover:text-primary transition-all"
+              class="w-10 h-10 rounded-full border border-slate-800 flex items-center justify-center text-slate-400 hover:text-primary transition-all"
               href="#"
             >
               <span class="material-symbols-outlined text-lg thin-stroke"
@@ -30,7 +30,7 @@
               >
             </a>
             <a
-              class="w-10 h-10 rounded-full border border-slate-100 dark:border-slate-800 flex items-center justify-center text-slate-400 hover:text-navy dark:hover:text-primary transition-all"
+              class="w-10 h-10 rounded-full border border-slate-800 flex items-center justify-center text-slate-400 hover:text-primary transition-all"
               href="#"
             >
               <span class="material-symbols-outlined text-lg thin-stroke"
@@ -41,35 +41,35 @@
         </div>
         <div class="md:col-span-2 space-y-6">
           <h5
-            class="text-xs font-bold uppercase tracking-widest text-navy dark:text-white"
+            class="text-xs font-bold uppercase tracking-widest text-white"
           >
             Navigation
           </h5>
-          <ul class="space-y-4 text-sm text-slate-500 dark:text-slate-400">
+          <ul class="space-y-4 text-sm text-slate-400">
             <li>
               <a
-                class="hover:text-navy dark:hover:text-white transition-colors"
+                class="hover:text-white transition-colors"
                 href="#"
                 >Solutions</a
               >
             </li>
             <li>
               <a
-                class="hover:text-navy dark:hover:text-white transition-colors"
+                class="hover:text-white transition-colors"
                 href="#"
                 >Expertise</a
               >
             </li>
             <li>
               <a
-                class="hover:text-navy dark:hover:text-white transition-colors"
+                class="hover:text-white transition-colors"
                 href="#"
                 >Case Studies</a
               >
             </li>
             <li>
               <a
-                class="hover:text-navy dark:hover:text-white transition-colors"
+                class="hover:text-white transition-colors"
                 href="#"
                 >About Us</a
               >
@@ -78,30 +78,30 @@
         </div>
         <div class="md:col-span-6 space-y-6">
           <h5
-            class="text-xs font-bold uppercase tracking-widest text-navy dark:text-white"
+            class="text-xs font-bold uppercase tracking-widest text-white"
           >
             Initiate a Consultation
           </h5>
           <form class="space-y-4">
             <div class="grid grid-cols-2 gap-4">
               <input
-                class="w-full bg-background-light dark:bg-slate-900 border-transparent focus:ring-primary focus:bg-white dark:focus:bg-slate-800 text-sm p-4 rounded-lg transition-all"
+                class="w-full bg-slate-900 border-transparent focus:ring-primary focus:bg-slate-800 text-sm p-4 rounded-lg transition-all"
                 placeholder="First Name"
                 type="text"
               />
               <input
-                class="w-full bg-background-light dark:bg-slate-900 border-transparent focus:ring-primary focus:bg-white dark:focus:bg-slate-800 text-sm p-4 rounded-lg transition-all"
+                class="w-full bg-slate-900 border-transparent focus:ring-primary focus:bg-slate-800 text-sm p-4 rounded-lg transition-all"
                 placeholder="Work Email"
                 type="email"
               />
             </div>
             <textarea
-              class="w-full bg-background-light dark:bg-slate-900 border-transparent focus:ring-primary focus:bg-white dark:focus:bg-slate-800 text-sm p-4 rounded-lg transition-all"
+              class="w-full bg-slate-900 border-transparent focus:ring-primary focus:bg-slate-800 text-sm p-4 rounded-lg transition-all"
               placeholder="Tell us about your growth goals"
               rows="3"
             ></textarea>
             <button
-              class="w-full bg-navy dark:bg-primary text-white font-bold py-4 rounded-lg text-sm uppercase tracking-widest hover:shadow-lg transition-all"
+              class="w-full bg-primary text-white font-bold py-4 rounded-lg text-sm uppercase tracking-widest hover:shadow-lg transition-all"
             >
               Send Inquiry
             </button>
@@ -109,17 +109,17 @@
         </div>
       </div>
       <div
-        class="pt-12 border-t border-slate-100 dark:border-slate-800 flex flex-col md:row justify-between items-center gap-6 text-[10px] uppercase tracking-widest text-slate-400"
+        class="pt-12 border-t border-slate-800 flex flex-col md:row justify-between items-center gap-6 text-[10px] uppercase tracking-widest text-slate-400"
       >
         <p>© 2024 Amortree Tech. All rights reserved.</p>
         <div class="flex gap-10">
           <a
-            class="hover:text-navy dark:hover:text-white transition-colors"
+            class="hover:text-white transition-colors"
             href="#"
             >Privacy Protocol</a
           >
           <a
-            class="hover:text-navy dark:hover:text-white transition-colors"
+            class="hover:text-white transition-colors"
             href="#"
             >Service Agreement</a
           >
