@@ -19,15 +19,15 @@
             <nav class="mainmenu-nav">
               <ul class="mainmenu">
                 <li>
-                  <a href="/services"><span class="text-lb">Services</span></a>
+                  <a href="/services"><span class="text-lb">Solutions</span></a>
                 </li>
                 <li>
                   <a href="/portfolio"
-                    ><span class="text-lg">Portfolio</span></a
+                    ><span class="text-lg">Results</span></a
                   >
                 </li>
                 <li>
-                  <a href="/about"><span class="text-lr">About</span></a>
+                  <a href="/about"><span class="text-lr">Expertise</span></a>
                 </li>
                 <!-- <li><a href="/whyUs"><span class="text-ly">Blog</span></a></li> -->
                 <li>

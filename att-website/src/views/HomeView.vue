@@ -336,11 +336,20 @@ function getTemplate(target) {
 
     <section class="serviceSec py-20 bg-slate-700">
       <div class="container mx-auto px-6">
-        <h2
-          class="text-center text-ly text-slate-800 font-semibold tracking-widest fw-medium mb-5"
+        <div
+          class="flex flex-col md:flex-row md:items-end justify-between mb-4 gap-8"
         >
-          Who We Work With
-        </h2>
+          <div>
+            <div class="inline-block py-2 px-4 rounded bg-secondary text-brand-700 text-[10px] font-black uppercase tracking-[0.3em] mb-2"><span class="text-ly">Market Focus</span></div>
+            <h3 class="text-4xl font-bold text-navy text-ly" style="font-weight: 500">
+              Built for Scalable Ventures
+            </h3>
+          </div>
+          <p class="text-slate-300 max-w-sm">
+            We specialize in three core verticals where our growth frameworks
+            deliver the highest impact.
+          </p>
+        </div>
         <div class="grid md:grid-cols-3 gap-6">
           <div
             class="bg-dark p-10 rounded-2xl text-center hover:shadow-xl transition-shadow hover:scale-[1.04] transition-all"
@@ -350,7 +359,7 @@ function getTemplate(target) {
             >
               <span class="material-symbols-outlined text-3xl">storefront</span>
             </div>
-            <h4 class="font-medium mb-2 text-lg">Local Services</h4>
+            <h4 class="font-medium mb-3 d-block text-lg" style="font-weight: 500;">Local Services</h4>
             <p class="text-slate-300">
               Plumbers, HVAC, Lawyers, and local clinics looking for local
               dominance.
@@ -366,7 +375,7 @@ function getTemplate(target) {
                 >shopping_cart</span
               >
             </div>
-            <h4 class="font-medium mb-2 medium text-lb">E-Commerce Brands</h4>
+            <h4 class="font-medium mb-3 d-block medium text-lb" style="font-weight: 500;">E-Commerce Brands</h4>
             <p class="text-slate-300">
               Shopify &amp; WooCommerce stores looking to scale their monthly
               revenue.
@@ -382,7 +391,7 @@ function getTemplate(target) {
                 >rocket_launch</span
               >
             </div>
-            <h4 class="font-medium mb-2 medium text-lr">Startups &amp; SaaS</h4>
+            <h4 class="font-medium mb-3 d-block medium text-lr" style="font-weight: 500;">Startups &amp; SaaS</h4>
             <p class="text-slate-300">
               Tech startups needing professional UI/UX and growth marketing.
             </p>
@@ -1469,7 +1478,10 @@ function getTemplate(target) {
 
     <section class="py-24 px-6">
       <div class="container mx-auto max-w-4xl">
-        <h2 class="text-3xl font-display font-bold text-center mb-16 text-ly" style="font-weight: 500">
+        <h2
+          class="text-3xl font-display font-bold text-center mb-16 text-ly"
+          style="font-weight: 500"
+        >
           Why Businesses Choose Us
         </h2>
         <div class="space-y-4 w-50 why mx-auto">
