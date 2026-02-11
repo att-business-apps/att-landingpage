@@ -81,7 +81,7 @@ function getTemplate(target) {
               >
                 <div class="flex justify-center mb-4">
                   <div
-                    class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-200 dark:bg-blue-900/30 text-blue-900 dark:text-blue-400 text-xs font-bold uppercase tracking-wider"
+                    class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-200 text-blue-900 text-xs font-bold uppercase tracking-wider"
                   >
                     <span class="relative flex h-2 w-2">
                       <span
@@ -112,8 +112,10 @@ function getTemplate(target) {
                   <span class="gradient-text blue-dark">Classy.</span>
                 </h2>
                 <p class="subtitle w-50 md:w-100 mt-4">
-                  We combine high-performance <b class="text-lr">UI/UX</b> with conversion-optimized
-                  <b class="text-ly">strategy</b> to turn your <b class="text-lr">website</b> into a <b class="text-ly">revenue-generating</b>
+                  We combine high-performance <b class="text-lr">UI/UX</b> with
+                  conversion-optimized <b class="text-ly">strategy</b> to turn
+                  your <b class="text-lr">website</b> into a
+                  <b class="text-ly">revenue-generating</b>
                   machine.
                 </p>
                 <div class="d-flex justify-content-center gap-3 mt-5">
@@ -332,56 +334,56 @@ function getTemplate(target) {
       </ul>
     </div>
 
-    <section class="serviceSec py-20 bg-slate-700 dark:bg-slate-900/50">
+    <section class="serviceSec py-20 bg-slate-700">
       <div class="container mx-auto px-6">
         <h2
-          class="text-center text-ly text-slate-800 dark:text-slate-500 font-semibold tracking-widest fw-medium mb-5"
+          class="text-center text-ly text-slate-800 font-semibold tracking-widest fw-medium mb-5"
         >
           Who We Work With
         </h2>
         <div class="grid md:grid-cols-3 gap-6">
           <div
-            class="bg-dark dark:bg-slate-800 p-10 rounded-2xl text-center hover:shadow-xl transition-shadow hover:scale-[1.04] transition-all"
+            class="bg-dark p-10 rounded-2xl text-center hover:shadow-xl transition-shadow hover:scale-[1.04] transition-all"
           >
             <div
-              class="w-16 h-16 bg-blue-300 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400 rounded-full flex items-center justify-center mx-auto mb-6"
+              class="w-16 h-16 bg-blue-300 text-blue-600 rounded-full flex items-center justify-center mx-auto mb-6"
             >
               <span class="material-symbols-outlined text-3xl">storefront</span>
             </div>
             <h4 class="font-medium mb-2 text-lg">Local Services</h4>
-            <p class="text-slate-300 dark:text-slate-400">
+            <p class="text-slate-300">
               Plumbers, HVAC, Lawyers, and local clinics looking for local
               dominance.
             </p>
           </div>
           <div
-            class="bg-dark dark:bg-slate-800 p-10 rounded-2xl text-center hover:shadow-xl transition-shadow hover:scale-[1.06] transition-all"
+            class="bg-dark p-10 rounded-2xl text-center hover:shadow-xl transition-shadow hover:scale-[1.06] transition-all"
           >
             <div
-              class="w-16 h-16 bg-indigo-300 dark:bg-indigo-900/30 text-indigo-600 dark:text-indigo-400 rounded-full flex items-center justify-center mx-auto mb-6"
+              class="w-16 h-16 bg-indigo-300 text-indigo-600 rounded-full flex items-center justify-center mx-auto mb-6"
             >
               <span class="material-symbols-outlined text-3xl"
                 >shopping_cart</span
               >
             </div>
             <h4 class="font-medium mb-2 medium text-lb">E-Commerce Brands</h4>
-            <p class="text-slate-300 dark:text-slate-400">
+            <p class="text-slate-300">
               Shopify &amp; WooCommerce stores looking to scale their monthly
               revenue.
             </p>
           </div>
           <div
-            class="bg-dark dark:bg-slate-800 p-10 rounded-2xl text-center hover:shadow-xl transition-shadow hover:scale-[1.04] transition-all"
+            class="bg-dark p-10 rounded-2xl text-center hover:shadow-xl transition-shadow hover:scale-[1.04] transition-all"
           >
             <div
-              class="w-16 h-16 bg-purple-300 dark:bg-purple-900/30 text-purple-600 dark:text-purple-400 rounded-full flex items-center justify-center mx-auto mb-6"
+              class="w-16 h-16 bg-purple-300 text-purple-600 rounded-full flex items-center justify-center mx-auto mb-6"
             >
               <span class="material-symbols-outlined text-3xl"
                 >rocket_launch</span
               >
             </div>
             <h4 class="font-medium mb-2 medium text-lr">Startups &amp; SaaS</h4>
-            <p class="text-slate-300 dark:text-slate-400">
+            <p class="text-slate-300">
               Tech startups needing professional UI/UX and growth marketing.
             </p>
           </div>
@@ -394,7 +396,7 @@ function getTemplate(target) {
 
     <section class="py-24 px-4">
       <div
-        class="max-w-6xl mx-auto dark:bg-slate-800 rounded-3xl p-10 border border-secondary shadow-sm relative overflow-hidden hover:scale-[1.08] transition-all"
+        class="max-w-6xl mx-auto rounded-3xl p-10 border border-secondary shadow-sm relative overflow-hidden hover:scale-[1.08] transition-all"
       >
         <div class="absolute top-0 right-0 p-8 opacity-10">
           <span class="material-icons-outlined text-ly" style="font-size: 16rem"
@@ -406,14 +408,13 @@ function getTemplate(target) {
             class="text-2xl font-medium mb-8 flex items-center gap-3"
             style="font-weight: 500"
           >
-            <span
-              class="p-2 w-10 h-10 d-flex relative bg-amber-100 dark:bg-amber-900/30 rounded-lg"
-            >
+            <span class="p-2 w-10 h-10 d-flex relative bg-amber-100 rounded-lg">
               <span class="material-icons-outlined text-center text-lr"
                 >warning</span
               >
             </span>
-            Common <span class="text-lr">Problems</span> We <span class="text-lr">Solve</span>
+            Common <span class="text-lr">Problems</span> We
+            <span class="text-lr">Solve</span>
           </h2>
           <div class="grid md:grid-cols-2 gap-y-6 gap-x-12">
             <div class="flex items-start gap-4">
@@ -477,7 +478,7 @@ function getTemplate(target) {
         </div>
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div
-            class="group relative bg-background-light dark:bg-slate-800 p-8 rounded-xl border border-secondary transition-all  hover:scale-[1.05] hover:shadow-2xl flex flex-col h-full"
+            class="group relative bg-background-light p-8 rounded-xl border border-secondary transition-all hover:scale-[1.05] hover:shadow-2xl flex flex-col h-full"
           >
             <div
               class="w-14 h-14 bg-blue-500/10 text-blue-500 rounded-lg flex items-center justify-center mb-6"
@@ -511,7 +512,7 @@ function getTemplate(target) {
                 CRM Integration &amp; Automation
               </li>
             </ul>
-            <div class="pt-6 border-t border-slate-200 dark:border-slate-700">
+            <div class="pt-6 border-t border-slate-200">
               <p class="text-xs uppercase font-bold text-slate-400 mb-2">
                 <small>Primary Outcome</small>
               </p>
@@ -524,15 +525,15 @@ function getTemplate(target) {
             </div>
           </div>
           <div
-            class="group relative bg-slate-900 dark:bg-primary p-8 rounded-xl hover:scale-[1.08] transition-all shadow-2xl flex flex-col h-full"
+            class="group relative bg-slate-900 p-8 rounded-xl hover:scale-[1.08] transition-all shadow-2xl flex flex-col h-full"
           >
             <div
-              class="absolute top-0 right-8 -translate-y-1/2 bg-primary dark:bg-slate-900 text-slate-100 dark:text-primary px-4 py-1 rounded-full text-xs font-bold uppercase tracking-widest"
+              class="absolute top-0 right-8 -translate-y-1/2 bg-primary text-slate-100 px-4 py-1 rounded-full text-xs font-bold uppercase tracking-widest"
             >
               Most Popular
             </div>
             <div
-              class="w-14 h-14 bg-white/10 dark:bg-slate-900/10 text-white dark:text-slate-900 rounded-lg flex items-center justify-center mb-6"
+              class="w-14 h-14 bg-white/10 dark:bg-slate-900/10 text-white rounded-lg flex items-center justify-center mb-6"
             >
               <span class="material-icons-outlined text-3xl">shopping_bag</span>
             </div>
@@ -635,89 +636,185 @@ function getTemplate(target) {
             </div>
           </div>
         </div>
+        <div class="d-flex justify-content-center gap-3 mt-5">
+          <a
+            class="amor-btn btn-fill-primary btn-large"
+            href="https://wa.me/917975859061/?text=Get%20my%20free%20GROWTH%20Audit."
+            >Get My Free Growth Audit</a
+          >
+        </div>
       </div>
     </section>
 
     <section
-      class="py-24 relative overflow-hidden"
-      style="background: linear-gradient(135deg, #27272e 0%, #23232a 100%)"
+      class="py-40 bg-charcoal-50"
       id="results"
+      style="background: linear-gradient(135deg, #27272e 0%, #23232a 100%)"
     >
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-          <div>
-            <h3
-              class="text-4xl font-display font-medium mb-8"
-              style="font-weight: 600"
+      <div class="max-w-7xl mx-auto px-6 lg:px-10">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-24 items-center">
+          <div class="lg:col-span-6">
+            <div
+              class="inline-block py-2 px-4 rounded bg-secondary text-brand-700 text-[10px] font-black uppercase tracking-[0.3em] mb-2"
             >
-              We Let the <span class="text-lb">Numbers</span> Do the Talking
-            </h3>
-            <div class="space-y-8">
-              <div class="flex items-center gap-6">
-                <div class="text-5xl font-extrabold text-lb min:w-150">42%</div>
-                <div>
-                  <h4
-                    class="font-bold text-lb text-md mb-2"
-                    style="font-weight: 600"
+              <span class="text-ly">Performance Metrics</span>
+            </div>
+            <h2
+              class="text-6xl lg:text-8xl font-display mb-12 leading-tight"
+              style="font-weight: 500"
+            >
+              Hard Data. <br /><span class="text-gradient-brand text-ly"
+                >Zero Guesswork.</span
+              >
+            </h2>
+            <div class="space-y-12 relative">
+              <div class="group">
+                <div class="flex justify-between items-center mb-0">
+                  <div>
+                    <h4 class="font-bold text-2xl text-charcoal-900 mb-1">
+                      Conversion Efficiency
+                    </h4>
+                    <p class="text-charcoal-500 font-medium mb-4">
+                      Post-optimization average
+                    </p>
+                  </div>
+                  <span class="text-5xl font-black text-ly font-display"
+                    >+42%</span
                   >
-                    Avg. Conversion Lift
-                  </h4>
-                  <p class="text-slate-300 mb-0">
-                    Increase in organic conversion rates within the first 90
-                    days of launch.
-                  </p>
+                </div>
+                <div
+                  class="h-4 w-full bg-light rounded-full overflow-hidden p-1"
+                >
+                  <div
+                    class="h-full bg-warning rounded-full shadow-[0_0_10px_rgba(12,146,235,0.2)] transition-all duration-1000"
+                    style="width: 88%"
+                  ></div>
                 </div>
               </div>
-              <div class="flex items-center gap-6">
-                <div class="text-5xl font-extrabold text-lb">3.2x</div>
-                <div>
-                  <h4
-                    class="font-bold text-lb text-md mb-2"
-                    style="font-weight: 600"
+              <div class="group">
+                <div class="flex justify-between items-center mb-0">
+                  <div>
+                    <h4 class="font-bold text-2xl text-charcoal-900 mb-1">
+                      Pipeline Velocity
+                    </h4>
+                    <p class="text-charcoal-500 font-medium">
+                      Average B2B acceleration
+                    </p>
+                  </div>
+                  <span class="text-5xl font-black text-ly font-display"
+                    >3.5x</span
                   >
-                    Growth in Qualified Pipeline
-                  </h4>
-                  <p class="text-slate-300 mb-0">
-                    Our B2B clients see a massive jump in lead quality and sales
-                    velocity.
-                  </p>
+                </div>
+                <div
+                  class="h-4 w-full bg-light rounded-full overflow-hidden p-1"
+                >
+                  <div
+                    class="h-full bg-warning rounded-full shadow-[0_0_10px_rgba(12,146,235,0.2)]"
+                    style="width: 94%"
+                  ></div>
                 </div>
               </div>
-              <div class="flex items-center gap-6">
-                <div class="text-5xl font-extrabold text-lb">₹1M+</div>
-                <div>
-                  <h4
-                    class="font-bold text-lb text-md mb-2"
-                    style="font-weight: 600"
+              <div class="group">
+                <div class="flex justify-between items-center mb-0">
+                  <div>
+                    <h4 class="font-bold text-2xl text-charcoal-900 mb-1">
+                      Managed Ad Revenue
+                    </h4>
+                    <p class="text-charcoal-500 font-medium">
+                      Cumulative yearly scaling
+                    </p>
+                  </div>
+                  <span class="text-5xl font-black text-ly font-display"
+                    >$12M+</span
                   >
-                    Revenue Managed Yearly
-                  </h4>
-                  <p class="text-slate-300 mb-0">
-                    Proven experience managing high-stakes growth campaigns.
-                  </p>
+                </div>
+                <div
+                  class="h-4 w-full bg-light rounded-full overflow-hidden p-1"
+                >
+                  <div
+                    class="h-full bg-warning rounded-full shadow-[0_0_10px_rgba(12,146,235,0.2)]"
+                    style="width: 76%"
+                  ></div>
                 </div>
               </div>
             </div>
           </div>
-          <div class="relative">
+          <div class="lg:col-span-6 relative">
             <div
-              class="bg-slate-200 dark:bg-slate-800 rounded-2xl aspect-video overflow-hidden shadow-2xl border-4 border-dark dark:border-slate-700"
+              class="relative rounded-[3rem] overflow-hidden shadow-2xl shadow-charcoal-200/50 group border border-charcoal-100"
             >
               <img
                 alt="Data analytics dashboard"
-                class="w-full h-full object-cover"
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuB8zZP-Tlxh9KIu6SRqwAiYhs-O1fuFUN-_mChh-qrFBK057WyxrphM0mPK_rYrzT-bxUaNc9lX2GTSWKFmhsXwcs-IB9WdSFPdBaMZMG5eYQAnSZwwX3ckIUlQDZ32MxlTxX1pw7nwmvCe6LTUy8jbtTGWtwMAMSoCmim_mUiKGpgXddNAVzOWo9GGB0-hVtXlSCtguw2Wmd71fxg7rDSCID2AYJUXfS6ZITIj09wxpEPV3_EHniVRUJkEIcnXxylfcToQRZOC47Y"
+                class="w-full aspect-[4/5] object-cover group-hover:scale-105 transition-transform duration-1000"
+                src="../assets/img/project/c4/sa-ad.png"
               />
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-white via-transparent to-transparent"
+              ></div>
+              <div
+                class="absolute bottom-8 left-8 right-8 p-10 bg-white/95 backdrop-blur-xl rounded-3xl border border-charcoal-100 shadow-xl"
+              >
+                <div class="flex gap-1 text-brand-600 mb-3">
+                  <span class="material-symbols-outlined fill-1 text-ly"
+                    >star</span
+                  >
+                  <span class="material-symbols-outlined fill-1 text-ly"
+                    >star</span
+                  >
+                  <span class="material-symbols-outlined fill-1 text-ly"
+                    >star</span
+                  >
+                  <span class="material-symbols-outlined fill-1 text-ly"
+                    >star</span
+                  >
+                  <span class="material-symbols-outlined fill-1 text-ly"
+                    >star</span
+                  >
+                </div>
+                <p
+                  class="text-dark font-bold text-xl leading-relaxed mb-6 italic"
+                >
+                  "Amortree is a very professional and end-to-end service
+                  provider. They have good understanding of the clients needs
+                  and work in a timely and efficient manner."
+                </p>
+                <div class="flex items-center gap-4">
+                  <img
+                    alt="Client"
+                    class="w-14 h-14"
+                    src="../assets/img/project/c4/icon-sa.svg"
+                  />
+                  <div>
+                    <h5 class="text-base font-black text-secondary mb-0">
+                      Menaka Krishna
+                    </h5>
+                    <small class="text-xs text-secondary mb-0">
+                      CEO @ SteadyAsset
+                    </small>
+                  </div>
+                </div>
+              </div>
             </div>
             <div
-              class="absolute -bottom-6 -right-6 bg-warning p-4 rounded-xl shadow-xl max-w-xs hidden md:block"
+              class="absolute bg-dark -top-10 -right-10 bg-brand-600 p-8 rounded-3xl shadow-2xl hidden xl:block"
             >
-              <p class="text-slate-800 font-bold mb-1">
-                "The best ROI we've seen in 5 years of operation."
-              </p>
-              <small class="text-xs text-slate-900 font-medium mb-0">
-                — Menaka Krishna, CEO @ SteadyAsset
-              </small>
+              <div class="flex items-center gap-6">
+                <div
+                  class="w-16 h-16 bg-white text-brand-600 rounded-full flex items-center justify-center"
+                >
+                  <span class="material-symbols-outlined text-4xl font-bold"
+                    >payments</span
+                  >
+                </div>
+                <div>
+                  <p
+                    class="text-xs font-black text-white uppercase tracking-[0.2em] mb-1"
+                  >
+                    Live ROAS
+                  </p>
+                  <p class="text-4xl font-black text-ly">8.44x</p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -733,28 +830,36 @@ function getTemplate(target) {
           Our Proven <span class="text-ly">4-Step Process</span>
         </h2>
         <div class="grid grid-cols-1 md:grid-cols-4 gap-0">
-          <div class="step-arrow bg-slate-900 text-white p-8 mb-4 md:mb-0 hover:scale-[1.04] transition-all">
+          <div
+            class="step-arrow bg-slate-900 text-white p-8 mb-4 md:mb-0 hover:scale-[1.04] transition-all"
+          >
             <div class="text-4xl font-black mb-4 opacity-50">01</div>
             <h5 class="font-bold text-lg mb-2 d-block">Audit &amp; Strategy</h5>
             <small class="text-sm text-slate-300">
               Deep dive into your metrics and map out the growth path.
             </small>
           </div>
-          <div class="step-arrow bg-slate-800 text-white p-8 mb-4 md:mb-0 hover:scale-[1.06] transition-all">
+          <div
+            class="step-arrow bg-slate-800 text-white p-8 mb-4 md:mb-0 hover:scale-[1.06] transition-all"
+          >
             <div class="text-4xl font-black mb-4 opacity-80">02</div>
             <h5 class="font-bold text-lr mb-2 d-block">Design &amp; Build</h5>
             <small class="text-sm text-slate-300">
               Crafting your high-converting assets with precision.
             </small>
           </div>
-          <div class="step-arrow bg-slate-700 text-white p-8 mb-4 md:mb-0 hover:scale-[1.08] transition-all">
+          <div
+            class="step-arrow bg-slate-700 text-white p-8 mb-4 md:mb-0 hover:scale-[1.08] transition-all"
+          >
             <div class="text-4xl font-black mb-4 opacity-80">03</div>
             <h5 class="font-bold text-ly mb-2 d-block">Launch</h5>
             <small class="text-sm text-slate-100">
               Deploying campaigns and monitoring live performance.
             </small>
           </div>
-          <div class="step-arrow bg-slate-600 text-slate-900 p-8 mb-4 md:mb-0 hover:scale-[1.1] transition-all">
+          <div
+            class="step-arrow bg-slate-600 text-slate-900 p-8 mb-4 md:mb-0 hover:scale-[1.1] transition-all"
+          >
             <div class="text-4xl font-black mb-4 opacity-80">04</div>
             <h5 class="font-bold text-lb mb-2 d-block">Optimize &amp; Scale</h5>
             <small class="text-sm text-slate-300">
@@ -1051,7 +1156,6 @@ function getTemplate(target) {
       </ul>
     </section>
 
-
     <section class="section section-padding bg-color-light" id="reviews">
       <div class="container-fluid">
         <div class="section-heading heading-center">
@@ -1079,22 +1183,26 @@ function getTemplate(target) {
             <p
               class="text-xl text-white italic mb-10 leading-relaxed font-light"
             >
-              "Amortree is a very professional and end-to-end service provider. They have good understanding of the clients needs and work in a timely and efficient manner."
+              "Amortree is a very professional and end-to-end service provider.
+              They have good understanding of the clients needs and work in a
+              timely and efficient manner."
             </p>
             <div class="flex items-center gap-4">
               <img
-                  src="../assets/img/project/c4/icon-sa.svg"
-                  class="m-0"
-                  style="height: 40px"
-                  alt="SteadyAsset Logo"
-                />
+                src="../assets/img/project/c4/icon-sa.svg"
+                class="m-0"
+                style="height: 40px"
+                alt="SteadyAsset Logo"
+              />
               <div>
                 <p
                   class="font-bold text-white uppercase text-sm tracking-widest mb-1"
                 >
                   Menaka Krishna
                 </p>
-                <small class="text-xs text-ll font-bold mb-0">CEO, SteadyAsset</small>
+                <small class="text-xs text-ll font-bold mb-0"
+                  >CEO, SteadyAsset</small
+                >
               </div>
             </div>
           </div>
@@ -1114,22 +1222,29 @@ function getTemplate(target) {
             <p
               class="text-xl text-white italic mb-10 leading-relaxed font-light"
             >
-              "Hi, I just wanted to take a moment to express my sincere appreciation for the outstanding work you've done. Completing it on time and to such a high standard is a testament to your dedication and expertise. Your efforts have not gone unnoticed and I'm grateful for your contributions. Thank you again for a job well done!"
+              "Hi, I just wanted to take a moment to express my sincere
+              appreciation for the outstanding work you've done. Completing it
+              on time and to such a high standard is a testament to your
+              dedication and expertise. Your efforts have not gone unnoticed and
+              I'm grateful for your contributions. Thank you again for a job
+              well done!"
             </p>
             <div class="flex items-center gap-4">
               <img
-                  src="../assets/img/project/c2/icon-sc.svg"
-                  class="m-0"
-                  style="height: 40px"
-                  alt="SteadyAsset Logo"
-                />
+                src="../assets/img/project/c2/icon-sc.svg"
+                class="m-0"
+                style="height: 40px"
+                alt="SteadyAsset Logo"
+              />
               <div>
                 <p
                   class="font-bold text-white uppercase text-sm tracking-widest mb-1"
                 >
                   Sandeep L
                 </p>
-                <small class="text-xs text-ll font-bold mb-0">Co-Founder, Solved Cube IT Solution</small>
+                <small class="text-xs text-ll font-bold mb-0"
+                  >Co-Founder, Solved Cube IT Solution</small
+                >
               </div>
             </div>
           </div>
@@ -1149,22 +1264,26 @@ function getTemplate(target) {
             <p
               class="text-xl text-white italic mb-10 leading-relaxed font-light"
             >
-              "Amortree Tech is a pleasure to work with. They're responsive, professional, and always willing to go the extra mile. I highly recommend their services."
+              "Amortree Tech is a pleasure to work with. They're responsive,
+              professional, and always willing to go the extra mile. I highly
+              recommend their services."
             </p>
             <div class="flex items-center gap-4">
               <img
-                  src="../assets/img/project/c9/icon-sd.svg"
-                  class="m-0"
-                  style="height: 40px"
-                  alt="SteadyAsset Logo"
-                />
+                src="../assets/img/project/c9/icon-sd.svg"
+                class="m-0"
+                style="height: 40px"
+                alt="SteadyAsset Logo"
+              />
               <div>
                 <p
                   class="font-bold text-white uppercase text-sm tracking-widest mb-1"
                 >
                   Bharathkumar MS
                 </p>
-                <small class="text-xs text-ll font-bold mb-0">Founder, Samsiddhi Designs</small>
+                <small class="text-xs text-ll font-bold mb-0"
+                  >Founder, Samsiddhi Designs</small
+                >
               </div>
             </div>
           </div>
@@ -1184,26 +1303,29 @@ function getTemplate(target) {
             <p
               class="text-xl text-white italic mb-10 leading-relaxed font-light"
             >
-              "Good understanding of the client's need. Very good professional and service provider.  you again for a job well done, All the best 👍👍💐💐"
+              "Good understanding of the client's need. Very good professional
+              and service provider. you again for a job well done, All the best
+              👍👍💐💐"
             </p>
             <div class="flex items-center gap-4">
               <img
-                  src="../assets/img/project/c6/spr-logo.svg"
-                  class="m-0"
-                  style="height: 40px"
-                  alt="SteadyAsset Logo"
-                />
+                src="../assets/img/project/c6/spr-logo.svg"
+                class="m-0"
+                style="height: 40px"
+                alt="SteadyAsset Logo"
+              />
               <div>
                 <p
                   class="font-bold text-white uppercase text-sm tracking-widest mb-1"
                 >
                   Suresh Babu
                 </p>
-                <small class="text-xs text-ll font-bold mb-0">CEO, SPR Real Estate</small>
+                <small class="text-xs text-ll font-bold mb-0"
+                  >CEO, SPR Real Estate</small
+                >
               </div>
             </div>
           </div>
-          
         </div>
 
         <div class="d-none row">
@@ -1343,6 +1465,84 @@ function getTemplate(target) {
           <img src="../assets/img/shapes/bubble-40.png" alt="Bubble" />
         </li>
       </ul>
+    </section>
+
+    <section class="py-24 px-6">
+      <div class="container mx-auto max-w-4xl">
+        <h2 class="text-3xl font-display font-bold text-center mb-16 text-ly" style="font-weight: 500">
+          Why Businesses Choose Us
+        </h2>
+        <div class="space-y-4 w-50 why mx-auto">
+          <div
+            class="group bg-dark p-6 rounded-2xl border border-slate-700 flex items-center justify-between hover:border-primary transition-all cursor-default"
+          >
+            <div class="flex items-center gap-4">
+              <div
+                class="w-10 h-10 rounded-full bg-primary/10 text-ly flex items-center justify-center"
+              >
+                <span class="material-symbols-outlined">target</span>
+              </div>
+              <span class="text-xl font-semibold">Strategy-First Approach</span>
+            </div>
+            <span
+              class="material-symbols-outlined text-slate-400 group-hover:text-primary"
+              >arrow_forward</span
+            >
+          </div>
+          <div
+            class="group bg-dark p-6 rounded-2xl border border-slate-700 flex items-center justify-between hover:border-primary transition-all cursor-default"
+          >
+            <div class="flex items-center gap-4">
+              <div
+                class="w-10 h-10 rounded-full bg-primary/10 text-ly flex items-center justify-center"
+              >
+                <span class="material-symbols-outlined">trending_up</span>
+              </div>
+              <span class="text-xl font-semibold"
+                >Business Results Focused</span
+              >
+            </div>
+            <span
+              class="material-symbols-outlined text-slate-400 group-hover:text-primary"
+              >arrow_forward</span
+            >
+          </div>
+          <div
+            class="group bg-dark p-6 rounded-2xl border border-slate-700 flex items-center justify-between hover:border-primary transition-all cursor-default"
+          >
+            <div class="flex items-center gap-4">
+              <div
+                class="w-10 h-10 rounded-full bg-primary/10 text-ly flex items-center justify-center"
+              >
+                <span class="material-symbols-outlined">analytics</span>
+              </div>
+              <span class="text-xl font-semibold"
+                >100% Data-Driven Decisions</span
+              >
+            </div>
+            <span
+              class="material-symbols-outlined text-slate-400 group-hover:text-primary"
+              >arrow_forward</span
+            >
+          </div>
+          <div
+            class="group bg-dark p-6 rounded-2xl border border-slate-700 flex items-center justify-between hover:border-primary transition-all cursor-default"
+          >
+            <div class="flex items-center gap-4">
+              <div
+                class="w-10 h-10 rounded-full bg-primary/10 text-ly flex items-center justify-center"
+              >
+                <span class="material-symbols-outlined">handshake</span>
+              </div>
+              <span class="text-xl font-semibold">True Growth Partners</span>
+            </div>
+            <span
+              class="material-symbols-outlined text-slate-400 group-hover:text-primary"
+              >arrow_forward</span
+            >
+          </div>
+        </div>
+      </div>
     </section>
 
     <section

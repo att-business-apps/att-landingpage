@@ -202,7 +202,7 @@
                     font-size: 64px;
                 }
                 @media #{$sm-layout} {
-                    font-size: 40px;
+                    font-size: 56px;
                     margin-bottom: 1rem;
                 }
                 .gradient-text-light {
@@ -548,3 +548,11 @@
     }
 }
 
+
+.w-50 {
+    &.why {
+        @media #{$smlg-device} {
+            width: 100% !important;
+        }
+    }
+}
