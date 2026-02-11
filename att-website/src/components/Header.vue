@@ -38,7 +38,7 @@
           </div>
           <div class="header-action">
             <a
-              class="amor-btn btn-borderd light uppercase text-xs font-bold tracking-widest"
+              class="amor-btn btn-borderd light uppercase text-xs font-bold tracking-widest sm:p-0"
               href="https://wa.me/917975859061/?text=Get%20my%20free%20GROWTH%20Audit."
               >Free Audit</a
             >

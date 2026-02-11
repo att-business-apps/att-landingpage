@@ -56,51 +56,7 @@
       }
     }
   }
-  &.header-style-1 {
-    .amor-mainmenu {
-      &.amor-sticky {
-        .header-navbar {
-          .header-logo {
-            .light-version-logo {
-              display: none;
-            }
-            .sticky-logo {
-              display: block;
-            }
-          }
-        }
-      }
-    }
-  }
-  &.header-style-2 {
-    .amor-mainmenu {
-      padding: 50px 80px;
-      @media #{$laptop-device} {
-        padding: 35px 15px;
-      }
-      @media #{$smlg-device} {
-        padding: 35px 15px;
-      }
-      @media #{$large-mobile} {
-        padding: 30px 0;
-      }
-      &.amor-sticky {
-        padding: 15px 80px;
-        @media #{$laptop-device} {
-          padding: 15px;
-        }
-        @media #{$smlg-device} {
-          padding: 15px;
-        }
-        @media #{$large-mobile} {
-          padding: 15px 0;
-        }
-      }
-      .mainmenu {
-        justify-content: center;
-      }
-    }
-  }
+  
   &.header-style-3 {
     .amor-mainmenu {
       &.amor-sticky {
@@ -114,6 +70,17 @@
             }
           }
         }
+        .header-action {
+                .abt-btn {
+                    &.light {
+                        
+                        @media #{$sm-layout} {
+                            padding: .75rem 1rem !important;
+                            font-size: .765rem;
+                        }
+                    }
+                }
+            }
       }
     }
     .header-action {
@@ -122,42 +89,20 @@
           background-color: var(--color-light);
         }
       }
-    }
-  }
-  &.header-style-4 {
-    @media only screen and (max-width: 1299px) {
-      .header-main-nav {
-        margin: 0 15px;
-      }
-    }
-    @media #{$md-layout} {
-      .header-main-nav {
-        margin: 0;
-      }
-    }
-    .mainmenu-nav {
-      @media #{$md-layout} {
-        background-color: var(--color-dark);
-      }
-      .mainmenu {
-        .menu-item-has-children {
-          .amor-submenu {
-            background-color: var(--color-dark);
-            li {
-              a {
-                color: var(--color-light);
-                &:hover {
-                  color: var(--color-primary);
-                }
-                &.active {
-                  color: var(--color-primary);
-                }
-              }
-            }
-          }
+
+      .amor-btn {
+        display: block;
+        padding: 15px 40px;
+        @media #{$lg-layout} {
+          padding: 15px 25px;
+        }
+        @media #{$md-layout} {
+          padding: .8rem 1.25rem !important;
+          font-size: .765rem;
         }
       }
     }
+  }
     .mobile-nav-header {
       border-color: var(--color-gray-4);
       .mobile-nav-logo {
@@ -207,7 +152,7 @@
       }
     }
   }
-}
+
 
 .amor-mainmenu {
   padding: 0.45rem 0;

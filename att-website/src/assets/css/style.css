@@ -14531,82 +14531,51 @@ Frequently Asked Questions
       @media only screen and (max-width: 991px) {
         .amor-header .header-navbar .header-main-nav {
           margin: 0; } }
-  .amor-header.header-style-1 .amor-mainmenu.amor-sticky .header-navbar .header-logo .light-version-logo {
-    display: none; }
-  .amor-header.header-style-1 .amor-mainmenu.amor-sticky .header-navbar .header-logo .sticky-logo {
-    display: block; }
-  .amor-header.header-style-2 .amor-mainmenu {
-    padding: 50px 80px; }
-    @media only screen and (min-width: 1200px) and (max-width: 1599px) {
-      .amor-header.header-style-2 .amor-mainmenu {
-        padding: 35px 15px; } }
-    @media only screen and (max-width: 1199px) {
-      .amor-header.header-style-2 .amor-mainmenu {
-        padding: 35px 15px; } }
-    @media only screen and (max-width: 575px) {
-      .amor-header.header-style-2 .amor-mainmenu {
-        padding: 30px 0; } }
-    .amor-header.header-style-2 .amor-mainmenu.amor-sticky {
-      padding: 15px 80px; }
-      @media only screen and (min-width: 1200px) and (max-width: 1599px) {
-        .amor-header.header-style-2 .amor-mainmenu.amor-sticky {
-          padding: 15px; } }
-      @media only screen and (max-width: 1199px) {
-        .amor-header.header-style-2 .amor-mainmenu.amor-sticky {
-          padding: 15px; } }
-      @media only screen and (max-width: 575px) {
-        .amor-header.header-style-2 .amor-mainmenu.amor-sticky {
-          padding: 15px 0; } }
-    .amor-header.header-style-2 .amor-mainmenu .mainmenu {
-      justify-content: center; }
   .amor-header.header-style-3 .amor-mainmenu.amor-sticky .header-navbar .header-logo .light-version-logo {
     display: none; }
   .amor-header.header-style-3 .amor-mainmenu.amor-sticky .header-navbar .header-logo .sticky-logo {
     display: block; }
+  @media only screen and (max-width: 767px) {
+    .amor-header.header-style-3 .amor-mainmenu.amor-sticky .header-action .abt-btn.light {
+      padding: .75rem 1rem !important;
+      font-size: .765rem; } }
   .amor-header.header-style-3 .header-action .sidemenu-btn .btn-wrap {
     background-color: var(--color-light); }
-  @media only screen and (max-width: 1299px) {
-    .amor-header.header-style-4 .header-main-nav {
-      margin: 0 15px; } }
-  @media only screen and (max-width: 991px) {
-    .amor-header.header-style-4 .header-main-nav {
-      margin: 0; } }
-  @media only screen and (max-width: 991px) {
-    .amor-header.header-style-4 .mainmenu-nav {
-      background-color: var(--color-dark); } }
-  .amor-header.header-style-4 .mainmenu-nav .mainmenu .menu-item-has-children .amor-submenu {
-    background-color: var(--color-dark); }
-    .amor-header.header-style-4 .mainmenu-nav .mainmenu .menu-item-has-children .amor-submenu li a {
-      color: var(--color-light); }
-      .amor-header.header-style-4 .mainmenu-nav .mainmenu .menu-item-has-children .amor-submenu li a:hover {
-        color: var(--color-primary); }
-      .amor-header.header-style-4 .mainmenu-nav .mainmenu .menu-item-has-children .amor-submenu li a.active {
-        color: var(--color-primary); }
-  .amor-header.header-style-4 .mobile-nav-header {
+  .amor-header.header-style-3 .header-action .amor-btn {
+    display: block;
+    padding: 15px 40px; }
+    @media only screen and (min-width: 992px) and (max-width: 1199px) {
+      .amor-header.header-style-3 .header-action .amor-btn {
+        padding: 15px 25px; } }
+    @media only screen and (max-width: 991px) {
+      .amor-header.header-style-3 .header-action .amor-btn {
+        padding: .8rem 1.25rem !important;
+        font-size: .765rem; } }
+  .amor-header .mobile-nav-header {
     border-color: var(--color-gray-4); }
-    .amor-header.header-style-4 .mobile-nav-header .mobile-nav-logo .light-mode {
+    .amor-header .mobile-nav-header .mobile-nav-logo .light-mode {
       display: none; }
-    .amor-header.header-style-4 .mobile-nav-header .mobile-nav-logo .dark-mode {
+    .amor-header .mobile-nav-header .mobile-nav-logo .dark-mode {
       display: block; }
-    .amor-header.header-style-4 .mobile-nav-header .mobile-menu-close {
+    .amor-header .mobile-nav-header .mobile-menu-close {
       background-color: var(--color-white);
       color: var(--color-black);
       border: none; }
-  .amor-header.header-style-4 .amor-mainmenu.amor-sticky {
+  .amor-header .amor-mainmenu.amor-sticky {
     background-color: var(--color-dark); }
   @media only screen and (max-width: 1199px) {
-    .amor-header.header-style-4 .mainmenu li {
+    .amor-header .mainmenu li {
       margin: 0 10px; } }
   @media only screen and (max-width: 991px) {
-    .amor-header.header-style-4 .mainmenu li {
+    .amor-header .mainmenu li {
       border-color: var(--color-gray-4); } }
-  .amor-header.header-style-4 .mainmenu li a {
+  .amor-header .mainmenu li a {
     color: var(--color-white); }
-    .amor-header.header-style-4 .mainmenu li a::before {
+    .amor-header .mainmenu li a::before {
       background-color: var(--color-white); }
-    .amor-header.header-style-4 .mainmenu li a::after {
+    .amor-header .mainmenu li a::after {
       color: var(--color-gray-4); }
-  .amor-header.header-style-4 .header-action .header-btn .amor-btn {
+  .amor-header .header-action .header-btn .amor-btn {
     display: block; }
 
 .amor-mainmenu {
