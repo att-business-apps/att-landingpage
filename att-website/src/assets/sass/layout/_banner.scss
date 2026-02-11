@@ -54,7 +54,7 @@
             width: 80%;
             font-size: 1.35rem;
             @media #{$sm-layout} {
-                width: 100%;
+                width: 100% !important;
                 font-size: 1rem;
             }
         }
@@ -182,8 +182,8 @@
                 padding-bottom: 0;
             }
             .title {
-                font-size: 88px;
-                line-height: 1.2;
+                font-size: 128px;
+                line-height: 1;
                 font-weight: 600;
                 display: inline-block;
                 background-clip: text;

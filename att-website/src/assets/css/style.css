@@ -15764,7 +15764,7 @@ Frequently Asked Questions
     font-size: 1.35rem; }
     @media only screen and (max-width: 767px) {
       .banner .banner-content .subtitle {
-        width: 100%;
+        width: 100% !important;
         font-size: 1rem; } }
   .banner .banner-content .amor-btn {
     padding: 28px 45px;
@@ -15867,8 +15867,8 @@ Frequently Asked Questions
           margin-top: 0;
           padding-bottom: 0; } }
       .banner.banner-style-1 .banner-content .title {
-        font-size: 88px;
-        line-height: 1.2;
+        font-size: 128px;
+        line-height: 1;
         font-weight: 600;
         display: inline-block;
         background-clip: text;

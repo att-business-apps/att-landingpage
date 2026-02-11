@@ -94,26 +94,26 @@ function getTemplate(target) {
                     Tech-Driven Growth Strategy
                   </div>
                 </div>
-                <h1 class="title d-inline" ref="myElement">
+                <!-- <h1 class="title d-inline" ref="myElement">
                   Get 20-40
                   <span class="gradient-text-light">Qualified Leads</span>
                   Monthly with
                   <span class="gradient-text-light">Data-Driven Design</span>
-                </h1>
-
-                <!-- <h1 class="title d-inline" ref="myElement">
-                  We Engineer
-                  <span class="gradient-text-light">Measurable</span> Growth.
                 </h1> -->
+
+                <h1 class="title d-inline" ref="myElement">
+                  Scale Revenue with
+                  <span class="gradient-text-light">Precision Design.</span>
+                </h1>
 
                 <h2 class="h5 mt-4 flex items-center justify-center gap-3">
                   <span class="gradient-text blue-dark">Sleek.</span>
                   <span class="gradient-text yellow-dark">Stylish.</span>
                   <span class="gradient-text blue-dark">Classy.</span>
                 </h2>
-                <p class="subtitle w-50 mt-4">
-                  We combine high-performance UI/UX with conversion-optimized
-                  strategy to turn your website into a revenue-generating
+                <p class="subtitle w-50 md:w-100 mt-4">
+                  We combine high-performance <b class="text-lr">UI/UX</b> with conversion-optimized
+                  <b class="text-ly">strategy</b> to turn your <b class="text-lr">website</b> into a <b class="text-ly">revenue-generating</b>
                   machine.
                 </p>
                 <div class="d-flex justify-content-center gap-3 mt-5">
@@ -335,13 +335,13 @@ function getTemplate(target) {
     <section class="serviceSec py-20 bg-slate-700 dark:bg-slate-900/50">
       <div class="container mx-auto px-6">
         <h2
-          class="text-center text-ly text-slate-800 dark:text-slate-500 font-semibold uppercase tracking-widest fw-medium mb-12"
+          class="text-center text-ly text-slate-800 dark:text-slate-500 font-semibold tracking-widest fw-medium mb-5"
         >
           Who We Work With
         </h2>
         <div class="grid md:grid-cols-3 gap-6">
           <div
-            class="bg-dark dark:bg-slate-800 p-10 rounded-2xl text-center hover:shadow-xl transition-shadow"
+            class="bg-dark dark:bg-slate-800 p-10 rounded-2xl text-center hover:shadow-xl transition-shadow hover:scale-[1.04] transition-all"
           >
             <div
               class="w-16 h-16 bg-blue-300 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400 rounded-full flex items-center justify-center mx-auto mb-6"
@@ -355,7 +355,7 @@ function getTemplate(target) {
             </p>
           </div>
           <div
-            class="bg-dark dark:bg-slate-800 p-10 rounded-2xl text-center hover:shadow-xl transition-shadow"
+            class="bg-dark dark:bg-slate-800 p-10 rounded-2xl text-center hover:shadow-xl transition-shadow hover:scale-[1.06] transition-all"
           >
             <div
               class="w-16 h-16 bg-indigo-300 dark:bg-indigo-900/30 text-indigo-600 dark:text-indigo-400 rounded-full flex items-center justify-center mx-auto mb-6"
@@ -371,7 +371,7 @@ function getTemplate(target) {
             </p>
           </div>
           <div
-            class="bg-dark dark:bg-slate-800 p-10 rounded-2xl text-center hover:shadow-xl transition-shadow"
+            class="bg-dark dark:bg-slate-800 p-10 rounded-2xl text-center hover:shadow-xl transition-shadow hover:scale-[1.04] transition-all"
           >
             <div
               class="w-16 h-16 bg-purple-300 dark:bg-purple-900/30 text-purple-600 dark:text-purple-400 rounded-full flex items-center justify-center mx-auto mb-6"
@@ -394,16 +394,16 @@ function getTemplate(target) {
 
     <section class="py-24 px-4">
       <div
-        class="max-w-6xl mx-auto dark:bg-slate-800 rounded-3xl p-10 border border-secondary shadow-sm relative overflow-hidden"
+        class="max-w-6xl mx-auto dark:bg-slate-800 rounded-3xl p-10 border border-secondary shadow-sm relative overflow-hidden hover:scale-[1.08] transition-all"
       >
         <div class="absolute top-0 right-0 p-8 opacity-10">
-          <span class="material-icons-outlined text-lr" style="font-size: 16rem"
+          <span class="material-icons-outlined text-ly" style="font-size: 16rem"
             >report_problem</span
           >
         </div>
         <div class="relative z-10">
           <h2
-            class="text-2xl font-medium mb-8 flex items-center gap-3 text-lr"
+            class="text-2xl font-medium mb-8 flex items-center gap-3"
             style="font-weight: 500"
           >
             <span
@@ -413,7 +413,7 @@ function getTemplate(target) {
                 >warning</span
               >
             </span>
-            Common Problems We Solve
+            Common <span class="text-lr">Problems</span> We <span class="text-lr">Solve</span>
           </h2>
           <div class="grid md:grid-cols-2 gap-y-6 gap-x-12">
             <div class="flex items-start gap-4">
@@ -477,7 +477,7 @@ function getTemplate(target) {
         </div>
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div
-            class="group relative bg-background-light dark:bg-slate-800 p-8 rounded-xl border border-secondary flex-col h-full"
+            class="group relative bg-background-light dark:bg-slate-800 p-8 rounded-xl border border-secondary transition-all  hover:scale-[1.05] hover:shadow-2xl flex flex-col h-full"
           >
             <div
               class="w-14 h-14 bg-blue-500/10 text-blue-500 rounded-lg flex items-center justify-center mb-6"
@@ -524,7 +524,7 @@ function getTemplate(target) {
             </div>
           </div>
           <div
-            class="group relative bg-slate-900 dark:bg-primary p-8 rounded-xl hover:scale-[1.02] transition-all shadow-2xl flex flex-col h-full"
+            class="group relative bg-slate-900 dark:bg-primary p-8 rounded-xl hover:scale-[1.08] transition-all shadow-2xl flex flex-col h-full"
           >
             <div
               class="absolute top-0 right-8 -translate-y-1/2 bg-primary dark:bg-slate-900 text-slate-100 dark:text-primary px-4 py-1 rounded-full text-xs font-bold uppercase tracking-widest"
@@ -586,7 +586,7 @@ function getTemplate(target) {
             </div>
           </div>
           <div
-            class="group relative bg-background-light dark:bg-slate-800 p-8 rounded-xl border border-secondary transition-all hover:shadow-2xl flex flex-col h-full"
+            class="group relative bg-background-light dark:bg-slate-800 p-8 rounded-xl border border-secondary transition-all hover:scale-[1.05] hover:shadow-2xl flex flex-col h-full"
           >
             <div
               class="w-14 h-14 bg-purple-500/10 text-purple-500 rounded-lg flex items-center justify-center mb-6"
@@ -733,28 +733,28 @@ function getTemplate(target) {
           Our Proven <span class="text-ly">4-Step Process</span>
         </h2>
         <div class="grid grid-cols-1 md:grid-cols-4 gap-0">
-          <div class="step-arrow bg-slate-900 text-white p-8 mb-4 md:mb-0">
+          <div class="step-arrow bg-slate-900 text-white p-8 mb-4 md:mb-0 hover:scale-[1.04] transition-all">
             <div class="text-4xl font-black mb-4 opacity-50">01</div>
             <h5 class="font-bold text-lg mb-2 d-block">Audit &amp; Strategy</h5>
             <small class="text-sm text-slate-300">
               Deep dive into your metrics and map out the growth path.
             </small>
           </div>
-          <div class="step-arrow bg-slate-800 text-white p-8 mb-4 md:mb-0">
+          <div class="step-arrow bg-slate-800 text-white p-8 mb-4 md:mb-0 hover:scale-[1.06] transition-all">
             <div class="text-4xl font-black mb-4 opacity-80">02</div>
             <h5 class="font-bold text-lr mb-2 d-block">Design &amp; Build</h5>
             <small class="text-sm text-slate-300">
               Crafting your high-converting assets with precision.
             </small>
           </div>
-          <div class="step-arrow bg-slate-700 text-white p-8 mb-4 md:mb-0">
+          <div class="step-arrow bg-slate-700 text-white p-8 mb-4 md:mb-0 hover:scale-[1.08] transition-all">
             <div class="text-4xl font-black mb-4 opacity-80">03</div>
             <h5 class="font-bold text-ly mb-2 d-block">Launch</h5>
             <small class="text-sm text-slate-100">
               Deploying campaigns and monitoring live performance.
             </small>
           </div>
-          <div class="step-arrow bg-slate-600 text-slate-900 p-8 mb-4 md:mb-0">
+          <div class="step-arrow bg-slate-600 text-slate-900 p-8 mb-4 md:mb-0 hover:scale-[1.1] transition-all">
             <div class="text-4xl font-black mb-4 opacity-80">04</div>
             <h5 class="font-bold text-lb mb-2 d-block">Optimize &amp; Scale</h5>
             <small class="text-sm text-slate-300">
