@@ -330,18 +330,18 @@ function getTemplate(target) {
       </ul>
     </div>
 
-    <section class="serviceSec py-20 bg-slate-700">
+    <section class="bg-white py-20">
       <div class="container mx-auto px-6">
         <div
           class="flex flex-col md:flex-row md:items-end justify-between mb-4 gap-8"
         >
           <div>
-            <div class="inline-block py-2 px-4 rounded bg-secondary text-brand-700 text-[10px] font-black uppercase tracking-[0.3em] mb-2"><span class="text-ly">Market Focus</span></div>
+            <div class="inline-block py-2 px-4 rounded bg-dark text-brand-700 text-[10px] font-black uppercase tracking-[0.3em] mb-2"><span class="text-ly">Market Focus</span></div>
             <h3 class="text-4xl font-bold text-navy text-ly" style="font-weight: 500">
               Built for Scalable Ventures
             </h3>
           </div>
-          <p class="text-slate-300 max-w-sm">
+          <p class="text-slate-800 max-w-sm">
             We specialize in three core verticals where our growth frameworks
             deliver the highest impact.
           </p>
@@ -399,7 +399,7 @@ function getTemplate(target) {
       </div>
     </section>
 
-    <section class="py-24 px-4 bg-dark">
+    <section class="pb-24 px-4 bg-white">
       <div
         class="max-w-6xl mx-auto rounded-3xl p-20 border border-secondary shadow-sm relative overflow-hidden hover:scale-[1.08] transition-all"
       >
@@ -418,7 +418,7 @@ function getTemplate(target) {
                 >warning</span
               >
             </span>
-            <span>
+            <span class="text-dark">
               Common <span class="text-lr">Problems</span> We
               <span class="text-lr">Solve</span>
             </span>
@@ -427,8 +427,8 @@ function getTemplate(target) {
             <div class="flex items-start gap-4">
               <span class="material-icons-outlined text-lr">cancel</span>
               <div>
-                <p class="font-bold mb-0">Website Not Converting</p>
-                <p class="text-sm text-slate-500 mb-2">
+                <p class="font-bold text-slate-900 mb-0">Website Not Converting</p>
+                <p class="text-sm text-slate-600 mb-2">
                   Traffic visits but never takes action.
                 </p>
               </div>
@@ -436,8 +436,8 @@ function getTemplate(target) {
             <div class="flex items-start gap-4">
               <span class="material-icons-outlined text-lr">cancel</span>
               <div>
-                <p class="font-bold mb-0">Ads Not Working</p>
-                <p class="text-sm text-slate-500 mb-2">
+                <p class="font-bold text-slate-900 mb-0">Ads Not Working</p>
+                <p class="text-sm text-slate-600 mb-2">
                   Spending money on clicks with zero ROI.
                 </p>
               </div>
@@ -445,8 +445,8 @@ function getTemplate(target) {
             <div class="flex items-start gap-4">
               <span class="material-icons-outlined text-lr">cancel</span>
               <div>
-                <p class="font-bold mb-0">High Traffic, Low Sales</p>
-                <p class="text-sm text-slate-500 mb-2">
+                <p class="font-bold text-slate-900 mb-0">High Traffic, Low Sales</p>
+                <p class="text-sm text-slate-600 mb-2">
                   You have eyes on you, but no revenue growth.
                 </p>
               </div>
@@ -454,8 +454,8 @@ function getTemplate(target) {
             <div class="flex items-start gap-4">
               <span class="material-icons-outlined text-lr">cancel</span>
               <div>
-                <p class="font-bold mb-0">No Clear Strategy</p>
-                <p class="text-sm text-slate-500 mb-2">
+                <p class="font-bold text-slate-900 mb-0">No Clear Strategy</p>
+                <p class="text-sm text-slate-600 mb-2">
                   Random acts of marketing with no system.
                 </p>
               </div>
@@ -664,20 +664,19 @@ function getTemplate(target) {
     </section>
 
     <section
-      class="py-40 bg-charcoal-50"
+      class="py-40 bg-white"
       id="results"
-      style="background: linear-gradient(135deg, #000000 0%, #0f0f0f 100%)"
     >
       <div class="max-w-7xl mx-auto px-6 lg:px-10">
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-24 items-center">
           <div class="lg:col-span-6">
             <div
-              class="inline-block py-2 px-4 rounded bg-secondary text-brand-700 text-[10px] font-black uppercase tracking-[0.3em] mb-2"
+              class="inline-block py-2 px-4 rounded bg-dark text-brand-700 text-[10px] font-black uppercase tracking-[0.3em] mb-2"
             >
               <span class="text-ly">Performance Metrics</span>
             </div>
             <h2
-              class="text-6xl lg:text-8xl font-display mb-12 leading-tight"
+              class="text-6xl lg:text-8xl font-display mb-12 text-dark"
               style="font-weight: 500"
             >
               Hard Data. <br /><span class="text-gradient-brand text-ly"
@@ -688,10 +687,10 @@ function getTemplate(target) {
               <div class="group">
                 <div class="flex justify-between items-center mb-0">
                   <div>
-                    <h4 class="font-bold text-2xl text-charcoal-900 mb-1">
+                    <h4 class="font-bold text-2xl text-dark mb-1">
                       Conversion Efficiency
                     </h4>
-                    <p class="text-charcoal-500 font-medium mb-4">
+                    <p class="text-slate-600 font-medium mb-4">
                       Post-optimization average
                     </p>
                   </div>
@@ -700,7 +699,7 @@ function getTemplate(target) {
                   >
                 </div>
                 <div
-                  class="h-4 w-full bg-light rounded-full overflow-hidden p-1"
+                  class="h-4 w-full bg-dark rounded-full overflow-hidden p-1"
                 >
                   <div
                     class="h-full bg-warning rounded-full shadow-[0_0_10px_rgba(12,146,235,0.2)] transition-all duration-1000"
@@ -711,10 +710,10 @@ function getTemplate(target) {
               <div class="group">
                 <div class="flex justify-between items-center mb-0">
                   <div>
-                    <h4 class="font-bold text-2xl text-charcoal-900 mb-1">
+                    <h4 class="font-bold text-2xl text-dark mb-1">
                       Pipeline Velocity
                     </h4>
-                    <p class="text-charcoal-500 font-medium">
+                    <p class="text-slate-600 font-medium mb-4">
                       Average B2B acceleration
                     </p>
                   </div>
@@ -723,7 +722,7 @@ function getTemplate(target) {
                   >
                 </div>
                 <div
-                  class="h-4 w-full bg-light rounded-full overflow-hidden p-1"
+                  class="h-4 w-full bg-dark rounded-full overflow-hidden p-1"
                 >
                   <div
                     class="h-full bg-warning rounded-full shadow-[0_0_10px_rgba(12,146,235,0.2)]"
@@ -734,10 +733,10 @@ function getTemplate(target) {
               <div class="group">
                 <div class="flex justify-between items-center mb-0">
                   <div>
-                    <h4 class="font-bold text-2xl text-charcoal-900 mb-1">
+                    <h4 class="font-bold text-2xl text-dark mb-1">
                       Managed Ad Revenue
                     </h4>
-                    <p class="text-charcoal-500 font-medium">
+                    <p class="text-slate-600 font-medium mb-4">
                       Cumulative yearly scaling
                     </p>
                   </div>
@@ -746,7 +745,7 @@ function getTemplate(target) {
                   >
                 </div>
                 <div
-                  class="h-4 w-full bg-light rounded-full overflow-hidden p-1"
+                  class="h-4 w-full bg-dark rounded-full overflow-hidden p-1"
                 >
                   <div
                     class="h-full bg-warning rounded-full shadow-[0_0_10px_rgba(12,146,235,0.2)]"
@@ -815,7 +814,7 @@ function getTemplate(target) {
             <div
               class="absolute bg-dark -top-10 -right-10 bg-brand-600 p-8 rounded-3xl shadow-2xl hidden xl:block"
             >
-              <div class="flex items-center gap-6">
+              <div class="flex items-center justify-center gap-6">
                 <div
                   class="w-16 h-16 bg-white text-brand-600 rounded-full flex items-center justify-center"
                 >
@@ -829,7 +828,7 @@ function getTemplate(target) {
                   >
                     Live ROAS
                   </p>
-                  <p class="text-4xl font-black text-ly">8.44x</p>
+                  <p class="text-4xl font-black text-ly mb-0">8.44x</p>
                 </div>
               </div>
             </div>
@@ -838,10 +837,10 @@ function getTemplate(target) {
       </div>
     </section>
 
-    <section class="py-24 px-6" id="process">
+    <section class="pb-24 px-6 bg-white" id="process">
       <div class="container mx-auto">
         <h2
-          class="text-3xl font-display font-medium text-center mb-16"
+          class="text-3xl font-display font-medium text-center text-dark mb-16"
           style="font-weight: 500"
         >
           Our Proven <span class="text-ly">4-Step Process</span>
@@ -1484,7 +1483,7 @@ function getTemplate(target) {
       </ul>
     </section>
 
-    <section class="py-24 px-6">
+    <section class="py-24 px-6 bg-white">
       <div class="container mx-auto max-w-4xl">
         <h2
           class="text-3xl font-display font-bold text-center mb-16 text-ly"
