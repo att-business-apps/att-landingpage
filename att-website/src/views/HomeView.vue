@@ -1494,7 +1494,7 @@ function getTemplate(target) {
         </h2>
         <div class="space-y-4 w-50 why mx-auto">
           <div
-            class="group bg-dark p-6 rounded-2xl border border-slate-700 flex items-center justify-between hover:border-primary transition-all cursor-default"
+            class="group bg-dark p-6 rounded-2xl border border-dark flex items-center justify-between hover:border-primary transition-all cursor-default"
           >
             <div class="flex items-center gap-4">
               <div
@@ -1510,7 +1510,7 @@ function getTemplate(target) {
             >
           </div>
           <div
-            class="group bg-dark p-6 rounded-2xl border border-slate-700 flex items-center justify-between hover:border-primary transition-all cursor-default"
+            class="group bg-dark p-6 rounded-2xl border border-dark flex items-center justify-between hover:border-primary transition-all cursor-default"
           >
             <div class="flex items-center gap-4">
               <div
@@ -1528,7 +1528,7 @@ function getTemplate(target) {
             >
           </div>
           <div
-            class="group bg-dark p-6 rounded-2xl border border-slate-700 flex items-center justify-between hover:border-primary transition-all cursor-default"
+            class="group bg-dark p-6 rounded-2xl border border-dark flex items-center justify-between hover:border-primary transition-all cursor-default"
           >
             <div class="flex items-center gap-4">
               <div
@@ -1546,7 +1546,7 @@ function getTemplate(target) {
             >
           </div>
           <div
-            class="group bg-dark p-6 rounded-2xl border border-slate-700 flex items-center justify-between hover:border-primary transition-all cursor-default"
+            class="group bg-dark p-6 rounded-2xl border border-dark flex items-center justify-between hover:border-primary transition-all cursor-default"
           >
             <div class="flex items-center gap-4">
               <div
