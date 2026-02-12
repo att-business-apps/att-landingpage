@@ -10495,8 +10495,8 @@ h5,
 h6,
 .h6 {
   font-family: var(--font-primary);
-  font-weight: 400;
-  letter-spacing: -0.025em;
+  font-weight: 500;
+  letter-spacing: 0.0125em;
   color: var(--color-text-dark); }
 
 h1, .h1,

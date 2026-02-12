@@ -430,7 +430,7 @@
             d="M200,152.001c13.255,0,24,10.745,24,24h16c0-8.655-2.807-17.076-8-24L200,152.001L200,152.001z"
           />
         </svg>
-        <span class="text-lb">Services</span>
+        <span class="text-lb">Solutions</span>
       </a>
     </li>
     <li>
@@ -526,7 +526,7 @@
             />
           </g>
         </svg>
-        <span class="text-lg">Portfolio</span>
+        <span class="text-lg">Results</span>
       </a>
     </li>
     <li>
@@ -596,7 +596,7 @@
             d="M184,136.001c-4.418,0-8-3.582-8-8c0-22.091,17.908-40,40-40c4.418,0,8,3.582,8,8s-3.582,8-8,8  c-13.255,0-24,10.745-24,24C192,132.419,188.419,136.001,184,136.001z"
           />
         </svg>
-        <span class="text-lr">About</span>
+        <span class="text-lr">Expertise</span>
       </a>
     </li>
     <li>

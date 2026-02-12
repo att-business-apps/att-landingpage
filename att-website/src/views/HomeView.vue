@@ -330,18 +330,18 @@ function getTemplate(target) {
       </ul>
     </div>
 
-    <section class="bg-white py-20">
+    <section class="bg-white py-24">
       <div class="container mx-auto px-6">
         <div
-          class="flex flex-col md:flex-row md:items-end justify-between mb-4 gap-8"
+          class="flex flex-col md:flex-row md:items-end justify-between mb-5 gap-2"
         >
           <div>
             <div class="inline-block py-2 px-4 rounded bg-dark text-brand-700 text-[10px] font-black uppercase tracking-[0.3em] mb-2"><span class="text-ly">Market Focus</span></div>
-            <h3 class="text-4xl font-bold text-navy text-ly" style="font-weight: 500">
+            <h2 class=" font-bold text-navy text-ly mb-0" style="font-weight: 600">
               Built for Scalable Ventures
-            </h3>
+            </h2>
           </div>
-          <p class="text-slate-800 max-w-sm">
+          <p class="text-slate-800 max-w-sm mb-0">
             We specialize in three core verticals where our growth frameworks
             deliver the highest impact.
           </p>
@@ -411,7 +411,7 @@ function getTemplate(target) {
         <div class="relative">
           <h2
             class="text-2xl font-medium mb-5 flex items-center gap-3"
-            style="font-weight: 500"
+            style="font-weight: 600"
           >
             <span class="p-2 w-10 h-10 d-flex relative bg-amber-100 rounded-lg">
               <span class="material-icons-outlined text-center text-lr"
@@ -474,7 +474,7 @@ function getTemplate(target) {
         <div class="text-center mb-16">
           <h2
             class="text-4xl font-display font-extrabold mb-4 text-lg"
-            style="font-weight: 500"
+            style="font-weight: 600"
           >
             Outcome-Driven Solutions
           </h2>
@@ -677,7 +677,7 @@ function getTemplate(target) {
             </div>
             <h2
               class="text-6xl lg:text-8xl font-display mb-12 text-dark"
-              style="font-weight: 500"
+              style="font-weight: 600"
             >
               Hard Data. <br /><span class="text-gradient-brand text-ly"
                 >Zero Guesswork.</span
@@ -841,7 +841,7 @@ function getTemplate(target) {
       <div class="container mx-auto">
         <h2
           class="text-3xl font-display font-medium text-center text-dark mb-16"
-          style="font-weight: 500"
+          style="font-weight: 600"
         >
           Our Proven <span class="text-ly">4-Step Process</span>
         </h2>
@@ -1487,7 +1487,7 @@ function getTemplate(target) {
       <div class="container mx-auto max-w-4xl">
         <h2
           class="text-3xl font-display font-bold text-center mb-16 text-ly"
-          style="font-weight: 500"
+          style="font-weight: 600"
         >
           Why Businesses Choose Us
         </h2>
