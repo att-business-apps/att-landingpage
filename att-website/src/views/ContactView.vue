@@ -88,7 +88,7 @@ function getTemplate(target) {
           </p>
         </div>
       </div>
-      <div class="banner-thumbnail">
+      <div class="banner-thumbnail" style="right: -300px;">
         <div class="">
           <img
             src="../assets/img/amorboy/am-contact.png"

@@ -13856,7 +13856,7 @@ input {
   .breadcrumb-banner .banner-thumbnail {
     position: absolute;
     bottom: -100px;
-    right: -250px;
+    right: 0px;
     text-align: right; }
     @media only screen and (min-width: 1200px) and (max-width: 1599px) {
       .breadcrumb-banner .banner-thumbnail {
@@ -15442,7 +15442,7 @@ Frequently Asked Questions
   left: 1%;
   top: 1.275rem;
   display: block;
-  background-color: rgba(44, 44, 54, 0.692);
+  background-color: rgba(24, 24, 26, 0.692);
   -webkit-backdrop-filter: blur(8px);
   -moz-backdrop-filter: blur(8px);
   -ms-backdrop-filter: blur(8px);
@@ -16506,7 +16506,7 @@ Service Page
   z-index: 2;
   padding-top: 5px;
   padding-bottom: 0;
-  background-color: rgba(39, 39, 47, 0.8);
+  background-color: rgba(21, 21, 22, 0.8);
   -webkit-backdrop-filter: blur(8px);
   -moz-backdrop-filter: blur(8px);
   -ms-backdrop-filter: blur(8px);
@@ -16599,7 +16599,7 @@ Service Page
   padding: 1rem;
   z-index: 4;
   border-radius: 0.875rem;
-  background-color: rgba(39, 39, 47, 0.8);
+  background-color: rgba(21, 21, 22, 0.8);
   -webkit-backdrop-filter: blur(8px);
   -moz-backdrop-filter: blur(8px);
   -ms-backdrop-filter: blur(8px);
