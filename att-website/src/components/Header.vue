@@ -19,19 +19,19 @@
             <nav class="mainmenu-nav">
               <ul class="mainmenu">
                 <li>
-                  <a href="/services"><span class="text-lb">Solutions</span></a>
+                  <a href="/services"><span class="text-ll">Solutions</span></a>
                 </li>
                 <li>
                   <a href="/portfolio"
-                    ><span class="text-lg">Results</span></a
+                    ><span class="text-ll">Results</span></a
                   >
                 </li>
                 <li>
-                  <a href="/about"><span class="text-lr">Expertise</span></a>
+                  <a href="/about"><span class="text-ll">Expertise</span></a>
                 </li>
                 <!-- <li><a href="/whyUs"><span class="text-ly">Blog</span></a></li> -->
                 <li>
-                  <a href="/contact"><span class="text-ly">Contact</span></a>
+                  <a href="/contact"><span class="text-ll">Contact</span></a>
                 </li>
               </ul>
             </nav>

@@ -10,9 +10,9 @@
   --color-primaryG: #5cb04e;
   --color-primaryR: #dc3c2d;
   --color-white: #ffffff;
-  --color-black: #2d2d32;
-  --color-light: #292930;
-  --color-dark: #27272e;
+  --color-black: #0f0f0f;
+  --color-light: #0f0f0f;
+  --color-dark: #000000;
   --color-text-dark: #cad3dc;
   --color-accent2: #fab8c4;
 
@@ -50,7 +50,7 @@
     #ecf2f6 29.1%,
     rgba(236, 242, 246, 0) 64.32%
   );
-  --gradient-dark: linear-gradient(180deg, #27272e 0%, #303035 100%);
+  --gradient-dark: linear-gradient(180deg, #000000 0%, #303035 100%);
 
   // Border
   --border-light: 1px solid #e3e6e9;
@@ -59,7 +59,7 @@
   --border-gray: 1px solid var(--color-gray-4);
 
   //Font Family
-  --font-primary: "Rubik", sans-serif;
+  --font-primary: "DM Serif Text", serif;
   --font-secondary: "Manrope", sans-serif;
   --font-awesome: "Font Awesome 5 Pro";
 
@@ -95,7 +95,7 @@ $primary: #0d6efd;
 $primary-color: #0d6efd;
 
 // Colors
-$cdark: #27272e;
+$cdark: #0f0f0f;
 $cgrey: #8d909a;
 $clight: #d6d6d6;
 $cwhite: #ffffff;

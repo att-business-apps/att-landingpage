@@ -102,8 +102,8 @@ function getTemplate(target) {
                 </h1> -->
 
                 <h1 class="title d-inline" ref="myElement">
-                  Scale Revenue with
-                  <span class="gradient-text-light">Precision Design.</span>
+                  We Build <span class="text-ly">Digital Products</span> That Drive 
+                  <span class="gradient-text-light">Growth & Conversions</span>
                 </h1>
 
                 <h2 class="h5 mt-4 flex items-center justify-center gap-3">
@@ -112,11 +112,7 @@ function getTemplate(target) {
                   <span class="gradient-text blue-dark">Classy.</span>
                 </h2>
                 <p class="subtitle w-50 md:w-100 mt-4">
-                  We combine high-performance <b class="text-lr">UI/UX</b> with
-                  conversion-optimized <b class="text-ly">strategy</b> to turn
-                  your <b class="text-lr">website</b> into a
-                  <b class="text-ly">revenue-generating</b>
-                  machine.
+                  Helping <b class="text-ly">startups</b> and businesses <b class="text-lg">scale</b> with strategic <b class="text-lb">design</b>, high-performance <b class="text-lr">websites</b>, and scalable tech solutions.
                 </p>
                 <div class="d-flex justify-content-center gap-3 mt-5">
                   <a
@@ -403,18 +399,18 @@ function getTemplate(target) {
       </div>
     </section>
 
-    <section class="py-24 px-4">
+    <section class="py-24 px-4 bg-dark">
       <div
-        class="max-w-6xl mx-auto rounded-3xl p-10 border border-secondary shadow-sm relative overflow-hidden hover:scale-[1.08] transition-all"
+        class="max-w-6xl mx-auto rounded-3xl p-20 border border-secondary shadow-sm relative overflow-hidden hover:scale-[1.08] transition-all"
       >
         <div class="absolute top-0 right-0 p-8 opacity-10">
           <span class="material-icons-outlined text-ly" style="font-size: 16rem"
             >report_problem</span
           >
         </div>
-        <div class="relative z-10">
+        <div class="relative">
           <h2
-            class="text-2xl font-medium mb-8 flex items-center gap-3"
+            class="text-2xl font-medium mb-5 flex items-center gap-3"
             style="font-weight: 500"
           >
             <span class="p-2 w-10 h-10 d-flex relative bg-amber-100 rounded-lg">
@@ -422,8 +418,10 @@ function getTemplate(target) {
                 >warning</span
               >
             </span>
-            Common <span class="text-lr">Problems</span> We
-            <span class="text-lr">Solve</span>
+            <span>
+              Common <span class="text-lr">Problems</span> We
+              <span class="text-lr">Solve</span>
+            </span>
           </h2>
           <div class="grid md:grid-cols-2 gap-y-6 gap-x-12">
             <div class="flex items-start gap-4">
@@ -470,7 +468,7 @@ function getTemplate(target) {
     <section
       class="py-24"
       id="solutions"
-      style="background: linear-gradient(135deg, #23232a 0%, #27272e 100%)"
+      style="background: linear-gradient(135deg, #0f0f0f 0%, #000000 100%)"
     >
       <div class="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8">
         <div class="text-center mb-16">
@@ -487,8 +485,13 @@ function getTemplate(target) {
         </div>
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div
-            class="group relative bg-background-light p-8 rounded-xl border border-secondary transition-all hover:scale-[1.05] hover:shadow-2xl flex flex-col h-full"
+            class="group relative bg-background-light p-8 rounded-xl border border-dark transition-all hover:scale-[1.05] hover:shadow-2xl flex flex-col h-full"
           >
+          <div
+              class="absolute top-0 right-8 -translate-y-1/2 bg-primary text-slate-900 px-4 py-1 rounded-full text-xs font-bold uppercase tracking-widest"
+            >
+              Popular
+            </div>
             <div
               class="w-14 h-14 bg-blue-500/10 text-blue-500 rounded-lg flex items-center justify-center mb-6"
             >
@@ -534,10 +537,10 @@ function getTemplate(target) {
             </div>
           </div>
           <div
-            class="group relative bg-slate-900 p-8 rounded-xl hover:scale-[1.08] transition-all shadow-2xl flex flex-col h-full"
+            class="group relative bg-dark p-8 rounded-xl scale-[1.05] hover:scale-[1.08] border border-dark transition-all shadow-2xl flex flex-col h-full"
           >
             <div
-              class="absolute top-0 right-8 -translate-y-1/2 bg-primary text-slate-100 px-4 py-1 rounded-full text-xs font-bold uppercase tracking-widest"
+              class="absolute top-0 right-8 -translate-y-1/2 bg-primary text-slate-900 px-4 py-1 rounded-full text-xs font-bold uppercase tracking-widest"
             >
               Most Popular
             </div>
@@ -596,8 +599,13 @@ function getTemplate(target) {
             </div>
           </div>
           <div
-            class="group relative bg-background-light p-8 rounded-xl border border-secondary transition-all hover:scale-[1.05] hover:shadow-2xl flex flex-col h-full"
+            class="group relative bg-background-light p-8 rounded-xl border border-dark transition-all hover:scale-[1.05] hover:shadow-2xl flex flex-col h-full"
           >
+          <div
+              class="absolute top-0 right-8 -translate-y-1/2 bg-primary text-slate-900 px-4 py-1 rounded-full text-xs font-bold uppercase tracking-widest"
+            >
+              Popular
+            </div>
             <div
               class="w-14 h-14 bg-purple-500/10 text-purple-500 rounded-lg flex items-center justify-center mb-6"
             >
@@ -658,7 +666,7 @@ function getTemplate(target) {
     <section
       class="py-40 bg-charcoal-50"
       id="results"
-      style="background: linear-gradient(135deg, #27272e 0%, #23232a 100%)"
+      style="background: linear-gradient(135deg, #000000 0%, #0f0f0f 100%)"
     >
       <div class="max-w-7xl mx-auto px-6 lg:px-10">
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-24 items-center">

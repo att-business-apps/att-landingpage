@@ -118,6 +118,7 @@
             href="#"
             >Privacy Protocol</a
           >
+          
           <a
             class="hover:text-white transition-colors"
             href="#"
