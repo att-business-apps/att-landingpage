@@ -75,21 +75,14 @@ function getTemplate(target) {
         <div class="row align-items-end align-items-xl-end">
           <div class="col-lg-10 mx-auto pb-5">
             <div class="home-banner banner-content text-center">
-              <div
-                class="animate__animated fadeInUp"
-                style="animation-duration: 1s"
-              >
+              <div class="animate__animated fadeInUp" style="animation-duration: 1s">
                 <div class="flex justify-center mb-4">
                   <div
-                    class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-200 text-blue-900 text-xs font-bold uppercase tracking-wider"
-                  >
+                    class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-200 text-blue-900 text-xs font-bold uppercase tracking-wider">
                     <span class="relative flex h-2 w-2">
                       <span
-                        class="animate-ping absolute d-block justify-center items-center h-full w-full rounded-full bg-blue-400 opacity-75"
-                      ></span>
-                      <span
-                        class="relative d-block rounded-full h-2 w-2 bg-blue-600"
-                      ></span>
+                        class="animate-ping absolute d-block justify-center items-center h-full w-full rounded-full bg-blue-400 opacity-75"></span>
+                      <span class="relative d-block rounded-full h-2 w-2 bg-blue-600"></span>
                     </span>
                     Tech-Driven Growth Strategy
                   </div>
@@ -102,7 +95,7 @@ function getTemplate(target) {
                 </h1> -->
 
                 <h1 class="title d-inline" ref="myElement">
-                  We Build <span class="text-ly">Digital Products</span> That Drive 
+                  We Build <span class="text-ly">Digital Products</span> That Drive
                   <span class="gradient-text-light">Growth & Conversions</span>
                 </h1>
 
@@ -112,60 +105,32 @@ function getTemplate(target) {
                   <span class="gradient-text blue-dark">Classy.</span>
                 </h2>
                 <p class="subtitle w-50 md:w-100 mt-4">
-                  Helping <b class="text-ly">startups</b> and businesses <b class="text-lg">scale</b> with strategic <b class="text-lb">design</b>, high-performance <b class="text-lr">websites</b>, and scalable tech solutions.
+                  Helping <b class="text-ly">startups</b> and businesses <b class="text-lg">scale</b> with strategic <b
+                    class="text-lb">design</b>, high-performance <b class="text-lr">websites</b>, and scalable tech
+                  solutions.
                 </p>
                 <div class="d-flex justify-content-center gap-3 mt-5">
-                  <a
-                    class="amor-btn btn-fill-primary btn-large"
-                    href="https://wa.me/917975859061/?text=Get%20my%20free%20GROWTH%20Audit."
-                    >Get My Free Growth Audit</a
-                  >
-                  <a href="/portfolio" class="amor-btn btn-borderd light"
-                    >View Portfolio</a
-                  >
+                  <a class="amor-btn btn-fill-primary btn-large"
+                    href="https://wa.me/917975859061/?text=Get%20my%20free%20GROWTH%20Audit.">Get My Free Growth
+                    Audit</a>
+                  <a href="/portfolio" class="amor-btn btn-borderd light">View Portfolio</a>
                 </div>
-                <div
-                  class="mt-16 grid grid-cols-2 md:grid-cols-4 gap-6 opacity-80"
-                >
+                <div class="mt-16 grid grid-cols-2 md:grid-cols-4 gap-6 opacity-80">
                   <div class="flex flex-col items-center justify-around">
-                    <span
-                      class="text-3xl font-bold text-primary gradient-text blue-light"
-                      >+140%</span
-                    >
-                    <span
-                      class="text-xs uppercase tracking-widest text-slate-300"
-                      >Avg. ROI</span
-                    >
+                    <span class="text-3xl font-bold text-primary gradient-text blue-light">+140%</span>
+                    <span class="text-xs uppercase tracking-widest text-slate-300">Avg. ROI</span>
                   </div>
                   <div class="flex flex-col items-center">
-                    <span
-                      class="text-3xl font-bold text-primary gradient-text yellow-light"
-                      >24/7</span
-                    >
-                    <span
-                      class="text-xs uppercase tracking-widest text-slate-300"
-                      >Lead Machine</span
-                    >
+                    <span class="text-3xl font-bold text-primary gradient-text yellow-light">24/7</span>
+                    <span class="text-xs uppercase tracking-widest text-slate-300">Lead Machine</span>
                   </div>
                   <div class="flex flex-col items-center">
-                    <span
-                      class="text-3xl font-bold text-primary gradient-text green-light"
-                      >12ms</span
-                    >
-                    <span
-                      class="text-xs uppercase tracking-widest text-slate-300"
-                      >Fast Performance</span
-                    >
+                    <span class="text-3xl font-bold text-primary gradient-text green-light">12ms</span>
+                    <span class="text-xs uppercase tracking-widest text-slate-300">Fast Performance</span>
                   </div>
                   <div class="flex flex-col items-center">
-                    <span
-                      class="text-3xl font-bold text-primary gradient-text text-lr"
-                      >Zero</span
-                    >
-                    <span
-                      class="text-xs uppercase tracking-widest text-slate-300"
-                      >Wasted Ad Spend</span
-                    >
+                    <span class="text-3xl font-bold text-primary gradient-text text-lr">Zero</span>
+                    <span class="text-xs uppercase tracking-widest text-slate-300">Wasted Ad Spend</span>
                   </div>
                 </div>
               </div>
@@ -173,18 +138,12 @@ function getTemplate(target) {
           </div>
         </div>
         <div class="row align-items-end align-items-xl-end">
-          <div
-            class="amorboy animate__animated animate__slideInDown"
-            style="animation-duration: 8s"
-          >
+          <div class="amorboy animate__animated animate__slideInDown" style="animation-duration: 8s">
             <img src="../assets/img/amorboy/am-fly-1.png" alt="" />
             <img src="../assets/img/amorboy/am-doing.png" alt="" />
           </div>
 
-          <div
-            class="col-lg-5 col-md-10 mx-auto animate__animated fadeInUp"
-            style="animation-duration: 2s"
-          >
+          <div class="col-lg-5 col-md-10 mx-auto animate__animated fadeInUp" style="animation-duration: 2s">
             <div class="contact-form-box banner-form">
               <h3 class="title text-center">
                 <span class="gradient-text blue-dark">Unlock</span> Your Online
@@ -199,98 +158,53 @@ function getTemplate(target) {
                 </p>
                 <div class="form-group mb--40">
                   <!-- <label>How can we help you?</label> -->
-                  <textarea
-                    name="contact-message"
-                    id="message"
-                    class="form-control textarea"
-                    v-model="message"
-                    cols="30"
-                    rows="2"
-                    placeholder="How can we help you?"
-                    required
-                  ></textarea>
+                  <textarea name="contact-message" id="message" class="form-control textarea" v-model="message"
+                    cols="30" rows="2" placeholder="How can we help you?" required></textarea>
                 </div>
 
                 <h4 class="mt-3 mb-2">Your Contact Details</h4>
                 <p class="mb-3">For project discussions only, thank you!</p>
                 <div class="form-group">
                   <!-- <label>Name</label> -->
-                  <input
-                    type="text"
-                    v-model="from_name"
-                    class="form-control"
-                    name="contact-name"
-                    placeholder="Your Name"
-                    required=""
-                  />
+                  <input type="text" v-model="from_name" class="form-control" name="contact-name"
+                    placeholder="Your Name" required="" />
                 </div>
                 <div class="form-group">
                   <!-- <label>Email</label> -->
-                  <input
-                    type="email"
-                    v-model="email"
-                    class="form-control"
-                    name="contact-email"
-                    placeholder="Your Email"
-                    required
-                  />
+                  <input type="email" v-model="email" class="form-control" name="contact-email" placeholder="Your Email"
+                    required />
                 </div>
                 <div class="form-group mb--40">
                   <!-- <label>Phone</label> -->
-                  <input
-                    type="tel"
-                    class="form-control"
-                    v-model="phoneNumber"
-                    name="contact-phone"
-                    placeholder="Your Phone"
-                    required
-                  />
+                  <input type="tel" class="form-control" v-model="phoneNumber" name="contact-phone"
+                    placeholder="Your Phone" required />
                 </div>
                 <div class="form-group">
-                  <button
-                    @click="sendMail"
-                    type="button"
-                    class="amor-btn btn-borderd btn-fluid light"
-                    name="submit-btn"
-                    :disabled="disableBtn"
-                  >
+                  <button @click="sendMail" type="button" class="amor-btn btn-borderd btn-fluid light" name="submit-btn"
+                    :disabled="disableBtn">
                     Get My Free Audit
                   </button>
                   <p class="mt-4 text-center text-secondary text-xs">
-                    <small
-                      >We value your privacy. Your data is safe with us.</small
-                    >
+                    <small>We value your privacy. Your data is safe with us.</small>
                   </p>
                 </div>
                 <div class="form-group"></div>
               </form>
             </div>
             <div class="banner-thumbnail d-none">
-              <div
-                class="animate__animated zoomIn"
-                style="animation-duration: 2s"
-              >
+              <div class="animate__animated zoomIn" style="animation-duration: 2s">
                 <div class="large-thumb">
                   <img src="../assets/img/window.png" alt="Laptop" />
                 </div>
               </div>
-              <div
-                class="animate__animated slideInRight"
-                style="animation-duration: 2s"
-              >
+              <div class="animate__animated slideInRight" style="animation-duration: 2s">
                 <div class="large-thumb-2">
-                  <img
-                    src="../assets/img/amorboy/laptop-poses-banner.png"
-                    alt="Laptop"
-                  />
+                  <img src="../assets/img/amorboy/laptop-poses-banner.png" alt="Laptop" />
                 </div>
               </div>
               <ul class="list-unstyled shape-group">
                 <li class="shape shape-1">
-                  <div
-                    class="animate__animated slideInLeft"
-                    style="animation-duration: 1s"
-                  >
+                  <div class="animate__animated slideInLeft" style="animation-duration: 1s">
                     <img src="../assets/img/chat-group-home.png" alt="chat" />
                   </div>
                 </li>
@@ -332,11 +246,11 @@ function getTemplate(target) {
 
     <section class="bg-white py-24">
       <div class="container mx-auto px-6">
-        <div
-          class="flex flex-col md:flex-row md:items-end justify-between mb-5 gap-2"
-        >
+        <div class="flex flex-col md:flex-row md:items-end justify-between mb-5 gap-2">
           <div>
-            <div class="inline-block py-2 px-4 rounded bg-dark text-brand-700 text-[10px] font-black uppercase tracking-[0.3em] mb-2"><span class="text-ly">Market Focus</span></div>
+            <div
+              class="inline-block py-2 px-4 rounded bg-dark text-brand-700 text-[10px] font-black uppercase tracking-[0.3em] mb-2">
+              <span class="text-ly">Market Focus</span></div>
             <h2 class=" font-bold text-navy text-ly mb-0" style="font-weight: 600">
               Built for Scalable Ventures
             </h2>
@@ -348,11 +262,8 @@ function getTemplate(target) {
         </div>
         <div class="grid md:grid-cols-3 gap-6">
           <div
-            class="bg-dark p-10 rounded-2xl text-center hover:shadow-xl transition-shadow hover:scale-[1.04] transition-all"
-          >
-            <div
-              class="w-16 h-16 bg-blue-300 text-blue-600 rounded-full flex items-center justify-center mx-auto mb-6"
-            >
+            class="bg-dark p-10 rounded-2xl text-center hover:shadow-xl transition-shadow hover:scale-[1.04] transition-all">
+            <div class="w-16 h-16 bg-blue-300 text-blue-600 rounded-full flex items-center justify-center mx-auto mb-6">
               <span class="material-symbols-outlined text-3xl">storefront</span>
             </div>
             <h4 class="font-medium mb-3 d-block text-lg" style="font-weight: 500;">Local Services</h4>
@@ -362,14 +273,10 @@ function getTemplate(target) {
             </p>
           </div>
           <div
-            class="bg-dark p-10 rounded-2xl text-center hover:shadow-xl transition-shadow hover:scale-[1.06] transition-all"
-          >
+            class="bg-dark p-10 rounded-2xl text-center hover:shadow-xl transition-shadow hover:scale-[1.06] transition-all">
             <div
-              class="w-16 h-16 bg-indigo-300 text-indigo-600 rounded-full flex items-center justify-center mx-auto mb-6"
-            >
-              <span class="material-symbols-outlined text-3xl"
-                >shopping_cart</span
-              >
+              class="w-16 h-16 bg-indigo-300 text-indigo-600 rounded-full flex items-center justify-center mx-auto mb-6">
+              <span class="material-symbols-outlined text-3xl">shopping_cart</span>
             </div>
             <h4 class="font-medium mb-3 d-block medium text-lb" style="font-weight: 500;">E-Commerce Brands</h4>
             <p class="text-slate-300">
@@ -378,14 +285,10 @@ function getTemplate(target) {
             </p>
           </div>
           <div
-            class="bg-dark p-10 rounded-2xl text-center hover:shadow-xl transition-shadow hover:scale-[1.04] transition-all"
-          >
+            class="bg-dark p-10 rounded-2xl text-center hover:shadow-xl transition-shadow hover:scale-[1.04] transition-all">
             <div
-              class="w-16 h-16 bg-purple-300 text-purple-600 rounded-full flex items-center justify-center mx-auto mb-6"
-            >
-              <span class="material-symbols-outlined text-3xl"
-                >rocket_launch</span
-              >
+              class="w-16 h-16 bg-purple-300 text-purple-600 rounded-full flex items-center justify-center mx-auto mb-6">
+              <span class="material-symbols-outlined text-3xl">rocket_launch</span>
             </div>
             <h4 class="font-medium mb-3 d-block medium text-lr" style="font-weight: 500;">Startups &amp; SaaS</h4>
             <p class="text-slate-300">
@@ -401,22 +304,14 @@ function getTemplate(target) {
 
     <section class="pb-24 px-4 bg-white">
       <div
-        class="max-w-6xl mx-auto rounded-3xl p-20 border border-secondary shadow-sm relative overflow-hidden hover:scale-[1.08] transition-all"
-      >
+        class="max-w-6xl mx-auto rounded-3xl p-20 border border-secondary shadow-sm relative overflow-hidden hover:scale-[1.08] transition-all">
         <div class="absolute top-0 right-0 p-8 opacity-10">
-          <span class="material-icons-outlined text-ly" style="font-size: 16rem"
-            >report_problem</span
-          >
+          <span class="material-icons-outlined text-ly" style="font-size: 16rem">report_problem</span>
         </div>
         <div class="relative">
-          <h2
-            class="text-2xl font-medium mb-5 flex items-center gap-3"
-            style="font-weight: 600"
-          >
+          <h2 class="text-2xl font-medium mb-5 flex items-center gap-3" style="font-weight: 600">
             <span class="p-2 w-10 h-10 d-flex relative bg-amber-100 rounded-lg">
-              <span class="material-icons-outlined text-center text-lr"
-                >warning</span
-              >
+              <span class="material-icons-outlined text-center text-lr">warning</span>
             </span>
             <span class="text-dark">
               Common <span class="text-lr">Problems</span> We
@@ -465,17 +360,10 @@ function getTemplate(target) {
       </div>
     </section>
 
-    <section
-      class="py-24"
-      id="solutions"
-      style="background: linear-gradient(135deg, #0f0f0f 0%, #000000 100%)"
-    >
+    <section class="py-24" id="solutions" style="background: linear-gradient(135deg, #0f0f0f 0%, #000000 100%)">
       <div class="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8">
         <div class="text-center mb-16">
-          <h2
-            class="text-4xl font-display font-extrabold mb-4 text-lg"
-            style="font-weight: 600"
-          >
+          <h2 class="text-4xl font-display font-extrabold mb-4 text-lg" style="font-weight: 600">
             Outcome-Driven Solutions
           </h2>
           <p class="text-slate-300 max-w-2xl mx-auto mt-3">
@@ -485,16 +373,12 @@ function getTemplate(target) {
         </div>
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div
-            class="group relative bg-background-light p-8 rounded-xl border border-dark transition-all hover:scale-[1.05] hover:shadow-2xl flex flex-col h-full"
-          >
-          <div
-              class="absolute top-0 right-8 -translate-y-1/2 bg-primary text-slate-900 px-4 py-1 rounded-full text-xs font-bold uppercase tracking-widest"
-            >
+            class="group relative bg-background-light p-8 rounded-xl border border-dark transition-all hover:scale-[1.05] hover:shadow-2xl flex flex-col h-full">
+            <div
+              class="absolute top-0 right-8 -translate-y-1/2 bg-primary text-slate-900 px-4 py-1 rounded-full text-xs font-bold uppercase tracking-widest">
               Popular
             </div>
-            <div
-              class="w-14 h-14 bg-blue-500/10 text-blue-500 rounded-lg flex items-center justify-center mb-6"
-            >
+            <div class="w-14 h-14 bg-blue-500/10 text-blue-500 rounded-lg flex items-center justify-center mb-6">
               <span class="material-icons-outlined text-3xl">hub</span>
             </div>
             <h4 class="text-2xl font-bolder mb-3" style="font-weight: 600">
@@ -506,21 +390,15 @@ function getTemplate(target) {
             </p>
             <ul class="space-y-3 mb-8 text-sm p-0">
               <li class="flex items-center gap-2">
-                <span class="material-icons-outlined text-green-500 text-sm"
-                  >check_circle</span
-                >
+                <span class="material-icons-outlined text-green-500 text-sm">check_circle</span>
                 Conversion-First Landing Pages
               </li>
               <li class="flex items-center gap-2">
-                <span class="material-icons-outlined text-green-500 text-sm"
-                  >check_circle</span
-                >
+                <span class="material-icons-outlined text-green-500 text-sm">check_circle</span>
                 Targeted Ad Campaigns (GADS/Meta)
               </li>
               <li class="flex items-center gap-2">
-                <span class="material-icons-outlined text-green-500 text-sm"
-                  >check_circle</span
-                >
+                <span class="material-icons-outlined text-green-500 text-sm">check_circle</span>
                 CRM Integration &amp; Automation
               </li>
             </ul>
@@ -528,90 +406,58 @@ function getTemplate(target) {
               <p class="text-xs uppercase font-bold text-slate-400 mb-2">
                 <small>Primary Outcome</small>
               </p>
-              <h5
-                class="text-lg font-bold text-primary"
-                style="font-weight: 600"
-              >
+              <h5 class="text-lg font-bold text-primary" style="font-weight: 600">
                 Predictable Sales Pipeline
               </h5>
             </div>
           </div>
           <div
-            class="group relative bg-dark p-8 rounded-xl scale-[1.05] hover:scale-[1.08] border border-dark transition-all shadow-2xl flex flex-col h-full"
-          >
+            class="group relative bg-dark p-8 rounded-xl scale-[1.05] hover:scale-[1.08] border border-dark transition-all shadow-2xl flex flex-col h-full">
             <div
-              class="absolute top-0 right-8 -translate-y-1/2 bg-primary text-slate-900 px-4 py-1 rounded-full text-xs font-bold uppercase tracking-widest"
-            >
+              class="absolute top-0 right-8 -translate-y-1/2 bg-primary text-slate-900 px-4 py-1 rounded-full text-xs font-bold uppercase tracking-widest">
               Most Popular
             </div>
-            <div
-              class="w-14 h-14 bg-white/10 text-white rounded-lg flex items-center justify-center mb-6"
-            >
+            <div class="w-14 h-14 bg-white/10 text-white rounded-lg flex items-center justify-center mb-6">
               <span class="material-icons-outlined text-3xl">shopping_bag</span>
             </div>
-            <h4
-              class="text-2xl font-bold mb-3 text-white"
-              style="font-weight: 600"
-            >
+            <h4 class="text-2xl font-bold mb-3 text-white" style="font-weight: 600">
               E-commerce Growth
             </h4>
             <p class="text-slate-300 mb-6 flex-grow">
               Aggressive scaling strategies for Shopify &amp; custom stores
               focusing on AOV and LTV.
             </p>
-            <ul
-              class="space-y-3 mb-8 text-sm text-slate-200  font-medium p-0"
-            >
+            <ul class="space-y-3 mb-8 text-sm text-slate-200  font-medium p-0">
               <li class="flex items-center gap-2">
-                <span
-                  class="material-icons-outlined text-primary  text-sm"
-                  >check_circle</span
-                >
+                <span class="material-icons-outlined text-primary  text-sm">check_circle</span>
                 High-Converting Checkout UI
               </li>
               <li class="flex items-center gap-2">
-                <span
-                  class="material-icons-outlined text-primary  text-sm"
-                  >check_circle</span
-                >
+                <span class="material-icons-outlined text-primary  text-sm">check_circle</span>
                 Performance Creative Production
               </li>
               <li class="flex items-center gap-2">
-                <span
-                  class="material-icons-outlined text-primary  text-sm"
-                  >check_circle</span
-                >
+                <span class="material-icons-outlined text-primary  text-sm">check_circle</span>
                 Advanced Retention Flows
               </li>
             </ul>
             <div class="pt-6 border-t border-white/20">
-              <p
-                class="text-xs uppercase font-bold text-slate-400 mb-2"
-              >
+              <p class="text-xs uppercase font-bold text-slate-400 mb-2">
                 <small>Primary Outcome</small>
               </p>
-              <h5
-                class="text-lg font-bold text-white "
-                style="font-weight: 600"
-              >
+              <h5 class="text-lg font-bold text-white " style="font-weight: 600">
                 Maximum ROAS Scaling
               </h5>
             </div>
           </div>
           <div
-            class="group relative bg-background-light p-8 rounded-xl border border-dark transition-all hover:scale-[1.05] hover:shadow-2xl flex flex-col h-full"
-          >
-          <div
-              class="absolute top-0 right-8 -translate-y-1/2 bg-primary text-slate-900 px-4 py-1 rounded-full text-xs font-bold uppercase tracking-widest"
-            >
+            class="group relative bg-background-light p-8 rounded-xl border border-dark transition-all hover:scale-[1.05] hover:shadow-2xl flex flex-col h-full">
+            <div
+              class="absolute top-0 right-8 -translate-y-1/2 bg-primary text-slate-900 px-4 py-1 rounded-full text-xs font-bold uppercase tracking-widest">
               Popular
             </div>
-            <div
-              class="w-14 h-14 bg-purple-500/10 text-purple-500 rounded-lg flex items-center justify-center mb-6"
-            >
-              <span class="material-icons-outlined text-3xl"
-                >rocket_launch</span
-              >
+            <div class="w-14 h-14 bg-purple-500/10 text-purple-500 rounded-lg flex items-center justify-center mb-6">
+              <span class="material-icons-outlined text-3xl">rocket_launch</span>
             </div>
             <h4 class="text-2xl font-bold mb-3" style="font-weight: 600">
               Startup Launch Kit
@@ -622,21 +468,15 @@ function getTemplate(target) {
             </p>
             <ul class="space-y-3 mb-8 text-sm p-0">
               <li class="flex items-center gap-2">
-                <span class="material-icons-outlined text-green-500 text-sm"
-                  >check_circle</span
-                >
+                <span class="material-icons-outlined text-green-500 text-sm">check_circle</span>
                 Rapid Product UI/UX Prototyping
               </li>
               <li class="flex items-center gap-2">
-                <span class="material-icons-outlined text-green-500 text-sm"
-                  >check_circle</span
-                >
+                <span class="material-icons-outlined text-green-500 text-sm">check_circle</span>
                 Investor-Ready Pitch Platforms
               </li>
               <li class="flex items-center gap-2">
-                <span class="material-icons-outlined text-green-500 text-sm"
-                  >check_circle</span
-                >
+                <span class="material-icons-outlined text-green-500 text-sm">check_circle</span>
                 Modern Tech-Stack Deployment
               </li>
             </ul>
@@ -644,44 +484,29 @@ function getTemplate(target) {
               <p class="text-xs uppercase font-bold text-slate-500 mb-2">
                 <small>Primary Outcome</small>
               </p>
-              <h5
-                class="text-lg font-bold text-primary"
-                style="font-weight: 600"
-              >
+              <h5 class="text-lg font-bold text-primary" style="font-weight: 600">
                 Market Dominance Ready
               </h5>
             </div>
           </div>
         </div>
         <div class="d-flex justify-content-center gap-3 mt-5">
-          <a
-            class="amor-btn btn-fill-primary btn-large"
-            href="https://wa.me/917975859061/?text=Get%20my%20free%20GROWTH%20Audit."
-            >Get My Free Growth Audit</a
-          >
+          <a class="amor-btn btn-fill-primary btn-large"
+            href="https://wa.me/917975859061/?text=Get%20my%20free%20GROWTH%20Audit.">Get My Free Growth Audit</a>
         </div>
       </div>
     </section>
 
-    <section
-      class="py-40 bg-white"
-      id="results"
-    >
+    <section class="py-40 bg-white" id="results">
       <div class="max-w-7xl mx-auto px-6 lg:px-10">
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-24 items-center">
           <div class="lg:col-span-6">
             <div
-              class="inline-block py-2 px-4 rounded bg-dark text-brand-700 text-[10px] font-black uppercase tracking-[0.3em] mb-2"
-            >
+              class="inline-block py-2 px-4 rounded bg-dark text-brand-700 text-[10px] font-black uppercase tracking-[0.3em] mb-2">
               <span class="text-ly">Performance Metrics</span>
             </div>
-            <h2
-              class="text-6xl lg:text-8xl font-display mb-12 text-dark"
-              style="font-weight: 600"
-            >
-              Hard Data. <br /><span class="text-gradient-brand text-ly"
-                >Zero Guesswork.</span
-              >
+            <h2 class="text-6xl lg:text-8xl font-display mb-12 text-dark" style="font-weight: 600">
+              Hard Data. <br /><span class="text-gradient-brand text-ly">Zero Guesswork.</span>
             </h2>
             <div class="space-y-12 relative">
               <div class="group">
@@ -694,17 +519,12 @@ function getTemplate(target) {
                       Post-optimization average
                     </p>
                   </div>
-                  <span class="text-5xl font-black text-ly font-display"
-                    >+42%</span
-                  >
+                  <span class="text-5xl font-black text-ly font-display">+42%</span>
                 </div>
-                <div
-                  class="h-4 w-full bg-dark rounded-full overflow-hidden p-1"
-                >
+                <div class="h-4 w-full bg-dark rounded-full overflow-hidden p-1">
                   <div
                     class="h-full bg-warning rounded-full shadow-[0_0_10px_rgba(12,146,235,0.2)] transition-all duration-1000"
-                    style="width: 88%"
-                  ></div>
+                    style="width: 88%"></div>
                 </div>
               </div>
               <div class="group">
@@ -717,17 +537,11 @@ function getTemplate(target) {
                       Average B2B acceleration
                     </p>
                   </div>
-                  <span class="text-5xl font-black text-ly font-display"
-                    >3.5x</span
-                  >
+                  <span class="text-5xl font-black text-ly font-display">3.5x</span>
                 </div>
-                <div
-                  class="h-4 w-full bg-dark rounded-full overflow-hidden p-1"
-                >
-                  <div
-                    class="h-full bg-warning rounded-full shadow-[0_0_10px_rgba(12,146,235,0.2)]"
-                    style="width: 94%"
-                  ></div>
+                <div class="h-4 w-full bg-dark rounded-full overflow-hidden p-1">
+                  <div class="h-full bg-warning rounded-full shadow-[0_0_10px_rgba(12,146,235,0.2)]" style="width: 94%">
+                  </div>
                 </div>
               </div>
               <div class="group">
@@ -740,66 +554,38 @@ function getTemplate(target) {
                       Cumulative yearly scaling
                     </p>
                   </div>
-                  <span class="text-5xl font-black text-ly font-display"
-                    >$12M+</span
-                  >
+                  <span class="text-5xl font-black text-ly font-display">$12M+</span>
                 </div>
-                <div
-                  class="h-4 w-full bg-dark rounded-full overflow-hidden p-1"
-                >
-                  <div
-                    class="h-full bg-warning rounded-full shadow-[0_0_10px_rgba(12,146,235,0.2)]"
-                    style="width: 76%"
-                  ></div>
+                <div class="h-4 w-full bg-dark rounded-full overflow-hidden p-1">
+                  <div class="h-full bg-warning rounded-full shadow-[0_0_10px_rgba(12,146,235,0.2)]" style="width: 76%">
+                  </div>
                 </div>
               </div>
             </div>
           </div>
           <div class="lg:col-span-6 relative">
             <div
-              class="relative rounded-[3rem] overflow-hidden shadow-2xl shadow-charcoal-200/50 group border border-charcoal-100"
-            >
-              <img
-                alt="Data analytics dashboard"
+              class="relative rounded-[3rem] overflow-hidden shadow-2xl shadow-charcoal-200/50 group border border-charcoal-100">
+              <img alt="Data analytics dashboard"
                 class="w-full aspect-[4/5] object-cover group-hover:scale-105 transition-transform duration-1000"
-                src="../assets/img/project/c4/sa-ad.png"
-              />
+                src="../assets/img/project/c4/sa-ad.png" />
+              <div class="absolute inset-0 bg-gradient-to-t from-white via-transparent to-transparent"></div>
               <div
-                class="absolute inset-0 bg-gradient-to-t from-white via-transparent to-transparent"
-              ></div>
-              <div
-                class="absolute bottom-8 left-8 right-8 p-10 bg-white/95 backdrop-blur-xl rounded-3xl border border-charcoal-100 shadow-xl"
-              >
+                class="absolute bottom-8 left-8 right-8 p-10 bg-white/95 backdrop-blur-xl rounded-3xl border border-charcoal-100 shadow-xl">
                 <div class="flex gap-1 text-brand-600 mb-3">
-                  <span class="material-symbols-outlined fill-1 text-ly"
-                    >star</span
-                  >
-                  <span class="material-symbols-outlined fill-1 text-ly"
-                    >star</span
-                  >
-                  <span class="material-symbols-outlined fill-1 text-ly"
-                    >star</span
-                  >
-                  <span class="material-symbols-outlined fill-1 text-ly"
-                    >star</span
-                  >
-                  <span class="material-symbols-outlined fill-1 text-ly"
-                    >star</span
-                  >
+                  <span class="material-symbols-outlined fill-1 text-ly">star</span>
+                  <span class="material-symbols-outlined fill-1 text-ly">star</span>
+                  <span class="material-symbols-outlined fill-1 text-ly">star</span>
+                  <span class="material-symbols-outlined fill-1 text-ly">star</span>
+                  <span class="material-symbols-outlined fill-1 text-ly">star</span>
                 </div>
-                <p
-                  class="text-dark font-bold text-xl leading-relaxed mb-6 italic"
-                >
+                <p class="text-dark font-bold text-xl leading-relaxed mb-6 italic">
                   "Amortree is a very professional and end-to-end service
                   provider. They have good understanding of the clients needs
                   and work in a timely and efficient manner."
                 </p>
                 <div class="flex items-center gap-4">
-                  <img
-                    alt="Client"
-                    class="w-14 h-14"
-                    src="../assets/img/project/c4/icon-sa.svg"
-                  />
+                  <img alt="Client" class="w-14 h-14" src="../assets/img/project/c4/icon-sa.svg" />
                   <div>
                     <h5 class="text-base font-black text-secondary mb-0">
                       Menaka Krishna
@@ -811,21 +597,13 @@ function getTemplate(target) {
                 </div>
               </div>
             </div>
-            <div
-              class="absolute bg-dark -top-10 -right-10 bg-brand-600 p-8 rounded-3xl shadow-2xl hidden xl:block"
-            >
+            <div class="absolute bg-dark -top-10 -right-10 bg-brand-600 p-8 rounded-3xl shadow-2xl hidden xl:block">
               <div class="flex items-center justify-center gap-6">
-                <div
-                  class="w-16 h-16 bg-white text-brand-600 rounded-full flex items-center justify-center"
-                >
-                  <span class="material-symbols-outlined text-4xl font-bold"
-                    >payments</span
-                  >
+                <div class="w-16 h-16 bg-white text-brand-600 rounded-full flex items-center justify-center">
+                  <span class="material-symbols-outlined text-4xl font-bold">payments</span>
                 </div>
                 <div>
-                  <p
-                    class="text-xs font-black text-white uppercase tracking-[0.2em] mb-1"
-                  >
+                  <p class="text-xs font-black text-white uppercase tracking-[0.2em] mb-1">
                     Live ROAS
                   </p>
                   <p class="text-4xl font-black text-ly mb-0">8.44x</p>
@@ -839,43 +617,32 @@ function getTemplate(target) {
 
     <section class="pb-24 px-6 bg-white" id="process">
       <div class="container mx-auto">
-        <h2
-          class="text-3xl font-display font-medium text-center text-dark mb-16"
-          style="font-weight: 600"
-        >
+        <h2 class="text-3xl font-display font-medium text-center text-dark mb-16" style="font-weight: 600">
           Our Proven <span class="text-ly">4-Step Process</span>
         </h2>
         <div class="grid grid-cols-1 md:grid-cols-4 gap-0">
-          <div
-            class="step-arrow bg-slate-900 text-white p-8 mb-4 md:mb-0 hover:scale-[1.04] transition-all"
-          >
+          <div class="step-arrow bg-slate-900 text-white p-8 mb-4 md:mb-0 hover:scale-[1.04] transition-all">
             <div class="text-4xl font-black mb-4 opacity-50">01</div>
             <h5 class="font-bold text-lg mb-2 d-block">Audit &amp; Strategy</h5>
             <small class="text-sm text-slate-300">
               Deep dive into your metrics and map out the growth path.
             </small>
           </div>
-          <div
-            class="step-arrow bg-slate-800 text-white p-8 mb-4 md:mb-0 hover:scale-[1.06] transition-all"
-          >
+          <div class="step-arrow bg-slate-800 text-white p-8 mb-4 md:mb-0 hover:scale-[1.06] transition-all">
             <div class="text-4xl font-black mb-4 opacity-80">02</div>
             <h5 class="font-bold text-lr mb-2 d-block">Design &amp; Build</h5>
             <small class="text-sm text-slate-300">
               Crafting your high-converting assets with precision.
             </small>
           </div>
-          <div
-            class="step-arrow bg-slate-700 text-white p-8 mb-4 md:mb-0 hover:scale-[1.08] transition-all"
-          >
+          <div class="step-arrow bg-slate-700 text-white p-8 mb-4 md:mb-0 hover:scale-[1.08] transition-all">
             <div class="text-4xl font-black mb-4 opacity-80">03</div>
             <h5 class="font-bold text-ly mb-2 d-block">Launch</h5>
             <small class="text-sm text-slate-100">
               Deploying campaigns and monitoring live performance.
             </small>
           </div>
-          <div
-            class="step-arrow bg-slate-600 text-slate-900 p-8 mb-4 md:mb-0 hover:scale-[1.1] transition-all"
-          >
+          <div class="step-arrow bg-slate-600 text-slate-900 p-8 mb-4 md:mb-0 hover:scale-[1.1] transition-all">
             <div class="text-4xl font-black mb-4 opacity-80">04</div>
             <h5 class="font-bold text-lb mb-2 d-block">Optimize &amp; Scale</h5>
             <small class="text-sm text-slate-300">
@@ -1070,17 +837,12 @@ function getTemplate(target) {
               <div class="project-grid">
                 <div class="thumbnail">
                   <a href="project/steadyasset" aria-label="SteadyAsset">
-                    <img
-                      src="../assets/img/project/c4/project-thum-sa.png"
-                      alt="project"
-                    />
+                    <img src="../assets/img/project/c4/project-thum-sa.png" alt="project" />
                     <div class="content">
                       <h3 class="title">
                         <a href="project/steadyasset">SteadyAsset</a>
                       </h3>
-                      <span class="subtitle"
-                        >Logo, Branding, UI/UX Design, Website, GMB, GA</span
-                      >
+                      <span class="subtitle">Logo, Branding, UI/UX Design, Website, GMB, GA</span>
                     </div>
                   </a>
                 </div>
@@ -1090,18 +852,13 @@ function getTemplate(target) {
               <div class="project-grid">
                 <div class="thumbnail">
                   <a href="project/savedesk" aria-label="SaveDesk">
-                    <img
-                      src="../assets/img/project/c7/project-thum-sd.png"
-                      alt="project"
-                    />
+                    <img src="../assets/img/project/c7/project-thum-sd.png" alt="project" />
                     <div class="content">
                       <h3 class="title">
                         <a href="project/savedesk">SaveDesk</a>
                       </h3>
-                      <span class="subtitle"
-                        >Redesign, UI/UX Design, Wireframing, High-Fidelity
-                        Prototype</span
-                      >
+                      <span class="subtitle">Redesign, UI/UX Design, Wireframing, High-Fidelity
+                        Prototype</span>
                     </div>
                   </a>
                 </div>
@@ -1110,23 +867,13 @@ function getTemplate(target) {
             <div class="col-md-10 mx-md-auto col-lg-6 project branding">
               <div class="project-grid">
                 <div class="thumbnail">
-                  <a
-                    href="project/samsiddhi-designs"
-                    aria-label="Samsiddhi Designs"
-                  >
-                    <img
-                      src="../assets/img/project/c9/project-thum-sd.png"
-                      alt="project"
-                    />
+                  <a href="project/samsiddhi-designs" aria-label="Samsiddhi Designs">
+                    <img src="../assets/img/project/c9/project-thum-sd.png" alt="project" />
                     <div class="content">
                       <h3 class="title">
-                        <a href="project/samsiddhi-designs"
-                          >Samsiddhi Designs</a
-                        >
+                        <a href="project/samsiddhi-designs">Samsiddhi Designs</a>
                       </h3>
-                      <span class="subtitle"
-                        >Logo, Branding, UI/UX Design, Website, GMB, GA</span
-                      >
+                      <span class="subtitle">Logo, Branding, UI/UX Design, Website, GMB, GA</span>
                     </div>
                   </a>
                 </div>
@@ -1136,10 +883,7 @@ function getTemplate(target) {
               <div class="project-grid">
                 <div class="thumbnail">
                   <a href="project/uae-links" aria-label="UAE Links">
-                    <img
-                      src="../assets/img/project/c1/project-thum-uaeLinks.png"
-                      alt="project"
-                    />
+                    <img src="../assets/img/project/c1/project-thum-uaeLinks.png" alt="project" />
                     <div class="content">
                       <h3 class="title">
                         <a href="project/uae-links">UAE Links</a>
@@ -1153,9 +897,7 @@ function getTemplate(target) {
           </div>
 
           <div class="d-lg-flex justify-content-center">
-            <a class="amor-btn btn-borderd light" href="portfolio"
-              >View Portfolio</a
-            >
+            <a class="amor-btn btn-borderd light" href="portfolio">View Portfolio</a>
           </div>
         </div>
       </div>
@@ -1183,12 +925,10 @@ function getTemplate(target) {
         </div>
 
         <div class="grid md:grid-cols-2 gap-8">
-          <div
-            class="glass-card p-10 rounded-3xl relative overflow-hidden group"
-          >
+          <div class="glass-card p-10 rounded-3xl relative overflow-hidden group">
             <div
-              class="absolute top-0 left-0 w-2 h-full bg-warning group-hover:w-full group-hover:opacity-5 transition-all duration-700"
-            ></div>
+              class="absolute top-0 left-0 w-2 h-full bg-warning group-hover:w-full group-hover:opacity-5 transition-all duration-700">
+            </div>
             <div class="flex gap-1 text-ly mb-6">
               <span class="material-symbols-outlined">star</span>
               <span class="material-symbols-outlined">star</span>
@@ -1196,38 +936,25 @@ function getTemplate(target) {
               <span class="material-symbols-outlined">star</span>
               <span class="material-symbols-outlined">star</span>
             </div>
-            <p
-              class="text-xl text-white italic mb-10 leading-relaxed font-light"
-            >
+            <p class="text-xl text-white italic mb-10 leading-relaxed font-light">
               "Amortree is a very professional and end-to-end service provider.
               They have good understanding of the clients needs and work in a
               timely and efficient manner."
             </p>
             <div class="flex items-center gap-4">
-              <img
-                src="../assets/img/project/c4/icon-sa.svg"
-                class="m-0"
-                style="height: 40px"
-                alt="SteadyAsset Logo"
-              />
+              <img src="../assets/img/project/c4/icon-sa.svg" class="m-0" style="height: 40px" alt="SteadyAsset Logo" />
               <div>
-                <p
-                  class="font-bold text-white uppercase text-sm tracking-widest mb-1"
-                >
+                <p class="font-bold text-white uppercase text-sm tracking-widest mb-1">
                   Menaka Krishna
                 </p>
-                <small class="text-xs text-ll font-bold mb-0"
-                  >CEO, SteadyAsset</small
-                >
+                <small class="text-xs text-ll font-bold mb-0">CEO, SteadyAsset</small>
               </div>
             </div>
           </div>
-          <div
-            class="glass-card p-10 rounded-3xl relative overflow-hidden group"
-          >
+          <div class="glass-card p-10 rounded-3xl relative overflow-hidden group">
             <div
-              class="absolute top-0 left-0 w-2 h-full bg-warning group-hover:w-full group-hover:opacity-5 transition-all duration-700"
-            ></div>
+              class="absolute top-0 left-0 w-2 h-full bg-warning group-hover:w-full group-hover:opacity-5 transition-all duration-700">
+            </div>
             <div class="flex gap-1 text-ly mb-6">
               <span class="material-symbols-outlined">star</span>
               <span class="material-symbols-outlined">star</span>
@@ -1235,9 +962,7 @@ function getTemplate(target) {
               <span class="material-symbols-outlined">star</span>
               <span class="material-symbols-outlined">star</span>
             </div>
-            <p
-              class="text-xl text-white italic mb-10 leading-relaxed font-light"
-            >
+            <p class="text-xl text-white italic mb-10 leading-relaxed font-light">
               "Hi, I just wanted to take a moment to express my sincere
               appreciation for the outstanding work you've done. Completing it
               on time and to such a high standard is a testament to your
@@ -1246,30 +971,19 @@ function getTemplate(target) {
               well done!"
             </p>
             <div class="flex items-center gap-4">
-              <img
-                src="../assets/img/project/c2/icon-sc.svg"
-                class="m-0"
-                style="height: 40px"
-                alt="SteadyAsset Logo"
-              />
+              <img src="../assets/img/project/c2/icon-sc.svg" class="m-0" style="height: 40px" alt="SteadyAsset Logo" />
               <div>
-                <p
-                  class="font-bold text-white uppercase text-sm tracking-widest mb-1"
-                >
+                <p class="font-bold text-white uppercase text-sm tracking-widest mb-1">
                   Sandeep L
                 </p>
-                <small class="text-xs text-ll font-bold mb-0"
-                  >Co-Founder, Solved Cube IT Solution</small
-                >
+                <small class="text-xs text-ll font-bold mb-0">Co-Founder, Solved Cube IT Solution</small>
               </div>
             </div>
           </div>
-          <div
-            class="glass-card p-10 rounded-3xl relative overflow-hidden group"
-          >
+          <div class="glass-card p-10 rounded-3xl relative overflow-hidden group">
             <div
-              class="absolute top-0 left-0 w-2 h-full bg-warning group-hover:w-full group-hover:opacity-5 transition-all duration-700"
-            ></div>
+              class="absolute top-0 left-0 w-2 h-full bg-warning group-hover:w-full group-hover:opacity-5 transition-all duration-700">
+            </div>
             <div class="flex gap-1 text-ly mb-6">
               <span class="material-symbols-outlined">star</span>
               <span class="material-symbols-outlined">star</span>
@@ -1277,38 +991,25 @@ function getTemplate(target) {
               <span class="material-symbols-outlined">star</span>
               <span class="material-symbols-outlined">star</span>
             </div>
-            <p
-              class="text-xl text-white italic mb-10 leading-relaxed font-light"
-            >
+            <p class="text-xl text-white italic mb-10 leading-relaxed font-light">
               "Amortree Tech is a pleasure to work with. They're responsive,
               professional, and always willing to go the extra mile. I highly
               recommend their services."
             </p>
             <div class="flex items-center gap-4">
-              <img
-                src="../assets/img/project/c9/icon-sd.svg"
-                class="m-0"
-                style="height: 40px"
-                alt="SteadyAsset Logo"
-              />
+              <img src="../assets/img/project/c9/icon-sd.svg" class="m-0" style="height: 40px" alt="SteadyAsset Logo" />
               <div>
-                <p
-                  class="font-bold text-white uppercase text-sm tracking-widest mb-1"
-                >
+                <p class="font-bold text-white uppercase text-sm tracking-widest mb-1">
                   Bharathkumar MS
                 </p>
-                <small class="text-xs text-ll font-bold mb-0"
-                  >Founder, Samsiddhi Designs</small
-                >
+                <small class="text-xs text-ll font-bold mb-0">Founder, Samsiddhi Designs</small>
               </div>
             </div>
           </div>
-          <div
-            class="glass-card p-10 rounded-3xl relative overflow-hidden group"
-          >
+          <div class="glass-card p-10 rounded-3xl relative overflow-hidden group">
             <div
-              class="absolute top-0 left-0 w-2 h-full bg-warning group-hover:w-full group-hover:opacity-5 transition-all duration-700"
-            ></div>
+              class="absolute top-0 left-0 w-2 h-full bg-warning group-hover:w-full group-hover:opacity-5 transition-all duration-700">
+            </div>
             <div class="flex gap-1 text-ly mb-6">
               <span class="material-symbols-outlined">star</span>
               <span class="material-symbols-outlined">star</span>
@@ -1316,29 +1017,19 @@ function getTemplate(target) {
               <span class="material-symbols-outlined">star</span>
               <span class="material-symbols-outlined">star</span>
             </div>
-            <p
-              class="text-xl text-white italic mb-10 leading-relaxed font-light"
-            >
+            <p class="text-xl text-white italic mb-10 leading-relaxed font-light">
               "Good understanding of the client's need. Very good professional
               and service provider. you again for a job well done, All the best
               👍👍💐💐"
             </p>
             <div class="flex items-center gap-4">
-              <img
-                src="../assets/img/project/c6/spr-logo.svg"
-                class="m-0"
-                style="height: 40px"
-                alt="SteadyAsset Logo"
-              />
+              <img src="../assets/img/project/c6/spr-logo.svg" class="m-0" style="height: 40px"
+                alt="SteadyAsset Logo" />
               <div>
-                <p
-                  class="font-bold text-white uppercase text-sm tracking-widest mb-1"
-                >
+                <p class="font-bold text-white uppercase text-sm tracking-widest mb-1">
                   Suresh Babu
                 </p>
-                <small class="text-xs text-ll font-bold mb-0"
-                  >CEO, SPR Real Estate</small
-                >
+                <small class="text-xs text-ll font-bold mb-0">CEO, SPR Real Estate</small>
               </div>
             </div>
           </div>
@@ -1355,12 +1046,8 @@ function getTemplate(target) {
                   <i class="icofont-star text-warning"></i>
                   <i class="icofont-star text-warning"></i>
                 </div>
-                <a
-                  class="small text-success mb-2"
-                  href="https://share.google/VbfvZxWgqZZY3wKnD"
-                  target="_blank"
-                  >Google Review <i class="icofont-link"></i
-                ></a>
+                <a class="small text-success mb-2" href="https://share.google/VbfvZxWgqZZY3wKnD" target="_blank">Google
+                  Review <i class="icofont-link"></i></a>
               </div>
               <p class="mb-3">
                 "Amortree is a very professional and end-to-end service
@@ -1368,12 +1055,8 @@ function getTemplate(target) {
                 work in a timely and efficient manner."
               </p>
               <div class="d-flex">
-                <img
-                  src="../assets/img/project/c4/icon-sa.svg"
-                  class="m-0"
-                  style="height: 40px"
-                  alt="SteadyAsset Logo"
-                />
+                <img src="../assets/img/project/c4/icon-sa.svg" class="m-0" style="height: 40px"
+                  alt="SteadyAsset Logo" />
                 <div class="ms-2">
                   <div class="small">Client – SteadyAsset</div>
                   <div class="fw-bold">Menaka Reddy</div>
@@ -1391,12 +1074,8 @@ function getTemplate(target) {
                   <i class="icofont-star text-warning"></i>
                   <i class="icofont-star text-warning"></i>
                 </div>
-                <a
-                  class="small text-success mb-2"
-                  href="https://share.google/8H1Msp6toe6G2KbDN"
-                  target="_blank"
-                  >Google Review <i class="icofont-link"></i
-                ></a>
+                <a class="small text-success mb-2" href="https://share.google/8H1Msp6toe6G2KbDN" target="_blank">Google
+                  Review <i class="icofont-link"></i></a>
               </div>
               <p class="mb-3">
                 "Hi, I just wanted to take a moment to express my sincere
@@ -1407,12 +1086,8 @@ function getTemplate(target) {
                 job well done!"
               </p>
               <div class="d-flex">
-                <img
-                  src="../assets/img/project/c2/icon-sc.svg"
-                  class="m-0"
-                  style="height: 40px"
-                  alt="SteadyAsset Logo"
-                />
+                <img src="../assets/img/project/c2/icon-sc.svg" class="m-0" style="height: 40px"
+                  alt="SteadyAsset Logo" />
                 <div class="ms-2">
                   <div class="small">Client – Solved Cube IT Solution</div>
                   <div class="fw-bold">Sandeep L</div>
@@ -1430,12 +1105,8 @@ function getTemplate(target) {
                   <i class="icofont-star text-warning"></i>
                   <i class="icofont-star text-warning"></i>
                 </div>
-                <a
-                  class="small text-success mb-2"
-                  href="https://share.google/NG4IIyDdLP6yMJ5tN"
-                  target="_blank"
-                  >Google Review <i class="icofont-link"></i
-                ></a>
+                <a class="small text-success mb-2" href="https://share.google/NG4IIyDdLP6yMJ5tN" target="_blank">Google
+                  Review <i class="icofont-link"></i></a>
               </div>
               <p class="mb-3">
                 "Amortree Tech is a pleasure to work with. They're responsive,
@@ -1443,12 +1114,8 @@ function getTemplate(target) {
                 recommend their services."
               </p>
               <div class="d-flex">
-                <img
-                  src="../assets/img/project/c9/icon-sd.svg"
-                  class="m-0"
-                  style="height: 40px"
-                  alt="SteadyAsset Logo"
-                />
+                <img src="../assets/img/project/c9/icon-sd.svg" class="m-0" style="height: 40px"
+                  alt="SteadyAsset Logo" />
                 <div class="ms-2">
                   <div class="small">Client – Samsiddhi Designs</div>
                   <div class="fw-bold">Bharathkumar MS</div>
@@ -1485,89 +1152,55 @@ function getTemplate(target) {
 
     <section class="py-24 px-6 bg-white">
       <div class="container mx-auto max-w-4xl">
-        <h2
-          class="text-3xl font-display font-bold text-center mb-16 text-ly"
-          style="font-weight: 600"
-        >
+        <h2 class="text-3xl font-display font-bold text-center mb-16 text-ly" style="font-weight: 600">
           Why Businesses Choose Us
         </h2>
         <div class="space-y-4 w-50 why mx-auto">
           <div
-            class="group bg-dark p-6 rounded-2xl border border-dark flex items-center justify-between hover:border-primary transition-all cursor-default"
-          >
+            class="group bg-dark p-6 rounded-2xl border border-dark flex items-center justify-between hover:border-primary transition-all cursor-default">
             <div class="flex items-center gap-4">
-              <div
-                class="w-10 h-10 rounded-full bg-primary/10 text-ly flex items-center justify-center"
-              >
+              <div class="w-10 h-10 rounded-full bg-primary/10 text-ly flex items-center justify-center">
                 <span class="material-symbols-outlined">target</span>
               </div>
               <span class="text-xl font-semibold">Strategy-First Approach</span>
             </div>
-            <span
-              class="material-symbols-outlined text-slate-400 group-hover:text-primary"
-              >arrow_forward</span
-            >
+            <span class="material-symbols-outlined text-slate-400 group-hover:text-primary">arrow_forward</span>
           </div>
           <div
-            class="group bg-dark p-6 rounded-2xl border border-dark flex items-center justify-between hover:border-primary transition-all cursor-default"
-          >
+            class="group bg-dark p-6 rounded-2xl border border-dark flex items-center justify-between hover:border-primary transition-all cursor-default">
             <div class="flex items-center gap-4">
-              <div
-                class="w-10 h-10 rounded-full bg-primary/10 text-ly flex items-center justify-center"
-              >
+              <div class="w-10 h-10 rounded-full bg-primary/10 text-ly flex items-center justify-center">
                 <span class="material-symbols-outlined">trending_up</span>
               </div>
-              <span class="text-xl font-semibold"
-                >Business Results Focused</span
-              >
+              <span class="text-xl font-semibold">Business Results Focused</span>
             </div>
-            <span
-              class="material-symbols-outlined text-slate-400 group-hover:text-primary"
-              >arrow_forward</span
-            >
+            <span class="material-symbols-outlined text-slate-400 group-hover:text-primary">arrow_forward</span>
           </div>
           <div
-            class="group bg-dark p-6 rounded-2xl border border-dark flex items-center justify-between hover:border-primary transition-all cursor-default"
-          >
+            class="group bg-dark p-6 rounded-2xl border border-dark flex items-center justify-between hover:border-primary transition-all cursor-default">
             <div class="flex items-center gap-4">
-              <div
-                class="w-10 h-10 rounded-full bg-primary/10 text-ly flex items-center justify-center"
-              >
+              <div class="w-10 h-10 rounded-full bg-primary/10 text-ly flex items-center justify-center">
                 <span class="material-symbols-outlined">analytics</span>
               </div>
-              <span class="text-xl font-semibold"
-                >100% Data-Driven Decisions</span
-              >
+              <span class="text-xl font-semibold">100% Data-Driven Decisions</span>
             </div>
-            <span
-              class="material-symbols-outlined text-slate-400 group-hover:text-primary"
-              >arrow_forward</span
-            >
+            <span class="material-symbols-outlined text-slate-400 group-hover:text-primary">arrow_forward</span>
           </div>
           <div
-            class="group bg-dark p-6 rounded-2xl border border-dark flex items-center justify-between hover:border-primary transition-all cursor-default"
-          >
+            class="group bg-dark p-6 rounded-2xl border border-dark flex items-center justify-between hover:border-primary transition-all cursor-default">
             <div class="flex items-center gap-4">
-              <div
-                class="w-10 h-10 rounded-full bg-primary/10 text-ly flex items-center justify-center"
-              >
+              <div class="w-10 h-10 rounded-full bg-primary/10 text-ly flex items-center justify-center">
                 <span class="material-symbols-outlined">handshake</span>
               </div>
               <span class="text-xl font-semibold">True Growth Partners</span>
             </div>
-            <span
-              class="material-symbols-outlined text-slate-400 group-hover:text-primary"
-              >arrow_forward</span
-            >
+            <span class="material-symbols-outlined text-slate-400 group-hover:text-primary">arrow_forward</span>
           </div>
         </div>
       </div>
     </section>
 
-    <section
-      class="d-none section section-padding-equal bg-color-white"
-      id="about"
-    >
+    <section class="d-none section section-padding-equal bg-color-white" id="about">
       <div class="container">
         <div class="row align-items-center">
           <div class="col-lg-6">
@@ -1576,9 +1209,7 @@ function getTemplate(target) {
                 <span class="subtitle">Who we are</span>
                 <h2 class="title mb--40">
                   Your
-                  <span class="gradient-text-light text-lg"
-                    >Digital Growth</span
-                  >
+                  <span class="gradient-text-light text-lg">Digital Growth</span>
                   Partner
                 </h2>
                 <p>
@@ -1608,21 +1239,14 @@ function getTemplate(target) {
                   <strong>digital transformation</strong> and success together.
                 </p>
                 <div class="d-flex justify-content-start gap-3 mt-5">
-                  <a
-                    href="about"
-                    class="amor-btn btn-borderd light"
-                    tabindex="0"
-                    >Know more</a
-                  >
+                  <a href="about" class="amor-btn btn-borderd light" tabindex="0">Know more</a>
                 </div>
               </div>
             </div>
           </div>
           <div class="col-xl-5 col-lg-6 offset-xl-1">
-            <img
-              src="../assets/img/amorboy/am-home-abt.png"
-              alt="Professional Web Development Team - Custom Website Design Services"
-            />
+            <img src="../assets/img/amorboy/am-home-abt.png"
+              alt="Professional Web Development Team - Custom Website Design Services" />
           </div>
         </div>
       </div>
@@ -1656,20 +1280,11 @@ function getTemplate(target) {
             <div class="accordion" id="faqAccordion">
               <div class="accordion-item">
                 <h3 class="accordion-header">
-                  <button
-                    class="accordion-button"
-                    type="button"
-                    data-bs-toggle="collapse"
-                    data-bs-target="#faq1"
-                  >
+                  <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
                     What services do you provide?
                   </button>
                 </h3>
-                <div
-                  id="faq1"
-                  class="accordion-collapse collapse show"
-                  data-bs-parent="#faqAccordion"
-                >
+                <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
                   <div class="accordion-body">
                     We offer <b>end-to-end digital solutions</b>, including:
 
@@ -1704,20 +1319,12 @@ function getTemplate(target) {
               </div>
               <div class="accordion-item">
                 <h3 class="accordion-header">
-                  <button
-                    class="accordion-button collapsed"
-                    type="button"
-                    data-bs-toggle="collapse"
-                    data-bs-target="#faq2"
-                  >
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#faq2">
                     Do you provide UI/UX design services?
                   </button>
                 </h3>
-                <div
-                  id="faq2"
-                  class="accordion-collapse collapse"
-                  data-bs-parent="#faqAccordion"
-                >
+                <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
                   <div class="accordion-body">
                     Yes, we provide comprehensive
                     <strong>UI/UX design services</strong> including user
@@ -1730,20 +1337,12 @@ function getTemplate(target) {
               </div>
               <div class="accordion-item">
                 <h3 class="accordion-header">
-                  <button
-                    class="accordion-button collapsed"
-                    type="button"
-                    data-bs-toggle="collapse"
-                    data-bs-target="#faq3"
-                  >
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#faq3">
                     What is your experience with mobile app UI/UX Design?
                   </button>
                 </h3>
-                <div
-                  id="faq3"
-                  class="accordion-collapse collapse"
-                  data-bs-parent="#faqAccordion"
-                >
+                <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
                   <div class="accordion-body">
                     We have extensive experience in
                     <strong>mobile app UI/UX Design</strong> for both iOS and
@@ -1756,20 +1355,12 @@ function getTemplate(target) {
               </div>
               <div class="accordion-item">
                 <h3 class="accordion-header">
-                  <button
-                    class="accordion-button collapsed"
-                    type="button"
-                    data-bs-toggle="collapse"
-                    data-bs-target="#faq4"
-                  >
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#faq4">
                     How much does a project cost?
                   </button>
                 </h3>
-                <div
-                  id="faq4"
-                  class="accordion-collapse collapse"
-                  data-bs-parent="#faqAccordion"
-                >
+                <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
                   <div class="accordion-body">
                     Costs vary based on features, design, and complexity. After
                     a free consultation, we provide a clear, tailored quote with
@@ -1779,20 +1370,12 @@ function getTemplate(target) {
               </div>
               <div class="accordion-item">
                 <h3 class="accordion-header">
-                  <button
-                    class="accordion-button collapsed"
-                    type="button"
-                    data-bs-toggle="collapse"
-                    data-bs-target="#faq5"
-                  >
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#faq5">
                     How long will my project take?
                   </button>
                 </h3>
-                <div
-                  id="faq5"
-                  class="accordion-collapse collapse"
-                  data-bs-parent="#faqAccordion"
-                >
+                <div id="faq5" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
                   <div class="accordion-body">
                     <p class="mb-2">Timelines depend on scope:</p>
                     <ul>
@@ -1820,46 +1403,28 @@ function getTemplate(target) {
               </div>
               <div class="accordion-item">
                 <h3 class="accordion-header">
-                  <button
-                    class="accordion-button collapsed"
-                    type="button"
-                    data-bs-toggle="collapse"
-                    data-bs-target="#faq6"
-                  >
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#faq6">
                     Do you provide support after launch?
                   </button>
                 </h3>
-                <div
-                  id="faq6"
-                  class="accordion-collapse collapse"
-                  data-bs-parent="#faqAccordion"
-                >
+                <div id="faq6" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
                   <div class="accordion-body">
                     Yes, we offer
-                    <b
-                      >maintenance, updates, security, and IT support
-                      packages</b
-                    >
+                    <b>maintenance, updates, security, and IT support
+                      packages</b>
                     so your system stays reliable and up-to-date.
                   </div>
                 </div>
               </div>
               <div class="accordion-item">
                 <h3 class="accordion-header">
-                  <button
-                    class="accordion-button collapsed"
-                    type="button"
-                    data-bs-toggle="collapse"
-                    data-bs-target="#faq7"
-                  >
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#faq7">
                     Will my website be mobile-friendly?
                   </button>
                 </h3>
-                <div
-                  id="faq7"
-                  class="accordion-collapse collapse"
-                  data-bs-parent="#faqAccordion"
-                >
+                <div id="faq7" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
                   <div class="accordion-body">
                     Absolutely. Every site we build is
                     <b>responsive, fast, and optimized for all devices</b>.
@@ -1868,20 +1433,12 @@ function getTemplate(target) {
               </div>
               <div class="accordion-item">
                 <h3 class="accordion-header">
-                  <button
-                    class="accordion-button collapsed"
-                    type="button"
-                    data-bs-toggle="collapse"
-                    data-bs-target="#faq8"
-                  >
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#faq8">
                     Do you work with international clients?
                   </button>
                 </h3>
-                <div
-                  id="faq8"
-                  class="accordion-collapse collapse"
-                  data-bs-parent="#faqAccordion"
-                >
+                <div id="faq8" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
                   <div class="accordion-body">
                     Yes! We collaborate with businesses across
                     <b>India and worldwide</b>, ensuring smooth communication
@@ -1951,6 +1508,7 @@ function getTemplate(target) {
 .step-arrow {
   clip-path: polygon(95% 0%, 100% 50%, 95% 100%, 0% 100%, 5% 50%, 0% 0%);
 }
+
 @media (max-width: 768px) {
   .step-arrow {
     clip-path: none;
