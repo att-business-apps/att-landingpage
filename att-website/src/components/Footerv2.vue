@@ -1,128 +1,189 @@
 <template>
-  <footer
-    class="bg-background-dark pt-32 pb-12"
-  >
-    <div class="max-w-7xl mx-auto px-6 lg:px-12">
-      <div class="grid md:grid-cols-12 gap-16 mb-24">
-        <div class="md:col-span-4 space-y-8">
-          <div class="flex items-center gap-3">
-            <div
-              class="w-8 h-8 bg-primary flex items-center justify-center rounded"
-            >
-              <span class="text-white font-bold text-lg">A</span>
-            </div>
-            <span
-              class="text-xl font-bold tracking-tight text-white uppercase"
-              >Amortree</span
-            >
-          </div>
-          <p class="text-slate-400 text-sm leading-relaxed">
-            A tech-forward growth agency bridging the gap between sophisticated
-            engineering and high-performance marketing.
+  <div class="section call-to-action-area pb-0">
+    <div class="container-fluid">
+      <div class="call-to-action">
+        <div class="section-heading heading-light">
+          <span class="subtitle">Let's Work Together</span>
+          <h2 class="title mb-3">Get Your Free Audit & Growth Plan!</h2>
+          <p>
+            No pressure, no sales pitch. Just actionable insights on how to grow
+            your business.
           </p>
-          <div class="flex gap-4">
-            <a
-              class="w-10 h-10 rounded-full border border-slate-800 flex items-center justify-center text-slate-400 hover:text-primary transition-all"
-              href="#"
-            >
-              <span class="material-symbols-outlined text-lg thin-stroke"
-                >share</span
-              >
-            </a>
-            <a
-              class="w-10 h-10 rounded-full border border-slate-800 flex items-center justify-center text-slate-400 hover:text-primary transition-all"
-              href="#"
-            >
-              <span class="material-symbols-outlined text-lg thin-stroke"
-                >mail</span
-              >
+          <!-- <a class="amor-btn btn-large btn-fill-white" href="estimate">Estimate Project</a> -->
+          <a
+            class="amor-btn btn-large btn-fill-white"
+            href="https://wa.me/917975859061/?text=I'm%20inquiring%20about%20the%20website%20service."
+            >Get Started Today</a
+          >
+        </div>
+        <div class="thumbnail">
+          <div class="larg-thumb">
+            <img
+              class="paralax-image"
+              src="../assets/img/chat-group.png"
+              alt="Chat"
+            />
+          </div>
+          <ul class="list-unstyled small-thumb">
+            <li class="shape shape-1">
+              <img
+                class="paralax-image"
+                src="../assets/img/amorboy/laptop-poses.png"
+                alt="Laptop"
+              />
+            </li>
+            <li class="shape shape-2">
+              <img
+                class="paralax-image"
+                src="../assets/img/amorboy/bill-pay.png"
+                alt="Bill"
+              />
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <ul class="list-unstyled shape-group-footer">
+      <li class="shape shape-1">
+        <img src="../assets/img/shapes/bubble-12.png" alt="amortree" />
+      </li>
+      <li class="shape shape-2">
+        <img src="../assets/img/shapes/bubble-16.png" alt="amortree" />
+      </li>
+      <li class="shape shape-3">
+        <img src="../assets/img/shapes/bubble-13.png" alt="amortree" />
+      </li>
+      <li class="shape shape-4">
+        <img src="../assets/img/shapes/bubble-14.png" alt="amortree" />
+      </li>
+      <li class="shape shape-5">
+        <img src="../assets/img/shapes/bubble-16.png" alt="amortree" />
+      </li>
+      <li class="shape shape-6">
+        <img src="../assets/img/shapes/bubble-15.png" alt="amortree" />
+      </li>
+      <li class="shape shape-7">
+        <img src="../assets/img/shapes/bubble-16.png" alt="amortree" />
+      </li>
+    </ul>
+  </div>
+  <div class="container-fluid pt-5">
+    <div class="row">
+      <div class="col-xl-6 col-lg-6">
+        <div class="contact-info mb--50">
+          <h3 class="title">Phone</h3>
+          <p>
+            Reach out for any queries; our experts are here to assist and
+            resolve your concerns promptly.
+          </p>
+          <h4 class="phone-number">
+            <a href="tel:+919916846647">+91 99168 46647</a>
+          </h4>
+        </div>
+      </div>
+      <div class="col-xl-6 col-lg-6">
+        <div class="contact-info mb--50">
+          <h3 class="title">Email</h3>
+          <p>
+            Our support team will get back to you in 24-h during standard
+            business days (Mon-Sat).
+          </p>
+          <h4 class="phone-number">
+            <a href="mailto:hi@amortree.com">hi@amortree.com</a>
+          </h4>
+        </div>
+      </div>
+    </div>
+  </div>
+  <footer class="bg-background-dark pt-12 pb-12">
+    <div class="max-w-7xl mx-auto px-6 lg:px-12">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
+        <div class="col-span-1 md:col-span-1">
+          <div class="flex items-center gap-2 mb-6">
+            <a href="/">
+              <img
+                class="light-version-logo"
+                style="width: 220px; margin: 0 auto"
+                src="../assets/img/att-logo-light.svg"
+                alt="amortree Tech logo"
+              />
             </a>
           </div>
+          <p class="text-slate-500 text-sm leading-relaxed mb-6">
+            The performance-first creative agency for ambitious brands looking
+            to dominate their market.
+          </p>
         </div>
-        <div class="md:col-span-2 space-y-6">
-          <h5
-            class="text-xs font-bold uppercase tracking-widest text-white"
-          >
-            Navigation
-          </h5>
-          <ul class="space-y-4 text-sm text-slate-400">
+        <div>
+          <h4 class="font-bold mb-6">Solutions</h4>
+          <ul class="space-y-4 p-0 text-sm text-slate-500 dark:text-slate-400">
             <li>
-              <a
-                class="hover:text-white transition-colors"
-                href="#"
-                >Solutions</a
+              <a class="text-light hover:text-primary transition-colors" href="#"
+                >Lead Gen Systems</a
               >
             </li>
             <li>
-              <a
-                class="hover:text-white transition-colors"
-                href="#"
-                >Expertise</a
+              <a class="text-light hover:text-primary transition-colors" href="#"
+                >E-commerce Growth</a
               >
             </li>
             <li>
-              <a
-                class="hover:text-white transition-colors"
-                href="#"
-                >Case Studies</a
-              >
-            </li>
-            <li>
-              <a
-                class="hover:text-white transition-colors"
-                href="#"
-                >About Us</a
+              <a class="text-light hover:text-primary transition-colors" href="#"
+                >UI/UX Strategy</a
               >
             </li>
           </ul>
         </div>
-        <div class="md:col-span-6 space-y-6">
-          <h5
-            class="text-xs font-bold uppercase tracking-widest text-white"
-          >
-            Initiate a Consultation
-          </h5>
-          <form class="space-y-4">
-            <div class="grid grid-cols-2 gap-4">
-              <input
-                class="w-full bg-slate-900 border-transparent focus:ring-primary focus:bg-slate-800 text-sm p-4 rounded-lg transition-all"
-                placeholder="First Name"
-                type="text"
-              />
-              <input
-                class="w-full bg-slate-900 border-transparent focus:ring-primary focus:bg-slate-800 text-sm p-4 rounded-lg transition-all"
-                placeholder="Work Email"
-                type="email"
-              />
-            </div>
-            <textarea
-              class="w-full bg-slate-900 border-transparent focus:ring-primary focus:bg-slate-800 text-sm p-4 rounded-lg transition-all"
-              placeholder="Tell us about your growth goals"
-              rows="3"
-            ></textarea>
-            <button
-              class="w-full bg-primary text-white font-bold py-4 rounded-lg text-sm uppercase tracking-widest hover:shadow-lg transition-all"
-            >
-              Send Inquiry
-            </button>
-          </form>
+        <div>
+          <h4 class="font-bold mb-6">Company</h4>
+          <ul class="space-y-4 p-0 text-sm text-slate-500 dark:text-slate-400">
+            <li>
+              <a class="text-light hover:text-primary transition-colors" href="#"
+                >Our Results</a
+              >
+            </li>
+            <li>
+              <a class="text-light hover:text-primary transition-colors" href="#"
+                >Client Cases</a
+              >
+            </li>
+            <li>
+              <a class="text-light hover:text-primary transition-colors" href="#"
+                >Privacy Policy</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-bold mb-6">Contact</h4>
+          <ul class="space-y-4 p-0 text-sm text-slate-500 dark:text-slate-400">
+            <li class="flex items-center gap-3">
+              <span class="material-symbols-outlined text-ly text-sm"
+                >email</span
+              >
+              Remote (Worldwide)
+            </li>
+            <li class="flex items-center gap-3">
+              <span class="material-symbols-outlined text-ly text-sm"
+                >location_on</span
+              >
+              Bengaluru, KA, IN
+            </li>
+          </ul>
         </div>
       </div>
+
       <div
-        class="pt-12 border-t border-slate-800 flex flex-col md:row justify-between items-center gap-6 text-[10px] uppercase tracking-widest text-slate-400"
+        class="pt-12 border-t border-slate-800 flex flex-col md:row justify-between items-center gap-6 text-[10px] tracking-widest text-slate-400"
       >
-        <p>© 2024 Amortree Tech. All rights reserved.</p>
+        <p>© 2026 Amortree Tech. All rights reserved.</p>
         <div class="flex gap-10">
-          <a
-            class="hover:text-white transition-colors"
-            href="#"
+          <a class="hover:text-white transition-colors" href="/privacy"
             >Privacy Protocol</a
           >
-          
-          <a
-            class="hover:text-white transition-colors"
-            href="#"
-            >Service Agreement</a
+
+          <a class="hover:text-white transition-colors" href="/terms"
+            >Terms</a
           >
         </div>
       </div>

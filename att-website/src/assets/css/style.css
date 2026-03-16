@@ -14457,20 +14457,20 @@ Frequently Asked Questions
   .project-grid:hover {
     cursor: pointer; }
     .project-grid:hover .thumbnail {
-      transform: perspective(500px) rotateY(-5deg); }
+      transform: perspective(630px) rotateY(-3deg); }
       @media only screen and (max-width: 767px) {
         .project-grid:hover .thumbnail {
           transform: perspective(0) rotateY(0); } }
       .project-grid:hover .thumbnail img {
-        -webkit-transform: scale(1.2);
-        -ms-transform: scale(1.2);
-        transform: scale(1.2); }
+        -webkit-transform: scale(1.125);
+        -ms-transform: scale(1.125);
+        transform: scale(1.125); }
       .project-grid:hover .thumbnail .content {
         -webkit-backdrop-filter: blur(10px);
         -moz-backdrop-filter: blur(10px);
         -ms-backdrop-filter: blur(10px);
         backdrop-filter: blur(10px);
-        transform: perspective(400px) rotateY(10deg); }
+        transform: perspective(400px) rotateY(4deg); }
         @media only screen and (max-width: 767px) {
           .project-grid:hover .thumbnail .content {
             transform: perspective(0) rotateY(0); } }

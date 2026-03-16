@@ -104,14 +104,14 @@
         cursor: pointer;
 
         .thumbnail {
-            transform: perspective(500px) rotateY(-5deg);
+            transform: perspective(630px) rotateY(-3deg);
             @media #{$sm-layout} {
                 transform: perspective(0) rotateY(0);
             }
             img {
-                -webkit-transform: scale(1.2);
-                -ms-transform: scale(1.2);
-                transform: scale(1.2);
+                -webkit-transform: scale(1.125);
+                -ms-transform: scale(1.125);
+                transform: scale(1.125);
             }
 
             .content {
@@ -119,7 +119,7 @@
                 -moz-backdrop-filter: blur(10px);
                 -ms-backdrop-filter: blur(10px);
                 backdrop-filter: blur(10px);
-                transform: perspective(400px) rotateY(10deg);
+                transform: perspective(400px) rotateY(4deg);
                 @media #{$sm-layout} {
                     transform: perspective(0) rotateY(0);
                 }
