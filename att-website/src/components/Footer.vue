@@ -221,7 +221,7 @@
           <div class="col-md-6 order-2 order-md-1">
             <div class="footer-copyright">
               <span class="copyright-text"
-                >Copyright © 2025. amortree Tech. All rights reserved.
+                >Copyright © 2026. amortree Tech. All rights reserved.
               </span>
             </div>
           </div>
