@@ -274,6 +274,7 @@ function getTemplate(target) {
               resolve your concerns promptly.
             </p>
             <h4 class="phone-number">
+              <a href="tel:+917975859061">+91 79758 59061</a>
               <a href="tel:+919916846647">+91 99168 46647</a>
             </h4>
           </div>

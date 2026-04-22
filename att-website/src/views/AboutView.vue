@@ -108,17 +108,17 @@
                 <h2 class="count-number">
                   <div>
                     <span class="number count"><span>10</span></span>
-                  </div>
-                  <span class="symbol">+</span>
+                  </div> 
+                  <span class="symbol"> +</span>
                 </h2>
                 <span class="counter-title">Years of experience</span>
               </div>
               <div class="single-counterup">
                 <h2 class="count-number">
                   <div>
-                    <span class="number count"><span>10</span></span>
-                  </div>
-                  <span class="symbol">+</span>
+                    <span class="number count"><span>25</span></span>
+                  </div> 
+                  <span class="symbol"> +</span>
                 </h2>
                 <span class="counter-title">Satisfied Clients</span>
               </div>
@@ -126,8 +126,8 @@
                 <h2 class="count-number">
                   <div>
                     <span class="number count"><span>100</span></span>
-                  </div>
-                  <span class="symbol">%</span>
+                  </div> 
+                  <span class="symbol"> %</span>
                 </h2>
                 <span class="counter-title">Client Satisfaction</span>
               </div>
