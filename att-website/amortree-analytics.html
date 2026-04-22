@@ -1,0 +1,699 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Amortree — Lead Analytics</title>
+    <!--
+  ════════════════════════════════════════════════════════
+   AMORTREE LEAD ANALYTICS  v2.0
+   ─────────────────────────────────────────────────────
+   HOW TO USE:
+   1. Open your main amortree HTML file
+   2. Copy the <script> block at the bottom of THIS file
+   3. Paste it just before </body> in your main file
+   4. Open this file standalone to view the dashboard
+
+   To view dashboard on production:
+   → amortree.com/?leads=1  (shows floating 📊 button)
+  ════════════════════════════════════════════════════════
+  -->
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0
+        }
+
+        body {
+            background: #0e0e10;
+            font-family: 'Segoe UI', system-ui, sans-serif;
+            font-size: 13px;
+            color: #e8e8f0;
+            min-height: 100vh
+        }
+
+        :root {
+            --bg: #0e0e10;
+            --bg2: #141416;
+            --bg3: #1a1a1e;
+            --bg4: #202026;
+            --border: #2a2a32;
+            --border2: #333340;
+            --text: #e8e8f0;
+            --text2: #9090a8;
+            --text3: #5a5a70;
+            --green: #2ecc71;
+            --green-bg: #0d2d1a;
+            --green-text: #3dde82;
+            --blue: #4a90d9;
+            --blue-bg: #0d1f35;
+            --blue-text: #6aabf0;
+            --amber: #e8a330;
+            --amber-bg: #2d1f08;
+            --amber-text: #f0b840;
+            --accent: #7c6af7;
+        }
+
+        .topbar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 14px 24px;
+            border-bottom: 1px solid var(--border);
+            background: var(--bg2)
+        }
+
+        .topbar-left {
+            display: flex;
+            align-items: center;
+            gap: 10px
+        }
+
+        .dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: var(--green);
+            animation: pulse 2s infinite
+        }
+
+        @keyframes pulse {
+
+            0%,
+            100% {
+                opacity: 1
+            }
+
+            50% {
+                opacity: .4
+            }
+        }
+
+        .brand {
+            font-size: 15px;
+            font-weight: 500;
+            color: var(--text)
+        }
+
+        .brand span {
+            color: var(--text2);
+            font-weight: 400
+        }
+
+        .last-sync {
+            font-size: 11px;
+            color: var(--text3)
+        }
+
+        .stats-bar {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            border-bottom: 1px solid var(--border)
+        }
+
+        .stat-cell {
+            padding: 20px 24px;
+            border-right: 1px solid var(--border);
+            text-align: center
+        }
+
+        .stat-cell:last-child {
+            border-right: none
+        }
+
+        .stat-num {
+            font-size: 36px;
+            font-weight: 300;
+            color: var(--text);
+            letter-spacing: -1px;
+            transition: all .3s
+        }
+
+        .stat-label {
+            font-size: 10px;
+            color: var(--text3);
+            letter-spacing: .08em;
+            text-transform: uppercase;
+            margin-top: 4px
+        }
+
+        .main {
+            display: flex;
+            min-height: calc(100vh - 185px)
+        }
+
+        .sidebar {
+            width: 200px;
+            flex-shrink: 0;
+            border-right: 1px solid var(--border);
+            padding: 16px 12px;
+            display: flex;
+            flex-direction: column;
+            gap: 3px;
+            background: var(--bg2)
+        }
+
+        .sidebar-section {
+            font-size: 10px;
+            color: var(--text3);
+            letter-spacing: .08em;
+            text-transform: uppercase;
+            padding: 4px 8px;
+            margin-top: 10px;
+            margin-bottom: 2px
+        }
+
+        .filter-btn {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 7px 10px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 12px;
+            color: var(--text2);
+            background: transparent;
+            border: none;
+            text-align: left;
+            width: 100%;
+            font-family: inherit;
+            transition: background .15s
+        }
+
+        .filter-btn:hover {
+            background: var(--bg3)
+        }
+
+        .filter-btn.active {
+            background: var(--bg4);
+            color: var(--text)
+        }
+
+        .filter-btn .badge {
+            font-size: 10px;
+            background: var(--bg4);
+            padding: 2px 7px;
+            border-radius: 10px;
+            color: var(--text2);
+            min-width: 22px;
+            text-align: center
+        }
+
+        .filter-btn.active .badge {
+            background: var(--accent);
+            color: #fff
+        }
+
+        .table-area {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden
+        }
+
+        .toolbar {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 10px 16px;
+            border-bottom: 1px solid var(--border);
+            background: var(--bg2)
+        }
+
+        .toolbar-btn {
+            padding: 5px 14px;
+            border-radius: 5px;
+            border: 1px solid var(--border2);
+            background: transparent;
+            color: var(--text2);
+            font-size: 11px;
+            cursor: pointer;
+            font-family: inherit;
+            transition: background .15s
+        }
+
+        .toolbar-btn:hover {
+            background: var(--bg3);
+            color: var(--text)
+        }
+
+        .toolbar-btn.danger {
+            border-color: #4d1a1a;
+            color: #f08080
+        }
+
+        .toolbar-btn.danger:hover {
+            background: #2d1010
+        }
+
+        .spacer {
+            flex: 1
+        }
+
+        .table-wrap {
+            overflow: auto;
+            flex: 1
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse
+        }
+
+        thead th {
+            padding: 10px 16px;
+            font-size: 10px;
+            color: var(--text3);
+            letter-spacing: .08em;
+            text-transform: uppercase;
+            text-align: left;
+            border-bottom: 1px solid var(--border);
+            position: sticky;
+            top: 0;
+            background: var(--bg2);
+            white-space: nowrap
+        }
+
+        tbody tr {
+            border-bottom: 1px solid var(--border);
+            cursor: default
+        }
+
+        tbody tr:hover {
+            background: var(--bg3)
+        }
+
+        td {
+            padding: 11px 16px;
+            font-size: 12px;
+            color: var(--text2);
+            vertical-align: middle
+        }
+
+        td.num {
+            color: var(--text3);
+            font-size: 11px;
+            width: 40px
+        }
+
+        .pill {
+            display: inline-block;
+            padding: 3px 9px;
+            border-radius: 4px;
+            font-size: 10px;
+            font-weight: 500;
+            white-space: nowrap
+        }
+
+        .pill-page {
+            background: #1c2030;
+            color: #6a7aaa;
+            border: 1px solid #2a3050
+        }
+
+        .pill-whatsapp {
+            background: var(--green-bg);
+            color: var(--green-text);
+            border: 1px solid #1a4030
+        }
+
+        .pill-modal {
+            background: var(--blue-bg);
+            color: var(--blue-text);
+            border: 1px solid #1a3050
+        }
+
+        .pill-form {
+            background: var(--amber-bg);
+            color: var(--amber-text);
+            border: 1px solid #3d2a10
+        }
+
+        .pill-cta {
+            background: #1e1630;
+            color: #9a7af0;
+            border: 1px solid #2e2050
+        }
+
+        .page-name {
+            color: var(--text);
+            font-size: 12px
+        }
+
+        .detail-txt {
+            font-size: 10px;
+            color: var(--text3);
+            margin-top: 2px;
+            font-family: monospace;
+            word-break: break-all
+        }
+
+        .time-cell,
+        .date-cell,
+        .session-cell {
+            white-space: nowrap
+        }
+
+        .session-cell {
+            font-size: 10px;
+            font-family: monospace
+        }
+
+        .empty-row td {
+            text-align: center;
+            color: var(--text3);
+            padding: 60px 20px;
+            font-size: 13px
+        }
+
+        .fields-preview {
+            max-width: 260px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="topbar">
+        <div class="topbar-left">
+            <div class="dot"></div>
+            <div class="brand">Amortree Tech <span>— Lead Analytics</span></div>
+        </div>
+        <div class="last-sync" id="lastSync">Listening for events…</div>
+    </div>
+
+    <div class="stats-bar">
+        <div class="stat-cell">
+            <div class="stat-num" id="statTotal">0</div>
+            <div class="stat-label">Total Events</div>
+        </div>
+        <div class="stat-cell">
+            <div class="stat-num" id="statModal">0</div>
+            <div class="stat-label">Modal Opens</div>
+        </div>
+        <div class="stat-cell">
+            <div class="stat-num" id="statWA">0</div>
+            <div class="stat-label">WhatsApp Sends</div>
+        </div>
+        <div class="stat-cell">
+            <div class="stat-num" id="statCTA">0</div>
+            <div class="stat-label">CTA Clicks</div>
+        </div>
+        <div class="stat-cell">
+            <div class="stat-num" id="statToday">0</div>
+            <div class="stat-label">Today</div>
+        </div>
+    </div>
+
+    <div class="main">
+        <div class="sidebar">
+            <div class="sidebar-section">Filter by event</div>
+            <button class="filter-btn active" data-filter="all" onclick="setFilter('all')">All Events <span
+                    class="badge" id="b-all">0</span></button>
+            <button class="filter-btn" data-filter="modal_open" onclick="setFilter('modal_open')">Modal Opens <span
+                    class="badge" id="b-modal_open">0</span></button>
+            <button class="filter-btn" data-filter="whatsapp_click" onclick="setFilter('whatsapp_click')">WhatsApp Sends
+                <span class="badge" id="b-whatsapp_click">0</span></button>
+            <button class="filter-btn" data-filter="form_submit" onclick="setFilter('form_submit')">Contact Submits
+                <span class="badge" id="b-form_submit">0</span></button>
+            <button class="filter-btn" data-filter="cta_click" onclick="setFilter('cta_click')">CTA Clicks <span
+                    class="badge" id="b-cta_click">0</span></button>
+            <button class="filter-btn" data-filter="page_view" onclick="setFilter('page_view')">Page Views <span
+                    class="badge" id="b-page_view">0</span></button>
+
+            <div class="sidebar-section">Filter by page</div>
+            <button class="filter-btn active" data-page="all" onclick="setPage('all')">All Pages</button>
+            <button class="filter-btn" data-page="Home" onclick="setPage('Home')">Home</button>
+            <button class="filter-btn" data-page="Services" onclick="setPage('Services')">Services</button>
+            <button class="filter-btn" data-page="Portfolio" onclick="setPage('Portfolio')">Portfolio</button>
+            <button class="filter-btn" data-page="About" onclick="setPage('About')">About</button>
+            <button class="filter-btn" data-page="Contact" onclick="setPage('Contact')">Contact</button>
+        </div>
+
+        <div class="table-area">
+            <div class="toolbar">
+                <button class="toolbar-btn" onclick="exportJSON()">Export JSON ↓</button>
+                <button class="toolbar-btn" onclick="exportCSV()">Export CSV ↓</button>
+                <div class="spacer"></div>
+                <button class="toolbar-btn danger" onclick="clearData()">Clear All Data</button>
+            </div>
+            <div class="table-wrap">
+                <table>
+                    <thead>
+                        <tr>
+                            <th style="width:40px">#</th>
+                            <th style="width:130px">Event</th>
+                            <th style="width:110px">Page</th>
+                            <th>Label / Detail</th>
+                            <th style="width:110px">Time</th>
+                            <th style="width:120px">Date</th>
+                            <th style="width:90px">Session</th>
+                        </tr>
+                    </thead>
+                    <tbody id="eventTable"></tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        /* ═══════════════════════════════════════════════════════
+           DASHBOARD LOGIC — reads from localStorage
+        ═══════════════════════════════════════════════════════ */
+        const STORAGE_KEY = 'amortree_leads';
+        let activeFilter = 'all';
+        let activePage = 'all';
+
+        function getEvents() { try { return JSON.parse(localStorage.getItem(STORAGE_KEY)) || []; } catch { return []; } }
+        function todayStr() { return new Date().toISOString().slice(0, 10); }
+        function fmtTime(ts) { return new Date(ts).toLocaleTimeString('en-IN', { hour: '2-digit', minute: '2-digit', second: '2-digit' }); }
+        function fmtDate(ts) { return new Date(ts).toLocaleDateString('en-IN', { day: '2-digit', month: 'short', year: 'numeric' }); }
+        function getPage(ev) {
+            try { const p = new URL(ev.page).pathname.replace(/^\/|\/$/g, '').split('/').pop(); return p ? p.charAt(0).toUpperCase() + p.slice(1) : 'Home'; } catch { return ev.page || '—'; }
+        }
+        function pillFor(e) {
+            const m = { page_view: 'pill-page', whatsapp_click: 'pill-whatsapp', modal_open: 'pill-modal', form_submit: 'pill-form', cta_click: 'pill-cta' };
+            const l = { page_view: 'page view', whatsapp_click: 'whatsapp', modal_open: 'modal open', form_submit: 'form submit', cta_click: 'cta click' };
+            return `<span class="pill ${m[e] || 'pill-page'}">${l[e] || e}</span>`;
+        }
+        function getLabel(ev) {
+            if (ev.event === 'page_view') return `<span class="page-name">Navigated to: ${getPage(ev)}</span><div class="detail-txt">${ev.detail || ''}</div>`;
+            if (ev.event === 'whatsapp_click') return `<span class="page-name">${ev.button_text || 'WhatsApp click'}</span><div class="detail-txt">${ev.href || ''}</div>`;
+            if (ev.event === 'modal_open') return `<span class="page-name">${ev.button_text || 'Modal opened'}</span><div class="detail-txt">target: ${ev.target || ev.modal_id || ''}</div>`;
+            if (ev.event === 'form_submit') return `<span class="page-name">Form: ${ev.form_id || 'unnamed'}</span><div class="detail-txt fields-preview">${ev.fields ? JSON.stringify(ev.fields) : ''}</div>`;
+            if (ev.event === 'cta_click') return `<span class="page-name">${ev.button_text || 'CTA click'}</span><div class="detail-txt">${ev.href || ''}</div>`;
+            return `<span class="page-name">${ev.event}</span>`;
+        }
+
+        function refresh() {
+            const all = getEvents();
+            const counts = { all: all.length, modal_open: 0, whatsapp_click: 0, form_submit: 0, cta_click: 0, page_view: 0 };
+            all.forEach(e => { if (counts[e.event] !== undefined) counts[e.event]++; });
+
+            document.getElementById('statTotal').textContent = all.length;
+            document.getElementById('statModal').textContent = counts.modal_open;
+            document.getElementById('statWA').textContent = counts.whatsapp_click;
+            document.getElementById('statCTA').textContent = counts.cta_click;
+            document.getElementById('statToday').textContent = all.filter(e => e.timestamp && e.timestamp.startsWith(todayStr())).length;
+
+            Object.keys(counts).forEach(k => { const el = document.getElementById('b-' + k); if (el) el.textContent = counts[k]; });
+
+            if (all.length) {
+                const last = all[all.length - 1];
+                document.getElementById('lastSync').textContent = 'Last: ' + fmtTime(last.timestamp) + ' · ' + fmtDate(last.timestamp);
+            }
+            renderTable(all);
+        }
+
+        function renderTable(all) {
+            let rows = [...all].reverse();
+            if (activeFilter !== 'all') rows = rows.filter(e => e.event === activeFilter);
+            if (activePage !== 'all') rows = rows.filter(e => getPage(e) === activePage);
+            const tbody = document.getElementById('eventTable');
+            if (!rows.length) {
+                tbody.innerHTML = `<tr class="empty-row"><td colspan="7">No events match the current filter — check back after visits, or add the tracker script to your site.</td></tr>`;
+                return;
+            }
+            const total = all.length;
+            tbody.innerHTML = rows.map(ev => {
+                const num = total - all.indexOf(ev);
+                const sid = (ev.session || ev.userAgent || '').replace(/[^a-z0-9]/gi, '').slice(-8) || '—';
+                return `<tr>
+      <td class="num">${num}</td>
+      <td>${pillFor(ev.event)}</td>
+      <td><span class="page-name">${getPage(ev)}</span></td>
+      <td>${getLabel(ev)}</td>
+      <td class="time-cell">${fmtTime(ev.timestamp || Date.now())}</td>
+      <td class="date-cell">${fmtDate(ev.timestamp || Date.now())}</td>
+      <td class="session-cell">${sid}</td>
+    </tr>`;
+            }).join('');
+        }
+
+        function setFilter(f) {
+            activeFilter = f;
+            document.querySelectorAll('[data-filter]').forEach(b => b.classList.toggle('active', b.dataset.filter === f));
+            refresh();
+        }
+        function setPage(p) {
+            activePage = p;
+            document.querySelectorAll('[data-page]').forEach(b => b.classList.toggle('active', b.dataset.page === p));
+            refresh();
+        }
+        function exportJSON() {
+            const data = getEvents();
+            const a = Object.assign(document.createElement('a'), { href: URL.createObjectURL(new Blob([JSON.stringify(data, null, 2)], { type: 'application/json' })), download: 'amortree_leads_' + todayStr() + '.json' });
+            a.click();
+        }
+        function exportCSV() {
+            const data = getEvents(); if (!data.length) { alert('No data'); return; }
+            const h = ['timestamp', 'event', 'page', 'referrer', 'button_text', 'form_id', 'fields', 'userAgent'];
+            const csv = [h.join(','), ...data.map(e => h.map(k => `"${String(k === 'fields' ? JSON.stringify(e.fields || '') : e[k] || '').replace(/"/g, '""')}"`).join(','))].join('\n');
+            const a = Object.assign(document.createElement('a'), { href: URL.createObjectURL(new Blob([csv], { type: 'text/csv' })), download: 'amortree_leads_' + todayStr() + '.csv' });
+            a.click();
+        }
+        function clearData() {
+            if (confirm('Delete ALL tracked data permanently?')) { localStorage.removeItem(STORAGE_KEY); refresh(); }
+        }
+
+        refresh();
+        setInterval(refresh, 4000);
+    </script>
+
+
+    <!-- ╔══════════════════════════════════════════════════════╗
+     ║  TRACKER SCRIPT — copy everything below this line   ║
+     ║  and paste just before </body> in your main HTML    ║
+     ╚══════════════════════════════════════════════════════╝ -->
+    <script id="amortree-tracker">
+        (function () {
+            "use strict";
+
+            /* ── CONFIG ─────────────────────────────── */
+            const STORAGE_KEY = "amortree_leads";
+            const QUEUE_KEY = "amortree_queue";
+            const SHEETS_WEBHOOK_URL = "YOUR_GOOGLE_APPS_SCRIPT_URL_HERE"; // optional
+            const DASHBOARD_FILE = "amortree-analytics.html"; // path to THIS file
+            /* ─────────────────────────────────────── */
+
+            function getAll() { try { return JSON.parse(localStorage.getItem(STORAGE_KEY)) || []; } catch { return []; } }
+            function getQ() { try { return JSON.parse(localStorage.getItem(QUEUE_KEY)) || []; } catch { return []; } }
+
+            function save(record) {
+                const all = getAll(); all.push(record);
+                localStorage.setItem(STORAGE_KEY, JSON.stringify(all));
+                sendToSheets(record);
+            }
+
+            function build(event, data = {}) {
+                return {
+                    event, timestamp: new Date().toISOString(), page: location.href,
+                    referrer: document.referrer || "direct", session: sessionId(), userAgent: navigator.userAgent, ...data
+                };
+            }
+
+            function sessionId() {
+                let s = sessionStorage.getItem("_amt_sid");
+                if (!s) { s = Math.random().toString(36).slice(2, 10); sessionStorage.setItem("_amt_sid", s); }
+                return s;
+            }
+
+            function sendToSheets(record) {
+                if (!SHEETS_WEBHOOK_URL || SHEETS_WEBHOOK_URL.includes("YOUR_")) return;
+                fetch(SHEETS_WEBHOOK_URL, { method: "POST", mode: "no-cors", headers: { "Content-Type": "application/json" }, body: JSON.stringify(record) })
+                    .catch(() => { const q = getQ(); q.push(record); localStorage.setItem(QUEUE_KEY, JSON.stringify(q)); });
+            }
+
+            window.addEventListener("online", () => {
+                const q = getQ(); if (!q.length) return;
+                localStorage.removeItem(QUEUE_KEY); q.forEach(sendToSheets);
+            });
+
+            /* ── Page view tracking ─────────────────────────────── */
+            function trackPageView(to) {
+                save(build("page_view", { detail: JSON.stringify({ to }) }));
+            }
+
+            /* ── Click tracking ─────────────────────────────────── */
+            document.addEventListener("click", function (e) {
+                const el = e.target.closest("a,button,[data-track],[onclick]");
+                if (!el) return;
+                const href = (el.getAttribute("href") || "").toLowerCase();
+                const text = (el.innerText || el.getAttribute("aria-label") || "").trim();
+                const dtag = (el.getAttribute("data-track") || "").toLowerCase();
+
+                /* WhatsApp */
+                if (dtag === "whatsapp_click" || href.includes("wa.me") || href.includes("whatsapp.com") || text.toLowerCase().includes("whatsapp")) {
+                    save(build("whatsapp_click", { button_text: text.slice(0, 100), href: el.getAttribute("href") || "" }));
+                }
+                /* Modal / Booking */
+                else if (dtag === "modal_open" || (el.getAttribute("data-bs-toggle") || "").toLowerCase() === "modal" ||
+                    /book|enquir|contact|get started|schedule|free call|free consult/i.test(text)) {
+                    save(build("modal_open", { button_text: text.slice(0, 100), target: el.getAttribute("data-bs-target") || el.getAttribute("href") || "" }));
+                }
+                /* CTA */
+                else if (dtag === "cta_click" || /get quote|hire us|start project|let's talk|view work|our work/i.test(text)) {
+                    save(build("cta_click", { button_text: text.slice(0, 100), href: el.getAttribute("href") || "" }));
+                }
+            });
+
+            /* Bootstrap modal show */
+            document.addEventListener("show.bs.modal", function (e) {
+                save(build("modal_open", { modal_id: e.target.id || "unknown" }));
+            });
+
+            /* ── Form tracking ──────────────────────────────────── */
+            document.addEventListener("submit", function (e) {
+                const form = e.target; if (!form || form.tagName !== "FORM") return;
+                const fields = {};
+                form.querySelectorAll("input,select,textarea").forEach(function (i) {
+                    if (i.type === "password") return;
+                    const name = i.name || i.id || i.placeholder || "field_" + i.type;
+                    let v = i.type === "checkbox" ? i.checked : i.value;
+                    if (i.type === "email" && v) { const [l, d] = v.split("@"); v = (l[0] || "") + "***@" + (d || ""); }
+                    fields[name] = v;
+                });
+                save(build("form_submit", { form_id: form.id || form.name || "form", form_action: form.getAttribute("action") || "same_page", fields }));
+            });
+
+            /* ── SPA route change tracking ──────────────────────── */
+            const _push = history.pushState;
+            history.pushState = function () { _push.apply(this, arguments); trackPageView(location.pathname); };
+            window.addEventListener("popstate", () => trackPageView(location.pathname));
+            trackPageView(location.pathname); // initial load
+
+            /* ── Floating dashboard button ──────────────────────── */
+            const show = location.hostname === "localhost" || location.search.includes("leads=1");
+            if (show) {
+                const btn = document.createElement("button");
+                btn.innerHTML = "&#9679; Leads";
+                Object.assign(btn.style, {
+                    position: "fixed", bottom: "20px", left: "20px", zIndex: "99999",
+                    background: "#141416", color: "#3dde82", border: "1px solid #1a4030",
+                    borderRadius: "8px", padding: "9px 16px", fontSize: "12px", cursor: "pointer",
+                    boxShadow: "0 4px 20px rgba(0,0,0,.5)", fontFamily: "'Segoe UI',sans-serif",
+                    display: "flex", alignItems: "center", gap: "6px"
+                });
+                btn.title = "Open Lead Analytics Dashboard";
+                btn.onclick = () => window.open(DASHBOARD_FILE, "_blank");
+                document.body.appendChild(btn);
+
+                /* Live count badge */
+                function updateBadge() {
+                    const n = getAll().length;
+                    btn.innerHTML = `<span style="width:7px;height:7px;border-radius:50%;background:#2ecc71;display:inline-block"></span> ${n} Lead${n !== 1 ? "s" : ""}`;
+                }
+                updateBadge();
+                setInterval(updateBadge, 3000);
+            }
+
+        })();
+    </script>
+
+</body>
+
+</html>

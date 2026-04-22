@@ -54,7 +54,6 @@
     href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
     rel="stylesheet" />
 
-
   <!-- Structured Data (JSON-LD) -->
   <script type="application/ld+json">
   {
@@ -189,6 +188,88 @@
     </noscript>
   </template>
 
+  <div class="topbar">
+    <div class="topbar-left">
+      <div class="dot"></div>
+      <div class="brand">Amortree Tech <span>— Lead Analytics</span></div>
+    </div>
+    <div class="last-sync" id="lastSync">Listening for events…</div>
+  </div>
+
+  <div class="stats-bar">
+    <div class="stat-cell">
+      <div class="stat-num" id="statTotal">0</div>
+      <div class="stat-label">Total Events</div>
+    </div>
+    <div class="stat-cell">
+      <div class="stat-num" id="statModal">0</div>
+      <div class="stat-label">Modal Opens</div>
+    </div>
+    <div class="stat-cell">
+      <div class="stat-num" id="statWA">0</div>
+      <div class="stat-label">WhatsApp Sends</div>
+    </div>
+    <div class="stat-cell">
+      <div class="stat-num" id="statCTA">0</div>
+      <div class="stat-label">CTA Clicks</div>
+    </div>
+    <div class="stat-cell">
+      <div class="stat-num" id="statToday">0</div>
+      <div class="stat-label">Today</div>
+    </div>
+  </div>
+
+  <div class="main">
+    <div class="sidebar">
+      <div class="sidebar-section">Filter by event</div>
+      <button class="filter-btn active" data-filter="all" onclick="setFilter('all')">All Events <span class="badge"
+          id="b-all">0</span></button>
+      <button class="filter-btn" data-filter="modal_open" onclick="setFilter('modal_open')">Modal Opens <span
+          class="badge" id="b-modal_open">0</span></button>
+      <button class="filter-btn" data-filter="whatsapp_click" onclick="setFilter('whatsapp_click')">WhatsApp Sends <span
+          class="badge" id="b-whatsapp_click">0</span></button>
+      <button class="filter-btn" data-filter="form_submit" onclick="setFilter('form_submit')">Contact Submits <span
+          class="badge" id="b-form_submit">0</span></button>
+      <button class="filter-btn" data-filter="cta_click" onclick="setFilter('cta_click')">CTA Clicks <span class="badge"
+          id="b-cta_click">0</span></button>
+      <button class="filter-btn" data-filter="page_view" onclick="setFilter('page_view')">Page Views <span class="badge"
+          id="b-page_view">0</span></button>
+
+      <div class="sidebar-section">Filter by page</div>
+      <button class="filter-btn active" data-page="all" onclick="setPage('all')">All Pages</button>
+      <button class="filter-btn" data-page="Home" onclick="setPage('Home')">Home</button>
+      <button class="filter-btn" data-page="Services" onclick="setPage('Services')">Services</button>
+      <button class="filter-btn" data-page="Portfolio" onclick="setPage('Portfolio')">Portfolio</button>
+      <button class="filter-btn" data-page="About" onclick="setPage('About')">About</button>
+      <button class="filter-btn" data-page="Contact" onclick="setPage('Contact')">Contact</button>
+    </div>
+
+    <div class="table-area">
+      <div class="toolbar">
+        <button class="toolbar-btn" onclick="exportJSON()">Export JSON ↓</button>
+        <button class="toolbar-btn" onclick="exportCSV()">Export CSV ↓</button>
+        <div class="spacer"></div>
+        <button class="toolbar-btn danger" onclick="clearData()">Clear All Data</button>
+      </div>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th style="width:40px">#</th>
+              <th style="width:130px">Event</th>
+              <th style="width:110px">Page</th>
+              <th>Label / Detail</th>
+              <th style="width:110px">Time</th>
+              <th style="width:120px">Date</th>
+              <th style="width:90px">Session</th>
+            </tr>
+          </thead>
+          <tbody id="eventTable"></tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
   <script>
     export default {
       name: 'FacebookPixelNoScript',
@@ -207,313 +288,6 @@
   </script>
   <script type="module" src="/src/main.js"></script>
 
-  <script>
-    /* ============================================================
-   AMORTREE CLICK TRACKER  v1.0
-   Drop this script just before </body> in your HTML file.
-   
-   Tracks:
-     1. WhatsApp clicks  (any <a href*="wa.me"> or data-track="whatsapp")
-     2. Booking clicks   (any button/link with class/id containing "book")
-     3. openModal calls  (any element with data-track="open-modal")
-   
-   Storage:
-     • localStorage  → always, no setup needed
-     • Google Sheets → set SHEET_WEBHOOK below (see google-apps-script.gs)
-   ============================================================ */
-
-    (function () {
-      "use strict";
-
-      /* ── CONFIG ────────────────────────────────────────────── */
-      const STORAGE_KEY = "amortree_click_events";
-      const MAX_EVENTS = 500;          // keep last N events locally
-      const DEBUG_PARAM = "debug=analytics"; // ?debug=analytics shows dashboard
-
-      // Paste your Google Apps Script Web App URL here after deployment.
-      // Leave empty to skip remote sync (local-only mode).
-      const SHEET_WEBHOOK = "https://script.google.com/macros/s/AKfycbz4naKzuL1P30iiQlAgR8ISX5rdgWDtGHlN0gHpG3Cnw9LNxdaCAQdQ1GfNkoQ56aUhfQ/exec";  // e.g. "https://script.google.com/macros/s/AKfy.../exec"
-      /* ──────────────────────────────────────────────────────── */
-
-      /* ── HELPERS ───────────────────────────────────────────── */
-      function now() {
-        return new Date().toISOString();
-      }
-
-      function getSessionId() {
-        let sid = sessionStorage.getItem("amt_sid");
-        if (!sid) {
-          sid = "s_" + Math.random().toString(36).slice(2, 10) + "_" + Date.now();
-          sessionStorage.setItem("amt_sid", sid);
-        }
-        return sid;
-      }
-
-      function getVisitorId() {
-        let vid = localStorage.getItem("amt_vid");
-        if (!vid) {
-          vid = "v_" + Math.random().toString(36).slice(2, 10) + "_" + Date.now();
-          localStorage.setItem("amt_vid", vid);
-        }
-        return vid;
-      }
-
-      function loadEvents() {
-        try {
-          return JSON.parse(localStorage.getItem(STORAGE_KEY) || "[]");
-        } catch (e) {
-          return [];
-        }
-      }
-
-      function saveEvents(events) {
-        if (events.length > MAX_EVENTS) {
-          events = events.slice(-MAX_EVENTS); // keep most recent
-        }
-        localStorage.setItem(STORAGE_KEY, JSON.stringify(events));
-      }
-
-      function getStats() {
-        const events = loadEvents();
-        const total = events.length;
-        const byType = {};
-        const byDate = {};
-        events.forEach(function (e) {
-          byType[e.event] = (byType[e.event] || 0) + 1;
-          const d = e.timestamp.slice(0, 10);
-          byDate[d] = (byDate[d] || 0) + 1;
-        });
-        return { total, byType, byDate, events };
-      }
-
-      /* ── CORE TRACK FUNCTION ───────────────────────────────── */
-      function track(eventName, meta) {
-        const entry = {
-          event: eventName,
-          timestamp: now(),
-          visitor_id: getVisitorId(),
-          session_id: getSessionId(),
-          page: location.pathname + location.search,
-          referrer: document.referrer || "direct",
-          device: /Mobi|Android/i.test(navigator.userAgent) ? "mobile" : "desktop",
-          meta: meta || {}
-        };
-
-        // 1. Local storage
-        const events = loadEvents();
-        events.push(entry);
-        saveEvents(events);
-
-        // 2. Google Sheets (fire-and-forget)
-        if (SHEET_WEBHOOK) {
-          fetch(SHEET_WEBHOOK, {
-            method: "POST",
-            mode: "no-cors",          // avoids CORS preflight issues
-            headers: { "Content-Type": "application/json" },
-            body: JSON.stringify(entry)
-          }).catch(function () {
-            // silently fail — local copy is the safety net
-          });
-        }
-
-        // 3. Console (dev convenience)
-        console.log("[AMT Tracker]", entry);
-      }
-
-      /* ── SELECTOR HELPERS ──────────────────────────────────── */
-      function isWhatsApp(el) {
-        const href = (el.href || "").toLowerCase();
-        return (
-          href.includes("wa.me") ||
-          href.includes("whatsapp.com/send") ||
-          el.dataset.track === "whatsapp" ||
-          (el.className && el.className.toLowerCase().includes("whatsapp"))
-        );
-      }
-
-      function isBooking(el) {
-        const text = (el.innerText || el.textContent || "").toLowerCase();
-        const cls = (el.className || "").toLowerCase();
-        const id = (el.id || "").toLowerCase();
-        return (
-          el.dataset.track === "booking" ||
-          cls.includes("book") ||
-          id.includes("book") ||
-          text.includes("book") ||
-          text.includes("appointment") ||
-          text.includes("schedule") ||
-          text.includes("reserve")
-        );
-      }
-
-      function isOpenModal(el) {
-        return (
-          el.dataset.track === "open-modal" ||
-          el.dataset.bsToggle === "modal" ||
-          el.dataset.toggle === "modal" ||
-          (el.getAttribute("onclick") || "").toLowerCase().includes("openmodal") ||
-          (el.getAttribute("onclick") || "").toLowerCase().includes("showmodal")
-        );
-      }
-
-      /* ── EVENT LISTENER ────────────────────────────────────── */
-      document.addEventListener("click", function (e) {
-        // Walk up to find the actual interactive element
-        let el = e.target;
-        for (let i = 0; i < 5 && el; i++) {
-          const tag = el.tagName ? el.tagName.toLowerCase() : "";
-          const hint = el.dataset ? el.dataset.track : null;
-
-          if (isWhatsApp(el)) {
-            track("whatsapp_click", {
-              href: el.href || "",
-              label: (el.innerText || "").trim().slice(0, 80)
-            });
-            break;
-          }
-
-          if (isOpenModal(el)) {
-            track("open_modal", {
-              target: el.dataset.bsTarget || el.dataset.target || el.getAttribute("href") || "",
-              label: (el.innerText || "").trim().slice(0, 80)
-            });
-            break;
-          }
-
-          if ((tag === "button" || tag === "a") && isBooking(el)) {
-            track("booking_click", {
-              href: el.href || "",
-              label: (el.innerText || "").trim().slice(0, 80)
-            });
-            break;
-          }
-
-          el = el.parentElement;
-        }
-      }, true); // capture phase — catches everything
-
-      /* ── EXPOSE GLOBAL API ─────────────────────────────────── */
-      // Usage in your own code:
-      //   window.amtTrack("custom_event", { info: "anything" });
-      window.amtTrack = track;
-
-      // Also expose stats for debugging:
-      //   window.amtStats()
-      window.amtStats = getStats;
-
-      /* ── INLINE ADMIN DASHBOARD ────────────────────────────── */
-      // Visit  yoursite.com/?debug=analytics  to see the dashboard
-      if (location.search.includes(DEBUG_PARAM)) {
-        document.addEventListener("DOMContentLoaded", function () {
-          injectDashboard();
-        });
-        if (document.readyState !== "loading") injectDashboard();
-      }
-
-      function injectDashboard() {
-        if (document.getElementById("amt-dashboard")) return;
-
-        const stats = getStats();
-        const rows = stats.events.slice(-20).reverse().map(function (e) {
-          const badge = {
-            whatsapp_click: "#25D366",
-            booking_click: "#4F46E5",
-            open_modal: "#F59E0B"
-          }[e.event] || "#6B7280";
-          return `<tr>
-        <td style="padding:6px 10px;font-size:12px;color:#9CA3AF">${e.timestamp.replace("T", " ").slice(0, 19)}</td>
-        <td style="padding:6px 10px"><span style="background:${badge};color:#fff;padding:2px 8px;border-radius:20px;font-size:11px;font-weight:600">${e.event}</span></td>
-        <td style="padding:6px 10px;font-size:12px;color:#D1D5DB">${e.meta.label || e.meta.target || ""}</td>
-        <td style="padding:6px 10px;font-size:11px;color:#6B7280">${e.device}</td>
-        <td style="padding:6px 10px;font-size:11px;color:#6B7280">${e.page}</td>
-      </tr>`;
-        }).join("");
-
-        const typeRows = Object.entries(stats.byType).map(function ([k, v]) {
-          const pct = Math.round((v / stats.total) * 100);
-          const clr = { whatsapp_click: "#25D366", booking_click: "#4F46E5", open_modal: "#F59E0B" }[k] || "#6B7280";
-          return `<div style="margin-bottom:12px">
-        <div style="display:flex;justify-content:space-between;margin-bottom:4px">
-          <span style="font-size:13px;color:#E5E7EB">${k}</span>
-          <span style="font-size:13px;font-weight:700;color:${clr}">${v}</span>
-        </div>
-        <div style="background:#374151;border-radius:4px;height:6px">
-          <div style="background:${clr};width:${pct}%;height:6px;border-radius:4px;transition:width 0.5s"></div>
-        </div>
-      </div>`;
-        }).join("");
-
-        const panel = document.createElement("div");
-        panel.id = "amt-dashboard";
-        panel.innerHTML = `
-      <div style="position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(0,0,0,0.6);z-index:99998;backdrop-filter:blur(4px)"></div>
-      <div style="position:fixed;top:50%;left:50%;transform:translate(-50%,-50%);z-index:99999;
-                  background:#111827;border:1px solid #374151;border-radius:16px;
-                  width:min(90vw,900px);max-height:85vh;overflow:auto;
-                  font-family:'Segoe UI',system-ui,sans-serif;box-shadow:0 25px 60px rgba(0,0,0,0.7)">
-        <div style="padding:24px 28px;border-bottom:1px solid #1F2937;display:flex;justify-content:space-between;align-items:center">
-          <div>
-            <div style="font-size:18px;font-weight:700;color:#F9FAFB">🌳 Amortree Analytics</div>
-            <div style="font-size:12px;color:#6B7280;margin-top:2px">Local data — ${stats.total} events stored</div>
-          </div>
-          <div style="display:flex;gap:10px">
-            <button onclick="var d=JSON.stringify(window.amtStats().events,null,2);var b=new Blob([d],{type:'application/json'});var a=document.createElement('a');a.href=URL.createObjectURL(b);a.download='amortree_events.json';a.click()"
-              style="background:#1F2937;border:1px solid #374151;color:#9CA3AF;padding:6px 14px;border-radius:8px;cursor:pointer;font-size:12px">⬇ Export JSON</button>
-            <button onclick="document.getElementById('amt-dashboard').remove()"
-              style="background:#EF4444;border:none;color:#fff;padding:6px 14px;border-radius:8px;cursor:pointer;font-size:12px">✕ Close</button>
-          </div>
-        </div>
-        <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:16px;padding:20px 28px">
-          <div style="background:#1F2937;border-radius:12px;padding:18px;text-align:center">
-            <div style="font-size:32px;font-weight:800;color:#F9FAFB">${stats.total}</div>
-            <div style="font-size:12px;color:#6B7280;margin-top:4px">Total Events</div>
-          </div>
-          <div style="background:#1F2937;border-radius:12px;padding:18px;text-align:center">
-            <div style="font-size:32px;font-weight:800;color:#25D366">${stats.byType["whatsapp_click"] || 0}</div>
-            <div style="font-size:12px;color:#6B7280;margin-top:4px">WhatsApp Clicks</div>
-          </div>
-          <div style="background:#1F2937;border-radius:12px;padding:18px;text-align:center">
-            <div style="font-size:32px;font-weight:800;color:#4F46E5">${(stats.byType["booking_click"] || 0) + (stats.byType["open_modal"] || 0)}</div>
-            <div style="font-size:12px;color:#6B7280;margin-top:4px">Booking / Modal</div>
-          </div>
-        </div>
-        <div style="display:grid;grid-template-columns:1fr 2fr;gap:16px;padding:0 28px 20px">
-          <div style="background:#1F2937;border-radius:12px;padding:18px">
-            <div style="font-size:13px;font-weight:600;color:#9CA3AF;margin-bottom:16px;text-transform:uppercase;letter-spacing:0.05em">By Type</div>
-            ${typeRows || '<div style="color:#6B7280;font-size:13px">No events yet</div>'}
-          </div>
-          <div style="background:#1F2937;border-radius:12px;overflow:hidden">
-            <div style="padding:18px 18px 10px;font-size:13px;font-weight:600;color:#9CA3AF;text-transform:uppercase;letter-spacing:0.05em">Last 20 Events</div>
-            <div style="overflow:auto;max-height:260px">
-              <table style="width:100%;border-collapse:collapse">
-                <thead>
-                  <tr style="border-bottom:1px solid #374151">
-                    <th style="padding:8px 10px;text-align:left;font-size:11px;color:#6B7280;font-weight:600">TIME</th>
-                    <th style="padding:8px 10px;text-align:left;font-size:11px;color:#6B7280;font-weight:600">EVENT</th>
-                    <th style="padding:8px 10px;text-align:left;font-size:11px;color:#6B7280;font-weight:600">LABEL</th>
-                    <th style="padding:8px 10px;text-align:left;font-size:11px;color:#6B7280;font-weight:600">DEVICE</th>
-                    <th style="padding:8px 10px;text-align:left;font-size:11px;color:#6B7280;font-weight:600">PAGE</th>
-                  </tr>
-                </thead>
-                <tbody style="color:#E5E7EB">${rows || '<tr><td colspan="5" style="padding:20px;text-align:center;color:#6B7280;font-size:13px">No events recorded yet. Start clicking!</td></tr>'}</tbody>
-              </table>
-            </div>
-          </div>
-        </div>
-        <div style="padding:16px 28px;border-top:1px solid #1F2937;display:flex;gap:16px;align-items:center;flex-wrap:wrap">
-          <span style="font-size:11px;color:#6B7280">Google Sheets sync: <strong style="color:${SHEET_WEBHOOK ? '#22C55E' : '#EF4444'}">${SHEET_WEBHOOK ? "ENABLED ✓" : "NOT CONFIGURED"}</strong></span>
-          <span style="font-size:11px;color:#6B7280">Visitor ID: <code style="color:#9CA3AF">${getVisitorId()}</code></span>
-          <span style="font-size:11px;color:#6B7280">Session: <code style="color:#9CA3AF">${getSessionId()}</code></span>
-          <button onclick="if(confirm('Clear all local events?')){localStorage.removeItem('${STORAGE_KEY}');location.reload()}"
-            style="margin-left:auto;background:transparent;border:1px solid #374151;color:#6B7280;padding:4px 12px;border-radius:6px;cursor:pointer;font-size:11px">🗑 Clear Local Data</button>
-        </div>
-      </div>`;
-        document.body.appendChild(panel);
-      }
-
-      console.log("[AMT Tracker] Loaded. Visit ?debug=analytics to see dashboard.");
-    })();
-  </script>
 </body>
 
 </html>
