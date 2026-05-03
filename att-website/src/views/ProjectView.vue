@@ -770,8 +770,8 @@ onBeforeUnmount(() => {
   z-index: 2;
   pointer-events: none;
   background:
-    linear-gradient(90deg, rgba(4, 9, 20, 0.8) 0%, rgba(4, 9, 20, 0.38) 42%, rgba(4, 9, 20, 0.08) 100%),
-    linear-gradient(180deg, rgba(4, 9, 20, 0.06) 0%, rgba(4, 9, 20, 0.72) 100%);
+    linear-gradient(90deg, rgba(4, 9, 20, 0.2) 0%, rgba(4, 9, 20, 0.08) 42%, rgba(4, 9, 20, 0.08) 100%),
+    linear-gradient(180deg, rgba(4, 9, 20, 0.06) 0%, rgba(4, 9, 20, 0.22) 100%);
 }
 .project-grid.project-grid--full .thumbnail img {
   width: 100%;
