@@ -19095,9 +19095,6 @@ Frequently Asked Questions
     opacity: 0.85;
   }
 }
-.banner.banner-style-1 .banner-content {
-  margin-top: 60px;
-}
 @media only screen and (max-width: 1199px) {
   .banner.banner-style-1 .banner-content {
     padding-bottom: 100px;
