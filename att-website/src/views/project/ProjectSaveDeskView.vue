@@ -14,7 +14,7 @@ import after from '@/assets/img/project/c7/after.png'
             <div class="breadcrumb animate__animated fadeInUp" style="animation-duration: 2s">
                 <ul class="list-unstyled">
                     <li><a href="/">Home</a></li>
-                    <li><a href="/portfolio">Portfolio</a></li>
+                    <li><a href="/case-studies">Portfolio</a></li>
                     <li class="active text-ly">SaveDesk</li>
                 </ul>
                 <div class="section-heading heading-left">
@@ -168,7 +168,7 @@ import after from '@/assets/img/project/c7/after.png'
 				<a class="amor-btn btn-fill-primary btn-large" href="contact"
 				>Get Started</a
 				>
-				<a href="/portfolio" class="amor-btn btn-borderd light"
+				<a href="/case-studies" class="amor-btn btn-borderd light"
 				>View Portfolio</a
 				>
 			</div>

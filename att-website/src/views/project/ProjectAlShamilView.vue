@@ -7,7 +7,7 @@
       >
         <ul class="list-unstyled">
           <li><a href="/">Home</a></li>
-          <li><a href="/portfolio">Portfolio</a></li>
+          <li><a href="/case-studies">Portfolio</a></li>
           <li class="active text-ly">Al-Shamil Computers</li>
         </ul>
         <div class="section-heading heading-left">
@@ -180,7 +180,7 @@
         <a class="amor-btn btn-fill-primary btn-large" href="contact"
           >Get Started</a
         >
-        <a href="/portfolio" class="amor-btn btn-borderd light"
+        <a href="/case-studies" class="amor-btn btn-borderd light"
           >View Portfolio</a
         >
       </div>

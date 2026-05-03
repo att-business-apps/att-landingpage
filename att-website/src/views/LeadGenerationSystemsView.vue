@@ -110,7 +110,7 @@ function getTemplate(target) {
                 <div class="d-flex justify-content-center gap-3 mt-5">
                   <a class="amor-btn btn-fill-primary btn-large"
                     href="https://wa.me/917975859061/?text=Get%20my%20free%20GROWTH%20Audit.">Scale My Revenue Today</a>
-                  <a href="/portfolio" class="amor-btn btn-borderd light">How It Works</a>
+                  <a href="/case-studies" class="amor-btn btn-borderd light">How It Works</a>
                 </div>
                 <div class="mt-16 grid grid-cols-2 md:grid-cols-4 gap-6 opacity-80">
                   <div class="flex flex-col items-center justify-around">

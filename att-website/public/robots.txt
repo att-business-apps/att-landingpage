@@ -12,7 +12,7 @@ Disallow: /private/
 Allow: /services
 Allow: /about
 Allow: /contact
-Allow: /portfolio
+Allow: /case-studies
 Allow: /estimate
 Allow: /projects/
 

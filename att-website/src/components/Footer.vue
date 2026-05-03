@@ -177,7 +177,7 @@
                   <div class="footer-menu-link">
                     <ul class="list-unstyled">
                       <!-- <li><a href="blog">Blog</a></li> -->
-                      <li><a href="/portfolio">Portfolio</a></li>
+                      <li><a href="/case-studies">Portfolio</a></li>
                       <li><a href="/contact">Where to find</a></li>
                       <li><a href="/privacy">Privacy Policy</a></li>
                       <li><a href="/terms">Terms of Use</a></li>
@@ -434,7 +434,7 @@
       </a>
     </li>
     <li>
-      <a href="/portfolio" aria-label="What we done">
+      <a href="/case-studies" aria-label="What we done">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           xmlns:xlink="http://www.w3.org/1999/xlink"
