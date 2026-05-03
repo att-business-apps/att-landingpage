@@ -56,6 +56,9 @@
             <a class="nav-link" href="#mobileAppUiUx">Mobile App UI/UX</a>
           </li>
           <li class="nav-item">
+            <a class="nav-link" href="#digitalMarketing">Digital Marketing</a>
+          </li>
+          <li class="nav-item">
             <a class="nav-link" href="#devOps">DevOps</a>
           </li>
         </ul>
@@ -670,8 +673,107 @@
         </div>
       </div>
     </div>
+    <!-- Digital Marketing Service -->
+    <div class="section section-padding bg-color-light" id="digitalMarketing">
+      <div class="container">
+        <div class="section-heading heading-left">
+          <h2 class="title text-ll">Digital Marketing</h2>
+          <p>we specialize in creating detailed and intuitive digital marketing strategies that serve as the blueprint for your
+            brand's online presence. Our approaches are designed with a deep understanding of user behavior
+            and market trends, ensuring a seamless, user-friendly experience before moving into development.</p>
+        </div>
+        <div class="section-heading heading-left mb-4">
+          <span class="subtitle">What We Offer</span>
+        </div>
+        <div class="row">
+          <div class="col-md-6 sal-animate" data-sal="slide-up" data-sal-duration="800" data-sal-delay="100">
+            <div class="services-grid service-card-style">
+              <div class="thumbnail">
+                <img src="../assets/img/icon/mob-1.png" alt="icon">
+              </div>
+              <div class="content">
+                <h5 class="title">Marketing Strategy</h5>
+                <p class="mb-2">We develop comprehensive digital marketing strategies tailored to your business goals and target audience.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 sal-animate" data-sal="slide-up" data-sal-duration="800" data-sal-delay="200">
+            <div class="services-grid service-card-style">
+              <div class="thumbnail">
+                <img src="../assets/img/icon/mob-2.png" alt="icon">
+              </div>
+              <div class="content">
+                <h5 class="title">Campaign Management</h5>
+                <p class="mb-2">We manage and optimize your digital marketing campaigns to maximize reach and engagement, ensuring your message resonates with your target audience.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 sal-animate" data-sal="slide-up" data-sal-duration="800" data-sal-delay="300">
+            <div class="services-grid service-card-style">
+              <div class="thumbnail">
+                <img src="../assets/img/icon/mob-3.png" alt="icon">
+              </div>
+              <div class="content">
+                <h5 class="title">Content Creation</h5>
+                <p class="mb-2">We create compelling and relevant content for your digital marketing efforts, ensuring it aligns with your brand voice and resonates with your target audience.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 sal-animate" data-sal="slide-up" data-sal-duration="800" data-sal-delay="100">
+            <div class="services-grid service-card-style">
+              <div class="thumbnail">
+                <img src="../assets/img/icon/mob-4.png" alt="icon">
+              </div>
+              <div class="content">
+                <h5 class="title">Wireframe Development</h5>
+                <p class="mb-2">We create detailed wireframes that outline the structure and functionality of your app, providing a clear visual representation of the user interface and user experience.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 sal-animate" data-sal="slide-up" data-sal-duration="800" data-sal-delay="200">
+            <div class="services-grid service-card-style">
+              <div class="thumbnail">
+                <img src="../assets/img/icon/mob-5.png" alt="icon">
+              </div>
+              <div class="content">
+                <h5 class="title">User Journey Mapping</h5>
+                <p class="mb-2">We map out the entire user journey to ensure that your app meets user needs at every
+                  touchpoint, making navigation intuitive and enjoyable.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 sal-animate" data-sal="slide-up" data-sal-duration="800" data-sal-delay="200">
+            <div class="services-grid service-card-style">
+              <div class="thumbnail">
+                <img src="../assets/img/icon/mob-6.png" alt="icon">
+              </div>
+              <div class="content">
+                <h5 class="title">Client Collaboration</h5>
+                <p class="mb-2">We work closely with you to incorporate feedback and adjustments throughout the
+                  wireframing process, ensuring the final design aligns with your vision and goals.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="section-heading heading-left w-100">
+          <span class="subtitle">Why choose us?</span>
+          <p>At amortree Tech, our focus is on crafting Digital Marketing strategies that serve as the foundation for an
+            outstanding user experience. By concentrating on UI/UX design, we ensure that your app is visually engaging,
+            easy to navigate, and primed for success when it moves into development.</p>
+        </div>
+        <div class="d-flex justify-content-center gap-3 mt-5">
+          <a class="amor-btn btn-fill-primary btn-large" href="contact">Get Started</a>
+          <a href="/case-studies" class="amor-btn btn-borderd light">Case Study</a>
+        </div>
+      </div>
+    </div>
     <!-- DevOps Service -->
-    <div class="section section-padding bg-color-light" id="devOps">
+    <div class="section section-padding" id="devOps">
       <div class="container">
         <div class="section-heading heading-left">
           <h2 class="title text-lb">DevOps</h2>
