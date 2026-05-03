@@ -176,8 +176,8 @@
                   <h6 class="widget-title">Resourses &amp; Support</h6>
                   <div class="footer-menu-link">
                     <ul class="list-unstyled">
-                      <!-- <li><a href="blog">Blog</a></li> -->
                       <li><a href="/case-studies">Case Study</a></li>
+                      <li><a href="https://demo.amortree.com/">Demo</a></li>
                       <li><a href="/contact">Where to find</a></li>
                       <li><a href="/privacy">Privacy Policy</a></li>
                       <li><a href="/terms">Terms of Use</a></li>
@@ -668,7 +668,7 @@
         <span class="text-ly">Contact</span>
       </a>
     </li>
-    <!-- <li><a href="whyUs"><span class="text-ly">Blog</span></a></li> -->
+    <li><a href="https://demo.amortree.com/"><span class="text-ly">Demo</span></a></li>
   </ul>
 </template>
 
