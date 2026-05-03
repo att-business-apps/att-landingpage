@@ -449,6 +449,9 @@ Service Page
 
   @media #{$md-layout} {
     top: 80px;
+    left: 3%;
+    width: 94%;
+    padding: 0;
     -webkit-overflow-scrolling: touch;
 
     .container {
@@ -593,6 +596,9 @@ Service Page
   backdrop-filter: blur(8px);
 
   @media #{$md-layout} {
+    width: 94%;
+    margin-top: -0.25rem;
+    height: 72px;
     left: 0.9rem;
     display: flex;
     flex-wrap: nowrap;
@@ -608,6 +614,7 @@ Service Page
   button {
     padding: 6px 20px;
     @media #{$md-layout} {
+      margin-top: -1.5rem;
       flex: 1;
       -webkit-flex: 1;
       text-align: center;

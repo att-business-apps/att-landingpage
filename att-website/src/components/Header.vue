@@ -15,7 +15,7 @@
               />
             </a>
           </div>
-          <div class="header-main-nav">
+          <div class="header-main-nav d-none">
             <nav class="mainmenu-nav">
               <ul class="mainmenu">
                 <li><a href="/services"><span class="text-ll">Services</span></a></li>

@@ -18823,14 +18823,16 @@ Frequently Asked Questions
 }
 .mobilemenu {
   width: 94%;
+  height: 3rem;
   position: fixed;
-  display: flex;
+  display: flex !important;
+  align-items: center;
+  justify-content: space-around;
   flex-wrap: nowrap;
   overflow-x: auto;
   overflow-y: hidden;
   -webkit-overflow-scrolling: touch;
   -ms-overflow-style: -ms-autohiding-scrollbar;
-  justify-content: space-between;
   scroll-snap-type: x mandatory;
   left: 3%;
   bottom: 0.875rem;
@@ -18841,30 +18843,30 @@ Frequently Asked Questions
   backdrop-filter: blur(8px);
   border-radius: 0.875rem;
   z-index: 99;
-  justify-content: space-around;
-  align-items: center;
   box-shadow: 0 -24px 48px -15px rgba(0, 0, 0, 0.35);
+}
+.mobilemenu li {
+  display: contents;
 }
 .mobilemenu li a {
   position: relative;
-  font-size: 0.805rem;
+  font-size: 1.125rem;
   color: var(--color-white);
-  display: grid;
-  align-items: center;
-  justify-content: center;
-  justify-items: center;
-  padding: 0.055rem 0.175rem;
+  padding: 0 0.175rem;
 }
 .mobilemenu li a svg {
   width: 30px;
   height: 30px;
   margin: 0;
   padding: 0;
+  display: none;
 }
 .mobilemenu li a span {
   position: relative;
   line-height: 1.175;
-  text-transform: lowercase;
+  text-transform: capitalize;
+  text-decoration: underline !important;
+  font-size: 1rem;
 }
 .mobilemenu li a .text-lb {
   background: linear-gradient(270deg, var(--color-white) 21.9%, var(--color-primary) 53.55%);
@@ -19135,7 +19137,7 @@ Frequently Asked Questions
 }
 @media only screen and (max-width: 767px) {
   .banner.banner-style-1 .banner-content .title {
-    font-size: 56px;
+    font-size: 48px;
     margin-bottom: 1rem;
   }
 }
@@ -19989,6 +19991,9 @@ Service Page
 @media only screen and (max-width: 991px) {
   .service-scroll-nav {
     top: 80px;
+    left: 3%;
+    width: 94%;
+    padding: 0;
     -webkit-overflow-scrolling: touch;
   }
   .service-scroll-nav .container {
@@ -20103,6 +20108,9 @@ Service Page
 }
 @media only screen and (max-width: 991px) {
   .att-filter {
+    width: 94%;
+    margin-top: -0.25rem;
+    height: 72px;
     left: 0.9rem;
     display: flex;
     flex-wrap: nowrap;
@@ -20120,6 +20128,7 @@ Service Page
 }
 @media only screen and (max-width: 991px) {
   .att-filter button {
+    margin-top: -1.5rem;
     flex: 1;
     -webkit-flex: 1;
     text-align: center;
@@ -21394,6 +21403,7 @@ Service Page
 -------------------------*/
 .footer-area {
   padding-top: 10px;
+  padding-bottom: 8vh !important;
 }
 
 .footer-top {

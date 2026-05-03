@@ -1,13 +1,15 @@
 .mobilemenu {
     width: 94%;
+    height: 3rem;
     position: fixed;
-    display: flex;
+    display: flex !important;
+    align-items: center;	
+    justify-content: space-around;
     flex-wrap: nowrap;
     overflow-x: auto;
     overflow-y: hidden;
     -webkit-overflow-scrolling: touch;
     -ms-overflow-style: -ms-autohiding-scrollbar;
-    justify-content: space-between;
     scroll-snap-type: x mandatory;
     left: 3%;
     bottom: 0.875rem;
@@ -18,33 +20,31 @@
 	backdrop-filter: blur(8px);
 	border-radius: 0.875rem;
     z-index: 99;
-    justify-content: space-around;
-    align-items: center;	
     box-shadow: 0 -24px 48px -15px rgba(0, 0, 0, 0.35);
     
 
     li {
+        display: contents;
         a {
 			position: relative;
-			font-size: 0.805rem;
+			font-size: 1.125rem;
             color: var(--color-white);
-			display: grid;
-			align-items: center;
-			justify-content: center;
-			justify-items: center;
-			padding: 0.055rem 0.175rem;
+			padding: 0 0.175rem;
 
 			svg {
 				width: 30px;
 				height: 30px;
 				margin: 0;
 				padding: 0;
+                display: none;
 			}
 
 			span {
 				position: relative;
 				line-height: 1.175;
-				text-transform: lowercase;
+				text-transform: capitalize;
+                text-decoration: underline !important;
+                font-size: 1rem;
 			}
 
             .text-lb {

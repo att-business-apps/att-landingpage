@@ -70,7 +70,7 @@
 
   <div class="footer-area pb-lg-0 pb-5 mb-lg-0 mb-4" id="contact">
     <div class="container-fluid">
-      <div class="footer-top d-md-none d-block pt-5">
+      <div class="footer-top pt-5 pb-0">
         <div class="footer-social-link">
           <ul class="list-unstyled">
             <li>
@@ -430,7 +430,7 @@
             d="M200,152.001c13.255,0,24,10.745,24,24h16c0-8.655-2.807-17.076-8-24L200,152.001L200,152.001z"
           />
         </svg>
-        <span class="text-lb">Solutions</span>
+        <span class="text-lb">Services</span>
       </a>
     </li>
     <li>
@@ -526,9 +526,10 @@
             />
           </g>
         </svg>
-        <span class="text-lg">Results</span>
+        <span class="text-lg">Case Study</span>
       </a>
     </li>
+    <li><a href="https://demo.amortree.com/"><span class="text-lg">Demo</span></a></li>
     <li>
       <a href="/about" aria-label="who we are">
         <svg
@@ -596,7 +597,7 @@
             d="M184,136.001c-4.418,0-8-3.582-8-8c0-22.091,17.908-40,40-40c4.418,0,8,3.582,8,8s-3.582,8-8,8  c-13.255,0-24,10.745-24,24C192,132.419,188.419,136.001,184,136.001z"
           />
         </svg>
-        <span class="text-lr">Expertise</span>
+        <span class="text-lr">About</span>
       </a>
     </li>
     <li>
@@ -668,7 +669,6 @@
         <span class="text-ly">Contact</span>
       </a>
     </li>
-    <li><a href="https://demo.amortree.com/"><span class="text-ly">Demo</span></a></li>
   </ul>
 </template>
 
