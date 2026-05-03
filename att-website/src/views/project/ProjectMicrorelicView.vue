@@ -1,5 +1,6 @@
 <script setup>
 import { VueCompareImage } from "vue3-compare-image";
+import CaseStudyWorkWithUs from "@/components/CaseStudyWorkWithUs.vue";
 
 // cassets
 import before from "@/assets/img/project/c3/before.png";
@@ -15,7 +16,7 @@ import after from "@/assets/img/project/c3/peoject-mr-web.png";
       >
         <ul class="list-unstyled">
           <li><a href="/">Home</a></li>
-          <li><a href="/case-studies">Portfolio</a></li>
+          <li><a href="/case-studies">Case Study</a></li>
           <li class="active text-ly">Microrelic Technologies</li>
         </ul>
         <div class="section-heading heading-left">
@@ -152,6 +153,15 @@ import after from "@/assets/img/project/c3/peoject-mr-web.png";
     </div>
   </section>
 
+  <CaseStudyWorkWithUs
+    project="Microrelic"
+    industry="Technology and training brand"
+    accent="#8b5cf6"
+    result="A sharper digital identity that communicates capability, credibility, and service depth for a growing tech brand."
+    :services="['Brand direction', 'Website UI/UX', 'Content structure', 'Responsive build']"
+    :proof="['Trust-led service pages', 'Clear training and tech positioning', 'Conversion-ready contact path']"
+  />
+
   <!-- Result Section -->
   <section class="section section-padding">
     <div class="container">
@@ -182,7 +192,7 @@ import after from "@/assets/img/project/c3/peoject-mr-web.png";
           >Get Started</a
         >
         <a href="/case-studies" class="amor-btn btn-borderd light"
-          >View Portfolio</a
+          >Case Study</a
         >
       </div>
     </div>

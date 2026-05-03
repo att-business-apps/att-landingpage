@@ -177,7 +177,7 @@
                   <div class="footer-menu-link">
                     <ul class="list-unstyled">
                       <!-- <li><a href="blog">Blog</a></li> -->
-                      <li><a href="/case-studies">Portfolio</a></li>
+                      <li><a href="/case-studies">Case Study</a></li>
                       <li><a href="/contact">Where to find</a></li>
                       <li><a href="/privacy">Privacy Policy</a></li>
                       <li><a href="/terms">Terms of Use</a></li>

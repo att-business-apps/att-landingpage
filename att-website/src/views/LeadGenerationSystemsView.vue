@@ -659,7 +659,7 @@ function getTemplate(target) {
           </div>
 
           <div class="d-lg-flex justify-content-center">
-            <a class="amor-btn btn-borderd light" href="portfolio">View Portfolio</a>
+            <a class="amor-btn btn-borderd light" href="portfolio">Case Study</a>
           </div>
         </div>
       </div>

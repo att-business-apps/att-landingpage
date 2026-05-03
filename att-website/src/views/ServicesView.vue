@@ -181,7 +181,7 @@
         </div>
         <div class="d-flex justify-content-center gap-3 mt-5">
           <a class="amor-btn btn-fill-primary btn-large" href="contact">Get Started</a>
-          <a href="/case-studies" class="amor-btn btn-borderd light">View Portfolio</a>
+          <a href="/case-studies" class="amor-btn btn-borderd light">Case Study</a>
         </div>
       </div>
     </div>
@@ -299,7 +299,7 @@
         </div>
         <div class="d-flex justify-content-center gap-3 mt-5">
           <a class="amor-btn btn-fill-primary btn-large" href="contact">Get Started</a>
-          <a href="/case-studies" class="amor-btn btn-borderd light">View Portfolio</a>
+          <a href="/case-studies" class="amor-btn btn-borderd light">Case Study</a>
         </div>
       </div>
     </div>
@@ -415,7 +415,7 @@
         </div>
         <div class="d-flex justify-content-center gap-3 mt-5">
           <a class="amor-btn btn-fill-primary btn-large" href="contact">Get Started</a>
-          <a href="/case-studies" class="amor-btn btn-borderd light">View Portfolio</a>
+          <a href="/case-studies" class="amor-btn btn-borderd light">Case Study</a>
         </div>
       </div>
     </div>
@@ -549,7 +549,7 @@
         </div>
         <div class="d-flex justify-content-center gap-3 mt-5">
           <a class="amor-btn btn-fill-primary btn-large" href="contact">Get Started</a>
-          <a href="/case-studies" class="amor-btn btn-borderd light">View Portfolio</a>
+          <a href="/case-studies" class="amor-btn btn-borderd light">Case Study</a>
         </div>
       </div>
     </div>
@@ -666,7 +666,7 @@
         </div>
         <div class="d-flex justify-content-center gap-3 mt-5">
           <a class="amor-btn btn-fill-primary btn-large" href="contact">Get Started</a>
-          <a href="/case-studies" class="amor-btn btn-borderd light">View Portfolio</a>
+          <a href="/case-studies" class="amor-btn btn-borderd light">Case Study</a>
         </div>
       </div>
     </div>
@@ -798,7 +798,7 @@
         </div>
         <div class="d-flex justify-content-center gap-3 mt-5">
           <a class="amor-btn btn-fill-primary btn-large" href="contact">Get Started</a>
-          <a href="/case-studies" class="amor-btn btn-borderd light">View Portfolio</a>
+          <a href="/case-studies" class="amor-btn btn-borderd light">Case Study</a>
         </div>
       </div>
     </div>

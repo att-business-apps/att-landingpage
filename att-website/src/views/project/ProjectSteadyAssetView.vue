@@ -1,3 +1,7 @@
+<script setup>
+import CaseStudyWorkWithUs from "@/components/CaseStudyWorkWithUs.vue";
+</script>
+
 <template>
     <div class="breadcrum-area breadcrumb-banner">
         <div class="container-fluid">
@@ -186,6 +190,15 @@
         </div>
     </section>
 
+    <CaseStudyWorkWithUs
+        project="SteadyAsset"
+        industry="Investment platform"
+        accent="#20B2AA"
+        result="A trustworthy investment brand and website experience built to support clarity, confidence, and investor education."
+        :services="['Logo design', 'Website UI/UX', 'GA setup', 'GMB setup']"
+        :proof="['Trust-first visual system', 'Clear investment journeys', 'SEO and analytics foundation']"
+    />
+
     <!-- Result Section -->
     <section class="section section-padding">
         <div class="container">
@@ -210,7 +223,7 @@
 				>Get Started</a
 				>
 				<a href="/case-studies" class="amor-btn btn-borderd light"
-				>View Portfolio</a
+				>Case Study</a
 				>
 			</div>
         </div>

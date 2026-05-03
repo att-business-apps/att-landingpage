@@ -1,5 +1,6 @@
 <script setup>
 import { VueCompareImage } from 'vue3-compare-image'
+import CaseStudyWorkWithUs from '@/components/CaseStudyWorkWithUs.vue'
 
 // cassets
 import sdLi from '@/assets/img/project/c7/sd-db-li.png'
@@ -144,6 +145,15 @@ import after from '@/assets/img/project/c7/after.png'
         </div>
     </section>
 
+    <CaseStudyWorkWithUs
+        project="SaveDesk"
+        industry="FinTech dashboard redesign"
+        accent="#2071B7"
+        result="A clearer dashboard experience that makes complex banking data easier to understand and act on."
+        :services="['UX audit', 'Dashboard redesign', 'Design system', 'Prototype handoff']"
+        :proof="['Simplified financial workflows', 'Improved data clarity', 'Modern product confidence']"
+    />
+
     <!-- Result Section -->
     <section class="section section-padding">
         <div class="container">
@@ -169,7 +179,7 @@ import after from '@/assets/img/project/c7/after.png'
 				>Get Started</a
 				>
 				<a href="/case-studies" class="amor-btn btn-borderd light"
-				>View Portfolio</a
+				>Case Study</a
 				>
 			</div>
         </div>

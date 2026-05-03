@@ -43,39 +43,39 @@
       color: var(--color-dark);
     }
 
-    &:hover {
-      &::before,
-      &::after {
-        content: "";
-        position: absolute;
-        left: -1px;
-        top: -1px;
-        background: linear-gradient(
-          45deg,
-          #fb0094,
-          #0000ff,
-          #00ff00,
-          #ffff00,
-          #ff0000,
-          #fb0094,
-          #0000ff,
-          #00ff00,
-          #ffff00,
-          #ff0000
-        );
-        // background: conic-gradient(from 90deg, #CCCCCC 0deg, #689edd 90deg, #5CB04D 180deg, #DB3C2D 270deg, #E4C535 360deg);
-        background-size: 400%;
-        width: calc(100% + 2px);
-        height: calc(100% + 2px);
-        z-index: -1;
-        animation: steam 30s linear infinite;
-        border-radius: 1.5rem;
-      }
+    // &:hover {
+    //   &::before,
+    //   &::after {
+    //     content: "";
+    //     position: absolute;
+    //     left: -1px;
+    //     top: -1px;
+    //     background: linear-gradient(
+    //       45deg,
+    //       #fb0094,
+    //       #0000ff,
+    //       #00ff00,
+    //       #ffff00,
+    //       #ff0000,
+    //       #fb0094,
+    //       #0000ff,
+    //       #00ff00,
+    //       #ffff00,
+    //       #ff0000
+    //     );
+    //     // background: conic-gradient(from 90deg, #CCCCCC 0deg, #689edd 90deg, #5CB04D 180deg, #DB3C2D 270deg, #E4C535 360deg);
+    //     background-size: 400%;
+    //     width: calc(100% + 2px);
+    //     height: calc(100% + 2px);
+    //     z-index: -1;
+    //     animation: steam 30s linear infinite;
+    //     border-radius: 1.5rem;
+    //   }
 
-      &:after {
-        filter: blur(6px);
-      }
-    }
+    //   &:after {
+    //     filter: blur(6px);
+    //   }
+    // }
   }
   .title {
     font-size: 40px;

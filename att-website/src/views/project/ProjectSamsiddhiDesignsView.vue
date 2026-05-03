@@ -1,10 +1,14 @@
+<script setup>
+import CaseStudyWorkWithUs from "@/components/CaseStudyWorkWithUs.vue";
+</script>
+
 <template>
     <div class="breadcrum-area breadcrumb-banner">
         <div class="container-fluid">
             <div class="breadcrumb animate__animated fadeInUp" style="animation-duration: 2s">
                 <ul class="list-unstyled">
                     <li><a href="/">Home</a></li>
-                    <li><a href="/case-studies">Portfolio</a></li>
+                    <li><a href="/case-studies">Case Study</a></li>
                     <li class="active text-ly">Samsiddhi Designs</li>
                 </ul>
                 <div class="section-heading heading-left">
@@ -118,6 +122,15 @@
         </div>
     </section>
 
+    <CaseStudyWorkWithUs
+        project="Samsiddhi Designs"
+        industry="Interior design company"
+        accent="#ec4899"
+        result="A polished design-business identity that helps visitors feel the craft, trust the process, and enquire faster."
+        :services="['Brand identity', 'Website development', 'Portfolio UI', 'Analytics setup']"
+        :proof="['Visual-first project storytelling', 'Professional brand assets', 'Clear enquiry path']"
+    />
+
     <!-- Result Section -->
     <section class="section section-padding">
         <div class="container">
@@ -141,7 +154,7 @@
 				>Get Started</a
 				>
 				<a href="/case-studies" class="amor-btn btn-borderd light"
-				>View Portfolio</a
+				>Case Study</a
 				>
 			</div>
         </div>

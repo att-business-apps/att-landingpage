@@ -1,3 +1,7 @@
+<script setup>
+import CaseStudyWorkWithUs from "@/components/CaseStudyWorkWithUs.vue";
+</script>
+
 <template>
   <div class="breadcrum-area breadcrumb-banner">
     <div class="container-fluid">
@@ -7,7 +11,7 @@
       >
         <ul class="list-unstyled">
           <li><a href="/">Home</a></li>
-          <li><a href="/case-studies">Portfolio</a></li>
+          <li><a href="/case-studies">Case Study</a></li>
           <li class="active text-ly">Al-Shamil Computers</li>
         </ul>
         <div class="section-heading heading-left">
@@ -151,6 +155,15 @@
     </div>
   </section>
 
+  <CaseStudyWorkWithUs
+    project="Al-Shamil Computers"
+    industry="IT solutions and services"
+    accent="#f59e0b"
+    result="A stronger service brand experience that presents IT capability with clarity, consistency, and sales confidence."
+    :services="['Logo refresh', 'Website design', 'Brand collateral', 'Responsive UI']"
+    :proof="['Modern IT service positioning', 'Consistent brand assets', 'Better enquiry journey']"
+  />
+
   <!-- Result Section -->
   <section class="section section-padding">
     <div class="container">
@@ -181,7 +194,7 @@
           >Get Started</a
         >
         <a href="/case-studies" class="amor-btn btn-borderd light"
-          >View Portfolio</a
+          >Case Study</a
         >
       </div>
     </div>

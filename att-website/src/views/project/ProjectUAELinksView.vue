@@ -1,5 +1,6 @@
 <script setup>
 import { VueCompareImage } from "vue3-compare-image";
+import CaseStudyWorkWithUs from "@/components/CaseStudyWorkWithUs.vue";
 
 // cassets
 import uaeLi from "@/assets/img/project/c1/uae-li.png";
@@ -156,6 +157,15 @@ import uaeDr from "@/assets/img/project/c1/uae-dr.png";
     </div>
   </section>
 
+  <CaseStudyWorkWithUs
+    project="UAE Links"
+    industry="Government services portal"
+    accent="#16a34a"
+    result="A simple, fast portal experience that helps users reach important government services with less friction."
+    :services="['UX research', 'Portal UI', 'Responsive website', 'Analytics']"
+    :proof="['Clear service categories', 'Mobile-first access', 'Scalable portal foundation']"
+  />
+
   <!-- Result Section -->
   <section class="section section-padding">
     <div class="container">
@@ -186,7 +196,7 @@ import uaeDr from "@/assets/img/project/c1/uae-dr.png";
           >Get Started</a
         >
         <a href="/case-studies" class="amor-btn btn-borderd light"
-          >View Portfolio</a
+          >Case Study</a
         >
       </div>
     </div>

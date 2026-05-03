@@ -1,11 +1,17 @@
 <script setup>
-import { ref } from "vue";
+import { nextTick, onBeforeUnmount, onMounted, ref } from "vue";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
 
 const disableBtn = ref(false);
 const from_name = ref("");
 const email = ref("");
 const phoneNumber = ref("");
 const message = ref("");
+const homePage = ref(null);
+let gsapContext;
 
 function sendMail() {
   var params = {
@@ -65,11 +71,284 @@ function getTemplate(target) {
   if (target == "customer") return "template_svj7071";
 }
 
+function animateHomePage() {
+  if (!homePage.value) return;
+
+  gsapContext?.revert();
+  gsapContext = gsap.context(() => {
+    const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+    if (prefersReducedMotion) {
+      gsap.set(
+        [
+          ".home-motion-section",
+          ".motion-card",
+          ".motion-text",
+          ".home-banner .title",
+          ".home-banner .subtitle",
+          ".banner-form",
+        ],
+        { clearProps: "all" },
+      );
+      return;
+    }
+
+    const heroTimeline = gsap.timeline({
+      defaults: { ease: "power3.out" },
+      scrollTrigger: {
+        trigger: ".banner-style-1",
+        start: "top top",
+        end: "bottom top",
+        scrub: 0.8,
+      },
+    });
+
+    gsap.timeline({ defaults: { ease: "power3.out" } })
+      .from(".home-banner .inline-flex", {
+        y: 18,
+        autoAlpha: 0,
+        duration: 0.75,
+      })
+      .fromTo(
+        ".hero-title",
+        {
+          opacity: 0,
+          scale: 0.98,
+        },
+        {
+          opacity: 1,
+          scale: 1,
+          duration: 0.2,
+          immediateRender: false,
+        },
+        "-=0.2",
+      )
+      .fromTo(
+        ".hero-title-token",
+        {
+          y: 70,
+          opacity: 0,
+          filter: "blur(16px)",
+          rotateZ: -3,
+        },
+        {
+          y: 0,
+          opacity: 1,
+          filter: "blur(0px)",
+          rotateZ: 0,
+          duration: 0.74,
+          stagger: 0.07,
+          ease: "power3.out",
+          immediateRender: false,
+        },
+        "-=0.1",
+      )
+      .to(
+        ".hero-title-highlight",
+        {
+          backgroundPosition: "100% 50%",
+          textShadow: "0 0 28px rgba(255, 214, 10, 0.32)",
+          scale: 1.035,
+          duration: 0.58,
+          stagger: 0.14,
+          yoyo: true,
+          repeat: 1,
+          ease: "power2.out",
+        },
+        "-=0.18",
+      )
+      .from(".home-banner .h5 span", {
+        y: 18,
+        autoAlpha: 0,
+        stagger: 0.08,
+        duration: 0.6,
+      }, "-=0.55")
+      .from(".home-banner .subtitle", {
+        y: 22,
+        autoAlpha: 0,
+        duration: 0.7,
+      }, "-=0.45")
+      .from(".home-banner .amor-btn", {
+        y: 18,
+        autoAlpha: 0,
+        stagger: 0.08,
+        duration: 0.55,
+      }, "-=0.35")
+      .from(".home-metric", {
+        y: 24,
+        autoAlpha: 0,
+        stagger: 0.08,
+        duration: 0.62,
+      }, "-=0.25")
+      .fromTo(
+        ".banner-form",
+        {
+          y: 46,
+          opacity: 0,
+          scale: 0.96,
+        },
+        {
+          y: 0,
+          opacity: 1,
+          scale: 1,
+          duration: 0.9,
+          immediateRender: false,
+          clearProps: "opacity,visibility",
+        },
+        "-=0.5",
+      );
+
+    heroTimeline
+      .to(".home-banner", { yPercent: -16, autoAlpha: 0.72 }, 0)
+      .to(".amorboy img:first-child", { yPercent: -26, xPercent: -4, rotate: -6 }, 0)
+      .to(".amorboy img:last-child", { yPercent: -18, xPercent: 4, rotate: 5 }, 0)
+      .to(".shape-group-banner .shape", {
+        yPercent: (index) => (index % 2 ? -46 : -28),
+        xPercent: (index) => (index % 3 ? 18 : -14),
+        rotate: (index) => (index % 2 ? 20 : -18),
+        stagger: 0.03,
+      }, 0);
+
+    const pageSections = [
+      ...homePage.value.querySelectorAll(":scope > section:not(.d-none)"),
+    ];
+
+    pageSections.forEach((section) => {
+      const headingItems = section.querySelectorAll("h2, h3, .section-heading, .motion-text");
+      const cards = section.querySelectorAll(
+        ".motion-card, .project-grid, .review-card, .services-grid, .why > div",
+      );
+
+      if (headingItems.length) {
+        gsap.fromTo(
+          headingItems,
+          {
+            y: 36,
+            opacity: 0,
+          },
+          {
+            y: 0,
+            opacity: 1,
+            duration: 0.85,
+            stagger: 0.1,
+            ease: "power3.out",
+            immediateRender: false,
+            scrollTrigger: {
+              trigger: section,
+              start: "top 78%",
+              toggleActions: "play none none none",
+              once: true,
+            },
+          },
+        );
+      }
+
+      if (cards.length) {
+        gsap.fromTo(
+          cards,
+          {
+            y: 54,
+            opacity: 0,
+            scale: 0.96,
+            rotateX: 5,
+          },
+          {
+            y: 0,
+            opacity: 1,
+            scale: 1,
+            rotateX: 0,
+            transformOrigin: "center bottom",
+            duration: 0.9,
+            stagger: 0.1,
+            ease: "power3.out",
+            immediateRender: false,
+            scrollTrigger: {
+              trigger: section,
+              start: "top 72%",
+              toggleActions: "play none none none",
+              once: true,
+            },
+          },
+        );
+      }
+    });
+
+    gsap.utils.toArray(".process-step").forEach((step, index) => {
+      gsap.fromTo(
+        step,
+        {
+          xPercent: index % 2 ? 8 : -8,
+          opacity: 0,
+        },
+        {
+          xPercent: 0,
+          opacity: 1,
+          duration: 0.8,
+          ease: "power3.out",
+          immediateRender: false,
+          scrollTrigger: {
+            trigger: step,
+            start: "top 82%",
+            toggleActions: "play none none none",
+            once: true,
+          },
+        },
+      );
+    });
+
+    gsap.utils.toArray(".home-parallax").forEach((item) => {
+      gsap.to(item, {
+        yPercent: -14,
+        ease: "none",
+        scrollTrigger: {
+          trigger: item,
+          start: "top bottom",
+          end: "bottom top",
+          scrub: 0.9,
+        },
+      });
+    });
+
+    gsap.utils.toArray(".motion-card, .project-grid, .review-card, .services-grid, .space-y-4 > div").forEach((card) => {
+      card.addEventListener("mouseenter", () => {
+        gsap.to(card, {
+          y: -8,
+          scale: 1.015,
+          boxShadow: "0 28px 70px rgba(10, 16, 30, 0.22)",
+          duration: 0.32,
+          ease: "power2.out",
+        });
+      });
+
+      card.addEventListener("mouseleave", () => {
+        gsap.to(card, {
+          y: 0,
+          scale: 1,
+          boxShadow: "0 10px 28px rgba(10, 16, 30, 0.08)",
+          duration: 0.42,
+          ease: "power2.out",
+        });
+      });
+    });
+
+    ScrollTrigger.refresh();
+  }, homePage.value);
+}
+
+onMounted(async () => {
+  await nextTick();
+  animateHomePage();
+});
+
+onBeforeUnmount(() => {
+  gsapContext?.revert();
+});
+
 // New Year
 </script>
 
 <template>
-  <main>
+  <main ref="homePage" class="home-motion-page">
     <div class="banner banner-style-1">
       <div class="container-fluid">
         <div class="row align-items-end align-items-xl-end">
@@ -94,9 +373,13 @@ function getTemplate(target) {
                   <span class="gradient-text-light">Data-Driven Design</span>
                 </h1> -->
 
-                <h1 class="title d-inline" ref="myElement">
-                  We Build <span class="text-ly">Digital Products</span> That Drive
-                  <span class="gradient-text-light">Growth & Conversions</span>
+                <h1 class="title hero-title d-inline" ref="myElement">
+                  <span class="hero-title-token">We</span>
+                  <span class="hero-title-token">Build</span>
+                  <span class="hero-title-token hero-title-highlight text-ly">Digital Products</span>
+                  <span class="hero-title-token">That</span>
+                  <span class="hero-title-token">Drive</span>
+                  <span class="hero-title-token hero-title-highlight gradient-text-light">Growth & Conversions</span>
                 </h1>
 
                 <h2 class="h5 mt-4 flex items-center justify-center gap-3">
@@ -113,22 +396,22 @@ function getTemplate(target) {
                   <a class="amor-btn btn-fill-primary btn-large"
                     href="https://wa.me/917975859061/?text=Get%20my%20free%20GROWTH%20Audit.">Get My Free Growth
                     Audit</a>
-                  <a href="/case-studies" class="amor-btn btn-borderd light">View Portfolio</a>
+                  <a href="/case-studies" class="amor-btn btn-borderd light">Case Study</a>
                 </div>
                 <div class="mt-16 grid grid-cols-2 md:grid-cols-4 gap-6 opacity-80">
-                  <div class="flex flex-col items-center justify-around">
+                  <div class="home-metric flex flex-col items-center justify-around">
                     <span class="text-3xl font-bold text-primary gradient-text blue-light">+140%</span>
                     <span class="text-xs uppercase tracking-widest text-slate-300">Avg. ROI</span>
                   </div>
-                  <div class="flex flex-col items-center">
+                  <div class="home-metric flex flex-col items-center">
                     <span class="text-3xl font-bold text-primary gradient-text yellow-light">24/7</span>
                     <span class="text-xs uppercase tracking-widest text-slate-300">Lead Machine</span>
                   </div>
-                  <div class="flex flex-col items-center">
+                  <div class="home-metric flex flex-col items-center">
                     <span class="text-3xl font-bold text-primary gradient-text green-light">12ms</span>
                     <span class="text-xs uppercase tracking-widest text-slate-300">Fast Performance</span>
                   </div>
-                  <div class="flex flex-col items-center">
+                  <div class="home-metric flex flex-col items-center">
                     <span class="text-3xl font-bold text-primary gradient-text text-lr">Zero</span>
                     <span class="text-xs uppercase tracking-widest text-slate-300">Wasted Ad Spend</span>
                   </div>
@@ -244,7 +527,7 @@ function getTemplate(target) {
       </ul>
     </div>
 
-    <section class="bg-white py-24">
+    <section class="home-motion-section bg-white py-24">
       <div class="container mx-auto px-6">
         <div class="flex flex-col md:flex-row md:items-end justify-between mb-5 gap-2">
           <div>
@@ -255,14 +538,14 @@ function getTemplate(target) {
               Built for Scalable Ventures
             </h2>
           </div>
-          <p class="text-slate-800 max-w-sm mb-0">
+          <p class="motion-text text-slate-800 max-w-sm mb-0">
             We specialize in three core verticals where our growth frameworks
             deliver the highest impact.
           </p>
         </div>
         <div class="grid md:grid-cols-3 gap-6">
           <div
-            class="bg-dark p-10 rounded-2xl text-center hover:shadow-xl transition-shadow hover:scale-[1.04] transition-all">
+            class="motion-card bg-dark p-10 rounded-2xl text-center hover:shadow-xl transition-shadow hover:scale-[1.04] transition-all">
             <div class="w-16 h-16 bg-blue-300 text-blue-600 rounded-full flex items-center justify-center mx-auto mb-6">
               <span class="material-symbols-outlined text-3xl">storefront</span>
             </div>
@@ -273,7 +556,7 @@ function getTemplate(target) {
             </p>
           </div>
           <div
-            class="bg-dark p-10 rounded-2xl text-center hover:shadow-xl transition-shadow hover:scale-[1.06] transition-all">
+            class="motion-card bg-dark p-10 rounded-2xl text-center hover:shadow-xl transition-shadow hover:scale-[1.06] transition-all">
             <div
               class="w-16 h-16 bg-indigo-300 text-indigo-600 rounded-full flex items-center justify-center mx-auto mb-6">
               <span class="material-symbols-outlined text-3xl">shopping_cart</span>
@@ -285,7 +568,7 @@ function getTemplate(target) {
             </p>
           </div>
           <div
-            class="bg-dark p-10 rounded-2xl text-center hover:shadow-xl transition-shadow hover:scale-[1.04] transition-all">
+            class="motion-card bg-dark p-10 rounded-2xl text-center hover:shadow-xl transition-shadow hover:scale-[1.04] transition-all">
             <div
               class="w-16 h-16 bg-purple-300 text-purple-600 rounded-full flex items-center justify-center mx-auto mb-6">
               <span class="material-symbols-outlined text-3xl">rocket_launch</span>
@@ -302,10 +585,10 @@ function getTemplate(target) {
       </div>
     </section>
 
-    <section class="pb-24 px-4 bg-white">
+    <section class="home-motion-section pb-24 px-4 bg-white">
       <div
-        class="max-w-6xl mx-auto rounded-3xl p-20 border border-secondary shadow-sm relative overflow-hidden hover:scale-[1.08] transition-all">
-        <div class="absolute top-0 right-0 p-8 opacity-10">
+        class="motion-card max-w-6xl mx-auto rounded-3xl p-20 border border-secondary shadow-sm relative overflow-hidden hover:scale-[1.08] transition-all">
+        <div class="home-parallax absolute top-0 right-0 p-8 opacity-10">
           <span class="material-icons-outlined text-ly" style="font-size: 16rem">report_problem</span>
         </div>
         <div class="relative">
@@ -319,7 +602,7 @@ function getTemplate(target) {
             </span>
           </h2>
           <div class="grid md:grid-cols-2 gap-y-6 gap-x-12">
-            <div class="flex items-start gap-4">
+            <div class="motion-card flex items-start gap-4">
               <span class="material-icons-outlined text-lr">cancel</span>
               <div>
                 <p class="font-bold text-slate-900 mb-0">Website Not Converting</p>
@@ -328,7 +611,7 @@ function getTemplate(target) {
                 </p>
               </div>
             </div>
-            <div class="flex items-start gap-4">
+            <div class="motion-card flex items-start gap-4">
               <span class="material-icons-outlined text-lr">cancel</span>
               <div>
                 <p class="font-bold text-slate-900 mb-0">Ads Not Working</p>
@@ -337,7 +620,7 @@ function getTemplate(target) {
                 </p>
               </div>
             </div>
-            <div class="flex items-start gap-4">
+            <div class="motion-card flex items-start gap-4">
               <span class="material-icons-outlined text-lr">cancel</span>
               <div>
                 <p class="font-bold text-slate-900 mb-0">High Traffic, Low Sales</p>
@@ -346,7 +629,7 @@ function getTemplate(target) {
                 </p>
               </div>
             </div>
-            <div class="flex items-start gap-4">
+            <div class="motion-card flex items-start gap-4">
               <span class="material-icons-outlined text-lr">cancel</span>
               <div>
                 <p class="font-bold text-slate-900 mb-0">No Clear Strategy</p>
@@ -360,20 +643,20 @@ function getTemplate(target) {
       </div>
     </section>
 
-    <section class="py-24" id="solutions" style="background: linear-gradient(135deg, #0f0f0f 0%, #000000 100%)">
+    <section class="home-motion-section py-24" id="solutions" style="background: linear-gradient(135deg, #0f0f0f 0%, #000000 100%)">
       <div class="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8">
         <div class="text-center mb-16">
           <h2 class="text-4xl font-display font-extrabold mb-4 text-lg" style="font-weight: 600">
             Outcome-Driven Solutions
           </h2>
-          <p class="text-slate-300 max-w-2xl mx-auto mt-3">
+          <p class="motion-text text-slate-300 max-w-2xl mx-auto mt-3">
             We don't just "build websites." We architect conversion systems
             designed to scale your specific business model.
           </p>
         </div>
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div
-            class="group relative bg-background-light p-8 rounded-xl border border-dark transition-all hover:scale-[1.05] hover:shadow-2xl flex flex-col h-full">
+            class="motion-card group relative bg-background-light p-8 rounded-xl border border-dark transition-all hover:scale-[1.05] hover:shadow-2xl flex flex-col h-full">
             <div
               class="absolute top-0 right-8 -translate-y-1/2 bg-primary text-slate-900 px-4 py-1 rounded-full text-xs font-bold uppercase tracking-widest">
               Popular
@@ -412,7 +695,7 @@ function getTemplate(target) {
             </div>
           </div>
           <div
-            class="group relative bg-dark p-8 rounded-xl scale-[1.05] hover:scale-[1.08] border border-dark transition-all shadow-2xl flex flex-col h-full">
+            class="motion-card group relative bg-dark p-8 rounded-xl scale-[1.05] hover:scale-[1.08] border border-dark transition-all shadow-2xl flex flex-col h-full">
             <div
               class="absolute top-0 right-8 -translate-y-1/2 bg-primary text-slate-900 px-4 py-1 rounded-full text-xs font-bold uppercase tracking-widest">
               Most Popular
@@ -451,7 +734,7 @@ function getTemplate(target) {
             </div>
           </div>
           <div
-            class="group relative bg-background-light p-8 rounded-xl border border-dark transition-all hover:scale-[1.05] hover:shadow-2xl flex flex-col h-full">
+            class="motion-card group relative bg-background-light p-8 rounded-xl border border-dark transition-all hover:scale-[1.05] hover:shadow-2xl flex flex-col h-full">
             <div
               class="absolute top-0 right-8 -translate-y-1/2 bg-primary text-slate-900 px-4 py-1 rounded-full text-xs font-bold uppercase tracking-widest">
               Popular
@@ -897,7 +1180,7 @@ function getTemplate(target) {
           </div>
 
           <div class="d-lg-flex justify-content-center">
-            <a class="amor-btn btn-borderd light" href="portfolio">View Portfolio</a>
+            <a class="amor-btn btn-borderd light" href="/case-studies">Case Study</a>
           </div>
         </div>
       </div>
@@ -1489,6 +1772,86 @@ function getTemplate(target) {
 </template>
 
 <style lang="scss" scoped>
+.home-motion-page {
+  overflow-x: hidden;
+}
+
+.home-motion-page section,
+.home-motion-page .banner-style-1 {
+  position: relative;
+  isolation: isolate;
+}
+
+.home-motion-section,
+.motion-card,
+.home-metric,
+.banner-form,
+.home-banner,
+.amorboy img,
+.shape-group-banner .shape {
+  will-change: transform, opacity;
+}
+
+.motion-card,
+.project-grid,
+.review-card,
+.services-grid,
+.why > div {
+  transform-style: preserve-3d;
+  backface-visibility: hidden;
+}
+
+.home-motion-page .amor-btn,
+.home-motion-page input,
+.home-motion-page textarea,
+.home-motion-page .motion-card {
+  transition:
+    border-color 0.28s ease,
+    background-color 0.28s ease,
+    box-shadow 0.28s ease;
+}
+
+.home-motion-page input:focus,
+.home-motion-page textarea:focus {
+  box-shadow: 0 0 0 4px rgba(96, 165, 250, 0.18);
+}
+
+.home-motion-page .banner-form {
+  display: block;
+  opacity: 1;
+  visibility: visible;
+  position: relative;
+  transform-origin: center top;
+  z-index: 2;
+}
+
+.home-motion-page .shape-group-banner {
+  pointer-events: none;
+}
+
+.hero-title {
+  perspective: 900px;
+  opacity: 1;
+}
+
+.hero-title-token {
+  display: inline-block;
+  margin-right: 0.18em;
+  color: #f8fafc;
+  -webkit-text-fill-color: currentColor;
+  background: none;
+  transform-origin: center bottom;
+  will-change: transform, opacity, filter, text-shadow, background-position;
+}
+
+.hero-title-highlight {
+  background-image: linear-gradient(110deg, #facc15 0%, #ffffff 36%, #60a5fa 68%, #facc15 100%);
+  background-size: 220% 220%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
 .amorboy {
   position: absolute;
   width: 100%;

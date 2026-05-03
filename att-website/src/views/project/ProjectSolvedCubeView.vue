@@ -1,3 +1,7 @@
+<script setup>
+import CaseStudyWorkWithUs from "@/components/CaseStudyWorkWithUs.vue";
+</script>
+
 <template>
     <div class="breadcrum-area breadcrumb-banner">
         <div class="container-fluid">
@@ -124,6 +128,15 @@
         </div>
     </section>
 
+    <CaseStudyWorkWithUs
+        project="Solved Cube IT Solutions"
+        industry="HR and IT consultancy"
+        accent="#0ea5e9"
+        result="A professional brand and website presence that makes the consultancy easier to understand, trust, and contact."
+        :services="['Brand identity', 'Website design', 'Marketing collateral', 'Responsive build']"
+        :proof="['Clear consultancy positioning', 'Service-led navigation', 'Complete brand touchpoints']"
+    />
+
     <!-- Result Section -->
     <section class="section section-padding">
         <div class="container">
@@ -148,7 +161,7 @@
 				>Get Started</a
 				>
 				<a href="/case-studies" class="amor-btn btn-borderd light"
-				>View Portfolio</a
+				>Case Study</a
 				>
 			</div>
         </div>

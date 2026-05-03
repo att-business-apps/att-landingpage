@@ -12,9 +12,11 @@ import { createApp } from "vue";
 
 import App from "./App.vue";
 import router from "./router";
+import gsapPlugin from "./plugins/gsap";
 
 const app = createApp(App);
 
 app.use(router);
+app.use(gsapPlugin);
 
 app.mount("#app");
