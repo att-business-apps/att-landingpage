@@ -84,7 +84,7 @@ import CaseStudyWorkWithUs from "@/components/CaseStudyWorkWithUs.vue";
                 <h5 class="title">Live Website</h5>
                 <p>
                   <a
-                    href="http://alshamil.co:8082/"
+                    href="https://alshamil.it/
                     target="_blank"
                     class="text-primary"
                     >alshamil.co</a
