@@ -15,12 +15,13 @@
               />
             </a>
           </div>
-          <div class="header-main-nav d-none">
+          <div class="header-main-nav">
             <nav class="mainmenu-nav">
               <ul class="mainmenu">
                 <li><a href="/services"><span class="text-ll">Services</span></a></li>
                 <li><a href="/case-studies"><span class="text-ll">Case Study</span></a></li>
                 <li><a href="/about"><span class="text-ll">About</span></a></li>
+                <li><a href="/careers"><span class="text-ll">Careers</span></a></li>
                 <li><a href="https://demo.amortree.com/"><span class="text-ll">Demo</span></a></li>
                 <li><a href="/contact"><span class="text-ll">Contact</span></a></li>
               </ul>

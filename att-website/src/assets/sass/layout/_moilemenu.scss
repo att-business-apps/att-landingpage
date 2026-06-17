@@ -2,7 +2,7 @@
     width: 94%;
     height: 3rem;
     position: fixed;
-    display: flex !important;
+    display: none;
     align-items: center;	
     justify-content: space-around;
     flex-wrap: nowrap;
@@ -22,6 +22,9 @@
     z-index: 99;
     box-shadow: 0 -24px 48px -15px rgba(0, 0, 0, 0.35);
     
+    @include md-down {
+        display: flex;
+    }
 
     li {
         display: contents;

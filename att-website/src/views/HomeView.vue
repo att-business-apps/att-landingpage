@@ -12,6 +12,7 @@ const phoneNumber = ref("");
 const message = ref("");
 const homePage = ref(null);
 let gsapContext;
+let pointerCleanup;
 
 function sendMail() {
   var params = {
@@ -74,6 +75,8 @@ function getTemplate(target) {
 function animateHomePage() {
   if (!homePage.value) return;
 
+  pointerCleanup?.();
+  pointerCleanup = undefined;
   gsapContext?.revert();
   gsapContext = gsap.context(() => {
     const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
@@ -87,6 +90,10 @@ function animateHomePage() {
           ".home-banner .title",
           ".home-banner .subtitle",
           ".banner-form",
+          ".step-arrow",
+          "#results .group",
+          "#results img",
+          "#reviews .glass-card",
         ],
         { clearProps: "all" },
       );
@@ -199,9 +206,16 @@ function animateHomePage() {
       );
 
     heroTimeline
-      .to(".home-banner", { yPercent: -16, autoAlpha: 0.72 }, 0)
-      .to(".amorboy img:first-child", { yPercent: -26, xPercent: -4, rotate: -6 }, 0)
-      .to(".amorboy img:last-child", { yPercent: -18, xPercent: 4, rotate: 5 }, 0)
+      .to(".home-banner", { yPercent: -18, autoAlpha: 0.66, scale: 0.97 }, 0)
+      .to(".banner-form", { yPercent: -12, rotateX: 4, autoAlpha: 0.86 }, 0)
+      .to(".home-metric", {
+        yPercent: (index) => -20 - index * 7,
+        xPercent: (index) => (index % 2 ? 8 : -8),
+        autoAlpha: 0.72,
+        stagger: 0.03,
+      }, 0)
+      .to(".amorboy img:first-child", { yPercent: -34, xPercent: -7, rotate: -9, scale: 1.08 }, 0)
+      .to(".amorboy img:last-child", { yPercent: -24, xPercent: 7, rotate: 7, scale: 1.04 }, 0)
       .to(".shape-group-banner .shape", {
         yPercent: (index) => (index % 2 ? -46 : -28),
         xPercent: (index) => (index % 3 ? 18 : -14),
@@ -209,35 +223,67 @@ function animateHomePage() {
         stagger: 0.03,
       }, 0);
 
+    const hero = homePage.value.querySelector(".banner-style-1");
+    const tiltItems = homePage.value.querySelectorAll(".hero-title, .banner-form, .amorboy img");
+    if (hero && tiltItems.length) {
+      const tiltX = gsap.quickTo(tiltItems, "rotationY", { duration: 0.55, ease: "power3.out" });
+      const tiltY = gsap.quickTo(tiltItems, "rotationX", { duration: 0.55, ease: "power3.out" });
+      const parallaxX = gsap.quickTo(".shape-group-banner .shape", "x", { duration: 0.7, ease: "power3.out" });
+      const parallaxY = gsap.quickTo(".shape-group-banner .shape", "y", { duration: 0.7, ease: "power3.out" });
+      const handlePointerMove = (event) => {
+        const bounds = hero.getBoundingClientRect();
+        const x = (event.clientX - bounds.left) / bounds.width - 0.5;
+        const y = (event.clientY - bounds.top) / bounds.height - 0.5;
+        tiltX(x * 7);
+        tiltY(y * -5);
+        parallaxX(x * 22);
+        parallaxY(y * 18);
+      };
+      const handlePointerLeave = () => {
+        tiltX(0);
+        tiltY(0);
+        parallaxX(0);
+        parallaxY(0);
+      };
+      hero.addEventListener("pointermove", handlePointerMove);
+      hero.addEventListener("pointerleave", handlePointerLeave);
+      pointerCleanup = () => {
+        hero.removeEventListener("pointermove", handlePointerMove);
+        hero.removeEventListener("pointerleave", handlePointerLeave);
+      };
+    }
+
     const pageSections = [
       ...homePage.value.querySelectorAll(":scope > section:not(.d-none)"),
     ];
 
     pageSections.forEach((section) => {
       const headingItems = section.querySelectorAll("h2, h3, .section-heading, .motion-text");
-      const cards = section.querySelectorAll(
-        ".motion-card, .project-grid, .review-card, .services-grid, .why > div",
-      );
+      const cardSelector = section.id === "solutions"
+        ? ".review-card, .services-grid, .why > div"
+        : ".motion-card, .review-card, .services-grid, .why > div";
+      const cards = section.querySelectorAll(cardSelector);
 
       if (headingItems.length) {
         gsap.fromTo(
           headingItems,
           {
-            y: 36,
-            opacity: 0,
+            y: 72,
+            autoAlpha: 0,
+            filter: "blur(12px)",
           },
           {
             y: 0,
-            opacity: 1,
-            duration: 0.85,
+            autoAlpha: 1,
+            filter: "blur(0px)",
             stagger: 0.1,
-            ease: "power3.out",
+            ease: "none",
             immediateRender: false,
             scrollTrigger: {
               trigger: section,
-              start: "top 78%",
-              toggleActions: "play none none none",
-              once: true,
+              start: "top 88%",
+              end: "center 56%",
+              scrub: 0.75,
             },
           },
         );
@@ -247,50 +293,117 @@ function animateHomePage() {
         gsap.fromTo(
           cards,
           {
-            y: 54,
-            opacity: 0,
-            scale: 0.96,
-            rotateX: 5,
+            y: 96,
+            autoAlpha: 0.2,
+            scale: 0.9,
+            rotateX: 11,
+            rotateZ: (index) => (index % 2 ? 1.8 : -1.8),
           },
           {
             y: 0,
-            opacity: 1,
+            autoAlpha: 1,
             scale: 1,
             rotateX: 0,
+            rotateZ: 0,
             transformOrigin: "center bottom",
-            duration: 0.9,
             stagger: 0.1,
-            ease: "power3.out",
+            ease: "none",
             immediateRender: false,
             scrollTrigger: {
               trigger: section,
-              start: "top 72%",
-              toggleActions: "play none none none",
-              once: true,
+              start: "top 82%",
+              end: "bottom 66%",
+              scrub: 0.85,
             },
           },
         );
       }
     });
 
-    gsap.utils.toArray(".process-step").forEach((step, index) => {
+    const solutions = homePage.value.querySelector("#solutions");
+    if (solutions) {
+      const solutionCards = solutions.querySelectorAll(".motion-card");
+      gsap.timeline({
+        defaults: { ease: "none" },
+        scrollTrigger: {
+          trigger: solutions,
+          start: "top 82%",
+          end: "bottom 42%",
+          scrub: 0.9,
+        },
+      })
+        .fromTo(solutionCards, {
+          yPercent: (index) => 22 + index * 8,
+          scale: 0.92,
+          rotateY: (index) => (index - 1) * 7,
+          autoAlpha: 0.32,
+        }, {
+          yPercent: 0,
+          scale: 1,
+          rotateY: 0,
+          autoAlpha: 1,
+          stagger: 0.18,
+        }, 0)
+        .to(solutionCards, {
+          yPercent: (index) => (index - 1) * -4,
+          rotateZ: (index) => (index - 1) * 0.8,
+          stagger: 0.08,
+        }, 0.58);
+    }
+
+    const results = homePage.value.querySelector("#results");
+    if (results) {
+      gsap.fromTo(
+        "#results .group",
+        { xPercent: -10, autoAlpha: 0.28 },
+        {
+          xPercent: 0,
+          autoAlpha: 1,
+          stagger: 0.18,
+          ease: "none",
+          scrollTrigger: {
+            trigger: results,
+            start: "top 82%",
+            end: "center 45%",
+            scrub: 0.8,
+          },
+        },
+      );
+
+      gsap.to("#results img", {
+        yPercent: -12,
+        scale: 1.08,
+        ease: "none",
+        scrollTrigger: {
+          trigger: results,
+          start: "top bottom",
+          end: "bottom top",
+          scrub: 0.85,
+        },
+      });
+    }
+
+    gsap.utils.toArray(".process-step, .step-arrow").forEach((step, index) => {
       gsap.fromTo(
         step,
         {
           xPercent: index % 2 ? 8 : -8,
-          opacity: 0,
+          y: 46,
+          rotateX: 12,
+          autoAlpha: 0.18,
         },
         {
           xPercent: 0,
-          opacity: 1,
-          duration: 0.8,
-          ease: "power3.out",
+          y: 0,
+          rotateX: 0,
+          autoAlpha: 1,
+          ease: "none",
           immediateRender: false,
           scrollTrigger: {
             trigger: step,
-            start: "top 82%",
-            toggleActions: "play none none none",
-            once: true,
+            start: "top 92%",
+            end: "center 62%",
+            scrub: 0.7,
           },
         },
       );
@@ -309,11 +422,54 @@ function animateHomePage() {
       });
     });
 
-    gsap.utils.toArray(".motion-card, .project-grid, .review-card, .services-grid, .space-y-4 > div").forEach((card) => {
+    gsap.utils.toArray(".project-grid").forEach((project, index) => {
+      gsap.fromTo(project, {
+        yPercent: 18,
+        autoAlpha: 0.3,
+        scale: 0.96,
+      }, {
+        yPercent: index % 2 ? -7 : -3,
+        autoAlpha: 1,
+        scale: 1,
+        ease: "none",
+        scrollTrigger: {
+          trigger: project,
+          start: "top 90%",
+          end: "center 58%",
+          scrub: 0.75,
+        },
+      });
+    });
+
+    gsap.fromTo(
+      "#reviews .glass-card",
+      {
+        y: 88,
+        scale: 0.88,
+        rotateX: 16,
+        autoAlpha: 0.16,
+      },
+      {
+        y: 0,
+        scale: 1,
+        rotateX: 0,
+        autoAlpha: 1,
+        stagger: 0.12,
+        ease: "none",
+        scrollTrigger: {
+          trigger: "#reviews",
+          start: "top 82%",
+          end: "bottom 62%",
+          scrub: 0.8,
+        },
+      },
+    );
+
+    gsap.utils.toArray(".motion-card, .review-card, .services-grid, .space-y-4 > div")
+      .filter((card) => !card.closest("#solutions"))
+      .forEach((card) => {
       card.addEventListener("mouseenter", () => {
         gsap.to(card, {
-          y: -8,
-          scale: 1.015,
           boxShadow: "0 28px 70px rgba(10, 16, 30, 0.22)",
           duration: 0.32,
           ease: "power2.out",
@@ -322,8 +478,6 @@ function animateHomePage() {
 
       card.addEventListener("mouseleave", () => {
         gsap.to(card, {
-          y: 0,
-          scale: 1,
           boxShadow: "0 10px 28px rgba(10, 16, 30, 0.08)",
           duration: 0.42,
           ease: "power2.out",
@@ -341,6 +495,7 @@ onMounted(async () => {
 });
 
 onBeforeUnmount(() => {
+  pointerCleanup?.();
   gsapContext?.revert();
 });
 
@@ -1774,6 +1929,8 @@ onBeforeUnmount(() => {
 <style lang="scss" scoped>
 .home-motion-page {
   overflow-x: hidden;
+  perspective: 1200px;
+  transform-style: preserve-3d;
 }
 
 .home-motion-page section,
@@ -1787,6 +1944,10 @@ onBeforeUnmount(() => {
 .home-metric,
 .banner-form,
 .home-banner,
+.hero-title,
+.step-arrow,
+.glass-card,
+.project-grid,
 .amorboy img,
 .shape-group-banner .shape {
   will-change: transform, opacity;
@@ -1796,6 +1957,8 @@ onBeforeUnmount(() => {
 .project-grid,
 .review-card,
 .services-grid,
+.glass-card,
+.step-arrow,
 .why > div {
   transform-style: preserve-3d;
   backface-visibility: hidden;

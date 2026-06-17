@@ -238,7 +238,7 @@
     </div>
   </div>
 
-  <ul class="mobilemenu mainmenu d-lg-none d-flex">
+  <ul class="mobilemenu mainmenu">
     <li>
       <a href="/" aria-label="home">
         <svg
@@ -529,7 +529,7 @@
         <span class="text-lg">Case Study</span>
       </a>
     </li>
-    <li><a href="https://demo.amortree.com/"><span class="text-lg">Demo</span></a></li>
+    <li><a href="https://demo.amortree.com/"><span class="text-ly">Demo</span></a></li>
     <li>
       <a href="/about" aria-label="who we are">
         <svg
@@ -600,6 +600,7 @@
         <span class="text-lr">About</span>
       </a>
     </li>
+    <li><a href="/careers"><span class="text-lg">Careers</span></a></li>
     <li>
       <a href="/contact" aria-label="where to find">
         <svg

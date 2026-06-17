@@ -17517,11 +17517,10 @@ Frequently Asked Questions
   }
 }
 .mainmenu > li > a {
-  text-transform: uppercase;
   color: var(--color-white);
   font-weight: 500;
   font-size: var(--font-body-1);
-  font-family: var(--font-primary);
+  font-family: var(--font-secondary);
   line-height: 60px;
   height: 60px;
   display: block;
@@ -18825,7 +18824,7 @@ Frequently Asked Questions
   width: 94%;
   height: 3rem;
   position: fixed;
-  display: flex !important;
+  display: none;
   align-items: center;
   justify-content: space-around;
   flex-wrap: nowrap;
@@ -18844,6 +18843,11 @@ Frequently Asked Questions
   border-radius: 0.875rem;
   z-index: 99;
   box-shadow: 0 -24px 48px -15px rgba(0, 0, 0, 0.35);
+}
+@media only screen and (max-width: 767px) {
+  .mobilemenu {
+    display: flex;
+  }
 }
 .mobilemenu li {
   display: contents;
