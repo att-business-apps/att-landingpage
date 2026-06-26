@@ -1,93 +1,178 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+
   <url>
     <loc>https://amortree.com/</loc>
-    <lastmod>2025-06-30</lastmod>
+    <lastmod>2026-06-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
+
   <url>
     <loc>https://amortree.com/services</loc>
-    <lastmod>2025-06-30</lastmod>
+    <lastmod>2026-06-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
+
+  <!-- TODO: Confirm these service sub-pages exist (or create them) -
+       splitting /services into dedicated pages per offering gives each
+       service its own ranking target instead of competing on one URL.
+       Remove any line below that doesn't have a real, built page. -->
   <url>
-    <loc>https://amortree.com/about</loc>
-    <lastmod>2025-06-30</lastmod>
+    <loc>https://amortree.com/services/web-development</loc>
+    <lastmod>2026-06-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
+
+  <url>
+    <loc>https://amortree.com/services/ui-ux-design</loc>
+    <lastmod>2026-06-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://amortree.com/services/seo</loc>
+    <lastmod>2026-06-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://amortree.com/services/digital-marketing</loc>
+    <lastmod>2026-06-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://amortree.com/about</loc>
+    <lastmod>2026-05-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
   <url>
     <loc>https://amortree.com/contact</loc>
-    <lastmod>2025-06-30</lastmod>
+    <lastmod>2026-05-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
+
   <url>
     <loc>https://amortree.com/case-studies</loc>
-    <lastmod>2025-06-30</lastmod>
+    <lastmod>2026-06-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
+
   <url>
     <loc>https://amortree.com/estimate</loc>
-    <lastmod>2025-06-30</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
+
+  <!-- Project / portfolio pages - standardized to /projects/ (plural).
+       NOTE: your original sitemap mixed /project/ (singular) and
+       /projects/ (plural) for these same pages. Pick whichever pattern
+       actually exists in your routing - if it's /project/ (singular),
+       swap every URL below back to singular instead. Whichever you do NOT
+       use live should 301-redirect to the one you keep, so link equity
+       isn't split across two paths for the same page. -->
+
   <url>
     <loc>https://amortree.com/projects/uae-links</loc>
-    <lastmod>2025-06-30</lastmod>
+    <lastmod>2026-04-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://amortree.com/src/assets/img/projects/uae-links-cover.jpg</image:loc>
+      <image:title>UAE Links project - case study cover</image:title>
+    </image:image>
   </url>
+
   <url>
     <loc>https://amortree.com/projects/solved-cube-it-solutions</loc>
-    <lastmod>2025-06-30</lastmod>
+    <lastmod>2026-04-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://amortree.com/src/assets/img/projects/solved-cube-cover.jpg</image:loc>
+      <image:title>Solved Cube IT Solutions - case study cover</image:title>
+    </image:image>
   </url>
+
   <url>
-    <loc>https://amortree.com/project/microrelic</loc>
-    <lastmod>2025-06-30</lastmod>
+    <loc>https://amortree.com/projects/microrelic</loc>
+    <lastmod>2026-04-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://amortree.com/src/assets/img/projects/microrelic-cover.jpg</image:loc>
+      <image:title>Microrelic - case study cover</image:title>
+    </image:image>
   </url>
+
   <url>
     <loc>https://amortree.com/projects/steadyasset</loc>
-    <lastmod>2025-06-30</lastmod>
+    <lastmod>2026-04-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://amortree.com/src/assets/img/projects/steadyasset-cover.jpg</image:loc>
+      <image:title>SteadyAsset - case study cover</image:title>
+    </image:image>
   </url>
+
   <url>
     <loc>https://amortree.com/projects/al-shamil-computers</loc>
-    <lastmod>2025-06-30</lastmod>
+    <lastmod>2026-04-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://amortree.com/src/assets/img/projects/al-shamil-cover.jpg</image:loc>
+      <image:title>Al Shamil Computers - case study cover</image:title>
+    </image:image>
   </url>
+
   <url>
-    <loc>https://amortree.com/project/savedesk</loc>
-    <lastmod>2025-06-30</lastmod>
+    <loc>https://amortree.com/projects/savedesk</loc>
+    <lastmod>2026-04-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://amortree.com/src/assets/img/projects/savedesk-cover.jpg</image:loc>
+      <image:title>SaveDesk - case study cover</image:title>
+    </image:image>
   </url>
+
   <url>
-    <loc>https://amortree.com/project/samsiddhi-designs</loc>
-    <lastmod>2025-06-30</lastmod>
+    <loc>https://amortree.com/projects/samsiddhi-designs</loc>
+    <lastmod>2026-04-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://amortree.com/src/assets/img/projects/samsiddhi-designs-cover.jpg</image:loc>
+      <image:title>Samsiddhi Designs - case study cover</image:title>
+    </image:image>
   </url>
+
   <url>
     <loc>https://amortree.com/privacy</loc>
-    <lastmod>2025-06-30</lastmod>
+    <lastmod>2026-01-10</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
+
   <url>
     <loc>https://amortree.com/terms</loc>
-    <lastmod>2025-06-30</lastmod>
+    <lastmod>2026-01-10</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
+
 </urlset>

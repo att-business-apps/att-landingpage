@@ -270,7 +270,7 @@ function animateHomePage() {
           {
             y: 72,
             autoAlpha: 0,
-            filter: "blur(12px)",
+            filter: "blur(2px)",
           },
           {
             y: 0,
@@ -311,8 +311,8 @@ function animateHomePage() {
             immediateRender: false,
             scrollTrigger: {
               trigger: section,
-              start: "top 82%",
-              end: "bottom 66%",
+              start: "top 72%",
+              end: "bottom 82%",
               scrub: 0.85,
             },
           },
@@ -327,8 +327,8 @@ function animateHomePage() {
         defaults: { ease: "none" },
         scrollTrigger: {
           trigger: solutions,
-          start: "top 82%",
-          end: "bottom 42%",
+          start: "top 72%",
+          end: "bottom 62%",
           scrub: 0.9,
         },
       })
@@ -513,12 +513,25 @@ onBeforeUnmount(() => {
                 <div class="flex justify-center mb-4">
                   <div
                     class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-200 text-blue-900 text-xs font-bold uppercase tracking-wider">
+                    Strategy
                     <span class="relative flex h-2 w-2">
                       <span
                         class="animate-ping absolute d-block justify-center items-center h-full w-full rounded-full bg-blue-400 opacity-75"></span>
                       <span class="relative d-block rounded-full h-2 w-2 bg-blue-600"></span>
                     </span>
-                    Tech-Driven Growth Strategy
+                    Design
+                    <span class="relative flex h-2 w-2">
+                      <span
+                        class="animate-ping absolute d-block justify-center items-center h-full w-full rounded-full bg-blue-400 opacity-75"></span>
+                      <span class="relative d-block rounded-full h-2 w-2 bg-blue-600"></span>
+                    </span>
+                    Development
+                    <span class="relative flex h-2 w-2">
+                      <span
+                        class="animate-ping absolute d-block justify-center items-center h-full w-full rounded-full bg-blue-400 opacity-75"></span>
+                      <span class="relative d-block rounded-full h-2 w-2 bg-blue-600"></span>
+                    </span>
+                    Growth
                   </div>
                 </div>
                 <!-- <h1 class="title d-inline" ref="myElement">
@@ -529,53 +542,45 @@ onBeforeUnmount(() => {
                 </h1> -->
 
                 <h1 class="title hero-title d-inline" ref="myElement">
-                  <span class="hero-title-token">We</span>
-                  <span class="hero-title-token">Build</span>
-                  <span class="hero-title-token hero-title-highlight text-ly">Digital Products</span>
-                  <span class="hero-title-token">That</span>
-                  <span class="hero-title-token">Drive</span>
-                  <span class="hero-title-token hero-title-highlight gradient-text-light">Growth & Conversions</span>
+                  <span class="hero-title-token">Websites That Build Trust.</span>
+                  <span class="hero-title-token hero-title-highlight text-ly">Generate Leads.</span>
+                  <span class="hero-title-token hero-title-highlight gradient-text-light">Drive Growth.</span>
                 </h1>
+                <p class="subtitle w-75 md:w-100 mt-4">
+                 We combine strategy, UX, development, SEO, and AI-ready optimization to create websites that become your highest-performing business asset.
+                </p>
 
                 <h2 class="h5 mt-4 flex items-center justify-center gap-3">
-                  <span class="gradient-text blue-dark">Sleek.</span>
-                  <span class="gradient-text yellow-dark">Stylish.</span>
-                  <span class="gradient-text blue-dark">Classy.</span>
+                  <span class="gradient-text yellow-light">Designed for businesses that are ready to grow—not just go online.</span>
                 </h2>
-                <p class="subtitle w-50 md:w-100 mt-4">
-                  Helping <b class="text-ly">startups</b> and businesses <b class="text-lg">scale</b> with strategic <b
-                    class="text-lb">design</b>, high-performance <b class="text-lr">websites</b>, and scalable tech
-                  solutions.
-                </p>
                 <div class="d-flex justify-content-center gap-3 mt-5">
                   <a class="amor-btn btn-fill-primary btn-large"
-                    href="https://wa.me/917975859061/?text=Get%20my%20free%20GROWTH%20Audit.">Get My Free Growth
-                    Audit</a>
-                  <a href="/case-studies" class="amor-btn btn-borderd light">Case Study</a>
+                    href="https://wa.me/917975859061/?text=I%20need%20to%20Book%20Your%20Free%20Strategy%20Call.">Book Your Free Strategy Call</a>
+                  <a href="/case-studies" class="amor-btn btn-borderd light">Explore Case Studies</a>
                 </div>
                 <div class="mt-16 grid grid-cols-2 md:grid-cols-4 gap-6 opacity-80">
                   <div class="home-metric flex flex-col items-center justify-around">
-                    <span class="text-3xl font-bold text-primary gradient-text blue-light">+140%</span>
-                    <span class="text-xs uppercase tracking-widest text-slate-300">Avg. ROI</span>
+                    <span class="text-3xl font-bold text-primary gradient-text blue-light">30+</span>
+                    <span class="text-xs uppercase tracking-widest text-slate-300">Businesses Empowered</span>
                   </div>
                   <div class="home-metric flex flex-col items-center">
-                    <span class="text-3xl font-bold text-primary gradient-text yellow-light">24/7</span>
-                    <span class="text-xs uppercase tracking-widest text-slate-300">Lead Machine</span>
+                    <span class="text-3xl font-bold text-primary gradient-text yellow-light">20+</span>
+                    <span class="text-xs uppercase tracking-widest text-slate-300">Business Industries</span>
                   </div>
                   <div class="home-metric flex flex-col items-center">
-                    <span class="text-3xl font-bold text-primary gradient-text green-light">12ms</span>
-                    <span class="text-xs uppercase tracking-widest text-slate-300">Fast Performance</span>
+                    <span class="text-3xl font-bold text-primary gradient-text green-light">98%</span>
+                    <span class="text-xs uppercase tracking-widest text-slate-300">Client Satisfaction</span>
                   </div>
                   <div class="home-metric flex flex-col items-center">
-                    <span class="text-3xl font-bold text-primary gradient-text text-lr">Zero</span>
-                    <span class="text-xs uppercase tracking-widest text-slate-300">Wasted Ad Spend</span>
+                    <span class="text-3xl font-bold text-primary gradient-text text-lr">100%</span>
+                    <span class="text-xs uppercase tracking-widest text-slate-300">Custom Designed</span>
                   </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-        <div class="row align-items-end align-items-xl-end">
+        <div class="d-none row align-items-end align-items-xl-end">
           <div class="amorboy animate__animated animate__slideInDown" style="animation-duration: 8s">
             <img src="../assets/img/amorboy/am-fly-1.png" alt="" />
             <img src="../assets/img/amorboy/am-doing.png" alt="" />

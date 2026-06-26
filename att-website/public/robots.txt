@@ -18,3 +18,62 @@ Allow: /projects/
 
 # Crawl-delay for respectful crawling
 Crawl-delay: 1
+
+Disallow: /admin/
+Disallow: /private/
+
+# Search engine crawlers (explicit allow, no restrictions)
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+# AI / Answer Engine crawlers - explicitly allowed for AEO visibility
+# (Most platforms default to allow, but CDNs like Cloudflare can silently
+# block these at the edge even when robots.txt allows them - verify in
+# your hosting/CDN bot-management settings too)
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-User
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Perplexity-User
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+User-agent: Applebot
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+User-agent: Bytespider
+Allow: /
+
+User-agent: meta-externalagent
+Allow: /
+
+# Sitemap
+Sitemap: https://amortree.com/sitemap.xml
