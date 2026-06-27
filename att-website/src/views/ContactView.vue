@@ -79,12 +79,13 @@ function getTemplate(target) {
         </ul>
         <div class="section-heading heading-left">
           <h1 class="title h2 mb-0">
-            Professional Web Development & IT Services Contact
+            Start Your Next Growth Project With Confidence.
           </h1>
           <p>
-            Leading web development company ready to help with all your custom
-            website design, UI/UX services, mobile app UI/UX Design, and DevOps
-            consulting needs.
+            We help startups and growing businesses create strategic 
+            websites, exceptional digital experiences, and scalable 
+            solutions that build trust, generate qualified leads, and 
+            accelerate long-term growth.
           </p>
         </div>
       </div>
@@ -191,7 +192,7 @@ function getTemplate(target) {
                   name="submit-btn"
                   :disabled="disableBtn"
                 >
-                  Get My Free Audit
+                  Start Your Growth Journey
                 </button>
               </div>
               <div class="form-group"></div>

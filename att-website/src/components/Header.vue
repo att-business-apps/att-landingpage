@@ -30,7 +30,7 @@
           <div class="header-action">
             <a
               class="amor-btn btn-borderd light uppercase text-xs font-bold tracking-widest sm:p-0"
-              href="https://wa.me/917975859061/?text=Get%20my%20free%20GROWTH%20Audit."
+              href="https://wa.me/917975859061?text=Hi%20Amortree%20Team,%20I'd%20like%20to%20claim%20my%20FREE%20Website%20Growth%20Audit.%20Please%20review%20my%20website%20and%20share%20actionable%20recommendations%20to%20improve%20its%20performance,%20SEO,%20and%20lead%20generation."
               >Claim Audit</a
             >
           </div>

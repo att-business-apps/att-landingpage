@@ -536,7 +536,7 @@ onBeforeUnmount(() => {
                 </h2>
                 <div class="d-flex justify-content-center gap-3 mt-5">
                   <a class="amor-btn btn-fill-primary btn-large"
-                    href="https://wa.me/917975859061/?text=I%20need%20to%20Book%20Your%20Free%20Strategy%20Call.">Book Your Free Strategy Call</a>
+                    href="/Contact">Book Your Free Strategy Call</a>
                   <a href="/case-studies" class="amor-btn btn-borderd light">Explore Case Studies</a>
                 </div>
                 <div class="mt-16 grid grid-cols-2 md:grid-cols-4 gap-6 opacity-80">
@@ -765,7 +765,7 @@ onBeforeUnmount(() => {
         </div>
         <div class="d-flex justify-content-center gap-3 mt-5">
           <a class="amor-btn btn-fill-primary btn-large"
-            href="https://wa.me/917975859061/?text=I%27d%20like%20to%20book%20a%20free%20strategy%20call.">Book Your Free Strategy Call</a>
+            href="/Contact">Book Your Free Strategy Call</a>
         </div>
       </div>
     </section>
@@ -1255,7 +1255,7 @@ onBeforeUnmount(() => {
         </p>
         <div class="d-flex justify-content-center gap-3 flex-wrap">
           <a class="amor-btn btn-fill-primary btn-large"
-            href="https://wa.me/917975859061/?text=I%27d%20like%20to%20book%20a%20free%20strategy%20call.">Book Your Free Strategy Call</a>
+            href="/Contact">Book Your Free Strategy Call</a>
           <a href="/estimate" class="amor-btn btn-borderd light">Get a Project Estimate</a>
         </div>
         <p class="mt-5 text-center text-slate-500 text-xs mb-0">

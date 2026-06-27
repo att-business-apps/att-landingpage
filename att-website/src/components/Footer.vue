@@ -12,7 +12,7 @@
           <!-- <a class="amor-btn btn-large btn-fill-white" href="estimate">Estimate Project</a> -->
           <a
             class="amor-btn btn-large btn-fill-white"
-            href="https://wa.me/917975859061/?text=I'm%20inquiring%20about%20the%20website%20service."
+            href="https://wa.me/917975859061?text=Hi%20Amortree%20Team,%20I'm%20interested%20in%20building%20a%20website%20for%20my%20business.%20I'd%20like%20to%20book%20a%20free%20strategy%20call."
             >Get Started Today</a
           >
         </div>
