@@ -504,19 +504,16 @@ onBeforeUnmount(() => {
                   <div
                     class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-200 text-blue-900 text-xs font-bold uppercase tracking-wider">
                     Strategy
-                    <span class="relative flex h-2 w-2">
+                    <span class="relative flex h-1 w-1">
                       <span class="animate-ping absolute d-block justify-center items-center h-full w-full rounded-full bg-blue-400 opacity-75"></span>
-                      <span class="relative d-block rounded-full h-2 w-2 bg-blue-600"></span>
                     </span>
                     Design
-                    <span class="relative flex h-2 w-2">
+                    <span class="relative flex h-1 w-1">
                       <span class="animate-ping absolute d-block justify-center items-center h-full w-full rounded-full bg-blue-400 opacity-75"></span>
-                      <span class="relative d-block rounded-full h-2 w-2 bg-blue-600"></span>
                     </span>
                     Development
-                    <span class="relative flex h-2 w-2">
+                    <span class="relative flex h-1 w-1">
                       <span class="animate-ping absolute d-block justify-center items-center h-full w-full rounded-full bg-blue-400 opacity-75"></span>
-                      <span class="relative d-block rounded-full h-2 w-2 bg-blue-600"></span>
                     </span>
                     Growth
                   </div>
