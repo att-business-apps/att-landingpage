@@ -527,13 +527,12 @@ onBeforeUnmount(() => {
                   <span class="hero-title-token hero-title-highlight text-ly">Generate Leads.</span>
                   <span class="hero-title-token hero-title-highlight gradient-text-light">Drive Growth.</span>
                 </h1>
+                <h2 class="h4 mt-4 flex items-center justify-center gap-3">
+                  <span class="gradient-text yellow-light">Designed for businesses that are ready to grow—not just go online.</span>
+                </h2>
                 <p class="subtitle w-75 md:w-100 mt-4">
                   We combine strategy, UX, development, SEO, and AI-ready optimization to create websites that become your highest-performing business asset.
                 </p>
-
-                <h2 class="h5 mt-4 flex items-center justify-center gap-3">
-                  <span class="gradient-text yellow-light">Designed for businesses that are ready to grow—not just go online.</span>
-                </h2>
                 <div class="d-flex justify-content-center gap-3 mt-5">
                   <a class="amor-btn btn-fill-primary btn-large"
                     href="/Contact">Book Your Free Strategy Call</a>
