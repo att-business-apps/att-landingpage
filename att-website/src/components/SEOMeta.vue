@@ -10,13 +10,13 @@
         <meta property="og:url" :content="pageUrl" />
         <meta property="og:title" :content="pageTitle" />
         <meta property="og:description" :content="pageDescription" />
-        <meta property="og:image" content="../assets/img/og-image.jpg" />
+        <meta property="og:image" content="https://demo.amortree.com/assets/img/og-image.png" />
 
         <!-- Twitter Card -->
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" :content="pageTitle" />
         <meta name="twitter:description" :content="pageDescription" />
-        <meta name="twitter:image" content="../assets/img/og-image.jpg" />
+        <meta name="twitter:image" content="https://demo.amortree.com/assets/img/og-image.png" />
 
         <!-- Additional SEO Meta -->
         <meta name="robots" content="index, follow" />
