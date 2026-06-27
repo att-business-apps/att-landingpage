@@ -13,6 +13,158 @@ const message = ref("");
 const homePage = ref(null);
 let gsapContext;
 let pointerCleanup;
+let structuredDataScript;
+
+// ---------------------------------------------------------------
+// Structured data: Organization, Services, Reviews, and FAQPage.
+// Injected as a single JSON-LD <script> tag so search engines and
+// AI answer engines can read Amortree's offerings, client reviews,
+// and FAQ content as machine-readable facts, not just prose.
+// Built only from content that's actually live on this page.
+// ---------------------------------------------------------------
+function injectStructuredData() {
+  const siteUrl = "https://amortree.com";
+
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": `${siteUrl}/#organization`,
+        name: "Amortree Tech",
+        url: siteUrl,
+        logo: `${siteUrl}/favicon.ico`,
+        description:
+          "Amortree Tech is a digital growth agency in Bengaluru helping startups and growing businesses build strategic websites, UI/UX, and digital experiences that generate leads and accelerate growth.",
+        address: {
+          "@type": "PostalAddress",
+          addressLocality: "Bengaluru",
+          addressRegion: "Karnataka",
+          addressCountry: "IN",
+        },
+        sameAs: [
+          "https://linkedin.com/company/amortree-tech",
+          "https://twitter.com/amortreetech",
+          "https://facebook.com/amortreetech",
+          "https://instagram.com/amortreetech",
+        ],
+      },
+      {
+        "@type": "Service",
+        "@id": `${siteUrl}/#service-leadgen`,
+        name: "Lead Generation Systems",
+        provider: { "@id": `${siteUrl}/#organization` },
+        description:
+          "Conversion-focused landing pages, paid campaign structure, and CRM integration built for B2B and service businesses that need a website to qualify leads, not just introduce the brand.",
+        url: `${siteUrl}/lead-generation-systems`,
+      },
+      {
+        "@type": "Service",
+        "@id": `${siteUrl}/#service-ecommerce`,
+        name: "E-commerce Growth",
+        provider: { "@id": `${siteUrl}/#organization` },
+        description:
+          "Checkout and product page optimization, performance creative, and retention flows for Shopify and custom stores where the storefront is the limiting factor on revenue.",
+      },
+      {
+        "@type": "Service",
+        "@id": `${siteUrl}/#service-startup`,
+        name: "Startup Launch Foundations",
+        provider: { "@id": `${siteUrl}/#organization` },
+        description:
+          "Rapid product UI/UX prototyping, investor-ready pitch platforms, and a modern, scalable tech stack for founders launching a new product or business.",
+      },
+      {
+        "@type": "Review",
+        itemReviewed: { "@id": `${siteUrl}/#organization` },
+        author: { "@type": "Person", name: "Menaka Krishna" },
+        reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5" },
+        reviewBody:
+          "Amortree is a very professional and end-to-end service provider. They have good understanding of the clients needs and work in a timely and efficient manner.",
+      },
+      {
+        "@type": "Review",
+        itemReviewed: { "@id": `${siteUrl}/#organization` },
+        author: { "@type": "Person", name: "Sandeep L" },
+        reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5" },
+        reviewBody:
+          "Outstanding work completed on time and to a high standard, reflecting real dedication and expertise.",
+      },
+      {
+        "@type": "Review",
+        itemReviewed: { "@id": `${siteUrl}/#organization` },
+        author: { "@type": "Person", name: "Bharathkumar MS" },
+        reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5" },
+        reviewBody:
+          "Amortree Tech is a pleasure to work with. They're responsive, professional, and always willing to go the extra mile.",
+      },
+      {
+        "@type": "Review",
+        itemReviewed: { "@id": `${siteUrl}/#organization` },
+        author: { "@type": "Person", name: "Suresh Babu" },
+        reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5" },
+        reviewBody:
+          "Good understanding of our needs from the start. A genuinely professional service provider, and a job well done.",
+      },
+      {
+        "@type": "FAQPage",
+        "@id": `${siteUrl}/#faq`,
+        mainEntity: [
+          {
+            "@type": "Question",
+            name: "How much does a website cost at Amortree?",
+            acceptedAnswer: {
+              "@type": "Answer",
+              text:
+                "Most engagements fall between \u20b950,000 and \u20b95,00,000, depending on scope, from a focused conversion-first landing page to a full lead-generation system with CRM integration. Exact pricing is scoped after a strategy call.",
+            },
+          },
+          {
+            "@type": "Question",
+            name: "How long does a project take?",
+            acceptedAnswer: {
+              "@type": "Answer",
+              text:
+                "Most projects run 4 to 10 weeks from strategy to launch, depending on scope: 1 to 2 weeks for audit and strategy, 2 to 6 weeks for design and build, then ongoing optimization after launch.",
+            },
+          },
+          {
+            "@type": "Question",
+            name: "Do you only build websites, or do you handle marketing too?",
+            acceptedAnswer: {
+              "@type": "Answer",
+              text:
+                "Amortree works across strategy, UX, development, SEO, and paid acquisition, because a website's performance depends on all of them working together, not just the design.",
+            },
+          },
+          {
+            "@type": "Question",
+            name: "What industries does Amortree work with?",
+            acceptedAnswer: {
+              "@type": "Answer",
+              text:
+                "Amortree works primarily with real estate and professional service firms, SaaS and startup founders, and manufacturing and healthcare businesses.",
+            },
+          },
+          {
+            "@type": "Question",
+            name: "What happens after I book a strategy call with Amortree?",
+            acceptedAnswer: {
+              "@type": "Answer",
+              text:
+                "Amortree reviews the prospective client's current site and metrics before the call, so the conversation starts with specific observations about the business rather than a generic sales pitch.",
+            },
+          },
+        ],
+      },
+    ],
+  };
+
+  structuredDataScript = document.createElement("script");
+  structuredDataScript.type = "application/ld+json";
+  structuredDataScript.text = JSON.stringify(structuredData);
+  document.head.appendChild(structuredDataScript);
+}
 
 function sendMail() {
   var params = {
@@ -81,415 +233,164 @@ function animateHomePage() {
   gsapContext = gsap.context(() => {
     const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
+    // All animatable elements across the page, reset to a clean default so
+    // a reduced-motion visitor (or a failed animation) never sees broken layout.
+    const allMotionTargets = [
+      ".home-motion-section",
+      ".motion-card",
+      ".motion-text",
+      ".home-banner .title",
+      ".home-banner .subtitle",
+      ".banner-form",
+      ".step-arrow",
+      "#results .group",
+      "#results img",
+      "#reviews .glass-card",
+    ];
+
     if (prefersReducedMotion) {
-      gsap.set(
-        [
-          ".home-motion-section",
-          ".motion-card",
-          ".motion-text",
-          ".home-banner .title",
-          ".home-banner .subtitle",
-          ".banner-form",
-          ".step-arrow",
-          "#results .group",
-          "#results img",
-          "#reviews .glass-card",
-        ],
-        { clearProps: "all" },
-      );
+      gsap.set(allMotionTargets, { clearProps: "all" });
       return;
     }
 
-    const heroTimeline = gsap.timeline({
-      defaults: { ease: "power3.out" },
-      scrollTrigger: {
-        trigger: ".banner-style-1",
-        start: "top top",
-        end: "bottom top",
-        scrub: 0.8,
-      },
-    });
-
+    // ---------------------------------------------------------------
+    // Hero: a single, orchestrated entrance. No scroll-scrubbed motion
+    // here — the hero's job is to land cleanly and let the content read.
+    // ---------------------------------------------------------------
     gsap.timeline({ defaults: { ease: "power3.out" } })
       .from(".home-banner .inline-flex", {
-        y: 18,
+        y: 16,
         autoAlpha: 0,
-        duration: 0.75,
+        duration: 0.6,
       })
       .fromTo(
-        ".hero-title",
+        ".hero-title-token",
+        { y: 28, autoAlpha: 0 },
         {
-          opacity: 0,
-          scale: 0.98,
-        },
-        {
-          opacity: 1,
-          scale: 1,
-          duration: 0.2,
+          y: 0,
+          autoAlpha: 1,
+          duration: 0.7,
+          stagger: 0.08,
           immediateRender: false,
         },
         "-=0.2",
       )
-      .fromTo(
-        ".hero-title-token",
-        {
-          y: 70,
-          opacity: 0,
-          filter: "blur(16px)",
-          rotateZ: -3,
-        },
-        {
-          y: 0,
-          opacity: 1,
-          filter: "blur(0px)",
-          rotateZ: 0,
-          duration: 0.74,
-          stagger: 0.07,
-          ease: "power3.out",
-          immediateRender: false,
-        },
-        "-=0.1",
-      )
-      .to(
-        ".hero-title-highlight",
-        {
-          backgroundPosition: "100% 50%",
-          textShadow: "0 0 28px rgba(255, 214, 10, 0.32)",
-          scale: 1.035,
-          duration: 0.58,
-          stagger: 0.14,
-          yoyo: true,
-          repeat: 1,
-          ease: "power2.out",
-        },
-        "-=0.18",
-      )
       .from(".home-banner .h5 span", {
-        y: 18,
+        y: 14,
         autoAlpha: 0,
-        stagger: 0.08,
-        duration: 0.6,
-      }, "-=0.55")
-      .from(".home-banner .subtitle", {
-        y: 22,
-        autoAlpha: 0,
-        duration: 0.7,
-      }, "-=0.45")
-      .from(".home-banner .amor-btn", {
-        y: 18,
-        autoAlpha: 0,
-        stagger: 0.08,
-        duration: 0.55,
+        stagger: 0.06,
+        duration: 0.5,
       }, "-=0.35")
-      .from(".home-metric", {
-        y: 24,
+      .from(".home-banner .subtitle", {
+        y: 16,
         autoAlpha: 0,
-        stagger: 0.08,
-        duration: 0.62,
+        duration: 0.6,
+      }, "-=0.3")
+      .from(".home-banner .amor-btn", {
+        y: 14,
+        autoAlpha: 0,
+        stagger: 0.06,
+        duration: 0.5,
       }, "-=0.25")
+      .from(".home-metric", {
+        y: 16,
+        autoAlpha: 0,
+        stagger: 0.05,
+        duration: 0.5,
+      }, "-=0.2")
       .fromTo(
         ".banner-form",
-        {
-          y: 46,
-          opacity: 0,
-          scale: 0.96,
-        },
+        { y: 28, autoAlpha: 0 },
         {
           y: 0,
-          opacity: 1,
-          scale: 1,
-          duration: 0.9,
+          autoAlpha: 1,
+          duration: 0.7,
           immediateRender: false,
           clearProps: "opacity,visibility",
         },
-        "-=0.5",
+        "-=0.35",
       );
 
-    heroTimeline
-      .to(".home-banner", { yPercent: -18, autoAlpha: 0.66, scale: 0.97 }, 0)
-      .to(".banner-form", { yPercent: -12, rotateX: 4, autoAlpha: 0.86 }, 0)
-      .to(".home-metric", {
-        yPercent: (index) => -20 - index * 7,
-        xPercent: (index) => (index % 2 ? 8 : -8),
-        autoAlpha: 0.72,
-        stagger: 0.03,
-      }, 0)
-      .to(".amorboy img:first-child", { yPercent: -34, xPercent: -7, rotate: -9, scale: 1.08 }, 0)
-      .to(".amorboy img:last-child", { yPercent: -24, xPercent: 7, rotate: 7, scale: 1.04 }, 0)
-      .to(".shape-group-banner .shape", {
-        yPercent: (index) => (index % 2 ? -46 : -28),
-        xPercent: (index) => (index % 3 ? 18 : -14),
-        rotate: (index) => (index % 2 ? 20 : -18),
-        stagger: 0.03,
-      }, 0);
+    // A restrained drift on the background shapes only — the one ambient
+    // touch left in the hero. Foreground content stays put on scroll.
+    gsap.to(".shape-group-banner .shape", {
+      yPercent: -12,
+      ease: "none",
+      scrollTrigger: {
+        trigger: ".banner-style-1",
+        start: "top top",
+        end: "bottom top",
+        scrub: 0.6,
+      },
+    });
 
-    const hero = homePage.value.querySelector(".banner-style-1");
-    const tiltItems = homePage.value.querySelectorAll(".hero-title, .banner-form, .amorboy img");
-    if (hero && tiltItems.length) {
-      const tiltX = gsap.quickTo(tiltItems, "rotationY", { duration: 0.55, ease: "power3.out" });
-      const tiltY = gsap.quickTo(tiltItems, "rotationX", { duration: 0.55, ease: "power3.out" });
-      const parallaxX = gsap.quickTo(".shape-group-banner .shape", "x", { duration: 0.7, ease: "power3.out" });
-      const parallaxY = gsap.quickTo(".shape-group-banner .shape", "y", { duration: 0.7, ease: "power3.out" });
-      const handlePointerMove = (event) => {
-        const bounds = hero.getBoundingClientRect();
-        const x = (event.clientX - bounds.left) / bounds.width - 0.5;
-        const y = (event.clientY - bounds.top) / bounds.height - 0.5;
-        tiltX(x * 7);
-        tiltY(y * -5);
-        parallaxX(x * 22);
-        parallaxY(y * 18);
-      };
-      const handlePointerLeave = () => {
-        tiltX(0);
-        tiltY(0);
-        parallaxX(0);
-        parallaxY(0);
-      };
-      hero.addEventListener("pointermove", handlePointerMove);
-      hero.addEventListener("pointerleave", handlePointerLeave);
-      pointerCleanup = () => {
-        hero.removeEventListener("pointermove", handlePointerMove);
-        hero.removeEventListener("pointerleave", handlePointerLeave);
-      };
-    }
-
+    // ---------------------------------------------------------------
+    // Section reveals: one calm fade + rise per heading/card group,
+    // played once on entry. No scrub, no rotation, no blur stacking.
+    // ---------------------------------------------------------------
     const pageSections = [
       ...homePage.value.querySelectorAll(":scope > section:not(.d-none)"),
     ];
 
     pageSections.forEach((section) => {
       const headingItems = section.querySelectorAll("h2, h3, .section-heading, .motion-text");
-      const cardSelector = section.id === "solutions"
-        ? ".review-card, .services-grid, .why > div"
-        : ".motion-card, .review-card, .services-grid, .why > div";
-      const cards = section.querySelectorAll(cardSelector);
+      const cards = section.querySelectorAll(".motion-card, .review-card, .glass-card, .step-arrow, .project-grid, .why > div");
 
       if (headingItems.length) {
-        gsap.fromTo(
-          headingItems,
-          {
-            y: 72,
-            autoAlpha: 0,
-            filter: "blur(2px)",
+        gsap.from(headingItems, {
+          y: 28,
+          autoAlpha: 0,
+          duration: 0.7,
+          stagger: 0.08,
+          ease: "power2.out",
+          immediateRender: false,
+          scrollTrigger: {
+            trigger: section,
+            start: "top 80%",
+            toggleActions: "play none none none",
+            once: true,
           },
-          {
-            y: 0,
-            autoAlpha: 1,
-            filter: "blur(0px)",
-            stagger: 0.1,
-            ease: "none",
-            immediateRender: false,
-            scrollTrigger: {
-              trigger: section,
-              start: "top 88%",
-              end: "center 56%",
-              scrub: 0.75,
-            },
-          },
-        );
+        });
       }
 
       if (cards.length) {
-        gsap.fromTo(
-          cards,
-          {
-            y: 96,
-            autoAlpha: 0.2,
-            scale: 0.9,
-            rotateX: 11,
-            rotateZ: (index) => (index % 2 ? 1.8 : -1.8),
+        gsap.from(cards, {
+          y: 32,
+          autoAlpha: 0,
+          duration: 0.7,
+          stagger: 0.08,
+          ease: "power2.out",
+          immediateRender: false,
+          scrollTrigger: {
+            trigger: section,
+            start: "top 75%",
+            toggleActions: "play none none none",
+            once: true,
           },
-          {
-            y: 0,
-            autoAlpha: 1,
-            scale: 1,
-            rotateX: 0,
-            rotateZ: 0,
-            transformOrigin: "center bottom",
-            stagger: 0.1,
-            ease: "none",
-            immediateRender: false,
-            scrollTrigger: {
-              trigger: section,
-              start: "top 72%",
-              end: "bottom 82%",
-              scrub: 0.85,
-            },
-          },
-        );
+        });
       }
     });
 
-    const solutions = homePage.value.querySelector("#solutions");
-    if (solutions) {
-      const solutionCards = solutions.querySelectorAll(".motion-card");
-      gsap.timeline({
-        defaults: { ease: "none" },
-        scrollTrigger: {
-          trigger: solutions,
-          start: "top 72%",
-          end: "bottom 62%",
-          scrub: 0.9,
-        },
-      })
-        .fromTo(solutionCards, {
-          yPercent: (index) => 22 + index * 8,
-          scale: 0.92,
-          rotateY: (index) => (index - 1) * 7,
-          autoAlpha: 0.32,
-        }, {
-          yPercent: 0,
-          scale: 1,
-          rotateY: 0,
-          autoAlpha: 1,
-          stagger: 0.18,
-        }, 0)
-        .to(solutionCards, {
-          yPercent: (index) => (index - 1) * -4,
-          rotateZ: (index) => (index - 1) * 0.8,
-          stagger: 0.08,
-        }, 0.58);
-    }
-
-    const results = homePage.value.querySelector("#results");
-    if (results) {
-      gsap.fromTo(
-        "#results .group",
-        { xPercent: -10, autoAlpha: 0.28 },
-        {
-          xPercent: 0,
-          autoAlpha: 1,
-          stagger: 0.18,
-          ease: "none",
-          scrollTrigger: {
-            trigger: results,
-            start: "top 82%",
-            end: "center 45%",
-            scrub: 0.8,
-          },
-        },
-      );
-
-      gsap.to("#results img", {
-        yPercent: -12,
-        scale: 1.08,
-        ease: "none",
-        scrollTrigger: {
-          trigger: results,
-          start: "top bottom",
-          end: "bottom top",
-          scrub: 0.85,
-        },
-      });
-    }
-
-    gsap.utils.toArray(".process-step, .step-arrow").forEach((step, index) => {
-      gsap.fromTo(
-        step,
-        {
-          xPercent: index % 2 ? 8 : -8,
-          y: 46,
-          rotateX: 12,
-          autoAlpha: 0.18,
-        },
-        {
-          xPercent: 0,
-          y: 0,
-          rotateX: 0,
-          autoAlpha: 1,
-          ease: "none",
-          immediateRender: false,
-          scrollTrigger: {
-            trigger: step,
-            start: "top 92%",
-            end: "center 62%",
-            scrub: 0.7,
-          },
-        },
-      );
-    });
-
-    gsap.utils.toArray(".home-parallax").forEach((item) => {
-      gsap.to(item, {
-        yPercent: -14,
-        ease: "none",
-        scrollTrigger: {
-          trigger: item,
-          start: "top bottom",
-          end: "bottom top",
-          scrub: 0.9,
-        },
-      });
-    });
-
-    gsap.utils.toArray(".project-grid").forEach((project, index) => {
-      gsap.fromTo(project, {
-        yPercent: 18,
-        autoAlpha: 0.3,
-        scale: 0.96,
-      }, {
-        yPercent: index % 2 ? -7 : -3,
-        autoAlpha: 1,
-        scale: 1,
-        ease: "none",
-        scrollTrigger: {
-          trigger: project,
-          start: "top 90%",
-          end: "center 58%",
-          scrub: 0.75,
-        },
-      });
-    });
-
-    gsap.fromTo(
-      "#reviews .glass-card",
-      {
-        y: 88,
-        scale: 0.88,
-        rotateX: 16,
-        autoAlpha: 0.16,
-      },
-      {
-        y: 0,
-        scale: 1,
-        rotateX: 0,
-        autoAlpha: 1,
-        stagger: 0.12,
-        ease: "none",
-        scrollTrigger: {
-          trigger: "#reviews",
-          start: "top 82%",
-          end: "bottom 62%",
-          scrub: 0.8,
-        },
-      },
-    );
-
-    gsap.utils.toArray(".motion-card, .review-card, .services-grid, .space-y-4 > div")
-      .filter((card) => !card.closest("#solutions"))
+    // ---------------------------------------------------------------
+    // Quiet hover lift for cards — the only motion that lives outside
+    // scroll. Single property, fast, no shadow re-paints on every frame.
+    // ---------------------------------------------------------------
+    gsap.utils.toArray(".motion-card, .review-card, .glass-card, .project-grid")
       .forEach((card) => {
-      card.addEventListener("mouseenter", () => {
-        gsap.to(card, {
-          boxShadow: "0 28px 70px rgba(10, 16, 30, 0.22)",
-          duration: 0.32,
-          ease: "power2.out",
+        card.addEventListener("mouseenter", () => {
+          gsap.to(card, { y: -4, duration: 0.25, ease: "power2.out" });
+        });
+        card.addEventListener("mouseleave", () => {
+          gsap.to(card, { y: 0, duration: 0.3, ease: "power2.out" });
         });
       });
-
-      card.addEventListener("mouseleave", () => {
-        gsap.to(card, {
-          boxShadow: "0 10px 28px rgba(10, 16, 30, 0.08)",
-          duration: 0.42,
-          ease: "power2.out",
-        });
-      });
-    });
 
     ScrollTrigger.refresh();
   }, homePage.value);
 }
 
 onMounted(async () => {
+  injectStructuredData();
   await nextTick();
   animateHomePage();
 });
@@ -497,6 +398,7 @@ onMounted(async () => {
 onBeforeUnmount(() => {
   pointerCleanup?.();
   gsapContext?.revert();
+  structuredDataScript?.remove();
 });
 
 // New Year
@@ -693,108 +595,113 @@ onBeforeUnmount(() => {
           <div>
             <div
               class="inline-block py-2 px-4 rounded bg-dark text-brand-700 text-[10px] font-black uppercase tracking-[0.3em] mb-2">
-              <span class="text-ly">Market Focus</span></div>
+              <span class="text-ly">Who We Work With</span></div>
             <h2 class=" font-bold text-navy text-ly mb-0" style="font-weight: 600">
-              Built for Scalable Ventures
+              Built for Businesses Ready to Scale
             </h2>
           </div>
           <p class="motion-text text-slate-800 max-w-sm mb-0">
-            We specialize in three core verticals where our growth frameworks
-            deliver the highest impact.
+            We take on a limited number of engagements each quarter so every
+            client gets a strategist, not a queue.
           </p>
         </div>
         <div class="grid md:grid-cols-3 gap-6">
           <div
-            class="motion-card bg-dark p-10 rounded-2xl text-center hover:shadow-xl transition-shadow hover:scale-[1.04] transition-all">
+            class="motion-card bg-dark p-10 rounded-2xl text-center hover:shadow-xl transition-shadow hover:scale-[1.02] transition-all">
             <div class="w-16 h-16 bg-blue-300 text-blue-600 rounded-full flex items-center justify-center mx-auto mb-6">
-              <span class="material-symbols-outlined text-3xl">storefront</span>
+              <span class="material-symbols-outlined text-3xl">apartment</span>
             </div>
-            <h4 class="font-medium mb-3 d-block text-lg" style="font-weight: 500;">Local Services</h4>
+            <h4 class="font-medium mb-3 d-block text-lg" style="font-weight: 500;">Real Estate &amp; Professional Services</h4>
             <p class="text-slate-300">
-              Plumbers, HVAC, Lawyers, and local clinics looking for local
-              dominance.
+              Firms where trust is decided before the first call — and the
+              website is doing that work, or isn't.
             </p>
           </div>
           <div
-            class="motion-card bg-dark p-10 rounded-2xl text-center hover:shadow-xl transition-shadow hover:scale-[1.06] transition-all">
+            class="motion-card bg-dark p-10 rounded-2xl text-center hover:shadow-xl transition-shadow hover:scale-[1.02] transition-all">
             <div
               class="w-16 h-16 bg-indigo-300 text-indigo-600 rounded-full flex items-center justify-center mx-auto mb-6">
-              <span class="material-symbols-outlined text-3xl">shopping_cart</span>
+              <span class="material-symbols-outlined text-3xl">monitoring</span>
             </div>
-            <h4 class="font-medium mb-3 d-block medium text-lb" style="font-weight: 500;">E-Commerce Brands</h4>
+            <h4 class="font-medium mb-3 d-block medium text-lb" style="font-weight: 500;">SaaS &amp; Startups</h4>
             <p class="text-slate-300">
-              Shopify &amp; WooCommerce stores looking to scale their monthly
-              revenue.
+              Founders who need a site that holds up in front of investors,
+              not just visitors.
             </p>
           </div>
           <div
-            class="motion-card bg-dark p-10 rounded-2xl text-center hover:shadow-xl transition-shadow hover:scale-[1.04] transition-all">
+            class="motion-card bg-dark p-10 rounded-2xl text-center hover:shadow-xl transition-shadow hover:scale-[1.02] transition-all">
             <div
               class="w-16 h-16 bg-purple-300 text-purple-600 rounded-full flex items-center justify-center mx-auto mb-6">
-              <span class="material-symbols-outlined text-3xl">rocket_launch</span>
+              <span class="material-symbols-outlined text-3xl">precision_manufacturing</span>
             </div>
-            <h4 class="font-medium mb-3 d-block medium text-lr" style="font-weight: 500;">Startups &amp; SaaS</h4>
+            <h4 class="font-medium mb-3 d-block medium text-lr" style="font-weight: 500;">Manufacturing &amp; Healthcare</h4>
             <p class="text-slate-300">
-              Tech startups needing professional UI/UX and growth marketing.
+              Established operators whose digital presence still undersells
+              what the business actually delivers.
             </p>
           </div>
         </div>
-        <p class="text-center mt-5 text-slate-400 italic text-sm">
-          – Not for one-time, low-budget projects –
-        </p>
       </div>
     </section>
 
     <section class="home-motion-section pb-24 px-4 bg-white">
       <div
-        class="motion-card max-w-6xl mx-auto rounded-3xl p-20 border border-secondary shadow-sm relative overflow-hidden hover:scale-[1.08] transition-all">
-        <div class="home-parallax absolute top-0 right-0 p-8 opacity-10">
-          <span class="material-icons-outlined text-ly" style="font-size: 16rem">report_problem</span>
+        class="motion-card max-w-6xl mx-auto rounded-3xl p-20 border border-secondary shadow-sm relative overflow-hidden hover:scale-[1.02] transition-all">
+        <div class="home-parallax absolute top-0 right-0 p-8 opacity-[0.06]">
+          <span class="material-icons-outlined text-ly" style="font-size: 16rem">insights</span>
         </div>
         <div class="relative">
           <h2 class="text-2xl font-medium mb-5 flex items-center gap-3" style="font-weight: 600">
             <span class="p-2 w-10 h-10 d-flex relative bg-amber-100 rounded-lg">
-              <span class="material-icons-outlined text-center text-lr">warning</span>
+              <span class="material-icons-outlined text-center text-lr">fact_check</span>
             </span>
             <span class="text-dark">
-              Common <span class="text-lr">Problems</span> We
-              <span class="text-lr">Solve</span>
+              What We Usually <span class="text-lr">Find First</span>
             </span>
           </h2>
+          <p class="text-slate-600 mb-8 max-w-2xl">
+            Before we propose anything, we look for where the business is
+            already losing ground. These four patterns show up most often.
+          </p>
           <div class="grid md:grid-cols-2 gap-y-6 gap-x-12">
             <div class="motion-card flex items-start gap-4">
-              <span class="material-icons-outlined text-lr">cancel</span>
+              <span class="material-icons-outlined text-lr">trending_down</span>
               <div>
-                <p class="font-bold text-slate-900 mb-0">Website Not Converting</p>
+                <p class="font-bold text-slate-900 mb-0">Traffic Without Action</p>
                 <p class="text-sm text-slate-600 mb-2">
-                  Traffic visits but never takes action.
+                  Visitors arrive, but the site gives them no reason to take
+                  the next step.
                 </p>
               </div>
             </div>
             <div class="motion-card flex items-start gap-4">
-              <span class="material-icons-outlined text-lr">cancel</span>
+              <span class="material-icons-outlined text-lr">payments</span>
               <div>
-                <p class="font-bold text-slate-900 mb-0">Ads Not Working</p>
+                <p class="font-bold text-slate-900 mb-0">Spend Outpacing Return</p>
                 <p class="text-sm text-slate-600 mb-2">
-                  Spending money on clicks with zero ROI.
+                  Ad budgets are doing their job; the landing experience
+                  isn't doing its.
                 </p>
               </div>
             </div>
             <div class="motion-card flex items-start gap-4">
-              <span class="material-icons-outlined text-lr">cancel</span>
+              <span class="material-icons-outlined text-lr">visibility</span>
               <div>
-                <p class="font-bold text-slate-900 mb-0">High Traffic, Low Sales</p>
+                <p class="font-bold text-slate-900 mb-0">Visibility Without Revenue</p>
                 <p class="text-sm text-slate-600 mb-2">
-                  You have eyes on you, but no revenue growth.
+                  Attention is growing faster than the systems built to
+                  capture it.
                 </p>
               </div>
             </div>
             <div class="motion-card flex items-start gap-4">
-              <span class="material-icons-outlined text-lr">cancel</span>
+              <span class="material-icons-outlined text-lr">explore_off</span>
               <div>
-                <p class="font-bold text-slate-900 mb-0">No Clear Strategy</p>
+                <p class="font-bold text-slate-900 mb-0">No Single Source of Strategy</p>
                 <p class="text-sm text-slate-600 mb-2">
-                  Random acts of marketing with no system.
+                  Design, dev, and marketing decisions are being made in
+                  isolation from each other.
                 </p>
               </div>
             </div>
@@ -807,59 +714,52 @@ onBeforeUnmount(() => {
       <div class="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8">
         <div class="text-center mb-16">
           <h2 class="text-4xl font-display font-extrabold mb-4 text-lg" style="font-weight: 600">
-            Outcome-Driven Solutions
+            Three Ways We Engage
           </h2>
           <p class="motion-text text-slate-300 max-w-2xl mx-auto mt-3">
-            We don't just "build websites." We architect conversion systems
-            designed to scale your specific business model.
+            Each engagement is built around one outcome. We scope the work to
+            match it, not the other way around.
           </p>
         </div>
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div
-            class="motion-card group relative bg-background-light p-8 rounded-xl border border-dark transition-all hover:scale-[1.05] hover:shadow-2xl flex flex-col h-full">
-            <div
-              class="absolute top-0 right-8 -translate-y-1/2 bg-primary text-slate-900 px-4 py-1 rounded-full text-xs font-bold uppercase tracking-widest">
-              Popular
-            </div>
+            class="motion-card group relative bg-background-light p-8 rounded-xl border border-dark transition-all hover:scale-[1.02] hover:shadow-2xl flex flex-col h-full">
             <div class="w-14 h-14 bg-blue-500/10 text-blue-500 rounded-lg flex items-center justify-center mb-6">
               <span class="material-icons-outlined text-3xl">hub</span>
             </div>
             <h4 class="text-2xl font-bolder mb-3" style="font-weight: 600">
-              Lead Gen System
+              <a href="/lead-generation-systems" class="text-white text-decoration-none">Lead Generation Systems</a>
             </h4>
             <p class="text-slate-300 mb-6 flex-grow">
-              A complete pipeline designed to capture, nurture, and convert
-              high-intent B2B leads.
+              For B2B and service businesses that need a website to do the
+              qualifying, not just the introducing.
             </p>
             <ul class="space-y-3 mb-8 text-sm p-0">
               <li class="flex items-center gap-2">
                 <span class="material-icons-outlined text-green-500 text-sm">check_circle</span>
-                Conversion-First Landing Pages
+                Conversion-focused landing pages
               </li>
               <li class="flex items-center gap-2">
                 <span class="material-icons-outlined text-green-500 text-sm">check_circle</span>
-                Targeted Ad Campaigns (GADS/Meta)
+                Paid campaign structure (Google &amp; Meta)
               </li>
               <li class="flex items-center gap-2">
                 <span class="material-icons-outlined text-green-500 text-sm">check_circle</span>
-                CRM Integration &amp; Automation
+                CRM integration and lead routing
               </li>
             </ul>
             <div class="pt-6 border-t border-slate-200">
               <p class="text-xs uppercase font-bold text-slate-400 mb-2">
-                <small>Primary Outcome</small>
+                <small>What This Builds</small>
               </p>
-              <h5 class="text-lg font-bold text-primary" style="font-weight: 600">
-                Predictable Sales Pipeline
+              <h5 class="text-lg font-bold text-primary mb-2" style="font-weight: 600">
+                A Pipeline You Can Forecast
               </h5>
+              <p class="text-xs text-slate-500 mb-0">Typical engagement: 4–8 weeks</p>
             </div>
           </div>
           <div
-            class="motion-card group relative bg-dark p-8 rounded-xl scale-[1.05] hover:scale-[1.08] border border-dark transition-all shadow-2xl flex flex-col h-full">
-            <div
-              class="absolute top-0 right-8 -translate-y-1/2 bg-primary text-slate-900 px-4 py-1 rounded-full text-xs font-bold uppercase tracking-widest">
-              Most Popular
-            </div>
+            class="motion-card group relative bg-dark p-8 rounded-xl border border-dark transition-all shadow-2xl flex flex-col h-full">
             <div class="w-14 h-14 bg-white/10 text-white rounded-lg flex items-center justify-center mb-6">
               <span class="material-icons-outlined text-3xl">shopping_bag</span>
             </div>
@@ -867,78 +767,77 @@ onBeforeUnmount(() => {
               E-commerce Growth
             </h4>
             <p class="text-slate-300 mb-6 flex-grow">
-              Aggressive scaling strategies for Shopify &amp; custom stores
-              focusing on AOV and LTV.
+              For Shopify and custom stores where the storefront is the
+              limiting factor on revenue, not traffic.
             </p>
             <ul class="space-y-3 mb-8 text-sm text-slate-200  font-medium p-0">
               <li class="flex items-center gap-2">
                 <span class="material-icons-outlined text-primary  text-sm">check_circle</span>
-                High-Converting Checkout UI
+                Checkout and product page optimization
               </li>
               <li class="flex items-center gap-2">
                 <span class="material-icons-outlined text-primary  text-sm">check_circle</span>
-                Performance Creative Production
+                Performance creative for paid channels
               </li>
               <li class="flex items-center gap-2">
                 <span class="material-icons-outlined text-primary  text-sm">check_circle</span>
-                Advanced Retention Flows
+                Retention and repeat-purchase flows
               </li>
             </ul>
             <div class="pt-6 border-t border-white/20">
               <p class="text-xs uppercase font-bold text-slate-400 mb-2">
-                <small>Primary Outcome</small>
+                <small>What This Builds</small>
               </p>
-              <h5 class="text-lg font-bold text-white " style="font-weight: 600">
-                Maximum ROAS Scaling
+              <h5 class="text-lg font-bold text-white mb-2" style="font-weight: 600">
+                Higher Return Per Visitor
               </h5>
+              <p class="text-xs text-slate-400 mb-0">Typical engagement: 3–6 weeks</p>
             </div>
           </div>
           <div
-            class="motion-card group relative bg-background-light p-8 rounded-xl border border-dark transition-all hover:scale-[1.05] hover:shadow-2xl flex flex-col h-full">
-            <div
-              class="absolute top-0 right-8 -translate-y-1/2 bg-primary text-slate-900 px-4 py-1 rounded-full text-xs font-bold uppercase tracking-widest">
-              Popular
-            </div>
+            class="motion-card group relative bg-background-light p-8 rounded-xl border border-dark transition-all hover:scale-[1.02] hover:shadow-2xl flex flex-col h-full">
             <div class="w-14 h-14 bg-purple-500/10 text-purple-500 rounded-lg flex items-center justify-center mb-6">
               <span class="material-icons-outlined text-3xl">rocket_launch</span>
             </div>
             <h4 class="text-2xl font-bold mb-3" style="font-weight: 600">
-              Startup Launch Kit
+              Startup Launch Foundations
             </h4>
             <p class="text-slate-300 mb-6 flex-grow">
-              From MVP to Market Leader. We build the foundation your vision
-              needs to secure funding.
+              For founders who need a product and site that hold up in
+              front of investors and early customers alike.
             </p>
             <ul class="space-y-3 mb-8 text-sm p-0">
               <li class="flex items-center gap-2">
                 <span class="material-icons-outlined text-green-500 text-sm">check_circle</span>
-                Rapid Product UI/UX Prototyping
+                Rapid product UI/UX prototyping
               </li>
               <li class="flex items-center gap-2">
                 <span class="material-icons-outlined text-green-500 text-sm">check_circle</span>
-                Investor-Ready Pitch Platforms
+                Investor-ready pitch platforms
               </li>
               <li class="flex items-center gap-2">
                 <span class="material-icons-outlined text-green-500 text-sm">check_circle</span>
-                Modern Tech-Stack Deployment
+                Modern, scalable tech stack
               </li>
             </ul>
             <div class="pt-6 border-t border-slate-200">
               <p class="text-xs uppercase font-bold text-slate-500 mb-2">
-                <small>Primary Outcome</small>
+                <small>What This Builds</small>
               </p>
-              <h5 class="text-lg font-bold text-primary" style="font-weight: 600">
-                Market Dominance Ready
+              <h5 class="text-lg font-bold text-primary mb-2" style="font-weight: 600">
+                A Foundation That Scales With You
               </h5>
+              <p class="text-xs text-slate-500 mb-0">Typical engagement: 6–10 weeks</p>
             </div>
           </div>
         </div>
         <div class="d-flex justify-content-center gap-3 mt-5">
           <a class="amor-btn btn-fill-primary btn-large"
-            href="https://wa.me/917975859061/?text=Get%20my%20free%20GROWTH%20Audit.">Get My Free Growth Audit</a>
+            href="https://wa.me/917975859061/?text=I%27d%20like%20to%20book%20a%20free%20strategy%20call.">Book Your Free Strategy Call</a>
         </div>
       </div>
     </section>
+
 
     <section class="py-40 bg-white" id="results">
       <div class="max-w-7xl mx-auto px-6 lg:px-10">
@@ -946,7 +845,7 @@ onBeforeUnmount(() => {
           <div class="lg:col-span-6">
             <div
               class="inline-block py-2 px-4 rounded bg-dark text-brand-700 text-[10px] font-black uppercase tracking-[0.3em] mb-2">
-              <span class="text-ly">Performance Metrics</span>
+              <span class="text-ly">Results, Not Promises</span>
             </div>
             <h2 class="text-6xl lg:text-8xl font-display mb-12 text-dark" style="font-weight: 600">
               Hard Data. <br /><span class="text-gradient-brand text-ly">Zero Guesswork.</span>
@@ -956,10 +855,10 @@ onBeforeUnmount(() => {
                 <div class="flex justify-between items-center mb-0">
                   <div>
                     <h4 class="font-bold text-2xl text-dark mb-1">
-                      Conversion Efficiency
+                      Conversion Lift
                     </h4>
                     <p class="text-slate-600 font-medium mb-4">
-                      Post-optimization average
+                      Average across post-launch client sites
                     </p>
                   </div>
                   <span class="text-5xl font-black text-ly font-display">+42%</span>
@@ -977,7 +876,7 @@ onBeforeUnmount(() => {
                       Pipeline Velocity
                     </h4>
                     <p class="text-slate-600 font-medium mb-4">
-                      Average B2B acceleration
+                      Faster lead-to-close for B2B clients
                     </p>
                   </div>
                   <span class="text-5xl font-black text-ly font-display">3.5x</span>
@@ -994,7 +893,7 @@ onBeforeUnmount(() => {
                       Managed Ad Revenue
                     </h4>
                     <p class="text-slate-600 font-medium mb-4">
-                      Cumulative yearly scaling
+                      Tracked across active client accounts
                     </p>
                   </div>
                   <span class="text-5xl font-black text-ly font-display">$12M+</span>
@@ -1061,36 +960,41 @@ onBeforeUnmount(() => {
     <section class="pb-24 px-6 bg-white" id="process">
       <div class="container mx-auto">
         <h2 class="text-3xl font-display font-medium text-center text-dark mb-16" style="font-weight: 600">
-          Our Proven <span class="text-ly">4-Step Process</span>
+          How We <span class="text-ly">Work</span>
         </h2>
         <div class="grid grid-cols-1 md:grid-cols-4 gap-0">
-          <div class="step-arrow bg-slate-900 text-white p-8 mb-4 md:mb-0 hover:scale-[1.04] transition-all">
+          <div class="step-arrow bg-slate-900 text-white p-8 mb-4 md:mb-0 hover:scale-[1.02] transition-all">
             <div class="text-4xl font-black mb-4 opacity-50">01</div>
             <h5 class="font-bold text-lg mb-2 d-block">Audit &amp; Strategy</h5>
             <small class="text-sm text-slate-300">
-              Deep dive into your metrics and map out the growth path.
+              We study your metrics, your market, and your current site
+              before recommending anything.
             </small>
+            <p class="text-xs uppercase tracking-wider text-slate-500 mt-3 mb-0">Week 1–2</p>
           </div>
-          <div class="step-arrow bg-slate-800 text-white p-8 mb-4 md:mb-0 hover:scale-[1.06] transition-all">
+          <div class="step-arrow bg-slate-800 text-white p-8 mb-4 md:mb-0 hover:scale-[1.02] transition-all">
             <div class="text-4xl font-black mb-4 opacity-80">02</div>
             <h5 class="font-bold text-lr mb-2 d-block">Design &amp; Build</h5>
             <small class="text-sm text-slate-300">
-              Crafting your high-converting assets with precision.
+              Every screen is built against the strategy, not a template.
             </small>
+            <p class="text-xs uppercase tracking-wider text-slate-500 mt-3 mb-0">Weeks 2–6</p>
           </div>
-          <div class="step-arrow bg-slate-700 text-white p-8 mb-4 md:mb-0 hover:scale-[1.08] transition-all">
+          <div class="step-arrow bg-slate-700 text-white p-8 mb-4 md:mb-0 hover:scale-[1.02] transition-all">
             <div class="text-4xl font-black mb-4 opacity-80">03</div>
             <h5 class="font-bold text-ly mb-2 d-block">Launch</h5>
             <small class="text-sm text-slate-100">
-              Deploying campaigns and monitoring live performance.
+              We deploy carefully and watch real performance from day one.
             </small>
+            <p class="text-xs uppercase tracking-wider text-slate-300 mt-3 mb-0">Week 6–7</p>
           </div>
-          <div class="step-arrow bg-slate-600 text-slate-900 p-8 mb-4 md:mb-0 hover:scale-[1.1] transition-all">
+          <div class="step-arrow bg-slate-600 text-slate-900 p-8 mb-4 md:mb-0 hover:scale-[1.02] transition-all">
             <div class="text-4xl font-black mb-4 opacity-80">04</div>
             <h5 class="font-bold text-lb mb-2 d-block">Optimize &amp; Scale</h5>
             <small class="text-sm text-slate-300">
-              Daily improvements to maximize your return on investment.
+              We keep tuning against live data long after launch day.
             </small>
+            <p class="text-xs uppercase tracking-wider text-slate-700 mt-3 mb-0">Ongoing</p>
           </div>
         </div>
       </div>
@@ -1267,10 +1171,10 @@ onBeforeUnmount(() => {
     <section class="section section-padding-2 bg-color-white">
       <div class="container-fluid">
         <div class="section-heading heading-left">
-          <span class="subtitle">Our Recent Clients</span>
+          <span class="subtitle">Recent Work</span>
           <h2 class="title">
-            <span class="gradient-text yellow-light">Trusted </span> by
-            <span class="gradient-text yellow-light">Leading</span> Businesses
+            <span class="gradient-text yellow-light">Real Projects.</span>
+            Real Outcomes.
           </h2>
         </div>
 
@@ -1285,7 +1189,7 @@ onBeforeUnmount(() => {
                       <h3 class="title">
                         <a href="project/steadyasset">SteadyAsset</a>
                       </h3>
-                      <span class="subtitle">Logo, Branding, UI/UX Design, Website, GMB, GA</span>
+                      <span class="subtitle">Brand identity, UI/UX, and website for an investment platform</span>
                     </div>
                   </a>
                 </div>
@@ -1300,8 +1204,7 @@ onBeforeUnmount(() => {
                       <h3 class="title">
                         <a href="project/savedesk">SaveDesk</a>
                       </h3>
-                      <span class="subtitle">Redesign, UI/UX Design, Wireframing, High-Fidelity
-                        Prototype</span>
+                      <span class="subtitle">Full redesign, from wireframes to high-fidelity UI/UX</span>
                     </div>
                   </a>
                 </div>
@@ -1316,7 +1219,7 @@ onBeforeUnmount(() => {
                       <h3 class="title">
                         <a href="project/samsiddhi-designs">Samsiddhi Designs</a>
                       </h3>
-                      <span class="subtitle">Logo, Branding, UI/UX Design, Website, GMB, GA</span>
+                      <span class="subtitle">Brand identity, UI/UX, and website for an interior design firm</span>
                     </div>
                   </a>
                 </div>
@@ -1331,7 +1234,7 @@ onBeforeUnmount(() => {
                       <h3 class="title">
                         <a href="project/uae-links">UAE Links</a>
                       </h3>
-                      <span class="subtitle">UI/UX Design, Website, GA</span>
+                      <span class="subtitle">UI/UX design and website build, with analytics in place</span>
                     </div>
                   </a>
                 </div>
@@ -1340,7 +1243,7 @@ onBeforeUnmount(() => {
           </div>
 
           <div class="d-lg-flex justify-content-center">
-            <a class="amor-btn btn-borderd light" href="/case-studies">Case Study</a>
+            <a class="amor-btn btn-borderd light" href="/case-studies">Explore Case Studies</a>
           </div>
         </div>
       </div>
@@ -1360,10 +1263,10 @@ onBeforeUnmount(() => {
     <section class="section section-padding bg-color-light" id="reviews">
       <div class="container-fluid">
         <div class="section-heading heading-center">
-          <span class="subtitle">What Clients Say</span>
+          <span class="subtitle">In Their Words</span>
           <h2 class="title">
-            <span class="gradient-text yellow-dark">Feedback</span> That
-            <span class="gradient-text yellow-dark">Inspires</span> Us
+            <span class="gradient-text yellow-dark">What Clients</span>
+            Say About Working With Us
           </h2>
         </div>
 
@@ -1461,9 +1364,8 @@ onBeforeUnmount(() => {
               <span class="material-symbols-outlined">star</span>
             </div>
             <p class="text-xl text-white italic mb-10 leading-relaxed font-light">
-              "Good understanding of the client's need. Very good professional
-              and service provider. you again for a job well done, All the best
-              👍👍💐💐"
+              "Good understanding of our needs from the start. A genuinely
+              professional service provider, and a job well done."
             </p>
             <div class="flex items-center gap-4">
               <img src="../assets/img/project/c6/spr-logo.svg" class="m-0" style="height: 40px"
@@ -1596,16 +1498,16 @@ onBeforeUnmount(() => {
     <section class="py-24 px-6 bg-white">
       <div class="container mx-auto max-w-4xl">
         <h2 class="text-3xl font-display font-bold text-center mb-16 text-ly" style="font-weight: 600">
-          Why Businesses Choose Us
+          Why Businesses Choose Amortree
         </h2>
-        <div class="space-y-4 w-50 why mx-auto">
+        <div class="space-y-4 why mx-auto" style="max-width: 720px;">
           <div
             class="group bg-dark p-6 rounded-2xl border border-dark flex items-center justify-between hover:border-primary transition-all cursor-default">
             <div class="flex items-center gap-4">
               <div class="w-10 h-10 rounded-full bg-primary/10 text-ly flex items-center justify-center">
                 <span class="material-symbols-outlined">target</span>
               </div>
-              <span class="text-xl font-semibold">Strategy-First Approach</span>
+              <span class="text-xl font-semibold">Strategy Before Screens</span>
             </div>
             <span class="material-symbols-outlined text-slate-400 group-hover:text-primary">arrow_forward</span>
           </div>
@@ -1615,7 +1517,7 @@ onBeforeUnmount(() => {
               <div class="w-10 h-10 rounded-full bg-primary/10 text-ly flex items-center justify-center">
                 <span class="material-symbols-outlined">trending_up</span>
               </div>
-              <span class="text-xl font-semibold">Business Results Focused</span>
+              <span class="text-xl font-semibold">Measured Against Business Results</span>
             </div>
             <span class="material-symbols-outlined text-slate-400 group-hover:text-primary">arrow_forward</span>
           </div>
@@ -1625,7 +1527,7 @@ onBeforeUnmount(() => {
               <div class="w-10 h-10 rounded-full bg-primary/10 text-ly flex items-center justify-center">
                 <span class="material-symbols-outlined">analytics</span>
               </div>
-              <span class="text-xl font-semibold">100% Data-Driven Decisions</span>
+              <span class="text-xl font-semibold">Decisions Backed by Data</span>
             </div>
             <span class="material-symbols-outlined text-slate-400 group-hover:text-primary">arrow_forward</span>
           </div>
@@ -1635,11 +1537,131 @@ onBeforeUnmount(() => {
               <div class="w-10 h-10 rounded-full bg-primary/10 text-ly flex items-center justify-center">
                 <span class="material-symbols-outlined">handshake</span>
               </div>
-              <span class="text-xl font-semibold">True Growth Partners</span>
+              <span class="text-xl font-semibold">A Partner Past Launch Day</span>
             </div>
             <span class="material-symbols-outlined text-slate-400 group-hover:text-primary">arrow_forward</span>
           </div>
         </div>
+      </div>
+    </section>
+
+    <section class="d-none home-motion-section py-24 px-6 bg-color-light" id="faq">
+      <div class="container mx-auto max-w-3xl">
+        <div class="text-center mb-12">
+          <div
+            class="inline-block py-2 px-4 rounded bg-dark text-brand-700 text-[10px] font-black uppercase tracking-[0.3em] mb-3">
+            <span class="text-ly">Common Questions</span>
+          </div>
+          <h2 class="text-3xl font-display font-bold text-dark mb-4" style="font-weight: 600">
+            Before You Book the Call
+          </h2>
+          <p class="motion-text text-slate-600 max-w-xl mx-auto mb-0">
+            The questions most founders and business owners ask before
+            starting a project with us.
+          </p>
+        </div>
+        <div class="accordion" id="homeFaqAccordion">
+          <div class="accordion-item">
+            <h3 class="accordion-header">
+              <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#homeFaq1">
+                How much does a website cost at Amortree?
+              </button>
+            </h3>
+            <div id="homeFaq1" class="accordion-collapse collapse show" data-bs-parent="#homeFaqAccordion">
+              <div class="accordion-body">
+                Most engagements fall between &#8377;50,000 and &#8377;5,00,000,
+                depending on scope &mdash; from a focused conversion-first
+                landing page to a full lead-generation system with CRM
+                integration. We scope exact pricing after the strategy call,
+                once we understand what the site needs to do for your
+                business.
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h3 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#homeFaq2">
+                How long does a project take?
+              </button>
+            </h3>
+            <div id="homeFaq2" class="accordion-collapse collapse" data-bs-parent="#homeFaqAccordion">
+              <div class="accordion-body">
+                Most projects run 4&ndash;10 weeks from strategy to launch,
+                depending on scope. Audit and strategy typically take 1&ndash;2
+                weeks, design and build 2&ndash;6 weeks, with ongoing
+                optimization after launch.
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h3 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#homeFaq3">
+                Do you only build websites, or do you handle marketing too?
+              </button>
+            </h3>
+            <div id="homeFaq3" class="accordion-collapse collapse" data-bs-parent="#homeFaqAccordion">
+              <div class="accordion-body">
+                We work across strategy, UX, development, SEO, and paid
+                acquisition &mdash; because a website's performance depends on
+                all of them working together, not just the design.
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h3 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#homeFaq4">
+                What industries do you work with?
+              </button>
+            </h3>
+            <div id="homeFaq4" class="accordion-collapse collapse" data-bs-parent="#homeFaqAccordion">
+              <div class="accordion-body">
+                We work primarily with real estate and professional service
+                firms, SaaS and startup founders, and manufacturing and
+                healthcare businesses. See
+                <a href="/case-studies" class="text-decoration-underline">our case studies</a>
+                for examples across each.
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h3 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#homeFaq5">
+                What happens after I book a strategy call?
+              </button>
+            </h3>
+            <div id="homeFaq5" class="accordion-collapse collapse" data-bs-parent="#homeFaqAccordion">
+              <div class="accordion-body">
+                We review your current site and metrics before the call, so
+                the conversation starts with specific observations about your
+                business &mdash; not a generic sales pitch.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="home-motion-section py-24 px-6 bg-dark" style="background: linear-gradient(135deg, #0f0f0f 0%, #000000 100%)">
+      <div class="container mx-auto max-w-3xl text-center">
+        <h2 class="text-3xl md:text-4xl font-display font-bold mb-4 text-white" style="font-weight: 600">
+          Still Deciding?
+        </h2>
+        <p class="motion-text text-slate-300 max-w-xl mx-auto mb-10">
+          A 20-minute call costs you nothing and tells you exactly where your
+          site is leaving leads on the table.
+        </p>
+        <div class="d-flex justify-content-center gap-3 flex-wrap">
+          <a class="amor-btn btn-fill-primary btn-large"
+            href="https://wa.me/917975859061/?text=I%27d%20like%20to%20book%20a%20free%20strategy%20call.">Book Your Free Strategy Call</a>
+          <a href="/estimate" class="amor-btn btn-borderd light">Get a Project Estimate</a>
+        </div>
+        <p class="mt-5 text-center text-slate-500 text-xs mb-0">
+          <small>No pressure, no obligation &mdash; just clarity on what your website should be doing for your business.</small>
+        </p>
       </div>
     </section>
 
