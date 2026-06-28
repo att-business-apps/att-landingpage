@@ -8,7 +8,7 @@
       <div class="breadcrumb animate__animated fadeInUp" style="animation-duration: 2s">
         <ul class="list-unstyled">
           <li><a href="/">Home</a></li>
-          <li class="active text-lb">What We Do</li>
+          <li class="active text-lb">Services</li>
         </ul>
         <div class="section-heading heading-left">
           <h1 class="title h2 mb-0">Professional Web Development & IT Services Company</h1>

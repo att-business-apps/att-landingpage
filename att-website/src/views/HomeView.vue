@@ -45,7 +45,7 @@ function injectStructuredData() {
       {
         "@type": "Service",
         "@id": `${siteUrl}/#service-leadgen`,
-        name: "Lead Generation Systems",
+        name: "Lead Generation",
         provider: { "@id": `${siteUrl}/#organization` },
         description:
           "Conversion-focused landing pages, paid campaign structure, and CRM integration built for B2B and service businesses.",
@@ -62,7 +62,7 @@ function injectStructuredData() {
       {
         "@type": "Service",
         "@id": `${siteUrl}/#service-startup`,
-        name: "Startup Launch Foundations",
+        name: "Startup Launch",
         provider: { "@id": `${siteUrl}/#organization` },
         description:
           "Rapid product UI/UX prototyping, investor-ready pitch platforms, and a modern, scalable tech stack for founders.",
@@ -260,8 +260,114 @@ function initFaqTabs() {
 }
 
 // ─────────────────────────────────────────────────────────────────────────────
-// Why Section — clip-path wipe reveal per pair, staggered on scroll
+// Recent Work — numbered row list animations (reference style)
 // ─────────────────────────────────────────────────────────────────────────────
+function animateWorkSection() {
+  // Header title cascades in
+  gsap.from(".att-work-title", {
+    y: 60,
+    autoAlpha: 0,
+    duration: 1.1,
+    ease: "expo.out",
+    immediateRender: false,
+    scrollTrigger: { trigger: ".att-work-section", start: "top 75%", once: true },
+  });
+  gsap.from(".att-work-header-right", {
+    y: 30,
+    autoAlpha: 0,
+    duration: 0.9,
+    delay: 0.15,
+    ease: "power3.out",
+    immediateRender: false,
+    scrollTrigger: { trigger: ".att-work-section", start: "top 75%", once: true },
+  });
+
+  // Each row slides in from left, staggered
+  gsap.utils.toArray(".att-cs-item").forEach((item) => {
+    gsap.from(item, {
+      x: -40,
+      autoAlpha: 0,
+      duration: 0.7,
+      ease: "power3.out",
+      immediateRender: false,
+      scrollTrigger: { trigger: item, start: "top 88%", once: true },
+    });
+  });
+
+  // Hover: translateX inner + show preview
+  gsap.utils.toArray(".att-cs-item").forEach((item) => {
+    const inner = item.querySelector(".att-cs-inner");
+    const preview = item.querySelector(".att-cs-preview");
+
+    item.addEventListener("mouseenter", () => {
+      gsap.to(inner, { x: 8, duration: 0.35, ease: "power2.out" });
+      if (preview) gsap.to(preview, { autoAlpha: 1, right: "80px", duration: 0.4, ease: "power3.out" });
+    });
+    item.addEventListener("mouseleave", () => {
+      gsap.to(inner, { x: 0, duration: 0.35, ease: "power2.out" });
+      if (preview) gsap.to(preview, { autoAlpha: 0, right: "-220px", duration: 0.3, ease: "power2.in" });
+    });
+  });
+
+  // Arrow hover rotation
+  gsap.utils.toArray(".att-cs-arrow").forEach((arrow) => {
+    const item = arrow.closest(".att-cs-item");
+    item.addEventListener("mouseenter", () => {
+      gsap.to(arrow, { rotation: -45, duration: 0.3, ease: "power2.out" });
+    });
+    item.addEventListener("mouseleave", () => {
+      gsap.to(arrow, { rotation: 0, duration: 0.3, ease: "power2.out" });
+    });
+  });
+}
+
+// ─────────────────────────────────────────────────────────────────────────────
+// Process section — staggered step entrance + bottom-border hover line
+// ─────────────────────────────────────────────────────────────────────────────
+function animateProcessSection() {
+  gsap.from(".att-process-title", {
+    y: 60,
+    autoAlpha: 0,
+    duration: 1,
+    ease: "expo.out",
+    immediateRender: false,
+    scrollTrigger: { trigger: ".att-process-section", start: "top 72%", once: true },
+  });
+  gsap.from(".att-process-sub", {
+    y: 40,
+    autoAlpha: 0,
+    duration: 0.9,
+    delay: 0.1,
+    ease: "power3.out",
+    immediateRender: false,
+    scrollTrigger: { trigger: ".att-process-section", start: "top 72%", once: true },
+  });
+  gsap.from(".att-process-step", {
+    y: 60,
+    autoAlpha: 0,
+    duration: 0.8,
+    stagger: 0.12,
+    ease: "power3.out",
+    immediateRender: false,
+    scrollTrigger: { trigger: ".att-process-steps", start: "top 78%", once: true },
+  });
+
+  // Bottom-border swipe on hover (injected line element)
+  document.querySelectorAll(".att-process-step").forEach((step) => {
+    const line = document.createElement("div");
+    line.className = "att-ps-hover-line";
+    step.appendChild(line);
+
+    step.addEventListener("mouseenter", () => {
+      gsap.to(line, { width: "100%", duration: 0.4, ease: "power3.out" });
+    });
+    step.addEventListener("mouseleave", () => {
+      gsap.to(line, { width: "0%", duration: 0.3, ease: "power2.in" });
+    });
+  });
+}
+
+
 function animateWhySection() {
   if (!homePage.value) return;
 
@@ -473,6 +579,9 @@ function animateHomePage() {
     // Why & FAQ custom animations
     animateWhySection();
     animateFaqSection();
+    // Work & Process custom animations
+    animateWorkSection();
+    animateProcessSection();
 
     ScrollTrigger.refresh();
   }, homePage.value);
@@ -504,16 +613,19 @@ onBeforeUnmount(() => {
                   <div
                     class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-200 text-blue-900 text-xs font-bold uppercase tracking-wider">
                     Strategy
-                    <span class="relative flex h-1 w-1">
+                    <span class="relative flex h-2 w-2">
                       <span class="animate-ping absolute d-block justify-center items-center h-full w-full rounded-full bg-blue-400 opacity-75"></span>
+                      <span class="relative d-block rounded-full h-2 w-2 bg-blue-600"></span>
                     </span>
                     Design
-                    <span class="relative flex h-1 w-1">
+                    <span class="relative flex h-2 w-2">
                       <span class="animate-ping absolute d-block justify-center items-center h-full w-full rounded-full bg-blue-400 opacity-75"></span>
+                      <span class="relative d-block rounded-full h-2 w-2 bg-blue-600"></span>
                     </span>
                     Development
-                    <span class="relative flex h-1 w-1">
+                    <span class="relative flex h-2 w-2">
                       <span class="animate-ping absolute d-block justify-center items-center h-full w-full rounded-full bg-blue-400 opacity-75"></span>
+                      <span class="relative d-block rounded-full h-2 w-2 bg-blue-600"></span>
                     </span>
                     Growth
                   </div>
@@ -524,15 +636,16 @@ onBeforeUnmount(() => {
                   <span class="hero-title-token hero-title-highlight text-ly">Generate Leads.</span>
                   <span class="hero-title-token hero-title-highlight gradient-text-light">Drive Growth.</span>
                 </h1>
-                <h2 class="h4 mt-4 flex items-center justify-center gap-3">
-                  <span class="gradient-text yellow-light">Designed for businesses that are ready to grow—not just go online.</span>
-                </h2>
                 <p class="subtitle w-75 md:w-100 mt-4">
                   We combine strategy, UX, development, SEO, and AI-ready optimization to create websites that become your highest-performing business asset.
                 </p>
+
+                <h2 class="h5 mt-4 flex items-center justify-center gap-3">
+                  <span class="gradient-text yellow-light">Designed for businesses that are ready to grow—not just go online.</span>
+                </h2>
                 <div class="d-flex justify-content-center gap-3 mt-5">
                   <a class="amor-btn btn-fill-primary btn-large"
-                    href="/Contact">Book Your Free Strategy Call</a>
+                    href="https://wa.me/917975859061/?text=I%20need%20to%20Book%20Your%20Free%20Strategy%20Call.">Book Your Free Strategy Call</a>
                   <a href="/case-studies" class="amor-btn btn-borderd light">Explore Case Studies</a>
                 </div>
                 <div class="mt-16 grid grid-cols-2 md:grid-cols-4 gap-6 opacity-80">
@@ -612,13 +725,12 @@ onBeforeUnmount(() => {
             <div class="inline-block py-2 px-4 rounded bg-dark text-brand-700 text-[10px] font-black uppercase tracking-[0.3em] mb-2">
               <span class="text-ly">Who We Work With</span>
             </div>
-            <h2 class="font-bold text-navy text-ly mb-0" style="font-weight: 600">
-              Built for Businesses Ready to Scale
+            <h2 class="font-bold text-dark mb-0" style="font-weight: 600">
+              Not Every Business Needs a Better Website. The Right Businesses Need a Better Growth Partner.
             </h2>
           </div>
           <p class="motion-text text-slate-800 max-w-sm mb-0">
-            We take on a limited number of engagements each quarter so every
-            client gets a strategist, not a queue.
+            We intentionally partner with a limited number of businesses each quarter so every client receives strategic attention—not just project management.
           </p>
         </div>
         <div class="grid md:grid-cols-3 gap-6">
@@ -648,7 +760,7 @@ onBeforeUnmount(() => {
     </section>
 
     <section class="home-motion-section pb-24 px-4 bg-white">
-      <div class="motion-card max-w-6xl mx-auto rounded-3xl p-20 border border-secondary shadow-sm relative overflow-hidden hover:scale-[1.02] transition-all">
+      <div class="motion-card max-w-7xl mx-auto rounded-3xl p-12 border border-secondary shadow-sm relative overflow-hidden hover:scale-[1.02] transition-all">
         <div class="home-parallax absolute top-0 right-0 p-8 opacity-[0.06]">
           <span class="material-icons-outlined text-ly" style="font-size: 16rem">insights</span>
         </div>
@@ -657,10 +769,10 @@ onBeforeUnmount(() => {
             <span class="p-2 w-10 h-10 d-flex relative bg-amber-100 rounded-lg">
               <span class="material-icons-outlined text-center text-lr">fact_check</span>
             </span>
-            <span class="text-dark">What We Usually <span class="text-lr">Find First</span></span>
+            <span class="text-dark">What's Really <span class="text-lr">Holding Your Business</span> Back?</span>
           </h2>
           <p class="text-slate-600 mb-8 max-w-2xl">
-            Before we propose anything, we look for where the business is already losing ground. These four patterns show up most often.
+            Before recommending solutions, we identify where your business is losing opportunities. These are the four patterns we uncover most often.
           </p>
           <div class="grid md:grid-cols-2 gap-y-6 gap-x-12">
             <div class="motion-card flex items-start gap-4">
@@ -696,12 +808,106 @@ onBeforeUnmount(() => {
       </div>
     </section>
 
+    <!-- ============================================================
+         WHAT IT'S LIKE WORKING WITH AMORTREE — Before / After Wipe Grid
+         ============================================================ -->
+    <section class="att-why-section pb-28 px-6 bg-white overflow-hidden" id="why-us">
+      <div class="container mx-auto max-w-6xl">
+        <div class="att-why-header mb-20">
+          <div class="inline-block py-2 px-4 rounded bg-dark text-[10px] font-black uppercase tracking-[0.3em] mb-3">
+            <span class="text-ly">THE EXPERIENCE</span>
+          </div>
+          <div class="flex flex-col md:flex-row md:items-end justify-between gap-4">
+            <h2 class="text-3xl font-display font-bold text-dark mb-0 att-why-heading" style="font-weight: 600">
+              What It's Like <span class="text-ly">Working With Amortree</span>
+            </h2>
+            <p class="att-why-sub text-slate-500 max-w-xs mb-0 text-sm leading-relaxed">
+              Most agencies hand you a deliverable. We build the system the deliverable is supposed to produce.
+            </p>
+          </div>
+        </div>
+
+        <div class="att-why-grid">
+          <!-- Column labels -->
+          <div class="att-why-label-row">
+            <div class="att-col-label att-col-label--before">
+              <span class="att-label-dot att-label-dot--red">
+                <span class="material-icons-outlined" style="font-size: 11px">close</span>
+              </span>
+              <span>Traditional Agency</span>
+            </div>
+            <div class="att-col-label att-col-label--after">
+              <span class="att-label-dot att-label-dot--green">
+                <span class="material-icons-outlined" style="font-size: 11px">check</span>
+              </span>
+              <span>Amortree</span>
+            </div>
+          </div>
+
+          <!-- Pair 1 -->
+          <div class="att-why-pair">
+            <div class="att-why-cell att-cell-before">
+              <span class="material-symbols-outlined att-cell-icon">bolt</span>
+              <p class="att-cell-label">Designs first, asks strategy questions later — if at all.</p>
+            </div>
+            <div class="att-why-cell att-cell-after">
+              <span class="material-symbols-outlined att-cell-icon">target</span>
+              <p class="att-cell-label"><strong>Strategy before screens.</strong> Every visual decision traces back to a defined conversion goal.</p>
+            </div>
+          </div>
+
+          <!-- Pair 2 -->
+          <div class="att-why-pair">
+            <div class="att-why-cell att-cell-before">
+              <span class="material-symbols-outlined att-cell-icon">thumb_down</span>
+              <p class="att-cell-label">Measures success by deliverables shipped, not revenue moved.</p>
+            </div>
+            <div class="att-why-cell att-cell-after">
+              <span class="material-symbols-outlined att-cell-icon">trending_up</span>
+              <p class="att-cell-label"><strong>Measured against business results.</strong> We track conversion lift, pipeline velocity, and ROAS — not just task completion.</p>
+            </div>
+          </div>
+
+          <!-- Pair 3 -->
+          <div class="att-why-pair">
+            <div class="att-why-cell att-cell-before">
+              <span class="material-symbols-outlined att-cell-icon">casino</span>
+              <p class="att-cell-label">Creative direction based on gut feel and trend-chasing.</p>
+            </div>
+            <div class="att-why-cell att-cell-after">
+              <span class="material-symbols-outlined att-cell-icon">analytics</span>
+              <p class="att-cell-label"><strong>Decisions backed by data.</strong> We audit your current metrics before recommending a single screen.</p>
+            </div>
+          </div>
+
+          <!-- Pair 4 -->
+          <div class="att-why-pair">
+            <div class="att-why-cell att-cell-before">
+              <span class="material-symbols-outlined att-cell-icon">logout</span>
+              <p class="att-cell-label">Hands off the file and disappears after launch day.</p>
+            </div>
+            <div class="att-why-cell att-cell-after">
+              <span class="material-symbols-outlined att-cell-icon">handshake</span>
+              <p class="att-cell-label"><strong>A partner past launch day.</strong> We keep tuning against live data long after the site goes live.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <section class="home-motion-section py-24" id="solutions" style="background: linear-gradient(135deg, #0f0f0f 0%, #000000 100%)">
       <div class="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8">
-        <div class="text-center mb-16">
-          <h2 class="text-4xl font-display font-extrabold mb-4 text-lg" style="font-weight: 600">Three Ways We Engage</h2>
-          <p class="motion-text text-slate-300 max-w-2xl mx-auto mt-3">
-            Each engagement is built around one outcome. We scope the work to match it, not the other way around.
+        <div class="flex flex-col md:flex-row md:items-end justify-between mb-5 gap-2">
+          <div>
+            <div class="inline-block py-2 px-4 rounded bg-dark text-brand-700 text-[10px] font-black uppercase tracking-[0.3em] mb-2">
+              <span class="text-ly">HOW WE HELP</span>
+            </div>
+            <h2 class="font-bold text-light mb-0" style="font-weight: 600">
+              Choose the <span class="text-ly">Growth Path</span> That Fits Your Business
+            </h2>
+          </div>
+          <p class="motion-text text-slate-100 max-w-sm mb-0">
+            Every engagement is tailored to your business goals—not a predefined package.
           </p>
         </div>
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -714,31 +920,32 @@ onBeforeUnmount(() => {
             </h4>
             <p class="text-slate-300 mb-6 flex-grow">For B2B and service businesses that need a website to do the qualifying, not just the introducing.</p>
             <ul class="space-y-3 mb-8 text-sm p-0">
-              <li class="flex items-center gap-2"><span class="material-icons-outlined text-green-500 text-sm">check_circle</span>Conversion-focused landing pages</li>
-              <li class="flex items-center gap-2"><span class="material-icons-outlined text-green-500 text-sm">check_circle</span>Paid campaign structure (Google &amp; Meta)</li>
-              <li class="flex items-center gap-2"><span class="material-icons-outlined text-green-500 text-sm">check_circle</span>CRM integration and lead routing</li>
+              <li class="flex items-center gap-2"><span class="material-icons-outlined text-green-500 text-sm">check_circle</span>Professional Services</li>
+              <li class="flex items-center gap-2"><span class="material-icons-outlined text-green-500 text-sm">check_circle</span>Healthcare</li>
+              <li class="flex items-center gap-2"><span class="material-icons-outlined text-green-500 text-sm">check_circle</span>Real Estate</li>
+              <li class="flex items-center gap-2"><span class="material-icons-outlined text-green-500 text-sm">check_circle</span>B2B Companies</li>
             </ul>
             <div class="pt-6 border-t border-slate-200">
-              <p class="text-xs uppercase font-bold text-slate-400 mb-2"><small>What This Builds</small></p>
-              <h5 class="text-lg font-bold text-primary mb-2" style="font-weight: 600">A Pipeline You Can Forecast</h5>
-              <p class="text-xs text-slate-500 mb-0">Typical engagement: 4–8 weeks</p>
+              <p class="text-xs uppercase font-bold text-slate-400 mb-2"><small>EXPECTED OUTCOME</small></p>
+              <h5 class="text-lg font-bold text-primary mb-2" style="font-weight: 600">A Predictable Lead Pipeline</h5>
+              <p class="text-xs text-slate-500 mb-0">Typical delivery: 4–8 weeks</p>
             </div>
           </div>
           <div class="motion-card group relative bg-dark p-8 rounded-xl border border-dark transition-all shadow-2xl flex flex-col h-full">
             <div class="w-14 h-14 bg-white/10 text-white rounded-lg flex items-center justify-center mb-6">
               <span class="material-icons-outlined text-3xl">shopping_bag</span>
             </div>
-            <h4 class="text-2xl font-bold mb-3 text-white" style="font-weight: 600">E-commerce Growth</h4>
+            <h4 class="text-2xl font-bold mb-3 text-white" style="font-weight: 600">E-commerce Growth Systems</h4>
             <p class="text-slate-300 mb-6 flex-grow">For Shopify and custom stores where the storefront is the limiting factor on revenue, not traffic.</p>
             <ul class="space-y-3 mb-8 text-sm text-slate-200 font-medium p-0">
-              <li class="flex items-center gap-2"><span class="material-icons-outlined text-primary text-sm">check_circle</span>Checkout and product page optimization</li>
-              <li class="flex items-center gap-2"><span class="material-icons-outlined text-primary text-sm">check_circle</span>Performance creative for paid channels</li>
-              <li class="flex items-center gap-2"><span class="material-icons-outlined text-primary text-sm">check_circle</span>Retention and repeat-purchase flows</li>
+              <li class="flex items-center gap-2"><span class="material-icons-outlined text-primary text-sm">check_circle</span>Shopify Stores</li>
+              <li class="flex items-center gap-2"><span class="material-icons-outlined text-primary text-sm">check_circle</span>D2C Brands</li>
+              <li class="flex items-center gap-2"><span class="material-icons-outlined text-primary text-sm">check_circle</span>Retail Businesses</li>
             </ul>
             <div class="pt-6 border-t border-white/20">
-              <p class="text-xs uppercase font-bold text-slate-400 mb-2"><small>What This Builds</small></p>
+              <p class="text-xs uppercase font-bold text-slate-400 mb-2"><small>EXPECTED OUTCOME</small></p>
               <h5 class="text-lg font-bold text-white mb-2" style="font-weight: 600">Higher Return Per Visitor</h5>
-              <p class="text-xs text-slate-400 mb-0">Typical engagement: 3–6 weeks</p>
+              <p class="text-xs text-slate-400 mb-0">Typical delivery: 3–6 weeks</p>
             </div>
           </div>
           <div class="motion-card group relative bg-background-light p-8 rounded-xl border border-dark transition-all hover:scale-[1.02] hover:shadow-2xl flex flex-col h-full">
@@ -748,20 +955,22 @@ onBeforeUnmount(() => {
             <h4 class="text-2xl font-bold mb-3" style="font-weight: 600">Startup Launch Foundations</h4>
             <p class="text-slate-300 mb-6 flex-grow">For founders who need a product and site that hold up in front of investors and early customers alike.</p>
             <ul class="space-y-3 mb-8 text-sm p-0">
-              <li class="flex items-center gap-2"><span class="material-icons-outlined text-green-500 text-sm">check_circle</span>Rapid product UI/UX prototyping</li>
-              <li class="flex items-center gap-2"><span class="material-icons-outlined text-green-500 text-sm">check_circle</span>Investor-ready pitch platforms</li>
-              <li class="flex items-center gap-2"><span class="material-icons-outlined text-green-500 text-sm">check_circle</span>Modern, scalable tech stack</li>
+              <li class="flex items-center gap-2"><span class="material-icons-outlined text-green-500 text-sm">check_circle</span>SaaS</li>
+              <li class="flex items-center gap-2"><span class="material-icons-outlined text-green-500 text-sm">check_circle</span>Tech Startups</li>
+              <li class="flex items-center gap-2"><span class="material-icons-outlined text-green-500 text-sm">check_circle</span>Founders</li>
+              <li class="flex items-center gap-2"><span class="material-icons-outlined text-green-500 text-sm">check_circle</span>MVPs</li>
             </ul>
             <div class="pt-6 border-t border-slate-200">
-              <p class="text-xs uppercase font-bold text-slate-500 mb-2"><small>What This Builds</small></p>
+              <p class="text-xs uppercase font-bold text-slate-500 mb-2"><small>EXPECTED OUTCOME</small></p>
               <h5 class="text-lg font-bold text-primary mb-2" style="font-weight: 600">A Foundation That Scales With You</h5>
-              <p class="text-xs text-slate-500 mb-0">Typical engagement: 6–10 weeks</p>
+              <p class="text-xs text-slate-500 mb-0">Typical delivery: 6–10 weeks</p>
             </div>
           </div>
         </div>
-        <div class="d-flex justify-content-center gap-3 mt-5">
+        <h6 class="text-center mt-5 mb-1" style="font-weight: 400">Not sure which path fits your business?</h6>
+        <div class="d-flex justify-content-center gap-3 mt-4">
           <a class="amor-btn btn-fill-primary btn-large"
-            href="/Contact">Book Your Free Strategy Call</a>
+            href="https://wa.me/917975859061/?text=I%27d%20like%20to%20book%20a%20free%20strategy%20call.">Book Your Free Strategy Call</a>
         </div>
       </div>
     </section>
@@ -780,7 +989,7 @@ onBeforeUnmount(() => {
               <div class="group">
                 <div class="flex justify-between items-center mb-0">
                   <div>
-                    <h4 class="font-bold text-2xl text-dark mb-1">Conversion Lift</h4>
+                    <h4 class="font-bold text-2xl text-dark mb-1">Average Conversion Improvement</h4>
                     <p class="text-slate-600 font-medium mb-4">Average across post-launch client sites</p>
                   </div>
                   <span class="text-5xl font-black text-ly font-display">+42%</span>
@@ -792,7 +1001,7 @@ onBeforeUnmount(() => {
               <div class="group">
                 <div class="flex justify-between items-center mb-0">
                   <div>
-                    <h4 class="font-bold text-2xl text-dark mb-1">Pipeline Velocity</h4>
+                    <h4 class="font-bold text-2xl text-dark mb-1">Lead-to-Customer Speed</h4>
                     <p class="text-slate-600 font-medium mb-4">Faster lead-to-close for B2B clients</p>
                   </div>
                   <span class="text-5xl font-black text-ly font-display">3.5x</span>
@@ -822,12 +1031,15 @@ onBeforeUnmount(() => {
                 src="../assets/img/project/c4/sa-ad.png" />
               <div class="absolute inset-0 bg-gradient-to-t from-white via-transparent to-transparent"></div>
               <div class="absolute bottom-8 left-8 right-8 p-10 bg-white/95 backdrop-blur-xl rounded-3xl border border-charcoal-100 shadow-xl">
-                <div class="flex gap-1 text-brand-600 mb-3">
-                  <span class="material-symbols-outlined fill-1 text-ly">star</span>
-                  <span class="material-symbols-outlined fill-1 text-ly">star</span>
-                  <span class="material-symbols-outlined fill-1 text-ly">star</span>
-                  <span class="material-symbols-outlined fill-1 text-ly">star</span>
-                  <span class="material-symbols-outlined fill-1 text-ly">star</span>
+                <div class="d-flex align-items-center justify-content-between mb-3">
+                  <div class="flex gap-1 text-brand-600">
+                    <span class="material-symbols-outlined fill-1 text-ly">star</span>
+                    <span class="material-symbols-outlined fill-1 text-ly">star</span>
+                    <span class="material-symbols-outlined fill-1 text-ly">star</span>
+                    <span class="material-symbols-outlined fill-1 text-ly">star</span>
+                    <span class="material-symbols-outlined fill-1 text-ly">star</span>
+                  </div>
+                  <span class="py-2 px-3 rounded bg-dark text-brand-700 text-xs">Verified Business Owner</span>
                 </div>
                 <p class="text-dark font-bold text-xl leading-relaxed mb-6 italic">
                   "Amortree is a very professional and end-to-end service provider. They have good understanding of the clients needs and work in a timely and efficient manner."
@@ -857,35 +1069,56 @@ onBeforeUnmount(() => {
       </div>
     </section>
 
-    <section class="pb-24 px-6 bg-white" id="process">
-      <div class="container mx-auto">
-        <h2 class="text-3xl font-display font-medium text-center text-dark mb-16" style="font-weight: 600">
-          How We <span class="text-ly">Work</span>
-        </h2>
-        <div class="grid grid-cols-1 md:grid-cols-4 gap-0">
-          <div class="step-arrow bg-slate-900 text-white p-8 mb-4 md:mb-0 hover:scale-[1.02] transition-all">
-            <div class="text-4xl font-black mb-4 opacity-50">01</div>
-            <h5 class="font-bold text-lg mb-2 d-block">Audit &amp; Strategy</h5>
-            <small class="text-sm text-slate-300">We study your metrics, your market, and your current site before recommending anything.</small>
-            <p class="text-xs uppercase tracking-wider text-slate-500 mt-3 mb-0">Week 1–2</p>
+    <!-- ============================================================
+         HOW WE WORK — 4-step process grid (reference: Our Approach)
+         ============================================================ -->
+    <section class="att-process-section" id="process">
+      <div class="att-process-inner">
+        <div class="flex flex-col md:flex-row md:items-end justify-between mb-5 gap-2">
+          <div>
+            <div class="inline-block py-2 px-4 rounded bg-dark text-brand-700 text-[10px] font-black uppercase tracking-[0.3em] mb-2">
+              <span class="text-ly">Our Approach</span>
+            </div>
+            <h2 class="font-bold text-dark mb-0" style="font-weight: 600">
+              How We <span class="text-ly">Deliver</span> Results
+            </h2>
           </div>
-          <div class="step-arrow bg-slate-800 text-white p-8 mb-4 md:mb-0 hover:scale-[1.02] transition-all">
-            <div class="text-4xl font-black mb-4 opacity-80">02</div>
-            <h5 class="font-bold text-lr mb-2 d-block">Design &amp; Build</h5>
-            <small class="text-sm text-slate-300">Every screen is built against the strategy, not a template.</small>
-            <p class="text-xs uppercase tracking-wider text-slate-500 mt-3 mb-0">Weeks 2–6</p>
+          <p class="motion-text text-slate-800 max-w-sm mb-0">
+            Every engagement follows a proven framework that balances creative ambition with strategic execution. We don't just build websites — we engineer growth systems.
+          </p>
+        </div>
+        <div class="att-process-steps">
+          <div class="att-process-step" data-step="01">
+            <div class="att-ps-icon">
+              <span class="material-symbols-outlined">manage_search</span>
+            </div>
+            <div class="att-ps-title">Audit &amp; Strategy</div>
+            <div class="att-ps-desc">Deep-dive into your brand, audience, and current digital presence. We map the competitive landscape and identify exactly where you're losing ground before recommending anything.</div>
+            <div class="att-ps-week">Week 1–2</div>
           </div>
-          <div class="step-arrow bg-slate-700 text-white p-8 mb-4 md:mb-0 hover:scale-[1.02] transition-all">
-            <div class="text-4xl font-black mb-4 opacity-80">03</div>
-            <h5 class="font-bold text-ly mb-2 d-block">Launch</h5>
-            <small class="text-sm text-slate-100">We deploy carefully and watch real performance from day one.</small>
-            <p class="text-xs uppercase tracking-wider text-slate-300 mt-3 mb-0">Week 6–7</p>
+          <div class="att-process-step" data-step="02">
+            <div class="att-ps-icon">
+              <span class="material-symbols-outlined">design_services</span>
+            </div>
+            <div class="att-ps-title">Design &amp; Build</div>
+            <div class="att-ps-desc">Information architecture, user flow, and visual execution — built against the strategy, not a template. Every pixel earns its place with intention.</div>
+            <div class="att-ps-week">Weeks 2–6</div>
           </div>
-          <div class="step-arrow bg-slate-600 text-slate-900 p-8 mb-4 md:mb-0 hover:scale-[1.02] transition-all">
-            <div class="text-4xl font-black mb-4 opacity-80">04</div>
-            <h5 class="font-bold text-lb mb-2 d-block">Optimize &amp; Scale</h5>
-            <small class="text-sm text-slate-300">We keep tuning against live data long after launch day.</small>
-            <p class="text-xs uppercase tracking-wider text-slate-700 mt-3 mb-0">Ongoing</p>
+          <div class="att-process-step" data-step="03">
+            <div class="att-ps-icon">
+              <span class="material-symbols-outlined">rocket_launch</span>
+            </div>
+            <div class="att-ps-title">Launch</div>
+            <div class="att-ps-desc">Performance-optimized deployment with careful QA. We watch real metrics from day one, not after a cooling-off period.</div>
+            <div class="att-ps-week">Week 6–7</div>
+          </div>
+          <div class="att-process-step" data-step="04">
+            <div class="att-ps-icon">
+              <span class="material-symbols-outlined">trending_up</span>
+            </div>
+            <div class="att-ps-title">Optimize &amp; Scale</div>
+            <div class="att-ps-desc">Ongoing analytics monitoring to iterate and compound results. We keep tuning against live data long after launch day — not just hand off and disappear.</div>
+            <div class="att-ps-week">Ongoing</div>
           </div>
         </div>
       </div>
@@ -895,79 +1128,136 @@ onBeforeUnmount(() => {
       <!-- legacy services grid — kept hidden -->
     </div>
 
-    <section class="section section-padding-2 bg-color-white">
-      <div class="container-fluid">
-        <div class="section-heading heading-left">
-          <span class="subtitle">Recent Work</span>
-          <h2 class="title">
-            <span class="gradient-text yellow-light">Real Projects.</span> Real Outcomes.
+    <!-- ============================================================
+         RECENT WORK — Numbered row list (reference: On Going Projects)
+         ============================================================ -->
+    <section class="att-work-section" id="work">
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-5 gap-2">
+        <div>
+          <div class="inline-block py-2 px-4 rounded bg-dark text-brand-700 text-[10px] font-black uppercase tracking-[0.3em] mb-2">
+            <span class="text-ly">Recent Work</span>
+          </div>
+          <h2 class="font-bold text-dark mb-0" style="font-weight: 600">
+            <span class="text-ly">Real Projects.</span> Real Outcomes.
           </h2>
         </div>
-        <div class="">
-          <div class="row">
-            <div class="col-md-10 mx-md-auto col-lg-6 project branding">
-              <div class="project-grid">
-                <div class="thumbnail">
-                  <a href="project/steadyasset" aria-label="SteadyAsset">
-                    <img src="../assets/img/project/c4/project-thum-sa.png" alt="project" />
-                    <div class="content">
-                      <h3 class="title"><a href="project/steadyasset">SteadyAsset</a></h3>
-                      <span class="subtitle">Brand identity, UI/UX, and website for an investment platform</span>
-                    </div>
-                  </a>
-                </div>
+        <p class="motion-text text-slate-800 max-w-sm mb-0">
+          Real projects. Real outcomes. Each crafted to convert and designed to last.
+        </p>
+      </div>
+
+      <div class="att-cs-grid">
+        <!-- Row 1 -->
+        <div class="att-cs-item">
+          <div class="att-cs-inner">
+            <div class="att-cs-num">01</div>
+            <div class="att-cs-info">
+              <div class="att-cs-tag">Brand Identity · UI/UX · Website</div>
+              <div class="att-cs-name">SteadyAsset</div>
+            </div>
+            <div class="att-cs-desc">Investment platform brand identity, conversion-focused UI/UX, and full website build with a live ROAS tracking overlay.</div>
+            <div class="att-cs-metrics">
+              <div class="att-cs-metric">
+                <span class="att-cs-metric-val">8.44x</span>
+                <span class="att-cs-metric-label">ROAS</span>
               </div>
             </div>
-            <div class="col-md-10 mx-md-auto col-lg-6 project branding">
-              <div class="project-grid">
-                <div class="thumbnail">
-                  <a href="project/savedesk" aria-label="SaveDesk">
-                    <img src="../assets/img/project/c7/project-thum-sd.png" alt="project" />
-                    <div class="content">
-                      <h3 class="title"><a href="project/savedesk">SaveDesk</a></h3>
-                      <span class="subtitle">Full redesign, from wireframes to high-fidelity UI/UX</span>
-                    </div>
-                  </a>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-10 mx-md-auto col-lg-6 project branding">
-              <div class="project-grid">
-                <div class="thumbnail">
-                  <a href="project/samsiddhi-designs" aria-label="Samsiddhi Designs">
-                    <img src="../assets/img/project/c9/project-thum-sd.png" alt="project" />
-                    <div class="content">
-                      <h3 class="title"><a href="project/samsiddhi-designs">Samsiddhi Designs</a></h3>
-                      <span class="subtitle">Brand identity, UI/UX, and website for an interior design firm</span>
-                    </div>
-                  </a>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-10 mx-md-auto col-lg-6 project branding">
-              <div class="project-grid">
-                <div class="thumbnail">
-                  <a href="project/uae-links" aria-label="UAE Links">
-                    <img src="../assets/img/project/c1/project-thum-uaeLinks.png" alt="project" />
-                    <div class="content">
-                      <h3 class="title"><a href="project/uae-links">UAE Links</a></h3>
-                      <span class="subtitle">UI/UX design and website build, with analytics in place</span>
-                    </div>
-                  </a>
-                </div>
-              </div>
-            </div>
+            <a href="project/steadyasset" class="att-cs-arrow" aria-label="View SteadyAsset">
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                <path d="M3 13L13 3M13 3H6M13 3V10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </a>
           </div>
-          <div class="d-lg-flex justify-content-center">
-            <a class="amor-btn btn-borderd light" href="/case-studies">Explore Case Studies</a>
+          <div class="att-cs-preview">
+            <img src="../assets/img/project/c4/project-thum-sa.png" alt="SteadyAsset" />
+          </div>
+        </div>
+        <hr class="att-cs-divider" />
+
+        <!-- Row 2 -->
+        <div class="att-cs-item">
+          <div class="att-cs-inner">
+            <div class="att-cs-num">02</div>
+            <div class="att-cs-info">
+              <div class="att-cs-tag">Full Redesign · UI/UX</div>
+              <div class="att-cs-name">SaveDesk</div>
+            </div>
+            <div class="att-cs-desc">Full redesign from wireframes to high-fidelity UI/UX — restructured IA, new design system, and a measurable lift in task-completion rate.</div>
+            <div class="att-cs-metrics">
+              <div class="att-cs-metric">
+                <span class="att-cs-metric-val">+42%</span>
+                <span class="att-cs-metric-label">Conversion</span>
+              </div>
+            </div>
+            <a href="project/savedesk" class="att-cs-arrow" aria-label="View SaveDesk">
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                <path d="M3 13L13 3M13 3H6M13 3V10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </a>
+          </div>
+          <div class="att-cs-preview">
+            <img src="../assets/img/project/c7/project-thum-sd.png" alt="SaveDesk" />
+          </div>
+        </div>
+        <hr class="att-cs-divider" />
+
+        <!-- Row 3 -->
+        <div class="att-cs-item">
+          <div class="att-cs-inner">
+            <div class="att-cs-num">03</div>
+            <div class="att-cs-info">
+              <div class="att-cs-tag">Brand Identity · UI/UX · Website</div>
+              <div class="att-cs-name">Samsiddhi Designs</div>
+            </div>
+            <div class="att-cs-desc">Brand identity, UI/UX, and full website for an interior design firm. Portfolio-first layout with inquiry flow built to qualify leads, not just showcase work.</div>
+            <div class="att-cs-metrics">
+              <div class="att-cs-metric">
+                <span class="att-cs-metric-val">3.5x</span>
+                <span class="att-cs-metric-label">Pipeline</span>
+              </div>
+            </div>
+            <a href="project/samsiddhi-designs" class="att-cs-arrow" aria-label="View Samsiddhi Designs">
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                <path d="M3 13L13 3M13 3H6M13 3V10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </a>
+          </div>
+          <div class="att-cs-preview">
+            <img src="../assets/img/project/c9/project-thum-sd.png" alt="Samsiddhi Designs" />
+          </div>
+        </div>
+        <hr class="att-cs-divider" />
+
+        <!-- Row 4 -->
+        <div class="att-cs-item">
+          <div class="att-cs-inner">
+            <div class="att-cs-num">04</div>
+            <div class="att-cs-info">
+              <div class="att-cs-tag">UI/UX · Website · Analytics</div>
+              <div class="att-cs-name">UAE Links</div>
+            </div>
+            <div class="att-cs-desc">UI/UX design, full website build, and analytics implementation for a cross-border services platform. Data infrastructure in place from day one.</div>
+            <div class="att-cs-metrics">
+              <div class="att-cs-metric">
+                <span class="att-cs-metric-val">+55%</span>
+                <span class="att-cs-metric-label">Inquiries</span>
+              </div>
+            </div>
+            <a href="project/uae-links" class="att-cs-arrow" aria-label="View UAE Links">
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                <path d="M3 13L13 3M13 3H6M13 3V10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </a>
+          </div>
+          <div class="att-cs-preview">
+            <img src="../assets/img/project/c1/project-thum-uaeLinks.png" alt="UAE Links" />
           </div>
         </div>
       </div>
-      <ul class="shape-group-services list-unstyled">
-        <li class="shape shape-3"><img src="../assets/img/shapes/bubble-14.png" alt="circle" /></li>
-        <li class="shape shape-2"><img src="../assets/img/shapes/line-9.png" alt="Line" /></li>
-        <li class="shape shape-2"><img src="../assets/img/shapes/bubble-2.png" alt="Line" /></li>
-      </ul>
+
+      <div class="d-lg-flex justify-content-center" style="padding: 3rem 0 0">
+        <a class="amor-btn btn-borderd light" href="/case-studies">Explore Case Studies</a>
+      </div>
     </section>
 
     <section class="section section-padding bg-color-light" id="reviews">
@@ -1061,93 +1351,6 @@ onBeforeUnmount(() => {
     </section>
 
     <!-- ============================================================
-         WHY BUSINESSES CHOOSE AMORTREE — Before / After Wipe Grid
-         ============================================================ -->
-    <section class="att-why-section py-28 px-6 bg-white overflow-hidden" id="why-us">
-      <div class="container mx-auto max-w-6xl">
-        <div class="att-why-header mb-20">
-          <div class="inline-block py-2 px-4 rounded bg-dark text-[10px] font-black uppercase tracking-[0.3em] mb-3">
-            <span class="text-ly">The Difference</span>
-          </div>
-          <div class="flex flex-col md:flex-row md:items-end justify-between gap-4">
-            <h2 class="text-3xl font-display font-bold text-dark mb-0 att-why-heading" style="font-weight: 600">
-              Why Businesses<br /><span class="text-ly">Choose Amortree</span>
-            </h2>
-            <p class="att-why-sub text-slate-500 max-w-xs mb-0 text-sm leading-relaxed">
-              Most agencies hand you a deliverable. We build the system the deliverable is supposed to produce.
-            </p>
-          </div>
-        </div>
-
-        <div class="att-why-grid">
-          <!-- Column labels -->
-          <div class="att-why-label-row">
-            <div class="att-col-label att-col-label--before">
-              <span class="att-label-dot att-label-dot--red">
-                <span class="material-icons-outlined" style="font-size: 1rem">close</span>
-              </span>
-              <p class="mb-0">Typical Agency</p>
-            </div>
-            <div class="att-col-label att-col-label--after">
-              <span class="att-label-dot att-label-dot--green">
-                <span class="material-icons-outlined" style="font-size: 1rem">check</span>
-              </span>
-              <p class="mb-0">Amortree</p>
-            </div>
-          </div>
-
-          <!-- Pair 1 -->
-          <div class="att-why-pair">
-            <div class="att-why-cell att-cell-before">
-              <span class="material-symbols-outlined att-cell-icon">bolt</span>
-              <p class="att-cell-label">Designs first, asks strategy questions later — if at all.</p>
-            </div>
-            <div class="att-why-cell att-cell-after">
-              <span class="material-symbols-outlined att-cell-icon">target</span>
-              <p class="att-cell-label"><strong>Strategy before screens.</strong> Every visual decision traces back to a defined conversion goal.</p>
-            </div>
-          </div>
-
-          <!-- Pair 2 -->
-          <div class="att-why-pair">
-            <div class="att-why-cell att-cell-before">
-              <span class="material-symbols-outlined att-cell-icon">thumb_down</span>
-              <p class="att-cell-label">Measures success by deliverables shipped, not revenue moved.</p>
-            </div>
-            <div class="att-why-cell att-cell-after">
-              <span class="material-symbols-outlined att-cell-icon">trending_up</span>
-              <p class="att-cell-label"><strong>Measured against business results.</strong> We track conversion lift, pipeline velocity, and ROAS — not just task completion.</p>
-            </div>
-          </div>
-
-          <!-- Pair 3 -->
-          <div class="att-why-pair">
-            <div class="att-why-cell att-cell-before">
-              <span class="material-symbols-outlined att-cell-icon">casino</span>
-              <p class="att-cell-label">Creative direction based on gut feel and trend-chasing.</p>
-            </div>
-            <div class="att-why-cell att-cell-after">
-              <span class="material-symbols-outlined att-cell-icon">analytics</span>
-              <p class="att-cell-label"><strong>Decisions backed by data.</strong> We audit your current metrics before recommending a single screen.</p>
-            </div>
-          </div>
-
-          <!-- Pair 4 -->
-          <div class="att-why-pair">
-            <div class="att-why-cell att-cell-before">
-              <span class="material-symbols-outlined att-cell-icon">logout</span>
-              <p class="att-cell-label">Hands off the file and disappears after launch day.</p>
-            </div>
-            <div class="att-why-cell att-cell-after">
-              <span class="material-symbols-outlined att-cell-icon">handshake</span>
-              <p class="att-cell-label"><strong>A partner past launch day.</strong> We keep tuning against live data long after the site goes live.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ============================================================
          FAQ — Numbered Tab Rail + Expanding Stage
          ============================================================ -->
     <section class="att-faq-section py-28 px-6 bg-color-light overflow-hidden" id="faq">
@@ -1157,7 +1360,7 @@ onBeforeUnmount(() => {
             <span class="text-ly">Common Questions</span>
           </div>
           <h2 class="att-faq-heading text-3xl font-display font-bold text-dark mb-3" style="font-weight: 600">
-            Before You <span class="text-ly">Book the Call</span>
+            Questions Founders Usually Ask
           </h2>
           <p class="att-faq-sub text-slate-500 max-w-md mx-auto mb-0 text-sm">
             The questions founders and business owners ask most before starting a project with us.
@@ -1167,24 +1370,24 @@ onBeforeUnmount(() => {
         <!-- Tab Rail -->
         <div class="att-faq-rail" role="tablist" aria-label="FAQ topics">
           <button class="att-faq-tab att-tab-active" data-tab="0" role="tab" aria-selected="true" aria-controls="att-faq-stage">
-            <p class="att-tab-num mb-0">01</p>
-            <p class="att-tab-q mb-0">Pricing</p>
+            <span class="att-tab-num">01</span>
+            <span class="att-tab-q">Pricing</span>
           </button>
           <button class="att-faq-tab" data-tab="1" role="tab" aria-selected="false" aria-controls="att-faq-stage">
-            <p class="att-tab-num mb-0">02</p>
-            <p class="att-tab-q mb-0">Timeline</p>
+            <span class="att-tab-num">02</span>
+            <span class="att-tab-q">Timeline</span>
           </button>
           <button class="att-faq-tab" data-tab="2" role="tab" aria-selected="false" aria-controls="att-faq-stage">
-            <p class="att-tab-num mb-0">03</p>
-            <p class="att-tab-q mb-0">Scope</p>
+            <span class="att-tab-num">03</span>
+            <span class="att-tab-q">Scope</span>
           </button>
           <button class="att-faq-tab" data-tab="3" role="tab" aria-selected="false" aria-controls="att-faq-stage">
-            <p class="att-tab-num mb-0">04</p>
-            <p class="att-tab-q mb-0">Industries</p>
+            <span class="att-tab-num">04</span>
+            <span class="att-tab-q">Industries</span>
           </button>
           <button class="att-faq-tab" data-tab="4" role="tab" aria-selected="false" aria-controls="att-faq-stage">
-            <p class="att-tab-num mb-0">05</p>
-            <p class="att-tab-q mb-0">Process</p>
+            <span class="att-tab-num">05</span>
+            <span class="att-tab-q">Process</span>
           </button>
         </div>
 
@@ -1244,14 +1447,14 @@ onBeforeUnmount(() => {
     <section class="home-motion-section py-24 px-6 bg-dark" style="background: linear-gradient(135deg, #0f0f0f 0%, #000000 100%)">
       <div class="container mx-auto max-w-3xl text-center">
         <h2 class="text-3xl md:text-4xl font-display font-bold mb-4 text-white" style="font-weight: 600">
-          Still Deciding?
+          Ready to Build Your Next Growth System?
         </h2>
         <p class="motion-text text-slate-300 max-w-xl mx-auto mb-10">
           A 20-minute call costs you nothing and tells you exactly where your site is leaving leads on the table.
         </p>
         <div class="d-flex justify-content-center gap-3 flex-wrap">
           <a class="amor-btn btn-fill-primary btn-large"
-            href="/Contact">Book Your Free Strategy Call</a>
+            href="https://wa.me/917975859061/?text=I%27d%20like%20to%20book%20a%20free%20strategy%20call.">Book Your Free Strategy Call</a>
           <a href="/estimate" class="amor-btn btn-borderd light">Get a Project Estimate</a>
         </div>
         <p class="mt-5 text-center text-slate-500 text-xs mb-0">
@@ -1412,8 +1615,8 @@ onBeforeUnmount(() => {
   }
 
   .att-label-dot {
-    width: 1.45rem;
-    height: 1.45rem;
+    width: 18px;
+    height: 18px;
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -1469,7 +1672,7 @@ onBeforeUnmount(() => {
 }
 
 .att-cell-label {
-  font-size: 1rem;
+  font-size: 0.875rem;
   line-height: 1.6;
   margin: 0;
 }
@@ -1607,10 +1810,357 @@ onBeforeUnmount(() => {
   &:hover { gap: 0.5rem; color: #eab308; }
 }
 
-@media (max-width: 640px) {
-  .att-faq-stage { padding: 1.5rem 1.25rem; }
-  .att-faq-rail { gap: 0.25rem; }
-  .att-faq-tab { padding: 0.6rem 0.75rem 0.75rem; }
-  .att-tab-q { font-size: 0.72rem; }
+
+// ─── Recent Work — Numbered Row List ─────────────────────────────────────────
+.att-work-section {
+  padding: 8rem 4rem;
+  background: var(--color-bg-white, #fff);
+
+  @media (max-width: 1100px) { padding: 5rem 2rem; }
+  @media (max-width: 768px)  { padding: 4rem 1.25rem; }
 }
+
+.att-work-header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  margin-bottom: 4rem;
+  gap: 2rem;
+
+  @media (max-width: 768px) { flex-direction: column; align-items: flex-start; margin-bottom: 2.5rem; }
+}
+
+.att-work-title {
+  font-size: clamp(3.2rem, 8vw, 7.5rem);
+  font-weight: 600;
+  line-height: 0.92;
+  letter-spacing: -0.01em;
+  color: #0f172a;
+  will-change: transform, opacity;
+}
+
+.att-work-header-right {
+  text-align: right;
+  font-size: 0.85rem;
+  color: #64748b;
+  line-height: 1.7;
+  max-width: 260px;
+
+  @media (max-width: 768px) { text-align: left; max-width: 100%; }
+}
+
+.att-cs-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.att-cs-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 16px;
+  background: #f8fafc;
+  cursor: pointer;
+  transition: background 0.35s ease;
+
+  &:hover { background: #f1f5f9; }
+}
+
+.att-cs-inner {
+  display: grid;
+  grid-template-columns: 80px 1fr 1fr auto auto;
+  align-items: center;
+  gap: 2.5rem;
+  padding: 4rem 2.5rem;
+  will-change: transform;
+
+  @media (max-width: 1100px) { grid-template-columns: 60px 1fr 1fr auto; }
+  @media (max-width: 768px)  {
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+    padding: 1.5rem;
+  }
+}
+
+.att-cs-num {
+  font-size: clamp(2rem, 3vw, 3rem);
+  font-weight: 900;
+  color: rgba(15, 23, 42, 0.08);
+  line-height: 1;
+  transition: color 0.3s ease;
+  font-variant-numeric: tabular-nums;
+
+  .att-cs-item:hover & { color: #facc15; opacity: 0.55; }
+
+  @media (max-width: 768px) { display: none; }
+}
+
+.att-cs-info {
+  min-width: 0;
+}
+
+.att-cs-tag {
+  font-size: 0.65rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #94a3b8;
+  margin-bottom: 0.35rem;
+  font-weight: 500;
+}
+
+.att-cs-name {
+  font-size: clamp(1.6rem, 2.8vw, 2.8rem);
+  font-weight: 700;
+  color: #0f172a;
+  line-height: 1;
+  letter-spacing: -0.01em;
+  transition: color 0.3s ease;
+
+  .att-cs-item:hover & { color: #facc15; }
+}
+
+.att-cs-desc {
+  font-size: 0.88rem;
+  color: #64748b;
+  line-height: 1.65;
+  font-weight: 400;
+  transition: color 0.3s ease;
+
+  .att-cs-item:hover & { color: #475569; }
+}
+
+.att-cs-metrics {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  align-items: flex-end;
+
+  @media (max-width: 1100px) { display: none; }
+}
+
+.att-cs-metric {
+  display: flex;
+  align-items: baseline;
+  gap: 0.4rem;
+}
+
+.att-cs-metric-val {
+  font-size: 1.5rem;
+  font-weight: 900;
+  color: #facc15;
+  line-height: 1;
+  font-variant-numeric: tabular-nums;
+}
+
+.att-cs-metric-label {
+  font-size: 0.65rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #94a3b8;
+  font-weight: 500;
+}
+
+.att-cs-arrow {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: 1px solid rgba(15, 23, 42, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #94a3b8;
+  text-decoration: none;
+  flex-shrink: 0;
+  transition: border-color 0.3s, background 0.3s, color 0.3s;
+  will-change: transform;
+
+  .att-cs-item:hover & {
+    border-color: #facc15;
+    background: #facc15;
+    color: #0f172a;
+  }
+}
+
+// Hover preview — slides in from right
+.att-cs-preview {
+  position: absolute;
+  top: 50%;
+  right: -220px;
+  width: 200px;
+  height: 130px;
+  border-radius: 10px;
+  overflow: hidden;
+  transform: translateY(-50%);
+  opacity: 0;
+  pointer-events: none;
+  z-index: 10;
+  visibility: hidden;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.att-cs-divider {
+  height: 1px;
+  background: rgba(15, 23, 42, 0.05);
+  border: none;
+  margin: 0;
+}
+
+// ─── Process — 4-Step Grid ───────────────────────────────────────────────────
+.att-process-section {
+  padding: 8rem 4rem;
+  background: #f8fafc;
+  border-top: 1px solid rgba(15, 23, 42, 0.05);
+
+  @media (max-width: 1100px) { padding: 5rem 2rem; }
+  @media (max-width: 768px)  { padding: 4rem 1.25rem; }
+}
+
+.att-process-inner {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.att-process-header {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: flex-end;
+  margin-bottom: 5rem;
+
+  @media (max-width: 768px) { grid-template-columns: 1fr; gap: 1.5rem; margin-bottom: 3rem; }
+}
+
+.att-section-label {
+  font-size: 0.65rem;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: #facc15;
+  margin-bottom: 1.25rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-weight: 700;
+
+  &::before {
+    content: '';
+    width: 28px;
+    height: 1px;
+    background: #facc15;
+    flex-shrink: 0;
+  }
+}
+
+.att-process-title {
+  font-size: clamp(2.8rem, 5.5vw, 5.5rem);
+  font-weight: 700;
+  line-height: 0.9;
+  color: #0f172a;
+  will-change: transform, opacity;
+}
+
+.att-process-sub {
+  font-size: 0.95rem;
+  color: #64748b;
+  line-height: 1.75;
+  font-weight: 400;
+  will-change: transform, opacity;
+}
+
+.att-process-steps {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1px;
+  background: rgba(15, 23, 42, 0.07);
+  border-radius: 16px;
+  overflow: hidden;
+
+  @media (max-width: 900px)  { grid-template-columns: repeat(2, 1fr); }
+  @media (max-width: 480px)  { grid-template-columns: 1fr; }
+}
+
+.att-process-step {
+  background: #f8fafc;
+  padding: 2.5rem 2rem;
+  position: relative;
+  overflow: hidden;
+  transition: background 0.35s ease;
+  will-change: transform, opacity;
+
+  &:hover { background: #f1f5f9; }
+
+  // Ghost step number — decorative
+  &::before {
+    content: attr(data-step);
+    position: absolute;
+    top: -1rem;
+    right: 1.25rem;
+    font-size: 7rem;
+    font-weight: 900;
+    color: rgba(15, 23, 42, 0.04);
+    line-height: 1;
+    pointer-events: none;
+    transition: color 0.35s ease;
+    font-variant-numeric: tabular-nums;
+  }
+
+  &:hover::before { color: rgba(250, 204, 21, 0.07); }
+}
+
+.att-ps-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  background: rgba(250, 204, 21, 0.1);
+  border: 1px solid rgba(250, 204, 21, 0.22);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 2rem;
+  color: #facc15;
+
+  .material-symbols-outlined { font-size: 1.25rem; }
+}
+
+.att-ps-title {
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: #0f172a;
+  letter-spacing: 0.01em;
+  margin-bottom: 0.6rem;
+}
+
+.att-ps-desc {
+  font-size: 0.83rem;
+  color: #64748b;
+  line-height: 1.72;
+  font-weight: 400;
+  margin-bottom: 1rem;
+}
+
+.att-ps-week {
+  font-size: 0.62rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #94a3b8;
+  font-weight: 600;
+  margin-top: auto;
+}
+
+// Bottom-border swipe line — injected by GSAP
+.att-ps-hover-line {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: #facc15;
+  pointer-events: none;
+  will-change: width;
+}
+
 </style>
