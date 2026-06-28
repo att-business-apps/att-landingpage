@@ -60,47 +60,47 @@ const router = createRouter({
 
     // Services
     {
-      path: "/services/website-design",
+      path: "/website-design",
       name: "website-design",
       component: () => import("../views/services/WebsiteDesignView.vue"),
     },
     {
-      path: "/services/web-development",
+      path: "/web-development",
       name: "website-development",
       component: () => import("../views/services/WebDevelopmentView.vue"),
     },
     {
-      path: "/services/ui-ux-design",
+      path: "/ui-ux-design",
       name: "ui-ux-design",
       component: () => import("../views/services/UIUXDesignView.vue"),
     },
     {
-      path: "/services/ecommerce-development",
+      path: "/ecommerce-development",
       name: "ecommerce-development",
       component: () => import("../views/services/EcommerceDevelopmentView.vue"),
     },
     {
-      path: "/services/shopify-development",
+      path: "/shopify-development",
       name: "shopify-development",
       component: () => import("../views/services/ShopifyDevelopmentView.vue"),
     },
     {
-      path: "/services/seo",
+      path: "/seo",
       name: "seo",
       component: () => import("../views/services/SEOView.vue"),
     },
     {
-      path: "/services/digital-marketing",
+      path: "/digital-marketing",
       name: "digital-marketing",
       component: () => import("../views/services/DigitalMarketingView.vue"),
     },
     {
-      path: "/services/branding",
+      path: "/branding",
       name: "branding",
       component: () => import("../views/services/BrandingView.vue"),
     },
     {
-      path: "/services/website-maintenance",
+      path: "/website-maintenance",
       name: "website-maintenance",
       component: () => import("../views/services/WebsiteMaintenanceView.vue"),
     },
