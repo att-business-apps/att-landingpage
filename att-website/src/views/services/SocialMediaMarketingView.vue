@@ -8,11 +8,11 @@
                 <ul class="list-unstyled">
                     <li><a href="/">Home</a></li>
                     <li><a href="/services">Services</a></li>
-                    <li class="active text-ly">Digital Marketing</li>
+                    <li class="active text-ly">Social Media Marketing</li>
                 </ul>
                 <div class="section-heading heading-left">
                 <h1 class="title h2 mb-0">
-                    Digital Marketing That Delivers Measurable Business Growth.
+                    Social Media Marketing That Delivers Measurable Business Growth.
                 </h1>
                 <p>
                     From strategy to execution, we create data-driven campaigns that generate leads, increase brand awareness, and maximize ROI.

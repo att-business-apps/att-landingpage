@@ -7,8 +7,8 @@
             >
                 <ul class="list-unstyled">
                     <li><a href="/">Home</a></li>
-                    <li><a href="/">Services</a></li>
-                    <li class="active text-lr">Shopify Development</li>
+                    <li><a href="/services">Services</a></li>
+                    <li class="active text-ly">Shopify Development</li>
                 </ul>
                 <div class="section-heading heading-left">
                 <h1 class="title h2 mb-0">

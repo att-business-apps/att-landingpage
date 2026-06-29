@@ -7,8 +7,8 @@
             >
                 <ul class="list-unstyled">
                     <li><a href="/">Home</a></li>
-                    <li><a href="/">Services</a></li>
-                    <li class="active text-lr">Branding</li>
+                    <li><a href="/services">Services</a></li>
+                    <li class="active text-ly">Branding</li>
                 </ul>
                 <div class="section-heading heading-left">
                 <h1 class="title h2 mb-0">

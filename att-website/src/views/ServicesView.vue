@@ -1,23 +1,169 @@
 <script setup>
+import { onBeforeUnmount, onMounted } from "vue";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
+gsap.registerPlugin(ScrollTrigger);
+
+const services = [
+  {
+    icon: "palette",
+    tag: "Design",
+    title: "Website Design",
+    desc: "Build trust, strengthen credibility, and convert more visitors with strategic, conversion-focused website design.",
+    bestFor: ["Startups", "Professional Services"],
+    href: "/website-design",
+  },
+  {
+    icon: "code",
+    tag: "Engineering",
+    title: "Web Development",
+    desc: "Launch fast, scalable websites engineered to support long-term business growth.",
+    bestFor: ["SaaS", "Growing Businesses"],
+    href: "/web-development",
+  },
+  {
+    icon: "design_services",
+    tag: "Experience",
+    title: "UI/UX Design",
+    desc: "Deliver intuitive digital experiences that increase engagement and improve conversions.",
+    bestFor: ["Product Teams", "Startups"],
+    href: "/ui-ux-design",
+  },
+  {
+    icon: "shopping_bag",
+    tag: "Commerce",
+    title: "Ecommerce Development",
+    desc: "Increase online sales with ecommerce experiences optimized for conversions and customer retention.",
+    bestFor: ["D2C Brands", "Retailers"],
+    href: "/ecommerce-development",
+  },
+  {
+    icon: "hub",
+    tag: "Growth",
+    title: "Lead Generation",
+    desc: "Build a predictable pipeline of qualified leads—not just website traffic.",
+    bestFor: ["B2B Companies", "Service Businesses"],
+    href: "/lead-generation",
+  },
+  {
+    icon: "storefront",
+    tag: "Commerce",
+    title: "Shopify Development",
+    desc: "Grow revenue with Shopify stores optimized for conversions and repeat purchases.",
+    bestFor: ["Shopify Stores", "D2C Brands"],
+    href: "/shopify-development",
+  },
+  {
+    icon: "manage_search",
+    tag: "Visibility",
+    title: "SEO",
+    desc: "Get found by the right customers and generate sustainable organic growth.",
+    bestFor: ["Local Businesses", "SaaS"],
+    href: "/seo",
+  },
+  {
+    icon: "campaign",
+    tag: "Acquisition",
+    title: "Digital Marketing",
+    desc: "Generate qualified leads and maximize marketing ROI with measurable, performance-driven campaigns.",
+    bestFor: ["Real Estate", "Healthcare"],
+    href: "/digital-marketing",
+  },
+  {
+    icon: "groups",
+    tag: "Social",
+    title: "Social Media Marketing",
+    desc: "Build a stronger brand presence and convert engagement into business opportunities.",
+    bestFor: ["Consumer Brands", "Startups"],
+    href: "/social-media-marketing",
+  },
+  {
+    icon: "work",
+    tag: "Social",
+    title: "LinkedIn Marketing",
+    desc: "Connect with decision-makers and generate high-quality B2B opportunities.",
+    bestFor: ["B2B Companies", "Founders"],
+    href: "/linkedin-marketing",
+  },
+  {
+    icon: "auto_awesome",
+    tag: "Identity",
+    title: "Branding",
+    desc: "Create a memorable brand that earns trust, stands out, and supports long-term business growth.",
+    bestFor: ["Startups", "New Businesses"],
+    href: "/branding",
+  },
+  {
+    icon: "build",
+    tag: "Support",
+    title: "Website Maintenance",
+    desc: "Protect your investment with continuous improvements that keep your website secure, fast, and reliable.",
+    bestFor: ["All Businesses", "Live Sites"],
+    href: "/website-maintenance",
+  },
+];
+
+let gsapContext;
+
+onMounted(() => {
+  gsapContext = gsap.context(() => {
+    gsap.from(".svc-hero-eyebrow, .svc-hero-title, .svc-hero-sub", {
+      y: 28,
+      autoAlpha: 0,
+      duration: 0.8,
+      stagger: 0.1,
+      ease: "power3.out",
+    });
+
+    gsap.utils.toArray(".svc-card").forEach((card, i) => {
+      gsap.from(card, {
+        y: 50,
+        autoAlpha: 0,
+        duration: 0.7,
+        delay: (i % 3) * 0.08,
+        ease: "power3.out",
+        scrollTrigger: {
+          trigger: card,
+          start: "top 88%",
+          once: true,
+        },
+      });
+    });
+
+    gsap.from(".svc-cta-inner", {
+      y: 30,
+      autoAlpha: 0,
+      duration: 0.8,
+      ease: "power3.out",
+      scrollTrigger: {
+        trigger: ".svc-cta-section",
+        start: "top 80%",
+        once: true,
+      },
+    });
+  });
+});
+
+onBeforeUnmount(() => {
+  gsapContext && gsapContext.revert();
+});
 </script>
 
 <template>
   <div class="breadcrum-area breadcrumb-banner">
-    <div class="container-fluid">
+    <div class="container">
       <div class="breadcrumb animate__animated fadeInUp" style="animation-duration: 2s">
         <ul class="list-unstyled">
           <li><a href="/">Home</a></li>
-          <li class="active text-lb">Services</li>
+          <li class="active">Services</li>
         </ul>
         <div class="section-heading heading-left">
-          <h1 class="title h2 mb-0">Professional Web Development & IT Services Company</h1>
-          <p>Leading web development company specializing in custom website design, UI/UX services, mobile app
-            development, and DevOps solutions. We combine creativity and technology to deliver seamless digital
-            experiences.</p>
+          <h1 class="title h2 mb-0">Digital Services That Build Trust, Generate Leads & Drive Growth</h1>
+          <p>Every service is built around one objective: helping your business attract better customers, convert more visitors, and grow with confidence.</p>
         </div>
       </div>
-      <div class="banner-thumbnail bottom-0">
+      <div class="banner-thumbnail ">
         <div class=""
           style="position: relative; will-change: transform; transform: perspective(2000px) rotateX(-0.32deg) rotateY(-11.76deg) scale3d(1, 1, 1);">
           <img src="../assets/img/amorboy/am-service.png" class="w-75 animate__animated slideInRight"
@@ -25,899 +171,301 @@
         </div>
       </div>
     </div>
-    <ul class="shape-group-breadcrum-1 list-unstyled">
-      <li class="shape shape-2 sal-animate" data-sal="slide-left" data-sal-duration="500" data-sal-delay="200">
-        <img src="../assets/img/shapes/bubble-10.png" alt="circle">
-      </li>
-      <li class="shape shape-3 sal-animate" data-sal="slide-up" data-sal-duration="500" data-sal-delay="300">
-        <img src="../assets/img/shapes/line-5.png" alt="circle">
-      </li>
-    </ul>
   </div>
 
-  <div class="service-scroll-navigation-area">
-    <!-- Service Nav -->
-    <nav id="onepagenav" class="service-scroll-nav navbar onepagefixed">
-      <div class="container-fluid">
-        <ul class="nav nav-pills">
-          <li class="nav-item current">
-            <a class="nav-link" href="#research">Research</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#branding">Branding</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#logoDesign">Logo Design</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#website">Website</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#mobileAppUiUx">Mobile App UI/UX</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#digitalMarketing">Digital Marketing</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#devOps">DevOps</a>
-          </li>
-        </ul>
-      </div>
-    </nav>
-    <!-- Research Service -->
-    <div class="section section-padding" id="research">
-      <div class="container">
-        <div class="section-heading heading-left">
-          <h2 class="title text-lb">Research &amp; Strategy</h2>
-          <p>We believe that great design and development are born from thorough research and strategic planning. Our
-            research-driven approach helps us craft solutions that are not only visually appealing but also aligned with
-            market trends, user needs, and business goals.</p>
-        </div>
-        <div class="section-heading heading-left mb-4">
-          <span class="subtitle">What We Offer</span>
-        </div>
-        <div class="row">
-          <div class="col-md-6 sal-animate" data-sal="slide-up" data-sal-duration="800" data-sal-delay="100">
-            <div class="services-grid service-card-style">
-              <div class="thumbnail">
-                <img src="../assets/img/icon/research-1.png" alt="icon">
-              </div>
-              <div class="content">
-                <h5 class="title">Market &amp; Competitor Analysis</h5>
-                <p class="mb-2">We conduct in-depth research to understand your industry, target audience, and
-                  competitors. This
-                  helps us identify opportunities and define a clear strategy that sets your brand apart.</p>
-              </div>
+  <!-- Services Grid -->
+  <section class="svc-grid-section">
+    <div class="svc-grid-inner">
+      <div class="svc-grid">
+        <a
+          v-for="service in services"
+          :key="service.href"
+          :href="service.href"
+          class="svc-card group"
+        >
+          <div class="svc-card-top">
+            <div class="svc-card-icon">
+              <span class="material-symbols-outlined">{{ service.icon }}</span>
+            </div>
+            <span class="svc-card-tag">{{ service.tag }}</span>
+          </div>
+
+          <h3 class="svc-card-title">{{ service.title }}</h3>
+          <p class="svc-card-desc">{{ service.desc }}</p>
+
+          <div class="svc-card-best-for">
+            <span class="svc-card-best-for-label">Best for</span>
+            <div class="svc-card-best-for-tags">
+              <span v-for="tag in service.bestFor" :key="tag" class="svc-card-tag-pill">{{ tag }}</span>
             </div>
           </div>
 
-          <div class="col-md-6 sal-animate" data-sal="slide-up" data-sal-duration="800" data-sal-delay="200">
-            <div class="services-grid service-card-style">
-              <div class="thumbnail">
-                <img src="../assets/img/icon/research-2.png" alt="icon">
-              </div>
-              <div class="content">
-                <h5 class="title">User Research</h5>
-                <p class="mb-2">Understanding user behavior is key to design effective solutions. We gather insights
-                  through surveys, interviews, and user testing to ensure that your brand resonates with your target
-                  audience.
-                </p>
-              </div>
-            </div>
+          <div class="svc-card-cta">
+            <span>Learn more</span>
+            <svg width="14" height="14" viewBox="0 0 16 16" fill="none">
+              <path
+                d="M3 13L13 3M13 3H6M13 3V10"
+                stroke="currentColor"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
           </div>
-
-          <div class="col-md-6 sal-animate" data-sal="slide-up" data-sal-duration="800" data-sal-delay="300">
-            <div class="services-grid service-card-style">
-              <div class="thumbnail">
-                <img src="../assets/img/icon/research-3.png" alt="icon">
-              </div>
-              <div class="content">
-                <h5 class="title">Brand Positioning</h5>
-                <p class="mb-2">We help define your brand’s unique value proposition and position in the market,
-                  ensuring that your
-                  messaging is clear, compelling, and distinct.</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-md-6 sal-animate" data-sal="slide-up" data-sal-duration="800" data-sal-delay="100">
-            <div class="services-grid service-card-style">
-              <div class="thumbnail">
-                <img src="../assets/img/icon/research-4.png" alt="icon">
-              </div>
-              <div class="content">
-                <h5 class="title">Strategic Roadmaps</h5>
-                <p class="mb-2">Based on our research, we create a comprehensive strategy roadmap that guides the entire
-                  design and
-                  development process, ensuring all efforts are aligned with your business objectives.</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-md-6 sal-animate" data-sal="slide-up" data-sal-duration="800" data-sal-delay="200">
-            <div class="services-grid service-card-style">
-              <div class="thumbnail">
-                <img src="../assets/img/icon/research-5.png" alt="icon">
-              </div>
-              <div class="content">
-                <h5 class="title">User Experience (UX) Strategy</h5>
-                <p class="mb-2">We create UX strategies that focus on enhancing user satisfaction by improving the
-                  usability,
-                  accessibility, and overall experience of your digital products.</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-md-6 sal-animate" data-sal="slide-up" data-sal-duration="800" data-sal-delay="200">
-            <div class="services-grid service-card-style">
-              <div class="thumbnail">
-                <img src="../assets/img/icon/research-6.png" alt="icon">
-              </div>
-              <div class="content">
-                <h5 class="title">Content Strategy</h5>
-                <p class="mb-2">Our team develops content strategies that align with your brand’s voice and resonate
-                  with your target
-                  audience, ensuring consistent and engaging communication across all platforms.</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-md-6 sal-animate" data-sal="slide-up" data-sal-duration="800" data-sal-delay="200">
-            <div class="services-grid service-card-style">
-              <div class="thumbnail">
-                <img src="../assets/img/icon/research-7.png" alt="icon">
-              </div>
-              <div class="content">
-                <h5 class="title">Data-Driven Decision Making</h5>
-                <p class="mb-2">We use data insights to inform our design and development decisions, helping you
-                  optimize your
-                  digital presence and stay ahead of market trends.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="section-heading heading-left w-100">
-          <span class="subtitle">Why choose us?</span>
-          <p>At amortree Tech, our research and strategy services provide a solid foundation for success. By combining
-            market insights with creative thinking, we ensure that every project is guided by a well-defined plan,
-            tailored to meet your unique business needs.</p>
-        </div>
-        <div class="d-flex justify-content-center gap-3 mt-5">
-          <a class="amor-btn btn-fill-primary btn-large" href="contact">Get Started</a>
-          <a href="/case-studies" class="amor-btn btn-borderd light">Case Study</a>
-        </div>
+        </a>
       </div>
     </div>
-    <!-- Branding Service -->
-    <div class="section section-padding bg-color-light" id="branding">
-      <div class="container">
-        <div class="section-heading heading-left">
-          <h2 class="title text-lr">Branding Identity</h2>
-          <p>We help businesses create a unique and impactful brand identity. Branding is more than just visuals—it's
-            the essence of your business, connecting with your target audience on an emotional level. Our holistic
-            approach ensures that every element of your brand is cohesive and aligned with your core values.</p>
-        </div>
-        <div class="section-heading heading-left mb-4">
-          <span class="subtitle">What We Offer</span>
-        </div>
-        <div class="row">
-          <div class="col-md-6 sal-animate" data-sal="slide-up" data-sal-duration="800" data-sal-delay="100">
-            <div class="services-grid service-card-style">
-              <div class="thumbnail">
-                <img src="../assets/img/icon/brand-1.png" alt="icon">
-              </div>
-              <div class="content">
-                <h5 class="title">Brand Strategy</h5>
-                <p class="mb-2">We develop a tailored brand strategy that defines your mission, vision, values, and
-                  positioning in the market. This foundation guides all brand communications and helps you stand out
-                  from the competition.</p>
-              </div>
-            </div>
-          </div>
+  </section>
 
-          <div class="col-md-6 sal-animate" data-sal="slide-up" data-sal-duration="800" data-sal-delay="200">
-            <div class="services-grid service-card-style">
-              <div class="thumbnail">
-                <img src="../assets/img/icon/brand-2.png" alt="icon">
-              </div>
-              <div class="content">
-                <h5 class="title">Color Scheme & Typography</h5>
-                <p class="mb-2">Selecting the right colors and fonts is crucial to your brand's personality. We create a
-                  cohesive color palette and typography that evokes the right emotions and aligns with your brand's
-                  identity.</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-md-6 sal-animate" data-sal="slide-up" data-sal-duration="800" data-sal-delay="300">
-            <div class="services-grid service-card-style">
-              <div class="thumbnail">
-                <img src="../assets/img/icon/brand-3.png" alt="icon">
-              </div>
-              <div class="content">
-                <h5 class="title">Brand Guidelines</h5>
-                <p class="mb-2">We create a comprehensive brand guideline document that ensures consistency in the usage
-                  of your brand elements across all platforms. This includes the correct usage of colors, typography,
-                  and overall brand tone.</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-md-6 sal-animate" data-sal="slide-up" data-sal-duration="800" data-sal-delay="100">
-            <div class="services-grid service-card-style">
-              <div class="thumbnail">
-                <img src="../assets/img/icon/brand-4.png" alt="icon">
-              </div>
-              <div class="content">
-                <h5 class="title">Brand Collateral</h5>
-                <p class="mb-2">Our team designs professional collateral, including business cards, letterheads,
-                  brochures, and packaging, ensuring a consistent and impactful brand presence across all mediums.</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-md-6 sal-animate" data-sal="slide-up" data-sal-duration="800" data-sal-delay="200">
-            <div class="services-grid service-card-style">
-              <div class="thumbnail">
-                <img src="../assets/img/icon/brand-5.png" alt="icon">
-              </div>
-              <div class="content">
-                <h5 class="title">Social Media Branding</h5>
-                <p class="mb-2">We design customized social media templates that maintain your brand’s identity across
-                  all platforms, ensuring consistency in your online presence.</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-md-6 sal-animate" data-sal="slide-up" data-sal-duration="800" data-sal-delay="200">
-            <div class="services-grid service-card-style">
-              <div class="thumbnail">
-                <img src="../assets/img/icon/brand-6.png" alt="icon">
-              </div>
-              <div class="content">
-                <h5 class="title">Branded Content &amp; Posters</h5>
-                <p class="mb-2">We craft visually engaging content for both digital and print mediums, including branded
-                  posters, ads, and presentations that align with your brand’s messaging.</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-md-6 sal-animate" data-sal="slide-up" data-sal-duration="800" data-sal-delay="200">
-            <div class="services-grid service-card-style">
-              <div class="thumbnail">
-                <img src="../assets/img/icon/brand-7.png" alt="icon">
-              </div>
-              <div class="content">
-                <h5 class="title">Packaging Design</h5>
-                <p class="mb-2">Our innovative packaging designs not only reflect your brand but also create a memorable
-                  unboxing experience for your customers, leaving a lasting impression.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="section-heading heading-left w-100">
-          <span class="subtitle">Why choose us?</span>
-          <p>At amortree Tech, we go beyond creating beautiful visuals. We focus on building a brand that resonates with
-            your audience, creates a strong emotional connection, and helps you achieve long-term business success.</p>
-        </div>
-        <div class="d-flex justify-content-center gap-3 mt-5">
-          <a class="amor-btn btn-fill-primary btn-large" href="contact">Get Started</a>
-          <a href="/case-studies" class="amor-btn btn-borderd light">Case Study</a>
-        </div>
+  <!-- Closing CTA -->
+  <section class="svc-cta-section">
+    <div class="svc-cta-inner">
+      <div class="svc-cta-eyebrow">
+        <span class="text-ly">Not Sure Where to Start?</span>
+      </div>
+      <h2 class="svc-cta-title">
+        Let's Map the Right <span class="text-ly">Service Mix</span> for Your Goals
+      </h2>
+      <p class="svc-cta-sub">
+        Most projects combine two or three of the above. Tell us where you're stuck and we'll
+        recommend a scope — no obligation.
+      </p>
+      <div class="d-flex justify-content-center flex-wrap gap-3 mt-5">
+        <a
+          class="amor-btn btn-fill-primary btn-large"
+          href="https://wa.me/917975859061/?text=I%27d%20like%20to%20book%20a%20free%20strategy%20call."
+        >Book Your Free Strategy Call</a>
+        <a href="/case-studies" class="amor-btn btn-borderd light">See Our Work</a>
       </div>
     </div>
-    <!-- Logo Design Service -->
-    <div class="section section-padding" id="logoDesign">
-      <div class="container">
-        <div class="section-heading heading-left">
-          <h2 class="title text-ly">Logo Design</h2>
-          <p>We understand that a logo is the face of your brand. It’s the first impression, and it speaks volumes about
-            your business. Our logo design services are crafted to ensure your brand stands out and leaves a lasting
-            impact.</p>
-        </div>
-        <div class="section-heading heading-left mb-4">
-          <span class="subtitle">What We Offer</span>
-        </div>
-        <div class="row">
-          <div class="col-md-6 sal-animate" data-sal="slide-up" data-sal-duration="800" data-sal-delay="100">
-            <div class="services-grid service-card-style">
-              <div class="thumbnail">
-                <img src="../assets/img/icon/logo-1.png" alt="icon">
-              </div>
-              <div class="content">
-                <h5 class="title">Custom Logo Creation</h5>
-                <p class="mb-2">We design unique and memorable logos that reflect your brand’s identity and values,
-                  helping your business stand out from the crowd.</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-md-6 sal-animate" data-sal="slide-up" data-sal-duration="800" data-sal-delay="200">
-            <div class="services-grid service-card-style">
-              <div class="thumbnail">
-                <img src="../assets/img/icon/logo-2.png" alt="icon">
-              </div>
-              <div class="content">
-                <h5 class="title">Concept Development</h5>
-                <p class="mb-2">Our team works closely with you to understand your brand, vision, and audience to create
-                  logos that perfectly align with your goals.</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-md-6 sal-animate" data-sal="slide-up" data-sal-duration="800" data-sal-delay="300">
-            <div class="services-grid service-card-style">
-              <div class="thumbnail">
-                <img src="../assets/img/icon/logo-3.png" alt="icon">
-              </div>
-              <div class="content">
-                <h5 class="title">Multiple Design Options</h5>
-                <p class="mb-2">We provide a variety of design concepts for you to choose from, ensuring you have the
-                  perfect logo that represents your brand.</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-md-6 sal-animate" data-sal="slide-up" data-sal-duration="800" data-sal-delay="100">
-            <div class="services-grid service-card-style">
-              <div class="thumbnail">
-                <img src="../assets/img/icon/logo-4.png" alt="icon">
-              </div>
-              <div class="content">
-                <h5 class="title">Revisions &amp; Refinements</h5>
-                <p class="mb-2">We offer revisions to fine-tune the design until you're completely satisfied with the
-                  final outcome.</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-md-6 sal-animate" data-sal="slide-up" data-sal-duration="800" data-sal-delay="200">
-            <div class="services-grid service-card-style">
-              <div class="thumbnail">
-                <img src="../assets/img/icon/logo-5.png" alt="icon">
-              </div>
-              <div class="content">
-                <h5 class="title">Versatile Formats</h5>
-                <p class="mb-2">Your logo will be delivered in multiple formats (SVG, PNG, JPEG, and more), ensuring
-                  it’s ready for any application, whether it’s for print, web, or merchandise.</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-md-6 sal-animate" data-sal="slide-up" data-sal-duration="800" data-sal-delay="200">
-            <div class="services-grid service-card-style">
-              <div class="thumbnail">
-                <img src="../assets/img/icon/logo-6.png" alt="icon">
-              </div>
-              <div class="content">
-                <h5 class="title">Scalability</h5>
-                <p class="mb-2">Our designs are created with scalability in mind, ensuring your logo looks great across
-                  all platforms—from business cards to billboards.</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-md-6 sal-animate" data-sal="slide-up" data-sal-duration="800" data-sal-delay="200">
-            <div class="services-grid service-card-style">
-              <div class="thumbnail">
-                <img src="../assets/img/icon/logo-7.png" alt="icon">
-              </div>
-              <div class="content">
-                <h5 class="title">Brand Integration</h5>
-                <p class="mb-2">We ensure your new logo seamlessly integrates with your overall brand identity,
-                  maintaining consistency across all channels.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="section-heading heading-left w-100">
-          <span class="subtitle">Why choose us?</span>
-          <p>With a focus on creativity, strategy, and design excellence, we craft logos that not only look good but
-            also resonate with your audience. At amortree Tech, we help your brand make a statement from the very first
-            glance.</p>
-        </div>
-        <div class="d-flex justify-content-center gap-3 mt-5">
-          <a class="amor-btn btn-fill-primary btn-large" href="contact">Get Started</a>
-          <a href="/case-studies" class="amor-btn btn-borderd light">Case Study</a>
-        </div>
-      </div>
-    </div>
-    <!-- Website Service -->
-    <div class="section section-padding bg-color-light" id="website">
-      <div class="container">
-        <div class="section-heading heading-left">
-          <h2 class="title text-lg">Website UI/UX &amp; Development</h2>
-          <p>We create websites that not only look stunning but also provide an intuitive and seamless user experience.
-            Our holistic approach to UI/UX design and development ensures that your website is both visually compelling
-            and functionally optimized to engage your audience and drive business growth.</p>
-        </div>
-        <div class="section-heading heading-left mb-4">
-          <span class="subtitle">What We Offer</span>
-        </div>
-        <div class="row">
-          <div class="col-md-6 sal-animate" data-sal="slide-up" data-sal-duration="800" data-sal-delay="100">
-            <div class="services-grid service-card-style">
-              <div class="thumbnail">
-                <img src="../assets/img/icon/web-1.png" alt="icon">
-              </div>
-              <div class="content">
-                <h5 class="title">UI/UX Design</h5>
-                <p class="mb-2">Our design process is user-centered, focusing on creating an engaging, intuitive
-                  interface that enhances user satisfaction. We craft clean, modern designs tailored to your brand,
-                  ensuring a seamless experience across all devices.</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-md-6 sal-animate" data-sal="slide-up" data-sal-duration="800" data-sal-delay="200">
-            <div class="services-grid service-card-style">
-              <div class="thumbnail">
-                <img src="../assets/img/icon/web-2.png" alt="icon">
-              </div>
-              <div class="content">
-                <h5 class="title">Responsive Web Design</h5>
-                <p class="mb-2">We build websites adapt to various screen sizes and devices, providing an optimal user
-                  experience, improving accessibility, and maintaining consistency across desktops, tablets, and
-                  smartphones.</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-md-6 sal-animate" data-sal="slide-up" data-sal-duration="800" data-sal-delay="300">
-            <div class="services-grid service-card-style">
-              <div class="thumbnail">
-                <img src="../assets/img/icon/web-3.png" alt="icon">
-              </div>
-              <div class="content">
-                <h5 class="title">Custom Web Development</h5>
-                <p class="mb-2">Our developers use the latest technologies and frameworks to build custom websites that
-                  are scalable, secure, and fast-loading. Whether it's an e-commerce site, portfolio, or corporate
-                  website, we deliver high-performance solutions.</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-md-6 sal-animate" data-sal="slide-up" data-sal-duration="800" data-sal-delay="100">
-            <div class="services-grid service-card-style">
-              <div class="thumbnail">
-                <img src="../assets/img/icon/web-4.png" alt="icon">
-              </div>
-              <div class="content">
-                <h5 class="title">CMS Integration</h5>
-                <p class="mb-2">We integrate user-friendly Content Management System (CMS) platforms like WordPress,
-                  making it easy for you to
-                  manage and update your content without technical expertise.</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-md-6 sal-animate" data-sal="slide-up" data-sal-duration="800" data-sal-delay="200">
-            <div class="services-grid service-card-style">
-              <div class="thumbnail">
-                <img src="../assets/img/icon/web-5.png" alt="icon">
-              </div>
-              <div class="content">
-                <h5 class="title">User Journey Mapping</h5>
-                <p class="mb-2">We map out the user journey to ensure that every interaction with your website is
-                  smooth, helping users find what they need quickly and effortlessly.</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-md-6 sal-animate" data-sal="slide-up" data-sal-duration="800" data-sal-delay="200">
-            <div class="services-grid service-card-style">
-              <div class="thumbnail">
-                <img src="../assets/img/icon/web-6.png" alt="icon">
-              </div>
-              <div class="content">
-                <h5 class="title">SEO Optimization</h5>
-                <p class="mb-2">Our websites are built with SEO best practices, ensuring that your site ranks well on
-                  search engines, driving organic traffic and increasing visibility.</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-md-6 sal-animate" data-sal="slide-up" data-sal-duration="800" data-sal-delay="200">
-            <div class="services-grid service-card-style">
-              <div class="thumbnail">
-                <img src="../assets/img/icon/web-7.png" alt="icon">
-              </div>
-              <div class="content">
-                <h5 class="title">Performance Optimization</h5>
-                <p class="mb-2">We optimize your website for speed and performance, ensuring fast load times and smooth
-                  functionality for a superior user experience.</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-md-6 sal-animate" data-sal="slide-up" data-sal-duration="800" data-sal-delay="200">
-            <div class="services-grid service-card-style">
-              <div class="thumbnail">
-                <img src="../assets/img/icon/web-8.png" alt="icon">
-              </div>
-              <div class="content">
-                <h5 class="title">Ongoing Support &amp; Maintenance</h5>
-                <p class="mb-2">We offer continuous support and maintenance to ensure that your website stays
-                  up-to-date, secure, and fully functional at all times.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="section-heading heading-left w-100">
-          <span class="subtitle">Why choose us?</span>
-          <p>At amortree Tech, we combine cutting-edge design with robust development to create websites that not only
-            capture attention but also deliver results. Whether you need a simple website or a complex web application,
-            our team is committed to bringing your vision to life with a focus on usability, scalability, and
-            performance.</p>
-        </div>
-        <div class="d-flex justify-content-center gap-3 mt-5">
-          <a class="amor-btn btn-fill-primary btn-large" href="contact">Get Started</a>
-          <a href="/case-studies" class="amor-btn btn-borderd light">Case Study</a>
-        </div>
-      </div>
-    </div>
-    <!-- Mobile App UI/UX Service -->
-    <div class="section section-padding" id="mobileAppUiUx">
-      <div class="container">
-        <div class="section-heading heading-left">
-          <h2 class="title text-ll">Mobile App UI/UX Wireframe</h2>
-          <p>we specialize in creating detailed and intuitive mobile app wireframes that serve as the blueprint for your
-            app's user interface and experience. Our wireframes are designed with a deep understanding of user behavior
-            and market trends, ensuring a seamless, user-friendly experience before moving into development.</p>
-        </div>
-        <div class="section-heading heading-left mb-4">
-          <span class="subtitle">What We Offer</span>
-        </div>
-        <div class="row">
-          <div class="col-md-6 sal-animate" data-sal="slide-up" data-sal-duration="800" data-sal-delay="100">
-            <div class="services-grid service-card-style">
-              <div class="thumbnail">
-                <img src="../assets/img/icon/mob-1.png" alt="icon">
-              </div>
-              <div class="content">
-                <h5 class="title">User-Centered Design</h5>
-                <p class="mb-2">Our approach focuses on understanding your target audience and their needs. We design
-                  wireframes that prioritize ease of use and smooth navigation, ensuring a seamless user journey.</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-md-6 sal-animate" data-sal="slide-up" data-sal-duration="800" data-sal-delay="200">
-            <div class="services-grid service-card-style">
-              <div class="thumbnail">
-                <img src="../assets/img/icon/mob-2.png" alt="icon">
-              </div>
-              <div class="content">
-                <h5 class="title">Interactive Wireframes</h5>
-                <p class="mb-2">We create clickable wireframes that allow you to visualize the user flow and
-                  interactions. This helps in testing the functionality of the app before moving into the design phase.
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-md-6 sal-animate" data-sal="slide-up" data-sal-duration="800" data-sal-delay="300">
-            <div class="services-grid service-card-style">
-              <div class="thumbnail">
-                <img src="../assets/img/icon/mob-3.png" alt="icon">
-              </div>
-              <div class="content">
-                <h5 class="title">App Structure &amp; Layout</h5>
-                <p class="mb-2">We carefully plan the app’s structure, mapping out the placement of key features and
-                  elements to ensure an efficient, logical, and aesthetically pleasing layout.</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-md-6 sal-animate" data-sal="slide-up" data-sal-duration="800" data-sal-delay="100">
-            <div class="services-grid service-card-style">
-              <div class="thumbnail">
-                <img src="../assets/img/icon/mob-4.png" alt="icon">
-              </div>
-              <div class="content">
-                <h5 class="title">Multi-Platform Compatibility</h5>
-                <p class="mb-2">Our wireframes are designed to be compatible with both iOS and Android platforms,
-                  ensuring a consistent user experience across all devices.</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-md-6 sal-animate" data-sal="slide-up" data-sal-duration="800" data-sal-delay="200">
-            <div class="services-grid service-card-style">
-              <div class="thumbnail">
-                <img src="../assets/img/icon/mob-5.png" alt="icon">
-              </div>
-              <div class="content">
-                <h5 class="title">User Journey Mapping</h5>
-                <p class="mb-2">We map out the entire user journey to ensure that your app meets user needs at every
-                  touchpoint, making navigation intuitive and enjoyable.</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-md-6 sal-animate" data-sal="slide-up" data-sal-duration="800" data-sal-delay="200">
-            <div class="services-grid service-card-style">
-              <div class="thumbnail">
-                <img src="../assets/img/icon/mob-6.png" alt="icon">
-              </div>
-              <div class="content">
-                <h5 class="title">Client Collaboration</h5>
-                <p class="mb-2">We work closely with you to incorporate feedback and adjustments throughout the
-                  wireframing process, ensuring the final design aligns with your vision and goals.</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-md-6 sal-animate" data-sal="slide-up" data-sal-duration="800" data-sal-delay="200">
-            <div class="services-grid service-card-style">
-              <div class="thumbnail">
-                <img src="../assets/img/icon/mob-7.png" alt="icon">
-              </div>
-              <div class="content">
-                <h5 class="title">Ready for Development</h5>
-                <p class="mb-2">Our wireframes are delivered in a format that’s ready for handoff to development teams,
-                  providing clear visual guidance on the app’s structure, flow, and functionality.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="section-heading heading-left w-100">
-          <span class="subtitle">Why choose us?</span>
-          <p>At amortree Tech, our focus is on crafting mobile app wireframes that serve as the foundation for an
-            outstanding user experience. By concentrating on UI/UX design, we ensure that your app is visually engaging,
-            easy to navigate, and primed for success when it moves into development.</p>
-        </div>
-        <div class="d-flex justify-content-center gap-3 mt-5">
-          <a class="amor-btn btn-fill-primary btn-large" href="contact">Get Started</a>
-          <a href="/case-studies" class="amor-btn btn-borderd light">Case Study</a>
-        </div>
-      </div>
-    </div>
-    <!-- Digital Marketing Service -->
-    <div class="section section-padding bg-color-light" id="digitalMarketing">
-      <div class="container">
-        <div class="section-heading heading-left">
-          <h2 class="title text-ll">Digital Marketing</h2>
-          <p>we specialize in creating detailed and intuitive digital marketing strategies that serve as the blueprint for your
-            brand's online presence. Our approaches are designed with a deep understanding of user behavior
-            and market trends, ensuring a seamless, user-friendly experience before moving into development.</p>
-        </div>
-        <div class="section-heading heading-left mb-4">
-          <span class="subtitle">What We Offer</span>
-        </div>
-        <div class="row">
-          <div class="col-md-6 sal-animate" data-sal="slide-up" data-sal-duration="800" data-sal-delay="100">
-            <div class="services-grid service-card-style">
-              <div class="thumbnail">
-                <img src="../assets/img/icon/mob-1.png" alt="icon">
-              </div>
-              <div class="content">
-                <h5 class="title">Marketing Strategy</h5>
-                <p class="mb-2">We develop comprehensive digital marketing strategies tailored to your business goals and target audience.</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-md-6 sal-animate" data-sal="slide-up" data-sal-duration="800" data-sal-delay="200">
-            <div class="services-grid service-card-style">
-              <div class="thumbnail">
-                <img src="../assets/img/icon/mob-2.png" alt="icon">
-              </div>
-              <div class="content">
-                <h5 class="title">Campaign Management</h5>
-                <p class="mb-2">We manage and optimize your digital marketing campaigns to maximize reach and engagement, ensuring your message resonates with your target audience.</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-md-6 sal-animate" data-sal="slide-up" data-sal-duration="800" data-sal-delay="300">
-            <div class="services-grid service-card-style">
-              <div class="thumbnail">
-                <img src="../assets/img/icon/mob-3.png" alt="icon">
-              </div>
-              <div class="content">
-                <h5 class="title">Content Creation</h5>
-                <p class="mb-2">We create compelling and relevant content for your digital marketing efforts, ensuring it aligns with your brand voice and resonates with your target audience.</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-md-6 sal-animate" data-sal="slide-up" data-sal-duration="800" data-sal-delay="100">
-            <div class="services-grid service-card-style">
-              <div class="thumbnail">
-                <img src="../assets/img/icon/mob-4.png" alt="icon">
-              </div>
-              <div class="content">
-                <h5 class="title">Wireframe Development</h5>
-                <p class="mb-2">We create detailed wireframes that outline the structure and functionality of your app, providing a clear visual representation of the user interface and user experience.</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-md-6 sal-animate" data-sal="slide-up" data-sal-duration="800" data-sal-delay="200">
-            <div class="services-grid service-card-style">
-              <div class="thumbnail">
-                <img src="../assets/img/icon/mob-5.png" alt="icon">
-              </div>
-              <div class="content">
-                <h5 class="title">User Journey Mapping</h5>
-                <p class="mb-2">We map out the entire user journey to ensure that your app meets user needs at every
-                  touchpoint, making navigation intuitive and enjoyable.</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-md-6 sal-animate" data-sal="slide-up" data-sal-duration="800" data-sal-delay="200">
-            <div class="services-grid service-card-style">
-              <div class="thumbnail">
-                <img src="../assets/img/icon/mob-6.png" alt="icon">
-              </div>
-              <div class="content">
-                <h5 class="title">Client Collaboration</h5>
-                <p class="mb-2">We work closely with you to incorporate feedback and adjustments throughout the
-                  wireframing process, ensuring the final design aligns with your vision and goals.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="section-heading heading-left w-100">
-          <span class="subtitle">Why choose us?</span>
-          <p>At amortree Tech, our focus is on crafting Digital Marketing strategies that serve as the foundation for an
-            outstanding user experience. By concentrating on UI/UX design, we ensure that your app is visually engaging,
-            easy to navigate, and primed for success when it moves into development.</p>
-        </div>
-        <div class="d-flex justify-content-center gap-3 mt-5">
-          <a class="amor-btn btn-fill-primary btn-large" href="contact">Get Started</a>
-          <a href="/case-studies" class="amor-btn btn-borderd light">Case Study</a>
-        </div>
-      </div>
-    </div>
-    <!-- DevOps Service -->
-    <div class="section section-padding" id="devOps">
-      <div class="container">
-        <div class="section-heading heading-left">
-          <h2 class="title text-lb">DevOps</h2>
-          <p>Our DevOps services bridge the gap between development and operations, streamlining your processes and
-            ensuring faster, more reliable software delivery. We leverage automation, continuous integration, and
-            continuous deployment (CI/CD) practices to optimize your infrastructure, enabling your teams to collaborate
-            effectively and innovate faster.</p>
-        </div>
-        <div class="section-heading heading-left mb-4">
-          <span class="subtitle">What We Offer</span>
-        </div>
-        <div class="row">
-          <div class="col-md-6 sal-animate" data-sal="slide-up" data-sal-duration="800" data-sal-delay="100">
-            <div class="services-grid service-card-style">
-              <div class="thumbnail">
-                <img src="../assets/img/icon/devops-1.png" alt="icon">
-              </div>
-              <div class="content">
-                <h5 class="title">CI/CD Pipeline Setup</h5>
-                <p class="mb-2">We implement continuous integration and continuous delivery pipelines, allowing for
-                  rapid and reliable code deployment with automated testing and monitoring, reducing time-to-market.</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-md-6 sal-animate" data-sal="slide-up" data-sal-duration="800" data-sal-delay="200">
-            <div class="services-grid service-card-style">
-              <div class="thumbnail">
-                <img src="../assets/img/icon/devops-2.png" alt="icon">
-              </div>
-              <div class="content">
-                <h5 class="title">Infrastructure Automation</h5>
-                <p class="mb-2">Using tools like Terraform and Ansible, we automate infrastructure provisioning,
-                  ensuring consistent environments for development, testing, and production.</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-md-6 sal-animate" data-sal="slide-up" data-sal-duration="800" data-sal-delay="300">
-            <div class="services-grid service-card-style">
-              <div class="thumbnail">
-                <img src="../assets/img/icon/devops-3.png" alt="icon">
-              </div>
-              <div class="content">
-                <h5 class="title">Cloud Infrastructure Management</h5>
-                <p class="mb-2">We help manage and optimize cloud environments (Azure, DigitalOcean), ensuring
-                  scalability, performance, and cost-efficiency for your applications.</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-md-6 sal-animate" data-sal="slide-up" data-sal-duration="800" data-sal-delay="100">
-            <div class="services-grid service-card-style">
-              <div class="thumbnail">
-                <img src="../assets/img/icon/devops-4.png" alt="icon">
-              </div>
-              <div class="content">
-                <h5 class="title">Monitoring &amp; Logging</h5>
-                <p class="mb-2">Our DevOps solutions include setting up advanced monitoring and logging tools to ensure
-                  real-time insights into system performance, security, and issues, enabling quick detection and
-                  resolution.</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-md-6 sal-animate" data-sal="slide-up" data-sal-duration="800" data-sal-delay="200">
-            <div class="services-grid service-card-style">
-              <div class="thumbnail">
-                <img src="../assets/img/icon/devops-5.png" alt="icon">
-              </div>
-              <div class="content">
-                <h5 class="title">Security Integration</h5>
-                <p class="mb-2">We integrate DevSecOps practices to ensure that security is embedded throughout the
-                  development lifecycle, providing robust protection against potential threats and vulnerabilities.</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-md-6 sal-animate" data-sal="slide-up" data-sal-duration="800" data-sal-delay="200">
-            <div class="services-grid service-card-style">
-              <div class="thumbnail">
-                <img src="../assets/img/icon/devops-6.png" alt="icon">
-              </div>
-              <div class="content">
-                <h5 class="title">Containerization &amp; Orchestration</h5>
-                <p class="mb-2">We utilize container technologies like Docker and Kubernetes for scalable, portable, and
-                  efficient application deployment, enabling smooth orchestration of microservices.</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-md-6 sal-animate" data-sal="slide-up" data-sal-duration="800" data-sal-delay="200">
-            <div class="services-grid service-card-style">
-              <div class="thumbnail">
-                <img src="../assets/img/icon/devops-7.png" alt="icon">
-              </div>
-              <div class="content">
-                <h5 class="title">Automated Testing</h5>
-                <p class="mb-2">We integrate automated testing frameworks to improve code quality and catch bugs early
-                  in the development process, ensuring high-quality releases.</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-md-6 sal-animate" data-sal="slide-up" data-sal-duration="800" data-sal-delay="200">
-            <div class="services-grid service-card-style">
-              <div class="thumbnail">
-                <img src="../assets/img/icon/devops-8.png" alt="icon">
-              </div>
-              <div class="content">
-                <h5 class="title">Ongoing Support &amp; Maintenance</h5>
-                <p class="mb-2">Our team offers continuous support and monitoring to ensure that your infrastructure
-                  remains stable, secure, and optimized over time.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="section-heading heading-left w-100">
-          <span class="subtitle">Why choose us?</span>
-          <p>At amortree Tech, our DevOps services are designed to enhance collaboration, improve efficiency, and
-            deliver high-quality software faster. With our expertise, you can streamline your development lifecycle,
-            reduce operational complexities, and scale your systems to meet the demands of a dynamic business
-            environment.</p>
-        </div>
-        <div class="d-flex justify-content-center gap-3 mt-5">
-          <a class="amor-btn btn-fill-primary btn-large" href="contact">Get Started</a>
-          <a href="/case-studies" class="amor-btn btn-borderd light">Case Study</a>
-        </div>
-      </div>
-    </div>
-  </div>
-
+  </section>
 </template>
 
-<style scss scoped>
-.service-scroll-navigation-area {
-  position: relative;
+<style scoped>
+/* ─── Grid Section ───────────────────────────────────────────────────── */
+.svc-grid-section {
+  padding: 6rem 4rem 8rem;
+  background: #f8fafc;
 }
 
-.section-heading .subtitle {
-  color: var(--logo-yellow);
+@media (max-width: 1100px) {
+  .svc-grid-section { padding: 4rem 2rem 5rem; }
 }
 
-.services-grid .thumbnail {
-  max-width: 140px;
+@media (max-width: 768px) {
+  .svc-grid-section { padding: 3rem 1.25rem 4rem; }
+}
+
+.svc-grid-inner {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.svc-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+@media (max-width: 1024px) {
+  .svc-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 640px) {
+  .svc-grid { grid-template-columns: 1fr; }
+}
+
+.svc-card {
+  display: flex;
+  flex-direction: column;
+  background: #ffffff;
+  border: 1px solid rgba(15, 23, 42, 0.07);
+  border-radius: 16px;
+  padding: 2.25rem 2rem;
+  text-decoration: none;
+  transition: transform 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease;
+  will-change: transform;
+}
+
+.svc-card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(250, 204, 21, 0.4);
+  box-shadow: 0 24px 48px -16px rgba(15, 23, 42, 0.18);
+}
+
+.svc-card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
+}
+
+.svc-card-icon {
+  width: 52px;
+  height: 52px;
+  border-radius: 14px;
+  background: rgba(250, 204, 21, 0.1);
+  border: 1px solid rgba(250, 204, 21, 0.22);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #0f172a;
+  flex-shrink: 0;
+  transition: background 0.35s ease, color 0.35s ease;
+}
+
+.svc-card-icon .material-symbols-outlined {
+  font-size: 1.5rem;
+}
+
+.svc-card:hover .svc-card-icon {
+  background: #facc15;
+  color: #0f172a;
+}
+
+.svc-card-tag {
+  font-size: 0.65rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #94a3b8;
+  font-weight: 600;
+}
+
+.svc-card-title {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #0f172a;
+  letter-spacing: -0.01em;
+  margin-bottom: 0.7rem;
+}
+
+.svc-card-desc {
+  font-size: 0.9rem;
+  color: #64748b;
+  line-height: 1.7;
+  flex-grow: 1;
+  margin-bottom: 1.25rem;
+}
+
+.svc-card-best-for {
+  margin-bottom: 1.5rem;
+}
+
+.svc-card-best-for-label {
+  display: block;
+  font-size: 0.62rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #94a3b8;
+  font-weight: 700;
+  margin-bottom: 0.55rem;
+}
+
+.svc-card-best-for-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.svc-card-tag-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: #475569;
+  background: #eef2f6;
+  border: 1px solid rgba(15, 23, 42, 0.08);
+  border-radius: 7px;
+  padding: 0.28rem 0.6rem 0.28rem 0.55rem;
+  line-height: 1;
+  transition: background 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+.svc-card-tag-pill::before {
+  content: "";
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: #94a3b8;
+  flex-shrink: 0;
+  transition: background 0.3s ease;
+}
+
+.svc-card:hover .svc-card-tag-pill {
+  background: #fef9e7;
+  border-color: rgba(250, 204, 21, 0.45);
+  color: #92660a;
+}
+
+.svc-card:hover .svc-card-tag-pill::before {
+  background: #eab308;
+}
+
+.svc-card-cta {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  color: #0f172a;
+  padding-top: 1.25rem;
+  border-top: 1px solid rgba(15, 23, 42, 0.07);
+  transition: color 0.3s ease, gap 0.3s ease;
+}
+
+.svc-card-cta svg {
+  transition: transform 0.3s ease;
+}
+
+.svc-card:hover .svc-card-cta {
+  color: var(--color-primaryR);
+  gap: 0.7rem;
+}
+
+.svc-card:hover .svc-card-cta svg {
+  transform: translate(2px, -2px);
+}
+
+/* ─── Closing CTA ────────────────────────────────────────────────────── */
+.svc-cta-section {
+  padding: 7rem 4rem;
+  text-align: center;
+}
+
+@media (max-width: 1100px) {
+  .svc-cta-section { padding: 5rem 2rem; }
+}
+
+@media (max-width: 768px) {
+  .svc-cta-section { padding: 4rem 1.25rem; }
+}
+
+.svc-cta-inner {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.svc-cta-eyebrow {
+  font-size: 0.65rem;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  font-weight: 700;
+  margin-bottom: 1.25rem;
+}
+
+.svc-cta-title {
+  font-size: clamp(2rem, 4.2vw, 3rem);
+  font-weight: 700;
+  line-height: 1.2;
+  color: #fff;
+  margin-bottom: 1.25rem;
+}
+
+.svc-cta-sub {
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.6);
+  line-height: 1.75;
 }
 </style>
