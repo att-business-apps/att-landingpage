@@ -762,37 +762,6 @@ function getTemplate(target) {
           </div>
         </div>
       </div>
-      <ul class="shape-group-service list-unstyled">
-        <li class="shape shape-3">
-          <img src="../assets/img/shapes/bubble-5.png" alt="line" />
-        </li>
-      </ul>
-      <ul class="list-unstyled shape-group-banner">
-        <li class="shape shape-2">
-          <img src="../assets/img/shapes/bubble-38.png" alt="Bubble" />
-        </li>
-        <li class="shape shape-3">
-          <img src="../assets/img/shapes/bubble-14.png" alt="Bubble" />
-        </li>
-        <li class="shape shape-4">
-          <img src="../assets/img/shapes/bubble-14.png" alt="Bubble" />
-        </li>
-        <li class="shape shape-5">
-          <img src="../assets/img/shapes/bubble-14.png" alt="Bubble" />
-        </li>
-        <li class="shape shape-6">
-          <img src="../assets/img/shapes/bubble-40.png" alt="Bubble" />
-        </li>
-        <li class="shape shape-7">
-          <img src="../assets/img/shapes/bubble-41.png" alt="Bubble" />
-        </li>
-        <li class="shape shape-8">
-          <img src="../assets/img/shapes/bubble-14.png" alt="Bubble" />
-        </li>
-        <li class="shape shape-9">
-          <img src="../assets/img/shapes/bubble-40.png" alt="Bubble" />
-        </li>
-      </ul>
     </section>
   </main>
 </template>
