@@ -763,9 +763,6 @@ function getTemplate(target) {
         </div>
       </div>
       <ul class="shape-group-service list-unstyled">
-        <li class="shape shape-1">
-          <img src="../assets/img/shapes/line-2.png" alt="Bubble" />
-        </li>
         <li class="shape shape-3">
           <img src="../assets/img/shapes/bubble-5.png" alt="line" />
         </li>
