@@ -613,20 +613,11 @@ onBeforeUnmount(() => {
                   <div
                     class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-200 text-blue-900 text-xs font-bold uppercase tracking-wider">
                     Strategy
-                    <span class="relative flex h-2 w-2">
-                      <span class="animate-ping absolute d-block justify-center items-center h-full w-full rounded-full bg-blue-400 opacity-75"></span>
-                      <span class="relative d-block rounded-full h-2 w-2 bg-blue-600"></span>
-                    </span>
+                    <span class="animate-ping relative flex" style="animation-duration: 1.25s">→</span>
                     Design
-                    <span class="relative flex h-2 w-2">
-                      <span class="animate-ping absolute d-block justify-center items-center h-full w-full rounded-full bg-blue-400 opacity-75"></span>
-                      <span class="relative d-block rounded-full h-2 w-2 bg-blue-600"></span>
-                    </span>
+                    <span class="animate-ping relative flex" style="animation-duration: 1s">→</span>
                     Development
-                    <span class="relative flex h-2 w-2">
-                      <span class="animate-ping absolute d-block justify-center items-center h-full w-full rounded-full bg-blue-400 opacity-75"></span>
-                      <span class="relative d-block rounded-full h-2 w-2 bg-blue-600"></span>
-                    </span>
+                    <span class="animate-ping relative flex" style="animation-duration: 1.25s">→</span>
                     Growth
                   </div>
                 </div>
@@ -654,7 +645,7 @@ onBeforeUnmount(() => {
                     <span class="text-xs uppercase tracking-widest text-slate-300">Businesses Empowered</span>
                   </div>
                   <div class="home-metric flex flex-col items-center">
-                    <span class="text-3xl font-bold text-primary gradient-text yellow-light">20+</span>
+                    <span class="text-3xl font-bold text-primary gradient-text yellow-light">10+</span>
                     <span class="text-xs uppercase tracking-widest text-slate-300">Business Industries</span>
                   </div>
                   <div class="home-metric flex flex-col items-center">
@@ -726,7 +717,7 @@ onBeforeUnmount(() => {
               <span class="text-ly">Who We Work With</span>
             </div>
             <h2 class="font-bold text-dark mb-0" style="font-weight: 600">
-              Not Every Business Needs a Better Website. The Right Businesses Need a Better Growth Partner.
+              Not Every Business Needs a Better Website. <span class="d-inline text-ly">The Right Businesses Need a Better Growth Partner.</span>
             </h2>
           </div>
           <p class="motion-text text-slate-800 max-w-sm mb-0">
@@ -766,9 +757,6 @@ onBeforeUnmount(() => {
         </div>
         <div class="relative">
           <h2 class="text-2xl font-medium mb-5 flex items-center gap-3" style="font-weight: 600">
-            <span class="p-2 w-10 h-10 d-flex relative bg-amber-100 rounded-lg">
-              <span class="material-icons-outlined text-center text-lr">fact_check</span>
-            </span>
             <span class="text-dark">What's Really <span class="text-lr">Holding Your Business</span> Back?</span>
           </h2>
           <p class="text-slate-600 mb-8 max-w-2xl">
@@ -916,7 +904,7 @@ onBeforeUnmount(() => {
               <span class="material-icons-outlined text-3xl">hub</span>
             </div>
             <h4 class="text-2xl font-bolder mb-3" style="font-weight: 600">
-              <a href="/lead-generation-systems" class="text-white text-decoration-none">Lead Generation Systems</a>
+              <a href="/lead-generation" class="text-white text-decoration-none">Lead Generation Systems</a>
             </h4>
             <p class="text-slate-300 mb-6 flex-grow">For B2B and service businesses that need a website to do the qualifying, not just the introducing.</p>
             <ul class="space-y-3 mb-8 text-sm p-0">
@@ -1027,11 +1015,11 @@ onBeforeUnmount(() => {
           <div class="lg:col-span-6 relative">
             <div class="relative rounded-[3rem] overflow-hidden shadow-2xl shadow-charcoal-200/50 group border border-charcoal-100">
               <img alt="Data analytics dashboard"
-                class="w-full aspect-[4/5] object-cover group-hover:scale-105 transition-transform duration-1000"
+                class="w-full aspect-[4/5] object-cover group-hover:scale-105 transition-transform duration-1000 mob-stat"
                 src="../assets/img/project/c4/sa-ad.png" />
               <div class="absolute inset-0 bg-gradient-to-t from-white via-transparent to-transparent"></div>
               <div class="absolute bottom-8 left-8 right-8 p-10 bg-white/95 backdrop-blur-xl rounded-3xl border border-charcoal-100 shadow-xl">
-                <div class="d-flex align-items-center justify-content-between mb-3">
+                <div class="d-block d-md-flex align-items-center justify-content-between mb-3">
                   <div class="flex gap-1 text-brand-600">
                     <span class="material-symbols-outlined fill-1 text-ly">star</span>
                     <span class="material-symbols-outlined fill-1 text-ly">star</span>
@@ -1039,7 +1027,7 @@ onBeforeUnmount(() => {
                     <span class="material-symbols-outlined fill-1 text-ly">star</span>
                     <span class="material-symbols-outlined fill-1 text-ly">star</span>
                   </div>
-                  <span class="py-2 px-3 rounded bg-dark text-brand-700 text-xs">Verified Business Owner</span>
+                  <span class="py-2 px-3 rounded bg-dark text-brand-700 text-xs mt-2 mt-md-0">Verified Business Owner</span>
                 </div>
                 <p class="text-dark font-bold text-xl leading-relaxed mb-6 italic">
                   "Amortree is a very professional and end-to-end service provider. They have good understanding of the clients needs and work in a timely and efficient manner."
@@ -1080,7 +1068,7 @@ onBeforeUnmount(() => {
               <span class="text-ly">Our Approach</span>
             </div>
             <h2 class="font-bold text-dark mb-0" style="font-weight: 600">
-              How We <span class="text-ly">Deliver</span> Results
+              How We <span class="text-ly">Deliver Results</span>
             </h2>
           </div>
           <p class="motion-text text-slate-800 max-w-sm mb-0">
@@ -1360,7 +1348,7 @@ onBeforeUnmount(() => {
             <span class="text-ly">Common Questions</span>
           </div>
           <h2 class="att-faq-heading text-3xl font-display font-bold text-dark mb-3" style="font-weight: 600">
-            Questions Founders Usually Ask
+            Questions <span class="text-ly">Founders Usually Ask</span>
           </h2>
           <p class="att-faq-sub text-slate-500 max-w-md mx-auto mb-0 text-sm">
             The questions founders and business owners ask most before starting a project with us.
@@ -1447,7 +1435,7 @@ onBeforeUnmount(() => {
     <section class="home-motion-section py-24 px-6 bg-dark" style="background: linear-gradient(135deg, #0f0f0f 0%, #000000 100%)">
       <div class="container mx-auto max-w-3xl text-center">
         <h2 class="text-3xl md:text-4xl font-display font-bold mb-4 text-white" style="font-weight: 600">
-          Ready to Build Your Next Growth System?
+          Ready to Build Your <br> <span class="text-ly">Next Growth System?</span>
         </h2>
         <p class="motion-text text-slate-300 max-w-xl mx-auto mb-10">
           A 20-minute call costs you nothing and tells you exactly where your site is leaving leads on the table.

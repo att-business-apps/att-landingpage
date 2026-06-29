@@ -74,26 +74,15 @@ function getTemplate(target) {
       <div class="container-fluid">
         <div class="row align-items-end align-items-xl-end">
           <div class="col-lg-10 mx-auto pb-5">
+            <div class="breadcrumb animate__animated fadeInUp" style="animation-duration: 2s">
+                <ul class="list-unstyled">
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/services">Services</a></li>
+                    <li class="active text-ly">Lead Generation</li>
+                </ul>
+            </div>
             <div class="home-banner banner-content text-center">
               <div class="animate__animated fadeInUp" style="animation-duration: 1s">
-                <div class="flex justify-center mb-4">
-                  <div
-                    class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-200 text-blue-900 text-xs font-bold uppercase tracking-wider">
-                    <span class="relative flex h-2 w-2">
-                      <span
-                        class="animate-ping absolute d-block justify-center items-center h-full w-full rounded-full bg-blue-400 opacity-75"></span>
-                      <span class="relative d-block rounded-full h-2 w-2 bg-blue-600"></span>
-                    </span>
-                    Tech-Driven Growth Strategy
-                  </div>
-                </div>
-                <!-- <h1 class="title d-inline" ref="myElement">
-                  Get 20-40
-                  <span class="gradient-text-light">Qualified Leads</span>
-                  Monthly with
-                  <span class="gradient-text-light">Data-Driven Design</span>
-                </h1> -->
-
                 <h1 class="title d-inline" ref="myElement">
                   Turn Your Website into a
                   <span class="gradient-text-light">24/7 Sales Machine</span>
@@ -136,8 +125,8 @@ function getTemplate(target) {
         </div>
         <div class="row align-items-end align-items-xl-end">
           <div class="amorboy animate__animated animate__slideInDown" style="animation-duration: 8s">
-            <img src="../assets/img/amorboy/am-fly-1.png" alt="" />
-            <img src="../assets/img/amorboy/am-doing.png" alt="" />
+            <img src="../../assets/img/amorboy/am-fly-1.png" alt="" />
+            <img src="../../assets/img/amorboy/am-doing.png" alt="" />
           </div>
 
           <div class="col-lg-5 col-md-10 mx-auto animate__animated fadeInUp" style="animation-duration: 2s">
@@ -191,18 +180,18 @@ function getTemplate(target) {
             <div class="banner-thumbnail d-none">
               <div class="animate__animated zoomIn" style="animation-duration: 2s">
                 <div class="large-thumb">
-                  <img src="../assets/img/window.png" alt="Laptop" />
+                  <img src="../../assets/img/window.png" alt="Laptop" />
                 </div>
               </div>
               <div class="animate__animated slideInRight" style="animation-duration: 2s">
                 <div class="large-thumb-2">
-                  <img src="../assets/img/amorboy/laptop-poses-banner.png" alt="Laptop" />
+                  <img src="../../assets/img/amorboy/laptop-poses-banner.png" alt="Laptop" />
                 </div>
               </div>
               <ul class="list-unstyled shape-group">
                 <li class="shape shape-1">
                   <div class="animate__animated slideInLeft" style="animation-duration: 1s">
-                    <img src="../assets/img/chat-group-home.png" alt="chat" />
+                    <img src="../../assets/img/chat-group-home.png" alt="chat" />
                   </div>
                 </li>
               </ul>
@@ -212,31 +201,31 @@ function getTemplate(target) {
       </div>
       <ul class="list-unstyled shape-group-banner">
         <li class="shape shape-1">
-          <img src="../assets/img/shapes/bubble-39.png" alt="Bubble" />
+          <img src="../../assets/img/shapes/bubble-39.png" alt="Bubble" />
         </li>
         <li class="shape shape-2">
-          <img src="../assets/img/shapes/bubble-38.png" alt="Bubble" />
+          <img src="../../assets/img/shapes/bubble-38.png" alt="Bubble" />
         </li>
         <li class="shape shape-3">
-          <img src="../assets/img/shapes/bubble-14.png" alt="Bubble" />
+          <img src="../../assets/img/shapes/bubble-14.png" alt="Bubble" />
         </li>
         <li class="shape shape-4">
-          <img src="../assets/img/shapes/bubble-14.png" alt="Bubble" />
+          <img src="../../assets/img/shapes/bubble-14.png" alt="Bubble" />
         </li>
         <li class="shape shape-5">
-          <img src="../assets/img/shapes/bubble-14.png" alt="Bubble" />
+          <img src="../../assets/img/shapes/bubble-14.png" alt="Bubble" />
         </li>
         <li class="shape shape-6">
-          <img src="../assets/img/shapes/bubble-40.png" alt="Bubble" />
+          <img src="../../assets/img/shapes/bubble-40.png" alt="Bubble" />
         </li>
         <li class="shape shape-7">
-          <img src="../assets/img/shapes/bubble-41.png" alt="Bubble" />
+          <img src="../../assets/img/shapes/bubble-41.png" alt="Bubble" />
         </li>
         <li class="shape shape-8">
-          <img src="../assets/img/shapes/bubble-14.png" alt="Bubble" />
+          <img src="../../assets/img/shapes/bubble-14.png" alt="Bubble" />
         </li>
         <li class="shape shape-9">
-          <img src="../assets/img/shapes/bubble-40.png" alt="Bubble" />
+          <img src="../../assets/img/shapes/bubble-40.png" alt="Bubble" />
         </li>
       </ul>
     </div>
@@ -318,7 +307,7 @@ function getTemplate(target) {
             <div class="relative min-h-[400px] lg:min-h-full">
               <img alt="Data analytics dashboard showing growth"
                 class="absolute inset-0 w-full h-full object-cover opacity-80"
-                src="../assets/img/project/c4/project-sa.png" />
+                src="../../assets/img/project/c4/project-sa.png" />
               <div class="absolute inset-0 bg-gradient-to-r from-slate-900 to-transparent lg:hidden"></div>
             </div>
           </div>
@@ -439,7 +428,7 @@ function getTemplate(target) {
           <div class="col-lg-4 mt--200 mt_md--0">
             <div class="services-grid">
               <div class="thumbnail">
-                <img src="../assets/img/icon/research-1.png" alt="icon" />
+                <img src="../../assets/img/icon/research-1.png" alt="icon" />
               </div>
               <div class="content">
                 <h3 class="title">
@@ -459,7 +448,7 @@ function getTemplate(target) {
           <div class="col-lg-4 mt--0">
             <div class="services-grid">
               <div class="thumbnail">
-                <img src="../assets/img/icon/brand-2.png" alt="icon" />
+                <img src="../../assets/img/icon/brand-2.png" alt="icon" />
               </div>
               <div class="content">
                 <h3 class="title">
@@ -479,7 +468,7 @@ function getTemplate(target) {
           <div class="col-lg-4 mt--200 mt_md--0">
             <div class="services-grid">
               <div class="thumbnail">
-                <img src="../assets/img/icon/logo-1.png" alt="icon" />
+                <img src="../../assets/img/icon/logo-1.png" alt="icon" />
               </div>
               <div class="content">
                 <h3 class="title"><a href="services">Custom Logo Design</a></h3>
@@ -498,7 +487,7 @@ function getTemplate(target) {
           <div class="col-lg-4 mt--0">
             <div class="services-grid">
               <div class="thumbnail">
-                <img src="../assets/img/icon/web-2.png" alt="icon" />
+                <img src="../../assets/img/icon/web-2.png" alt="icon" />
               </div>
               <div class="content">
                 <h3 class="title">
@@ -519,7 +508,7 @@ function getTemplate(target) {
           <div class="col-lg-4 mt--200 mt_md--0">
             <div class="services-grid">
               <div class="thumbnail">
-                <img src="../assets/img/icon/mob-7.png" alt="icon" />
+                <img src="../../assets/img/icon/mob-7.png" alt="icon" />
               </div>
               <div class="content">
                 <h3 class="title">
@@ -538,7 +527,7 @@ function getTemplate(target) {
           <div class="col-lg-4 mt--0">
             <div class="services-grid">
               <div class="thumbnail">
-                <img src="../assets/img/icon/devops-1.png" alt="icon" />
+                <img src="../../assets/img/icon/devops-1.png" alt="icon" />
               </div>
               <div class="content">
                 <h3 class="title"><a href="services">DevOps Consulting</a></h3>
@@ -557,470 +546,31 @@ function getTemplate(target) {
       </div>
       <ul class="shape-group-services list-unstyled">
         <li class="shape shape-1 d-lg-block d-none">
-          <img src="../assets/img/shapes/circle-1.png" alt="Line" />
+          <img src="../../assets/img/shapes/circle-1.png" alt="Line" />
         </li>
         <li class="shape shape-3 d-lg-block d-none">
-          <img src="../assets/img/shapes/bubble-1.png" alt="Line" />
+          <img src="../../assets/img/shapes/bubble-1.png" alt="Line" />
         </li>
         <li class="shape shape-4">
-          <img src="../assets/img/amorboy/we-do.png" alt="Line" />
+          <img src="../../assets/img/amorboy/we-do.png" alt="Line" />
         </li>
         <li class="shape shape-5">
-          <img src="../assets/img/shapes/bubble-15.png" alt="Line" />
+          <img src="../../assets/img/shapes/bubble-15.png" alt="Line" />
         </li>
         <li class="shape shape-2">
-          <img src="../assets/img/shapes/bubble-2.png" alt="Line" />
+          <img src="../../assets/img/shapes/bubble-2.png" alt="Line" />
         </li>
         <li class="shape shape-5 d-lg-block d-none">
-          <img src="../assets/img/shapes/bubble-2.png" alt="Line" />
+          <img src="../../assets/img/shapes/bubble-2.png" alt="Line" />
         </li>
         <li class="shape shape-3 d-lg-block d-none">
-          <img src="../assets/img/shapes/bubble-1.png" alt="Line" />
+          <img src="../../assets/img/shapes/bubble-1.png" alt="Line" />
         </li>
         <li class="shape shape-4">
-          <img src="../assets/img/amorboy/we-do.png" alt="Line" />
+          <img src="../../assets/img/amorboy/we-do.png" alt="Line" />
         </li>
       </ul>
     </div>
-
-    <section class="section section-padding-2 bg-color-white">
-      <div class="container-fluid">
-        <div class="section-heading heading-left">
-          <span class="subtitle">Our Recent Clients</span>
-          <h2 class="title">
-            <span class="gradient-text yellow-light">Trusted </span> by
-            <span class="gradient-text yellow-light">Leading</span> Businesses
-          </h2>
-        </div>
-
-        <div class="">
-          <div class="row">
-            <div class="col-md-10 mx-md-auto col-lg-6 project branding">
-              <div class="project-grid">
-                <div class="thumbnail">
-                  <a href="project/steadyasset" aria-label="SteadyAsset">
-                    <img src="../assets/img/project/c4/project-thum-sa.png" alt="project" />
-                    <div class="content">
-                      <h3 class="title">
-                        <a href="project/steadyasset">SteadyAsset</a>
-                      </h3>
-                      <span class="subtitle">Logo, Branding, UI/UX Design, Website, GMB, GA</span>
-                    </div>
-                  </a>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-10 mx-md-auto col-lg-6 project branding">
-              <div class="project-grid">
-                <div class="thumbnail">
-                  <a href="project/savedesk" aria-label="SaveDesk">
-                    <img src="../assets/img/project/c7/project-thum-sd.png" alt="project" />
-                    <div class="content">
-                      <h3 class="title">
-                        <a href="project/savedesk">SaveDesk</a>
-                      </h3>
-                      <span class="subtitle">Redesign, UI/UX Design, Wireframing, High-Fidelity
-                        Prototype</span>
-                    </div>
-                  </a>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-10 mx-md-auto col-lg-6 project branding">
-              <div class="project-grid">
-                <div class="thumbnail">
-                  <a href="project/samsiddhi-designs" aria-label="Samsiddhi Designs">
-                    <img src="../assets/img/project/c9/project-thum-sd.png" alt="project" />
-                    <div class="content">
-                      <h3 class="title">
-                        <a href="project/samsiddhi-designs">Samsiddhi Designs</a>
-                      </h3>
-                      <span class="subtitle">Logo, Branding, UI/UX Design, Website, GMB, GA</span>
-                    </div>
-                  </a>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-10 mx-md-auto col-lg-6 project branding">
-              <div class="project-grid">
-                <div class="thumbnail">
-                  <a href="project/uae-links" aria-label="UAE Links">
-                    <img src="../assets/img/project/c1/project-thum-uaeLinks.png" alt="project" />
-                    <div class="content">
-                      <h3 class="title">
-                        <a href="project/uae-links">UAE Links</a>
-                      </h3>
-                      <span class="subtitle">UI/UX Design, Website, GA</span>
-                    </div>
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="d-lg-flex justify-content-center">
-            <a class="amor-btn btn-borderd light" href="portfolio">Case Study</a>
-          </div>
-        </div>
-      </div>
-      <ul class="shape-group-services list-unstyled">
-        <li class="shape shape-3">
-          <img src="../assets/img/shapes/bubble-14.png" alt="circle" />
-        </li>
-        <li class="shape shape-2">
-          <img src="../assets/img/shapes/line-9.png" alt="Line" />
-        </li>
-        <li class="shape shape-2">
-          <img src="../assets/img/shapes/bubble-2.png" alt="Line" />
-        </li>
-      </ul>
-    </section>
-
-    <section class="section section-padding bg-color-light" id="reviews">
-      <div class="container-fluid">
-        <div class="section-heading heading-center">
-          <span class="subtitle">What Clients Say</span>
-          <h2 class="title">
-            <span class="gradient-text yellow-dark">Feedback</span> That
-            <span class="gradient-text yellow-dark">Inspires</span> Us
-          </h2>
-        </div>
-
-        <div class="grid md:grid-cols-2 gap-8">
-          <div class="glass-card p-10 rounded-3xl relative overflow-hidden group">
-            <div
-              class="absolute top-0 left-0 w-2 h-full bg-warning group-hover:w-full group-hover:opacity-5 transition-all duration-700">
-            </div>
-            <div class="flex gap-1 text-ly mb-6">
-              <span class="material-symbols-outlined">star</span>
-              <span class="material-symbols-outlined">star</span>
-              <span class="material-symbols-outlined">star</span>
-              <span class="material-symbols-outlined">star</span>
-              <span class="material-symbols-outlined">star</span>
-            </div>
-            <p class="text-xl text-white italic mb-10 leading-relaxed font-light">
-              "Amortree is a very professional and end-to-end service provider.
-              They have good understanding of the clients needs and work in a
-              timely and efficient manner."
-            </p>
-            <div class="flex items-center gap-4">
-              <img src="../assets/img/project/c4/icon-sa.svg" class="m-0" style="height: 40px" alt="SteadyAsset Logo" />
-              <div>
-                <p class="font-bold text-white uppercase text-sm tracking-widest mb-1">
-                  Menaka Krishna
-                </p>
-                <small class="text-xs text-ll font-bold mb-0">CEO, SteadyAsset</small>
-              </div>
-            </div>
-          </div>
-          <div class="glass-card p-10 rounded-3xl relative overflow-hidden group">
-            <div
-              class="absolute top-0 left-0 w-2 h-full bg-warning group-hover:w-full group-hover:opacity-5 transition-all duration-700">
-            </div>
-            <div class="flex gap-1 text-ly mb-6">
-              <span class="material-symbols-outlined">star</span>
-              <span class="material-symbols-outlined">star</span>
-              <span class="material-symbols-outlined">star</span>
-              <span class="material-symbols-outlined">star</span>
-              <span class="material-symbols-outlined">star</span>
-            </div>
-            <p class="text-xl text-white italic mb-10 leading-relaxed font-light">
-              "Hi, I just wanted to take a moment to express my sincere
-              appreciation for the outstanding work you've done. Completing it
-              on time and to such a high standard is a testament to your
-              dedication and expertise. Your efforts have not gone unnoticed and
-              I'm grateful for your contributions. Thank you again for a job
-              well done!"
-            </p>
-            <div class="flex items-center gap-4">
-              <img src="../assets/img/project/c2/icon-sc.svg" class="m-0" style="height: 40px" alt="SteadyAsset Logo" />
-              <div>
-                <p class="font-bold text-white uppercase text-sm tracking-widest mb-1">
-                  Sandeep L
-                </p>
-                <small class="text-xs text-ll font-bold mb-0">Co-Founder, Solved Cube IT Solution</small>
-              </div>
-            </div>
-          </div>
-          <div class="glass-card p-10 rounded-3xl relative overflow-hidden group">
-            <div
-              class="absolute top-0 left-0 w-2 h-full bg-warning group-hover:w-full group-hover:opacity-5 transition-all duration-700">
-            </div>
-            <div class="flex gap-1 text-ly mb-6">
-              <span class="material-symbols-outlined">star</span>
-              <span class="material-symbols-outlined">star</span>
-              <span class="material-symbols-outlined">star</span>
-              <span class="material-symbols-outlined">star</span>
-              <span class="material-symbols-outlined">star</span>
-            </div>
-            <p class="text-xl text-white italic mb-10 leading-relaxed font-light">
-              "Amortree Tech is a pleasure to work with. They're responsive,
-              professional, and always willing to go the extra mile. I highly
-              recommend their services."
-            </p>
-            <div class="flex items-center gap-4">
-              <img src="../assets/img/project/c9/icon-sd.svg" class="m-0" style="height: 40px" alt="SteadyAsset Logo" />
-              <div>
-                <p class="font-bold text-white uppercase text-sm tracking-widest mb-1">
-                  Bharathkumar MS
-                </p>
-                <small class="text-xs text-ll font-bold mb-0">Founder, Samsiddhi Designs</small>
-              </div>
-            </div>
-          </div>
-          <div class="glass-card p-10 rounded-3xl relative overflow-hidden group">
-            <div
-              class="absolute top-0 left-0 w-2 h-full bg-warning group-hover:w-full group-hover:opacity-5 transition-all duration-700">
-            </div>
-            <div class="flex gap-1 text-ly mb-6">
-              <span class="material-symbols-outlined">star</span>
-              <span class="material-symbols-outlined">star</span>
-              <span class="material-symbols-outlined">star</span>
-              <span class="material-symbols-outlined">star</span>
-              <span class="material-symbols-outlined">star</span>
-            </div>
-            <p class="text-xl text-white italic mb-10 leading-relaxed font-light">
-              "Good understanding of the client's need. Very good professional
-              and service provider. you again for a job well done, All the best
-              👍👍💐💐"
-            </p>
-            <div class="flex items-center gap-4">
-              <img src="../assets/img/project/c6/spr-logo.svg" class="m-0" style="height: 40px"
-                alt="SteadyAsset Logo" />
-              <div>
-                <p class="font-bold text-white uppercase text-sm tracking-widest mb-1">
-                  Suresh Babu
-                </p>
-                <small class="text-xs text-ll font-bold mb-0">CEO, SPR Real Estate</small>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="d-none row">
-          <div class="col-lg-4 col-md-6 mb-4">
-            <div class="review-card p-4 h-100">
-              <div class="d-flex justify-content-between">
-                <div class="stars mb-2">
-                  <i class="icofont-star text-warning"></i>
-                  <i class="icofont-star text-warning"></i>
-                  <i class="icofont-star text-warning"></i>
-                  <i class="icofont-star text-warning"></i>
-                  <i class="icofont-star text-warning"></i>
-                </div>
-                <a class="small text-success mb-2" href="https://share.google/VbfvZxWgqZZY3wKnD" target="_blank">Google
-                  Review <i class="icofont-link"></i></a>
-              </div>
-              <p class="mb-3">
-                "Amortree is a very professional and end-to-end service
-                provider. They have good understanding of the clients needs and
-                work in a timely and efficient manner."
-              </p>
-              <div class="d-flex">
-                <img src="../assets/img/project/c4/icon-sa.svg" class="m-0" style="height: 40px"
-                  alt="SteadyAsset Logo" />
-                <div class="ms-2">
-                  <div class="small">Client – SteadyAsset</div>
-                  <div class="fw-bold">Menaka Reddy</div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6 mb-4">
-            <div class="review-card p-4 h-100">
-              <div class="d-flex justify-content-between">
-                <div class="stars mb-2">
-                  <i class="icofont-star text-warning"></i>
-                  <i class="icofont-star text-warning"></i>
-                  <i class="icofont-star text-warning"></i>
-                  <i class="icofont-star text-warning"></i>
-                  <i class="icofont-star text-warning"></i>
-                </div>
-                <a class="small text-success mb-2" href="https://share.google/8H1Msp6toe6G2KbDN" target="_blank">Google
-                  Review <i class="icofont-link"></i></a>
-              </div>
-              <p class="mb-3">
-                "Hi, I just wanted to take a moment to express my sincere
-                appreciation for the outstanding work you've done. Completing it
-                on time and to such a high standard is a testament to your
-                dedication and expertise. Your efforts have not gone unnoticed
-                and I'm grateful for your contributions. Thank you again for a
-                job well done!"
-              </p>
-              <div class="d-flex">
-                <img src="../assets/img/project/c2/icon-sc.svg" class="m-0" style="height: 40px"
-                  alt="SteadyAsset Logo" />
-                <div class="ms-2">
-                  <div class="small">Client – Solved Cube IT Solution</div>
-                  <div class="fw-bold">Sandeep L</div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6 mb-4">
-            <div class="review-card p-4 h-100">
-              <div class="d-flex justify-content-between">
-                <div class="stars mb-2">
-                  <i class="icofont-star text-warning"></i>
-                  <i class="icofont-star text-warning"></i>
-                  <i class="icofont-star text-warning"></i>
-                  <i class="icofont-star text-warning"></i>
-                  <i class="icofont-star text-warning"></i>
-                </div>
-                <a class="small text-success mb-2" href="https://share.google/NG4IIyDdLP6yMJ5tN" target="_blank">Google
-                  Review <i class="icofont-link"></i></a>
-              </div>
-              <p class="mb-3">
-                "Amortree Tech is a pleasure to work with. They're responsive,
-                professional, and always willing to go the extra mile. I highly
-                recommend their services."
-              </p>
-              <div class="d-flex">
-                <img src="../assets/img/project/c9/icon-sd.svg" class="m-0" style="height: 40px"
-                  alt="SteadyAsset Logo" />
-                <div class="ms-2">
-                  <div class="small">Client – Samsiddhi Designs</div>
-                  <div class="fw-bold">Bharathkumar MS</div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <ul class="list-unstyled shape-group-banner">
-        <li class="shape shape-3">
-          <img src="../assets/img/shapes/bubble-14.png" alt="Bubble" />
-        </li>
-        <li class="shape shape-4">
-          <img src="../assets/img/shapes/bubble-14.png" alt="Bubble" />
-        </li>
-        <li class="shape shape-5">
-          <img src="../assets/img/shapes/bubble-14.png" alt="Bubble" />
-        </li>
-        <li class="shape shape-6">
-          <img src="../assets/img/shapes/bubble-40.png" alt="Bubble" />
-        </li>
-        <li class="shape shape-7">
-          <img src="../assets/img/shapes/bubble-41.png" alt="Bubble" />
-        </li>
-        <li class="shape shape-8">
-          <img src="../assets/img/shapes/bubble-14.png" alt="Bubble" />
-        </li>
-        <li class="shape shape-9">
-          <img src="../assets/img/shapes/bubble-40.png" alt="Bubble" />
-        </li>
-      </ul>
-    </section>
-
-    <section class="py-24 px-6 bg-white">
-      <div class="container mx-auto max-w-4xl">
-        <h2 class="text-3xl font-display font-bold text-center mb-16 text-ly" style="font-weight: 600">
-          Why Businesses Choose Us
-        </h2>
-        <div class="space-y-4 w-50 why mx-auto">
-          <div
-            class="group bg-dark p-6 rounded-2xl border border-dark flex items-center justify-between hover:border-primary transition-all cursor-default">
-            <div class="flex items-center gap-4">
-              <div class="w-10 h-10 rounded-full bg-primary/10 text-ly flex items-center justify-center">
-                <span class="material-symbols-outlined">target</span>
-              </div>
-              <span class="text-xl font-semibold">Strategy-First Approach</span>
-            </div>
-            <span class="material-symbols-outlined text-slate-400 group-hover:text-primary">arrow_forward</span>
-          </div>
-          <div
-            class="group bg-dark p-6 rounded-2xl border border-dark flex items-center justify-between hover:border-primary transition-all cursor-default">
-            <div class="flex items-center gap-4">
-              <div class="w-10 h-10 rounded-full bg-primary/10 text-ly flex items-center justify-center">
-                <span class="material-symbols-outlined">trending_up</span>
-              </div>
-              <span class="text-xl font-semibold">Business Results Focused</span>
-            </div>
-            <span class="material-symbols-outlined text-slate-400 group-hover:text-primary">arrow_forward</span>
-          </div>
-          <div
-            class="group bg-dark p-6 rounded-2xl border border-dark flex items-center justify-between hover:border-primary transition-all cursor-default">
-            <div class="flex items-center gap-4">
-              <div class="w-10 h-10 rounded-full bg-primary/10 text-ly flex items-center justify-center">
-                <span class="material-symbols-outlined">analytics</span>
-              </div>
-              <span class="text-xl font-semibold">100% Data-Driven Decisions</span>
-            </div>
-            <span class="material-symbols-outlined text-slate-400 group-hover:text-primary">arrow_forward</span>
-          </div>
-          <div
-            class="group bg-dark p-6 rounded-2xl border border-dark flex items-center justify-between hover:border-primary transition-all cursor-default">
-            <div class="flex items-center gap-4">
-              <div class="w-10 h-10 rounded-full bg-primary/10 text-ly flex items-center justify-center">
-                <span class="material-symbols-outlined">handshake</span>
-              </div>
-              <span class="text-xl font-semibold">True Growth Partners</span>
-            </div>
-            <span class="material-symbols-outlined text-slate-400 group-hover:text-primary">arrow_forward</span>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="d-none section section-padding-equal bg-color-white" id="about">
-      <div class="container">
-        <div class="row align-items-center">
-          <div class="col-lg-6">
-            <div class="about-us">
-              <div class="section-heading heading-left mb-0">
-                <span class="subtitle">Who we are</span>
-                <h2 class="title mb--40">
-                  Your
-                  <span class="gradient-text-light text-lg">Digital Growth</span>
-                  Partner
-                </h2>
-                <p>
-                  At amortree Tech, we're more than just an
-                  <strong>IT consulting company</strong>; we're your strategic
-                  partner in leveraging cutting-edge technologies to drive
-                  innovation and transformation. Specializing in
-                  <strong>custom website development</strong>,
-                  <strong>UI/UX design</strong>, and
-                  <strong>mobile app UI/UX Design</strong>, we're dedicated to
-                  empowering businesses to thrive in the digital age.
-                </p>
-                <p>
-                  Our team of <strong>expert developers</strong> and
-                  <strong>designers</strong> is dedicated to delivering
-                  customized <strong>IT solutions</strong> that align with your
-                  unique needs and objectives. Whether you're focused on
-                  enhancing your digital platforms, creating seamless user
-                  experiences, or crafting innovative technology solutions, we
-                  have the skills and expertise to bring your vision to life.
-                </p>
-                <p>
-                  With a blend of creativity, technical expertise, and a
-                  customer-centric approach, we strive to exceed expectations
-                  and deliver measurable results. Partner with amortree Tech,
-                  and let's embark on a journey of
-                  <strong>digital transformation</strong> and success together.
-                </p>
-                <div class="d-flex justify-content-start gap-3 mt-5">
-                  <a href="about" class="amor-btn btn-borderd light" tabindex="0">Know more</a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-xl-5 col-lg-6 offset-xl-1">
-            <img src="../assets/img/amorboy/am-home-abt.png"
-              alt="Professional Web Development Team - Custom Website Design Services" />
-          </div>
-        </div>
-      </div>
-      <ul class="shape-group-service list-unstyled">
-        <li class="shape shape-2">
-          <img src="../assets/img/shapes/line-6.png" alt="line" />
-        </li>
-        <li class="shape shape-3">
-          <img src="../assets/img/shapes/line-5.png" alt="line" />
-        </li>
-      </ul>
-    </section>
 
     <!-- SEO-Enhanced FAQ Section -->
     <section class="d-none section section-padding faqSec bg-color-light">

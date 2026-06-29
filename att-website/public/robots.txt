@@ -10,6 +10,18 @@ Disallow: /private/
 
 # Allow all other content
 Allow: /services
+Allow: /website-design
+Allow: /web-development
+Allow: /ui-ux-design
+Allow: /ecommerce-development
+Allow: /lead-generation
+Allow: /shopify-development
+Allow: /seo
+Allow: /digital-marketing
+Allow: /social-media-marketing
+Allow: /linkedin-marketing
+Allow: /branding
+Allow: /website-maintenance
 Allow: /about
 Allow: /contact
 Allow: /case-studies

@@ -43,7 +43,7 @@
   }
   li {
     display: inline-block;
-    color: var(--color-primary);
+    color: var(--color-primaryY);
     font-weight: 500;
     position: relative;
     margin-right: 22px;
@@ -79,13 +79,13 @@
 .breadcrumb-banner {
   padding: 30vh 0 2vh;
   @media #{$extra-device} {
-    padding: 36vh 0 2vh;
+    padding: 34vh 0 2vh;
   }
   @media #{$laptop-device} {
-    padding: 36vh 0 2vh;
+    padding: 34vh 0 2vh;
   }
   @media #{$lg-layout} {
-    padding: 56vh 0 2vh;
+    padding: 36vh 0 2vh;
   }
   @media #{$smlg-device} {
     // padding: 200px 0 50px;
@@ -114,6 +114,10 @@
       @media #{$md-layout} {
         width: 100%;
         margin-bottom: 30px;
+      }
+
+      span {
+        display: inline;
       }
     }
     p {

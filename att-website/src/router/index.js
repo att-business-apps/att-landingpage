@@ -15,11 +15,6 @@ const router = createRouter({
       component: () => import("../views/ServicesView.vue"),
     },
     {
-      path: "/lead-generation-systems",
-      name: "lead-generation-systems",
-      component: () => import("../views/LeadGenerationSystemsView.vue"),
-    },
-    {
       path: "/about",
       name: "about",
       // route level code-splitting
@@ -66,7 +61,7 @@ const router = createRouter({
     },
     {
       path: "/web-development",
-      name: "website-development",
+      name: "web-development",
       component: () => import("../views/services/WebDevelopmentView.vue"),
     },
     {
@@ -78,6 +73,11 @@ const router = createRouter({
       path: "/ecommerce-development",
       name: "ecommerce-development",
       component: () => import("../views/services/EcommerceDevelopmentView.vue"),
+    },
+    {
+      path: "/lead-generation",
+      name: "lead-generation",
+      component: () => import("../views/services/LeadGenerationView.vue"),
     },
     {
       path: "/shopify-development",
@@ -93,6 +93,16 @@ const router = createRouter({
       path: "/digital-marketing",
       name: "digital-marketing",
       component: () => import("../views/services/DigitalMarketingView.vue"),
+    },
+    {
+      path: "/social-media-marketing",
+      name: "social-media-marketing",
+      component: () => import("../views/services/SocialMediaMarketingView.vue"),
+    },
+    {
+      path: "/linkedin-marketing",
+      name: "linkedin-marketing",
+      component: () => import("../views/services/LinkedInMarketingView.vue"),
     },
     {
       path: "/branding",

@@ -3,7 +3,7 @@
 -------------------------*/
 
 // @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Google+Sans+Flex:opsz,wght@6..144,1..1000&family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Google+Sans+Flex:opsz,wght@6..144,1..1000&family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&family=Instrument+Serif:ital@0;1&display=swap');
 
 body {
     font-family: var(--font-secondary);    
@@ -92,6 +92,14 @@ h2,
     @media #{$small-mobile} {
         font-size: 34px;
     }
+
+    span.text-ly,
+    span.text-lr,
+    span.yellow-dark {
+        font-family: var(--font-instrument);
+        font-style: italic;
+        font-weight: 800;
+    }
 }
 
 h3,
@@ -151,21 +159,4 @@ p {
     @media #{$sm-layout} {
         font-size: var(--font-body-2);
     }
-}
-
-.body-font1 {
-    font-size: var(--font-body-1);
-    line-height: var(--line-height-b1);
-}
-.body-font2 {
-    font-size: var(--font-body-2);
-    line-height: var(--line-height-b1);
-}
-.body-font3 {
-    font-size: var(--font-body-3);
-    line-height: var(--line-height-b3);
-}
-.body-font4 {
-    font-size: var(--font-body-4);
-    line-height: var(--line-height-b3);
 }
