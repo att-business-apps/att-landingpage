@@ -809,7 +809,7 @@ onBeforeUnmount(() => {
             <h2 class="text-3xl font-display font-bold text-dark mb-0 att-why-heading" style="font-weight: 600">
               What It's Like <span class="text-ly">Working With Amortree</span>
             </h2>
-            <p class="att-why-sub text-slate-500 max-w-xs mb-0 text-sm leading-relaxed">
+            <p class="att-why-sub text-slate-800 max-w-xs mb-0 text-sm leading-relaxed">
               Most agencies hand you a deliverable. We build the system the deliverable is supposed to produce.
             </p>
           </div>
@@ -1342,7 +1342,7 @@ onBeforeUnmount(() => {
          FAQ — Numbered Tab Rail + Expanding Stage
          ============================================================ -->
     <section class="att-faq-section py-28 px-6 bg-color-light overflow-hidden" id="faq">
-      <div class="container mx-auto max-w-5xl">
+      <div class="att-faq-inner">
         <div class="att-faq-header mb-16 text-center">
           <div class="inline-block py-2 px-4 rounded bg-dark text-[10px] font-black uppercase tracking-[0.3em] mb-3">
             <span class="text-ly">Common Questions</span>
@@ -1570,7 +1570,6 @@ onBeforeUnmount(() => {
 
 .att-why-header {
   .att-why-heading { line-height: 1.15; }
-  .att-why-sub { opacity: 0.75; }
 }
 
 .att-why-grid {
@@ -1677,9 +1676,15 @@ onBeforeUnmount(() => {
   background: var(--color-bg-light, #f8fafc);
 }
 
+.att-faq-inner {
+  max-width: 860px;
+  margin: 0 auto;
+}
+
 .att-faq-rail {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
   gap: 0.5rem;
   position: relative;
   padding-bottom: 1px; // so ticker doesn't clip

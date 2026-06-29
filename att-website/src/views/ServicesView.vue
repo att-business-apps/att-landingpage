@@ -31,36 +31,12 @@ const services = [
     href: "/ui-ux-design",
   },
   {
-    icon: "shopping_bag",
-    tag: "Commerce",
-    title: "Ecommerce Development",
-    desc: "Increase online sales with ecommerce experiences optimized for conversions and customer retention.",
-    bestFor: ["D2C Brands", "Retailers"],
-    href: "/ecommerce-development",
-  },
-  {
-    icon: "hub",
-    tag: "Growth",
-    title: "Lead Generation",
-    desc: "Build a predictable pipeline of qualified leads—not just website traffic.",
-    bestFor: ["B2B Companies", "Service Businesses"],
-    href: "/lead-generation",
-  },
-  {
-    icon: "storefront",
-    tag: "Commerce",
-    title: "Shopify Development",
-    desc: "Grow revenue with Shopify stores optimized for conversions and repeat purchases.",
-    bestFor: ["Shopify Stores", "D2C Brands"],
-    href: "/shopify-development",
-  },
-  {
-    icon: "manage_search",
-    tag: "Visibility",
-    title: "SEO",
-    desc: "Get found by the right customers and generate sustainable organic growth.",
-    bestFor: ["Local Businesses", "SaaS"],
-    href: "/seo",
+    icon: "auto_awesome",
+    tag: "Identity",
+    title: "Branding",
+    desc: "Create a memorable brand that earns trust, stands out, and supports long-term business growth.",
+    bestFor: ["Startups", "New Businesses"],
+    href: "/branding",
   },
   {
     icon: "campaign",
@@ -79,6 +55,22 @@ const services = [
     href: "/social-media-marketing",
   },
   {
+    icon: "hub",
+    tag: "Growth",
+    title: "Lead Generation",
+    desc: "Build a predictable pipeline of qualified leads—not just website traffic.",
+    bestFor: ["B2B Companies", "Service Businesses"],
+    href: "/lead-generation",
+  },
+  {
+    icon: "manage_search",
+    tag: "Visibility",
+    title: "SEO",
+    desc: "Get found by the right customers and generate sustainable organic growth.",
+    bestFor: ["Local Businesses", "SaaS"],
+    href: "/seo",
+  },
+  {
     icon: "work",
     tag: "Social",
     title: "LinkedIn Marketing",
@@ -87,12 +79,20 @@ const services = [
     href: "/linkedin-marketing",
   },
   {
-    icon: "auto_awesome",
-    tag: "Identity",
-    title: "Branding",
-    desc: "Create a memorable brand that earns trust, stands out, and supports long-term business growth.",
-    bestFor: ["Startups", "New Businesses"],
-    href: "/branding",
+    icon: "shopping_bag",
+    tag: "Commerce",
+    title: "Ecommerce Development",
+    desc: "Increase online sales with ecommerce experiences optimized for conversions and customer retention.",
+    bestFor: ["D2C Brands", "Retailers"],
+    href: "/ecommerce-development",
+  },
+  {
+    icon: "storefront",
+    tag: "Commerce",
+    title: "Shopify Development",
+    desc: "Grow revenue with Shopify stores optimized for conversions and repeat purchases.",
+    bestFor: ["Shopify Stores", "D2C Brands"],
+    href: "/shopify-development",
   },
   {
     icon: "build",
@@ -163,7 +163,7 @@ onBeforeUnmount(() => {
           <p>Every service is built around one objective: helping your business attract better customers, convert more visitors, and grow with confidence.</p>
         </div>
       </div>
-      <div class="banner-thumbnail ">
+      <div class="banner-thumbnail" style="bottom: 0px;">
         <div class=""
           style="position: relative; will-change: transform; transform: perspective(2000px) rotateX(-0.32deg) rotateY(-11.76deg) scale3d(1, 1, 1);">
           <img src="../assets/img/amorboy/am-service.png" class="w-75 animate__animated slideInRight"

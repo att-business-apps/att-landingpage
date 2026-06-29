@@ -1,795 +1,923 @@
 <script setup>
-import { ref } from "vue";
+import { onBeforeUnmount, onMounted } from "vue";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
-const disableBtn = ref(false);
-const from_name = ref("");
-const email = ref("");
-const phoneNumber = ref("");
-const message = ref("");
+gsap.registerPlugin(ScrollTrigger);
 
-function sendMail() {
-  var params = {
-    from_name: from_name.value,
-    to_name: "Admin",
-    email: email.value,
-    phoneNumber: phoneNumber.value,
-    message: message.value,
-  };
+const includes = [
+  {
+    icon: "conversion_path",
+    title: "Funnel Strategy & Mapping",
+    desc: "Map every customer touchpoint—from first click to closed deal—so your funnel works as one connected growth system.",
+  },
+  {
+    icon: "web",
+    title: "High-Converting Landing Pages",
+    desc: "Conversion-focused landing pages built around one clear offer, persuasive messaging, and a single goal—more qualified enquiries.",
+  },
+  {
+    icon: "fact_check",
+    title: "Lead Qualification Forms",
+    desc: "Smart forms that filter serious prospects, reduce spam, and help your sales team focus on high-intent leads.",
+  },
+  {
+    icon: "sync_alt",
+    title: "CRM & Automation Integration",
+    desc: "Automatically send leads into your CRM, trigger follow-ups, and ensure every enquiry is captured and nurtured.",
+  },
+  {
+    icon: "ads_click",
+    title: "Paid Traffic Alignment",
+    desc: "Google, Meta, and LinkedIn campaigns aligned with landing pages to maximize conversion rates and reduce acquisition costs.",
+  },
+  {
+    icon: "analytics",
+    title: "Conversion Tracking & Reporting",
+    desc: "Track every click, form submission, phone call, and conversion so you know exactly which campaigns generate revenue.",
+  },
+  {
+    icon: "mark_email_read",
+    title: "Email & Follow-Up Automation",
+    desc: "Automated email sequences nurture new leads, reduce response time, and increase sales opportunities without manual effort.",
+  },
+  {
+    icon: "trending_up",
+    title: "Lead Quality Optimization",
+    desc: "Continuous testing and optimization improve lead quality, conversion rates, and cost per acquisition over time.",
+  },
+];
 
-  const serviceID = "service_77crg6o";
+const steps = [
+  {
+    num: "01",
+    icon: "manage_search",
+    title: "Audit & Strategy",
+    desc: "We review your current funnel (or starting point), your offer, and your audience before designing anything.",
+    week: "Week 1",
+  },
+  {
+    num: "02",
+    icon: "account_tree",
+    title: "Funnel & Page Design",
+    desc: "Landing pages and forms designed around a single conversion goal, built on proven structure, not guesswork.",
+    week: "Week 1–2",
+  },
+  {
+    num: "03",
+    icon: "sync_alt",
+    title: "Integrate & Automate",
+    desc: "CRM, email, and notification systems wired in, so qualified leads reach your team the moment they convert.",
+    week: "Week 2–3",
+  },
+  {
+    num: "04",
+    icon: "task_alt",
+    title: "Launch & Optimize",
+    desc: "Go live with tracking confirmed, then iterate on real conversion data — not assumptions — in the weeks after.",
+    week: "Week 3–4",
+  },
+];
 
-  if (!params.from_name) {
-    alert("Please enter your name");
-    return;
+const work = [
+  {
+    name: "SteadyAsset",
+    tag: "Brand Identity · UI/UX · Website",
+    metricVal: "8.44x",
+    metricLabel: "ROAS",
+    img: new URL("../../assets/img/project/c4/project-thum-sa.png", import.meta.url).href,
+    href: "/project/steadyasset",
+  },
+  {
+    name: "SaveDesk",
+    tag: "Full Redesign · UI/UX",
+    metricVal: "+42%",
+    metricLabel: "Conversion",
+    img: new URL("../../assets/img/project/c7/project-thum-sd.png", import.meta.url).href,
+    href: "/project/savedesk",
+  },
+  {
+    name: "Samsiddhi Designs",
+    tag: "Brand Identity · UI/UX · Website",
+    metricVal: "3.5x",
+    metricLabel: "Pipeline",
+    img: new URL("../../assets/img/project/c9/project-thum-sd.png", import.meta.url).href,
+    href: "/project/samsiddhi-designs",
+  },
+];
+
+const faqs = [
+  {
+    q: "How much does a lead generation system cost?",
+    body: "Most lead generation engagements fall between ₹50,000 and ₹3,00,000, depending on the number of funnels, integrations, and whether paid traffic management is included. We scope exact pricing after understanding your offer and goals.",
+    note: "No fixed packages. Scope drives price, not the other way round.",
+  },
+  {
+    q: "How long until I start seeing leads?",
+    body: "Most funnels go live in 3–4 weeks from strategy to launch. If paid traffic is driving visitors, leads can start coming in within days of launch — though optimization continues after that.",
+    note: "Timelines are agreed upfront and tracked at every milestone.",
+  },
+  {
+    q: "Do you also manage the ad campaigns?",
+    body: "We can. Many clients pair this service with our digital marketing or LinkedIn marketing services so the funnel and the traffic driving it are built by the same team, with no gap in messaging.",
+    link: "/digital-marketing",
+    linkText: "See our digital marketing service",
+  },
+  {
+    q: "What counts as a 'qualified' lead?",
+    body: "We define qualification criteria with you upfront — budget, timeline, fit — and build forms and scoring around it, so the leads reaching your team are ones worth a follow-up call, not just an email address.",
+    note: "Quality is designed in, not filtered after the fact.",
+  },
+];
+
+let gsapContext;
+
+function initFaqTabs() {
+  const rail = document.querySelector(".lg-faq-rail");
+  if (!rail) return;
+
+  const tabs = rail.querySelectorAll(".lg-faq-tab");
+  const answers = document.querySelectorAll(".lg-faq-answer");
+  const stage = document.querySelector(".lg-faq-stage");
+  let active = 0;
+
+  const ticker = document.createElement("div");
+  ticker.className = "lg-tab-ticker";
+  rail.appendChild(ticker);
+
+  function positionTicker(tab) {
+    const railRect = rail.getBoundingClientRect();
+    const tabRect = tab.getBoundingClientRect();
+    gsap.to(ticker, {
+      x: tabRect.left - railRect.left,
+      width: tabRect.width,
+      duration: 0.38,
+      ease: "power3.out",
+    });
   }
-  if (!params.email) {
-    alert("Please enter your email");
-    return;
-  }
-  if (!params.phoneNumber) {
-    alert("Please enter your phone number");
-    return;
-  }
-  if (!params.message) {
-    alert("Please enter your requirement");
-    return;
+
+  function showAnswer(index) {
+    if (index === active) return;
+
+    const outEl = answers[active];
+    gsap.to(outEl, {
+      y: -10,
+      autoAlpha: 0,
+      duration: 0.22,
+      ease: "power2.in",
+      onComplete: () => outEl.classList.add("d-none"),
+    });
+
+    const inEl = answers[index];
+    inEl.classList.remove("d-none");
+    gsap.fromTo(
+      inEl,
+      { y: 16, autoAlpha: 0 },
+      { y: 0, autoAlpha: 1, duration: 0.38, ease: "power3.out" }
+    );
+
+    gsap.fromTo(
+      stage,
+      { scaleX: 0.995, transformOrigin: "left center" },
+      { scaleX: 1, duration: 0.35, ease: "power2.out" }
+    );
+
+    tabs[active].classList.remove("lg-tab-active");
+    tabs[active].setAttribute("aria-selected", "false");
+    tabs[index].classList.add("lg-tab-active");
+    tabs[index].setAttribute("aria-selected", "true");
+    positionTicker(tabs[index]);
+
+    active = index;
   }
 
-  disableBtn.value = true;
-  emailjs
-    .send(serviceID, getTemplate("admin"), params)
-    .then((res) => {
-      from_name.value = "";
-      email.value = "";
-      phoneNumber.value = "";
-      message.value = "";
-      console.log(res);
-      disableBtn.value = false;
-    })
-    .catch((err) => console.log(err));
-  emailjs
-    .send(serviceID, getTemplate("customer"), params)
-    .then((res) => {
-      from_name.value = "";
-      email.value = "";
-      phoneNumber.value = "";
-      message.value = "";
-      console.log(res);
-      disableBtn.value = false;
-    })
-    .catch((err) => console.log(err));
+  tabs.forEach((tab, i) => {
+    tab.addEventListener("click", () => showAnswer(i));
+  });
+
+  requestAnimationFrame(() => positionTicker(tabs[0]));
+  window.addEventListener("resize", () => positionTicker(tabs[active]), { passive: true });
 }
 
-function getTemplate(target) {
-  if (target == "admin") return "template_tcauze5";
-  if (target == "customer") return "template_svj7071";
-}
+onMounted(() => {
+  gsapContext = gsap.context(() => {
+    gsap.utils.toArray(".lg-include-card").forEach((card, i) => {
+      gsap.from(card, {
+        y: 40,
+        autoAlpha: 0,
+        duration: 0.6,
+        delay: (i % 3) * 0.07,
+        ease: "power3.out",
+        scrollTrigger: { trigger: card, start: "top 88%", once: true },
+      });
+    });
 
-// New Year
+    gsap.from(".lg-process-step", {
+      y: 50,
+      autoAlpha: 0,
+      duration: 0.7,
+      stagger: 0.1,
+      ease: "power3.out",
+      scrollTrigger: { trigger: ".lg-process-steps", start: "top 80%", once: true },
+    });
+
+    gsap.utils.toArray(".lg-work-card").forEach((card, i) => {
+      gsap.from(card, {
+        y: 40,
+        autoAlpha: 0,
+        duration: 0.65,
+        delay: i * 0.08,
+        ease: "power3.out",
+        scrollTrigger: { trigger: card, start: "top 88%", once: true },
+      });
+    });
+
+    gsap.from(".lg-faq-rail, .lg-faq-stage", {
+      y: 24,
+      autoAlpha: 0,
+      duration: 0.7,
+      stagger: 0.1,
+      ease: "power3.out",
+      scrollTrigger: { trigger: ".lg-faq-section", start: "top 78%", once: true },
+    });
+
+    gsap.from(".lg-cta-inner", {
+      y: 30,
+      autoAlpha: 0,
+      duration: 0.8,
+      ease: "power3.out",
+      scrollTrigger: { trigger: ".lg-cta-section", start: "top 80%", once: true },
+    });
+  });
+
+  initFaqTabs();
+});
+
+onBeforeUnmount(() => {
+  gsapContext && gsapContext.revert();
+});
 </script>
 
 <template>
-  <main>
-    <div class="banner banner-style-1">
-      <div class="container-fluid">
-        <div class="row align-items-end align-items-xl-end">
-          <div class="col-lg-10 mx-auto pb-5">
-            <div class="breadcrumb animate__animated fadeInUp" style="animation-duration: 2s">
+    <div class="breadcrum-area breadcrumb-banner">
+        <div class="container">
+            <div
+                class="breadcrumb animate__animated fadeInUp"
+                style="animation-duration: 2s"
+            >
                 <ul class="list-unstyled">
                     <li><a href="/">Home</a></li>
                     <li><a href="/services">Services</a></li>
                     <li class="active text-ly">Lead Generation</li>
                 </ul>
-            </div>
-            <div class="home-banner banner-content text-center">
-              <div class="animate__animated fadeInUp" style="animation-duration: 1s">
-                <h1 class="title d-inline" ref="myElement">
-                  Turn Your Website into a
-                  <span class="gradient-text-light">24/7 Sales Machine</span>
+                <div class="section-heading heading-left">
+                <h1 class="title h2 mb-0">
+                    Turn Traffic Into a <span class="text-ly">Predictable Pipeline</span>.
                 </h1>
-
-                <h2 class="h5 mt-4 flex items-center justify-center gap-3">
-                  <span class="gradient-text blue-dark">custom website development.</span>
-                  <span class="gradient-text yellow-dark">responsive website development.</span>
-                </h2>
-                <p class="subtitle w-50 md:w-100 mt-4">
-                  Stop chasing leads and start attracting them. Our automated lead generation systems identify, capture,
-                  and nurture high-intent prospects while you sleep.
+                <p>
+                    Landing pages, funnels, automation, and tracking built to consistently generate leads that convert into customers.
                 </p>
-                <div class="d-flex justify-content-center gap-3 mt-5">
-                  <a class="amor-btn btn-fill-primary btn-large"
-                    href="https://wa.me/917975859061/?text=Get%20my%20free%20GROWTH%20Audit.">Scale My Revenue Today</a>
-                  <a href="/case-studies" class="amor-btn btn-borderd light">How It Works</a>
                 </div>
-                <div class="mt-16 grid grid-cols-2 md:grid-cols-4 gap-6 opacity-80">
-                  <div class="flex flex-col items-center justify-around">
-                    <span class="text-3xl font-bold text-primary gradient-text blue-light">+140%</span>
-                    <span class="text-xs uppercase tracking-widest text-slate-300">Avg. ROI</span>
-                  </div>
-                  <div class="flex flex-col items-center">
-                    <span class="text-3xl font-bold text-primary gradient-text yellow-light">24/7</span>
-                    <span class="text-xs uppercase tracking-widest text-slate-300">Lead Machine</span>
-                  </div>
-                  <div class="flex flex-col items-center">
-                    <span class="text-3xl font-bold text-primary gradient-text green-light">12ms</span>
-                    <span class="text-xs uppercase tracking-widest text-slate-300">Fast Performance</span>
-                  </div>
-                  <div class="flex flex-col items-center">
-                    <span class="text-3xl font-bold text-primary gradient-text text-lr">Zero</span>
-                    <span class="text-xs uppercase tracking-widest text-slate-300">Wasted Ad Spend</span>
-                  </div>
-                </div>
-              </div>
             </div>
-          </div>
+            <div class="banner-thumbnail " style="right: 100px;bottom: 0px;">
+                <div class=""
+                style="position: relative; will-change: transform; transform: perspective(2000px) rotateX(-0.32deg) rotateY(-11.76deg) scale3d(1, 1, 1);">
+                    <img src="../../assets/img/amorboy/laptop-poses-banner.png" class="w-75 animate__animated slideInRight"
+                    style="animation-duration: 3s" alt="Illustration">
+                </div>
+            </div>
         </div>
-        <div class="row align-items-end align-items-xl-end">
-          <div class="amorboy animate__animated animate__slideInDown" style="animation-duration: 8s">
-            <img src="../../assets/img/amorboy/am-fly-1.png" alt="" />
-            <img src="../../assets/img/amorboy/am-doing.png" alt="" />
-          </div>
-
-          <div class="col-lg-5 col-md-10 mx-auto animate__animated fadeInUp" style="animation-duration: 2s">
-            <div class="contact-form-box banner-form">
-              <h3 class="title text-center">
-                <span class="gradient-text blue-dark">Unlock</span> Your Online
-                <span class="gradient-text yellow-dark">Potential</span>
-              </h3>
-              <form class="amor-contact-form">
-                <h4 class="mb-2">
-                  We’d love to know more about your project needs!
-                </h4>
-                <p class="mb-3">
-                  Submit your query, and we’ll reach out to you shortly!
-                </p>
-                <div class="form-group mb--40">
-                  <!-- <label>How can we help you?</label> -->
-                  <textarea name="contact-message" id="message" class="form-control textarea" v-model="message"
-                    cols="30" rows="2" placeholder="How can we help you?" required></textarea>
-                </div>
-
-                <h4 class="mt-3 mb-2">Your Contact Details</h4>
-                <p class="mb-3">For project discussions only, thank you!</p>
-                <div class="form-group">
-                  <!-- <label>Name</label> -->
-                  <input type="text" v-model="from_name" class="form-control" name="contact-name"
-                    placeholder="Your Name" required="" />
-                </div>
-                <div class="form-group">
-                  <!-- <label>Email</label> -->
-                  <input type="email" v-model="email" class="form-control" name="contact-email" placeholder="Your Email"
-                    required />
-                </div>
-                <div class="form-group mb--40">
-                  <!-- <label>Phone</label> -->
-                  <input type="tel" class="form-control" v-model="phoneNumber" name="contact-phone"
-                    placeholder="Your Phone" required />
-                </div>
-                <div class="form-group">
-                  <button @click="sendMail" type="button" class="amor-btn btn-borderd btn-fluid light" name="submit-btn"
-                    :disabled="disableBtn">
-                    Get My Free Audit
-                  </button>
-                  <p class="mt-4 text-center text-secondary text-xs">
-                    <small>We value your privacy. Your data is safe with us.</small>
-                  </p>
-                </div>
-                <div class="form-group"></div>
-              </form>
-            </div>
-            <div class="banner-thumbnail d-none">
-              <div class="animate__animated zoomIn" style="animation-duration: 2s">
-                <div class="large-thumb">
-                  <img src="../../assets/img/window.png" alt="Laptop" />
-                </div>
-              </div>
-              <div class="animate__animated slideInRight" style="animation-duration: 2s">
-                <div class="large-thumb-2">
-                  <img src="../../assets/img/amorboy/laptop-poses-banner.png" alt="Laptop" />
-                </div>
-              </div>
-              <ul class="list-unstyled shape-group">
-                <li class="shape shape-1">
-                  <div class="animate__animated slideInLeft" style="animation-duration: 1s">
-                    <img src="../../assets/img/chat-group-home.png" alt="chat" />
-                  </div>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-      <ul class="list-unstyled shape-group-banner">
-        <li class="shape shape-1">
-          <img src="../../assets/img/shapes/bubble-39.png" alt="Bubble" />
-        </li>
-        <li class="shape shape-2">
-          <img src="../../assets/img/shapes/bubble-38.png" alt="Bubble" />
-        </li>
-        <li class="shape shape-3">
-          <img src="../../assets/img/shapes/bubble-14.png" alt="Bubble" />
-        </li>
-        <li class="shape shape-4">
-          <img src="../../assets/img/shapes/bubble-14.png" alt="Bubble" />
-        </li>
-        <li class="shape shape-5">
-          <img src="../../assets/img/shapes/bubble-14.png" alt="Bubble" />
-        </li>
-        <li class="shape shape-6">
-          <img src="../../assets/img/shapes/bubble-40.png" alt="Bubble" />
-        </li>
-        <li class="shape shape-7">
-          <img src="../../assets/img/shapes/bubble-41.png" alt="Bubble" />
-        </li>
-        <li class="shape shape-8">
-          <img src="../../assets/img/shapes/bubble-14.png" alt="Bubble" />
-        </li>
-        <li class="shape shape-9">
-          <img src="../../assets/img/shapes/bubble-40.png" alt="Bubble" />
-        </li>
-      </ul>
     </div>
 
-
-    <section class="py-24 bg-white" id="process">
-      <div class="max-w-7xl mx-auto pt-10 pb-2 sm:px-6 lg:px-8">
-        <div class="text-center mb-20">
-          <h2 class="text-4xl font-display font-extrabold mb-3 text-dark">The 3-Step Growth Framework</h2>
-          <p class="text-slate-600 max-w-2xl mx-auto">A systematic approach to predictable client
-            acquisition.</p>
-        </div>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
-          <div class="relative">
-            <div class="mb-6 w-16 h-16 bg-blue-100 rounded-2xl flex items-center justify-center text-primary">
-              <span class="material-symbols-outlined text-4xl">ads_click</span>
-            </div>
-            <div class="absolute top-8 left-16 right-0 h-px bg-slate-800 hidden md:block -z-10"></div>
-            <h3 class="text-2xl font-bold mb-4 text-lb">01. High-Intent Traffic</h3>
-            <p class="text-slate-600 leading-relaxed">
-              We don't just drive visitors; we attract buyers. Using data-driven SEO and precision-targeted paid media,
-              we put your brand in front of people actively searching for your solution.
-            </p>
+  <!-- What's Included -->
+  <section class="lg-include-section">
+    <div class="lg-include-inner">
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-5 gap-2">
+        <div>
+          <div class="inline-block py-2 px-4 rounded bg-dark text-[10px] font-black uppercase tracking-[0.3em] mb-2">
+            <span class="text-ly">What's Included</span>
           </div>
-          <div class="relative">
-            <div class="mb-6 w-16 h-16 bg-red-500/10 rounded-2xl flex items-center justify-center text-secondary">
-              <span class="material-symbols-outlined text-4xl text-danger">contact_page</span>
-            </div>
-            <div class="absolute top-8 left-16 right-0 h-px bg-slate-200 dark:bg-slate-800 hidden md:block -z-10"></div>
-            <h3 class="text-2xl font-bold mb-4 text-lr">02. Conversion Architecture</h3>
-            <p class="text-slate-600 leading-relaxed">
-              Traffic is useless if it doesn't convert. We design high-performance landing pages and interactive funnels
-              that turn passive scrollers into qualified inquiries.
-            </p>
-          </div>
-          <div class="relative">
-            <div class="mb-6 w-16 h-16 bg-yellow-500/10 rounded-2xl flex items-center justify-center text-yellow-500">
-              <span class="material-symbols-outlined text-4xl">smart_toy</span>
-            </div>
-            <h3 class="text-2xl font-bold mb-4 text-ly">03. Nurture &amp; Automation</h3>
-            <p class="text-slate-600 leading-relaxed">
-              The fortune is in the follow-up. Our automated CRM sequences nurture leads until they are ready to buy,
-              ensuring no opportunity ever falls through the cracks.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section class="py-24 bg-slate-100" id="case-study">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="bg-dark rounded-3xl overflow-hidden shadow-2xl">
-          <div class="grid grid-cols-1 lg:grid-cols-2">
-            <div class="p-10 lg:p-16 flex flex-col justify-center">
-              <div class="flex items-center gap-2 mb-6">
-                <span class="material-symbols-outlined text-lb">verified</span>
-                <span class="text-lb font-bold uppercase tracking-wider text-sm">Real Results</span>
-              </div>
-              <h2 class="text-3xl lg:text-5xl font-display font-extrabold text-white mb-6 leading-tight">
-                How we generated a <span class="text-lb">40% increase</span> in qualified B2B leads.
-              </h2>
-              <p class="text-slate-400 text-light mb-8">
-                For one of our recent SaaS clients, we redesigned their entire top-of-funnel experience and implemented
-                automated scoring. The result? Higher quality leads and a shorter sales cycle.
-              </p>
-              <div class="grid grid-cols-2 gap-8 mb-10">
-                <div>
-                  <p class="text-4xl font-bold text-white mb-1">40%</p>
-                  <p class="text-slate-500 text-sm uppercase font-bold tracking-widest">Lead Volume</p>
-                </div>
-                <div>
-                  <p class="text-4xl font-bold text-white mb-1">-25%</p>
-                  <p class="text-slate-500 text-sm uppercase font-bold tracking-widest">CPA Reduction</p>
-                </div>
-              </div>
-              <a class="d-flex items-center gap-2 text-lb font-bold hover:underline" href="#">
-                Read the full case study <span class="material-symbols-outlined">arrow_forward</span>
-              </a>
-            </div>
-            <div class="relative min-h-[400px] lg:min-h-full">
-              <img alt="Data analytics dashboard showing growth"
-                class="absolute inset-0 w-full h-full object-cover opacity-80"
-                src="../../assets/img/project/c4/project-sa.png" />
-              <div class="absolute inset-0 bg-gradient-to-r from-slate-900 to-transparent lg:hidden"></div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section class="py-24 bg-white dark:bg-slate-950" id="faq">
-      <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="text-center mb-16">
-          <h2 class="text-4xl font-display font-extrabold mb-3 text-dark">Frequently Asked Questions</h2>
-          <p class="text-slate-600 dark:text-slate-400">Everything you need to know about our lead generation systems.
-          </p>
-        </div>
-        <div class="space-y-6">
-          <div class="p-6 rounded-2xl bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-800">
-            <h5 class="text-lr font-bold mb-3 flex justify-between items-center">
-              How fast can we see results?
-              <span class="material-symbols-outlined text-primary">add</span>
-            </h5>
-            <p class="text-slate-600 dark:text-slate-400">
-              While SEO takes time, our paid traffic and conversion optimizations usually show initial lead volume
-              increases within the first 14-21 days of system launch.
-            </p>
-          </div>
-          <div class="p-6 rounded-2xl bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-800">
-            <h5 class="text-lr font-bold mb-3 flex justify-between items-center">
-              Does this work for my industry?
-              <span class="material-symbols-outlined text-primary">add</span>
-            </h5>
-            <p class="text-slate-600 dark:text-slate-400">
-              We specialize in B2B service providers, SaaS companies, and high-ticket consulting. If you have a high
-              customer lifetime value, our systems are built for you.
-            </p>
-          </div>
-          <div class="p-6 rounded-2xl bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-800">
-            <h5 class="text-lr font-bold mb-3 flex justify-between items-center">
-              What CRM platforms do you integrate with?
-              <span class="material-symbols-outlined text-primary">add</span>
-            </h5>
-            <p class="text-slate-600 dark:text-slate-400">
-              We have native experience with HubSpot, Salesforce, Pipedrive, and GoHighLevel. We can also build custom
-              connections using Zapier or Make.
-            </p>
-          </div>
-          <div class="p-6 rounded-2xl bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-800">
-            <h5 class="text-lr font-bold mb-3 flex justify-between items-center">
-              Is there a long-term commitment?
-              <span class="material-symbols-outlined text-primary">add</span>
-            </h5>
-            <p class="text-slate-600 dark:text-slate-400">
-              We work on a performance-first basis. While we recommend a 3-6 month window to fully optimize the system,
-              our contracts are designed to be flexible as we scale together.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="pb-24 px-6 bg-white" id="process">
-      <div class="container mx-auto">
-        <h2 class="text-3xl font-display font-medium text-center text-dark mb-16" style="font-weight: 600">
-          Our Proven <span class="text-ly">4-Step Process</span>
-        </h2>
-        <div class="grid grid-cols-1 md:grid-cols-4 gap-0">
-          <div class="step-arrow bg-slate-900 text-white p-8 mb-4 md:mb-0 hover:scale-[1.04] transition-all">
-            <div class="text-4xl font-black mb-4 opacity-50">01</div>
-            <h5 class="font-bold text-lg mb-2 d-block">Audit &amp; Strategy</h5>
-            <small class="text-sm text-slate-300">
-              Deep dive into your metrics and map out the growth path.
-            </small>
-          </div>
-          <div class="step-arrow bg-slate-800 text-white p-8 mb-4 md:mb-0 hover:scale-[1.06] transition-all">
-            <div class="text-4xl font-black mb-4 opacity-80">02</div>
-            <h5 class="font-bold text-lr mb-2 d-block">Design &amp; Build</h5>
-            <small class="text-sm text-slate-300">
-              Crafting your high-converting assets with precision.
-            </small>
-          </div>
-          <div class="step-arrow bg-slate-700 text-white p-8 mb-4 md:mb-0 hover:scale-[1.08] transition-all">
-            <div class="text-4xl font-black mb-4 opacity-80">03</div>
-            <h5 class="font-bold text-ly mb-2 d-block">Launch</h5>
-            <small class="text-sm text-slate-100">
-              Deploying campaigns and monitoring live performance.
-            </small>
-          </div>
-          <div class="step-arrow bg-slate-600 text-slate-900 p-8 mb-4 md:mb-0 hover:scale-[1.1] transition-all">
-            <div class="text-4xl font-black mb-4 opacity-80">04</div>
-            <h5 class="font-bold text-lb mb-2 d-block">Optimize &amp; Scale</h5>
-            <small class="text-sm text-slate-300">
-              Daily improvements to maximize your return on investment.
-            </small>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <div class="d-none section serviceSec pt-5 section-padding" id="whatWeDo">
-      <div class="container-fluid">
-        <div class="section-heading heading-left mb--20 mb_md--70">
-          <div class="subtitle">Our Services</div>
-          <h2 class="title">
-            <span class="gradient-text blue-light">Top IT Services</span> for
-            Digital Transformation
+          <h2 class="font-bold text-dark mb-0" style="font-weight: 600">
+            Every Funnel Engagement <span class="text-ly">Covers This</span>
           </h2>
-          <p>
-            Unlock your business's full potential with amortree Tech. Our
-            comprehensive range of <strong>IT consulting services</strong>,
-            including <strong>custom website development</strong>,
-            <strong>UI/UX design</strong>,
-            <strong>mobile app UI/UX Design</strong>, and
-            <strong>DevOps solutions</strong>, are designed to drive innovation
-            and growth. Experience the power of
-            <strong>technology-driven transformation</strong> with our expert
-            team.
-          </p>
         </div>
-        <div class="row">
-          <div class="col-lg-4 mt--200 mt_md--0">
-            <div class="services-grid">
-              <div class="thumbnail">
-                <img src="../../assets/img/icon/research-1.png" alt="icon" />
-              </div>
-              <div class="content">
-                <h3 class="title">
-                  <a href="services">Research & Strategy</a>
-                </h3>
-                <p>
-                  <strong>Market research</strong> and
-                  <strong>strategic planning</strong> are the foundation for
-                  informed decision-making, helping amortree Tech deliver
-                  tailored <strong>IT solutions</strong> that drive business
-                  success and digital transformation.
-                </p>
-                <a class="more-btn" href="services">Find out more</a>
-              </div>
-            </div>
+        <p class="text-slate-800 max-w-sm mb-0 text-sm">
+          Every lead generation system follows the same proven framework—from funnel strategy and landing pages to CRM automation and conversion tracking—so every lead has a clear path to becoming a customer.
+        </p>
+      </div>
+
+      <div class="lg-include-grid">
+        <div v-for="item in includes" :key="item.title" class="lg-include-card">
+          <div class="lg-include-icon">
+            <span class="material-symbols-outlined">{{ item.icon }}</span>
           </div>
-          <div class="col-lg-4 mt--0">
-            <div class="services-grid">
-              <div class="thumbnail">
-                <img src="../../assets/img/icon/brand-2.png" alt="icon" />
-              </div>
-              <div class="content">
-                <h3 class="title">
-                  <a href="services">Brand Identity Design</a>
-                </h3>
-                <p>
-                  <strong>Professional branding services</strong> shape your
-                  business identity, connect with audiences, and tell your
-                  story. Let amortree Tech help you create a
-                  <strong>memorable brand identity</strong> that stands out in
-                  the market!
-                </p>
-                <a class="more-btn" href="services">Find out more</a>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4 mt--200 mt_md--0">
-            <div class="services-grid">
-              <div class="thumbnail">
-                <img src="../../assets/img/icon/logo-1.png" alt="icon" />
-              </div>
-              <div class="content">
-                <h3 class="title"><a href="services">Custom Logo Design</a></h3>
-                <p>
-                  A <strong>professional logo</strong> is more than just a
-                  symbol; it's the face of your brand. amortree Tech creates
-                  impactful <strong>custom logo designs</strong>
-                  that define brand identities and make lasting impressions.
-                </p>
-                <a class="more-btn" href="services">Find out more</a>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-lg-4 mt--0">
-            <div class="services-grid">
-              <div class="thumbnail">
-                <img src="../../assets/img/icon/web-2.png" alt="icon" />
-              </div>
-              <div class="content">
-                <h3 class="title">
-                  <a href="services">Website Development</a>
-                </h3>
-                <p>
-                  amortree Tech delivers intuitive
-                  <strong>web UI/UX design</strong> and seamless
-                  <strong>website development</strong>, ensuring user-friendly,
-                  responsive, and engaging
-                  <strong>digital experiences</strong> for your brand and
-                  business growth.
-                </p>
-                <a class="more-btn" href="services">Find out more</a>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4 mt--200 mt_md--0">
-            <div class="services-grid">
-              <div class="thumbnail">
-                <img src="../../assets/img/icon/mob-7.png" alt="icon" />
-              </div>
-              <div class="content">
-                <h3 class="title">
-                  <a href="services">Mobile App UI/UX Design</a>
-                </h3>
-                <p>
-                  <strong>Mobile app UI/UX design</strong> focuses on creating
-                  intuitive, user-friendly interfaces that enhance engagement,
-                  ensuring seamless navigation and functionality for
-                  <strong>mobile applications</strong>.
-                </p>
-                <a class="more-btn" href="services">Find out more</a>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4 mt--0">
-            <div class="services-grid">
-              <div class="thumbnail">
-                <img src="../../assets/img/icon/devops-1.png" alt="icon" />
-              </div>
-              <div class="content">
-                <h3 class="title"><a href="services">DevOps Consulting</a></h3>
-                <p>
-                  <strong>DevOps consulting services</strong> streamline
-                  collaboration between development and operations teams,
-                  ensuring efficient software delivery, automation, and
-                  continuous integration for seamless performance and
-                  <strong>cloud infrastructure management</strong>.
-                </p>
-                <a class="more-btn" href="services">Find out more</a>
-              </div>
-            </div>
-          </div>
+          <h3 class="lg-include-title">{{ item.title }}</h3>
+          <p class="lg-include-desc">{{ item.desc }}</p>
         </div>
       </div>
-      <ul class="shape-group-services list-unstyled">
-        <li class="shape shape-1 d-lg-block d-none">
-          <img src="../../assets/img/shapes/circle-1.png" alt="Line" />
-        </li>
-        <li class="shape shape-3 d-lg-block d-none">
-          <img src="../../assets/img/shapes/bubble-1.png" alt="Line" />
-        </li>
-        <li class="shape shape-4">
-          <img src="../../assets/img/amorboy/we-do.png" alt="Line" />
-        </li>
-        <li class="shape shape-5">
-          <img src="../../assets/img/shapes/bubble-15.png" alt="Line" />
-        </li>
-        <li class="shape shape-2">
-          <img src="../../assets/img/shapes/bubble-2.png" alt="Line" />
-        </li>
-        <li class="shape shape-5 d-lg-block d-none">
-          <img src="../../assets/img/shapes/bubble-2.png" alt="Line" />
-        </li>
-        <li class="shape shape-3 d-lg-block d-none">
-          <img src="../../assets/img/shapes/bubble-1.png" alt="Line" />
-        </li>
-        <li class="shape shape-4">
-          <img src="../../assets/img/amorboy/we-do.png" alt="Line" />
-        </li>
-      </ul>
     </div>
+  </section>
 
-    <!-- SEO-Enhanced FAQ Section -->
-    <section class="d-none section section-padding faqSec bg-color-light">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-8 offset-lg-2">
-            <div class="section-heading heading-center faq-style">
-              <span class="subtitle">Frequently Asked Questions</span>
-              <h2 class="title">
-                Need
-                <span class="gradient-text blue-light">Clarity?</span> We’ve Got
-                You
-              </h2>
-              <p class="px-lg-5">
-                Get answers to common questions about our professional web
-                development, UI/UX design, and DevOps consulting services.
-              </p>
-            </div>
-            <div class="accordion" id="faqAccordion">
-              <div class="accordion-item">
-                <h3 class="accordion-header">
-                  <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
-                    What services do you provide?
-                  </button>
-                </h3>
-                <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
-                  <div class="accordion-body">
-                    We offer <b>end-to-end digital solutions</b>, including:
-
-                    <ul class="mt-2">
-                      <li>
-                        <b>UI/UX Design</b> – wireframes, prototypes, and
-                        user-friendly interfaces
-                      </li>
-                      <li>
-                        <b>Website Design & Development</b> – responsive,
-                        SEO-ready websites
-                      </li>
-                      <li>
-                        <b>E-commerce Solutions</b> – custom online stores with
-                        secure payments
-                      </li>
-                      <li>
-                        <b>Web & Mobile Apps</b> – scalable apps with modern
-                        tech stacks
-                      </li>
-                      <li>
-                        <b>IT Consulting & Cloud Services</b> – strategy,
-                        hosting, and DevOps support
-                      </li>
-                      <li>
-                        <b>Ongoing Maintenance & Support</b> – updates,
-                        security, and performance optimization
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-              <div class="accordion-item">
-                <h3 class="accordion-header">
-                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#faq2">
-                    Do you provide UI/UX design services?
-                  </button>
-                </h3>
-                <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-                  <div class="accordion-body">
-                    Yes, we provide comprehensive
-                    <strong>UI/UX design services</strong> including user
-                    research, wireframing, prototyping, and visual design. Our
-                    <strong>professional designers</strong> create intuitive and
-                    engaging user experiences that improve conversion rates and
-                    user satisfaction.
-                  </div>
-                </div>
-              </div>
-              <div class="accordion-item">
-                <h3 class="accordion-header">
-                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#faq3">
-                    What is your experience with mobile app UI/UX Design?
-                  </button>
-                </h3>
-                <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-                  <div class="accordion-body">
-                    We have extensive experience in
-                    <strong>mobile app UI/UX Design</strong> for both iOS and
-                    Android platforms. Our services include native app UI/UX
-                    Design, cross-platform solutions, and mobile app UI/UX
-                    design. We ensure your mobile applications are scalable,
-                    secure, and user-friendly.
-                  </div>
-                </div>
-              </div>
-              <div class="accordion-item">
-                <h3 class="accordion-header">
-                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#faq4">
-                    How much does a project cost?
-                  </button>
-                </h3>
-                <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-                  <div class="accordion-body">
-                    Costs vary based on features, design, and complexity. After
-                    a free consultation, we provide a clear, tailored quote with
-                    no hidden charges.
-                  </div>
-                </div>
-              </div>
-              <div class="accordion-item">
-                <h3 class="accordion-header">
-                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#faq5">
-                    How long will my project take?
-                  </button>
-                </h3>
-                <div id="faq5" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-                  <div class="accordion-body">
-                    <p class="mb-2">Timelines depend on scope:</p>
-                    <ul>
-                      <li>
-                        <b>UI/UX Design:</b> Typically 1–3 weeks, depending on
-                        the number of screens and complexity of interactions.
-                      </li>
-                      <li>
-                        <b>Website Design:</b> Usually 2–4 weeks for standard
-                        corporate or portfolio sites.
-                      </li>
-                      <li>
-                        <b>Website Development:</b> Around 4–8 weeks, depending
-                        on features like e-commerce, integrations, or custom
-                        functionality.
-                      </li>
-                      <li><b>Large applications:</b> 3+ months</li>
-                    </ul>
-                    <p class="mb-0">
-                      We always define timelines upfront and keep you updated at
-                      every stage with progress milestones.
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <div class="accordion-item">
-                <h3 class="accordion-header">
-                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#faq6">
-                    Do you provide support after launch?
-                  </button>
-                </h3>
-                <div id="faq6" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-                  <div class="accordion-body">
-                    Yes, we offer
-                    <b>maintenance, updates, security, and IT support
-                      packages</b>
-                    so your system stays reliable and up-to-date.
-                  </div>
-                </div>
-              </div>
-              <div class="accordion-item">
-                <h3 class="accordion-header">
-                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#faq7">
-                    Will my website be mobile-friendly?
-                  </button>
-                </h3>
-                <div id="faq7" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-                  <div class="accordion-body">
-                    Absolutely. Every site we build is
-                    <b>responsive, fast, and optimized for all devices</b>.
-                  </div>
-                </div>
-              </div>
-              <div class="accordion-item">
-                <h3 class="accordion-header">
-                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#faq8">
-                    Do you work with international clients?
-                  </button>
-                </h3>
-                <div id="faq8" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-                  <div class="accordion-body">
-                    Yes! We collaborate with businesses across
-                    <b>India and worldwide</b>, ensuring smooth communication
-                    and delivery.
-                  </div>
-                </div>
-              </div>
-            </div>
+  <!-- Process -->
+  <section class="lg-process-section" id="process">
+    <div class="lg-process-inner">
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-5 gap-2">
+        <div>
+          <div class="inline-block py-2 px-4 rounded bg-dark text-[10px] font-black uppercase tracking-[0.3em] mb-2">
+            <span class="text-ly">Our Process</span>
           </div>
+          <h2 class="font-bold text-dark mb-0" style="font-weight: 600">
+            From First Click to <span class="text-ly">Closed Deal</span>
+          </h2>
+        </div>
+        <p class="text-slate-800 max-w-sm mb-0 text-sm">
+          A defined sequence, not an open-ended back-and-forth — so you always know what happens
+          next and when.
+        </p>
+      </div>
+
+      <div class="lg-process-steps">
+        <div v-for="step in steps" :key="step.num" class="lg-process-step" :data-step="step.num">
+          <div class="lg-ps-icon">
+            <span class="material-symbols-outlined">{{ step.icon }}</span>
+          </div>
+          <div class="lg-ps-title">{{ step.title }}</div>
+          <div class="lg-ps-desc">{{ step.desc }}</div>
+          <div class="lg-ps-week">{{ step.week }}</div>
         </div>
       </div>
-    </section>
-  </main>
+    </div>
+  </section>
+
+  <!-- Recent Work -->
+  <section class="lg-work-section">
+    <div class="lg-work-inner">
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-5 gap-2">
+        <div>
+          <div class="inline-block py-2 px-4 rounded bg-dark text-[10px] font-black uppercase tracking-[0.3em] mb-2">
+            <span class="text-ly">Recent Work</span>
+          </div>
+          <h2 class="font-bold text-dark mb-0" style="font-weight: 600">
+            Funnels That <span class="text-ly">Shipped & Performed</span>
+          </h2>
+        </div>
+        <a href="/case-studies" class="lg-work-link">View all case studies →</a>
+      </div>
+
+      <div class="lg-work-grid">
+        <a v-for="item in work" :key="item.name" :href="item.href" class="lg-work-card">
+          <div class="lg-work-thumb">
+            <img :src="item.img" :alt="item.name" />
+          </div>
+          <div class="lg-work-body">
+            <div class="lg-work-tag">{{ item.tag }}</div>
+            <div class="lg-work-name">{{ item.name }}</div>
+            <div class="lg-work-metric">
+              <span class="lg-work-metric-val">{{ item.metricVal }}</span>
+              <span class="lg-work-metric-label">{{ item.metricLabel }}</span>
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="lg-faq-section" id="faq">
+    <div class="lg-faq-inner">
+      <div class="lg-faq-header">
+        <div class="inline-block py-2 px-4 rounded bg-dark text-[10px] font-black uppercase tracking-[0.3em] mb-3">
+          <span class="text-ly">Common Questions</span>
+        </div>
+        <h2 class="font-bold text-dark mb-3" style="font-weight: 600">
+          Questions We Hear <span class="text-ly">Before a Project Starts</span>
+        </h2>
+        <p class="text-slate-500 max-w-md mx-auto mb-0 text-sm">
+          What clients usually want to know before committing to a lead generation project.
+        </p>
+      </div>
+
+      <div class="lg-faq-rail" role="tablist" aria-label="Lead generation FAQ topics">
+        <button
+          v-for="(faq, i) in faqs"
+          :key="faq.q"
+          class="lg-faq-tab"
+          :class="{ 'lg-tab-active': i === 0 }"
+          :data-tab="i"
+          role="tab"
+          :aria-selected="i === 0 ? 'true' : 'false'"
+          aria-controls="lg-faq-stage"
+        >
+          <span class="lg-tab-num">{{ String(i + 1).padStart(2, '0') }}</span>
+          <span class="lg-tab-q">{{ ['Pricing', 'Timeline', 'Ad Management', 'Lead Quality'][i] }}</span>
+        </button>
+      </div>
+
+      <div class="lg-faq-stage" id="lg-faq-stage" role="tabpanel">
+        <div
+          v-for="(faq, i) in faqs"
+          :key="faq.q + '-answer'"
+          class="lg-faq-answer"
+          :class="{ 'd-none': i !== 0 }"
+          :data-answer="i"
+        >
+          <h3 class="lg-answer-q">{{ faq.q }}</h3>
+          <p class="lg-answer-body">{{ faq.body }}</p>
+          <p v-if="faq.note" class="lg-answer-note">{{ faq.note }}</p>
+          <a v-if="faq.link" :href="faq.link" class="lg-answer-link">{{ faq.linkText }} &rarr;</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Closing CTA -->
+  <section class="lg-cta-section">
+    <div class="lg-cta-inner">
+      <h2 class="lg-cta-title">
+        Ready for a Pipeline That <span class="text-ly">Fills Itself?</span>
+      </h2>
+      <p class="lg-cta-sub">
+        A 20-minute call costs you nothing and tells you exactly where your current funnel is
+        losing qualified leads.
+      </p>
+      <div class="d-flex justify-content-center flex-wrap gap-3 mt-5">
+        <a
+          class="amor-btn btn-fill-primary btn-large"
+          href="https://wa.me/917975859061/?text=I%27d%20like%20to%20book%20a%20free%20strategy%20call."
+        >Book Your Free Strategy Call</a>
+        <a href="/estimate" class="amor-btn btn-borderd light">Get a Project Estimate</a>
+      </div>
+    </div>
+  </section>
 </template>
 
-<style lang="scss" scoped>
-.amorboy {
-  position: absolute;
-  width: 100%;
-  height: auto;
-  bottom: 8%;
-  left: 0;
-  z-index: -1;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-
-  img {
-    width: 30%;
-  }
+<style scoped>
+/* ─── What's Included ───────────────────────────────────────────────── */
+.lg-include-section {
+  padding: 6rem 4rem;
+  background: #fff;
 }
 
-.step-arrow {
-  clip-path: polygon(95% 0%, 100% 50%, 95% 100%, 0% 100%, 5% 50%, 0% 0%);
+@media (max-width: 1100px) {
+  .lg-include-section { padding: 4rem 2rem; }
 }
 
 @media (max-width: 768px) {
-  .step-arrow {
-    clip-path: none;
+  .lg-include-section { padding: 3rem 1.25rem; }
+}
+
+.lg-include-inner {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.lg-include-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+@media (max-width: 1024px) {
+  .lg-include-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 640px) {
+  .lg-include-grid { grid-template-columns: 1fr; }
+}
+
+.lg-include-card {
+  background: #f8fafc;
+  border: 1px solid rgba(15, 23, 42, 0.06);
+  border-radius: 16px;
+  padding: 2rem;
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+
+  &:hover {
+    transform: translateY(-6px) !important;
+    box-shadow: 0 24px 48px -16px rgba(15, 23, 42, 0.18);
+
+    .lg-include-icon {
+      background: rgba(250, 204, 21, 0.55);
+    }
   }
+}
+
+.lg-include-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  background: rgba(250, 204, 21, 0.1);
+  border: 1px solid rgba(250, 204, 21, 0.22);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #0f172a;
+  margin-bottom: 1.25rem;
+}
+
+.lg-include-icon .material-symbols-outlined {
+  font-size: 1.35rem;
+}
+
+.lg-include-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #0f172a;
+  margin-bottom: 0.6rem;
+}
+
+.lg-include-desc {
+  font-size: 0.86rem;
+  color: #64748b;
+  line-height: 1.7;
+  margin-bottom: 0;
+}
+
+/* ─── Process ────────────────────────────────────────────────────────── */
+.lg-process-section {
+  padding: 6rem 4rem;
+  background: #f8fafc;
+  border-top: 1px solid rgba(15, 23, 42, 0.05);
+}
+
+@media (max-width: 1100px) {
+  .lg-process-section { padding: 4rem 2rem; }
+}
+
+@media (max-width: 768px) {
+  .lg-process-section { padding: 3rem 1.25rem; }
+}
+
+.lg-process-inner {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.lg-process-steps {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1px;
+  background: rgba(15, 23, 42, 0.07);
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+@media (max-width: 900px) {
+  .lg-process-steps { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 480px) {
+  .lg-process-steps { grid-template-columns: 1fr; }
+}
+
+.lg-process-step {
+  background: #fff;
+  padding: 2.25rem 1.75rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.lg-process-step::before {
+  content: attr(data-step);
+  position: absolute;
+  top: -1rem;
+  right: 1.1rem;
+  font-size: 6rem;
+  font-weight: 900;
+  color: rgba(15, 23, 42, 0.04);
+  line-height: 1;
+  pointer-events: none;
+  font-variant-numeric: tabular-nums;
+}
+
+.lg-ps-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  background: rgba(250, 204, 21, 0.1);
+  border: 1px solid rgba(250, 204, 21, 0.22);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.75rem;
+  color: #facc15;
+  position: relative;
+  z-index: 1;
+}
+
+.lg-ps-icon .material-symbols-outlined {
+  font-size: 1.2rem;
+}
+
+.lg-ps-title {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #0f172a;
+  margin-bottom: 0.55rem;
+  position: relative;
+  z-index: 1;
+}
+
+.lg-ps-desc {
+  font-size: 0.8rem;
+  color: #64748b;
+  line-height: 1.65;
+  margin-bottom: 0.9rem;
+  position: relative;
+  z-index: 1;
+}
+
+.lg-ps-week {
+  font-size: 0.6rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: #94a3b8;
+  font-weight: 600;
+  position: relative;
+  z-index: 1;
+}
+
+/* ─── Recent Work ────────────────────────────────────────────────────── */
+.lg-work-section {
+  padding: 6rem 4rem;
+  background: #fff;
+}
+
+@media (max-width: 1100px) {
+  .lg-work-section { padding: 4rem 2rem; }
+}
+
+@media (max-width: 768px) {
+  .lg-work-section { padding: 3rem 1.25rem; }
+}
+
+.lg-work-inner {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.lg-work-link {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #0f172a;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: color 0.25s ease;
+}
+
+.lg-work-link:hover { color: #b45309; }
+
+.lg-work-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+@media (max-width: 1024px) {
+  .lg-work-grid { grid-template-columns: 1fr; }
+}
+
+.lg-work-card {
+  display: block;
+  text-decoration: none;
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid rgba(15, 23, 42, 0.07);
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.lg-work-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 24px 48px -16px rgba(15, 23, 42, 0.18);
+}
+
+.lg-work-thumb {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  background: #f1f5f9;
+}
+
+.lg-work-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.lg-work-card:hover .lg-work-thumb img {
+  transform: scale(1.05);
+}
+
+.lg-work-body {
+  padding: 1.5rem;
+  background: #fff;
+}
+
+.lg-work-tag {
+  font-size: 0.62rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #94a3b8;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.lg-work-name {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #0f172a;
+  margin-bottom: 0.75rem;
+}
+
+.lg-work-metric {
+  display: flex;
+  align-items: baseline;
+  gap: 0.4rem;
+}
+
+.lg-work-metric-val {
+  font-size: 1.1rem;
+  font-weight: 900;
+  color: #facc15;
+  font-variant-numeric: tabular-nums;
+}
+
+.lg-work-metric-label {
+  font-size: 0.62rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #94a3b8;
+  font-weight: 600;
+}
+
+/* ─── FAQ ────────────────────────────────────────────────────────────── */
+.lg-faq-section {
+  padding: 6rem 1.5rem;
+  background: #f8fafc;
+  overflow: hidden;
+}
+
+@media (max-width: 768px) {
+  .lg-faq-section { padding: 4rem 1.25rem; }
+}
+
+.lg-faq-inner {
+  max-width: 860px;
+  margin: 0 auto;
+}
+
+.lg-faq-header {
+  margin-bottom: 3rem;
+  text-align: center;
+}
+
+.lg-faq-rail {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem;
+  position: relative;
+  padding-bottom: 1px;
+  margin-bottom: 2rem;
+  border-bottom: 2px solid #e2e8f0;
+}
+
+.lg-tab-ticker {
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  height: 2px;
+  background: #facc15;
+  border-radius: 2px;
+  pointer-events: none;
+  will-change: transform, width;
+}
+
+.lg-faq-tab {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.15rem;
+  padding: 0.75rem 1.25rem 0.9rem;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  position: relative;
+  transition: background 0.2s ease;
+  border-radius: 0.5rem 0.5rem 0 0;
+}
+
+.lg-faq-tab:hover {
+  background: rgba(250, 204, 21, 0.06);
+}
+
+.lg-faq-tab:hover .lg-tab-num { color: #facc15; }
+.lg-faq-tab:hover .lg-tab-q { color: #0f172a; }
+
+.lg-faq-tab.lg-tab-active .lg-tab-num { color: #facc15; }
+.lg-faq-tab.lg-tab-active .lg-tab-q { color: #0f172a; font-weight: 700; }
+
+.lg-tab-num {
+  font-size: 0.6rem;
+  font-weight: 900;
+  letter-spacing: 0.15em;
+  color: #94a3b8;
+  text-transform: uppercase;
+  line-height: 1;
+  transition: color 0.2s ease;
+}
+
+.lg-tab-q {
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: #64748b;
+  white-space: nowrap;
+  transition: color 0.2s ease, font-weight 0.2s ease;
+}
+
+.lg-faq-stage {
+  background: #fff;
+  border: 1px solid #e2e8f0;
+  border-radius: 1.25rem;
+  padding: 2.5rem;
+  min-height: 220px;
+  position: relative;
+}
+
+@media (max-width: 640px) {
+  .lg-faq-stage { padding: 1.75rem; }
+}
+
+.lg-answer-q {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #0f172a;
+  margin-bottom: 1rem;
+  line-height: 1.35;
+}
+
+.lg-answer-body {
+  font-size: 0.92rem;
+  line-height: 1.75;
+  color: #475569;
+  margin-bottom: 1rem;
+}
+
+.lg-answer-note {
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: #94a3b8;
+  margin: 0;
+  padding-top: 1rem;
+  border-top: 1px solid #f1f5f9;
+}
+
+.lg-answer-link {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #b45309;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  margin-top: 0.5rem;
+  transition: gap 0.2s ease;
+}
+
+.lg-answer-link:hover { gap: 0.5rem; }
+
+/* ─── Closing CTA ────────────────────────────────────────────────────── */
+.lg-cta-section {
+  padding: 7rem 4rem;
+  text-align: center;
+}
+
+@media (max-width: 1100px) {
+  .lg-cta-section { padding: 5rem 2rem; }
+}
+
+@media (max-width: 768px) {
+  .lg-cta-section { padding: 4rem 1.25rem; }
+}
+
+.lg-cta-inner {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.lg-cta-title {
+  font-size: clamp(2rem, 4.2vw, 3rem);
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 1.25rem;
+}
+
+.lg-cta-sub {
+  font-size: 1rem;
+  color: #64748b;
+  line-height: 1.75;
 }
 </style>

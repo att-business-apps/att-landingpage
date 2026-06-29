@@ -8,33 +8,33 @@ gsap.registerPlugin(ScrollTrigger);
 const includes = [
   {
     icon: "code",
-    title: "Custom Build, No Bloat",
-    desc: "Hand-coded on modern frameworks — no page-builder plugins or template bloat slowing down your site.",
+    title: "Custom Code. Zero Bloat.",
+    desc: "Built with clean, maintainable code—not page builders or unnecessary plugins—so your website stays fast, secure, and easy to scale.",
   },
   {
     icon: "speed",
     title: "Performance Engineered",
-    desc: "Optimized assets, lazy loading, and clean code structured for fast load times and high Core Web Vitals scores.",
+    desc: "Optimized for Core Web Vitals with fast loading, efficient assets, and smooth interactions that improve user experience and SEO.",
   },
   {
     icon: "security",
     title: "Secure by Default",
-    desc: "Best-practice security headers, sanitized inputs, and dependency hygiene built in from the first commit.",
+    desc: "Secure architecture, validated inputs, HTTPS, and best-practice protection built into every project from day one.",
   },
   {
     icon: "devices",
-    title: "Fully Responsive",
-    desc: "Tested across real devices and breakpoints, not just a browser resize — every layout holds up in the field.",
+    title: "Responsive Everywhere",
+    desc: "Every screen is designed and tested across desktop, tablet, and mobile to ensure a consistent experience on every device.",
   },
   {
     icon: "integration_instructions",
-    title: "CMS & API Integration",
-    desc: "Headless CMS, third-party APIs, and CRM connections wired in cleanly so content and data stay easy to manage.",
+    title: "CMS & API Ready",
+    desc: "Seamlessly connect content management systems, CRMs, payment gateways, and third-party APIs without compromising performance.",
   },
   {
     icon: "auto_fix_high",
-    title: "Scalable Architecture",
-    desc: "Component-based structure that grows with you — new pages and features added without rebuilding the foundation.",
+    title: "Built to Scale",
+    desc: "Modular architecture that allows new pages, features, and integrations to be added without rebuilding your platform.",
   },
 ];
 
@@ -75,7 +75,7 @@ const work = [
     tag: "Brand Identity · UI/UX · Website",
     metricVal: "8.44x",
     metricLabel: "ROAS",
-    img: "../../assets/img/project/c4/project-thum-sa.png",
+    img: new URL("../../assets/img/project/c4/project-thum-sa.png", import.meta.url).href,
     href: "/project/steadyasset",
   },
   {
@@ -83,7 +83,7 @@ const work = [
     tag: "Full Redesign · UI/UX",
     metricVal: "+42%",
     metricLabel: "Conversion",
-    img: "../../assets/img/project/c7/project-thum-sd.png",
+    img: new URL("../../assets/img/project/c7/project-thum-sd.png", import.meta.url).href,
     href: "/project/savedesk",
   },
   {
@@ -91,7 +91,7 @@ const work = [
     tag: "Brand Identity · UI/UX · Website",
     metricVal: "3.5x",
     metricLabel: "Pipeline",
-    img: "../../assets/img/project/c9/project-thum-sd.png",
+    img: new URL("../../assets/img/project/c9/project-thum-sd.png", import.meta.url).href,
     href: "/project/samsiddhi-designs",
   },
 ];
@@ -250,27 +250,27 @@ onBeforeUnmount(() => {
 
 <template>
     <div class="breadcrum-area breadcrumb-banner">
-    <div class="container">
-      <div class="breadcrumb animate__animated fadeInUp" style="animation-duration: 2s">
-        <ul class="list-unstyled">
-          <li><a href="/">Home</a></li>
-          <li><a href="/services">Services</a></li>
-          <li class="active">Web Development</li>
-        </ul>
-        <div class="section-heading heading-left">
-          <h1 class="title h2 mb-0">Custom Web Development Built for <span class="text-ly">Performance, Scalability & Growth</span></h1>
-          <p>From business websites to complex web applications, we build secure, high-performance digital solutions tailored to your goals.</p>
+        <div class="container">
+            <div class="breadcrumb animate__animated fadeInUp" style="animation-duration: 2s">
+                    <ul class="list-unstyled">
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/services">Services</a></li>
+                        <li class="active">Web Development</li>
+                    </ul>
+                <div class="section-heading heading-left">
+                    <h1 class="title h2 mb-0">Web Development That Scales With Your Business. <span class="text-ly">Fast. Secure. Built to Grow.</span></h1>
+                    <p>Custom web development engineered for performance, scalability, and long-term business growth—from marketing websites to enterprise platforms.</p>
+                </div>
+            </div>
+            <div class="banner-thumbnail " style="right: 250px;bottom: 80px;">
+                <div class=""
+                style="position: relative; will-change: transform; transform: perspective(2000px) rotateX(-0.32deg) rotateY(-11.76deg) scale3d(1, 1, 1);">
+                    <img src="../../assets/img/amorboy/process-4.png" class="w-100 animate__animated slideInRight"
+                    style="animation-duration: 3s" alt="Illustration">
+                </div>
+            </div>
         </div>
-      </div>
-      <div class="banner-thumbnail " style="right: 300px;bottom: 80px;">
-        <div class=""
-          style="position: relative; will-change: transform; transform: perspective(2000px) rotateX(-0.32deg) rotateY(-11.76deg) scale3d(1, 1, 1);">
-          <img src="../../assets/img/amorboy/process-1.png" class="w-100 animate__animated slideInRight"
-            style="animation-duration: 3s" alt="Illustration">
-        </div>
-      </div>
     </div>
-  </div>
 
   <!-- What's Included -->
   <section class="wd-include-section">
@@ -284,9 +284,8 @@ onBeforeUnmount(() => {
             Every Build Engagement <span class="text-ly">Covers This</span>
           </h2>
         </div>
-        <p class="text-slate-500 max-w-sm mb-0 text-sm">
-          No stripped-down "starter" version. Every project gets the same rigor applied to the
-          architecture, performance, and security.
+        <p class="text-slate-800 max-w-sm mb-0 text-sm">
+          Every project is engineered with the same standards we use for enterprise builds—performance, security, scalability, and maintainability are built in from day one.
         </p>
       </div>
 
@@ -297,37 +296,6 @@ onBeforeUnmount(() => {
           </div>
           <h3 class="wd-include-title">{{ item.title }}</h3>
           <p class="wd-include-desc">{{ item.desc }}</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Process -->
-  <section class="wd-process-section" id="process">
-    <div class="wd-process-inner">
-      <div class="flex flex-col md:flex-row md:items-end justify-between mb-5 gap-2">
-        <div>
-          <div class="inline-block py-2 px-4 rounded bg-dark text-[10px] font-black uppercase tracking-[0.3em] mb-2">
-            <span class="text-ly">Our Process</span>
-          </div>
-          <h2 class="font-bold text-dark mb-0" style="font-weight: 600">
-            From First Commit to <span class="text-ly">Production Launch</span>
-          </h2>
-        </div>
-        <p class="text-slate-500 max-w-sm mb-0 text-sm">
-          A defined sequence, not an open-ended back-and-forth — so you always know what happens
-          next and when.
-        </p>
-      </div>
-
-      <div class="wd-process-steps">
-        <div v-for="step in steps" :key="step.num" class="wd-process-step" :data-step="step.num">
-          <div class="wd-ps-icon">
-            <span class="material-symbols-outlined">{{ step.icon }}</span>
-          </div>
-          <div class="wd-ps-title">{{ step.title }}</div>
-          <div class="wd-ps-desc">{{ step.desc }}</div>
-          <div class="wd-ps-week">{{ step.week }}</div>
         </div>
       </div>
     </div>
@@ -362,6 +330,37 @@ onBeforeUnmount(() => {
             </div>
           </div>
         </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Process -->
+  <section class="wd-process-section" id="process">
+    <div class="wd-process-inner">
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-5 gap-2">
+        <div>
+          <div class="inline-block py-2 px-4 rounded bg-dark text-[10px] font-black uppercase tracking-[0.3em] mb-2">
+            <span class="text-ly">Our Process</span>
+          </div>
+          <h2 class="font-bold text-dark mb-0" style="font-weight: 600">
+            From Technical Discovery <span class="text-ly">to Production</span>
+          </h2>
+        </div>
+        <p class="text-slate-800 max-w-sm mb-0 text-sm">
+          A defined sequence, not an open-ended back-and-forth — so you always know what happens
+          next and when.
+        </p>
+      </div>
+
+      <div class="wd-process-steps">
+        <div v-for="step in steps" :key="step.num" class="wd-process-step" :data-step="step.num">
+          <div class="wd-ps-icon">
+            <span class="material-symbols-outlined">{{ step.icon }}</span>
+          </div>
+          <div class="wd-ps-title">{{ step.title }}</div>
+          <div class="wd-ps-desc">{{ step.desc }}</div>
+          <div class="wd-ps-week">{{ step.week }}</div>
+        </div>
       </div>
     </div>
   </section>
@@ -435,7 +434,7 @@ onBeforeUnmount(() => {
   </section>
 </template>
 
-<style scoped>
+<style lang="scss" scoped>
 /* ─── What's Included ───────────────────────────────────────────────── */
 .wd-include-section {
   padding: 6rem 4rem;
@@ -474,6 +473,16 @@ onBeforeUnmount(() => {
   border: 1px solid rgba(15, 23, 42, 0.06);
   border-radius: 16px;
   padding: 2rem;
+  transition: transform 0.35s ease, box-shadow 0.35s ease;  
+
+  &:hover {
+    transform: translateY(-6px) !important;
+    box-shadow: 0 24px 48px -16px rgba(15, 23, 42, 0.18);
+
+    .wd-include-icon {
+      background: rgba(250, 204, 21, 0.55);
+    }
+  }
 }
 
 .wd-include-icon {
@@ -510,8 +519,7 @@ onBeforeUnmount(() => {
 /* ─── Process ────────────────────────────────────────────────────────── */
 .wd-process-section {
   padding: 6rem 4rem;
-  background: #f8fafc;
-  border-top: 1px solid rgba(15, 23, 42, 0.05);
+  background: #fff;
 }
 
 @media (max-width: 1100px) {
@@ -545,7 +553,7 @@ onBeforeUnmount(() => {
 }
 
 .wd-process-step {
-  background: #fff;
+  background: #f8fafc;
   padding: 2.25rem 1.75rem;
   position: relative;
   overflow: hidden;
@@ -614,7 +622,8 @@ onBeforeUnmount(() => {
 /* ─── Recent Work ────────────────────────────────────────────────────── */
 .wd-work-section {
   padding: 6rem 4rem;
-  background: #fff;
+  background: #f8fafc;
+  border-top: 1px solid rgba(15, 23, 42, 0.05);
 }
 
 @media (max-width: 1100px) {

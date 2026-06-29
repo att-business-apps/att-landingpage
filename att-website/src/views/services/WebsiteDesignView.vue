@@ -8,33 +8,48 @@ gsap.registerPlugin(ScrollTrigger);
 const includes = [
   {
     icon: "draft",
-    title: "UX Wireframing",
-    desc: "Information architecture and page flow mapped out before a single pixel is styled, so the structure earns its place.",
+    title: "Strategic UX Wireframes",
+    desc: "Map user journeys before design begins to improve navigation, reduce friction, and increase conversions.",
   },
   {
     icon: "palette",
-    title: "Visual Design System",
-    desc: "A cohesive color, type, and component system applied consistently across every page — not a one-off hero section.",
+    title: "Premium Design System",
+    desc: "Create a consistent brand experience that builds trust across every page.",
+  },
+  {
+    icon: "track_changes",
+    title: "Conversion-First Layout",
+    desc: "Every section is designed to move visitors toward enquiries, bookings, or sales.",
   },
   {
     icon: "devices",
-    title: "Responsive Across Devices",
-    desc: "Designed and tested across mobile, tablet, and desktop breakpoints, not just scaled down from a desktop mock.",
+    title: "Responsive Design",
+    desc: "Deliver a seamless experience on desktop, tablet, and mobile to maximize engagement.",
   },
   {
-    icon: "bolt",
-    title: "Conversion-First Layout",
-    desc: "Every section is placed with a job to do — building trust, answering objections, or moving visitors toward a decision.",
+    icon: "search",
+    title: "SEO Foundation",
+    desc: "Built with semantic HTML, structured metadata, and technical SEO best practices so your website is ready to rank from day one.",
+  },
+  {
+    icon: "speed",
+    title: "Performance Optimization",
+    desc: "Fast-loading pages optimized for Core Web Vitals, improving user experience, search visibility, and conversion rates.",
   },
   {
     icon: "accessibility_new",
-    title: "Accessible by Default",
-    desc: "Color contrast, focus states, and semantic structure considered from the first draft, not patched in at the end.",
+    title: "Accessibility Built In",
+    desc: "Improve usability while meeting modern accessibility standards and SEO best practices.",
+  },
+  {
+    icon: "monitoring",
+    title: "Analytics & Tracking Ready",
+    desc: "GA4, Google Search Console, and conversion tracking configured to measure visitor behavior and guide smarter business decisions.",
   },
   {
     icon: "rocket_launch",
     title: "Developer-Ready Handoff",
-    desc: "Structured, annotated designs that move into development without guesswork or back-and-forth on spacing and states.",
+    desc: "Speed up development, reduce revisions, and ensure pixel-perfect implementation.",
   },
 ];
 
@@ -75,7 +90,7 @@ const work = [
     tag: "Brand Identity · UI/UX · Website",
     metricVal: "8.44x",
     metricLabel: "ROAS",
-    img: "../../src/assets/img/project/c4/project-thum-sa.png",
+    img: new URL("../../assets/img/project/c4/project-thum-sa.png", import.meta.url).href,
     href: "/project/steadyasset",
   },
   {
@@ -83,7 +98,7 @@ const work = [
     tag: "Full Redesign · UI/UX",
     metricVal: "+42%",
     metricLabel: "Conversion",
-    img: "../../src/assets/img/project/c7/project-thum-sd.png",
+    img: new URL("../../assets/img/project/c7/project-thum-sd.png", import.meta.url).href,
     href: "/project/savedesk",
   },
   {
@@ -91,7 +106,7 @@ const work = [
     tag: "Brand Identity · UI/UX · Website",
     metricVal: "3.5x",
     metricLabel: "Pipeline",
-    img: "../../src/assets/img/project/c9/project-thum-sd.png",
+    img: new URL("../../assets/img/project/c9/project-thum-sd.png", import.meta.url).href,
     href: "/project/samsiddhi-designs",
   },
 ];
@@ -290,12 +305,11 @@ onBeforeUnmount(() => {
             <span class="text-ly">What's Included</span>
           </div>
           <h2 class="font-bold text-dark mb-0" style="font-weight: 600">
-            Every Design Engagement <span class="text-ly">Covers This</span>
+            Everything Your Website <span class="text-ly">Needs to Perform</span>
           </h2>
         </div>
-        <p class="text-slate-500 max-w-sm mb-0 text-sm">
-          No stripped-down "starter" version. Every project gets the same rigor applied to the
-          structure, system, and handoff.
+        <p class="text-slate-800 max-w-sm mb-0 text-sm">
+          Every website is designed as a complete growth system—from strategy and UX to SEO, performance, analytics, and developer-ready delivery. Nothing critical is left out because every detail contributes to better business results.
         </p>
       </div>
 
@@ -306,37 +320,6 @@ onBeforeUnmount(() => {
           </div>
           <h3 class="wd-include-title">{{ item.title }}</h3>
           <p class="wd-include-desc">{{ item.desc }}</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Process -->
-  <section class="wd-process-section" id="process">
-    <div class="wd-process-inner">
-      <div class="flex flex-col md:flex-row md:items-end justify-between mb-5 gap-2">
-        <div>
-          <div class="inline-block py-2 px-4 rounded bg-dark text-[10px] font-black uppercase tracking-[0.3em] mb-2">
-            <span class="text-ly">Our Process</span>
-          </div>
-          <h2 class="font-bold text-dark mb-0" style="font-weight: 600">
-            From First Wireframe to <span class="text-ly">Final Handoff</span>
-          </h2>
-        </div>
-        <p class="text-slate-500 max-w-sm mb-0 text-sm">
-          A defined sequence, not an open-ended back-and-forth — so you always know what happens
-          next and when.
-        </p>
-      </div>
-
-      <div class="wd-process-steps">
-        <div v-for="step in steps" :key="step.num" class="wd-process-step" :data-step="step.num">
-          <div class="wd-ps-icon">
-            <span class="material-symbols-outlined">{{ step.icon }}</span>
-          </div>
-          <div class="wd-ps-title">{{ step.title }}</div>
-          <div class="wd-ps-desc">{{ step.desc }}</div>
-          <div class="wd-ps-week">{{ step.week }}</div>
         </div>
       </div>
     </div>
@@ -371,6 +354,37 @@ onBeforeUnmount(() => {
             </div>
           </div>
         </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Process -->
+  <section class="wd-process-section" id="process">
+    <div class="wd-process-inner">
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-5 gap-2">
+        <div>
+          <div class="inline-block py-2 px-4 rounded bg-dark text-[10px] font-black uppercase tracking-[0.3em] mb-2">
+            <span class="text-ly">Our Process</span>
+          </div>
+          <h2 class="font-bold text-dark mb-0" style="font-weight: 600">
+            From First Wireframe to <span class="text-ly">Final Handoff</span>
+          </h2>
+        </div>
+        <p class="text-slate-800 max-w-sm mb-0 text-sm">
+          A defined sequence, not an open-ended back-and-forth — so you always know what happens
+          next and when.
+        </p>
+      </div>
+
+      <div class="wd-process-steps">
+        <div v-for="step in steps" :key="step.num" class="wd-process-step" :data-step="step.num">
+          <div class="wd-ps-icon">
+            <span class="material-symbols-outlined">{{ step.icon }}</span>
+          </div>
+          <div class="wd-ps-title">{{ step.title }}</div>
+          <div class="wd-ps-desc">{{ step.desc }}</div>
+          <div class="wd-ps-week">{{ step.week }}</div>
+        </div>
       </div>
     </div>
   </section>
@@ -444,7 +458,7 @@ onBeforeUnmount(() => {
   </section>
 </template>
 
-<style scoped>
+<style lang="scss" scoped>
 /* ─── What's Included ───────────────────────────────────────────────── */
 .wd-include-section {
   padding: 6rem 4rem;
@@ -483,6 +497,16 @@ onBeforeUnmount(() => {
   border: 1px solid rgba(15, 23, 42, 0.06);
   border-radius: 16px;
   padding: 2rem;
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+
+  &:hover {
+    transform: translateY(-6px) !important;
+    box-shadow: 0 24px 48px -16px rgba(15, 23, 42, 0.18);
+
+    .wd-include-icon {
+      background: rgba(250, 204, 21, 0.55);
+    }
+  }
 }
 
 .wd-include-icon {
@@ -496,10 +520,11 @@ onBeforeUnmount(() => {
   justify-content: center;
   color: #0f172a;
   margin-bottom: 1.25rem;
+  transform: 0.35s ease, box-shadow 0.35s ease;
 }
 
 .wd-include-icon .material-symbols-outlined {
-  font-size: 1.35rem;
+  font-size: 1.65rem;
 }
 
 .wd-include-title {
@@ -507,6 +532,7 @@ onBeforeUnmount(() => {
   font-weight: 700;
   color: #0f172a;
   margin-bottom: 0.6rem;
+  transition: all 0.5s ease;
 }
 
 .wd-include-desc {
@@ -519,8 +545,7 @@ onBeforeUnmount(() => {
 /* ─── Process ────────────────────────────────────────────────────────── */
 .wd-process-section {
   padding: 6rem 4rem;
-  background: #f8fafc;
-  border-top: 1px solid rgba(15, 23, 42, 0.05);
+  background-color: #fff;
 }
 
 @media (max-width: 1100px) {
@@ -554,7 +579,7 @@ onBeforeUnmount(() => {
 }
 
 .wd-process-step {
-  background: #fff;
+  background: #f8fafc;
   padding: 2.25rem 1.75rem;
   position: relative;
   overflow: hidden;
@@ -623,7 +648,8 @@ onBeforeUnmount(() => {
 /* ─── Recent Work ────────────────────────────────────────────────────── */
 .wd-work-section {
   padding: 6rem 4rem;
-  background: #fff;
+  background: #f8fafc;
+  border-top: 1px solid rgba(15, 23, 42, 0.05);
 }
 
 @media (max-width: 1100px) {
