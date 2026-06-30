@@ -301,7 +301,7 @@ function animateWorkSection() {
 
     item.addEventListener("mouseenter", () => {
       gsap.to(inner, { x: 8, duration: 0.35, ease: "power2.out" });
-      if (preview) gsap.to(preview, { autoAlpha: 1, right: "80px", duration: 0.4, ease: "power3.out" });
+      if (preview) gsap.to(preview, { autoAlpha: 1, right: "160px", duration: 0.4, ease: "power3.out" });
     });
     item.addEventListener("mouseleave", () => {
       gsap.to(inner, { x: 0, duration: 0.35, ease: "power2.out" });
@@ -1173,8 +1173,8 @@ onBeforeUnmount(() => {
             <div class="att-cs-desc">Full redesign from wireframes to high-fidelity UI/UX — restructured IA, new design system, and a measurable lift in task-completion rate.</div>
             <div class="att-cs-metrics">
               <div class="att-cs-metric">
-                <span class="att-cs-metric-val">+42%</span>
-                <span class="att-cs-metric-label">Conversion</span>
+                <span class="att-cs-metric-val">0%</span>
+                <span class="att-cs-metric-label">Training Needed</span>
               </div>
             </div>
             <a href="project/savedesk" class="att-cs-arrow" aria-label="View SaveDesk">
@@ -1195,23 +1195,23 @@ onBeforeUnmount(() => {
             <div class="att-cs-num">03</div>
             <div class="att-cs-info">
               <div class="att-cs-tag">Brand Identity · UI/UX · Website</div>
-              <div class="att-cs-name">Samsiddhi Designs</div>
+              <div class="att-cs-name">Solved Cube</div>
             </div>
-            <div class="att-cs-desc">Brand identity, UI/UX, and full website for an interior design firm. Portfolio-first layout with inquiry flow built to qualify leads, not just showcase work.</div>
+            <div class="att-cs-desc">Brand identity, UI/UX, and full website for an IT solutions company. Service-first layout with inquiry flows built to qualify leads, not just showcase expertise.</div>
             <div class="att-cs-metrics">
               <div class="att-cs-metric">
-                <span class="att-cs-metric-val">3.5x</span>
-                <span class="att-cs-metric-label">Pipeline</span>
+                <span class="att-cs-metric-val">5K</span>
+                <span class="att-cs-metric-label">Visitors</span>
               </div>
             </div>
-            <a href="project/samsiddhi-designs" class="att-cs-arrow" aria-label="View Samsiddhi Designs">
+            <a href="project/solved-cube-it-solutions" class="att-cs-arrow" aria-label="View Solved Cube IT Solutions">
               <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
                 <path d="M3 13L13 3M13 3H6M13 3V10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
               </svg>
             </a>
           </div>
           <div class="att-cs-preview">
-            <img src="../assets/img/project/c9/project-thum-sd.png" alt="Samsiddhi Designs" />
+            <img src="../assets/img/project/c2/project-thum-sc.png" alt="Solved Cube IT Solutions" />
           </div>
         </div>
         <hr class="att-cs-divider" />
@@ -1861,7 +1861,7 @@ onBeforeUnmount(() => {
 
 .att-cs-inner {
   display: grid;
-  grid-template-columns: 80px 1fr 1fr auto auto;
+  grid-template-columns: 80px 1fr 1fr 180px 80px;
   align-items: center;
   gap: 2.5rem;
   padding: 4rem 2.5rem;
@@ -1914,7 +1914,7 @@ onBeforeUnmount(() => {
 
 .att-cs-desc {
   font-size: 0.88rem;
-  color: #64748b;
+  color: #32373d;
   line-height: 1.65;
   font-weight: 400;
   transition: color 0.3s ease;
@@ -1926,7 +1926,7 @@ onBeforeUnmount(() => {
   display: flex;
   flex-direction: column;
   gap: 0.4rem;
-  align-items: flex-end;
+  align-items: flex-start;
 
   @media (max-width: 1100px) { display: none; }
 }
@@ -1935,6 +1935,7 @@ onBeforeUnmount(() => {
   display: flex;
   align-items: baseline;
   gap: 0.4rem;
+  flex-direction: column;
 }
 
 .att-cs-metric-val {

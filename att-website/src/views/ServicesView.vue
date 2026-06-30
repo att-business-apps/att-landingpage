@@ -159,7 +159,7 @@ onBeforeUnmount(() => {
           <li class="active">Services</li>
         </ul>
         <div class="section-heading heading-left">
-          <h1 class="title h2 mb-0">Digital Services That Build Trust, Generate Leads & Drive Growth</h1>
+          <h1 class="title h2 mb-0">Digital Services That <span class="text-ly">Build Trust, Generate Leads & Drive Growth</span></h1>
           <p>Every service is built around one objective: helping your business attract better customers, convert more visitors, and grow with confidence.</p>
         </div>
       </div>

@@ -6,37 +6,41 @@ import CaseStudyWorkWithUs from "@/components/CaseStudyWorkWithUs.vue";
 
 gsap.registerPlugin(ScrollTrigger);
 
+const heroMockup = new URL("../../assets/img/project/c4/project-sa.png", import.meta.url).href;
+const clientLogo = new URL("../../assets/img/project/c4/icon-sa.svg", import.meta.url).href;
+const designMockup = new URL("../../assets/img/project/c4/sa-mockup.png", import.meta.url).href;
+
 const metrics = [
-  { value: "8.44×", label: "ROAS on Google Ads", color: "#20B2AA" },
-  { value: "3.2×", label: "Organic traffic growth (6 months)", color: "#f0b90b" },
-  { value: "+61%", label: "Session duration improvement", color: "#20B2AA" },
-  { value: "94", label: "Google PageSpeed score", color: "#f0b90b" },
-  { value: "4.8★", label: "Average investor trust score", color: "#20B2AA" },
-  { value: "₹0", label: "Cost per brand asset (built in-house)", color: "#f0b90b" },
+  { value: "3K", label: "Active Users" },
+  { value: "2.9K", label: "New Users" },
+  { value: "5.7K", label: "Views" },
+  { value: "94", label: "Google PageSpeed score" },
+  { value: "+61%", label: "Session duration improvement" },
+  { value: "4.8★", label: "Average investor trust score" },
 ];
 
 const timeline = [
-  { week: "Week 1", phase: "Discovery & Audit", desc: "Competitive landscape mapping across NBFC/fintech peers, ICP interviews, and goal alignment with the founding team." },
-  { week: "Week 2", phase: "Brand Identity", desc: "Logo concepts, color psychology workshop, and final brand system covering mark, palette, and typography." },
-  { week: "Week 3–4", phase: "UX Architecture", desc: "Sitemap, information hierarchy, wireframes for key pages — home, products, investor education, and contact." },
-  { week: "Week 5–6", phase: "UI Design & Prototype", desc: "High-fidelity Figma screens with interactive prototype reviewed by the client team before a line of code was written." },
-  { week: "Week 7–8", phase: "Development & QA", desc: "Responsive build, GA4 + GTM implementation, GMB setup, and performance audit before launch." },
-  { week: "Ongoing", phase: "Content & SEO", desc: "Monthly blog strategy, keyword targeting, and analytics review to build organic authority in the alternative investment space." },
+  { week: "01", phase: "Discovery & Audit", desc: "Competitive landscape mapping across NBFC/fintech peers, ICP interviews, and goal alignment with the founding team." },
+  { week: "02", phase: "Brand Identity", desc: "Logo concepts, colour psychology workshop, and final brand system covering mark, palette, and typography." },
+  { week: "03", phase: "UX Architecture", desc: "Sitemap, information hierarchy, wireframes for key pages — home, products, investor education, and contact." },
+  { week: "04", phase: "UI Design & Prototype", desc: "High-fidelity Figma screens with an interactive prototype reviewed by the client team before a line of code was written." },
+  { week: "05", phase: "Development & QA", desc: "Responsive build, GA4 + GTM implementation, GMB setup, and a performance audit before launch." },
+  { week: "06", phase: "Content & SEO", desc: "Monthly blog strategy, keyword targeting, and analytics review to build organic authority in the alternative investment space." },
 ];
 
 const techStack = [
-  { name: "Figma", role: "UX & Brand Design" },
-  { name: "HTML / CSS / JS", role: "Frontend Development" },
-  { name: "Google Analytics 4", role: "Behavioural Tracking" },
-  { name: "Google Tag Manager", role: "Event & Conversion Tagging" },
-  { name: "Google My Business", role: "Local Search Presence" },
-  { name: "Google Search Console", role: "SEO Health Monitoring" },
-  { name: "Lighthouse", role: "Performance Auditing" },
-  { name: "Hotjar", role: "Heatmaps & Session Recording" },
+  { name: "Figma", role: "UX & brand design", icon: "design_services" },
+  { name: "HTML / CSS / JS", role: "Frontend development", icon: "code" },
+  { name: "Content", role: "SEO-focused content strategy", icon: "manage_search" },
+  { name: "GitHub CI/CD", role: "Automated deployment pipeline", icon: "tag" },
+  { name: "SEO", role: "Search visibility optimization", icon: "travel_explore" },
+  { name: "Blog", role: "Educational content publishing", icon: "article" },
+  { name: "Google Analytics 4", role: "Behavioural tracking", icon: "rocket_launch" },
+  { name: "Google My Business", role: "Local search presence", icon: "storefront" },
 ];
 
 const palette = [
-  { hex: "#20B2AA", name: "Teal Primary", use: "CTAs, key UI elements" },
+  { hex: "#20B2AA", name: "Teal Primary", use: "CTAs & key UI elements" },
   { hex: "#008B8B", name: "Deep Teal", use: "Headings & hover states" },
   { hex: "#f0b90b", name: "Gold Accent", use: "Trust markers & highlights" },
   { hex: "#04505F", name: "Midnight Teal", use: "Dark sections & depth" },
@@ -44,321 +48,325 @@ const palette = [
   { hex: "#EBF1F0", name: "Frost White", use: "Backgrounds & cards" },
 ];
 
+const challenges = [
+  { num: "01", icon: "bolt", title: "Zero brand equity", desc: "No logo, colour system, or typography — nothing for investors to visually anchor trust to. Competitors had years of brand recognition." },
+  { num: "02", icon: "manage_search", title: "No organic discovery", desc: "Without a website or GMB listing, SteadyAsset was invisible to investors searching for alternative investment options in Bengaluru and beyond." },
+  { num: "03", icon: "query_stats", title: "Low-literacy market", desc: "Fractional CRE and fixed-income products require investor education. Most visitors arrive unfamiliar with the asset class itself." },
+  { num: "04", icon: "groups", title: "Dual audience tension", desc: "The site had to speak to first-time retail investors and HNIs with high return expectations — at the same time." },
+  { num: "05", icon: "gavel", title: "Regulatory sensitivity", desc: "Every claim and number needed to build confidence without crossing into unverifiable performance promises." },
+  { num: "06", icon: "schedule", title: "Launch pressure", desc: "Investor milestones were tied to a live product. Eight weeks from zero to a functioning brand and site was non-negotiable." },
+];
+
+const outcomes = [
+  { icon: "military_tech", title: "Trust before the pitch", desc: "Investors arrive on a site that looks like an established platform, not a startup." },
+  { icon: "trending_up", title: "A marketing asset", desc: "GA4, GTM, and monthly SEO content actively generate and nurture investor leads." },
+  { icon: "autorenew", title: "An education engine", desc: "The blog positions SteadyAsset as a thought leader in fractional CRE." },
+  { icon: "location_on", title: "Local discoverability", desc: "GMB and local SEO combined with Google Ads to deliver an 8.44× ROAS." },
+  { icon: "settings_suggest", title: "Operational independence", desc: "A documented system means the team can extend their brand without us on speed dial." },
+  { icon: "forum", title: "A reusable sales asset", desc: "The live site is itself used in investor meetings and pitch decks to demonstrate credibility.", highlight: true },
+];
+
 let ctx;
 
 onMounted(() => {
   ctx = gsap.context(() => {
-    // Hero entrance
-    gsap.from(".cs-hero-eyebrow", { y: 20, autoAlpha: 0, duration: 0.6, delay: 0.1 });
-    gsap.from(".cs-hero-title", { y: 30, autoAlpha: 0, duration: 0.7, delay: 0.25 });
-    gsap.from(".cs-hero-sub", { y: 20, autoAlpha: 0, duration: 0.6, delay: 0.4 });
-    gsap.from(".cs-hero-tags span", { y: 12, autoAlpha: 0, stagger: 0.08, duration: 0.45, delay: 0.55 });
-    gsap.from(".cs-hero-meta-card", { x: 30, autoAlpha: 0, stagger: 0.1, duration: 0.55, delay: 0.6 });
+    const heroTl = gsap.timeline({ defaults: { ease: "power3.out" } });
+    heroTl
+      .from(".cs-hero-eyebrow", { y: 18, autoAlpha: 0, duration: 0.6 })
+      .from(".cs-hero-title .cs-line", { y: 36, autoAlpha: 0, duration: 0.8, stagger: 0.08 }, "-=0.35")
+      .from(".cs-hero-sub", { y: 18, autoAlpha: 0, duration: 0.55 }, "-=0.45")
+      .from(".cs-hero-stat", { y: 14, autoAlpha: 0, stagger: 0.06, duration: 0.45 }, "-=0.3")
+      .from(".cs-hero-ctas", { y: 14, autoAlpha: 0, duration: 0.5 }, "-=0.25")
+      .from(".cs-hero-mockup-wrap", { y: 50, autoAlpha: 0, scale: 0.97, duration: 1 }, "-=0.4");
 
-    // Metrics counter animation
-    gsap.from(".metric-card", {
-      scrollTrigger: { trigger: ".metrics-grid", start: "top 78%" },
-      y: 32, autoAlpha: 0, stagger: 0.1, duration: 0.55, ease: "power2.out"
-    });
-
-    // Timeline items
-    gsap.from(".timeline-item", {
-      scrollTrigger: { trigger: ".cs-timeline", start: "top 80%" },
-      x: -24, autoAlpha: 0, stagger: 0.12, duration: 0.5, ease: "power2.out"
-    });
-
-    // Sections fade-up
-    document.querySelectorAll(".cs-section-animate").forEach((el) => {
+    gsap.utils.toArray(".cs-reveal").forEach((el) => {
       gsap.from(el, {
-        scrollTrigger: { trigger: el, start: "top 82%" },
-        y: 24, autoAlpha: 0, duration: 0.6, ease: "power2.out"
+        scrollTrigger: { trigger: el, start: "top 86%", once: true },
+        y: 30, autoAlpha: 0, duration: 0.7, ease: "power3.out",
       });
     });
 
-    // Tech stack pills
-    gsap.from(".tech-pill", {
-      scrollTrigger: { trigger: ".tech-grid", start: "top 80%" },
-      scale: 0.88, autoAlpha: 0, stagger: 0.07, duration: 0.4, ease: "back.out(1.4)"
+    gsap.utils.toArray(".cs-stagger").forEach((grid) => {
+      gsap.from(grid.children, {
+        scrollTrigger: { trigger: grid, start: "top 84%", once: true },
+        y: 26, autoAlpha: 0, stagger: 0.07, duration: 0.55, ease: "power2.out",
+      });
     });
 
-    // Palette swatches
-    gsap.from(".palette-swatch", {
-      scrollTrigger: { trigger: ".palette-row", start: "top 82%" },
-      y: 20, autoAlpha: 0, stagger: 0.09, duration: 0.42, ease: "power2.out"
+    gsap.from(".cs-metric-num", {
+      scrollTrigger: { trigger: ".cs-metrics-strip", start: "top 80%", once: true },
+      y: 24, autoAlpha: 0, stagger: 0.06, duration: 0.6, ease: "power3.out",
+    });
+
+    gsap.from(".timeline-row", {
+      scrollTrigger: { trigger: ".cs-timeline", start: "top 84%", once: true },
+      x: -24, autoAlpha: 0, stagger: 0.09, duration: 0.55, ease: "power2.out",
     });
   });
 });
 
-onBeforeUnmount(() => {
-  if (ctx) ctx.revert();
-  ScrollTrigger.getAll().forEach((t) => t.kill());
-});
+onBeforeUnmount(() => ctx?.revert());
 </script>
 
 <template>
   <!-- ── HERO ───────────────────────────────────────────────────── -->
   <section class="cs-hero">
-    <div class="cs-hero-bg-grid" aria-hidden="true"></div>
-    <div class="cs-hero-glow" aria-hidden="true"></div>
+    <div class="cs-hero-noise" aria-hidden="true"></div>
+    <div class="cs-hero-glow cs-hero-glow--1" aria-hidden="true"></div>
+    <div class="cs-hero-glow cs-hero-glow--2" aria-hidden="true"></div>
 
-    <div class="container">
-      <div class="cs-hero-inner">
-        <!-- Left copy -->
-        <div class="cs-hero-copy">
-          <div class="cs-hero-breadcrumb">
-            <a href="/">Home</a>
-            <span>›</span>
-            <a href="/case-studies">Portfolio</a>
-            <span>›</span>
-            <span class="active">SteadyAsset</span>
-          </div>
+    <div class="cs-shell">
+      <nav class="cs-breadcrumb" aria-label="Breadcrumb">
+        <a href="/">Home</a>
+        <span>/</span>
+        <a href="/case-studies">Portfolio</a>
+        <span>/</span>
+        <span class="active">SteadyAsset</span>
+      </nav>
 
-          <div class="cs-hero-eyebrow">
-            <span class="eyebrow-dot"></span>
-            Case Study · Investment Platform · 2024
-          </div>
+      <div class="cs-hero-eyebrow">
+        <span class="eyebrow-dot"></span>
+        Case Study &middot; Investment Platform &middot; 2024
+      </div>
 
-          <h1 class="cs-hero-title">
-            From zero digital presence to a
-            <em class="cs-title-em">trusted fintech brand</em>
-          </h1>
+      <h1 class="cs-hero-title">
+        <span class="cs-line">From zero digital presence to a</span>
+        <span class="cs-line cs-line-accent">trusted fintech brand.</span>
+      </h1>
 
-          <p class="cs-hero-sub">
-            SteadyAsset offers fixed-income products and fractional commercial real estate to retail
-            and HNI investors. Amortree delivered a complete brand system, UX architecture, and
-            investor-grade website — built to earn trust before a single rupee is committed.
-          </p>
+      <div class="cs-hero-split">
+        <p class="cs-hero-sub">
+          SteadyAsset offers fixed-income products and fractional commercial real estate to
+          retail and HNI investors. Amortree delivered the complete brand system, UX
+          architecture, and investor-grade website — built to earn trust before a single rupee
+          is committed.
+        </p>
 
-          <div class="cs-hero-tags">
-            <span>Branding</span>
-            <span>UI/UX Design</span>
-            <span>Website Development</span>
-            <span>Google Analytics</span>
-            <span>GMB Setup</span>
+        <div class="cs-hero-stats">
+          <div class="cs-hero-stat">
+            <span class="cs-hero-stat-val">3K</span>
+            <span class="cs-hero-stat-label">Organic traffic</span>
           </div>
-
-          <div class="cs-hero-ctas">
-            <a href="https://steadyasset.com" target="_blank" rel="noopener" class="amor-btn btn-fill-primary">
-              Visit Live Site
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="margin-left:6px"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-            </a>
-            <a href="/case-studies" class="amor-btn btn-borderd light">All Case Studies</a>
+          <div class="cs-hero-stat-divider"></div>
+          <div class="cs-hero-stat">
+            <span class="cs-hero-stat-val">4</span>
+            <span class="cs-hero-stat-label">Weeks to launch</span>
           </div>
-        </div>
-
-        <!-- Right meta panel -->
-        <div class="cs-hero-meta">
-          <div class="cs-hero-meta-card">
-            <div class="meta-label">Client</div>
-            <div class="meta-value">SteadyAsset</div>
-          </div>
-          <div class="cs-hero-meta-card">
-            <div class="meta-label">Industry</div>
-            <div class="meta-value">Alternative Investments / Fintech</div>
-          </div>
-          <div class="cs-hero-meta-card">
-            <div class="meta-label">Engagement</div>
-            <div class="meta-value">Brand · Design · Web · Analytics</div>
-          </div>
-          <div class="cs-hero-meta-card">
-            <div class="meta-label">Timeline</div>
-            <div class="meta-value">8 Weeks to Launch · Ongoing SEO</div>
-          </div>
-          <div class="cs-hero-meta-card highlight">
-            <div class="meta-label">Key Result</div>
-            <div class="meta-value metric-gold">8.44× ROAS</div>
+          <div class="cs-hero-stat-divider"></div>
+          <div class="cs-hero-stat">
+            <span class="cs-hero-stat-val">94</span>
+            <span class="cs-hero-stat-label">PageSpeed</span>
           </div>
         </div>
       </div>
 
-      <!-- Hero mockup image -->
-      <div class="cs-hero-mockup">
-        <img src="../../assets/img/project/c4/project-sa.png" alt="SteadyAsset website on desktop" />
+      <div class="cs-hero-ctas">
+        <a href="https://steadyasset.com" target="_blank" rel="noopener" class="cs-btn-primary">
+          Visit Live Site
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
+            <polyline points="15 3 21 3 21 9"/>
+            <line x1="10" y1="14" x2="21" y2="3"/>
+          </svg>
+        </a>
+        <a href="/case-studies" class="cs-btn-ghost">All Case Studies</a>
+      </div>
+
+      <!-- Mockup -->
+      <div class="cs-hero-mockup-wrap">
+        <div class="cs-hero-mockup">
+          <img :src="heroMockup" alt="SteadyAsset website on desktop" loading="lazy" />
+        </div>
         <div class="cs-hero-mockup-float">
           <span class="float-dot"></span>
-          Live & Ranking
+          Live &amp; Ranking
         </div>
+        <div class="cs-hero-mockup-tags">
+          <span>Branding</span>
+          <span>UI/UX Design</span>
+          <span>Website Development</span>
+          <span>Google Analytics</span>
+          <span>GMB Setup</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── META STRIP ─────────────────────────────────────────────── -->
+  <section class="cs-meta-strip">
+    <div class="cs-shell cs-meta-grid">
+      <div class="cs-meta-item">
+        <span class="cs-meta-label">Client</span>
+        <span class="cs-meta-value">SteadyAsset</span>
+      </div>
+      <div class="cs-meta-item">
+        <span class="cs-meta-label">Industry</span>
+        <span class="cs-meta-value">Alternative Investments</span>
+      </div>
+      <div class="cs-meta-item">
+        <span class="cs-meta-label">Engagement</span>
+        <span class="cs-meta-value">Brand &middot; Design &middot; Web &middot; Analytics</span>
+      </div>
+      <div class="cs-meta-item">
+        <span class="cs-meta-label">Timeline</span>
+        <span class="cs-meta-value">4 Weeks &middot; Ongoing SEO</span>
       </div>
     </div>
   </section>
 
   <!-- ── CLIENT ────────────────────────────────────────────────── -->
-  <section class="cs-section cs-section-animate">
-    <div class="container">
-      <div class="cs-section-header">
-        <div class="cs-section-eyebrow">01 · Client</div>
-        <h2 class="cs-section-title">Who is SteadyAsset?</h2>
+  <section class="cs-section">
+    <div class="cs-shell">
+      <div class="cs-section-head cs-reveal">
+        <span class="cs-ghost-num">01</span>
+        <div>
+          <div class="cs-eyebrow">Client</div>
+          <h2 class="cs-h2">Who is SteadyAsset?</h2>
+        </div>
       </div>
-      <div class="cs-client-grid">
+
+      <div class="cs-client-grid cs-reveal">
         <div class="cs-client-copy">
-          <p>
+          <p class="cs-lead-text">
             SteadyAsset is a Bengaluru-based alternative investment platform that makes
-            commercial real estate and fixed-income products accessible to retail investors starting
-            at ₹10,000. The company sits at the intersection of fintech and real estate — a category
-            where trust, clarity, and credibility are non-negotiable conversion factors.
+            commercial real estate and fixed-income products accessible to retail investors
+            starting at &#8377;10,000 — sitting at the intersection of fintech and real estate,
+            where trust and credibility are non-negotiable.
           </p>
           <p>
-            When the founding team approached Amortree, they had a strong product thesis and early
-            investor backing, but no digital identity, no website, and no clear articulation of
-            their value proposition for the average investor.
+            When the founding team approached Amortree, they had a strong product thesis and
+            early investor backing, but no digital identity, no website, and no clear
+            articulation of their value proposition for the average investor.
           </p>
-          <div class="cs-client-facts">
-            <div class="fact-item">
-              <span class="fact-icon">🏢</span>
-              <div>
-                <strong>Sector</strong>
-                <span>Fractional Real Estate & Fixed Income</span>
-              </div>
+
+          <div class="cs-fact-list">
+            <div class="cs-fact">
+              <span class="material-symbols-outlined">apartment</span>
+              <div><strong>Sector</strong><span>Fractional Real Estate &amp; Fixed Income</span></div>
             </div>
-            <div class="fact-item">
-              <span class="fact-icon">👥</span>
-              <div>
-                <strong>Audience</strong>
-                <span>Retail investors & HNIs (25–55 yrs)</span>
-              </div>
+            <div class="cs-fact">
+              <span class="material-symbols-outlined">group</span>
+              <div><strong>Audience</strong><span>Retail investors &amp; HNIs, 25&ndash;55 yrs</span></div>
             </div>
-            <div class="fact-item">
-              <span class="fact-icon">📍</span>
-              <div>
-                <strong>Location</strong>
-                <span>Bengaluru, India</span>
-              </div>
+            <div class="cs-fact">
+              <span class="material-symbols-outlined">location_on</span>
+              <div><strong>Location</strong><span>Bengaluru, India</span></div>
             </div>
-            <div class="fact-item">
-              <span class="fact-icon">🌐</span>
-              <div>
-                <strong>Website</strong>
-                <a href="https://steadyasset.com" target="_blank">steadyasset.com</a>
-              </div>
+            <div class="cs-fact">
+              <span class="material-symbols-outlined">language</span>
+              <div><strong>Website</strong><a href="https://steadyasset.com" target="_blank" rel="noopener">steadyasset.com</a></div>
             </div>
           </div>
         </div>
-        <div class="cs-client-logo-box">
-          <img src="../../assets/img/project/c4/icon-sa.svg" alt="SteadyAsset Logo" class="cs-client-logo" />
-          <div class="cs-client-quote">
-            "We needed a brand that could sit alongside established NBFCs and make investors feel
-            that their money was in safe hands."
-          </div>
-          <div class="cs-client-quote-attr">— SteadyAsset Founding Team</div>
-        </div>
+
+        <aside class="cs-client-card">
+          <img :src="clientLogo" alt="SteadyAsset logo" class="cs-client-logo" loading="lazy" />
+          <span class="cs-quote-mark material-symbols-outlined">format_quote</span>
+          <p class="cs-client-quote">
+            We needed a brand that could sit alongside established NBFCs and make investors feel
+            that their money was in safe hands.
+          </p>
+          <div class="cs-client-quote-attr">SteadyAsset Founding Team</div>
+        </aside>
       </div>
     </div>
   </section>
 
   <!-- ── CHALLENGE ─────────────────────────────────────────────── -->
-  <section class="cs-section cs-section-dark cs-section-animate">
-    <div class="container">
-      <div class="cs-section-header">
-        <div class="cs-section-eyebrow teal">02 · Challenge</div>
-        <h2 class="cs-section-title light">The stakes of a first impression in fintech</h2>
+  <section class="cs-section cs-section--dark">
+    <div class="cs-shell">
+      <div class="cs-section-head cs-reveal">
+        <span class="cs-ghost-num cs-ghost-num--teal">02</span>
+        <div>
+          <div class="cs-eyebrow cs-eyebrow--teal">Challenge</div>
+          <h2 class="cs-h2 cs-h2--light">The stakes of a first impression in fintech</h2>
+        </div>
       </div>
-      <div class="cs-challenges-grid">
-        <div class="challenge-card">
-          <div class="challenge-icon">⚡</div>
-          <h3>Zero brand equity</h3>
-          <p>No logo, no colour system, no typography — nothing for investors to visually anchor trust to. Competitors had years of brand recognition.</p>
-        </div>
-        <div class="challenge-card">
-          <div class="challenge-icon">🔍</div>
-          <h3>No organic discovery</h3>
-          <p>Without a website or GMB listing, SteadyAsset was invisible to investors searching for alternative investment options in Bengaluru and beyond.</p>
-        </div>
-        <div class="challenge-card">
-          <div class="challenge-icon">📊</div>
-          <h3>Complex product, low literacy market</h3>
-          <p>Fractional CRE and fixed-income products require investor education. Most visitors would arrive unfamiliar with the asset class itself.</p>
-        </div>
-        <div class="challenge-card">
-          <div class="challenge-icon">🎯</div>
-          <h3>Dual audience tension</h3>
-          <p>The site needed to speak to both retail investors (first-time alternative investors) and HNIs with high return expectations — simultaneously.</p>
-        </div>
-        <div class="challenge-card">
-          <div class="challenge-icon">🔒</div>
-          <h3>Regulatory sensitivity</h3>
-          <p>Every word, claim, and number on the site needed to be written to build confidence without crossing into unverifiable performance promises.</p>
-        </div>
-        <div class="challenge-card">
-          <div class="challenge-icon">⏱️</div>
-          <h3>Launch pressure</h3>
-          <p>The founding team had investor milestones tied to a live product. An 8-week turnaround from zero to a fully functional brand and site was non-negotiable.</p>
+
+      <div class="cs-challenge-list cs-stagger">
+        <div class="cs-challenge-row" v-for="c in challenges" :key="c.num">
+          <span class="cs-challenge-num">{{ c.num }}</span>
+          <span class="material-symbols-outlined cs-challenge-icon">{{ c.icon }}</span>
+          <div class="cs-challenge-body">
+            <h3>{{ c.title }}</h3>
+            <p>{{ c.desc }}</p>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
   <!-- ── STRATEGY ───────────────────────────────────────────────── -->
-  <section class="cs-section cs-section-animate">
-    <div class="container">
-      <div class="cs-section-header">
-        <div class="cs-section-eyebrow">03 · Strategy</div>
-        <h2 class="cs-section-title">Trust architecture, not just visual design</h2>
+  <section class="cs-section">
+    <div class="cs-shell">
+      <div class="cs-section-head cs-reveal">
+        <span class="cs-ghost-num">03</span>
+        <div>
+          <div class="cs-eyebrow">Strategy</div>
+          <h2 class="cs-h2">Trust architecture, not just visual design</h2>
+        </div>
       </div>
+
       <div class="cs-strategy-grid">
-        <div class="cs-strategy-copy">
-          <p class="cs-lead">
-            In financial services, design is never purely aesthetic. Every colour choice,
-            content hierarchy decision, and interaction pattern either builds or erodes
-            investor confidence. Our strategy had three pillars:
+        <div class="cs-strategy-copy cs-reveal">
+          <p class="cs-lead-text">
+            In financial services, design is never purely aesthetic. Every colour choice and
+            content decision either builds or erodes investor confidence. Our strategy had
+            three pillars.
           </p>
 
-          <div class="cs-pillar">
-            <div class="pillar-num">01</div>
+          <div class="cs-pillar" v-for="(p, i) in [
+            { t: 'Credibility-first visual identity', d: 'The palette was built around teal and gold — a deliberate departure from the red-heavy palette of most Indian fintech brands. Teal signals stability. Gold signals value.' },
+            { t: 'Education-led content architecture', d: 'Rather than leading with returns, we structured the site around investor education — how CRE works, why fractional ownership reduces risk. Education builds trust before the ask.' },
+            { t: 'Analytics from day one', d: 'GA4 with custom event tracking was configured pre-launch, so the team could iterate based on real investor behaviour from launch day, not three months in.' },
+          ]" :key="p.t">
+            <div class="cs-pillar-num">{{ String(i + 1).padStart(2, '0') }}</div>
             <div>
-              <h4>Credibility-first visual identity</h4>
-              <p>The logo and brand palette were built around teal and gold — a deliberate departure from the red-heavy palette of most Indian fintech brands. Teal signals stability and growth. Gold signals value and aspiration. Together, they communicate a platform that is both safe and rewarding.</p>
-            </div>
-          </div>
-          <div class="cs-pillar">
-            <div class="pillar-num">02</div>
-            <div>
-              <h4>Education-led content architecture</h4>
-              <p>Rather than leading with returns, we structured the site around investor education — how CRE works, why fractional ownership reduces risk, and what differentiates SteadyAsset. Education builds trust before the ask.</p>
-            </div>
-          </div>
-          <div class="cs-pillar">
-            <div class="pillar-num">03</div>
-            <div>
-              <h4>Analytics-from-day-one</h4>
-              <p>GA4 with custom event tracking was configured pre-launch. Every CTA click, scroll depth, and product page view was instrumented so the team could iterate based on real investor behaviour from day one.</p>
+              <h4>{{ p.t }}</h4>
+              <p>{{ p.d }}</p>
             </div>
           </div>
         </div>
 
-        <div class="cs-strategy-insight">
-          <div class="insight-card">
-            <div class="insight-icon">💡</div>
-            <h4>The insight that shaped everything</h4>
-            <p>Alternative investment platforms don't lose investors on the product page — they lose them on the homepage, in the first 8 seconds, when the brand doesn't feel established enough to hand over ₹10,000.</p>
-            <div class="insight-divider"></div>
-            <p class="insight-action">So we designed the homepage as a confidence engine — leading with brand credibility, regulatory transparency, and social proof before ever showing a product card.</p>
-          </div>
+        <div class="cs-insight cs-reveal">
+          <span class="material-symbols-outlined cs-insight-icon">lightbulb</span>
+          <h4>The insight that shaped everything</h4>
+          <p>
+            Alternative investment platforms don't lose investors on the product page — they
+            lose them on the homepage, in the first eight seconds, when the brand doesn't feel
+            established enough to hand over &#8377;10,000.
+          </p>
+          <div class="cs-insight-divider"></div>
+          <p class="cs-insight-action">
+            So we designed the homepage as a confidence engine — leading with credibility and
+            transparency before ever showing a product card.
+          </p>
         </div>
       </div>
     </div>
   </section>
 
   <!-- ── PROCESS ────────────────────────────────────────────────── -->
-  <section class="cs-section cs-section-muted cs-section-animate">
-    <div class="container">
-      <div class="cs-section-header">
-        <div class="cs-section-eyebrow">04 · Process</div>
-        <h2 class="cs-section-title">8 weeks from whiteboard to live site</h2>
+  <section class="cs-section cs-section--muted">
+    <div class="cs-shell">
+      <div class="cs-section-head cs-reveal">
+        <span class="cs-ghost-num">04</span>
+        <div>
+          <div class="cs-eyebrow">Process</div>
+          <h2 class="cs-h2">Eight weeks, whiteboard to live site</h2>
+        </div>
       </div>
+
       <div class="cs-timeline">
-        <div
-          v-for="(item, i) in timeline"
-          :key="i"
-          class="timeline-item"
-        >
+        <div v-for="(item, i) in timeline" :key="item.week" class="timeline-row">
           <div class="timeline-week">{{ item.week }}</div>
-          <div class="timeline-connector">
+          <div class="timeline-rail">
             <div class="timeline-dot"></div>
             <div class="timeline-line" v-if="i < timeline.length - 1"></div>
           </div>
           <div class="timeline-body">
-            <h4 class="timeline-phase">{{ item.phase }}</h4>
-            <p class="timeline-desc">{{ item.desc }}</p>
+            <h4>{{ item.phase }}</h4>
+            <p>{{ item.desc }}</p>
           </div>
         </div>
       </div>
@@ -366,37 +374,41 @@ onBeforeUnmount(() => {
   </section>
 
   <!-- ── BEFORE / AFTER ─────────────────────────────────────────── -->
-  <section class="cs-section cs-section-animate">
-    <div class="container">
-      <div class="cs-section-header">
-        <div class="cs-section-eyebrow">05 · Before / After</div>
-        <h2 class="cs-section-title">The transformation</h2>
+  <section class="cs-section">
+    <div class="cs-shell">
+      <div class="cs-section-head cs-reveal">
+        <span class="cs-ghost-num">05</span>
+        <div>
+          <div class="cs-eyebrow">Before / After</div>
+          <h2 class="cs-h2">The transformation</h2>
+        </div>
       </div>
-      <div class="cs-ba-grid">
-        <div class="ba-card ba-before">
-          <div class="ba-label before-label">Before Amortree</div>
-          <ul class="ba-list">
-            <li><span class="ba-x">✕</span> No logo or visual identity</li>
-            <li><span class="ba-x">✕</span> No website or online presence</li>
-            <li><span class="ba-x">✕</span> Zero Google search visibility</li>
-            <li><span class="ba-x">✕</span> No way to track investor interest</li>
-            <li><span class="ba-x">✕</span> Product explained only via WhatsApp decks</li>
-            <li><span class="ba-x">✕</span> No investor education content</li>
-            <li><span class="ba-x">✕</span> No GMB listing for local discovery</li>
-            <li><span class="ba-x">✕</span> Brand perception: "startup, not established"</li>
+
+      <div class="cs-ba-grid cs-reveal">
+        <div class="cs-ba-card cs-ba-card--before">
+          <span class="cs-ba-tag">Before</span>
+          <ul>
+            <li><span class="material-symbols-outlined">close</span>No logo or visual identity</li>
+            <li><span class="material-symbols-outlined">close</span>No website or online presence</li>
+            <li><span class="material-symbols-outlined">close</span>Zero Google search visibility</li>
+            <li><span class="material-symbols-outlined">close</span>No way to track investor interest</li>
+            <li><span class="material-symbols-outlined">close</span>Product explained via WhatsApp decks</li>
+            <li><span class="material-symbols-outlined">close</span>No investor education content</li>
+            <li><span class="material-symbols-outlined">close</span>No GMB listing for local discovery</li>
+            <li><span class="material-symbols-outlined">close</span>"Startup, not established"</li>
           </ul>
         </div>
-        <div class="ba-card ba-after">
-          <div class="ba-label after-label">After Amortree</div>
-          <ul class="ba-list">
-            <li><span class="ba-check">✓</span> Full brand identity — logo, palette, type system</li>
-            <li><span class="ba-check">✓</span> Investor-grade, responsive website (94 Lighthouse score)</li>
-            <li><span class="ba-check">✓</span> Page 1 rankings for target investment keywords</li>
-            <li><span class="ba-check">✓</span> GA4 + GTM tracking every investor touchpoint</li>
-            <li><span class="ba-check">✓</span> Clear product pages with investment flow</li>
-            <li><span class="ba-check">✓</span> Monthly SEO blog building organic authority</li>
-            <li><span class="ba-check">✓</span> GMB profile with reviews and local visibility</li>
-            <li><span class="ba-check">✓</span> Brand perception: "established, trustworthy platform"</li>
+        <div class="cs-ba-card cs-ba-card--after">
+          <span class="cs-ba-tag">After</span>
+          <ul>
+            <li><span class="material-symbols-outlined">check</span>Full identity — logo, palette, type system</li>
+            <li><span class="material-symbols-outlined">check</span>Investor-grade site, 94 Lighthouse score</li>
+            <li><span class="material-symbols-outlined">check</span>Page 1 rankings for target keywords</li>
+            <li><span class="material-symbols-outlined">check</span>GA4 + GTM tracking every touchpoint</li>
+            <li><span class="material-symbols-outlined">check</span>Clear product pages, investment flow</li>
+            <li><span class="material-symbols-outlined">check</span>Monthly SEO blog building authority</li>
+            <li><span class="material-symbols-outlined">check</span>GMB profile, reviews, local visibility</li>
+            <li><span class="material-symbols-outlined">check</span>"Established, trustworthy platform"</li>
           </ul>
         </div>
       </div>
@@ -404,42 +416,42 @@ onBeforeUnmount(() => {
   </section>
 
   <!-- ── METRICS ────────────────────────────────────────────────── -->
-  <section class="cs-section cs-section-dark cs-section-animate">
-    <div class="container">
-      <div class="cs-section-header">
-        <div class="cs-section-eyebrow teal">06 · Metrics</div>
-        <h2 class="cs-section-title light">Numbers that make the case</h2>
-        <p class="cs-section-sub light">Measured across the first 6 months post-launch via GA4 and Google Ads.</p>
+  <section class="cs-metrics-strip">
+    <div class="cs-shell">
+      <div class="cs-section-head cs-reveal">
+        <span class="cs-ghost-num cs-ghost-num--teal">06</span>
+        <div>
+          <div class="cs-eyebrow cs-eyebrow--teal">Metrics</div>
+          <h2 class="cs-h2 cs-h2--light">Numbers that make the case</h2>
+          <p class="cs-section-sub cs-section-sub--light">Measured across the first 6 months post-launch via GA4 and Google Ads.</p>
+        </div>
       </div>
-      <div class="metrics-grid">
-        <div
-          v-for="(m, i) in metrics"
-          :key="i"
-          class="metric-card"
-          :style="{ '--metric-accent': m.color }"
-        >
-          <div class="metric-value">{{ m.value }}</div>
-          <div class="metric-label">{{ m.label }}</div>
-          <div class="metric-glow" aria-hidden="true"></div>
+
+      <div class="cs-metrics-grid">
+        <div v-for="m in metrics" :key="m.label" class="cs-metric">
+          <div class="cs-metric-num">{{ m.value }}</div>
+          <div class="cs-metric-label">{{ m.label }}</div>
         </div>
       </div>
     </div>
   </section>
 
   <!-- ── DESIGN SYSTEM ──────────────────────────────────────────── -->
-  <section class="cs-section cs-section-animate">
-    <div class="container">
-      <div class="cs-section-header">
-        <div class="cs-section-eyebrow">07 · Design System</div>
-        <h2 class="cs-section-title">Colour palette & typography</h2>
-        <p class="cs-section-sub">A visual language built for a fintech audience: trustworthy, contemporary, and instantly legible.</p>
+  <section class="cs-section">
+    <div class="cs-shell">
+      <div class="cs-section-head cs-reveal">
+        <span class="cs-ghost-num">07</span>
+        <div>
+          <div class="cs-eyebrow">Design System</div>
+          <h2 class="cs-h2">Colour palette &amp; typography</h2>
+          <p class="cs-section-sub">A visual language built for a fintech audience: trustworthy, contemporary, instantly legible.</p>
+        </div>
       </div>
 
-      <!-- Palette -->
-      <div class="palette-row">
-        <div v-for="p in palette" :key="p.hex" class="palette-swatch">
-          <div class="swatch-chip" :style="{ background: p.hex }"></div>
-          <div class="swatch-info">
+      <div class="cs-palette-row cs-reveal">
+        <div v-for="p in palette" :key="p.hex" class="cs-swatch">
+          <div class="cs-swatch-chip" :style="{ background: p.hex }"></div>
+          <div class="cs-swatch-info">
             <strong>{{ p.name }}</strong>
             <code>{{ p.hex }}</code>
             <span>{{ p.use }}</span>
@@ -447,862 +459,979 @@ onBeforeUnmount(() => {
         </div>
       </div>
 
-      <!-- Typography preview -->
-      <div class="cs-type-grid cs-section-animate">
-        <div class="type-card">
-          <div class="type-eyebrow">Display / Headings</div>
-          <div class="type-family">Outfit</div>
-          <div class="type-sample-large">SteadyAsset</div>
-          <div class="type-sample-med" style="color:#20B2AA">Investment Platform</div>
-          <div class="type-sample-sm" style="color:#6c757d">Trust · Transparency · Accessibility</div>
-          <div class="type-meta">Weights 600–700 · Tight tracking · Optical kerning on</div>
+      <div class="cs-type-grid cs-reveal">
+        <div class="cs-type-card">
+          <div class="cs-type-eyebrow">Display / Headings</div>
+          <div class="cs-type-sample-large">SteadyAsset</div>
+          <div class="cs-type-sample-med">Investment Platform</div>
+          <div class="cs-type-sample-sm">Trust &middot; Transparency &middot; Accessibility</div>
+          <div class="cs-type-meta">Google Sans &middot; Weights 600&ndash;700 &middot; Tight tracking</div>
         </div>
-        <div class="type-card">
-          <div class="type-eyebrow">Body & Interface</div>
-          <div class="type-family">Google Sans</div>
-          <div class="type-body-sample">
+        <div class="cs-type-card cs-type-card--dark">
+          <div class="cs-type-eyebrow">Body &amp; Interface</div>
+          <p class="cs-type-body">
             Clean, high-contrast interface with ample whitespace for confident decision-making.
             Investors should never have to squint, scroll unnecessarily, or guess what happens next.
-          </div>
-          <div class="type-meta">Base 16–18px · Line height 1.65 · Emphasis via colour/weight</div>
+          </p>
+          <div class="cs-type-meta">Base 16&ndash;18px &middot; Line height 1.65 &middot; Emphasis via colour/weight</div>
         </div>
       </div>
 
-      <!-- Mockup -->
-      <div class="cs-mockup-wrap cs-section-animate">
-        <img src="../../assets/img/project/c4/sa-mockup.png" class="cs-mockup-img" alt="SteadyAsset UI Mockup" />
+      <div class="cs-mockup-wrap cs-reveal">
+        <img :src="designMockup" alt="SteadyAsset UI mockup" loading="lazy" />
       </div>
     </div>
   </section>
 
   <!-- ── TESTIMONIAL ────────────────────────────────────────────── -->
-  <section class="cs-section cs-section-teal cs-section-animate">
-    <div class="container">
-      <div class="cs-section-header">
-        <div class="cs-section-eyebrow" style="color:rgba(255,255,255,0.6)">08 · Testimonial</div>
-        <h2 class="cs-section-title light">In their own words</h2>
-      </div>
-      <div class="cs-testimonial">
-        <div class="testimonial-quote-mark">"</div>
-        <blockquote class="testimonial-text">
-          Amortree did an excellent job on our website. They were highly understanding of our needs,
-          thoughtful in their design approach, and very practical in aligning their ideas with our
-          vision. The team delivered a brand and digital presence that we're genuinely proud to show
-          investors — and the results have validated every decision we made together.
+  <section class="cs-section cs-section--teal">
+    <div class="cs-shell">
+      <div class="cs-testimonial cs-reveal">
+        <span class="material-symbols-outlined cs-testimonial-mark">format_quote</span>
+        <blockquote>
+          Amortree is a very professional and end-to-end service provider. They have good understanding of the clients needs and work in a timely and efficient manner.
         </blockquote>
-        <div class="testimonial-attr">
-          <div class="testimonial-avatar">G</div>
-          <div>
-            <strong>Ganesh Moorthy</strong>
+        <div class="cs-testimonial-attr">
+          <div class="cs-testimonial-avatar">G</div>
+          <div class="cs-testimonial-text">
+            <strong>Menaka Reddy</strong>
             <span>Founder, SteadyAsset</span>
           </div>
-          <div class="testimonial-stars">★★★★★</div>
+          <div class="cs-testimonial-stars" aria-label="5 out of 5 stars">
+            <span class="material-symbols-outlined" v-for="n in 5" :key="n">star</span>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
   <!-- ── TECHNOLOGY ─────────────────────────────────────────────── -->
-  <section class="cs-section cs-section-animate">
-    <div class="container">
-      <div class="cs-section-header">
-        <div class="cs-section-eyebrow">09 · Technology</div>
-        <h2 class="cs-section-title">Stack & tools</h2>
-        <p class="cs-section-sub">Every tool was chosen for performance, reliability, and the investor experience — not trend-chasing.</p>
+  <section class="cs-section">
+    <div class="cs-shell">
+      <div class="cs-section-head cs-reveal">
+        <span class="cs-ghost-num">08</span>
+        <div>
+          <div class="cs-eyebrow">Technology</div>
+          <h2 class="cs-h2">Stack &amp; tools</h2>
+          <p class="cs-section-sub">Every tool was chosen for performance and the investor experience — not trend-chasing.</p>
+        </div>
       </div>
-      <div class="tech-grid">
-        <div v-for="t in techStack" :key="t.name" class="tech-pill">
-          <span class="tech-dot"></span>
-          <div>
-            <strong>{{ t.name }}</strong>
-            <span>{{ t.role }}</span>
-          </div>
+
+      <div class="cs-tech-grid cs-stagger">
+        <div v-for="t in techStack" :key="t.name" class="cs-tech-pill">
+          <span class="material-symbols-outlined">{{ t.icon }}</span>
+          <div><strong>{{ t.name }}</strong><span>{{ t.role }}</span></div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ── BUSINESS OUTCOME ───────────────────────────────────────── -->
-  <section class="cs-section cs-section-muted cs-section-animate">
-    <div class="container">
-      <div class="cs-section-header">
-        <div class="cs-section-eyebrow">10 · Business Outcome</div>
-        <h2 class="cs-section-title">What this built for SteadyAsset</h2>
-      </div>
-      <div class="cs-outcomes-grid">
-        <div class="outcome-card">
-          <div class="outcome-icon">🏆</div>
-          <h4>A brand that earns trust before the pitch</h4>
-          <p>Investors arrive on a site that looks like an established platform, not a startup. The teal-and-gold identity system signals stability and ambition in equal measure.</p>
-        </div>
-        <div class="outcome-card">
-          <div class="outcome-icon">📈</div>
-          <h4>A marketing asset, not just a website</h4>
-          <p>With GA4, GTM, and monthly SEO content in place, the site actively generates and nurtures investor leads — without additional ad spend for organic channels.</p>
-        </div>
-        <div class="outcome-card">
-          <div class="outcome-icon">🔄</div>
-          <h4>An investor education engine</h4>
-          <p>The blog and resource strategy positions SteadyAsset as a thought leader in fractional CRE, building a subscriber base that converts to investors over a longer horizon.</p>
-        </div>
-        <div class="outcome-card">
-          <div class="outcome-icon">📍</div>
-          <h4>Local and national discoverability</h4>
-          <p>GMB + local SEO combined with Google Ads yielded an 8.44× ROAS in the first campaign window — proof that the site converts, not just informs.</p>
-        </div>
-        <div class="outcome-card">
-          <div class="outcome-icon">⚙️</div>
-          <h4>Operational independence</h4>
-          <p>The CMS-ready architecture and documented design system mean the SteadyAsset team can update pages, publish blogs, and extend their brand without Amortree on speed dial.</p>
-        </div>
-        <div class="outcome-card outcome-card--highlight">
-          <div class="outcome-icon">💬</div>
-          <h4>A reusable sales asset</h4>
-          <p>This case study — and the live site — is itself a proof of concept that SteadyAsset uses in investor meetings, pitch decks, and partnership conversations to demonstrate credibility.</p>
+  <!-- ── OUTCOMES ───────────────────────────────────────────────── -->
+  <section class="cs-section cs-section--muted">
+    <div class="cs-shell">
+      <div class="cs-section-head cs-reveal">
+        <span class="cs-ghost-num">09</span>
+        <div>
+          <div class="cs-eyebrow">Business Outcome</div>
+          <h2 class="cs-h2">What this built for SteadyAsset</h2>
         </div>
       </div>
 
-      <!-- Navigation -->
-      <div class="cs-nav-ctas">
-        <a href="/project/microrelic" class="amor-btn btn-borderd light">
-          <i class="icofont-rounded-double-left me-2"></i> Microrelic
-        </a>
-        <div class="cs-nav-center">
-          <a href="https://steadyasset.com" target="_blank" rel="noopener" class="amor-btn btn-fill-primary btn-large">
-            View Live Site
-          </a>
+      <div class="cs-outcome-grid cs-stagger">
+        <div
+          v-for="o in outcomes"
+          :key="o.title"
+          class="cs-outcome"
+          :class="{ 'cs-outcome--highlight': o.highlight }"
+        >
+          <span class="material-symbols-outlined">{{ o.icon }}</span>
+          <h4>{{ o.title }}</h4>
+          <p>{{ o.desc }}</p>
         </div>
-        <a href="/project/al-shamil-computers" class="amor-btn btn-borderd light">
-          Al-Shamil <i class="icofont-rounded-double-right ms-2"></i>
+      </div>
+
+      <div class="cs-nav-row cs-reveal">
+        <a href="/project/microrelic" class="cs-nav-link">
+          <span class="material-symbols-outlined">arrow_back</span> Microrelic
+        </a>
+        <a href="https://steadyasset.com" target="_blank" rel="noopener" class="cs-btn-primary">View Live Site</a>
+        <a href="/project/al-shamil-computers" class="cs-nav-link cs-nav-link--right">
+          <span class="material-symbols-outlined">arrow_forward</span> Al-Shamil
         </a>
       </div>
     </div>
   </section>
 
-  <!-- ── WORK WITH US ───────────────────────────────────────────── -->
   <CaseStudyWorkWithUs
     project="SteadyAsset"
     industry="Investment Platform"
-    accent="#20B2AA"
+    accent="#facc15"
     result="An investor-grade brand and digital platform that earns trust, educates visitors, and converts curiosity into committed capital."
-    :services="['Brand Identity & Logo', 'Website UI/UX Design', 'Frontend Development', 'Google Analytics 4', 'GMB Setup', 'SEO Content Strategy']"
-    :proof="['8.44× ROAS in first ad campaign', '3.2× organic traffic growth in 6 months', '94 Google Lighthouse performance score']"
+    :services="['Brand Identity & Logo', 'Website UI/UX Design', 'Frontend Development', 'Google Analytics 4', 'GMB Setup', 'SEO Content Strategy', 'Blog']"
+    :proof="['5.7K Organic website visit', '3.2× organic traffic growth in 6 months', '94 Google Lighthouse performance score']"
   />
 </template>
 
-<style scoped>
-@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&display=swap');
-
-/* ── CSS TOKENS ───────────────────────────────────────────── */
-.cs-hero,
-.cs-section,
-.cs-section-dark,
-.cs-section-muted,
-.cs-section-teal {
-  --sa-teal: #20B2AA;
-  --sa-teal-deep: #008B8B;
-  --sa-gold: #f0b90b;
-  --sa-midnight: #04505F;
-  --sa-neutral: #404040;
-  --sa-frost: #EBF1F0;
-  font-family: 'Outfit', 'Google Sans', sans-serif;
+<style lang="scss" scoped>
+.cs-hero, .cs-section, .cs-metrics-strip, .cs-meta-strip {
+  --teal: #20B2AA;
+  --teal-deep: #008B8B;
+  --gold: #facc15;
+  --midnight: #04505F;
+  --frost: #f5f9f9;
 }
 
-/* ── HERO ─────────────────────────────────────────────────── */
+// ─── Shell ──────────────────────────────────────────────────────────
+.cs-shell {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 2rem;
+
+  @media (max-width: 768px) { padding: 0 1.25rem; }
+}
+
+// ─── Hero ───────────────────────────────────────────────────────────
 .cs-hero {
   position: relative;
-  background: linear-gradient(135deg, #070b12 0%, #0a1520 52%, #050c10 100%);
+  background: #000000;
   overflow: hidden;
-  padding: clamp(100px, 14vh, 160px) 0 80px;
+  padding: clamp(8rem, 13vh, 10rem) 0 0;
+  background-image: url(../../assets/img/banner-bg.svg);
+  background-attachment: fixed;
+  background-position: center -8.625rem;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
-.cs-hero-bg-grid {
+.cs-hero-noise {
   position: absolute;
   inset: 0;
-  background-image:
-    linear-gradient(rgba(32, 178, 170, 0.06) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(32, 178, 170, 0.06) 1px, transparent 1px);
-  background-size: 48px 48px;
+  background-image: radial-gradient(rgba(255,255,255,0.025) 1px, transparent 1px);
+  background-size: 3px 3px;
   pointer-events: none;
 }
 
 .cs-hero-glow {
   position: absolute;
-  top: -120px;
-  right: -100px;
-  width: 600px;
-  height: 600px;
-  background: radial-gradient(circle, rgba(32, 178, 170, 0.18) 0%, transparent 70%);
+  border-radius: 50%;
   pointer-events: none;
+  filter: blur(80px);
+
+  &--1 {
+    top: -180px; right: -120px;
+    width: 560px; height: 560px;
+    background: radial-gradient(circle, rgba(32,178,170,0.22), transparent 70%);
+  }
+  &--2 {
+    bottom: -200px; left: -160px;
+    width: 480px; height: 480px;
+    background: radial-gradient(circle, rgba(250,204,21,0.1), transparent 70%);
+  }
 }
 
-.cs-hero-inner {
-  display: grid;
-  grid-template-columns: 1fr 340px;
-  gap: 48px;
-  align-items: start;
-}
-
-.cs-hero-breadcrumb {
+.cs-breadcrumb {
+  position: relative;
+  z-index: 2;
   display: flex;
   align-items: center;
-  gap: 8px;
-  font-size: 0.82rem;
-  color: rgba(255,255,255,0.45);
-  margin-bottom: 24px;
+  gap: 0.5rem;
+  font-size: 0.78rem;
+  color: rgba(255,255,255,0.4);
+  margin-bottom: 2.5rem;
+
+  a { color: rgba(255,255,255,0.5); text-decoration: none; &:hover { color: var(--teal); } }
+  .active { color: var(--teal); }
 }
-.cs-hero-breadcrumb a { color: rgba(255,255,255,0.55); text-decoration: none; }
-.cs-hero-breadcrumb a:hover { color: var(--sa-teal); }
-.cs-hero-breadcrumb .active { color: var(--sa-teal); }
 
 .cs-hero-eyebrow {
+  position: relative;
+  z-index: 2;
   display: inline-flex;
   align-items: center;
-  gap: 8px;
-  font-size: 0.75rem;
-  font-weight: 700;
-  letter-spacing: 0.14em;
+  gap: 0.5rem;
+  font-size: 0.7rem;
+  font-weight: 800;
+  letter-spacing: 0.2em;
   text-transform: uppercase;
-  color: var(--sa-teal);
-  margin-bottom: 20px;
+  color: var(--teal);
+  margin-bottom: 1.5rem;
 }
+
 .eyebrow-dot {
-  width: 8px; height: 8px;
+  width: 7px; height: 7px;
   border-radius: 50%;
-  background: var(--sa-teal);
-  box-shadow: 0 0 12px var(--sa-teal);
+  background: var(--teal);
+  box-shadow: 0 0 12px var(--teal);
   animation: pulse-dot 2s ease infinite;
 }
+
 @keyframes pulse-dot {
   0%, 100% { opacity: 1; transform: scale(1); }
-  50% { opacity: 0.6; transform: scale(0.85); }
+  50% { opacity: 0.5; transform: scale(0.8); }
 }
 
 .cs-hero-title {
-  font-size: clamp(2rem, 4vw, 3.5rem);
+  position: relative;
+  z-index: 2;
+  display: block;
+  font-size: clamp(2.4rem, 6vw, 5rem);
   font-weight: 800;
-  color: #ffffff;
-  line-height: 1.08;
-  margin-bottom: 20px;
-  letter-spacing: -0.01em;
+  line-height: 1.04;
+  letter-spacing: -0.02em;
+  color: #fff;
+  margin-bottom: 2.5rem;
+  max-width: 920px;
 }
-.cs-title-em {
-  font-style: normal;
-  color: var(--sa-teal);
+
+.cs-line { display: block; }
+.cs-line-accent { color: var(--teal); }
+
+.cs-hero-split {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 3rem;
+  align-items: end;
+  padding-bottom: 2.5rem;
+  margin-bottom: 2.5rem;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+
+  @media (max-width: 860px) {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
 }
 
 .cs-hero-sub {
-  color: rgba(255,255,255,0.7);
+  color: rgba(255,255,255,0.62);
   font-size: 1.05rem;
-  line-height: 1.75;
-  max-width: 560px;
-  margin-bottom: 28px;
+  line-height: 1.8;
+  max-width: 600px;
+  margin: 0;
 }
 
-.cs-hero-tags {
+.cs-hero-stats {
   display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-  margin-bottom: 32px;
+  align-items: center;
+  gap: 1.5rem;
+  flex-shrink: 0;
+
+  @media (max-width: 860px) { gap: 1.25rem; }
 }
-.cs-hero-tags span {
-  padding: 6px 14px;
-  border-radius: 999px;
-  border: 1px solid rgba(32, 178, 170, 0.35);
-  background: rgba(32, 178, 170, 0.08);
-  color: rgba(255,255,255,0.85);
-  font-size: 0.82rem;
-  font-weight: 600;
+
+.cs-hero-stat {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.cs-hero-stat-val {
+  font-size: 1.9rem;
+  font-weight: 800;
+  color: var(--gold);
+  line-height: 1;
+}
+
+.cs-hero-stat-label {
+  font-size: 0.68rem;
+  color: rgba(255,255,255,0.4);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-top: 0.4rem;
+}
+
+.cs-hero-stat-divider {
+  width: 1px;
+  height: 36px;
+  background: rgba(255,255,255,0.12);
 }
 
 .cs-hero-ctas {
-  display: flex;
-  gap: 12px;
-  flex-wrap: wrap;
-  align-items: center;
-}
-
-/* Meta panel */
-.cs-hero-meta {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-}
-.cs-hero-meta-card {
-  background: rgba(255,255,255,0.05);
-  border: 1px solid rgba(255,255,255,0.1);
-  border-radius: 14px;
-  padding: 16px 20px;
-  backdrop-filter: blur(10px);
-}
-.cs-hero-meta-card.highlight {
-  background: rgba(32, 178, 170, 0.1);
-  border-color: rgba(32, 178, 170, 0.35);
-}
-.meta-label {
-  font-size: 0.72rem;
-  font-weight: 700;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  color: rgba(255,255,255,0.45);
-  margin-bottom: 4px;
-}
-.meta-value {
-  font-size: 0.95rem;
-  font-weight: 600;
-  color: rgba(255,255,255,0.9);
-}
-.metric-gold { color: var(--sa-gold); font-size: 1.6rem; font-weight: 800; }
-
-/* Hero mockup */
-.cs-hero-mockup {
   position: relative;
-  margin-top: 56px;
-  border-radius: 20px;
+  z-index: 2;
+  display: flex;
+  gap: 0.85rem;
+  flex-wrap: wrap;
+  margin-bottom: 3.5rem;
+}
+
+.cs-btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.85rem 1.6rem;
+  border-radius: 999px;
+  background: var(--gold);
+  color: #0f172a;
+  font-weight: 800;
+  font-size: 0.88rem;
+  text-decoration: none;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 16px 36px rgba(250,204,21,0.28);
+    color: #0f172a;
+  }
+}
+
+.cs-btn-ghost {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.85rem 1.6rem;
+  border-radius: 999px;
+  border: 1px solid rgba(255,255,255,0.18);
+  color: #fff;
+  font-weight: 700;
+  font-size: 0.88rem;
+  text-decoration: none;
+  transition: border-color 0.25s ease, background 0.25s ease;
+
+  &:hover {
+    border-color: rgba(255,255,255,0.4);
+    background: rgba(255,255,255,0.05);
+    color: #fff;
+  }
+}
+
+// ─── Hero mockup ───────────────────────────────────────────────────
+.cs-hero-mockup-wrap {
+  position: relative;
+  z-index: 2;
+  padding-bottom: 0;
+}
+
+.cs-hero-mockup {
+  border-radius: 20px 20px 0 0;
   overflow: hidden;
-  border: 1px solid rgba(32, 178, 170, 0.2);
-  box-shadow: 0 40px 120px rgba(0,0,0,0.5);
+  border: 1px solid rgba(32,178,170,0.25);
+  border-bottom: none;
+  box-shadow: 0 -20px 100px rgba(32,178,170,0.08), 0 40px 120px rgba(0,0,0,0.6);
+
+  img { width: 100%; display: block; }
 }
-.cs-hero-mockup img {
-  width: 100%;
-  display: block;
-  border-radius: 20px;
-}
+
 .cs-hero-mockup-float {
   position: absolute;
-  top: 20px;
-  right: 20px;
+  top: 1.5rem;
+  right: calc(2rem + 1.5rem);
   display: flex;
   align-items: center;
-  gap: 8px;
-  background: rgba(0,0,0,0.75);
-  border: 1px solid rgba(32, 178, 170, 0.4);
+  gap: 0.5rem;
+  background: rgba(0,0,0,0.7);
+  border: 1px solid rgba(32,178,170,0.4);
   backdrop-filter: blur(12px);
   border-radius: 999px;
-  padding: 8px 16px;
+  padding: 0.5rem 1rem;
   color: rgba(255,255,255,0.9);
-  font-size: 0.82rem;
+  font-size: 0.78rem;
   font-weight: 600;
+
+  @media (max-width: 768px) { display: none; }
 }
+
 .float-dot {
-  width: 8px; height: 8px;
+  width: 7px; height: 7px;
   border-radius: 50%;
   background: #22c55e;
   box-shadow: 0 0 10px #22c55e;
   animation: pulse-dot 1.5s ease infinite;
 }
 
-/* ── SHARED SECTION STYLES ───────────────────────────────── */
-.cs-section {
-  padding: clamp(64px, 8vw, 112px) 0;
-  background: #fff;
-}
-.cs-section-dark {
-  padding: clamp(64px, 8vw, 112px) 0;
-  background: linear-gradient(135deg, #070b12 0%, #0d1a20 100%);
-}
-.cs-section-muted {
-  padding: clamp(64px, 8vw, 112px) 0;
-  background: #f7fafa;
-}
-.cs-section-teal {
-  padding: clamp(64px, 8vw, 112px) 0;
-  background: linear-gradient(135deg, var(--sa-midnight) 0%, #0d2f38 100%);
-}
-
-.cs-section-header {
-  margin-bottom: 56px;
-}
-.cs-section-eyebrow {
-  display: inline-block;
-  font-size: 0.72rem;
-  font-weight: 800;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-  color: var(--sa-teal-deep);
-  margin-bottom: 12px;
-}
-.cs-section-eyebrow.teal { color: var(--sa-teal); }
-.cs-section-title {
-  font-size: clamp(1.75rem, 3.5vw, 2.75rem);
-  font-weight: 800;
-  color: #0f0f0f;
-  line-height: 1.1;
-  margin-bottom: 0;
-}
-.cs-section-title.light { color: #ffffff; }
-.cs-section-sub {
-  margin-top: 12px;
-  color: #5a6a7a;
-  font-size: 1rem;
-  line-height: 1.7;
-}
-.cs-section-sub.light { color: rgba(255,255,255,0.65); }
-
-/* ── CLIENT ─────────────────────────────────────────────── */
-.cs-client-grid {
-  display: grid;
-  grid-template-columns: 1fr 360px;
-  gap: 56px;
-  align-items: start;
-}
-.cs-client-copy p {
-  color: #3a4a5a;
-  line-height: 1.8;
-  font-size: 1.02rem;
-  margin-bottom: 20px;
-}
-.cs-client-facts {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 16px;
-  margin-top: 32px;
-}
-.fact-item {
+.cs-hero-mockup-tags {
   display: flex;
-  gap: 12px;
-  align-items: flex-start;
-  padding: 16px;
-  border-radius: 12px;
-  background: var(--sa-frost);
-  border: 1px solid rgba(32, 178, 170, 0.15);
-}
-.fact-icon { font-size: 1.3rem; line-height: 1; }
-.fact-item strong { display: block; font-size: 0.72rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--sa-teal-deep); margin-bottom: 2px; }
-.fact-item span, .fact-item a { font-size: 0.9rem; color: #3a4a5a; text-decoration: none; }
-.fact-item a:hover { color: var(--sa-teal); }
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  padding: 1.5rem 0;
 
-.cs-client-logo-box {
-  padding: 40px 32px;
-  border-radius: 20px;
-  background: linear-gradient(135deg, var(--sa-frost), #fff);
-  border: 1px solid rgba(32, 178, 170, 0.2);
-  box-shadow: 0 20px 60px rgba(0,0,0,0.07);
-  text-align: center;
+  span {
+    padding: 0.4rem 0.9rem;
+    border-radius: 999px;
+    border: 1px solid rgba(32,178,170,0.3);
+    background: rgba(32,178,170,0.06);
+    color: rgba(255,255,255,0.75);
+    font-size: 0.76rem;
+    font-weight: 600;
+  }
 }
-.cs-client-logo { height: 60px; margin-bottom: 32px; }
-.cs-client-quote {
-  font-size: 0.95rem;
-  line-height: 1.75;
-  color: #3a4a5a;
-  font-style: italic;
-  margin-bottom: 12px;
-}
-.cs-client-quote-attr { font-size: 0.8rem; color: var(--sa-teal-deep); font-weight: 700; }
 
-/* ── CHALLENGES ──────────────────────────────────────────── */
-.cs-challenges-grid {
+// ─── Meta strip ─────────────────────────────────────────────────────
+.cs-meta-strip {
+  background: #0a1015;
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+  padding: 2rem 0;
+}
+
+.cs-meta-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
-}
-.challenge-card {
-  padding: 28px 24px;
-  border-radius: 16px;
-  background: rgba(255,255,255,0.05);
-  border: 1px solid rgba(255,255,255,0.1);
-  backdrop-filter: blur(8px);
-  transition: border-color 0.28s ease, transform 0.28s ease;
-}
-.challenge-card:hover {
-  border-color: rgba(32, 178, 170, 0.4);
-  transform: translateY(-4px);
-}
-.challenge-icon { font-size: 1.8rem; margin-bottom: 14px; }
-.challenge-card h3 { color: #fff; font-size: 1rem; font-weight: 700; margin-bottom: 10px; }
-.challenge-card p { color: rgba(255,255,255,0.65); font-size: 0.9rem; line-height: 1.7; margin: 0; }
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
 
-/* ── STRATEGY ────────────────────────────────────────────── */
-.cs-strategy-grid {
-  display: grid;
-  grid-template-columns: 1fr 380px;
-  gap: 56px;
-  align-items: start;
+  @media (max-width: 768px) { grid-template-columns: repeat(2, 1fr); }
 }
-.cs-lead {
-  font-size: 1.12rem;
-  color: #3a4a5a;
-  line-height: 1.8;
-  margin-bottom: 36px;
-}
-.cs-pillar {
+
+.cs-meta-item {
   display: flex;
-  gap: 20px;
-  margin-bottom: 32px;
+  flex-direction: column;
+  gap: 0.4rem;
 }
-.pillar-num {
-  flex-shrink: 0;
-  width: 40px; height: 40px;
-  border-radius: 10px;
-  background: rgba(32, 178, 170, 0.12);
-  border: 1px solid rgba(32, 178, 170, 0.3);
-  color: var(--sa-teal);
-  font-weight: 800;
-  font-size: 0.82rem;
-  display: flex; align-items: center; justify-content: center;
-}
-.cs-pillar h4 { font-size: 1rem; font-weight: 700; color: #0f0f0f; margin-bottom: 6px; }
-.cs-pillar p { font-size: 0.92rem; color: #5a6a7a; line-height: 1.75; margin: 0; }
 
-.insight-card {
-  padding: 32px 28px;
-  border-radius: 20px;
-  background: linear-gradient(135deg, #f0fafa, #e8f8f7);
-  border: 1px solid rgba(32, 178, 170, 0.25);
-  height: 100%;
-}
-.insight-icon { font-size: 2rem; margin-bottom: 16px; }
-.insight-card h4 { font-size: 1.05rem; font-weight: 800; color: var(--sa-midnight); margin-bottom: 12px; }
-.insight-card p { font-size: 0.93rem; color: #3a4a5a; line-height: 1.75; margin: 0; }
-.insight-divider { height: 1px; background: rgba(32, 178, 170, 0.25); margin: 20px 0; }
-.insight-action { color: var(--sa-teal-deep) !important; font-weight: 600 !important; }
-
-/* ── TIMELINE ────────────────────────────────────────────── */
-.cs-timeline { display: flex; flex-direction: column; gap: 0; }
-.timeline-item {
-  display: grid;
-  grid-template-columns: 100px 40px 1fr;
-  gap: 0 20px;
-  align-items: start;
-}
-.timeline-week {
-  padding-top: 4px;
-  text-align: right;
-  font-size: 0.78rem;
+.cs-meta-label {
+  font-size: 0.66rem;
   font-weight: 700;
-  letter-spacing: 0.06em;
-  color: var(--sa-teal-deep);
+  letter-spacing: 0.12em;
   text-transform: uppercase;
-}
-.timeline-connector { display: flex; flex-direction: column; align-items: center; }
-.timeline-dot {
-  width: 16px; height: 16px;
-  border-radius: 50%;
-  background: var(--sa-teal);
-  border: 3px solid #fff;
-  box-shadow: 0 0 0 2px var(--sa-teal), 0 0 20px rgba(32, 178, 170, 0.3);
-  flex-shrink: 0;
-  margin-top: 2px;
-}
-.timeline-line {
-  flex: 1;
-  width: 2px;
-  min-height: 48px;
-  background: linear-gradient(180deg, var(--sa-teal) 0%, rgba(32, 178, 170, 0.2) 100%);
-  margin-top: 4px;
-}
-.timeline-body { padding-bottom: 36px; }
-.timeline-phase { font-size: 1rem; font-weight: 700; color: #0f0f0f; margin-bottom: 6px; }
-.timeline-desc { font-size: 0.92rem; color: #5a6a7a; line-height: 1.75; margin: 0; }
-
-/* ── BEFORE / AFTER ──────────────────────────────────────── */
-.cs-ba-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 24px;
-}
-.ba-card {
-  padding: 36px 32px;
-  border-radius: 20px;
-}
-.ba-before {
-  background: #fdf2f2;
-  border: 1px solid rgba(220, 60, 45, 0.2);
-}
-.ba-after {
-  background: #f0fafa;
-  border: 1px solid rgba(32, 178, 170, 0.3);
-}
-.ba-label {
-  display: inline-block;
-  padding: 6px 14px;
-  border-radius: 999px;
-  font-size: 0.75rem;
-  font-weight: 800;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  margin-bottom: 24px;
-}
-.before-label { background: rgba(220, 60, 45, 0.12); color: #dc3c2d; }
-.after-label { background: rgba(32, 178, 170, 0.15); color: var(--sa-teal-deep); }
-.ba-list { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 12px; }
-.ba-list li { display: flex; gap: 12px; align-items: flex-start; font-size: 0.93rem; color: #3a4a5a; line-height: 1.5; }
-.ba-x { color: #dc3c2d; font-weight: 800; flex-shrink: 0; font-size: 0.95rem; margin-top: 1px; }
-.ba-check { color: var(--sa-teal); font-weight: 800; flex-shrink: 0; font-size: 0.95rem; margin-top: 1px; }
-
-/* ── METRICS ─────────────────────────────────────────────── */
-.metrics-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
-}
-.metric-card {
-  position: relative;
-  padding: 40px 28px;
-  border-radius: 20px;
-  background: rgba(255,255,255,0.05);
-  border: 1px solid rgba(255,255,255,0.1);
-  overflow: hidden;
-  text-align: center;
-  transition: border-color 0.28s ease, transform 0.28s ease;
-}
-.metric-card:hover {
-  border-color: color-mix(in srgb, var(--metric-accent) 50%, transparent);
-  transform: translateY(-4px);
-}
-.metric-glow {
-  position: absolute;
-  bottom: -40px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 180px; height: 180px;
-  border-radius: 50%;
-  background: radial-gradient(circle, color-mix(in srgb, var(--metric-accent) 30%, transparent), transparent 70%);
-  pointer-events: none;
-}
-.metric-value {
-  font-size: clamp(2rem, 4vw, 3rem);
-  font-weight: 800;
-  color: var(--metric-accent);
-  margin-bottom: 8px;
-  line-height: 1;
-  position: relative; z-index: 1;
-}
-.metric-label {
-  font-size: 0.88rem;
-  color: rgba(255,255,255,0.65);
-  line-height: 1.5;
-  position: relative; z-index: 1;
-}
-
-/* ── PALETTE ─────────────────────────────────────────────── */
-.palette-row {
-  display: grid;
-  grid-template-columns: repeat(6, 1fr);
-  gap: 16px;
-  margin-bottom: 56px;
-}
-.palette-swatch {
-  border-radius: 14px;
-  overflow: hidden;
-  border: 1px solid rgba(0,0,0,0.07);
-  box-shadow: 0 4px 16px rgba(0,0,0,0.06);
-  transition: transform 0.24s ease, box-shadow 0.24s ease;
-}
-.palette-swatch:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 12px 32px rgba(0,0,0,0.12);
-}
-.swatch-chip { height: 80px; width: 100%; }
-.swatch-info { padding: 12px; background: #fff; }
-.swatch-info strong { display: block; font-size: 0.78rem; font-weight: 700; color: #0f0f0f; margin-bottom: 2px; }
-.swatch-info code { display: block; font-size: 0.73rem; color: var(--sa-teal-deep); font-family: monospace; margin-bottom: 2px; }
-.swatch-info span { display: block; font-size: 0.7rem; color: #7a8a9a; }
-
-/* ── TYPOGRAPHY ──────────────────────────────────────────── */
-.cs-type-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 24px;
-  margin-bottom: 56px;
-}
-.type-card {
-  padding: 36px 32px;
-  border-radius: 20px;
-  background: #0f0f0f;
-  border: 1px solid rgba(255,255,255,0.08);
-}
-.type-eyebrow {
-  font-size: 0.7rem;
-  font-weight: 800;
-  letter-spacing: 0.16em;
-  text-transform: uppercase;
-  color: var(--sa-teal);
-  margin-bottom: 6px;
-}
-.type-family {
-  font-size: 0.82rem;
-  color: rgba(255,255,255,0.4);
-  margin-bottom: 20px;
-  font-style: italic;
-}
-.type-sample-large {
-  font-size: 2.2rem;
-  font-weight: 800;
-  color: #fff;
-  font-family: 'Outfit', sans-serif;
-  line-height: 1;
-  margin-bottom: 8px;
-}
-.type-sample-med {
-  font-size: 1.2rem;
-  font-weight: 600;
-  font-family: 'Outfit', sans-serif;
-  margin-bottom: 8px;
-}
-.type-sample-sm {
-  font-size: 0.9rem;
-  font-weight: 500;
-  font-family: 'Outfit', sans-serif;
-  margin-bottom: 16px;
-}
-.type-body-sample {
-  color: rgba(255,255,255,0.7);
-  font-size: 0.95rem;
-  line-height: 1.75;
-  margin-bottom: 16px;
-}
-.type-meta {
-  font-size: 0.75rem;
   color: rgba(255,255,255,0.35);
 }
 
-.cs-mockup-wrap {
-  border-radius: 20px;
-  overflow: hidden;
-  box-shadow: 0 40px 100px rgba(0,0,0,0.12);
-  border: 1px solid rgba(32, 178, 170, 0.15);
+.cs-meta-value {
+  font-size: 0.92rem;
+  font-weight: 600;
+  color: rgba(255,255,255,0.88);
 }
-.cs-mockup-img { width: 100%; display: block; }
 
-/* ── TESTIMONIAL ─────────────────────────────────────────── */
+// ─── Section shells ──────────────────────────────────────────────────
+.cs-section {
+  padding: clamp(4.5rem, 8vw, 7rem) 0;
+  background: #fff;
+
+  &--dark { background: #0a1015; }
+  &--muted { background: var(--frost); }
+  &--teal { background: linear-gradient(135deg, var(--midnight), #0c2832); }
+}
+
+.cs-section-head {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.5rem;
+  margin-bottom: 3.5rem;
+}
+
+.cs-ghost-num {
+  font-size: clamp(3rem, 6vw, 5.5rem);
+  font-weight: 900;
+  line-height: 0.8;
+  color: rgba(15,23,42,0.06);
+  flex-shrink: 0;
+  font-variant-numeric: tabular-nums;
+
+  &--teal { color: rgba(255,255,255,0.05); }
+}
+
+.cs-eyebrow {
+  font-size: 0.68rem;
+  font-weight: 800;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--teal-deep);
+  margin-bottom: 0.6rem;
+
+  &--teal { color: var(--teal); }
+}
+
+.cs-h2 {
+  font-size: clamp(1.7rem, 3.2vw, 2.5rem);
+  font-weight: 800;
+  color: #0f172a;
+  line-height: 1.15;
+  margin: 0;
+
+  &--light { color: #fff; }
+}
+
+.cs-section-sub {
+  margin-top: 0.75rem;
+  color: #64748b;
+  font-size: 0.95rem;
+  line-height: 1.7;
+
+  &--light { color: rgba(255,255,255,0.55); }
+}
+
+.cs-lead-text {
+  font-size: 1.08rem;
+  color: #334155;
+  line-height: 1.85;
+  margin-bottom: 1.25rem;
+}
+
+// ─── Client ──────────────────────────────────────────────────────────
+.cs-client-grid {
+  display: grid;
+  grid-template-columns: 1fr 340px;
+  gap: 3.5rem;
+
+  @media (max-width: 900px) { grid-template-columns: 1fr; }
+}
+
+.cs-client-copy p {
+  color: #475569;
+  line-height: 1.8;
+  font-size: 1rem;
+  margin-bottom: 1.1rem;
+}
+
+.cs-fact-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.9rem;
+  margin-top: 2rem;
+
+  @media (max-width: 600px) { grid-template-columns: 1fr; }
+}
+
+.cs-fact {
+  display: flex;
+  gap: 0.75rem;
+  align-items: flex-start;
+  padding: 1rem;
+  border-radius: 12px;
+  background: var(--frost);
+
+  .material-symbols-outlined { font-size: 1.2rem; color: var(--teal-deep); }
+  strong { display: block; font-size: 0.66rem; font-weight: 800; letter-spacing: 0.08em; text-transform: uppercase; color: var(--teal-deep); margin-bottom: 0.15rem; }
+  span, a { font-size: 0.86rem; color: #334155; text-decoration: none; }
+  a:hover { color: var(--teal); }
+}
+
+.cs-client-card {
+  position: relative;
+  padding: 2.5rem 2rem;
+  border-radius: 20px;
+  background: #0a1015;
+  text-align: left;
+}
+
+.cs-client-logo { height: 44px; margin-bottom: 1.75rem; filter: brightness(0) invert(1); }
+
+.cs-quote-mark {
+  font-size: 2.2rem;
+  color: var(--teal);
+  opacity: 0.5;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.cs-client-quote {
+  font-size: 0.95rem;
+  line-height: 1.75;
+  color: rgba(255,255,255,0.82);
+  margin-bottom: 1rem;
+}
+
+.cs-client-quote-attr {
+  font-size: 0.76rem;
+  color: var(--teal);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+// ─── Challenges (asymmetric row list, not card grid) ─────────────────
+.cs-challenge-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.cs-challenge-row {
+  display: grid;
+  grid-template-columns: 50px 50px 1fr;
+  gap: 1.25rem;
+  align-items: flex-start;
+  padding: 1.75rem 0;
+  border-bottom: 1px solid rgba(255,255,255,0.07);
+
+  &:last-child { border-bottom: none; }
+
+  @media (max-width: 600px) {
+    grid-template-columns: 36px 36px 1fr;
+    gap: 0.85rem;
+  }
+}
+
+.cs-challenge-num {
+  font-size: 0.78rem;
+  font-weight: 800;
+  color: rgba(255,255,255,0.25);
+  padding-top: 0.2rem;
+  font-variant-numeric: tabular-nums;
+}
+
+.cs-challenge-icon {
+  font-size: 1.5rem;
+  color: var(--teal);
+}
+
+.cs-challenge-body {
+  h3 { color: #fff; font-size: 1.05rem; font-weight: 700; margin: 0 0 0.4rem; }
+  p { color: rgba(255,255,255,0.55); font-size: 0.9rem; line-height: 1.7; margin: 0; max-width: 640px; }
+}
+
+// ─── Strategy ────────────────────────────────────────────────────────
+.cs-strategy-grid {
+  display: grid;
+  grid-template-columns: 1fr 360px;
+  gap: 3.5rem;
+  align-items: start;
+
+  @media (max-width: 900px) { grid-template-columns: 1fr; }
+}
+
+.cs-pillar {
+  display: flex;
+  gap: 1.25rem;
+  margin-bottom: 1.75rem;
+
+  h4 { font-size: 1rem; font-weight: 700; color: #0f172a; margin: 0 0 0.35rem; }
+  p { font-size: 0.9rem; color: #64748b; line-height: 1.75; margin: 0; }
+}
+
+.cs-pillar-num {
+  flex-shrink: 0;
+  width: 38px; height: 38px;
+  border-radius: 10px;
+  background: rgba(32,178,170,0.1);
+  border: 1px solid rgba(32,178,170,0.25);
+  color: var(--teal-deep);
+  font-weight: 800;
+  font-size: 0.78rem;
+  display: flex; align-items: center; justify-content: center;
+}
+
+.cs-insight {
+  padding: 2.25rem 2rem;
+  border-radius: 18px;
+  background: linear-gradient(160deg, #0a1015, #0c2832);
+  position: sticky;
+  top: 2rem;
+
+  h4 { font-size: 1rem; font-weight: 800; color: #fff; margin: 0.85rem 0 0.75rem; }
+  p { font-size: 0.9rem; color: rgba(255,255,255,0.62); line-height: 1.75; margin: 0; }
+}
+
+.cs-insight-icon { font-size: 1.7rem; color: var(--gold); }
+.cs-insight-divider { height: 1px; background: rgba(255,255,255,0.1); margin: 1.25rem 0; }
+.cs-insight-action { color: rgba(255,255,255,0.85) !important; font-weight: 500 !important; }
+
+// ─── Timeline ────────────────────────────────────────────────────────
+.cs-timeline { display: flex; flex-direction: column; }
+
+.timeline-row {
+  display: grid;
+  grid-template-columns: 56px 36px 1fr;
+  gap: 0 1.25rem;
+}
+
+.timeline-week {
+  font-size: 0.95rem;
+  font-weight: 900;
+  color: rgba(15,23,42,0.18);
+  padding-top: 0.1rem;
+}
+
+.timeline-rail { display: flex; flex-direction: column; align-items: center; }
+
+.timeline-dot {
+  width: 14px; height: 14px;
+  border-radius: 50%;
+  background: var(--teal);
+  border: 3px solid var(--frost);
+  box-shadow: 0 0 0 2px var(--teal);
+  margin-top: 0.3rem;
+  flex-shrink: 0;
+}
+
+.timeline-line {
+  flex: 1;
+  width: 2px;
+  min-height: 44px;
+  background: linear-gradient(180deg, var(--teal), rgba(32,178,170,0.15));
+  margin-top: 0.25rem;
+}
+
+.timeline-body {
+  padding-bottom: 2.25rem;
+  h4 { font-size: 1rem; font-weight: 700; color: #0f172a; margin: 0 0 0.4rem; }
+  p { font-size: 0.9rem; color: #64748b; line-height: 1.75; margin: 0; }
+}
+
+// ─── Before / After ──────────────────────────────────────────────────
+.cs-ba-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+
+  @media (max-width: 860px) { grid-template-columns: 1fr; }
+}
+
+.cs-ba-card {
+  padding: 2.25rem 2rem;
+  border-radius: 18px;
+
+  &--before { background: #0f172a; }
+  &--after { background: linear-gradient(160deg, var(--midnight), #0c2832); }
+
+  ul { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 0.85rem; }
+  li {
+    display: flex; gap: 0.65rem; align-items: flex-start;
+    font-size: 0.88rem; color: rgba(255,255,255,0.75); line-height: 1.5;
+    .material-symbols-outlined { font-size: 1.05rem; flex-shrink: 0; margin-top: 1px; }
+  }
+}
+
+.cs-ba-card--before li .material-symbols-outlined { color: #f87171; }
+.cs-ba-card--after li .material-symbols-outlined { color: var(--teal); }
+
+.cs-ba-tag {
+  display: inline-block;
+  font-size: 0.68rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.5);
+  margin-bottom: 1.5rem;
+}
+
+// ─── Metrics strip (dominant moment) ──────────────────────────────────
+.cs-metrics-strip {
+  padding: clamp(4.5rem, 8vw, 7rem) 0;
+  background: #050a0d;
+}
+
+.cs-metrics-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+
+  @media (max-width: 860px) { grid-template-columns: repeat(2, 1fr); }
+  @media (max-width: 480px) { grid-template-columns: 1fr; }
+}
+
+.cs-metric {
+  padding: 2.5rem 1.5rem;
+  border-top: 1px solid rgba(255,255,255,0.08);
+  border-right: 1px solid rgba(255,255,255,0.08);
+
+  &:nth-child(3n) { border-right: none; }
+  @media (max-width: 860px) {
+    &:nth-child(2n) { border-right: none; }
+    &:nth-child(3n) { border-right: 1px solid rgba(255,255,255,0.08); }
+    &:nth-child(2n):not(:nth-child(3n)) { border-right: none; }
+  }
+}
+
+.cs-metric-num {
+  font-size: clamp(2.2rem, 4.5vw, 3.4rem);
+  font-weight: 900;
+  color: var(--gold);
+  line-height: 1;
+  margin-bottom: 0.6rem;
+  font-variant-numeric: tabular-nums;
+}
+
+.cs-metric-label {
+  font-size: 0.85rem;
+  color: rgba(255,255,255,0.5);
+  line-height: 1.5;
+}
+
+// ─── Palette ─────────────────────────────────────────────────────────
+.cs-palette-row {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 1rem;
+  margin-bottom: 3.5rem;
+
+  @media (max-width: 1024px) { grid-template-columns: repeat(3, 1fr); }
+  @media (max-width: 600px) { grid-template-columns: repeat(2, 1fr); }
+}
+
+.cs-swatch {
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid rgba(15,23,42,0.07);
+  transition: transform 0.25s ease;
+  &:hover { transform: translateY(-3px); }
+}
+
+.cs-swatch-chip { height: 70px; }
+
+.cs-swatch-info {
+  padding: 0.75rem;
+  background: #fff;
+  strong { display: block; font-size: 0.74rem; font-weight: 700; color: #0f172a; }
+  code { display: block; font-size: 0.68rem; color: var(--teal-deep); font-family: monospace; margin: 0.1rem 0; }
+  span { display: block; font-size: 0.66rem; color: #94a3b8; }
+}
+
+// ─── Typography ──────────────────────────────────────────────────────
+.cs-type-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  margin-bottom: 3.5rem;
+
+  @media (max-width: 860px) { grid-template-columns: 1fr; }
+}
+
+.cs-type-card {
+  padding: 2.25rem 2rem;
+  border-radius: 18px;
+  background: var(--frost);
+  border: 1px solid rgba(15,23,42,0.06);
+
+  &--dark {
+    background: #0a1015;
+    .cs-type-eyebrow { color: var(--teal); }
+    .cs-type-meta { color: rgba(255,255,255,0.35); }
+  }
+}
+
+.cs-type-eyebrow {
+  font-size: 0.68rem;
+  font-weight: 800;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--teal-deep);
+  margin-bottom: 1.25rem;
+}
+
+.cs-type-sample-large { font-size: 2.1rem; font-weight: 800; color: #0f172a; line-height: 1; margin-bottom: 0.5rem; }
+.cs-type-sample-med { font-size: 1.15rem; font-weight: 600; color: var(--teal-deep); margin-bottom: 0.5rem; }
+.cs-type-sample-sm { font-size: 0.85rem; color: #94a3b8; margin-bottom: 1rem; }
+.cs-type-body { color: rgba(255,255,255,0.65); font-size: 0.92rem; line-height: 1.8; margin-bottom: 1rem; }
+.cs-type-meta { font-size: 0.72rem; color: #94a3b8; }
+
+.cs-mockup-wrap {
+  border-radius: 18px;
+  overflow: hidden;
+  border: 1px solid rgba(32,178,170,0.15);
+  img { width: 100%; display: block; }
+}
+
+// ─── Testimonial ─────────────────────────────────────────────────────
 .cs-testimonial {
-  max-width: 820px;
+  max-width: 760px;
   margin: 0 auto;
   text-align: center;
 }
-.testimonial-quote-mark {
-  font-size: 8rem;
-  line-height: 0.6;
-  color: rgba(32, 178, 170, 0.25);
-  font-family: Georgia, serif;
-  margin-bottom: 20px;
-  display: block;
+
+.cs-testimonial-mark { font-size: 3.5rem; color: var(--gold); opacity: 0.7; display: block; margin-bottom: 1rem; }
+
+.cs-testimonial blockquote {
+  font-size: clamp(1.1rem, 2vw, 1.4rem);
+  color: rgba(255,255,255,0.92);
+  line-height: 1.75;
+  margin: 0 0 2.25rem;
 }
-.testimonial-text {
-  font-size: clamp(1.1rem, 2vw, 1.45rem);
-  color: rgba(255,255,255,0.9);
-  line-height: 1.8;
-  font-style: italic;
-  margin: 0 0 36px;
-}
-.testimonial-attr {
+
+.cs-testimonial-attr {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 16px;
+  gap: 1rem;
+  flex-wrap: wrap;
 }
-.testimonial-avatar {
-  width: 48px; height: 48px;
+
+.cs-testimonial-avatar {
+  width: 44px; height: 44px;
   border-radius: 50%;
-  background: linear-gradient(135deg, var(--sa-teal), var(--sa-gold));
-  color: #fff;
-  font-size: 1.2rem;
+  background: var(--gold);
+  color: #0f172a;
   font-weight: 800;
   display: flex; align-items: center; justify-content: center;
-}
-.testimonial-attr strong { display: block; color: #fff; font-weight: 700; }
-.testimonial-attr span { display: block; color: rgba(255,255,255,0.55); font-size: 0.85rem; }
-.testimonial-stars { color: var(--sa-gold); font-size: 1.1rem; letter-spacing: 2px; }
-
-/* ── TECHNOLOGY ──────────────────────────────────────────── */
-.tech-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 16px;
-}
-.tech-pill {
-  display: flex;
-  gap: 14px;
-  align-items: center;
-  padding: 18px 20px;
-  border-radius: 14px;
-  background: var(--sa-frost);
-  border: 1px solid rgba(32, 178, 170, 0.2);
-  transition: border-color 0.24s ease, transform 0.24s ease;
-}
-.tech-pill:hover {
-  border-color: var(--sa-teal);
-  transform: translateY(-2px);
-}
-.tech-dot {
-  width: 10px; height: 10px;
-  border-radius: 50%;
-  background: var(--sa-teal);
   flex-shrink: 0;
 }
-.tech-pill strong { display: block; font-size: 0.88rem; font-weight: 700; color: #0f0f0f; margin-bottom: 2px; }
-.tech-pill span { display: block; font-size: 0.77rem; color: #7a8a9a; }
 
-/* ── OUTCOMES ────────────────────────────────────────────── */
-.cs-outcomes-grid {
+.cs-testimonial-text {
+  text-align: left;
+  strong { display: block; color: #fff; font-weight: 700; }
+  span { display: block; color: rgba(255,255,255,0.5); font-size: 0.82rem; }
+}
+
+.cs-testimonial-stars {
+  display: flex; gap: 1px; color: var(--gold);
+  .material-symbols-outlined { font-size: 1rem; font-variation-settings: "FILL" 1; }
+}
+
+// ─── Tech grid ───────────────────────────────────────────────────────
+.cs-tech-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1px;
+  background: rgba(15,23,42,0.08);
+  border-radius: 16px;
+  overflow: hidden;
+
+  @media (max-width: 1024px) { grid-template-columns: repeat(2, 1fr); }
+}
+
+.cs-tech-pill {
+  display: flex;
+  gap: 0.85rem;
+  align-items: center;
+  padding: 1.5rem;
+  background: #fff;
+
+  .material-symbols-outlined { font-size: 1.2rem; color: var(--teal-deep); flex-shrink: 0; }
+  strong { display: block; font-size: 0.85rem; font-weight: 700; color: #0f172a; }
+  span { display: block; font-size: 0.74rem; color: #94a3b8; }
+}
+
+// ─── Outcomes ────────────────────────────────────────────────────────
+.cs-outcome-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
-  margin-bottom: 64px;
-}
-.outcome-card {
-  padding: 32px 24px;
-  border-radius: 18px;
-  background: #fff;
-  border: 1px solid rgba(32, 178, 170, 0.15);
-  box-shadow: 0 4px 24px rgba(0,0,0,0.05);
-  transition: border-color 0.28s ease, transform 0.28s ease, box-shadow 0.28s ease;
-}
-.outcome-card:hover {
-  border-color: var(--sa-teal);
-  transform: translateY(-4px);
-  box-shadow: 0 12px 40px rgba(32, 178, 170, 0.12);
-}
-.outcome-card--highlight {
-  background: linear-gradient(135deg, #f0fafa, #e8f8f7);
-  border-color: rgba(32, 178, 170, 0.3);
-}
-.outcome-icon { font-size: 1.8rem; margin-bottom: 14px; }
-.outcome-card h4 { font-size: 1rem; font-weight: 700; color: #0f0f0f; margin-bottom: 10px; }
-.outcome-card p { font-size: 0.9rem; color: #5a6a7a; line-height: 1.75; margin: 0; }
+  gap: 1.25rem;
+  margin-bottom: 4rem;
 
-/* ── NAV CTAS ────────────────────────────────────────────── */
-.cs-nav-ctas {
+  @media (max-width: 900px) { grid-template-columns: repeat(2, 1fr); }
+  @media (max-width: 600px) { grid-template-columns: 1fr; }
+}
+
+.cs-outcome {
+  padding: 1.75rem 1.5rem;
+  border-radius: 16px;
+  background: #fff;
+  border: 1px solid rgba(15,23,42,0.07);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+
+  &:hover { transform: translateY(-4px); box-shadow: 0 18px 48px rgba(15,23,42,0.08); }
+  &--highlight { background: linear-gradient(160deg, #0a1015, #0c2832); border-color: transparent; h4, p { color: #fff !important; } .material-symbols-outlined { color: var(--gold); } }
+
+  .material-symbols-outlined { font-size: 1.5rem; color: var(--teal-deep); }
+  h4 { font-size: 0.95rem; font-weight: 700; color: #0f172a; margin: 0.85rem 0 0.5rem; }
+  p { font-size: 0.85rem; color: #64748b; line-height: 1.65; margin: 0; }
+}
+
+.cs-outcome--highlight p { opacity: 0.7; }
+
+// ─── Nav row ─────────────────────────────────────────────────────────
+.cs-nav-row {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 16px;
+  gap: 1rem;
   flex-wrap: wrap;
-}
-.cs-nav-center { flex: 1; display: flex; justify-content: center; }
+  padding-top: 2.5rem;
+  border-top: 1px solid rgba(15,23,42,0.08);
 
-/* ── RESPONSIVE ──────────────────────────────────────────── */
-@media (max-width: 1199px) {
-  .cs-hero-inner { grid-template-columns: 1fr 280px; }
-  .palette-row { grid-template-columns: repeat(3, 1fr); }
-  .tech-grid { grid-template-columns: repeat(2, 1fr); }
+  @media (max-width: 600px) { flex-direction: column; }
 }
 
-@media (max-width: 991px) {
-  .cs-hero-inner { grid-template-columns: 1fr; }
-  .cs-hero-meta { flex-direction: row; flex-wrap: wrap; }
-  .cs-hero-meta-card { flex: 1 1 calc(50% - 6px); }
-  .cs-client-grid { grid-template-columns: 1fr; }
-  .cs-challenges-grid { grid-template-columns: repeat(2, 1fr); }
-  .cs-strategy-grid { grid-template-columns: 1fr; }
-  .cs-ba-grid { grid-template-columns: 1fr; }
-  .metrics-grid { grid-template-columns: repeat(2, 1fr); }
-  .cs-type-grid { grid-template-columns: 1fr; }
-  .cs-outcomes-grid { grid-template-columns: repeat(2, 1fr); }
-  .timeline-item { grid-template-columns: 80px 32px 1fr; }
-}
+.cs-nav-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: #475569;
+  text-decoration: none;
+  transition: color 0.25s ease;
 
-@media (max-width: 640px) {
-  .cs-challenges-grid { grid-template-columns: 1fr; }
-  .cs-client-facts { grid-template-columns: 1fr; }
-  .cs-hero-meta-card { flex: 1 1 100%; }
-  .metrics-grid { grid-template-columns: 1fr 1fr; }
-  .tech-grid { grid-template-columns: 1fr 1fr; }
-  .cs-outcomes-grid { grid-template-columns: 1fr; }
-  .palette-row { grid-template-columns: repeat(2, 1fr); }
-  .timeline-item { grid-template-columns: 72px 28px 1fr; gap: 0 12px; }
-  .cs-nav-ctas { flex-direction: column; align-items: stretch; text-align: center; }
-  .cs-nav-center { justify-content: stretch; }
+  &:hover { color: #0f172a; }
+  &--right { flex-direction: row-reverse; }
+
+  .material-symbols-outlined { font-size: 1.1rem; }
 }
 </style>

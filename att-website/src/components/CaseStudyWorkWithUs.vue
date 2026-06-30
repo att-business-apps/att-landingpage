@@ -66,7 +66,7 @@ const props = defineProps({
 .case-work {
   background:
     radial-gradient(circle at 12% 18%, color-mix(in srgb, var(--case-accent) 26%, transparent), transparent 30%),
-    linear-gradient(135deg, #070b12 0%, #101725 52%, #080a0f 100%);
+    linear-gradient(135deg, #070b12 0%, #000000 52%, #080a0f 100%);
   color: #f8fafc;
   overflow: hidden;
 }
@@ -103,7 +103,7 @@ const props = defineProps({
 
 .case-title {
   color: #ffffff;
-  font-size: clamp(2rem, 4.4vw, 4.65rem);
+  font-size: clamp(2rem, 4.4vw, 3.65rem);
   line-height: 0.98;
   font-weight: 700;
   margin-bottom: 22px;

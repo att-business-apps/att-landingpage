@@ -79,7 +79,7 @@ h1,
 h2,
 .h2 {
     font-size: var(--h2);
-    line-height: 1.2;
+    line-height: 1.1;
     @media #{$laptop-device} {
         font-size: 48px;
     }

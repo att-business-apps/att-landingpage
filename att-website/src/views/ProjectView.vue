@@ -1,16 +1,14 @@
 <template>
+  <!-- Breadcrumb hero — untouched -->
   <div class="breadcrum-area breadcrumb-banner">
-    <div class="container-fluid">
-      <div
-        class="breadcrumb animate__animated fadeInUp"
-        style="animation-duration: 2s"
-      >
+    <div class="container">
+      <div class="breadcrumb animate__animated fadeInUp" style="animation-duration: 2s">
         <ul class="list-unstyled">
           <li><a href="/">Home</a></li>
           <li class="active text-lg">Case Study</li>
         </ul>
         <div class="section-heading heading-left" ref="heroTitle">
-          <h1 class="title h2">Creative courage drives our story</h1>
+          <h1 class="title h2 mb-3">Real Projects. <span class="text-ly">Real Business Results.</span></h1>
           <p>
             Gain first-hand insight into how our processes come to life across
             every project we undertake.
@@ -20,12 +18,7 @@
       <div class="banner-thumbnail">
         <div
           class="banner-motion-wrap"
-          style="
-            position: relative;
-            will-change: transform;
-            transform: perspective(2000px) rotateX(-0.32deg) rotateY(-11.76deg)
-              scale3d(1, 1, 1);
-          "
+          style="position: relative; will-change: transform; transform: perspective(2000px) rotateX(-0.32deg) rotateY(-11.76deg) scale3d(1, 1, 1);"
         >
           <img
             ref="heroImage"
@@ -34,12 +27,7 @@
             style="animation-duration: 3s"
             alt="Illustration"
           />
-          <svg
-            class="hero-svg-animation"
-            viewBox="0 0 880 180"
-            preserveAspectRatio="none"
-            aria-hidden="true"
-          >
+          <svg class="hero-svg-animation" viewBox="0 0 880 180" preserveAspectRatio="none" aria-hidden="true">
             <path
               ref="heroSvgPath"
               d="M10 140 C220 10 420 210 870 20"
@@ -53,150 +41,134 @@
       </div>
     </div>
     <ul class="shape-group-breadcrum-1 list-unstyled">
-      <li
-        class="shape shape-3 sal-animate"
-        data-sal="slide-up"
-        data-sal-duration="500"
-        data-sal-delay="300"
-      >
-        <img src="../assets/img/shapes/line-5.png" alt="circle" />
+      <li class="shape shape-3 sal-animate" data-sal="slide-up" data-sal-duration="500" data-sal-delay="300">
+        <img src="../assets/img/shapes/line-5.png" alt="" />
       </li>
     </ul>
   </div>
 
-  <section class="section section-padding">
-    <div class="">
-      <div class="row align-items-center justify-content-center">
-        <div class="col">
-          <div class="my-lg-5 my-4">
-            <div class="att-filter">
-              <button
-                v-for="cat in categories"
-                :key="cat"
-                type="button"
-                class="amor-btn"
-                :class="
-                  activeCategory === cat
-                    ? 'btn-fill-primary'
-                    : 'btn-borderd light'
-                "
-                @click="activeCategory = cat"
-                @mouseenter="animateButton($event, 1.05)"
-                @mouseleave="animateButton($event, 1)"
-                ref="filterButtons"
-              >
-                {{ cat }}
-              </button>
+  <!-- Portfolio section -->
+  <section class="pv-section">
+    <div class="pv-container">
+
+      <!-- Section header + filter -->
+      <div class="pv-header" ref="sectionHeader">
+        <div class="pv-header-left">
+          <div class="inline-block py-2 px-4 rounded bg-dark text-[10px] font-black uppercase tracking-[0.3em] mb-3">
+            <span class="text-ly">Our Work</span>
+          </div>
+          <h2 class="pv-header-title">
+            Projects That <span class="text-ly">Shipped & Performed</span>
+          </h2>
+          <p class="pv-header-sub">
+            {{ filteredProjects.length }} project{{ filteredProjects.length !== 1 ? 's' : '' }} —
+            each one scoped, built, and measured against real business outcomes.
+          </p>
+        </div>
+
+        <!-- Filter pills -->
+        <div class="pv-filter" ref="filterBar">
+          <button
+            v-for="cat in categories"
+            :key="cat"
+            type="button"
+            class="pv-filter-btn"
+            :class="{ 'pv-filter-btn--active': activeCategory === cat }"
+            @click="setCategory(cat)"
+            @mouseenter="animateButton($event, 1.04)"
+            @mouseleave="animateButton($event, 1)"
+            ref="filterButtons"
+          >
+            {{ cat }}
+          </button>
+        </div>
+      </div>
+
+      <!-- Project cards -->
+      <div class="pv-grid">
+        <div
+          class="pv-card"
+          v-for="(item, index) in filteredProjects"
+          :key="item.id"
+          ref="projectCards"
+        >
+          <!-- Image -->
+          <div class="pv-card-img-wrap">
+            <div class="pv-card-glow"></div>
+            <img :src="item.img" :alt="item.title" class="pv-card-img" />
+
+            <!-- Number badge -->
+            <div class="pv-card-num">{{ String(index + 1).padStart(2, '0') }}</div>
+
+            <!-- Float info top-right -->
+            <div class="pv-card-float">
+              <!-- <div class="pv-card-float-title">{{ item.title }}</div> -->
+              <!-- <div class="pv-card-float-sub">{{ item.subtitle }}</div> -->
+              <a class="pv-card-float-cta" :href="item.href">
+                View Case Study
+                <svg width="14" height="14" viewBox="0 0 16 16" fill="none">
+                  <path d="M3 13L13 3M13 3H6M13 3V10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- Glass content overlay bottom-left -->
+          <div class="pv-card-content">
+            <div class="pv-card-top">
+              <span class="pv-card-label">{{ item.year }}</span>
+              <span class="pv-card-role">{{ item.role }}</span>
+            </div>
+
+            <h3 class="pv-card-title">{{ item.title }}</h3>
+            <p class="pv-card-desc">{{ item.subtitle }}</p>
+
+            <div class="pv-card-chips">
+              <span class="pv-chip" v-for="tag in item.categories" :key="tag">{{ tag }}</span>
+            </div>
+
+            <div class="pv-card-meta-row">
+              <span class="pv-meta-pill">
+                <span class="material-symbols-outlined">person</span>
+                {{ item.client }}
+              </span>
+              <a :href="item.href" class="pv-meta-cta">
+                Open project
+                <svg width="12" height="12" viewBox="0 0 16 16" fill="none">
+                  <path d="M3 13L13 3M13 3H6M13 3V10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </a>
             </div>
           </div>
         </div>
       </div>
 
-      <div class="row justify-content-center d-none">
-        <div class="col-xl-10">
-          <div class="case-study-panel" ref="caseStudyPanel">
-            <div class="case-study-tag">Case Study</div>
-            <div class="case-study-grid">
-              <div class="case-study-copy">
-                <h2>Journey from concept to conversion</h2>
-                <p>
-                  Layered motion, polished UI details, and scroll-driven storytelling
-                  help visitors feel the strategy behind every project.
-                </p>
-                <div class="case-study-stat-grid">
-                  <div>
-                    <strong>34%</strong>
-                    <span>More engagement</span>
-                  </div>
-                  <div>
-                    <strong>92%</strong>
-                    <span>Project clarity</span>
-                  </div>
-                  <div>
-                    <strong>8</strong>
-                    <span>Animated touchpoints</span>
-                  </div>
-                </div>
-              </div>
-              <div class="case-study-base">
-                <div class="case-study-base-title">Project Base Details</div>
-                <ul class="case-study-base-list">
-                  <li class="case-study-detail-item">
-                    <strong>Client</strong>
-                    <span>Premium digital brands</span>
-                  </li>
-                  <li class="case-study-detail-item">
-                    <strong>Scope</strong>
-                    <span>Branding, UI/UX, Website & Growth</span>
-                  </li>
-                  <li class="case-study-detail-item">
-                    <strong>Duration</strong>
-                    <span>6–10 weeks per sprint</span>
-                  </li>
-                  <li class="case-study-detail-item">
-                    <strong>Impact</strong>
-                    <span>Higher conversions and stronger retention</span>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
+      <!-- Empty state -->
+      <div v-if="filteredProjects.length === 0" class="pv-empty">
+        <span class="material-symbols-outlined pv-empty-icon">search_off</span>
+        <p>No projects in this category yet.</p>
       </div>
+
     </div>
 
-    <div class="container-fluid">
-      <div class="row gy-5">
-        <div class="col-12" v-for="item in filteredProjects" :key="item.id">
-          <div class="project-grid h-100 project-grid--full" ref="projectCards">
-            <div class="thumbnail">
-              <div class="project-glow"></div>
-              <img :src="item.img" alt="project" />
-              <div class="project-info-float">
-                <div class="project-info-float-title">{{ item.title }}</div>
-                <div class="project-info-float-work">Work done: {{ item.subtitle }}</div>
-                <a class="project-info-cta" :href="item.href">View Case Study</a>
-              </div>
-              <div class="content">
-                <div class="project-card-top">
-                  <span class="project-card-label">Featured</span>
-                  <div class="project-card-meta">
-                    <span class="project-card-year">{{ item.year }}</span>
-                    <span class="project-card-role">{{ item.role }}</span>
-                  </div>
-                </div>
-                <div class="project-chip-grid">
-                  <span
-                    class="project-chip"
-                    v-for="tag in item.categories"
-                    :key="tag"
-                  >
-                    {{ tag }}
-                  </span>
-                </div>
-                <h4 class="title project-card-title">{{ item.title }}</h4>
-                <p class="project-description">{{ item.subtitle }}</p>
-                <div class="project-base-list">
-                  <span class="project-base-pill">Client: {{ item.client }}</span>
-                  <span class="project-base-pill">Year: {{ item.year }}</span>
-                </div>
-              </div>
-            </div>
-          </div>
+    <!-- CTA band -->
+    <div class="pv-cta-band" ref="ctaBand">
+      <div class="pv-cta-inner">
+        <h2 class="pv-cta-title">
+          Seen Enough to <span class="text-ly">Start a Conversation?</span>
+        </h2>
+        <p class="pv-cta-sub">
+          A 20-minute call costs you nothing and tells you exactly what your project needs.
+        </p>
+        <div class="d-flex justify-content-center flex-wrap gap-3 mt-4">
+          <a class="amor-btn btn-fill-primary btn-large"
+            href="https://wa.me/917975859061/?text=I%27d%20like%20to%20book%20a%20free%20strategy%20call.">
+            Book Your Free Strategy Call
+          </a>
+          <a href="/estimate" class="amor-btn btn-borderd light">Get a Project Estimate</a>
         </div>
       </div>
     </div>
-    <ul class="shape-group-services list-unstyled">
-      <li class="shape shape-3">
-        <img src="../assets/img/shapes/bubble-14.png" alt="circle" />
-      </li>
-      <li class="shape shape-2">
-        <img src="../assets/img/shapes/line-9.png" alt="Line" />
-      </li>
-      <li class="shape shape-2">
-        <img src="../assets/img/shapes/bubble-2.png" alt="Line" />
-      </li>
-    </ul>
   </section>
 </template>
 
@@ -207,22 +179,17 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
 
-const categories = [
-  "All",
-  "Logo",
-  "Branding",
-  "UI/UX Design",
-  "Website",
-  "GMB",
-];
-
+const categories = ["All", "Logo", "Branding", "UI/UX Design", "Website", "GMB"];
 const activeCategory = ref("All");
-const heroTitle = ref(null);
-const heroImage = ref(null);
-const heroSvgPath = ref(null);
-const caseStudyPanel = ref(null);
+
+const heroTitle    = ref(null);
+const heroImage    = ref(null);
+const heroSvgPath  = ref(null);
+const sectionHeader = ref(null);
+const filterBar    = ref(null);
 const filterButtons = ref([]);
-const projectCards = ref([]);
+const projectCards  = ref([]);
+const ctaBand       = ref(null);
 let gsapContext;
 
 const projects = ref([
@@ -230,58 +197,42 @@ const projects = ref([
     id: "uae-links",
     title: "UAE Links",
     href: "project/uae-links",
-    arial: "UAE Links",
-    img: new URL(
-      "../assets/img/project/c1/project-thum-uaeLinks.png",
-      import.meta.url,
-    ).href,
-    subtitle: "UI/UX Design, Website, GA",
-    client: "UAE Links",
+    img: new URL("../assets/img/project/c1/project-thum-uaeLinks.png", import.meta.url).href,
+    subtitle: "One Portal. Every UAE Government Service.",
+    client: "Shajeer",
     year: "2024",
-    role: "UX & Web Strategy",
-    categories: ["UI/UX Design", "Website"],
+    role: "UI/UX Design & Web Strategy",
+    categories: ["UI/UX Design", "Website Design", "Web Development"],
   },
   {
     id: "solved-cube",
-    title: "Solved Cude",
+    title: "SolvedCube IT Solutions",
     href: "project/solved-cube-it-solutions",
-    arial: "Solved Cude",
-    img: new URL(
-      "../assets/img/project/c2/project-thum-sc.png",
-      import.meta.url,
-    ).href,
-    subtitle: "Logo, Branding, UI/UX Design, Website, GMB, GA",
-    client: "Solved Cude",
+    img: new URL("../assets/img/project/c2/project-thum-sc.png", import.meta.url).href,
+    subtitle: "Elevating an IT consulting brand with a modern digital presence.",
+    client: "Sandeep",
     year: "2024",
-    role: "Brand Identity & Web",
-    categories: ["Branding", "Logo", "UI/UX Design", "Website", "GMB"],
+    role: "Brand Identity, Web Strategy & Full-Stack Web Development",
+    categories: ["Branding", "Logo", "UI/UX Design", "Website", "Web Development", "GMB"],
   },
   {
     id: "microrelic",
-    title: "Microrelic",
+    title: "Microrelic Technologies",
     href: "project/microrelic",
-    arial: "Microrelic",
-    img: new URL(
-      "../assets/img/project/c3/project-thum-mr.png",
-      import.meta.url,
-    ).href,
-    subtitle: "Branding, UI/UX Design, Website, Redesign, GA",
-    client: "Microrelic",
+    img: new URL("../assets/img/project/c3/project-thum-mr.png", import.meta.url).href,
+    subtitle: "Transforming an IT consulting brand into a modern digital experience.",
+    client: "Oruganti Sarma",
     year: "2023",
-    role: "Brand Refresh & UX",
-    categories: ["UI/UX Design", "Website"],
+    role: "Brand Refresh, UI/UX & Web Strategy",
+    categories: ["Branding", "Website", "Redesign", "GA", "UI/UX Design"],
   },
   {
     id: "steadyasset",
     title: "SteadyAsset",
     href: "project/steadyasset",
-    arial: "SteadyAsset",
-    img: new URL(
-      "../assets/img/project/c4/project-thum-sa.png",
-      import.meta.url,
-    ).href,
+    img: new URL("../assets/img/project/c4/project-thum-sa.png", import.meta.url).href,
     subtitle: "Logo, Branding, UI/UX Design, Website, GMB, GA",
-    client: "SteadyAsset",
+    client: "Menaka Reddy",
     year: "2024",
     role: "Design Systems & Growth",
     categories: ["Branding", "Logo", "UI/UX Design", "Website", "GMB"],
@@ -290,281 +241,144 @@ const projects = ref([
     id: "al-shamil",
     title: "Al-Shamil",
     href: "project/al-shamil-computers",
-    arial: "Al-Shamil",
-    img: new URL(
-      "../assets/img/project/c5/project-thum-als.png",
-      import.meta.url,
-    ).href,
-    subtitle: "UI/UX Design, Website, GA",
-    client: "Al-Shamil",
+    img: new URL("../assets/img/project/c5/project-thum-als.png", import.meta.url).href,
+    subtitle: "Empowering businesses with a modern digital presence for enterprise IT solutions.",
+    client: "Shajeer",
     year: "2023",
-    role: "Experience Design",
-    categories: ["UI/UX Design", "Website"],
+    role: "Design Consultant, UI/UX Design, Web Development & Digital Strategy",
+    categories: ["UI/UX Design", "Corporate Website", "Web Development", "Digital Strategy"],
   },
   {
     id: "savedesk",
     title: "SaveDesk",
     href: "project/savedesk",
-    arial: "SaveDesk",
-    img: new URL(
-      "../assets/img/project/c7/project-thum-sd.png",
-      import.meta.url,
-    ).href,
-    subtitle: "Redesign, UI/UX Design, Wireframing, High-Fidelity Prototype",
-    client: "SaveDesk",
+    img: new URL("../assets/img/project/c7/project-thum-sd.png", import.meta.url).href,
+    subtitle: "Designing a scalable customer support platform for modern enterprises.",
+    client: "Kranthi Reddy",
     year: "2024",
-    role: "Redesign & Prototype",
-    categories: ["UI/UX Design"],
+    role: "Product Designer, Enterprise UI/UX Design & High-Fidelity Wireframing",
+    categories: ["Product Design", "UI/UX Design", "SaaS Application", "Enterprise Dashboard"],
+  },
+  {
+    id: "visonverse",
+    title: "VisonVerse Technology",
+    href: "project/visonverse",
+    img: new URL("../assets/img/project/c7/project-thum-vv.png", import.meta.url).href,
+    subtitle: "Building a memorable technology brand from identity to local search visibility.",
+    client: "Kavya",
+    year: "2025",
+    role: "Brand Identity Design & Google Business Profile Optimization",
+    categories: ["Logo Design", "Brand Identity", "Google Business Profile","Local SEO"],
   },
   {
     id: "samsiddhi-designs",
     title: "Samsiddhi Designs",
     href: "project/samsiddhi-designs",
-    arial: "Samsiddhi Designs",
-    img: new URL(
-      "../assets/img/project/c9/project-thum-sd.png",
-      import.meta.url,
-    ).href,
+    img: new URL("../assets/img/project/c9/project-thum-sd.png", import.meta.url).href,
     subtitle: "Logo, Branding, UI/UX Design, Website, GMB, GA",
-    client: "Samsiddhi Designs",
-    year: "2024",
+    client: "Bharath Kumar",
+    year: "2025",
     role: "Brand Experience",
     categories: ["Branding", "Logo", "UI/UX Design", "Website", "GMB"],
+  },
+  {
+    id: "al-shamil-dashboard",
+    title: "Al-Shamil Dashboard",
+    href: "project/al-shamil-dashboard",
+    img: new URL("../assets/img/project/c9/project-thum-alsd.png", import.meta.url).href,
+    subtitle: "Designing an enterprise dashboard that simplifies complex visa management workflows.",
+    client: "Shajeer",
+    year: "2025",
+    role: "Brand Experience",
+    categories: ["Dashboard Design", "Enterprise Application", "UI/UX Design", "Frontend Development"],
   },
 ]);
 
 const filteredProjects = computed(() => {
   if (activeCategory.value === "All") return projects.value;
-  return projects.value.filter((p) =>
-    p.categories.includes(activeCategory.value),
-  );
+  return projects.value.filter((p) => p.categories.includes(activeCategory.value));
 });
 
-const animateButton = (event, scale = 1.03) => {
-  gsap.to(event.currentTarget, {
-    scale,
-    duration: 0.28,
-    ease: "power2.out",
-    overwrite: true,
-  });
+const animateButton = (event, scale = 1.04) => {
+  gsap.to(event.currentTarget, { scale, duration: 0.25, ease: "power2.out", overwrite: true });
+};
+
+const setCategory = (cat) => {
+  activeCategory.value = cat;
 };
 
 const createScrollAnimations = () => {
   const cards = projectCards.value.filter(Boolean);
+  cards.forEach((card) => {
+    const img    = card.querySelector(".pv-card-img");
+    const float  = card.querySelector(".pv-card-float");
+    const content = card.querySelector(".pv-card-content");
+    const glow   = card.querySelector(".pv-card-glow");
 
-  if (cards.length) {
-    cards.forEach((card) => {
-      const image = card.querySelector("img");
-
-      const tl = gsap.timeline({
-        scrollTrigger: {
-          trigger: card,
-          start: "top 85%",
-          end: "bottom 50%",
-          toggleActions: "play none none reverse",
-          markers: false,
-        },
-      });
-
-      const floatCard = card.querySelector(".project-info-float");
-      const cta = card.querySelector(".project-info-cta");
-      const glow = card.querySelector(".project-glow");
-
-      tl.from(card, {
-        opacity: 0,
-        y: 80,
-        duration: 1,
-        ease: "power3.out",
-      });
-      if (image) {
-        tl.from(
-          image,
-          {
-            scale: 1.08,
-            opacity: 0,
-            duration: 1.2,
-            ease: "power3.out",
-          },
-          "-=0.85",
-        );
-      }
-
-      if (floatCard) {
-        tl.from(
-          floatCard,
-          {
-            y: 22,
-            opacity: 0,
-            duration: 1,
-            ease: "power2.out",
-          },
-          "-=0.8",
-        );
-      }
-
-      if (cta) {
-        tl.from(
-          cta,
-          {
-            y: 18,
-            opacity: 0,
-            duration: 0.85,
-            ease: "power2.out",
-          },
-          "-=0.7",
-        );
-      }
-
-      if (image) {
-        gsap.to(image, {
-          yPercent: 14,
-          ease: "none",
-          scrollTrigger: {
-            trigger: card,
-            start: "top bottom",
-            end: "bottom top",
-            scrub: 0.7,
-          },
-        });
-      }
-
-      if (cta) {
-        gsap.to(cta, {
-          y: -10,
-          repeat: -1,
-          yoyo: true,
-          ease: "sine.inOut",
-          duration: 3.1,
-          delay: 1.4,
-        });
-      }
-
-      if (floatCard) {
-        gsap.to(floatCard, {
-          y: -6,
-          repeat: -1,
-          yoyo: true,
-          duration: 3.2,
-          ease: "sine.inOut",
-          delay: 1.6,
-        });
-      }
-
-      if (!card.dataset.gsapHover && glow) {
-        card.dataset.gsapHover = "true";
-
-        card.addEventListener("mouseenter", () => {
-          gsap.to(glow, {
-            opacity: 1,
-            duration: 0.45,
-            ease: "power2.out",
-          });
-        });
-
-        card.addEventListener("mouseleave", () => {
-          gsap.to(glow, {
-            opacity: 0.82,
-            duration: 0.55,
-            ease: "power2.out",
-          });
-        });
-      }
+    const tl = gsap.timeline({
+      scrollTrigger: { trigger: card, start: "top 88%", once: true },
     });
-  }
 
-  if (caseStudyPanel.value) {
-    gsap.from(caseStudyPanel.value, {
-      scrollTrigger: {
-        trigger: caseStudyPanel.value,
-        start: "top 85%",
-        toggleActions: "play none none reverse",
-        markers: false,
-      },
-      y: 40,
-      opacity: 0,
-      duration: 1.1,
-      ease: "power3.out",
-    });
-  }
+    tl.from(card, { y: 70, autoAlpha: 0, duration: 0.9, ease: "power3.out" })
+      .from(img,    { scale: 1.06, autoAlpha: 0, duration: 1, ease: "power3.out" }, "-=0.75")
+      .from(float,  { y: 20, autoAlpha: 0, duration: 0.85, ease: "power2.out" }, "-=0.75")
+      .from(content,{ y: 16, autoAlpha: 0, duration: 0.8, ease: "power2.out" }, "-=0.7");
+
+    // parallax
+    // gsap.to(img, {
+    //   yPercent: 10,
+    //   ease: "none",
+    //   scrollTrigger: { trigger: card, start: "top bottom", end: "bottom top", scrub: 0.6 },
+    // });
+
+    // float bob
+    if (float) {
+      gsap.to(float, { y: -7, repeat: -1, yoyo: true, duration: 3.2, ease: "sine.inOut", delay: 1.5 });
+    }
+
+    // glow hover
+    if (glow && !card.dataset.gsapHover) {
+      card.dataset.gsapHover = "true";
+      card.addEventListener("mouseenter", () => gsap.to(glow, { opacity: 1, duration: 0.4, ease: "power2.out" }));
+      card.addEventListener("mouseleave", () => gsap.to(glow, { opacity: 0.7, duration: 0.55, ease: "power2.out" }));
+    }
+  });
 };
 
 const animatePage = async () => {
   await nextTick();
   gsapContext?.revert();
   gsapContext = gsap.context(() => {
-    const buttons = filterButtons.value.filter(Boolean);
-    const detailItems = caseStudyPanel.value?.querySelectorAll(
-      ".case-study-detail-item",
-    );
+    const heroH  = heroTitle.value?.querySelector("h1");
+    const heroP  = heroTitle.value?.querySelector("p");
+    const btns   = filterButtons.value.filter(Boolean);
 
-    const heroHeading = heroTitle.value?.querySelector("h1");
-    const heroCopy = heroTitle.value?.querySelector("p");
+    const tl = gsap.timeline({ defaults: { ease: "power3.out" } });
 
-    const pageTimeline = gsap.timeline({ defaults: { duration: 1, ease: "power3.out" } });
-
-    if (heroHeading) {
-      pageTimeline.from(heroHeading, {
-        y: 24,
-        opacity: 0,
-        scale: 0.98,
-        duration: 1.1,
-        ease: "power2.out",
-      });
-    }
-
-    if (heroCopy) {
-      pageTimeline.from(
-        heroCopy,
-        { y: 18, opacity: 0, duration: 0.95, ease: "power2.out" },
-        "-=0.8",
-      );
-    }
-
-    if (heroImage.value) {
-      pageTimeline.from(
-        heroImage.value,
-        { x: 70, y: 28, opacity: 0, scale: 0.86, rotation: 4, duration: 1.2, ease: "power3.out" },
-        "-=0.95",
-      );
-    }
-
-    if (caseStudyPanel.value) {
-      pageTimeline.from(caseStudyPanel.value, { y: 8, opacity: 0, duration: 1.05 }, "-=0.9");
-    }
-
-    if (buttons.length) {
-      pageTimeline.from(buttons, { y: 20, opacity: 0, stagger: 0.08, duration: 0.85 }, "-=0.95");
-    }
-
-    if (detailItems?.length) {
-      gsap.from(detailItems, {
-        y: 14,
-        opacity: 1,
-        duration: 1,
-        ease: "power2.out",
-        stagger: 0.12,
-        delay: 0.1,
-      });
-    }
+    if (heroH)        tl.from(heroH, { y: 24, autoAlpha: 0, duration: 1 });
+    if (heroP)        tl.from(heroP, { y: 16, autoAlpha: 0, duration: 0.9 }, "-=0.75");
+    if (heroImage.value) tl.from(heroImage.value, { x: 60, y: 20, autoAlpha: 0, scale: 0.88, rotation: 3, duration: 1.1 }, "-=0.85");
+    if (sectionHeader.value) tl.from(sectionHeader.value, { y: 24, autoAlpha: 0, duration: 0.85 }, "-=0.7");
+    if (btns.length)  tl.from(btns, { y: 18, autoAlpha: 0, stagger: 0.07, duration: 0.75 }, "-=0.75");
 
     if (heroSvgPath.value) {
-      gsap.fromTo(
-        heroSvgPath.value,
+      gsap.fromTo(heroSvgPath.value,
         { strokeDasharray: 480, strokeDashoffset: 480 },
-        { strokeDashoffset: 0, duration: 1.8, ease: "power1.out" },
+        { strokeDashoffset: 0, duration: 1.8, ease: "power1.out" }
       );
     }
 
     if (heroImage.value) {
       gsap.to(heroImage.value, {
-        y: -18,
-        ease: "none",
-        scrollTrigger: {
-          trigger: heroImage.value,
-          start: "top bottom",
-          end: "bottom top",
-          scrub: 0.7,
-        },
+        y: -18, ease: "none",
+        scrollTrigger: { trigger: heroImage.value, start: "top bottom", end: "bottom top", scrub: 0.7 },
+      });
+    }
+
+    if (ctaBand.value) {
+      gsap.from(ctaBand.value, {
+        y: 40, autoAlpha: 0, duration: 0.9, ease: "power3.out",
+        scrollTrigger: { trigger: ctaBand.value, start: "top 82%", once: true },
       });
     }
 
@@ -572,9 +386,7 @@ const animatePage = async () => {
   });
 };
 
-onMounted(() => {
-  animatePage();
-});
+onMounted(() => animatePage());
 
 watch(activeCategory, async () => {
   await nextTick();
@@ -582,18 +394,461 @@ watch(activeCategory, async () => {
   ScrollTrigger.refresh();
 });
 
-onBeforeUnmount(() => {
-  gsapContext?.revert();
-});
+onBeforeUnmount(() => gsapContext?.revert());
 </script>
 
-<style scoped>
-.att-filter .amor-btn {
-  padding: 0.475rem 2rem !important;
+<style lang="scss" scoped>
+
+.text-ly {
+      background: linear-gradient(270deg, var(--logo-light) 21.9%, var(--logo-green) 53.55%);
+      background-size: 200% 200%;
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: gradientShift 3s ease-in-out 2s;
+    }
+
+// ─── Section shell ────────────────────────────────────────────────────
+.pv-section {
+  background: #f8fafc;
+  padding-bottom: 0;
 }
+
+.pv-container {
+  max-width: 1360px;
+  margin: 0 auto;
+  padding: 5rem 2rem 4rem;
+
+  @media (max-width: 768px) {
+    padding: 3rem 1.25rem 2.5rem;
+  }
+}
+
+// ─── Section header ───────────────────────────────────────────────────
+.pv-header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 2rem;
+  margin-bottom: 3.5rem;
+  flex-wrap: wrap;
+
+  @media (max-width: 900px) {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+.pv-header-left {
+  flex: 1;
+  min-width: 280px;
+}
+
+.pv-header-title {
+  font-size: clamp(2rem, 3.5vw, 3rem);
+  font-weight: 700;
+  color: #0f172a;
+  line-height: 1.15;
+  margin-bottom: 0.6rem;
+}
+
+.pv-header-sub {
+  font-size: 0.88rem;
+  color: #64748b;
+  margin: 0;
+}
+
+// ─── Filter pill bar ──────────────────────────────────────────────────
+.pv-filter {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+  background: #fff;
+  border: 1px solid rgba(15, 23, 42, 0.08);
+  border-radius: 999px;
+  padding: 0.4rem;
+
+  @media (max-width: 768px) {
+    border-radius: 16px;
+    width: 100%;
+  }
+}
+
+.pv-filter-btn {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.5rem 1.2rem;
+  border-radius: 999px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  border: none;
+  cursor: pointer;
+  background: transparent;
+  color: #64748b;
+  transition: background 0.25s ease, color 0.25s ease;
+  white-space: nowrap;
+
+  &:hover {
+    background: rgba(15, 23, 42, 0.05);
+    color: #0f172a;
+  }
+
+  &--active {
+    background: #0f172a;
+    color: var(--logo-green);
+    visibility: visible !important;
+    opacity: 1 !important;
+    transform: translate(0px, 0px) !important;
+
+    &:hover {
+      background: #0f172a;
+      color: var(--logo-green);
+    }
+  }
+}
+
+// ─── Project grid ─────────────────────────────────────────────────────
+.pv-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+// ─── Project card ─────────────────────────────────────────────────────
+.pv-card {
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+  background: #111827;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 32px 80px rgba(8, 14, 30, 0.2);
+  transition: box-shadow 0.4s ease;
+
+  &:hover {
+    box-shadow: 0 40px 100px rgba(8, 14, 30, 0.28);
+  }
+}
+
+// ─── Image wrap ───────────────────────────────────────────────────────
+.pv-card-img-wrap {
+  position: relative;
+  width: 100%;
+  height: clamp(320px, 62vh, 680px);
+  overflow: hidden;
+}
+
+.pv-card-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  filter: saturate(1.05) contrast(1.02);
+  will-change: transform;
+  transition: transform 0.6s ease;
+
+  .pv-card:hover & {
+    transform: scale(1.025);
+  }
+}
+
+// dark vignette over image
+.pv-card-img-wrap::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(180deg, rgba(4,9,20,0.04) 0%, rgba(4,9,20,0.35) 100%),
+    linear-gradient(90deg,  rgba(4,9,20,0.18) 0%, transparent 50%);
+  pointer-events: none;
+  z-index: 1;
+}
+
+// ─── Glow overlay ─────────────────────────────────────────────────────
+.pv-card-glow {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  pointer-events: none;
+  opacity: 0.7;
+  mix-blend-mode: soft-light;
+  filter: blur(1.5px);
+  background:
+    radial-gradient(circle at 16% 22%, rgba(92, 176, 77, 0.18), transparent 28%),
+    radial-gradient(circle at 78% 60%, rgba(86, 189, 255, 0.14), transparent 26%);
+}
+
+// ─── Number badge ─────────────────────────────────────────────────────
+.pv-card-num {
+  position: absolute;
+  top: 1.5rem;
+  left: 1.75rem;
+  z-index: 6;
+  font-size: 0.62rem;
+  font-weight: 900;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.5);
+  background: rgba(15, 23, 42, 0.55);
+  border: 1px solid rgba(255,255,255,0.12);
+  padding: 0.3rem 0.7rem;
+  border-radius: 999px;
+  backdrop-filter: blur(10px);
+}
+
+// ─── Float info card (top-right) ─────────────────────────────────────
+.pv-card-float {
+  position: absolute;
+  top: 1.5rem;
+  right: 1.75rem;
+  z-index: 6;
+  width: min(36%, 320px);
+  padding: 1.35rem 1.5rem;
+  border-radius: 18px;
+  border: 1px solid rgba(255,255,255,0.14);
+  box-shadow: 0 24px 60px rgba(0,0,0,0.28);
+  backdrop-filter: blur(20px);
+
+  @media (max-width: 768px) {
+    display: none;
+  }
+}
+
+.pv-card-float-title {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #f1f5f9;
+  margin-bottom: 0.45rem;
+  line-height: 1.2;
+}
+
+.pv-card-float-sub {
+  font-size: 0.8rem;
+  color: rgba(226,232,255,0.7);
+  line-height: 1.65;
+  margin-bottom: 1rem;
+}
+
+.pv-card-float-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  width: 100%;
+  justify-content: center;
+  padding: 0.8rem 1.2rem;
+  border-radius: 999px;
+  background: var(--logo-green);
+  color: #0f172a;
+  font-size: 0.82rem;
+  font-weight: 800;
+  letter-spacing: 0.02em;
+  text-decoration: none;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 14px 32px rgba(92, 176, 77, 0.32);
+    color: #0f172a;
+  }
+
+  svg {
+    flex-shrink: 0;
+  }
+}
+
+// ─── Glass content overlay (bottom-left) ─────────────────────────────
+.pv-card-content {
+  position: absolute;
+  left: 1.75rem;
+  bottom: 1.75rem;
+  z-index: 6;
+  width: min(56%, 660px);
+  max-width: calc(100% - 3.5rem);
+  padding: 1.5rem 1.75rem;
+  border-radius: 16px;
+  background: linear-gradient(180deg, rgba(10, 17, 34, 0.9), rgba(7, 12, 24, 0.82));
+  border: 1px solid rgba(255,255,255,0.13);
+  box-shadow: 0 20px 60px rgba(2,8,23,0.32);
+  backdrop-filter: blur(18px);
+
+  @media (max-width: 991px) {
+    position: static;
+    width: 100%;
+    max-width: 100%;
+    border-radius: 0 0 18px 18px;
+    background: #0b1222;
+    backdrop-filter: none;
+    border: none;
+    border-top: 1px solid rgba(255,255,255,0.08);
+  }
+}
+
+.pv-card-top {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 0.75rem;
+}
+
+.pv-card-label {
+  font-size: 0.62rem;
+  font-weight: 900;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--logo-green);
+  background: rgba(92, 176, 77, 0.12);
+  border: 1px solid rgba(92, 176, 77, 0.22);
+  padding: 0.28rem 0.65rem;
+  border-radius: 999px;
+}
+
+.pv-card-role {
+  font-size: 0.78rem;
+  color: rgba(226,232,255,0.65);
+  font-weight: 500;
+}
+
+.pv-card-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-bottom: 0.85rem;
+}
+
+.pv-chip {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.28rem 0.65rem;
+  border-radius: 7px;
+  background: rgba(255,255,255,0.1);
+  border: 1px solid rgba(255,255,255,0.16);
+  color: #fff;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  backdrop-filter: blur(8px);
+
+  &::before {
+    content: "";
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background: var(--logo-green);
+    margin-right: 0.4rem;
+    flex-shrink: 0;
+  }
+}
+
+.pv-card-title {
+  font-size: clamp(1.8rem, 2.8vw, 2.7rem);
+  font-weight: 700;
+  color: #fff;
+  line-height: 1.1;
+  letter-spacing: -0.01em;
+  margin-bottom: 0.6rem;
+}
+
+.pv-card-desc {
+  font-size: 0.85rem;
+  color: rgba(220,228,255,0.8);
+  line-height: 1.65;
+  margin-bottom: 1rem;
+  max-width: 86%;
+}
+
+.pv-card-meta-row {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  padding-top: 0.85rem;
+  border-top: 1px solid rgba(255,255,255,0.08);
+}
+
+.pv-meta-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.4rem 0.85rem;
+  border-radius: 999px;
+  background: rgba(255,255,255,0.07);
+  border: 1px solid rgba(255,255,255,0.1);
+  color: rgba(220,228,255,0.75);
+  font-size: 0.78rem;
+
+  .material-symbols-outlined {
+    font-size: 0.95rem;
+  }
+}
+
+.pv-meta-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--logo-green);
+  text-decoration: none;
+  letter-spacing: 0.02em;
+  transition: gap 0.25s ease;
+
+  &:hover {
+    gap: 0.6rem;
+    color: var(--logo-green);
+  }
+}
+
+// ─── Empty state ──────────────────────────────────────────────────────
+.pv-empty {
+  text-align: center;
+  padding: 5rem 2rem;
+  color: #94a3b8;
+
+  .pv-empty-icon {
+    font-size: 3rem;
+    display: block;
+    margin-bottom: 1rem;
+    color: #cbd5e1;
+  }
+
+  p {
+    font-size: 1rem;
+    margin: 0;
+  }
+}
+
+// ─── CTA band ─────────────────────────────────────────────────────────
+.pv-cta-band {
+  margin-top: 5rem;
+  padding: 6rem 2rem;
+  background: #000000;
+  text-align: center;
+}
+
+.pv-cta-inner {
+  max-width: 680px;
+  margin: 0 auto;
+}
+
+.pv-cta-title {
+  font-size: clamp(1.9rem, 3.8vw, 2.9rem);
+  font-weight: 700;
+  color: #fff;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+}
+
+.pv-cta-sub {
+  font-size: 1rem;
+  color: rgba(255,255,255,0.6);
+  line-height: 1.75;
+}
+
+// ─── Hero helpers (kept from original) ────────────────────────────────
 .banner-motion-wrap {
   position: relative;
 }
+
 .hero-svg-animation {
   position: absolute;
   left: 0;
@@ -601,469 +856,5 @@ onBeforeUnmount(() => {
   width: 100%;
   height: 120px;
   pointer-events: none;
-}
-.hero-amorboy-image {
-  width: 25%;
-  max-width: 280px;
-  position: absolute;
-  right: 2rem;
-  top: 50%;
-  transform: translateY(-50%);
-  will-change: transform, opacity;
-}
-.case-study-panel {
-  position: relative;
-  padding: 2rem 2.25rem;
-  margin-bottom: 3rem;
-  border-radius: 32px;
-  background: linear-gradient(180deg, rgba(18, 24, 44, 0.98), rgba(14, 18, 33, 0.94));
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  box-shadow: 0 38px 120px rgba(0, 0, 0, 0.18);
-  backdrop-filter: blur(20px);
-  overflow: hidden;
-}
-.case-study-panel::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: radial-gradient(circle at top right, rgba(117, 158, 255, 0.14), transparent 30%),
-    radial-gradient(circle at bottom left, rgba(67, 58, 255, 0.12), transparent 22%);
-  pointer-events: none;
-}
-.case-study-panel::before {
-  content: "";
-  position: absolute;
-  width: 260px;
-  height: 260px;
-  border-radius: 50%;
-  top: -80px;
-  right: -90px;
-  background: rgba(69, 184, 255, 0.14);
-  pointer-events: none;
-}
-.case-study-tag {
-  display: inline-flex;
-  margin-bottom: 1rem;
-  color: #7dd3fc;
-  letter-spacing: 0.18em;
-  font-size: 0.8rem;
-  text-transform: uppercase;
-  font-weight: 700;
-}
-.case-study-panel h2 {
-  font-size: clamp(2.4rem, 3vw, 3.4rem);
-  margin-bottom: 1rem;
-  line-height: 1.05;
-}
-.case-study-panel p {
-  max-width: 780px;
-  line-height: 1.85;
-  color: #d6d9e8;
-}
-.case-study-stat-grid {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 1rem;
-  margin-top: 1.8rem;
-}
-.case-study-grid {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 2.5rem;
-  align-items: start;
-}
-.case-study-copy {
-  z-index: 1;
-}
-.case-study-base {
-  background: rgba(14, 20, 44, 0.95);
-  border: 1px solid rgba(255, 255, 255, 0.12);
-  border-radius: 28px;
-  padding: 1.75rem 1.85rem;
-  position: relative;
-  z-index: 2;
-  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.18);
-  backdrop-filter: blur(20px);
-}
-.case-study-base-title {
-  font-size: 1rem;
-  text-transform: uppercase;
-  letter-spacing: 0.18em;
-  color: #a6c5ff;
-  margin-bottom: 1rem;
-}
-.case-study-base-title {
-  font-size: 1rem;
-  text-transform: uppercase;
-  letter-spacing: 0.18em;
-  color: #90b7ff;
-  margin-bottom: 1rem;
-  font-weight: 700;
-}
-.case-study-base-list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  display: grid;
-  gap: 1rem;
-}
-.case-study-base-list li {
-  display: grid;
-  gap: 0.35rem;
-  background: rgba(255, 255, 255, 0.08);
-  border: 1px solid rgba(255, 255, 255, 0.14);
-  border-radius: 22px;
-  padding: 1rem 1.2rem;
-}
-.case-study-base-list li strong {
-  display: block;
-  color: #d8e2ff;
-  font-size: 0.85rem;
-  letter-spacing: 0.08em;
-}
-.case-study-base-list li span {
-  color: #e6e9ff;
-  font-size: 0.92rem;
-  line-height: 1.5;
-}
-.case-study-stat-grid div {
-  padding: 1.15rem 1.25rem;
-  border-radius: 22px;
-  background: rgba(255, 255, 255, 0.04);
-  border: 1px solid rgba(255, 255, 255, 0.07);
-}
-.case-study-stat-grid strong {
-  display: block;
-  font-size: 2rem;
-  color: #ffffff;
-}
-.case-study-stat-grid span {
-  display: block;
-  margin-top: 0.35rem;
-  color: #bbc1dc;
-  font-size: 0.95rem;
-}
-.project-grid.project-grid--full {
-  min-height: 66vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 0;
-  transform-origin: center center;
-}
-.project-grid.project-grid--full .thumbnail {
-  min-height: 66vh;
-  max-height: 66vh;
-  overflow: hidden;
-  border-radius: 1.35rem;
-  position: relative;
-  width: 100%;
-  border: 1px solid rgba(255, 255, 255, 0.14);
-  background: #111827;
-  box-shadow: 0 34px 90px rgba(8, 14, 30, 0.22);
-  transform: none !important;
-}
-.project-grid.project-grid--full .thumbnail::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  z-index: 2;
-  pointer-events: none;
-  background:
-    linear-gradient(90deg, rgba(4, 9, 20, 0.2) 0%, rgba(4, 9, 20, 0.08) 42%, rgba(4, 9, 20, 0.08) 100%),
-    linear-gradient(180deg, rgba(4, 9, 20, 0.06) 0%, rgba(4, 9, 20, 0.22) 100%);
-}
-.project-grid.project-grid--full .thumbnail img {
-  width: 100%;
-  height: 66vh;
-  object-fit: cover;
-  display: block;
-  border-radius: inherit;
-  filter: saturate(1.04) contrast(1.02);
-  transform: none;
-}
-.project-grid.project-grid--full {
-  perspective: 1000px;
-  transform-style: preserve-3d;
-}
-.project-grid.project-grid--full .thumbnail {
-  transform-style: preserve-3d;
-}
-.project-glow {
-  position: absolute;
-  inset: 0;
-  pointer-events: none;
-  z-index: 3;
-  background: radial-gradient(circle at 18% 24%, rgba(86, 189, 255, 0.22), transparent 30%),
-    radial-gradient(circle at 75% 38%, rgba(255, 184, 108, 0.16), transparent 24%);
-  opacity: 0.82;
-  mix-blend-mode: soft-light;
-  filter: blur(1.4px);
-  transform: translate3d(0, 0, 0);
-}
-.project-grid.project-grid--full .thumbnail .content {
-  position: absolute;
-  left: clamp(1rem, 4vw, 3rem);
-  top: auto;
-  bottom: clamp(1rem, 4vw, 3rem);
-  width: min(58%, 720px);
-  max-width: calc(100% - 2rem);
-  min-height: auto;
-  padding: clamp(1.15rem, 2.4vw, 2rem);
-  z-index: 6;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: flex-start;
-  color: #ffffff;
-  text-align: left;
-  overflow: visible;
-  border-radius: 1.1rem;
-  border: 1px solid rgba(255, 255, 255, 0.16);
-  background: linear-gradient(180deg, rgba(11, 18, 34, 0.88), rgba(7, 12, 24, 0.78));
-  box-shadow: 0 24px 70px rgba(2, 8, 23, 0.36);
-  -webkit-backdrop-filter: blur(18px);
-  backdrop-filter: blur(18px);
-  transform: translate3d(0, 0, 0);
-  opacity: 1 !important;
-}
-.project-grid.project-grid--full .project-card-top,
-.project-grid.project-grid--full .project-chip-grid,
-.project-grid.project-grid--full .project-card-title,
-.project-grid.project-grid--full .project-description,
-.project-grid.project-grid--full .project-base-list {
-  opacity: 1 !important;
-  visibility: visible !important;
-  transform: none !important;
-}
-.project-grid.project-grid--full:hover .thumbnail {
-  transform: none !important;
-}
-.project-grid.project-grid--full:hover .thumbnail img {
-  transform: none !important;
-}
-.project-grid.project-grid--full:hover .thumbnail .content {
-  transform: translate3d(0, 0, 0) !important;
-}
-.project-info-float {
-  position: absolute;
-  top: 2rem;
-  right: 2rem;
-  width: min(38%, 340px);
-  padding: 1.4rem 1.5rem;
-  border-radius: 28px;
-  background: rgba(8, 16, 36, 0.96);
-  border: 1px solid rgba(255, 255, 255, 0.16);
-  box-shadow: 0 30px 90px rgba(0, 0, 0, 0.28);
-  backdrop-filter: blur(20px);
-  z-index: 6;
-}
-.project-info-float-title {
-  font-size: 1.3rem;
-  line-height: 1.1;
-  color: #eef2ff;
-  margin-bottom: 0.7rem;
-  font-weight: 700;
-}
-.project-info-float-work {
-  color: rgba(226, 232, 255, 0.88);
-  font-size: 0.92rem;
-  line-height: 1.7;
-  margin-bottom: 1rem;
-}
-.project-info-cta {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  padding: 0.95rem 1.3rem;
-  border-radius: 999px;
-  background: linear-gradient(135deg, rgba(77, 139, 255, 0.98), rgba(148, 92, 255, 0.98));
-  color: #ffffff;
-  text-decoration: none;
-  font-weight: 700;
-  letter-spacing: 0.01em;
-  transition: transform 0.28s ease, box-shadow 0.28s ease;
-}
-.project-info-cta:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 18px 40px rgba(77, 139, 255, 0.28);
-}
-.project-card-top {
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  gap: 1rem;
-  width: 100%;
-  margin-bottom: 0.85rem;
-}
-.project-card-label {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  padding: 0.4rem 0.9rem;
-  border-radius: 999px;
-  font-size: 0.78rem;
-  font-weight: 700;
-  color: #d2e8ff;
-  background: rgba(255, 255, 255, 0.08);
-  border: 1px solid rgba(255, 255, 255, 0.12);
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-}
-.project-card-meta {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.45rem;
-  text-align: left;
-}
-.project-card-year,
-.project-card-role {
-  font-size: 0.9rem;
-  color: rgba(226, 232, 255, 0.88);
-}
-.project-card-title {
-  font-size: clamp(2.25rem, 3vw, 3rem);
-  letter-spacing: 0;
-  margin-bottom: 1rem;
-  color: #ffffff;
-  line-height: 1.06;
-}
-.project-description {
-  margin-top: 0.55rem;
-  margin-bottom: 1.05rem;
-  color: rgba(236, 239, 255, 0.9);
-  line-height: 1.7;
-  max-width: 88%;
-}
-.project-base-list {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.75rem;
-  margin-top: 1.15rem;
-}
-.project-base-pill {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  padding: 0.55rem 1rem;
-  border-radius: 999px;
-  background: rgba(255, 255, 255, 0.08);
-  border: 1px solid rgba(255, 255, 255, 0.12);
-  color: #d7e3ff;
-  font-size: 0.85rem;
-  letter-spacing: 0.02em;
-}
-.project-base-list span {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-}
-.project-grid.project-grid--full .thumbnail .content .project-action {
-  margin-top: 1.5rem;
-}
-.project-cta {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  padding: 0.95rem 1.45rem;
-  border-radius: 999px;
-  background: rgba(255, 255, 255, 0.12);
-  color: #ffffff;
-  text-decoration: none;
-  border: 1px solid rgba(255, 255, 255, 0.16);
-  font-weight: 700;
-  letter-spacing: 0.01em;
-  transition: transform 0.28s ease, background 0.28s ease, box-shadow 0.28s ease;
-}
-.project-cta:hover {
-  transform: translateY(-2px);
-  background: rgba(255, 255, 255, 0.2);
-  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.16);
-}
-.project-grid.project-grid--full .thumbnail img {
-  will-change: transform, opacity;
-}
-.project-chip-grid {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.55rem;
-  width: 100%;
-  margin: 0 0 1rem;
-  position: relative;
-  z-index: 7;
-  opacity: 1;
-  visibility: visible;
-}
-.project-chip {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 2rem;
-  padding: 0.42rem 0.78rem;
-  border-radius: 0.55rem;
-  background: rgba(255, 255, 255, 0.14);
-  border: 1px solid rgba(255, 255, 255, 0.22);
-  color: #ffffff;
-  font-size: 0.82rem;
-  font-weight: 700;
-  letter-spacing: 0;
-  line-height: 1;
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.12);
-  -webkit-backdrop-filter: blur(10px);
-  backdrop-filter: blur(10px);
-}
-.project-grid {
-  transition: box-shadow 0.35s ease;
-}
-.project-grid:hover {
-  box-shadow: 0 30px 72px rgba(0, 0, 0, 0.18);
-}
-.att-filter button {
-  transition: transform 0.24s ease, box-shadow 0.24s ease;
-}
-.att-filter button:hover,
-.att-filter button:focus {
-  transform: translateY(-2px);
-}
-@media (max-width: 991.98px) {
-  .case-study-stat-grid {
-    grid-template-columns: 1fr;
-  }
-  .project-grid.project-grid--full {
-    min-height: auto;
-  }
-  .project-grid.project-grid--full .thumbnail {
-    min-height: auto;
-    max-height: none;
-  }
-  .project-grid.project-grid--full .thumbnail img {
-    height: auto;
-    max-height: 70vh;
-  }
-  .project-grid.project-grid--full .thumbnail .content {
-    position: static;
-    width: auto;
-    max-width: 100%;
-    margin: 0 auto;
-    transform: none;
-    padding: 1.5rem;
-    border-radius: 0;
-    background: #0b1222;
-  }
-  .case-study-grid {
-    grid-template-columns: 1fr;
-  }
-  .case-study-base {
-    margin-top: 1.75rem;
-  }
-  .project-info-float {
-    position: static;
-    width: 100%;
-    right: auto;
-    top: auto;
-    margin-top: 1.5rem;
-    background: rgba(8, 16, 36, 0.98);
-  }
 }
 </style>

@@ -147,6 +147,11 @@ const router = createRouter({
       component: () => import("../views/project/ProjectSaveDeskView.vue"),
     },
     {
+      path: "/project/visonverse",
+      name: "VisonVerse",
+      component: () => import("../views/project/ProjectVisonVerseView.vue"),
+    },
+    {
       path: "/project/samsiddhi-designs",
       name: "samsiddhidesigns",
       component: () =>
