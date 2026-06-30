@@ -105,9 +105,9 @@ onBeforeUnmount(() => ctx?.revert());
     <div class="cs-shell">
       <nav class="cs-breadcrumb" aria-label="Breadcrumb">
         <a href="/">Home</a>
-        <span>/</span>
+        <span>&#8226;</span>
         <a href="/case-studies">Portfolio</a>
-        <span>/</span>
+        <span>&#8226;</span>
         <span class="active">SaveDesk</span>
       </nav>
 
@@ -504,9 +504,14 @@ onBeforeUnmount(() => ctx?.revert());
 // ─── Hero ───────────────────────────────────────────────────────────
 .cs-hero {
   position: relative;
-  background: #0a0e14;
+  background: #000000;
   overflow: hidden;
-  padding: clamp(7rem, 13vh, 10rem) 0 0;
+  padding: clamp(8rem, 13vh, 10rem) 0 0;
+  background-image: url(../../assets/img/lite-line.svg);
+  background-attachment: fixed;
+  background-position: center -8.625rem;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .cs-hero-noise {
@@ -536,17 +541,31 @@ onBeforeUnmount(() => ctx?.revert());
 }
 
 .cs-breadcrumb {
-  position: relative;
-  z-index: 2;
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  font-size: 0.78rem;
-  color: rgba(255,255,255,0.4);
-  margin-bottom: 2.5rem;
+    position: relative;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.78rem;
+    color: rgba(255,255,255,0.4);
+    margin-bottom: 2.5rem;
 
-  a { color: rgba(255,255,255,0.5); text-decoration: none; &:hover { color: var(--accent); } }
-  .active { color: var(--accent); }
+    a { 
+        color: rgba(255,255,255,0.5); 
+        text-decoration: none; 
+        &:hover { 
+            color: var(--accent); 
+        } 
+    }
+    
+    span {
+        color: var(--color-gray-2);
+
+        &.active { 
+            color: var(--accent) !important; 
+        }
+    }
+    
 }
 
 .cs-hero-eyebrow {

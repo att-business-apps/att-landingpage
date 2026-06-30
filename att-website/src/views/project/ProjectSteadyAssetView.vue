@@ -11,9 +11,9 @@ const clientLogo = new URL("../../assets/img/project/c4/icon-sa.svg", import.met
 const designMockup = new URL("../../assets/img/project/c4/sa-mockup.png", import.meta.url).href;
 
 const metrics = [
-  { value: "3K", label: "Active Users" },
-  { value: "2.9K", label: "New Users" },
-  { value: "5.7K", label: "Views" },
+  { value: "3K+", label: "Active Users" },
+  { value: "2.9K+", label: "New Users" },
+  { value: "5.7K+", label: "Views" },
   { value: "94", label: "Google PageSpeed score" },
   { value: "+61%", label: "Session duration improvement" },
   { value: "4.8★", label: "Average investor trust score" },
@@ -118,9 +118,9 @@ onBeforeUnmount(() => ctx?.revert());
     <div class="cs-shell">
       <nav class="cs-breadcrumb" aria-label="Breadcrumb">
         <a href="/">Home</a>
-        <span>/</span>
+        <span>&#8226;</span>
         <a href="/case-studies">Portfolio</a>
-        <span>/</span>
+        <span>&#8226;</span>
         <span class="active">SteadyAsset</span>
       </nav>
 
@@ -144,7 +144,7 @@ onBeforeUnmount(() => ctx?.revert());
 
         <div class="cs-hero-stats">
           <div class="cs-hero-stat">
-            <span class="cs-hero-stat-val">3K</span>
+            <span class="cs-hero-stat-val">3K+</span>
             <span class="cs-hero-stat-label">Organic traffic</span>
           </div>
           <div class="cs-hero-stat-divider"></div>
@@ -596,7 +596,7 @@ onBeforeUnmount(() => ctx?.revert());
   background: #000000;
   overflow: hidden;
   padding: clamp(8rem, 13vh, 10rem) 0 0;
-  background-image: url(../../assets/img/banner-bg.svg);
+  background-image: url(../../assets/img/lite-line.svg);
   background-attachment: fixed;
   background-position: center -8.625rem;
   background-size: cover;
@@ -640,7 +640,13 @@ onBeforeUnmount(() => ctx?.revert());
   margin-bottom: 2.5rem;
 
   a { color: rgba(255,255,255,0.5); text-decoration: none; &:hover { color: var(--teal); } }
-  .active { color: var(--teal); }
+  span {
+        color: var(--color-gray-2);
+
+        &.active { 
+            color: var(--teal); 
+        }
+    }
 }
 
 .cs-hero-eyebrow {

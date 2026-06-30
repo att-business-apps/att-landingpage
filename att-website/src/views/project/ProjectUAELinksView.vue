@@ -101,9 +101,9 @@ onBeforeUnmount(() => ctx?.revert());
     <div class="cs-shell">
       <nav class="cs-breadcrumb" aria-label="Breadcrumb">
         <a href="/">Home</a>
-        <span>/</span>
+        <span>&#8226;</span>
         <a href="/case-studies">Portfolio</a>
-        <span>/</span>
+        <span>&#8226;</span>
         <span class="active">UAE Links</span>
       </nav>
 
@@ -230,7 +230,7 @@ onBeforeUnmount(() => ctx?.revert());
             </div>
             <div class="cs-fact">
               <span class="material-symbols-outlined">location_on</span>
-              <div><strong>Region</strong><span>United Arab Emirates</span></div>
+              <div><strong>Region</strong><span>Sharjah, UAE</span></div>
             </div>
             <div class="cs-fact">
               <span class="material-symbols-outlined">language</span>
@@ -463,9 +463,14 @@ onBeforeUnmount(() => ctx?.revert());
 // ─── Hero ───────────────────────────────────────────────────────────
 .cs-hero {
   position: relative;
-  background: #0b0f14;
+  background: #000000;
   overflow: hidden;
-  padding: clamp(7rem, 13vh, 10rem) 0 0;
+  padding: clamp(8rem, 13vh, 10rem) 0 0;
+  background-image: url(../../assets/img/lite-line.svg);
+  background-attachment: fixed;
+  background-position: center -8.625rem;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .cs-hero-noise {
@@ -505,7 +510,13 @@ onBeforeUnmount(() => ctx?.revert());
   margin-bottom: 2.5rem;
 
   a { color: rgba(255,255,255,0.5); text-decoration: none; &:hover { color: var(--accent); } }
-  .active { color: var(--accent); }
+  span {
+        color: var(--color-gray-2);
+
+        &.active { 
+            color: var(--accent) !important; 
+        }
+    }
 }
 
 .cs-hero-eyebrow {
@@ -1040,7 +1051,6 @@ onBeforeUnmount(() => ctx?.revert());
   border-radius: 18px;
   overflow: hidden;
   border: 1px solid rgba(22,163,74,0.15);
-  max-width: 420px;
   margin: 0 auto;
 
   img { width: 100%; display: block; }

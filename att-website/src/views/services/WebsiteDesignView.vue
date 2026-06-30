@@ -86,28 +86,28 @@ const steps = [
 
 const work = [
   {
+    name: "UAE Links",
+    tag: "UI/UX Design · Website",
+    metricVal: "10K+",
+    metricLabel: "Organic Traffic",
+    img: new URL("../../assets/img/project/c1/project-thum-uaeLinks.png", import.meta.url).href,
+    href: "/project/uae-links",
+  },
+  {
     name: "SteadyAsset",
     tag: "Brand Identity · UI/UX · Website",
-    metricVal: "8.44x",
-    metricLabel: "ROAS",
+    metricVal: "3K+",
+    metricLabel: "Organic Traffic",
     img: new URL("../../assets/img/project/c4/project-thum-sa.png", import.meta.url).href,
     href: "/project/steadyasset",
   },
   {
     name: "SaveDesk",
     tag: "Full Redesign · UI/UX",
-    metricVal: "+42%",
-    metricLabel: "Conversion",
+    metricVal: "100%",
+    metricLabel: "IA Re-Mapped",
     img: new URL("../../assets/img/project/c7/project-thum-sd.png", import.meta.url).href,
     href: "/project/savedesk",
-  },
-  {
-    name: "Samsiddhi Designs",
-    tag: "Brand Identity · UI/UX · Website",
-    metricVal: "3.5x",
-    metricLabel: "Pipeline",
-    img: new URL("../../assets/img/project/c9/project-thum-sd.png", import.meta.url).href,
-    href: "/project/samsiddhi-designs",
   },
 ];
 

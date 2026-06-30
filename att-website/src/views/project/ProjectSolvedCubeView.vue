@@ -102,9 +102,9 @@ onBeforeUnmount(() => ctx?.revert());
     <div class="cs-shell">
       <nav class="cs-breadcrumb" aria-label="Breadcrumb">
         <a href="/">Home</a>
-        <span>/</span>
+        <span>&#8226;</span>
         <a href="/case-studies">Portfolio</a>
-        <span>/</span>
+        <span>&#8226;</span>
         <span class="active">Solved Cube</span>
       </nav>
 
@@ -415,6 +415,28 @@ onBeforeUnmount(() => ctx?.revert());
     </div>
   </section>
 
+  <!-- ── TESTIMONIAL ────────────────────────────────────────────── -->
+  <section class="cs-section cs-section--accent-deep">
+    <div class="cs-shell">
+      <div class="cs-testimonial cs-reveal">
+        <span class="material-symbols-outlined cs-testimonial-mark">format_quote</span>
+        <blockquote>
+          Hi, I just wanted to take a moment to express my sincere appreciation for the outstanding work you've done. Completing it on time and to such a high standard is a testament to your dedication and expertise. Your efforts have not gone unnoticed and I'm grateful for your contributions. Thank you again for a job well done!"
+        </blockquote>
+        <div class="cs-testimonial-attr">
+          <div class="cs-testimonial-avatar">G</div>
+          <div class="cs-testimonial-text">
+            <strong>Sandeep P</strong>
+            <span>CEO, Solved Cube IT Solutions</span>
+          </div>
+          <div class="cs-testimonial-stars" aria-label="5 out of 5 stars">
+            <span class="material-symbols-outlined" v-for="n in 5" :key="n">star</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- ── OUTCOMES ───────────────────────────────────────────────── -->
   <section class="cs-section cs-section--muted">
     <div class="cs-shell">
@@ -482,9 +504,14 @@ onBeforeUnmount(() => ctx?.revert());
 // ─── Hero ───────────────────────────────────────────────────────────
 .cs-hero {
   position: relative;
-  background: #0a0e14;
+  background: #000000;
   overflow: hidden;
-  padding: clamp(7rem, 13vh, 10rem) 0 0;
+  padding: clamp(8rem, 13vh, 10rem) 0 0;
+  background-image: url(../../assets/img/lite-line.svg);
+  background-attachment: fixed;
+  background-position: center -8.625rem;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .cs-hero-noise {
@@ -524,7 +551,13 @@ onBeforeUnmount(() => ctx?.revert());
   margin-bottom: 2.5rem;
 
   a { color: rgba(255,255,255,0.5); text-decoration: none; &:hover { color: var(--accent); } }
-  .active { color: var(--accent); }
+  span {
+        color: var(--color-gray-2);
+
+        &.active { 
+            color: var(--accent) !important; 
+        }
+    }
 }
 
 .cs-hero-eyebrow {
@@ -791,6 +824,7 @@ onBeforeUnmount(() => ctx?.revert());
 
   &--dark { background: #070a0e; }
   &--muted { background: var(--frost); }
+  &--accent-deep { background: var(--accent-deep); }
 }
 
 .cs-section-head {
@@ -1123,6 +1157,51 @@ onBeforeUnmount(() => ctx?.revert());
   font-size: 0.85rem;
   color: rgba(255,255,255,0.5);
   line-height: 1.5;
+}
+
+// ─── Testimonial ─────────────────────────────────────────────────────
+.cs-testimonial {
+  max-width: 760px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.cs-testimonial-mark { font-size: 3.5rem; color: var(--gold); opacity: 0.7; display: block; margin-bottom: 1rem; }
+
+.cs-testimonial blockquote {
+  font-size: clamp(1.1rem, 2vw, 1.4rem);
+  color: rgba(255,255,255,0.92);
+  line-height: 1.75;
+  margin: 0 0 2.25rem;
+}
+
+.cs-testimonial-attr {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.cs-testimonial-avatar {
+  width: 44px; height: 44px;
+  border-radius: 50%;
+  background: var(--gold);
+  color: #0f172a;
+  font-weight: 800;
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0;
+}
+
+.cs-testimonial-text {
+  text-align: left;
+  strong { display: block; color: #fff; font-weight: 700; }
+  span { display: block; color: rgba(255,255,255,0.5); font-size: 0.82rem; }
+}
+
+.cs-testimonial-stars {
+  display: flex; gap: 1px; color: var(--gold);
+  .material-symbols-outlined { font-size: 1rem; font-variation-settings: "FILL" 1; }
 }
 
 // ─── Outcomes ────────────────────────────────────────────────────────
