@@ -155,17 +155,17 @@ import uaeDr from "@/assets/img/project/c1/uae-dr.png";
 
 <style scoped>
 h2 {
-  color: #c60e49;
+  color: #0760CE;
   font-weight: 500;
 }
 
 .project-details .detail-item {
-  border-left: 3px solid #c60e49;
+  border-left: 3px solid #0760CE;
   padding-left: 1rem;
 }
 
 .project-details .detail-item h5 {
-  color: #c60e49;
+  color: #0760CE;
   margin-bottom: 0.5rem;
 }
 

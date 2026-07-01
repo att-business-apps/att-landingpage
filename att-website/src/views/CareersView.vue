@@ -1,17 +1,12 @@
 <script setup>
-import { computed, nextTick, onBeforeUnmount, onMounted, ref } from "vue";
+import { computed, onBeforeUnmount, onMounted, ref } from "vue";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 import heroImage from "../assets/img/amorboy/laptop-poses-banner.png";
-import teamImage from "../assets/img/amorboy/am-work.png";
 import buildImage from "../assets/img/project/c1/project-uaeLinks.png";
 import designImage from "../assets/img/project/c3/peoject-mr-web.png";
 import systemsImage from "../assets/img/project/c5/als-book.png";
-import processOne from "../assets/img/amorboy/process-1.png";
-import processTwo from "../assets/img/amorboy/process-2.png";
-import processThree from "../assets/img/amorboy/process-3.png";
-import processFour from "../assets/img/amorboy/process-4.png";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -21,37 +16,40 @@ let gsapContext;
 const pillars = [
   {
     number: "01",
-    title: "Build Extraordinary.",
+    icon: "rocket_launch",
+    title: "Build Extraordinary",
     text: "Create useful digital products, automations, and growth systems for teams that need sharper outcomes, not louder dashboards.",
   },
   {
     number: "02",
-    title: "Grow Extraordinary.",
+    icon: "trending_up",
+    title: "Grow Extraordinary",
     text: "Work close to strategy, design, engineering, and marketing so your learning compounds across disciplines.",
   },
   {
     number: "03",
-    title: "Live Extraordinary.",
+    icon: "emoji_events",
+    title: "Live Extraordinary",
     text: "Move with ownership, candor, and curiosity in a small team where initiative is visible and craft still matters.",
   },
 ];
 
 const stories = [
   {
-    eyebrow: "How our teams build",
-    title: "AI-assisted workflows for faster launches.",
+    tag: "How Our Teams Build",
+    title: "AI-Assisted Workflows",
     text: "We use automation, research loops, and reusable systems to shorten the path from idea to shipping while keeping the work human and precise.",
     image: buildImage,
   },
   {
-    eyebrow: "Design and engineering",
-    title: "Interfaces that feel calm under pressure.",
+    tag: "Design & Engineering",
+    title: "Calm Under Pressure",
     text: "Product decisions are made around clarity, conversion, and maintainability, so launches can keep improving after they go live.",
     image: designImage,
   },
   {
-    eyebrow: "Growth systems",
-    title: "Every experiment feeds the next one.",
+    tag: "Growth Systems",
+    title: "Every Experiment Compounds",
     text: "Campaigns, landing pages, analytics, and content work together as one operating rhythm instead of scattered deliverables.",
     image: systemsImage,
   },
@@ -59,170 +57,122 @@ const stories = [
 
 const hiringSteps = [
   {
-    icon: processOne,
+    step: "01",
+    icon: "psychology",
     title: "Role Fit",
     text: "A practical conversation around your strengths, portfolio, and the problems you like solving.",
   },
   {
-    icon: processTwo,
+    step: "02",
+    icon: "construction",
     title: "Craft Round",
     text: "A focused exercise or walkthrough that shows how you think, decide, and communicate tradeoffs.",
   },
   {
-    icon: processThree,
+    step: "03",
+    icon: "groups",
     title: "Team Sync",
     text: "A working-style conversation about ownership, feedback, pace, and collaboration.",
   },
   {
-    icon: processFour,
+    step: "04",
+    icon: "handshake",
     title: "Offer",
     text: "Clear next steps, role expectations, and the first outcomes we will build toward together.",
   },
 ];
 
-const marqueeText = computed(() =>
-  Array.from({ length: 6 }, () => "Outgrow Ordinary").join(" / "),
-);
+const marqueeText = computed(() => Array.from({ length: 6 }, () => "Outgrow Ordinary").join(" / "));
 
 const previousTitle = document.title;
 
-function animateCareersPage() {
-  if (!careersPage.value) return;
+onMounted(() => {
+  document.title = "Careers | Amortree Tech";
 
-  gsapContext?.revert();
   gsapContext = gsap.context(() => {
-    const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-
-    if (prefersReducedMotion) {
-      gsap.set(
-        [
-          ".careers-hero__copy",
-          ".careers-collage__panel",
-          ".careers-collage__metric",
-          ".careers-manifesto h2",
-          ".careers-pillar",
-          ".careers-story",
-          ".careers-step",
-          ".careers-cta",
-        ],
-        { clearProps: "all" },
-      );
-      return;
-    }
-
-    gsap.timeline({
-      defaults: { ease: "none" },
-      scrollTrigger: {
-        trigger: ".careers-hero",
-        start: "top top",
-        end: "bottom top",
-        scrub: 0.9,
-      },
-    })
-      .to(".careers-hero__copy", { yPercent: -18, autoAlpha: 0.64 }, 0)
-      .to(".careers-collage__panel--large", { yPercent: -24, rotate: -2 }, 0)
-      .to(".careers-collage__panel--small", { yPercent: -42, rotate: 3 }, 0)
-      .to(".careers-collage__metric", { yPercent: -74, scale: 0.92 }, 0)
-      .to(".careers-marquee span", { xPercent: -18 }, 0);
-
-    gsap.fromTo(
-      ".careers-manifesto h2",
-      { y: 80, autoAlpha: 0, filter: "blur(12px)" },
-      {
-        y: 0,
-        autoAlpha: 1,
-        filter: "blur(0px)",
-        ease: "none",
-        scrollTrigger: {
-          trigger: ".careers-manifesto",
-          start: "top 82%",
-          end: "center 46%",
-          scrub: 0.7,
-        },
-      },
-    );
-
-    gsap.fromTo(
-      ".careers-pillar",
-      { y: 90, autoAlpha: 0.2 },
-      {
-        y: 0,
-        autoAlpha: 1,
-        stagger: 0.12,
-        ease: "none",
-        scrollTrigger: {
-          trigger: ".careers-pillars",
-          start: "top 88%",
-          end: "bottom 62%",
-          scrub: 0.8,
-        },
-      },
-    );
-
-    gsap.utils.toArray(".careers-story").forEach((story, index) => {
-      gsap.fromTo(
-        story,
-        {
-          xPercent: index % 2 === 0 ? -8 : 8,
-          y: 54,
-          autoAlpha: 0.35,
-        },
-        {
-          xPercent: 0,
-          y: 0,
-          autoAlpha: 1,
-          ease: "none",
-          scrollTrigger: {
-            trigger: story,
-            start: "top 90%",
-            end: "center 56%",
-            scrub: 0.75,
-          },
-        },
-      );
+    // Manifesto
+    gsap.from(".careers-manifesto-eyebrow, .careers-manifesto-heading", {
+      y: 30,
+      autoAlpha: 0,
+      duration: 0.85,
+      stagger: 0.1,
+      ease: "power3.out",
+      scrollTrigger: { trigger: ".careers-manifesto", start: "top 78%", once: true },
     });
 
-    gsap.fromTo(
-      ".careers-step",
-      { y: 76, scale: 0.94, autoAlpha: 0.3 },
-      {
-        y: 0,
-        scale: 1,
-        autoAlpha: 1,
-        stagger: 0.1,
-        ease: "none",
-        scrollTrigger: {
-          trigger: ".careers-hiring",
-          start: "top 82%",
-          end: "bottom 70%",
-          scrub: 0.8,
-        },
-      },
-    );
+    // Pillars
+    gsap.utils.toArray(".careers-pillar").forEach((card, i) => {
+      gsap.from(card, {
+        y: 40,
+        autoAlpha: 0,
+        duration: 0.7,
+        delay: i * 0.1,
+        ease: "power3.out",
+        scrollTrigger: { trigger: card, start: "top 88%", once: true },
+      });
+    });
 
-    gsap.fromTo(
-      ".careers-cta",
-      { y: 80, autoAlpha: 0.35 },
-      {
-        y: 0,
-        autoAlpha: 1,
-        ease: "none",
-        scrollTrigger: {
-          trigger: ".careers-cta",
-          start: "top 88%",
-          end: "center 62%",
-          scrub: 0.7,
-        },
-      },
-    );
+    // Stories header + rows
+    gsap.from(".careers-stories-eyebrow, .careers-stories-heading", {
+      y: 28,
+      autoAlpha: 0,
+      duration: 0.8,
+      stagger: 0.08,
+      ease: "power3.out",
+      scrollTrigger: { trigger: ".careers-stories", start: "top 78%", once: true },
+    });
+    gsap.utils.toArray(".careers-story").forEach((row, i) => {
+      gsap.from(row, {
+        x: -40,
+        autoAlpha: 0,
+        duration: 0.7,
+        delay: i * 0.08,
+        ease: "power3.out",
+        scrollTrigger: { trigger: row, start: "top 90%", once: true },
+      });
+    });
+
+    // Hiring steps
+    gsap.from(".careers-hiring-eyebrow, .careers-hiring-heading", {
+      y: 28,
+      autoAlpha: 0,
+      duration: 0.8,
+      stagger: 0.08,
+      ease: "power3.out",
+      scrollTrigger: { trigger: ".careers-hiring", start: "top 78%", once: true },
+    });
+    gsap.utils.toArray(".careers-step").forEach((card, i) => {
+      gsap.from(card, {
+        y: 36,
+        autoAlpha: 0,
+        duration: 0.65,
+        delay: (i % 4) * 0.08,
+        ease: "power3.out",
+        scrollTrigger: { trigger: card, start: "top 90%", once: true },
+      });
+    });
+
+    // CTA
+    gsap.from(".careers-cta-inner", {
+      y: 30,
+      autoAlpha: 0,
+      duration: 0.8,
+      ease: "power3.out",
+      scrollTrigger: { trigger: ".careers-cta", start: "top 82%", once: true },
+    });
+
+    // Hover lifts
+    gsap.utils.toArray(".careers-pillar, .careers-step").forEach((card) => {
+      card.addEventListener("mouseenter", () => {
+        gsap.to(card, { y: -6, duration: 0.3, ease: "power2.out" });
+      });
+      card.addEventListener("mouseleave", () => {
+        gsap.to(card, { y: 0, duration: 0.35, ease: "power2.out" });
+      });
+    });
 
     ScrollTrigger.refresh();
   }, careersPage.value);
-}
-
-onMounted(() => {
-  document.title = "Careers | Amortree Tech";
-  nextTick(animateCareersPage);
 });
 
 onBeforeUnmount(() => {
@@ -232,576 +182,536 @@ onBeforeUnmount(() => {
 </script>
 
 <template>
-  <main ref="careersPage" class="careers-page">
-    <section class="careers-hero" aria-labelledby="careers-title">
-      <div class="careers-hero__inner">
-        <div class="careers-hero__copy">
-          <p class="careers-kicker">/ Careers at Amortree</p>
-          <h1 id="careers-title">
-            <span>Outgrow</span>
-            <span>Ordinary</span>
-          </h1>
-          <p class="careers-hero__lead">
-            The ordinary is safe, predictable, and comfortable. We are building
-            for people who would rather sharpen the work, ship better systems,
-            and make their impact impossible to miss.
-          </p>
-          <div class="careers-actions">
-            <a class="careers-btn careers-btn--primary" href="#open-roles">See open roles</a>
-            <a class="careers-btn careers-btn--ghost" href="/contact">Start a conversation</a>
+  <main ref="careersPage">
+    <div class="breadcrum-area breadcrumb-banner">
+      <div class="container">
+        <div class="breadcrumb animate__animated fadeInUp" style="animation-duration: 2s">
+          <ul class="list-unstyled">
+            <li><a href="/">Home</a></li>
+            <li class="active text-ly">Careers</li>
+          </ul>
+          <div class="section-heading heading-left">
+            <h1 class="title h2 mb-4">
+              Outgrow <span class="text-ly">Ordinary.</span>
+            </h1>
+            <p>
+              The ordinary is safe, predictable, and comfortable. We're building for people
+              who would rather sharpen the work, ship better systems, and make their impact
+              impossible to miss.
+            </p>
           </div>
         </div>
-
-        <div class="careers-collage" aria-hidden="true">
-          <div class="careers-collage__panel careers-collage__panel--large">
-            <img :src="heroImage" alt="" />
-          </div>
-          <div class="careers-collage__panel careers-collage__panel--small">
-            <img :src="teamImage" alt="" />
-          </div>
-          <div class="careers-collage__metric">
-            <strong>4x</strong>
-            <span>Faster idea-to-launch cycles</span>
+        <div class="banner-thumbnail">
+          <div
+            style="
+              position: relative;
+              will-change: transform;
+              transform: perspective(2000px) rotateX(-0.32deg) rotateY(-11.76deg) scale3d(1, 1, 1);
+            "
+          >
+            <img
+              :src="heroImage"
+              class="w-75 animate__animated slideInRight"
+              style="animation-duration: 3s"
+              alt="Amortree Tech team at work"
+            />
           </div>
         </div>
       </div>
-      <div class="careers-marquee" aria-hidden="true">
-        <span>{{ marqueeText }}</span>
-      </div>
-    </section>
+      <ul class="shape-group-breadcrum-1 list-unstyled">
+        <li class="shape shape-3 sal-animate" data-sal="slide-up" data-sal-duration="500" data-sal-delay="300">
+          <img src="../assets/img/shapes/line-5.png" alt="line" />
+        </li>
+      </ul>
+    </div>
 
+    <!-- ============================================================
+         MARQUEE STRIP
+         ============================================================ -->
+    <div class="careers-marquee" aria-hidden="true">
+      <span>{{ marqueeText }}</span>
+    </div>
+
+    <!-- ============================================================
+         MANIFESTO + PILLARS — Dark section
+         ============================================================ -->
     <section class="careers-manifesto">
-      <div class="careers-section-label">/ Outgrow Ordinary</div>
-      <h2>
-        We want people who can make the work more useful, more elegant, and
-        more commercially alive.
-      </h2>
-    </section>
+      <div class="careers-manifesto-inner">
+        <div class="careers-manifesto-eyebrow att-section-label att-section-label--light">Why Amortree</div>
+        <h2 class="careers-manifesto-heading">
+          We want people who can make the work more useful, more elegant, and
+          <span class="text-ly">more commercially alive.</span>
+        </h2>
 
-    <section class="careers-pillars" aria-label="Why join Amortree Tech">
-      <article v-for="pillar in pillars" :key="pillar.number" class="careers-pillar">
-        <span>({{ pillar.number }})</span>
-        <h3>{{ pillar.title }}</h3>
-        <p>{{ pillar.text }}</p>
-      </article>
-    </section>
-
-    <section class="careers-stories" aria-labelledby="stories-title">
-      <div class="careers-stories__heading">
-        <p class="careers-section-label">/ How our teams build</p>
-        <h2 id="stories-title">With systems, taste, and momentum.</h2>
+        <div class="careers-pillars-grid">
+          <article v-for="pillar in pillars" :key="pillar.number" class="careers-pillar">
+            <div class="careers-pillar-top">
+              <div class="careers-pillar-icon">
+                <span class="material-symbols-outlined">{{ pillar.icon }}</span>
+              </div>
+              <span class="careers-pillar-num">{{ pillar.number }}</span>
+            </div>
+            <h3 class="careers-pillar-title">{{ pillar.title }}</h3>
+            <p class="careers-pillar-text">{{ pillar.text }}</p>
+          </article>
+        </div>
       </div>
+    </section>
 
-      <div class="careers-story-grid">
-        <article v-for="story in stories" :key="story.title" class="careers-story">
-          <img :src="story.image" :alt="story.title" />
+    <!-- ============================================================
+         STORIES — Light numbered row list
+         ============================================================ -->
+    <section class="careers-stories">
+      <div class="careers-stories-inner">
+        <div class="careers-stories-header">
           <div>
-            <p>{{ story.eyebrow }}</p>
-            <h3>{{ story.title }}</h3>
-            <span>{{ story.text }}</span>
+            <div class="careers-stories-eyebrow att-section-label">How Our Teams Build</div>
+            <h2 class="careers-stories-heading">With Systems, Taste &amp; Momentum</h2>
           </div>
-        </article>
+        </div>
+
+        <div class="careers-story-list">
+          <article v-for="story in stories" :key="story.title" class="careers-story">
+            <div class="careers-story-thumb">
+              <img :src="story.image" :alt="story.title" />
+            </div>
+            <div class="careers-story-info">
+              <span class="careers-story-tag">{{ story.tag }}</span>
+              <h3 class="careers-story-title">{{ story.title }}</h3>
+              <p class="careers-story-desc">{{ story.text }}</p>
+            </div>
+          </article>
+        </div>
       </div>
     </section>
 
-    <section class="careers-hiring" aria-labelledby="hiring-title">
-      <div>
-        <p class="careers-section-label">/ How we hire</p>
-        <h2 id="hiring-title">Clear rounds. Real work. No mystery theater.</h2>
-      </div>
-
-      <div class="careers-hiring__steps">
-        <article v-for="step in hiringSteps" :key="step.title" class="careers-step">
-          <img :src="step.icon" :alt="step.title" />
+    <!-- ============================================================
+         HIRING PROCESS — Light ghost-numbered grid
+         ============================================================ -->
+    <section class="careers-hiring">
+      <div class="careers-hiring-inner">
+        <div class="careers-hiring-header">
           <div>
-            <h3>{{ step.title }}</h3>
-            <p>{{ step.text }}</p>
+            <div class="careers-hiring-eyebrow att-section-label">How We Hire</div>
+            <h2 class="careers-hiring-heading">Clear Rounds. Real Work. No Mystery Theater.</h2>
           </div>
-        </article>
+        </div>
+
+        <div class="careers-hiring-grid">
+          <article v-for="step in hiringSteps" :key="step.title" class="careers-step" :data-step="step.step">
+            <div class="careers-step-icon">
+              <span class="material-symbols-outlined">{{ step.icon }}</span>
+            </div>
+            <h3 class="careers-step-title">{{ step.title }}</h3>
+            <p class="careers-step-text">{{ step.text }}</p>
+          </article>
+        </div>
       </div>
     </section>
 
-    <section id="open-roles" class="careers-cta" aria-labelledby="roles-title">
-      <p class="careers-section-label">/ Open roles</p>
-      <h2 id="roles-title">Build. Grow. Live. Extraordinary.</h2>
-      <p>
-        We are always open to sharp designers, builders, marketers, and operators
-        who can turn ambition into shipped work.
-      </p>
-      <a class="careers-btn careers-btn--primary" href="mailto:hello@amortree.com?subject=Careers%20at%20Amortree%20Tech">
-        Share your profile
-      </a>
+    <!-- ============================================================
+         CLOSING CTA
+         ============================================================ -->
+    <section id="open-roles" class="careers-cta">
+      <div class="careers-cta-inner">
+        <div class="careers-cta-eyebrow">
+          <span class="text-ly">Open Roles</span>
+        </div>
+        <h2 class="careers-cta-title">
+          Build. Grow. Live. <span class="text-ly">Extraordinary.</span>
+        </h2>
+        <p class="careers-cta-sub">
+          We're always open to sharp designers, builders, marketers, and operators who can
+          turn ambition into shipped work.
+        </p>
+        <div class="d-flex justify-content-center flex-wrap gap-3 mt-5">
+          <a
+            class="amor-btn btn-fill-primary btn-large"
+            href="mailto:hi@amortree.com?subject=Careers%20at%20Amortree%20Tech"
+          >Share Your Profile</a>
+          <a href="/contact" class="amor-btn btn-borderd light">Start a Conversation</a>
+        </div>
+      </div>
     </section>
   </main>
 </template>
 
-<style scoped>
-.careers-page {
-  --careers-bg: #07080c;
-  --careers-panel: #111520;
-  --careers-text: #f8fbff;
-  --careers-muted: #aeb7c9;
-  --careers-blue: #2f6bff;
-  --careers-green: #46e0a4;
-  --careers-line: rgba(255, 255, 255, 0.12);
-  background: var(--careers-bg);
-  color: var(--careers-text);
-  overflow: hidden;
-}
-
-.careers-page :where(h1, h2, h3, p) {
-  margin: 0;
-}
-
-.careers-hero {
-  position: relative;
-  min-height: 92vh;
-  padding: 150px 24px 0;
-  background:
-    radial-gradient(circle at 18% 18%, rgba(47, 107, 255, 0.22), transparent 28%),
-    linear-gradient(135deg, #07080c 0%, #101522 54%, #07080c 100%);
-}
-
-.careers-hero__inner,
-.careers-manifesto,
-.careers-pillars,
-.careers-stories,
-.careers-hiring,
-.careers-cta {
-  width: min(1180px, 100%);
-  margin: 0 auto;
-}
-
-.careers-hero__inner {
-  display: grid;
-  grid-template-columns: minmax(0, 1.05fr) minmax(360px, 0.95fr);
-  gap: 56px;
-  align-items: center;
-}
-
-.careers-kicker,
-.careers-section-label {
-  color: var(--careers-green);
-  font-size: 13px;
-  font-weight: 800;
-  letter-spacing: 0.18em;
+<style lang="scss" scoped>
+// ─── Shared section label ───────────────────────────────────────────────────
+.att-section-label {
+  font-size: 0.65rem;
+  letter-spacing: 0.28em;
   text-transform: uppercase;
-}
-
-.careers-hero h1 {
-  margin-top: 22px;
-  font-size: clamp(72px, 11vw, 120px);
-  font-weight: 950;
-  line-height: 0.82;
-  letter-spacing: 0;
-  text-transform: uppercase;
-}
-
-.careers-hero h1 span {
-  display: block;
-}
-
-.careers-hero__lead {
-  max-width: 720px;
-  margin-top: 34px;
-  color: #d8dfec;
-  font-size: clamp(18px, 2vw, 25px);
-  line-height: 1.45;
-}
-
-.careers-actions {
+  color: var(--color-primaryR, #dc3c2d);
+  margin-bottom: 1.25rem;
   display: flex;
-  flex-wrap: wrap;
-  gap: 14px;
-  margin-top: 34px;
-}
-
-.careers-btn {
-  display: inline-flex;
   align-items: center;
-  justify-content: center;
-  min-height: 52px;
-  padding: 0 22px;
-  border: 1px solid var(--careers-line);
-  border-radius: 4px;
-  color: var(--careers-text);
-  font-size: 13px;
-  font-weight: 900;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  transition: transform 180ms ease, border-color 180ms ease, background 180ms ease;
+  gap: 0.75rem;
+  font-weight: 700;
+
+  &::before {
+    content: "";
+    width: 28px;
+    height: 1px;
+    background: var(--color-primaryR, #dc3c2d);
+    flex-shrink: 0;
+  }
+
+  &--light {
+    color: #facc15;
+    &::before { background: #facc15; }
+  }
 }
 
-.careers-btn:hover {
-  color: var(--careers-text);
-  transform: translateY(-2px);
-  border-color: rgba(255, 255, 255, 0.36);
-}
-
-.careers-btn--primary {
-  border-color: var(--careers-blue);
-  background: var(--careers-blue);
-}
-
-.careers-btn--ghost {
-  background: rgba(255, 255, 255, 0.06);
-}
-
-.careers-collage {
-  position: relative;
-  min-height: 560px;
-}
-
-.careers-collage__panel {
-  position: absolute;
-  overflow: hidden;
-  border: 1px solid var(--careers-line);
-  border-radius: 6px;
-  background: var(--careers-panel);
-  box-shadow: 0 28px 80px rgba(0, 0, 0, 0.35);
-}
-
-.careers-collage__panel img {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-  padding: 18px;
-}
-
-.careers-collage__panel--large {
-  inset: 30px 28px 116px 0;
-}
-
-.careers-collage__panel--small {
-  right: 0;
-  bottom: 0;
-  width: 58%;
-  height: 238px;
-  background: #eef3ff;
-}
-
-.careers-collage__metric {
-  position: absolute;
-  left: 24px;
-  bottom: 42px;
-  display: grid;
-  gap: 4px;
-  width: 190px;
-  padding: 22px;
-  border: 1px solid rgba(70, 224, 164, 0.34);
-  border-radius: 6px;
-  background: rgba(10, 16, 24, 0.88);
-  backdrop-filter: blur(14px);
-}
-
-.careers-collage__metric strong {
-  font-size: 48px;
-  line-height: 1;
-}
-
-.careers-collage__metric span {
-  color: var(--careers-muted);
-  font-size: 13px;
-  line-height: 1.35;
-}
-
+// ─── Marquee ──────────────────────────────────────────────────────────────────
 .careers-marquee {
-  width: calc(100% + 48px);
-  margin: 74px -24px 0;
-  padding: 18px 0;
-  border-top: 1px solid var(--careers-line);
-  border-bottom: 1px solid var(--careers-line);
-  color: rgba(255, 255, 255, 0.74);
-  font-size: clamp(28px, 4vw, 58px);
-  font-weight: 950;
-  line-height: 1;
-  white-space: nowrap;
-  text-transform: uppercase;
+  width: 100%;
+  overflow: hidden;
+  padding: 1.1rem 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  background: #000000;
 }
 
 .careers-marquee span {
   display: inline-block;
   min-width: max-content;
-  animation: careers-marquee 28s linear infinite;
+  color: rgba(250, 204, 21, 0.85);
+  font-size: clamp(1.4rem, 3.2vw, 2.6rem);
+  font-weight: 900;
+  letter-spacing: -0.01em;
+  text-transform: uppercase;
+  white-space: nowrap;
+  animation: careers-marquee 26s linear infinite;
 }
 
+@keyframes careers-marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .careers-marquee span { animation: none; }
+}
+
+// ─── Manifesto + Pillars (dark) ─────────────────────────────────────────────
 .careers-manifesto {
-  padding: 118px 24px 72px;
+  padding: 8rem 4rem;
+  background: linear-gradient(135deg, #0f0f0f 0%, #000000 100%);
+
+  @media (max-width: 1100px) { padding: 5rem 2rem; }
+  @media (max-width: 768px)  { padding: 4rem 1.25rem; }
 }
 
-.careers-manifesto h2 {
-  max-width: 1040px;
-  margin-top: 22px;
-  font-size: clamp(40px, 6.4vw, 92px);
-  font-weight: 950;
-  line-height: 0.98;
-  letter-spacing: 0;
+.careers-manifesto-inner {
+  max-width: 1280px;
+  margin: 0 auto;
 }
 
-.careers-pillars {
+.careers-manifesto-heading {
+  max-width: 900px;
+  font-size: clamp(2.4rem, 5vw, 4.2rem);
+  font-weight: 700;
+  line-height: 1.12;
+  color: #ffffff;
+  margin-bottom: 5rem;
+}
+
+.careers-pillars-grid {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  border-top: 1px solid var(--careers-line);
-  border-bottom: 1px solid var(--careers-line);
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+
+  @media (max-width: 1024px) { grid-template-columns: repeat(2, 1fr); }
+  @media (max-width: 640px)  { grid-template-columns: 1fr; }
 }
 
 .careers-pillar {
-  min-height: 330px;
-  padding: 34px 30px;
-  border-right: 1px solid var(--careers-line);
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 18px;
+  padding: 2.25rem 2rem;
+  transition: border-color 0.35s ease, background 0.35s ease, box-shadow 0.35s ease;
+  will-change: transform;
+
+  &:hover {
+    border-color: rgba(250, 204, 21, 0.4);
+    background: rgba(255, 255, 255, 0.05);
+    box-shadow: 0 24px 48px -20px rgba(0, 0, 0, 0.6);
+  }
 }
 
-.careers-pillar:last-child {
-  border-right: 0;
+.careers-pillar-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.75rem;
 }
 
-.careers-pillar span {
-  color: var(--careers-green);
-  font-weight: 900;
+.careers-pillar-icon {
+  width: 52px;
+  height: 52px;
+  border-radius: 14px;
+  background: rgba(250, 204, 21, 0.1);
+  border: 1px solid rgba(250, 204, 21, 0.25);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #facc15;
+  transition: background 0.35s ease, color 0.35s ease;
+
+  .material-symbols-outlined { font-size: 1.4rem; }
+
+  .careers-pillar:hover & {
+    background: #facc15;
+    color: #0f172a;
+  }
 }
 
-.careers-pillar h3 {
-  margin-top: 72px;
-  font-size: clamp(26px, 3vw, 40px);
-  line-height: 1;
+.careers-pillar-num {
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  color: rgba(255, 255, 255, 0.25);
+  font-variant-numeric: tabular-nums;
 }
 
-.careers-pillar p {
-  margin-top: 18px;
-  color: var(--careers-muted);
-  font-size: 16px;
-  line-height: 1.65;
+.careers-pillar-title {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 0.75rem;
+  letter-spacing: -0.01em;
 }
 
-.careers-stories,
-.careers-hiring {
-  padding: 116px 24px;
+.careers-pillar-text {
+  font-size: 0.88rem;
+  line-height: 1.75;
+  color: rgba(255, 255, 255, 0.55);
 }
 
-.careers-stories__heading,
-.careers-hiring {
-  display: grid;
-  grid-template-columns: minmax(0, 0.82fr) minmax(0, 1.18fr);
-  gap: 48px;
+// ─── Stories (light row list) ────────────────────────────────────────────────
+.careers-stories {
+  padding: 7rem 4rem;
+  background: #ffffff;
+
+  @media (max-width: 1100px) { padding: 4.5rem 2rem; }
+  @media (max-width: 768px)  { padding: 3.5rem 1.25rem; }
 }
 
-.careers-stories h2,
-.careers-hiring h2,
-.careers-cta h2 {
-  margin-top: 18px;
-  font-size: clamp(42px, 6vw, 86px);
-  font-weight: 950;
-  line-height: 0.96;
-  letter-spacing: 0;
+.careers-stories-inner {
+  max-width: 1280px;
+  margin: 0 auto;
 }
 
-.careers-story-grid {
-  display: grid;
-  gap: 22px;
-  margin-top: 44px;
+.careers-stories-header {
+  margin-bottom: 3.5rem;
+}
+
+.careers-stories-heading {
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 700;
+  line-height: 1.15;
+  color: #0f172a;
+}
+
+.careers-story-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
 }
 
 .careers-story {
   display: grid;
-  grid-template-columns: minmax(240px, 0.72fr) minmax(0, 1fr);
-  gap: 28px;
+  grid-template-columns: 220px 1fr;
+  gap: 2.25rem;
   align-items: center;
-  padding: 18px;
-  border: 1px solid var(--careers-line);
-  border-radius: 6px;
-  background: rgba(255, 255, 255, 0.035);
+  padding: 1.5rem;
+  border: 1px solid rgba(15, 23, 42, 0.07);
+  border-radius: 18px;
+  transition: border-color 0.35s ease, box-shadow 0.35s ease, background 0.35s ease;
+  will-change: transform;
+
+  &:hover {
+    border-color: rgba(250, 204, 21, 0.4);
+    box-shadow: 0 24px 48px -20px rgba(15, 23, 42, 0.2);
+    background: #f8fafc;
+  }
+
+  @media (max-width: 700px) {
+    grid-template-columns: 1fr;
+  }
 }
 
-.careers-story img {
+.careers-story-thumb {
   width: 100%;
-  aspect-ratio: 16 / 10;
-  object-fit: contain;
-  border-radius: 4px;
-  background: #f3f6ff;
+  aspect-ratio: 16 / 11;
+  border-radius: 12px;
+  overflow: hidden;
+  background: #f8fafc;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    padding: 0.5rem;
+  }
 }
 
-.careers-story p {
-  color: var(--careers-green);
-  font-size: 12px;
-  font-weight: 900;
-  letter-spacing: 0.16em;
-  text-transform: uppercase;
-}
-
-.careers-story h3 {
-  margin-top: 14px;
-  font-size: clamp(26px, 3.4vw, 48px);
-  line-height: 1;
-}
-
-.careers-story span {
+.careers-story-tag {
   display: block;
-  max-width: 640px;
-  margin-top: 18px;
-  color: var(--careers-muted);
-  font-size: 16px;
-  line-height: 1.7;
+  font-size: 0.65rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #facc15;
+  font-weight: 700;
+  margin-bottom: 0.6rem;
 }
 
+.careers-story-title {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #0f172a;
+  letter-spacing: -0.01em;
+  margin-bottom: 0.6rem;
+}
+
+.careers-story-desc {
+  font-size: 0.88rem;
+  color: #64748b;
+  line-height: 1.72;
+  max-width: 560px;
+}
+
+// ─── Hiring grid (light ghost-numbered) ──────────────────────────────────────
 .careers-hiring {
-  border-top: 1px solid var(--careers-line);
+  padding: 8rem 4rem;
+  background: #f8fafc;
+  border-top: 1px solid rgba(15, 23, 42, 0.05);
+
+  @media (max-width: 1100px) { padding: 5rem 2rem; }
+  @media (max-width: 768px)  { padding: 4rem 1.25rem; }
 }
 
-.careers-hiring__steps {
+.careers-hiring-inner {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.careers-hiring-header {
+  margin-bottom: 4rem;
+}
+
+.careers-hiring-heading {
+  font-size: clamp(2.2rem, 4vw, 3.2rem);
+  font-weight: 700;
+  line-height: 1.1;
+  color: #0f172a;
+  max-width: 780px;
+}
+
+.careers-hiring-grid {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 18px;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1px;
+  background: rgba(15, 23, 42, 0.07);
+  border-radius: 16px;
+  overflow: hidden;
+
+  @media (max-width: 1024px) { grid-template-columns: repeat(2, 1fr); }
+  @media (max-width: 560px)  { grid-template-columns: 1fr; }
 }
 
 .careers-step {
+  background: #f8fafc;
+  padding: 2.5rem 2rem;
+  position: relative;
+  overflow: hidden;
+  transition: background 0.35s ease;
+  will-change: transform;
+
+  &:hover { background: #f1f5f9; }
+
+  &::before {
+    content: attr(data-step);
+    position: absolute;
+    top: -1rem;
+    right: 1.25rem;
+    font-size: 6.5rem;
+    font-weight: 900;
+    color: rgba(15, 23, 42, 0.045);
+    line-height: 1;
+    pointer-events: none;
+    transition: color 0.35s ease;
+    font-variant-numeric: tabular-nums;
+  }
+
+  &:hover::before { color: rgba(250, 204, 21, 0.09); }
+}
+
+.careers-step-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  background: rgba(250, 204, 21, 0.1);
+  border: 1px solid rgba(250, 204, 21, 0.22);
   display: flex;
-  gap: 18px;
-  min-height: 190px;
-  padding: 24px;
-  border: 1px solid var(--careers-line);
-  border-radius: 6px;
-  background: #0e121b;
-}
-
-.careers-step img {
-  width: 72px;
-  height: 72px;
-  object-fit: contain;
-  flex: 0 0 auto;
-}
-
-.careers-step h3 {
-  font-size: 25px;
-}
-
-.careers-step p {
-  margin-top: 12px;
-  color: var(--careers-muted);
-  font-size: 15px;
-  line-height: 1.6;
-}
-
-.careers-cta {
-  padding: 112px 24px 126px;
-  text-align: center;
-}
-
-.careers-cta .careers-section-label {
+  align-items: center;
   justify-content: center;
+  margin-bottom: 2rem;
+  color: #92660a;
+
+  .material-symbols-outlined { font-size: 1.25rem; }
 }
 
-.careers-cta h2 {
-  max-width: 900px;
-  margin-right: auto;
-  margin-left: auto;
+.careers-step-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #0f172a;
+  letter-spacing: 0.01em;
+  margin-bottom: 0.6rem;
 }
 
-.careers-cta p {
-  max-width: 640px;
-  margin: 24px auto 34px;
-  color: var(--careers-muted);
-  font-size: 19px;
-  line-height: 1.7;
+.careers-step-text {
+  font-size: 0.83rem;
+  color: #64748b;
+  line-height: 1.72;
 }
 
-@keyframes careers-marquee {
-  from {
-    transform: translateX(0);
-  }
-  to {
-    transform: translateX(-50%);
-  }
+// ─── Closing CTA ─────────────────────────────────────────────────────────────
+.careers-cta {
+  padding: 7rem 4rem;
+  text-align: center;
+  background: linear-gradient(135deg, #0f0f0f 0%, #000000 100%);
+
+  @media (max-width: 1100px) { padding: 5rem 2rem; }
+  @media (max-width: 768px)  { padding: 4rem 1.25rem; }
 }
 
-@media (prefers-reduced-motion: reduce) {
-  .careers-marquee span {
-    animation: none;
-  }
-
-  .careers-btn {
-    transition: none;
-  }
+.careers-cta-inner {
+  max-width: 700px;
+  margin: 0 auto;
 }
 
-@media (max-width: 991px) {
-  .careers-hero {
-    padding-top: 128px;
-  }
-
-  .careers-hero__inner,
-  .careers-stories__heading,
-  .careers-hiring {
-    grid-template-columns: 1fr;
-  }
-
-  .careers-collage {
-    min-height: 470px;
-  }
-
-  .careers-pillars,
-  .careers-hiring__steps {
-    grid-template-columns: 1fr;
-  }
-
-  .careers-pillar {
-    min-height: auto;
-    border-right: 0;
-    border-bottom: 1px solid var(--careers-line);
-  }
-
-  .careers-pillar:last-child {
-    border-bottom: 0;
-  }
+.careers-cta-eyebrow {
+  font-size: 0.65rem;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  font-weight: 700;
+  margin-bottom: 1.25rem;
 }
 
-@media (max-width: 680px) {
-  .careers-hero {
-    min-height: auto;
-    padding: 116px 16px 0;
-  }
+.careers-cta-title {
+  font-size: clamp(2rem, 4.2vw, 3rem);
+  font-weight: 700;
+  line-height: 1.2;
+  color: #fff;
+  margin-bottom: 1.25rem;
+}
 
-  .careers-hero h1 {
-    font-size: clamp(58px, 18vw, 86px);
-  }
-
-  .careers-actions,
-  .careers-btn {
-    width: 100%;
-  }
-
-  .careers-collage {
-    min-height: 390px;
-  }
-
-  .careers-collage__panel--large {
-    inset: 16px 0 120px;
-  }
-
-  .careers-collage__panel--small {
-    width: 68%;
-    height: 174px;
-  }
-
-  .careers-collage__metric {
-    left: 0;
-    bottom: 24px;
-    width: 166px;
-  }
-
-  .careers-manifesto,
-  .careers-stories,
-  .careers-hiring,
-  .careers-cta {
-    padding-right: 16px;
-    padding-left: 16px;
-  }
-
-  .careers-story {
-    grid-template-columns: 1fr;
-  }
-
-  .careers-step {
-    flex-direction: column;
-  }
+.careers-cta-sub {
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.6);
+  line-height: 1.75;
 }
 </style>

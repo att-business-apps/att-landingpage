@@ -467,7 +467,7 @@ onBeforeUnmount(() => ctx?.revert());
         </a>
         <a href="https://solvedcubeitsolutions.com" target="_blank" rel="noopener" class="cs-btn-primary">View Live Site</a>
         <a href="/project/microrelic" class="cs-nav-link cs-nav-link--right">
-          Microrelic <span class="material-symbols-outlined">arrow_forward</span>
+          <span class="material-symbols-outlined">arrow_forward</span> Microrelic
         </a>
       </div>
     </div>

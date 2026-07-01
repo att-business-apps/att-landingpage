@@ -61,7 +61,7 @@
             Projects That <span class="text-ly">Shipped & Performed</span>
           </h2>
           <p class="pv-header-sub">
-            {{ filteredProjects.length }} project{{ filteredProjects.length !== 1 ? 's' : '' }} —
+            <!-- {{ filteredProjects.length }} project{{ filteredProjects.length !== 1 ? 's' : '' }} — -->
             each one scoped, built, and measured against real business outcomes.
           </p>
         </div>
@@ -270,17 +270,17 @@ const projects = ref([
   //   role: "Brand Identity Design & Google Business Profile Optimization",
   //   categories: ["Logo Design", "Brand Identity", "Google Business Profile","Local SEO"],
   // },
-  // {
-  //   id: "samsiddhi-designs",
-  //   title: "Samsiddhi Designs",
-  //   href: "project/samsiddhi-designs",
-  //   img: new URL("../assets/img/project/c9/project-thum-sd.png", import.meta.url).href,
-  //   subtitle: "Logo, Branding, UI/UX Design, Website, GMB, GA",
-  //   client: "Bharath Kumar",
-  //   year: "2025",
-  //   role: "Brand Experience",
-  //   categories: ["Branding", "Logo", "UI/UX Design", "Website", "GMB"],
-  // },
+  {
+    id: "samsiddhi-designs",
+    title: "Samsiddhi Designs",
+    href: "project/samsiddhi-designs",
+    img: new URL("../assets/img/project/c9/project-thum-sd.png", import.meta.url).href,
+    subtitle: "Logo, Branding, UI/UX Design, Website, GMB, GA",
+    client: "Bharath Kumar",
+    year: "2025",
+    role: "Brand Experience",
+    categories: ["Branding", "Logo", "UI/UX Design", "Website", "GMB"],
+  },
   // {
   //   id: "al-shamil-dashboard",
   //   title: "Al-Shamil Dashboard",

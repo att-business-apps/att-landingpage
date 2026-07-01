@@ -426,7 +426,7 @@ onBeforeUnmount(() => ctx?.revert());
         </a>
         <a href="https://uaelinks.ae" target="_blank" rel="noopener" class="cs-btn-primary">View Live Site</a>
         <a href="/project/solved-cube-it-solutions" class="cs-nav-link cs-nav-link--right">
-          Solved Cube <span class="material-symbols-outlined">arrow_forward</span>
+          <span class="material-symbols-outlined">arrow_forward</span> Solved Cube
         </a>
       </div>
     </div>

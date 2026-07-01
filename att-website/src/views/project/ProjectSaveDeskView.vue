@@ -467,7 +467,7 @@ onBeforeUnmount(() => ctx?.revert());
         </a>
         <a href="https://live.savedesk.co/pages/login" target="_blank" rel="noopener" class="cs-btn-primary">View Live Site</a>
         <a href="/project/samsiddhi-designs" class="cs-nav-link cs-nav-link--right">
-          Samsiddhi Designs <span class="material-symbols-outlined">arrow_forward</span>
+          <span class="material-symbols-outlined">arrow_forward</span> Samsiddhi Designs
         </a>
       </div>
     </div>

@@ -1,14 +1,25 @@
 <script setup>
-import { ref } from "vue";
+import { onBeforeUnmount, onMounted, ref } from "vue";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
+
+const contactPage = ref(null);
 
 const disableBtn = ref(false);
 const from_name = ref("");
 const email = ref("");
 const phoneNumber = ref("");
 const message = ref("");
+const formError = ref("");
+const formSuccess = ref(false);
 
 function sendMail() {
-  var params = {
+  formError.value = "";
+  formSuccess.value = false;
+
+  const params = {
     from_name: from_name.value,
     to_name: "Admin",
     email: email.value,
@@ -19,44 +30,44 @@ function sendMail() {
   const serviceID = "service_77crg6o";
 
   if (!params.from_name) {
-    alert("Please enter your name");
+    formError.value = "Please enter your name.";
     return;
   }
   if (!params.email) {
-    alert("Please enter your email");
+    formError.value = "Please enter your email.";
     return;
   }
   if (!params.phoneNumber) {
-    alert("Please enter your phone number");
+    formError.value = "Please enter your phone number.";
     return;
   }
   if (!params.message) {
-    alert("Please enter your requirement");
+    formError.value = "Please enter your requirement.";
     return;
   }
 
   disableBtn.value = true;
+
+  const resetForm = () => {
+    from_name.value = "";
+    email.value = "";
+    phoneNumber.value = "";
+    message.value = "";
+    disableBtn.value = false;
+    formSuccess.value = true;
+  };
+
   emailjs
     .send(serviceID, getTemplate("admin"), params)
-    .then((res) => {
-      from_name.value = "";
-      email.value = "";
-      phoneNumber.value = "";
-      message.value = "";
-      console.log(res);
+    .then(resetForm)
+    .catch((err) => {
+      console.log(err);
       disableBtn.value = false;
-    })
-    .catch((err) => console.log(err));
+      formError.value = "Something went wrong. Please try again or WhatsApp us directly.";
+    });
+
   emailjs
     .send(serviceID, getTemplate("customer"), params)
-    .then((res) => {
-      from_name.value = "";
-      email.value = "";
-      phoneNumber.value = "";
-      message.value = "";
-      console.log(res);
-      disableBtn.value = false;
-    })
     .catch((err) => console.log(err));
 }
 
@@ -64,275 +75,551 @@ function getTemplate(target) {
   if (target == "admin") return "template_tcauze5";
   if (target == "customer") return "template_svj7071";
 }
+
+let gsapContext;
+
+onMounted(() => {
+  gsapContext = gsap.context(() => {
+    gsap.from(".att-contact-eyebrow, .att-contact-heading, .att-contact-sub, .att-contact-field", {
+      y: 26,
+      autoAlpha: 0,
+      duration: 0.7,
+      stagger: 0.06,
+      ease: "power3.out",
+      scrollTrigger: { trigger: ".att-contact-form-card", start: "top 82%", once: true },
+    });
+
+    gsap.utils.toArray(".att-contact-info-card").forEach((card, i) => {
+      gsap.from(card, {
+        x: 30,
+        autoAlpha: 0,
+        duration: 0.7,
+        delay: i * 0.1,
+        ease: "power3.out",
+        scrollTrigger: { trigger: card, start: "top 88%", once: true },
+      });
+    });
+
+    gsap.from(".att-quickfact-item", {
+      y: 20,
+      autoAlpha: 0,
+      duration: 0.6,
+      stagger: 0.08,
+      ease: "power3.out",
+      scrollTrigger: { trigger: ".att-quickfacts", start: "top 90%", once: true },
+    });
+
+    gsap.utils.toArray(".att-contact-info-card").forEach((card) => {
+      card.addEventListener("mouseenter", () => {
+        gsap.to(card, { y: -5, duration: 0.3, ease: "power2.out" });
+      });
+      card.addEventListener("mouseleave", () => {
+        gsap.to(card, { y: 0, duration: 0.35, ease: "power2.out" });
+      });
+    });
+
+    ScrollTrigger.refresh();
+  }, contactPage.value);
+});
+
+onBeforeUnmount(() => {
+  gsapContext && gsapContext.revert();
+});
 </script>
 
 <template>
-  <div class="breadcrum-area breadcrumb-banner">
-    <div class="container-fluid">
-      <div
-        class="breadcrumb animate__animated fadeInUp"
-        style="animation-duration: 2s"
-      >
-        <ul class="list-unstyled">
-          <li><a href="/">Home</a></li>
-          <li class="active text-ly">Where to find</li>
-        </ul>
-        <div class="section-heading heading-left">
-          <h1 class="title h2 mb-0">
-            Start Your Next Growth Project With Confidence.
-          </h1>
-          <p>
-            We help startups and growing businesses create strategic 
-            websites, exceptional digital experiences, and scalable 
-            solutions that build trust, generate qualified leads, and 
-            accelerate long-term growth.
-          </p>
+  <main ref="contactPage">
+    <div class="breadcrum-area breadcrumb-banner">
+      <div class="container">
+        <div class="breadcrumb animate__animated fadeInUp" style="animation-duration: 2s">
+          <ul class="list-unstyled">
+            <li><a href="/">Home</a></li>
+            <li class="active text-ly">Contact</li>
+          </ul>
+          <div class="section-heading heading-left">
+            <h1 class="title h2 mb-4">Start Your Next Growth Project <span class="text-ly">With Confidence</span>.</h1>
+            <p>
+              We help startups and growing businesses create strategic websites, exceptional
+              digital experiences, and scalable solutions that build trust, generate qualified
+              leads, and accelerate long-term growth.
+            </p>
+          </div>
+        </div>
+        <div class="banner-thumbnail" style="right: -200px">
+          <div>
+            <img
+              src="../assets/img/amorboy/am-contact.png"
+              class="w-75 animate__animated slideInRight"
+              style="animation-duration: 3s"
+              alt="Illustration"
+            />
+          </div>
         </div>
       </div>
-      <div class="banner-thumbnail" style="right: -300px;">
-        <div class="">
-          <img
-            src="../assets/img/amorboy/am-contact.png"
-            class="w-50 animate__animated slideInRight"
-            style="animation-duration: 3s"
-            alt="Illustration"
-          />
-        </div>
-      </div>
+      <ul class="shape-group-breadcrum-1 list-unstyled">
+        <li class="shape shape-3 sal-animate" data-sal="slide-up" data-sal-duration="500" data-sal-delay="300">
+          <img src="../assets/img/shapes/line-5.png" alt="circle" />
+        </li>
+      </ul>
     </div>
-    <ul class="shape-group-breadcrum-1 list-unstyled">
-      <li
-        class="shape shape-2 sal-animate"
-        data-sal="slide-left"
-        data-sal-duration="500"
-        data-sal-delay="200"
-      >
-        <img src="../assets/img/shapes/bubble-10.png" alt="circle" />
-      </li>
-      <li
-        class="shape shape-3 sal-animate"
-        data-sal="slide-up"
-        data-sal-duration="500"
-        data-sal-delay="300"
-      >
-        <img src="../assets/img/shapes/line-5.png" alt="circle" />
-      </li>
-    </ul>
-  </div>
 
-  <div class="section section-padding">
-    <div class="container-fluid">
-      <div class="row">
-        <div class="col-lg-5 offset-xl-1">
-          <div
-            class="contact-form-box shadow-box mb--30 animate__animated fadeInUp"
-            style="animation-duration: 2s"
-          >
-            <form class="amor-contact-form">
-              <h4 class="mb-2">
-                We’d love to know more about your project needs!
-              </h4>
-              <p class="mb-3">
-                Submit your query, and we’ll reach out to you shortly!
-              </p>
-              <div class="form-group mb--40">
-                <!-- <label>How can we help you?</label> -->
+    <!-- ============================================================
+         CONTACT — Glass form card + info rail
+         ============================================================ -->
+    <section class="att-contact-section">
+      <div class="att-contact-inner">
+        <div class="att-contact-grid">
+          <!-- Form -->
+          <div class="att-contact-form-card">
+            <div class="att-contact-eyebrow att-section-label att-section-label--light">Get in Touch</div>
+            <h2 class="att-contact-heading">Tell Us About Your Project</h2>
+            <p class="att-contact-sub">
+              Submit your requirements and our team will get back to you within one business day.
+            </p>
+
+            <form class="att-contact-form" @submit.prevent="sendMail">
+              <div class="att-contact-field">
+                <label for="message">How can we help you?</label>
                 <textarea
-                  name="contact-message"
                   id="message"
-                  class="form-control textarea"
                   v-model="message"
-                  cols="30"
-                  rows="6"
-                  placeholder="How can we help you?"
+                  rows="5"
+                  placeholder="Tell us about your project, timeline, and goals…"
                   required
                 ></textarea>
               </div>
 
-              <h4 class="mt-3 mb-2">Your Contact Details</h4>
-              <p class="mb-3">For project discussions only, thank you!</p>
-              <div class="form-group">
-                <!-- <label>Name</label> -->
-                <input
-                  type="text"
-                  v-model="from_name"
-                  class="form-control"
-                  name="contact-name"
-                  placeholder="Your Name"
-                  required=""
-                />
+              <div class="att-contact-row">
+                <div class="att-contact-field">
+                  <label for="contact-name">Your Name</label>
+                  <input id="contact-name" v-model="from_name" type="text" placeholder="Jane Doe" required />
+                </div>
+                <div class="att-contact-field">
+                  <label for="contact-email">Your Email</label>
+                  <input id="contact-email" v-model="email" type="email" placeholder="jane@company.com" required />
+                </div>
               </div>
-              <div class="form-group">
-                <!-- <label>Email</label> -->
-                <input
-                  type="email"
-                  v-model="email"
-                  class="form-control"
-                  name="contact-email"
-                  placeholder="Your Email"
-                  required
-                />
+
+              <div class="att-contact-field">
+                <label for="contact-phone">Your Phone</label>
+                <input id="contact-phone" v-model="phoneNumber" type="tel" placeholder="+91 00000 00000" required />
               </div>
-              <div class="form-group mb--40">
-                <!-- <label>Phone</label> -->
-                <input
-                  type="tel"
-                  class="form-control"
-                  v-model="phoneNumber"
-                  name="contact-phone"
-                  placeholder="Your Phone"
-                  required
-                />
-              </div>
-              <div class="form-group">
-                <button
-                  @click="sendMail"
-                  type="button"
-                  class="amor-btn btn-borderd btn-fluid light"
-                  name="submit-btn"
-                  :disabled="disableBtn"
-                >
-                  Start Your Growth Journey
-                </button>
-              </div>
-              <div class="form-group"></div>
+
+              <p v-if="formError" class="att-form-message att-form-message--error">{{ formError }}</p>
+              <p v-if="formSuccess" class="att-form-message att-form-message--success">
+                Thanks — your message is in. We'll be in touch shortly.
+              </p>
+
+              <button type="submit" class="amor-btn btn-fill-primary btn-fluid" :disabled="disableBtn">
+                {{ disableBtn ? "Sending…" : "Start Your Growth Journey" }}
+              </button>
             </form>
           </div>
 
-          <div class="contact-info footer-contact mb--30">
-            <h4 class="title">Social</h4>
-            <div class="header-action">
-              <ul class="list-unstyled">
-                <li class="header-social-link">
-                  <ul class="social-icon-list list-unstyled">
-                    <li>
-                      <a
-                        href="https://in.linkedin.com/company/amortree-tech"
-                        target="_blank"
-                      >
-                        <img
-                          src="../assets/img/icon/sm-l.png"
-                          alt="amortree linkedin"
-                        />
-                      </a>
-                    </li>
-                    <li>
-                      <a
-                        href="https://www.instagram.com/amortreetech/"
-                        target="_blank"
-                      >
-                        <img
-                          src="../assets/img/icon/sm-i.png"
-                          alt="amortree instagram"
-                        />
-                      </a>
-                    </li>
-                    <li>
-                      <a
-                        href="https://www.facebook.com/amortreetech/"
-                        target="_blank"
-                      >
-                        <img
-                          src="../assets/img/icon/sm-f.png"
-                          alt="amortree facebook"
-                        />
-                      </a>
-                    </li>
-                    <li>
-                      <a href="https://dribbble.com/amortreetech" target="_blank">
-                        <img
-                          src="../assets/img/icon/sm-d.png"
-                          alt="amortree dribbble"
-                        />
-                      </a>
-                    </li>
-                  </ul>
-                </li>
-                <li class="sidemenu-btn me-2">
-                  <a
-                    href="https://wa.me/917975859061/?text=I'm%20inquiring%20about%20the%20website%20service."
-                    target="_blank"
-                    class=""
-                  >
-                    <img
-                      src="../assets/img/icon/whatsapp.png"
-                      class="wa"
-                      alt="amortree facebook"
-                    />
-                  </a>
-                </li>
-              </ul>
+          <!-- Info rail -->
+          <div class="att-contact-info-col">
+            <div class="att-contact-info-card">
+              <div class="att-info-icon">
+                <span class="material-symbols-outlined">call</span>
+              </div>
+              <h4 class="att-info-title">Phone</h4>
+              <p class="att-info-desc">
+                Reach out for any queries; our experts are here to assist and resolve your
+                concerns promptly.
+              </p>
+              <div class="att-info-links">
+                <a href="tel:+917975859061">+91 79758 59061</a>
+                <a href="tel:+919916846647">+91 99168 46647</a>
+              </div>
+            </div>
+
+            <div class="att-contact-info-card">
+              <div class="att-info-icon">
+                <span class="material-symbols-outlined">mail</span>
+              </div>
+              <h4 class="att-info-title">Email</h4>
+              <p class="att-info-desc">
+                Our support team replies within 24 hours on standard business days (Mon–Sat).
+              </p>
+              <div class="att-info-links">
+                <a href="mailto:hi@amortree.com">hi@amortree.com</a>
+              </div>
+            </div>
+
+            <div class="att-contact-info-card att-contact-social-card">
+              <h4 class="att-info-title">Connect With Us</h4>
+              <div class="att-social-row">
+                <a href="https://in.linkedin.com/company/amortree-tech" target="_blank" class="att-social-btn">
+                  <img src="../assets/img/icon/sm-l.png" alt="Amortree LinkedIn" />
+                </a>
+                <a href="https://www.instagram.com/amortreetech/" target="_blank" class="att-social-btn">
+                  <img src="../assets/img/icon/sm-i.png" alt="Amortree Instagram" />
+                </a>
+                <a href="https://www.facebook.com/amortreetech/" target="_blank" class="att-social-btn">
+                  <img src="../assets/img/icon/sm-f.png" alt="Amortree Facebook" />
+                </a>
+                <a href="https://dribbble.com/amortreetech" target="_blank" class="att-social-btn">
+                  <img src="../assets/img/icon/sm-d.png" alt="Amortree Dribbble" />
+                </a>
+              </div>
+              <a
+                href="https://wa.me/917975859061/?text=I%27m%20inquiring%20about%20the%20website%20service."
+                target="_blank"
+                class="att-whatsapp-cta"
+              >
+                <img src="../assets/img/icon/whatsapp.png" alt="Message us on WhatsApp" />
+                <span>Message us on WhatsApp</span>
+              </a>
             </div>
           </div>
         </div>
-        <div class="col-xl-4 col-lg-6 offset-xl-1">
-          <div
-            class="contact-info footer-contact mb--100 mb_md--30 mt_md--0 mt--150"
-          >
-            <h4 class="title">Phone</h4>
-            <p>
-              Reach out for any queries; our experts are here to assist and
-              resolve your concerns promptly.
-            </p>
-            <h4 class="phone-number">
-              <a href="tel:+917975859061">+91 79758 59061</a>
-              <a href="tel:+919916846647">+91 99168 46647</a>
-            </h4>
-          </div>
 
-          <div class="contact-info footer-contact mb--30">
-            <h4 class="title">Email</h4>
-            <p>
-              Our support team will get back to you in 24-h during standard
-              business days (Mon-Sat).
-            </p>
-            <h5 class="text-white mb-0">Say hi to,</h5>
-            <h4 class="phone-number">
-              <a href="mailto:hi@amortree.com">hi@amortree.com</a>
-            </h4>
+        <div class="att-quickfacts">
+          <div class="att-quickfact-item">
+            <span class="material-symbols-outlined">schedule</span>
+            <span>Replies within 24 hours</span>
+          </div>
+          <div class="att-quickfact-item">
+            <span class="material-symbols-outlined">event_available</span>
+            <span>Open Monday – Saturday</span>
+          </div>
+          <div class="att-quickfact-item">
+            <span class="material-symbols-outlined">location_on</span>
+            <span>Bengaluru, Karnataka, IN</span>
           </div>
         </div>
       </div>
-    </div>
-    <ul class="list-unstyled shape-group-contact">
-      <li class="shape shape-0" style="opacity: 1">
-        <img src="../assets/img/amorboy/am-contact-form.png" alt="Bubble" />
-      </li>
-      <li class="shape shape-1">
-        <img src="../assets/img/shapes/bubble-2.png" alt="Bubble" />
-      </li>
-      <li class="shape shape-2">
-        <img src="../assets/img/shapes/bubble-1.png" alt="Bubble" />
-      </li>
-      <li class="shape shape-3">
-        <img src="../assets/img/shapes/circle-1.png" alt="Circle" />
-      </li>
-      <li class="shape shape-3">
-        <img src="../assets/img/shapes/circle-1.png" alt="Circle" />
-      </li>
-      <li class="shape shape-3">
-        <img src="../assets/img/shapes/circle-1.png" alt="Circle" />
-      </li>
-      <li class="shape shape-3">
-        <img src="../assets/img/shapes/circle-1.png" alt="Circle" />
-      </li>
-      <li class="shape shape-3">
-        <img src="../assets/img/shapes/circle-1.png" alt="Circle" />
-      </li>
-      <li class="shape shape-3">
-        <img src="../assets/img/shapes/circle-1.png" alt="Circle" />
-      </li>
-      <li class="shape shape-3">
-        <img src="../assets/img/shapes/circle-1.png" alt="Circle" />
-      </li>
-    </ul>
-  </div>
+
+      <ul class="list-unstyled att-contact-blobs">
+        <li class="att-blob att-blob--yellow"></li>
+        <li class="att-blob att-blob--red"></li>
+      </ul>
+    </section>
+  </main>
 </template>
 
-<style>
-@media only screen and (max-width: 767px) {
-  .section-padding {
-    padding: 120px 0 30px;
+<style lang="scss" scoped>
+// ─── Shared section label ───────────────────────────────────────────────────
+.att-section-label {
+  font-size: 0.65rem;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: var(--color-primaryR, #dc3c2d);
+  margin-bottom: 1.25rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-weight: 700;
+
+  &::before {
+    content: "";
+    width: 28px;
+    height: 1px;
+    background: var(--color-primaryR, #dc3c2d);
+    flex-shrink: 0;
+  }
+
+  &--light {
+    color: #facc15;
+    &::before { background: #facc15; }
+  }
+}
+
+// ─── Section shell ───────────────────────────────────────────────────────────
+.att-contact-section {
+  position: relative;
+  padding: 7rem 4rem 8rem;
+  overflow: hidden;
+
+  @media (max-width: 1100px) { padding: 4.5rem 2rem 5rem; }
+  @media (max-width: 768px)  { padding: 3.5rem 1.25rem 4rem; }
+}
+
+.att-contact-inner {
+  position: relative;
+  max-width: 1280px;
+  margin: 0 auto;
+  z-index: 1;
+}
+
+.att-contact-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 2.5rem;
+  align-items: start;
+
+  @media (max-width: 1024px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+// ─── Form card (glass) ───────────────────────────────────────────────────────
+.att-contact-form-card {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.09);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border-radius: 28px;
+  padding: 3rem;
+
+  @media (max-width: 640px) { padding: 2rem 1.5rem; }
+}
+
+.att-contact-heading {
+  font-size: clamp(1.9rem, 3.2vw, 2.6rem);
+  font-weight: 700;
+  line-height: 1.15;
+  color: #ffffff;
+  margin-bottom: 0.75rem;
+}
+
+.att-contact-sub {
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.55);
+  margin-bottom: 2.5rem;
+}
+
+.att-contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.att-contact-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+
+  @media (max-width: 560px) { grid-template-columns: 1fr; }
+}
+
+.att-contact-field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+
+  label {
+    font-size: 0.68rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: rgba(255, 255, 255, 0.45);
+  }
+
+  input,
+  textarea {
+    width: 100%;
+    background: rgba(255, 255, 255, 0.045);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 12px;
+    padding: 0.9rem 1.1rem;
+    color: #ffffff;
+    font-size: 0.92rem;
+    font-family: inherit;
+    resize: vertical;
+    transition: border-color 0.3s ease, background 0.3s ease;
+
+    &::placeholder { color: rgba(255, 255, 255, 0.32); }
+
+    &:focus {
+      outline: none;
+      border-color: #facc15;
+      background: rgba(255, 255, 255, 0.07);
+    }
+  }
+}
+
+.att-form-message {
+  margin: -0.5rem 0 0;
+  font-size: 0.85rem;
+  font-weight: 600;
+  border-radius: 10px;
+  padding: 0.75rem 1rem;
+
+  &--error {
+    color: #fca5a5;
+    background: rgba(220, 60, 45, 0.12);
+    border: 1px solid rgba(220, 60, 45, 0.3);
+  }
+
+  &--success {
+    color: #86efac;
+    background: rgba(92, 176, 78, 0.12);
+    border: 1px solid rgba(92, 176, 78, 0.3);
+  }
+}
+
+// ─── Info rail ───────────────────────────────────────────────────────────────
+.att-contact-info-col {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.att-contact-info-card {
+  background: rgba(255, 255, 255, 0.035);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 20px;
+  padding: 2rem;
+  transition: border-color 0.35s ease, background 0.35s ease;
+  will-change: transform;
+
+  &:hover {
+    border-color: rgba(250, 204, 21, 0.35);
+    background: rgba(255, 255, 255, 0.055);
+  }
+}
+
+.att-info-icon {
+  width: 46px;
+  height: 46px;
+  border-radius: 13px;
+  background: rgba(250, 204, 21, 0.1);
+  border: 1px solid rgba(250, 204, 21, 0.24);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #facc15;
+  margin-bottom: 1.25rem;
+
+  .material-symbols-outlined { font-size: 1.3rem; }
+}
+
+.att-info-title {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 0.6rem;
+}
+
+.att-info-desc {
+  font-size: 0.85rem;
+  line-height: 1.65;
+  color: rgba(255, 255, 255, 0.5);
+  margin-bottom: 1.1rem;
+}
+
+.att-info-links {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+
+  a {
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: #facc15;
+    text-decoration: none;
+    transition: color 0.25s ease;
+
+    &:hover { color: #ffffff; }
+  }
+}
+
+.att-contact-social-card {
+  .att-info-title { margin-bottom: 1.25rem; }
+}
+
+.att-social-row {
+  display: flex;
+  gap: 0.65rem;
+  margin-bottom: 1.5rem;
+}
+
+.att-social-btn {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: border-color 0.3s ease, background 0.3s ease, transform 0.3s ease;
+
+  img { width: 16px; height: 16px; object-fit: contain; }
+
+  &:hover {
+    border-color: #facc15;
+    background: rgba(250, 204, 21, 0.1);
+    transform: translateY(-3px);
+  }
+}
+
+.att-whatsapp-cta {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  padding: 0.85rem 1.25rem;
+  border-radius: 12px;
+  background: rgba(92, 176, 78, 0.12);
+  border: 1px solid rgba(92, 176, 78, 0.3);
+  text-decoration: none;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #86efac;
+  transition: background 0.3s ease, border-color 0.3s ease;
+
+  img { width: 20px; height: 20px; }
+
+  &:hover {
+    background: rgba(92, 176, 78, 0.2);
+    border-color: rgba(92, 176, 78, 0.5);
+  }
+}
+
+// ─── Quick facts strip ────────────────────────────────────────────────────────
+.att-quickfacts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 3rem;
+  padding-top: 2.5rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.att-quickfact-item {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.55);
+
+  .material-symbols-outlined {
+    font-size: 1.1rem;
+    color: #facc15;
+  }
+}
+
+// ─── Ambient blobs ────────────────────────────────────────────────────────────
+.att-contact-blobs {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.att-blob {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(120px);
+  opacity: 0.14;
+
+  &--yellow {
+    width: 420px;
+    height: 420px;
+    background: #facc15;
+    top: -120px;
+    right: -100px;
+  }
+
+  &--red {
+    width: 380px;
+    height: 380px;
+    background: var(--color-primaryR, #dc3c2d);
+    bottom: -140px;
+    left: -100px;
   }
 }
 </style>
