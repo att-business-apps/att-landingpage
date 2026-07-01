@@ -17009,7 +17009,7 @@ Frequently Asked Questions
   left: 0;
   border-radius: 0.5rem;
   width: 100%;
-  background: var(--color-primary);
+  background: linear-gradient(90deg, #f4de85 0%, var(--logo-yellow) 100%);
   -webkit-animation: scroll-progress linear;
   -moz-animation: scroll-progress linear;
   -ms-animation: scroll-progress linear;
@@ -17418,7 +17418,7 @@ Frequently Asked Questions
   content: "";
   height: 2px;
   width: 0;
-  background-color: var(--color-primary);
+  background-color: var(--logo-yellow);
   position: absolute;
   bottom: 12px;
   left: 0;
@@ -17429,7 +17429,7 @@ Frequently Asked Questions
   content: "";
   height: 2px;
   width: 0;
-  background-color: var(--color-primary);
+  background-color: var(--logo-yellow);
   position: absolute;
   top: 12px;
   right: 0;

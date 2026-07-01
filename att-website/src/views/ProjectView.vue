@@ -536,6 +536,10 @@ onBeforeUnmount(() => gsapContext?.revert());
   width: 100%;
   height: clamp(320px, 62vh, 680px);
   overflow: hidden;
+
+  @media (max-width: 575px) {
+    height: 250px;
+  }
 }
 
 .pv-card-img {

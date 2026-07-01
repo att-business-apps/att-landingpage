@@ -9,7 +9,7 @@
             <a href="/">
               <img
                 class="light-version-logo"
-                style="width: 220px; margin: 0 auto"
+                style="width: 180px; margin: 0 auto"
                 src="../assets/img/att-logo-light.svg"
                 alt="amortree Tech logo"
               />
@@ -21,8 +21,7 @@
                 <li><a href="/services"><span class="text-ll">Services</span></a></li>
                 <li><a href="/case-studies"><span class="text-ll">Portfolio</span></a></li>
                 <li><a href="/about"><span class="text-ll">About</span></a></li>
-                <li><a href="/careers"><span class="text-ll">Careers</span></a></li>
-                <!-- <li><a href="https://demo.amortree.com/"><span class="text-ll">Demo</span></a></li> -->
+                <li><a href="/pricing"><span class="text-ll">Pricing</span></a></li>
                 <li><a href="/contact"><span class="text-ll">Contact</span></a></li>
               </ul>
             </nav>
@@ -38,32 +37,5 @@
         <div class="scroll-progress"></div>
       </div>
     </nav>
-  </div>
-
-  <div class="christmas-lights-line d-none">
-    <span style="--_pos: 1px" class="lightbulb"></span>
-    <span style="--_pos: 2px" class="lightbulb d-none d-md-block"></span>
-    <span style="--_pos: 3px" class="lightbulb"></span>
-    <span style="--_pos: 4px" class="lightbulb d-none d-md-block"></span>
-    <span style="--_pos: 5px" class="lightbulb"></span>
-    <span style="--_pos: 6px" class="lightbulb d-none d-md-block"></span>
-    <span style="--_pos: 7px" class="lightbulb"></span>
-    <span style="--_pos: 8px" class="lightbulb d-none d-md-block"></span>
-    <span style="--_pos: 9px" class="lightbulb"></span>
-    <span style="--_pos: 10px" class="lightbulb d-none d-md-block"></span>
-    <span style="--_pos: 11px" class="lightbulb"></span>
-    <span style="--_pos: 12px" class="lightbulb d-none d-md-block"></span>
-    <span style="--_pos: 11px" class="lightbulb"></span>
-    <span style="--_pos: 10px" class="lightbulb d-none d-md-block"></span>
-    <span style="--_pos: 9px" class="lightbulb"></span>
-    <span style="--_pos: 8px" class="lightbulb d-none d-md-block"></span>
-    <span style="--_pos: 7px" class="lightbulb"></span>
-    <span style="--_pos: 6px" class="lightbulb d-none d-md-block"></span>
-    <span style="--_pos: 5px" class="lightbulb"></span>
-    <span style="--_pos: 4px" class="lightbulb d-none d-md-block"></span>
-    <span style="--_pos: 3px" class="lightbulb"></span>
-    <span style="--_pos: 2px" class="lightbulb d-none d-md-block"></span>
-    <span style="--_pos: 1px" class="lightbulb"></span>
-    <span style="--_pos: 0px" class="lightbulb d-none d-md-block"></span>
   </div>
 </template>
