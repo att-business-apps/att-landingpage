@@ -174,7 +174,7 @@ onBeforeUnmount(() => {
                         <li class="active">Estimate</li>
                     </ul>
                 <div class="section-heading heading-left">
-                    <h1 class="title h2 mb-0">Tell Us About Your Project. <span class="text-ly">We'll Reply on WhatsApp</span></h1>
+                    <h1 class="title h2 mb-4">Tell Us About Your Project. <span class="text-ly">We'll Reply on WhatsApp</span></h1>
                     <p>Fill in a few details below and hit submit — your project brief opens directly in WhatsApp, ready to send. No back-and-forth email threads, no waiting on a contact form.</p>
                 </div>
             </div>
