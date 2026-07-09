@@ -9,6 +9,8 @@ Disallow: /admin/
 Disallow: /private/
 
 # Allow all other content
+Allow: /
+Allow: /audit
 Allow: /services
 Allow: /website-design
 Allow: /web-development
@@ -24,9 +26,9 @@ Allow: /branding
 Allow: /website-maintenance
 Allow: /about
 Allow: /contact
-Allow: /case-studies
+Allow: /projects
 Allow: /estimate
-Allow: /projects/
+Allow: /project/
 
 # Crawl-delay for respectful crawling
 Crawl-delay: 1

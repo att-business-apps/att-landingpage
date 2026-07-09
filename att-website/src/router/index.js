@@ -33,7 +33,7 @@ const router = createRouter({
       component: () => import("../views/ContactView.vue"),
     },
     {
-      path: "/case-studies",
+      path: "/projects",
       name: "case-studies",
       component: () => import("../views/ProjectView.vue"),
     },
@@ -56,6 +56,11 @@ const router = createRouter({
       path: "/estimate",
       name: "estimate",
       component: () => import("../views/EstimateView.vue"),
+    },
+    {
+      path: "/audit",
+      name: "audit",
+      component: () => import("../views/AuditView.vue"),
     },
 
     // Services
@@ -161,6 +166,18 @@ const router = createRouter({
       name: "samsiddhidesigns",
       component: () =>
         import("../views/project/ProjectSamsiddhiDesignsView.vue"),
+    },
+    {
+      path: "/project/raksha-realty",
+      name: "raksha-realty",
+      component: () =>
+        import("../views/project/ProjectRakshaRealtyView.vue"),
+    },
+    {
+      path: "/project/alin-salon",
+      name: "alin-salon",
+      component: () =>
+        import("../views/project/ProjectAlinSalonView.vue"),
     },
     {
       path: "/pageNotFound",

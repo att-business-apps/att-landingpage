@@ -15,8 +15,8 @@
           No pressure, no sales pitch. Just actionable insights on how to
           grow your business.
         </p>
-        <a class="amor-btn btn-large btn-fill-white cta-btn" :href="whatsappLink">
-          <span>Get Started Today</span>
+        <a class="amor-btn btn-large btn-fill-white cta-btn" href="/audit">
+          <span>Claim Audit</span>
           <span class="material-symbols-outlined" aria-hidden="true">arrow_forward</span>
         </a>
       </div>
@@ -164,9 +164,6 @@ import { useRoute } from "vue-router";
 const route = useRoute();
 const year = new Date().getFullYear();
 
-const whatsappLink =
-  "https://wa.me/917975859061?text=Hi%20Amortree%20Team,%20I'm%20interested%20in%20building%20a%20website%20for%20my%20business.%20I'd%20like%20to%20book%20a%20free%20strategy%20call.";
-
 const socialLinks = [
   { name: "LinkedIn", url: "https://in.linkedin.com/company/amortree-tech", icon: "icofont-linkedin" },
   { name: "Instagram", url: "https://www.instagram.com/amortreetech/", icon: "icofont-instagram" },
@@ -193,7 +190,7 @@ const serviceLinks = [
 const companyLinks = [
   { label: "About", href: "/about" },
   { label: "Careers", href: "/careers" },
-  { label: "Case Studies", href: "/case-studies" },
+  { label: "Projects", href: "/projects" },
   { label: "Contact", href: "/contact" },
   { label: "Privacy Policy", href: "/privacy" },
   { label: "Terms of Use", href: "/terms" },
@@ -202,9 +199,9 @@ const companyLinks = [
 const tabs = [
   { label: "Home", path: "/", icon: "home" },
   { label: "Services", path: "/services", icon: "apps" },
-  { label: "Work", path: "/case-studies", icon: "work" },
+  { label: "Projects", path: "/projects", icon: "work" },
   { label: "About", path: "/about", icon: "groups" },
-  { label: "Pricing", path: "/pricing", icon: "sell" },
+  // { label: "Pricing", path: "/pricing", icon: "sell" },
   { label: "Contact", path: "/contact", icon: "call" },
 ];
 

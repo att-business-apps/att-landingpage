@@ -2,6 +2,7 @@
 import { nextTick, onBeforeUnmount, onMounted, ref } from "vue";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import AuditWidget from "@/components/AuditWidget.vue";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -603,109 +604,109 @@ onBeforeUnmount(() => {
 
 <template>
   <main ref="homePage" class="home-motion-page">
-    <div class="banner banner-style-1">
-      <div class="container-fluid">
-        <div class="row align-items-end align-items-xl-end">
-          <div class="col-lg-10 mx-auto pb-5">
-            <div class="home-banner banner-content text-center">
-              <div class="animate__animated fadeInUp" style="animation-duration: 1s">
-                <div class="flex justify-center mb-4">
-                  <div
-                    class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-200 text-blue-900 text-xs font-bold uppercase tracking-wider">
-                    Strategy
-                    <span class="animate-ping relative flex" style="animation-duration: 1.25s">→</span>
-                    Design
-                    <span class="animate-ping relative flex" style="animation-duration: 1s">→</span>
-                    Development
-                    <span class="animate-ping relative flex" style="animation-duration: 1.25s">→</span>
-                    Growth
-                  </div>
-                </div>
+    <!-- HERO SECTION — full replacement for .banner.banner-style-1 -->
+    <div class="att-hero" id="top">
+      <!-- Ambient background layers -->
+      <div class="att-hero-grid" aria-hidden="true"></div>
+      <div class="att-hero-glow att-hero-glow--gold" aria-hidden="true"></div>
+      <div class="att-hero-glow att-hero-glow--blue" aria-hidden="true"></div>
+      <canvas class="att-hero-canvas" id="attHeroCanvas" aria-hidden="true"></canvas>
 
-                <h1 class="title hero-title d-inline" ref="myElement">
-                  <span class="hero-title-token">Websites That Build Trust.</span>
-                  <span class="hero-title-token hero-title-highlight text-ly">Generate Leads.</span>
-                  <span class="hero-title-token hero-title-highlight gradient-text-light">Drive Growth.</span>
-                </h1>
-                <p class="subtitle w-75 md:w-100 mt-4">
-                  We combine strategy, UX, development, SEO, and AI-ready optimization to create websites that become your highest-performing business asset.
-                </p>
+      <div class="att-hero-wrap">
+        <!-- ── Left: Copy column ── -->
+        <div class="att-hero-copy">
 
-                <h2 class="h5 mt-4 flex items-center justify-center gap-3">
-                  <span class="gradient-text yellow-light">Designed for businesses that are ready to grow—not just go online.</span>
-                </h2>
-                <div class="d-flex justify-content-center gap-3 mt-5">
-                  <a class="amor-btn btn-fill-primary btn-large"
-                    href="https://wa.me/917975859061/?text=I%20need%20to%20Book%20Your%20Free%20Strategy%20Call.">Book Your Free Strategy Call</a>
-                  <a href="/case-studies" class="amor-btn btn-borderd light">Explore Case Studies</a>
-                </div>
-                <div class="mt-16 grid grid-cols-2 md:grid-cols-4 gap-6 opacity-80">
-                  <div class="home-metric flex flex-col items-center justify-around">
-                    <span class="text-3xl font-bold text-primary gradient-text blue-light">30+</span>
-                    <span class="text-xs uppercase tracking-widest text-slate-300">Businesses Empowered</span>
-                  </div>
-                  <div class="home-metric flex flex-col items-center">
-                    <span class="text-3xl font-bold text-primary gradient-text yellow-light">10+</span>
-                    <span class="text-xs uppercase tracking-widest text-slate-300">Business Industries</span>
-                  </div>
-                  <div class="home-metric flex flex-col items-center">
-                    <span class="text-3xl font-bold text-primary gradient-text green-light">98%</span>
-                    <span class="text-xs uppercase tracking-widest text-slate-300">Client Satisfaction</span>
-                  </div>
-                  <div class="home-metric flex flex-col items-center">
-                    <span class="text-3xl font-bold text-primary gradient-text text-lr">100%</span>
-                    <span class="text-xs uppercase tracking-widest text-slate-300">Custom Designed</span>
-                  </div>
-                </div>
-              </div>
-            </div>
+          <!-- Eyebrow badge -->
+          <div class="att-hero-eyebrow">
+            <span class="att-hero-eyebrow-dot" aria-hidden="true"></span>
+            <span class="att-hero-eyebrow-text">Strategy</span>
+            <span class="att-hero-eyebrow-sep" aria-hidden="true">·</span>
+            <span class="att-hero-eyebrow-text">Design</span>
+            <span class="att-hero-eyebrow-sep" aria-hidden="true">·</span>
+            <span class="att-hero-eyebrow-text">Development</span>
+            <span class="att-hero-eyebrow-sep" aria-hidden="true">·</span>
+            <span class="att-hero-eyebrow-text">Growth</span>
+          </div>
+
+          <!-- Headline -->
+          <h1 class="att-hero-title">
+            <span class="att-hero-title-line att-line-solid">Websites That</span>
+            <span class="att-hero-title-line att-line-solid">Build Trust.</span>
+            <span class="att-hero-title-line att-line-accent">Generate Leads.</span>
+            <span class="att-hero-title-line att-line-outline">Drive Growth.</span>
+          </h1>
+
+          <!-- Subtitle -->
+          <p class="att-hero-sub">
+            Your website shouldn't just exist—it should generate qualified enquiries, build credibility, and support your sales team every day.
+            <!-- We combine strategy, UX, development, SEO, and AI-ready optimization to create websites that become your highest-performing business asset. -->
+          </p>
+
+          <!-- Positioning line -->
+          <p class="att-hero-position">
+            Designed for businesses that are ready to grow — not just go online.
+          </p>
+
+          <!-- CTAs -->
+          <div class="att-hero-ctas">
+            <a class="att-hero-btn att-btn-primary"
+              href="https://wa.me/917975859061/?text=I%20need%20to%20Book%20Your%20Free%20Strategy%20Call.">
+              Book Your Free Strategy Call
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
+                <path d="M2 12L12 2M12 2H5M12 2V9" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </a>
+            <a href="/projects" class="att-hero-btn att-btn-ghost">
+              See Client Results
+            </a>
+          </div>
+
+          <!-- Trust strip -->
+          <div class="att-hero-trust">
+            <span>No commitment</span>
+            <span aria-hidden="true">·</span>
+            <span>Scoped to your goals</span>
+            <span aria-hidden="true">·</span>
+            <span>Results from week one</span>
           </div>
         </div>
-        <div class="d-none row align-items-end align-items-xl-end">
-          <div class="amorboy animate__animated animate__slideInDown" style="animation-duration: 8s">
-            <img src="../assets/img/amorboy/am-fly-1.png" alt="" />
-            <img src="../assets/img/amorboy/am-doing.png" alt="" />
-          </div>
-          <div class="col-lg-5 col-md-10 mx-auto animate__animated fadeInUp" style="animation-duration: 2s">
-            <div class="contact-form-box banner-form">
-              <h3 class="title text-center">
-                <span class="gradient-text blue-dark">Unlock</span> Your Online
-                <span class="gradient-text yellow-dark">Potential</span>
-              </h3>
-              <form class="amor-contact-form">
-                <div class="form-group mb--40">
-                  <textarea name="contact-message" id="message" class="form-control textarea" v-model="message"
-                    cols="30" rows="2" placeholder="How can we help you?" required></textarea>
-                </div>
-                <div class="form-group">
-                  <input type="text" v-model="from_name" class="form-control" name="contact-name" placeholder="Your Name" required="" />
-                </div>
-                <div class="form-group">
-                  <input type="email" v-model="email" class="form-control" name="contact-email" placeholder="Your Email" required />
-                </div>
-                <div class="form-group mb--40">
-                  <input type="tel" class="form-control" v-model="phoneNumber" name="contact-phone" placeholder="Your Phone" required />
-                </div>
-                <div class="form-group">
-                  <button @click="sendMail" type="button" class="amor-btn btn-borderd btn-fluid light" name="submit-btn" :disabled="disableBtn">
-                    Get My Free Audit
-                  </button>
-                </div>
-              </form>
-            </div>
-          </div>
+
+        <!-- ── Right: Live proof panel ── -->
+        <div class="att-hero-panel" aria-hidden="true">
+
+          <AuditWidget />
         </div>
       </div>
-      <ul class="list-unstyled shape-group-banner">
-        <li class="shape shape-1"><img src="../assets/img/shapes/bubble-39.png" alt="Bubble" /></li>
-        <li class="shape shape-2"><img src="../assets/img/shapes/bubble-38.png" alt="Bubble" /></li>
-        <li class="shape shape-3"><img src="../assets/img/shapes/bubble-14.png" alt="Bubble" /></li>
-        <li class="shape shape-4"><img src="../assets/img/shapes/bubble-14.png" alt="Bubble" /></li>
-        <li class="shape shape-5"><img src="../assets/img/shapes/bubble-14.png" alt="Bubble" /></li>
-        <li class="shape shape-6"><img src="../assets/img/shapes/bubble-40.png" alt="Bubble" /></li>
-        <li class="shape shape-7"><img src="../assets/img/shapes/bubble-41.png" alt="Bubble" /></li>
-        <li class="shape shape-8"><img src="../assets/img/shapes/bubble-14.png" alt="Bubble" /></li>
-        <li class="shape shape-9"><img src="../assets/img/shapes/bubble-40.png" alt="Bubble" /></li>
+
+      <!-- ── Metrics rail (full-width bottom strip) ── -->
+      <div class="att-hero-metrics-rail">
+        <div class="att-hero-metric">
+          <span class="att-hero-metric-num gradient-text blue-light">30+</span>
+          <span class="att-hero-metric-label">Projects Delivered</span>
+        </div>
+        <div class="att-hero-metric-divider" aria-hidden="true"></div>
+        <div class="att-hero-metric">
+          <span class="att-hero-metric-num gradient-text yellow-light">10+</span>
+          <span class="att-hero-metric-label">Business Industries</span>
+        </div>
+        <div class="att-hero-metric-divider" aria-hidden="true"></div>
+        <div class="att-hero-metric">
+          <span class="att-hero-metric-num gradient-text green-light">98%</span>
+          <span class="att-hero-metric-label">Client Satisfaction</span>
+        </div>
+        <div class="att-hero-metric-divider" aria-hidden="true"></div>
+        <div class="att-hero-metric">
+          <span class="att-hero-metric-num gradient-text text-lr">100%</span>
+          <span class="att-hero-metric-label">Custom Strategy</span>
+        </div>
+      </div>
+
+      <!-- Shapes (kept for existing CSS compatibility) -->
+      <ul class="list-unstyled shape-group-banner" aria-hidden="true">
+        <li class="shape shape-1"><img src="../assets/img/shapes/bubble-39.png" alt="" /></li>
+        <li class="shape shape-2"><img src="../assets/img/shapes/bubble-38.png" alt="" /></li>
+        <li class="shape shape-6"><img src="../assets/img/shapes/bubble-40.png" alt="" /></li>
+        <li class="shape shape-7"><img src="../assets/img/shapes/bubble-41.png" alt="" /></li>
       </ul>
     </div>
 
@@ -725,26 +726,70 @@ onBeforeUnmount(() => {
           </p>
         </div>
         <div class="grid md:grid-cols-3 gap-6">
-          <div class="motion-card bg-dark p-10 rounded-2xl text-center hover:shadow-xl transition-shadow hover:scale-[1.02] transition-all">
-            <div class="w-16 h-16 bg-blue-300 text-blue-600 rounded-full flex items-center justify-center mx-auto mb-6">
-              <span class="material-symbols-outlined text-3xl">apartment</span>
+          <div class="motion-card group relative bg-dark p-8 rounded-2xl text-center border border-white/5 overflow-hidden transition-all duration-300 hover:scale-[1.02] hover:border-blue-400/30 hover:shadow-[0_30px_80px_-24px_rgba(96,165,250,0.35)]">
+            <div class="relative w-16 h-16 mx-auto mb-6">
+              <div class="absolute inset-0 rounded-full bg-blue-400 blur-xl opacity-30 group-hover:opacity-50 transition-opacity duration-300"></div>
+              <div class="relative w-16 h-16 rounded-full flex items-center justify-center bg-blue-400/10 border border-blue-400/30">
+                <span class="material-symbols-outlined text-3xl text-blue-400">terminal</span>
+              </div>
             </div>
-            <h4 class="font-medium mb-3 d-block text-lg" style="font-weight: 500;">Real Estate &amp; Professional Services</h4>
-            <p class="text-slate-300">Firms where trust is decided before the first call — and the website is doing that work, or isn't.</p>
+            <h4 class="font-semibold mb-3 d-block text-lg text-blue-400" style="font-weight: 600;">SaaS &amp; Technology</h4>
+            <p class="text-slate-300 text-sm leading-relaxed">Founders and product teams who need a site that holds up in front of investors, not just visitors.</p>
           </div>
-          <div class="motion-card bg-dark p-10 rounded-2xl text-center hover:shadow-xl transition-shadow hover:scale-[1.02] transition-all">
-            <div class="w-16 h-16 bg-indigo-300 text-indigo-600 rounded-full flex items-center justify-center mx-auto mb-6">
-              <span class="material-symbols-outlined text-3xl">monitoring</span>
+
+          <div class="motion-card group relative bg-dark p-8 rounded-2xl text-center border border-white/5 overflow-hidden transition-all duration-300 hover:scale-[1.02] hover:border-orange-400/30 hover:shadow-[0_30px_80px_-24px_rgba(251,146,60,0.35)]">
+            <div class="relative w-16 h-16 mx-auto mb-6">
+              <div class="absolute inset-0 rounded-full bg-orange-400 blur-xl opacity-30 group-hover:opacity-50 transition-opacity duration-300"></div>
+              <div class="relative w-16 h-16 rounded-full flex items-center justify-center bg-orange-400/10 border border-orange-400/30">
+                <span class="material-symbols-outlined text-3xl text-orange-400">precision_manufacturing</span>
+              </div>
             </div>
-            <h4 class="font-medium mb-3 d-block medium text-lb" style="font-weight: 500;">SaaS &amp; Startups</h4>
-            <p class="text-slate-300">Founders who need a site that holds up in front of investors, not just visitors.</p>
+            <h4 class="font-semibold mb-3 d-block text-lg text-orange-400" style="font-weight: 600;">Manufacturing &amp; Industrial</h4>
+            <p class="text-slate-300 text-sm leading-relaxed">Established operators whose digital presence still undersells the scale and precision of what they actually deliver.</p>
           </div>
-          <div class="motion-card bg-dark p-10 rounded-2xl text-center hover:shadow-xl transition-shadow hover:scale-[1.02] transition-all">
-            <div class="w-16 h-16 bg-purple-300 text-purple-600 rounded-full flex items-center justify-center mx-auto mb-6">
-              <span class="material-symbols-outlined text-3xl">precision_manufacturing</span>
+
+          <div class="motion-card group relative bg-dark p-8 rounded-2xl text-center border border-white/5 overflow-hidden transition-all duration-300 hover:scale-[1.02] hover:border-emerald-400/30 hover:shadow-[0_30px_80px_-24px_rgba(52,211,153,0.35)]">
+            <div class="relative w-16 h-16 mx-auto mb-6">
+              <div class="absolute inset-0 rounded-full bg-emerald-400 blur-xl opacity-30 group-hover:opacity-50 transition-opacity duration-300"></div>
+              <div class="relative w-16 h-16 rounded-full flex items-center justify-center bg-emerald-400/10 border border-emerald-400/30">
+                <span class="material-symbols-outlined text-3xl text-emerald-400">apartment</span>
+              </div>
             </div>
-            <h4 class="font-medium mb-3 d-block medium text-lr" style="font-weight: 500;">Manufacturing &amp; Healthcare</h4>
-            <p class="text-slate-300">Established operators whose digital presence still undersells what the business actually delivers.</p>
+            <h4 class="font-semibold mb-3 d-block text-lg text-emerald-400" style="font-weight: 600;">Real Estate</h4>
+            <p class="text-slate-300 text-sm leading-relaxed">Firms where trust is decided before the first call — and the website is doing that work, or isn't.</p>
+          </div>
+
+          <div class="motion-card group relative bg-dark p-8 rounded-2xl text-center border border-white/5 overflow-hidden transition-all duration-300 hover:scale-[1.02] hover:border-teal-400/30 hover:shadow-[0_30px_80px_-24px_rgba(45,212,191,0.35)]">
+            <div class="relative w-16 h-16 mx-auto mb-6">
+              <div class="absolute inset-0 rounded-full bg-teal-400 blur-xl opacity-30 group-hover:opacity-50 transition-opacity duration-300"></div>
+              <div class="relative w-16 h-16 rounded-full flex items-center justify-center bg-teal-400/10 border border-teal-400/30">
+                <span class="material-symbols-outlined text-3xl text-teal-400">handshake</span>
+              </div>
+            </div>
+            <h4 class="font-semibold mb-3 d-block text-lg text-teal-400" style="font-weight: 600;">Professional Services</h4>
+            <p class="text-slate-300 text-sm leading-relaxed">Advisory and consulting firms where credibility is the product, and the site is often the first proof of it.</p>
+          </div>
+
+          <div class="motion-card group relative bg-dark p-8 rounded-2xl text-center border border-white/5 overflow-hidden transition-all duration-300 hover:scale-[1.02] hover:border-rose-400/30 hover:shadow-[0_30px_80px_-24px_rgba(251,113,133,0.35)]">
+            <div class="relative w-16 h-16 mx-auto mb-6">
+              <div class="absolute inset-0 rounded-full bg-rose-400 blur-xl opacity-30 group-hover:opacity-50 transition-opacity duration-300"></div>
+              <div class="relative w-16 h-16 rounded-full flex items-center justify-center bg-rose-400/10 border border-rose-400/30">
+                <span class="material-symbols-outlined text-3xl text-rose-400">medical_services</span>
+              </div>
+            </div>
+            <h4 class="font-semibold mb-3 d-block text-lg text-rose-400" style="font-weight: 600;">Healthcare</h4>
+            <p class="text-slate-300 text-sm leading-relaxed">Providers and healthcare businesses that need to build patient trust digitally, without sacrificing compliance or clarity.</p>
+          </div>
+
+          <div class="motion-card group relative bg-dark p-8 rounded-2xl text-center border border-white/5 overflow-hidden transition-all duration-300 hover:scale-[1.02] hover:border-violet-400/30 hover:shadow-[0_30px_80px_-24px_rgba(167,139,250,0.35)]">
+            <div class="relative w-16 h-16 mx-auto mb-6">
+              <div class="absolute inset-0 rounded-full bg-violet-400 blur-xl opacity-30 group-hover:opacity-50 transition-opacity duration-300"></div>
+              <div class="relative w-16 h-16 rounded-full flex items-center justify-center bg-violet-400/10 border border-violet-400/30">
+                <span class="material-symbols-outlined text-3xl text-violet-400">rocket_launch</span>
+              </div>
+            </div>
+            <h4 class="font-semibold mb-3 d-block text-lg text-violet-400" style="font-weight: 600;">Growth-Stage Startups</h4>
+            <p class="text-slate-300 text-sm leading-relaxed">Teams past the MVP stage, scaling fast, who need a site and brand that can keep pace with the round they're raising.</p>
           </div>
         </div>
       </div>
@@ -825,7 +870,7 @@ onBeforeUnmount(() => {
               <span>Traditional Agency</span>
             </div>
             <div class="att-col-label att-col-label--after">
-              <span class="att-label-dot att-label-dot--green">
+              <span class="att-label-dot att-label-dot--gold">
                 <span class="material-icons-outlined" style="font-size: 11px">check</span>
               </span>
               <span>Amortree</span>
@@ -835,11 +880,15 @@ onBeforeUnmount(() => {
           <!-- Pair 1 -->
           <div class="att-why-pair">
             <div class="att-why-cell att-cell-before">
-              <span class="material-symbols-outlined att-cell-icon">bolt</span>
+              <span class="att-cell-icon-badge att-cell-icon-badge--before">
+                <span class="material-symbols-outlined att-cell-icon">bolt</span>
+              </span>
               <p class="att-cell-label">Designs first, asks strategy questions later — if at all.</p>
             </div>
             <div class="att-why-cell att-cell-after">
-              <span class="material-symbols-outlined att-cell-icon">target</span>
+              <span class="att-cell-icon-badge att-cell-icon-badge--after">
+                <span class="material-symbols-outlined att-cell-icon">target</span>
+              </span>
               <p class="att-cell-label"><strong>Strategy before screens.</strong> Every visual decision traces back to a defined conversion goal.</p>
             </div>
           </div>
@@ -847,11 +896,15 @@ onBeforeUnmount(() => {
           <!-- Pair 2 -->
           <div class="att-why-pair">
             <div class="att-why-cell att-cell-before">
-              <span class="material-symbols-outlined att-cell-icon">thumb_down</span>
+              <span class="att-cell-icon-badge att-cell-icon-badge--before">
+                <span class="material-symbols-outlined att-cell-icon">thumb_down</span>
+              </span>
               <p class="att-cell-label">Measures success by deliverables shipped, not revenue moved.</p>
             </div>
             <div class="att-why-cell att-cell-after">
-              <span class="material-symbols-outlined att-cell-icon">trending_up</span>
+              <span class="att-cell-icon-badge att-cell-icon-badge--after">
+                <span class="material-symbols-outlined att-cell-icon">trending_up</span>
+              </span>
               <p class="att-cell-label"><strong>Measured against business results.</strong> We track conversion lift, pipeline velocity, and ROAS — not just task completion.</p>
             </div>
           </div>
@@ -859,11 +912,15 @@ onBeforeUnmount(() => {
           <!-- Pair 3 -->
           <div class="att-why-pair">
             <div class="att-why-cell att-cell-before">
-              <span class="material-symbols-outlined att-cell-icon">casino</span>
+              <span class="att-cell-icon-badge att-cell-icon-badge--before">
+                <span class="material-symbols-outlined att-cell-icon">casino</span>
+              </span>
               <p class="att-cell-label">Creative direction based on gut feel and trend-chasing.</p>
             </div>
             <div class="att-why-cell att-cell-after">
-              <span class="material-symbols-outlined att-cell-icon">analytics</span>
+              <span class="att-cell-icon-badge att-cell-icon-badge--after">
+                <span class="material-symbols-outlined att-cell-icon">analytics</span>
+              </span>
               <p class="att-cell-label"><strong>Decisions backed by data.</strong> We audit your current metrics before recommending a single screen.</p>
             </div>
           </div>
@@ -871,11 +928,15 @@ onBeforeUnmount(() => {
           <!-- Pair 4 -->
           <div class="att-why-pair">
             <div class="att-why-cell att-cell-before">
-              <span class="material-symbols-outlined att-cell-icon">logout</span>
+              <span class="att-cell-icon-badge att-cell-icon-badge--before">
+                <span class="material-symbols-outlined att-cell-icon">logout</span>
+              </span>
               <p class="att-cell-label">Hands off the file and disappears after launch day.</p>
             </div>
             <div class="att-why-cell att-cell-after">
-              <span class="material-symbols-outlined att-cell-icon">handshake</span>
+              <span class="att-cell-icon-badge att-cell-icon-badge--after">
+                <span class="material-symbols-outlined att-cell-icon">handshake</span>
+              </span>
               <p class="att-cell-label"><strong>A partner past launch day.</strong> We keep tuning against live data long after the site goes live.</p>
             </div>
           </div>
@@ -891,11 +952,11 @@ onBeforeUnmount(() => {
               <span class="text-ly">HOW WE HELP</span>
             </div>
             <h2 class="font-bold text-light mb-0" style="font-weight: 600">
-              Choose the <span class="text-ly">Growth Path</span> That Fits Your Business
+              Choose the Right <span class="text-ly">Growth System</span> for Your Business
             </h2>
           </div>
           <p class="motion-text text-slate-100 max-w-sm mb-0">
-            Every engagement is tailored to your business goals—not a predefined package.
+            We don't sell fixed packages. We build the right system based on your business model and growth goals.
           </p>
         </div>
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -904,9 +965,9 @@ onBeforeUnmount(() => {
               <span class="material-icons-outlined text-3xl">hub</span>
             </div>
             <h4 class="text-2xl font-bolder mb-3" style="font-weight: 600">
-              <a href="/lead-generation" class="text-white text-decoration-none">Lead Generation Systems</a>
+              <a href="/lead-generation" class="text-white text-decoration-none">Generate More Qualified Leads</a>
             </h4>
-            <p class="text-slate-300 mb-6 flex-grow">For B2B and service businesses that need a website to do the qualifying, not just the introducing.</p>
+            <p class="text-slate-300 mb-6 flex-grow">Perfect for businesses that rely on inbound enquiries.</p>
             <ul class="space-y-3 mb-8 text-sm p-0">
               <li class="flex items-center gap-2"><span class="material-icons-outlined text-green-500 text-sm">check_circle</span>Professional Services</li>
               <li class="flex items-center gap-2"><span class="material-icons-outlined text-green-500 text-sm">check_circle</span>Healthcare</li>
@@ -923,7 +984,7 @@ onBeforeUnmount(() => {
             <div class="w-14 h-14 bg-white/10 text-white rounded-lg flex items-center justify-center mb-6">
               <span class="material-icons-outlined text-3xl">shopping_bag</span>
             </div>
-            <h4 class="text-2xl font-bold mb-3 text-white" style="font-weight: 600">E-commerce Growth Systems</h4>
+            <h4 class="text-2xl font-bold mb-3 text-white" style="font-weight: 600">Grow Online Sales</h4>
             <p class="text-slate-300 mb-6 flex-grow">For Shopify and custom stores where the storefront is the limiting factor on revenue, not traffic.</p>
             <ul class="space-y-3 mb-8 text-sm text-slate-200 font-medium p-0">
               <li class="flex items-center gap-2"><span class="material-icons-outlined text-primary text-sm">check_circle</span>Shopify Stores</li>
@@ -940,7 +1001,7 @@ onBeforeUnmount(() => {
             <div class="w-14 h-14 bg-purple-500/10 text-purple-500 rounded-lg flex items-center justify-center mb-6">
               <span class="material-icons-outlined text-3xl">rocket_launch</span>
             </div>
-            <h4 class="text-2xl font-bold mb-3" style="font-weight: 600">Startup Launch Foundations</h4>
+            <h4 class="text-2xl font-bold mb-3" style="font-weight: 600">Launch With Confidence</h4>
             <p class="text-slate-300 mb-6 flex-grow">For founders who need a product and site that hold up in front of investors and early customers alike.</p>
             <ul class="space-y-3 mb-8 text-sm p-0">
               <li class="flex items-center gap-2"><span class="material-icons-outlined text-green-500 text-sm">check_circle</span>SaaS</li>
@@ -1244,7 +1305,7 @@ onBeforeUnmount(() => {
       </div>
 
       <div class="d-lg-flex justify-content-center" style="padding: 3rem 0 0">
-        <a class="amor-btn btn-borderd light" href="/case-studies">Explore Case Studies</a>
+        <a class="amor-btn btn-borderd light" href="/projects">Explore Projects</a>
       </div>
     </section>
 
@@ -1306,7 +1367,7 @@ onBeforeUnmount(() => {
               <img src="../assets/img/project/c9/icon-sd.svg" class="m-0" style="height: 40px" alt="Samsiddhi Logo" />
               <div>
                 <p class="font-bold text-white uppercase text-sm tracking-widest mb-1">Bharathkumar MS</p>
-                <small class="text-xs text-ll font-bold mb-0">Founder, Samsiddhi Designs</small>
+                <small class="text-xs text-ll font-bold mb-0">Manager, Samsiddhi Designs</small>
               </div>
             </div>
           </div>
@@ -1417,7 +1478,7 @@ onBeforeUnmount(() => {
               and healthcare businesses. These are sectors where trust is earned before the first call — and the
               website is doing that work, or it isn't.
             </p>
-            <a href="/case-studies" class="att-answer-link">See our case studies &rarr;</a>
+            <a href="/projects" class="att-answer-link">See our Projects &rarr;</a>
           </div>
           <div class="att-faq-answer d-none" data-answer="4">
             <h3 class="att-answer-q">What happens after I book a strategy call?</h3>
@@ -1458,6 +1519,553 @@ onBeforeUnmount(() => {
 </template>
 
 <style lang="scss" scoped>
+// ── Core layout ──────────────────────────────────────────────────
+.att-hero {
+  position: relative;
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  overflow: hidden;
+  isolation: isolate;
+}
+
+// ── Ambient layers ────────────────────────────────────────────────
+.att-hero-grid {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background-image: url(../assets/img/banner-bg.svg);
+  background-attachment: fixed;
+  background-position: center -8.625rem;
+  background-size: cover;
+  background-repeat: no-repeat;
+  pointer-events: none;
+
+  &:after {
+    content: "";
+    height: 100%;
+    left: 0;
+    opacity: 0.8;
+    background: linear-gradient(180deg, var(--color-light) 25%, var(--color-light) 100%);
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: -2;
+  }
+}
+
+.att-hero-glow {
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.att-hero-glow--gold {
+  width: 700px;
+  height: 700px;
+  top: -15%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: radial-gradient(circle, rgba(250,204,21,0.09) 0%, rgba(250,204,21,0.04) 40%, transparent 70%);
+  filter: blur(60px);
+}
+
+.att-hero-glow--blue {
+  width: 500px;
+  height: 500px;
+  top: 10%;
+  right: -8%;
+  background: radial-gradient(circle, rgba(99,102,241,0.08) 0%, transparent 65%);
+  filter: blur(70px);
+}
+
+.att-hero-canvas {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  pointer-events: none;
+  opacity: 0.4;
+}
+
+// ── Main two-column layout ─────────────────────────────────────────
+.att-hero-wrap {
+  position: relative;
+  z-index: 1;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 9rem 4rem 2rem;
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 5rem;
+  align-items: center;
+  width: 100%;
+
+  @media (max-width: 1024px) {
+    grid-template-columns: 1fr;
+    gap: 3.5rem;
+    padding: 7rem 2rem 3rem;
+  }
+
+  @media (max-width: 768px) {
+    padding: 7rem 1.25rem 2.5rem;
+  }
+}
+
+// ── Copy column ───────────────────────────────────────────────────
+.att-hero-copy {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+// Eyebrow
+.att-hero-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.45rem 1rem;
+  border: 1px solid rgba(250,204,21,0.25);
+  border-radius: 999px;
+  background: rgba(250,204,21,0.06);
+  width: fit-content;
+  margin-bottom: 2rem;
+  will-change: transform, opacity;
+}
+
+.att-hero-eyebrow-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #facc15;
+  flex-shrink: 0;
+  animation: att-pulse-dot 2s ease-in-out infinite;
+}
+
+@keyframes att-pulse-dot {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50%       { opacity: 0.4; transform: scale(1.4); }
+}
+
+.att-hero-eyebrow-text {
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #facc15;
+
+  @media (max-width: 768px) {
+    font-size: 0.625rem;
+  }
+}
+
+.att-hero-eyebrow-sep {
+  color: rgba(250,204,21,0.35);
+  font-size: 0.75rem;
+}
+
+// Headline
+.att-hero-title {
+  font-size: clamp(2.8rem, 5.5vw, 4.125rem);
+  font-weight: 800;
+  line-height: 1.05;
+  letter-spacing: -0.025em;
+  margin: 0 0 1.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.08em;
+}
+
+.att-hero-title-line {
+  display: block;
+  will-change: transform, opacity;
+}
+
+.att-line-solid {
+  color: #f8fafc;
+}
+
+// "Generate Leads." — yellow filled
+.att-line-accent {
+  color: #facc15;
+}
+
+// "Drive Growth." — outline text, the signature element
+.att-line-outline {
+  color: transparent;
+  -webkit-text-stroke: 2px rgba(248,250,252,0.55);
+  text-stroke: 2px rgba(248,250,252,0.55);
+  transition: -webkit-text-stroke-color 0.3s ease;
+
+  .att-hero:hover & {
+    -webkit-text-stroke-color: rgba(250,204,21,0.7);
+  }
+}
+
+// Subtitle
+.att-hero-sub {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: #94a3b8;
+  max-width: 52ch;
+  margin: 0 0 1rem;
+  will-change: transform, opacity;
+}
+
+// Positioning line
+.att-hero-position {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #facc15;
+  margin: 0 0 2.25rem;
+  will-change: transform, opacity;
+}
+
+// CTAs
+.att-hero-ctas {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-bottom: 1.5rem;
+  will-change: transform, opacity;
+}
+
+.att-hero-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  padding: 0.85rem 1.75rem;
+  border-radius: 999px;
+  font-size: 0.88rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-decoration: none;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease, border-color 0.2s ease;
+  cursor: pointer;
+  border: 1px solid transparent;
+
+  &:hover { transform: translateY(-2px); }
+}
+
+.att-btn-primary {
+  background: #facc15;
+  color: #0f172a;
+
+  &:hover {
+    background: #f0b429;
+    box-shadow: 0 12px 36px rgba(250,204,21,0.35);
+  }
+}
+
+.att-btn-ghost {
+  border-color: rgba(255,255,255,0.18);
+  color: rgba(248,250,252,0.75);
+  background: transparent;
+
+  &:hover {
+    border-color: rgba(255,255,255,0.4);
+    color: #f8fafc;
+    background: rgba(255,255,255,0.05);
+  }
+}
+
+// Trust strip
+.att-hero-trust {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 0.72rem;
+  letter-spacing: 0.06em;
+  color: #475569;
+  will-change: transform, opacity;
+
+  span[aria-hidden] { color: #334155; }
+}
+
+// ── Right panel ───────────────────────────────────────────────────
+.att-hero-panel {
+  position: relative;
+  will-change: transform, opacity;
+
+  @media (max-width: 1024px) {
+    max-width: 520px;
+    margin: 0 auto;
+    width: 100%;
+  }
+}
+
+// Main card
+.att-panel-card {
+  background: linear-gradient(160deg, #121218 0%, #1a1a24 100%);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 1.5rem;
+  padding: 1.75rem;
+  position: relative;
+  overflow: hidden;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: -1px;
+    left: 32px;
+    right: 32px;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(250,204,21,0.4), transparent);
+  }
+}
+
+.att-panel-card-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
+}
+
+.att-panel-status {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #4ade80;
+  font-weight: 600;
+}
+
+.att-panel-status-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #22c55e;
+  animation: att-pulse-dot 2s ease-in-out infinite;
+}
+
+.att-panel-score {
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: #facc15;
+  border: 1px solid rgba(250,204,21,0.2);
+  background: rgba(250,204,21,0.08);
+  padding: 0.25rem 0.65rem;
+  border-radius: 999px;
+  letter-spacing: 0.04em;
+}
+
+// Metric bars
+.att-panel-metrics {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.att-panel-metric {}
+
+.att-panel-metric-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 0.35rem;
+}
+
+.att-panel-metric-label {
+  font-size: 0.72rem;
+  color: #64748b;
+  letter-spacing: 0.04em;
+}
+
+.att-panel-metric-val {
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: #facc15;
+  font-variant-numeric: tabular-nums;
+}
+
+.att-panel-bar {
+  height: 5px;
+  background: rgba(255,255,255,0.06);
+  border-radius: 99px;
+  overflow: hidden;
+}
+
+.att-panel-bar-fill {
+  height: 100%;
+  background: #facc15;
+  border-radius: 99px;
+  width: 0; // animated in by GSAP
+  transition: width 1s ease;
+  box-shadow: 0 0 8px rgba(250,204,21,0.3);
+}
+
+.att-bar-blue  { background: #60a5fa; box-shadow: 0 0 8px rgba(96,165,250,0.3); }
+.att-bar-green { background: #4ade80; box-shadow: 0 0 8px rgba(74,222,128,0.3); }
+
+// Floating ROAS card
+.att-panel-roas {
+  position: absolute;
+  top: -1.25rem;
+  right: -1rem;
+  background: #0f172a;
+  border: 1px solid rgba(250,204,21,0.2);
+  border-radius: 1rem;
+  padding: 0.85rem 1.15rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  box-shadow: 0 16px 48px rgba(0,0,0,0.5);
+  z-index: 2;
+  animation: att-float-a 5s ease-in-out infinite;
+
+  @media (max-width: 480px) { display: none; }
+}
+
+.att-panel-roas-icon {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: rgba(250,204,21,0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #facc15;
+
+  .material-symbols-outlined { font-size: 1.1rem; }
+}
+
+.att-panel-roas-val {
+  font-size: 1.35rem;
+  font-weight: 900;
+  color: #facc15;
+  line-height: 1;
+  font-variant-numeric: tabular-nums;
+}
+
+.att-panel-roas-label {
+  font-size: 0.62rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #475569;
+  margin-top: 0.15rem;
+}
+
+// Floating mini badges
+.att-panel-badge {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.5rem 0.9rem;
+  border-radius: 999px;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  z-index: 2;
+  backdrop-filter: blur(8px);
+
+  .material-symbols-outlined { font-size: 0.9rem; }
+}
+
+.att-badge-clients {
+  bottom: -1rem;
+  left: -1.5rem;
+  background: rgba(96,165,250,0.12);
+  border: 1px solid rgba(96,165,250,0.25);
+  color: #93c5fd;
+  animation: att-float-b 6s ease-in-out infinite;
+
+  @media (max-width: 480px) { display: none; }
+}
+
+.att-badge-satisfaction {
+  bottom: 2.5rem;
+  left: -2rem;
+  background: rgba(74,222,128,0.1);
+  border: 1px solid rgba(74,222,128,0.2);
+  color: #86efac;
+  animation: att-float-c 7s ease-in-out infinite;
+
+  @media (max-width: 480px) { display: none; }
+}
+
+@keyframes att-float-a {
+  0%, 100% { transform: translateY(0px); }
+  50%       { transform: translateY(-8px); }
+}
+@keyframes att-float-b {
+  0%, 100% { transform: translateY(0px) translateX(0px); }
+  50%       { transform: translateY(-5px) translateX(4px); }
+}
+@keyframes att-float-c {
+  0%, 100% { transform: translateY(0px); }
+  40%       { transform: translateY(6px); }
+}
+
+// ── Metrics rail ──────────────────────────────────────────────────
+.att-hero-metrics-rail {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  border-top: 1px solid rgba(255,255,255,0.06);
+  background: rgba(255,255,255,0.02);
+  margin-top: auto;
+
+  @media (max-width: 768px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.att-hero-metric {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1.75rem 1rem;
+  gap: 0.35rem;
+  border-right: 1px solid rgba(255,255,255,0.06);
+
+  &:last-child { border-right: none; }
+
+  @media (max-width: 768px) {
+    &:nth-child(3) { border-right: none; } // 2-col: 3rd item no right border
+    &:nth-child(2n) { border-right: none; }
+    &:nth-child(3), &:nth-child(4) { border-top: 1px solid rgba(255,255,255,0.06); }
+  }
+}
+
+.att-hero-metric-divider { display: none; } // handled by grid border-right
+
+.att-hero-metric-num {
+  font-size: 1.75rem;
+  font-weight: 800;
+  line-height: 1;
+  font-variant-numeric: tabular-nums;
+}
+
+.att-hero-metric-label {
+  font-size: 0.6rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #475569;
+  font-weight: 500;
+  text-align: center;
+}
+
+// ── Responsive ────────────────────────────────────────────────────
+@media (max-width: 640px) {
+  .att-hero-title { font-size: clamp(3rem, 8vw, 3.2rem); }
+  .att-hero-ctas  { 
+    display: grid;
+    justify-content: center; 
+  }
+  .att-hero-trust { flex-wrap: wrap; }
+}
 // ─── Base page ────────────────────────────────────────────────────────────────
 .home-motion-page {
   overflow-x: hidden;
@@ -1576,9 +2184,10 @@ onBeforeUnmount(() => {
   display: flex;
   flex-direction: column;
   gap: 0;
-  border: 1px solid #e2e8f0;
-  border-radius: 1.25rem;
+  border: 1px solid rgba(15, 23, 42, 0.08);
+  border-radius: 1.5rem;
   overflow: hidden;
+  box-shadow: 0 50px 100px -40px rgba(15, 23, 42, 0.16);
 }
 
 .att-why-label-row {
@@ -1590,20 +2199,26 @@ onBeforeUnmount(() => {
     display: flex;
     align-items: center;
     gap: 0.5rem;
-    padding: 0.75rem 1.5rem;
+    padding: 0.85rem 1.5rem;
     font-size: 0.65rem;
     font-weight: 900;
     text-transform: uppercase;
     letter-spacing: 0.18em;
     color: #64748b;
 
-    &--before { border-right: 1px solid rgba(255,255,255,0.06); }
-    &--after { color: #94a3b8; }
+    &--before {
+      background: rgba(239, 68, 68, 0.05);
+      border-right: 1px solid rgba(255, 255, 255, 0.06);
+    }
+    &--after {
+      background: rgba(228, 197, 53, 0.1);
+      color: #f4de85;
+    }
   }
 
   .att-label-dot {
-    width: 18px;
-    height: 18px;
+    width: 20px;
+    height: 20px;
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -1611,7 +2226,11 @@ onBeforeUnmount(() => {
     flex-shrink: 0;
 
     &--red  { background: rgba(239,68,68,0.15); color: #f87171; }
-    &--green { background: rgba(34,197,94,0.15); color: #4ade80; }
+    &--gold {
+      background: rgba(228, 197, 53, 0.18);
+      color: #e4c535;
+      box-shadow: 0 0 0 4px rgba(228, 197, 53, 0.1);
+    }
   }
 }
 
@@ -1626,8 +2245,9 @@ onBeforeUnmount(() => {
 .att-why-cell {
   display: flex;
   align-items: flex-start;
-  gap: 1rem;
+  gap: 1.1rem;
   padding: 1.75rem 2rem;
+  transition: background 0.3s ease;
 
   // Clip-path starts collapsed — GSAP animates it open
   clip-path: inset(0 0 0 0);
@@ -1636,32 +2256,63 @@ onBeforeUnmount(() => {
     background: #fafafa;
     border-right: 1px solid #e2e8f0;
 
-    .att-cell-icon { color: #fca5a5; }
     .att-cell-label { color: #64748b; }
   }
 
   &.att-cell-after {
-    background: #fff;
+    background: linear-gradient(135deg, #fffefb 0%, #fffbeb 100%);
+    box-shadow: inset 3px 0 0 0 rgba(228, 197, 53, 0.55);
 
-    .att-cell-icon { color: #facc15; }
     .att-cell-label {
       color: #1e293b;
-      strong { color: #0f172a; }
+
+      strong {
+        color: #0f172a;
+        background: linear-gradient(120deg, rgba(228, 197, 53, 0.28), rgba(228, 197, 53, 0.28)) no-repeat;
+        background-size: 100% 40%;
+        background-position: 0 88%;
+        padding: 0 0.15rem;
+      }
     }
+  }
+
+  &:hover.att-cell-after {
+    background: linear-gradient(135deg, #fffdf5 0%, #fef7de 100%);
+  }
+}
+
+.att-cell-icon-badge {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  margin-top: 0.05rem;
+
+  &--before {
+    background: rgba(239, 68, 68, 0.07);
+  }
+  &--after {
+    background: rgba(228, 197, 53, 0.14);
+    box-shadow: 0 0 0 1px rgba(228, 197, 53, 0.3) inset;
   }
 }
 
 .att-cell-icon {
-  font-size: 1.5rem;
-  flex-shrink: 0;
-  margin-top: 0.1rem;
+  font-size: 1.35rem;
   will-change: transform, opacity;
 }
 
+.att-cell-icon-badge--before .att-cell-icon { color: #fca5a5; }
+.att-cell-icon-badge--after .att-cell-icon { color: #c9a227; }
+
 .att-cell-label {
-  font-size: 0.875rem;
-  line-height: 1.6;
+  font-size: 0.9375rem;
+  line-height: 1.65;
   margin: 0;
+  padding-top: 0.35rem;
 }
 
 @media (max-width: 768px) {
