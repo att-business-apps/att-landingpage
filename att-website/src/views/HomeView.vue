@@ -16,6 +16,92 @@ let gsapContext;
 let pointerCleanup;
 let structuredDataScript;
 
+// ─── Testimonials carousel ───────────────────────────────────────────
+const testimonials = [
+  {
+    quote: "Hi, I just wanted to take a moment to express my sincere appreciation for the outstanding work you've done. Completing it on time and to such a high standard is a testament to your dedication and expertise.",
+    author: "Sandeep L",
+    role: "Co-Founder, Solved Cube IT Solutions",
+    logo: new URL("../assets/img/project/c2/icon-sc.svg", import.meta.url).href,
+    stars: 5,
+    tag: "Web Design & Branding",
+  },
+  {
+    quote: "They did an excellent job on our website. They were highly understanding of our needs, thoughtful in their design approach, and very practical in aligning their ideas with our vision.",
+    author: "Ganesh Moorthy",
+    role: "Founder, SteadyAsset",
+    logo: new URL("../assets/img/project/c4/icon-sa.svg", import.meta.url).href,
+    stars: 4,
+    tag: "Brand Identity & Website",
+  },
+  {
+    quote: "Amortree Tech is a pleasure to work with. They're responsive, professional, and always willing to go the extra mile. I highly recommend their services to any business serious about digital growth.",
+    author: "Bharathkumar MS",
+    role: "Manager, Samsiddhi Designs",
+    logo: new URL("../assets/img/project/c9/icon-sd.svg", import.meta.url).href,
+    stars: 5,
+    tag: "UI/UX Design & Development",
+  },
+  {
+    quote: "Good understanding of our needs from the start. A genuinely professional service provider, and a job well done. The site looks exactly how we envisioned it and performs better than we hoped.",
+    author: "Suresh Babu",
+    role: "Founder, SPR Real Estate",
+    logo: new URL("../assets/img/project/c6/spr-logo.svg", import.meta.url).href,
+    stars: 5,
+    tag: "Real Estate Website",
+  },
+  {
+    quote: "Working with Amortree was seamless. They turned a complex brief into an interface that our team actually loves using every day. The dashboard feels like it was built by people who truly understood our users.",
+    author: "SaveDesk Team",
+    role: "SaveDesk Analytics India Pvt Ltd",
+    logo: new URL("../assets/img/project/c7/icon-sd.png", import.meta.url).href,
+    stars: 5,
+    tag: "Dashboard Redesign",
+  },
+];
+
+// Carousel state
+const tcActiveIndex = ref(0);
+const tcTrackRef    = ref(null);
+const tcAutoTimer   = ref(null);
+const tcTotal       = testimonials.length;
+
+const tcNext = () => {
+  tcActiveIndex.value = (tcActiveIndex.value + 1) % tcTotal;
+  tcAnimateSlide();
+};
+const tcPrev = () => {
+  tcActiveIndex.value = (tcActiveIndex.value - 1 + tcTotal) % tcTotal;
+  tcAnimateSlide();
+};
+const tcGoTo = (i) => {
+  tcActiveIndex.value = i;
+  tcAnimateSlide();
+};
+
+function tcAnimateSlide() {
+  if (!tcTrackRef.value) return;
+  const cards = tcTrackRef.value.querySelectorAll(".tc-card");
+  gsap.to(cards, {
+    opacity: 0,
+    y: 18,
+    duration: 0.22,
+    ease: "power2.in",
+    onComplete: () => {
+      gsap.set(cards, { y: -18 });
+      gsap.to(cards, { opacity: 1, y: 0, duration: 0.42, ease: "power3.out" });
+    },
+  });
+}
+
+function tcStartAuto() {
+  tcAutoTimer.value = setInterval(tcNext, 5000);
+}
+function tcStopAuto() {
+  clearInterval(tcAutoTimer.value);
+}
+
+
 function injectStructuredData() {
   const siteUrl = "https://amortree.com";
 
@@ -737,17 +823,6 @@ onBeforeUnmount(() => {
             <p class="text-slate-300 text-sm leading-relaxed">Founders and product teams who need a site that holds up in front of investors, not just visitors.</p>
           </div>
 
-          <div class="motion-card group relative bg-dark p-8 rounded-2xl text-center border border-white/5 overflow-hidden transition-all duration-300 hover:scale-[1.02] hover:border-orange-400/30 hover:shadow-[0_30px_80px_-24px_rgba(251,146,60,0.35)]">
-            <div class="relative w-16 h-16 mx-auto mb-6">
-              <div class="absolute inset-0 rounded-full bg-orange-400 blur-xl opacity-30 group-hover:opacity-50 transition-opacity duration-300"></div>
-              <div class="relative w-16 h-16 rounded-full flex items-center justify-center bg-orange-400/10 border border-orange-400/30">
-                <span class="material-symbols-outlined text-3xl text-orange-400">precision_manufacturing</span>
-              </div>
-            </div>
-            <h4 class="font-semibold mb-3 d-block text-lg text-orange-400" style="font-weight: 600;">Manufacturing &amp; Industrial</h4>
-            <p class="text-slate-300 text-sm leading-relaxed">Established operators whose digital presence still undersells the scale and precision of what they actually deliver.</p>
-          </div>
-
           <div class="motion-card group relative bg-dark p-8 rounded-2xl text-center border border-white/5 overflow-hidden transition-all duration-300 hover:scale-[1.02] hover:border-emerald-400/30 hover:shadow-[0_30px_80px_-24px_rgba(52,211,153,0.35)]">
             <div class="relative w-16 h-16 mx-auto mb-6">
               <div class="absolute inset-0 rounded-full bg-emerald-400 blur-xl opacity-30 group-hover:opacity-50 transition-opacity duration-300"></div>
@@ -759,17 +834,6 @@ onBeforeUnmount(() => {
             <p class="text-slate-300 text-sm leading-relaxed">Firms where trust is decided before the first call — and the website is doing that work, or isn't.</p>
           </div>
 
-          <div class="motion-card group relative bg-dark p-8 rounded-2xl text-center border border-white/5 overflow-hidden transition-all duration-300 hover:scale-[1.02] hover:border-teal-400/30 hover:shadow-[0_30px_80px_-24px_rgba(45,212,191,0.35)]">
-            <div class="relative w-16 h-16 mx-auto mb-6">
-              <div class="absolute inset-0 rounded-full bg-teal-400 blur-xl opacity-30 group-hover:opacity-50 transition-opacity duration-300"></div>
-              <div class="relative w-16 h-16 rounded-full flex items-center justify-center bg-teal-400/10 border border-teal-400/30">
-                <span class="material-symbols-outlined text-3xl text-teal-400">handshake</span>
-              </div>
-            </div>
-            <h4 class="font-semibold mb-3 d-block text-lg text-teal-400" style="font-weight: 600;">Professional Services</h4>
-            <p class="text-slate-300 text-sm leading-relaxed">Advisory and consulting firms where credibility is the product, and the site is often the first proof of it.</p>
-          </div>
-
           <div class="motion-card group relative bg-dark p-8 rounded-2xl text-center border border-white/5 overflow-hidden transition-all duration-300 hover:scale-[1.02] hover:border-rose-400/30 hover:shadow-[0_30px_80px_-24px_rgba(251,113,133,0.35)]">
             <div class="relative w-16 h-16 mx-auto mb-6">
               <div class="absolute inset-0 rounded-full bg-rose-400 blur-xl opacity-30 group-hover:opacity-50 transition-opacity duration-300"></div>
@@ -779,6 +843,28 @@ onBeforeUnmount(() => {
             </div>
             <h4 class="font-semibold mb-3 d-block text-lg text-rose-400" style="font-weight: 600;">Healthcare</h4>
             <p class="text-slate-300 text-sm leading-relaxed">Providers and healthcare businesses that need to build patient trust digitally, without sacrificing compliance or clarity.</p>
+          </div>
+
+          <div class="motion-card group relative bg-dark p-8 rounded-2xl text-center border border-white/5 overflow-hidden transition-all duration-300 hover:scale-[1.02] hover:border-orange-400/30 hover:shadow-[0_30px_80px_-24px_rgba(251,146,60,0.35)]">
+            <div class="relative w-16 h-16 mx-auto mb-6">
+              <div class="absolute inset-0 rounded-full bg-orange-400 blur-xl opacity-30 group-hover:opacity-50 transition-opacity duration-300"></div>
+              <div class="relative w-16 h-16 rounded-full flex items-center justify-center bg-orange-400/10 border border-orange-400/30">
+                <span class="material-symbols-outlined text-3xl text-orange-400">precision_manufacturing</span>
+              </div>
+            </div>
+            <h4 class="font-semibold mb-3 d-block text-lg text-orange-400" style="font-weight: 600;">Manufacturing &amp; Industrial</h4>
+            <p class="text-slate-300 text-sm leading-relaxed">Established operators whose digital presence still undersells the scale and precision of what they actually deliver.</p>
+          </div>
+
+          <div class="motion-card group relative bg-dark p-8 rounded-2xl text-center border border-white/5 overflow-hidden transition-all duration-300 hover:scale-[1.02] hover:border-teal-400/30 hover:shadow-[0_30px_80px_-24px_rgba(45,212,191,0.35)]">
+            <div class="relative w-16 h-16 mx-auto mb-6">
+              <div class="absolute inset-0 rounded-full bg-teal-400 blur-xl opacity-30 group-hover:opacity-50 transition-opacity duration-300"></div>
+              <div class="relative w-16 h-16 rounded-full flex items-center justify-center bg-teal-400/10 border border-teal-400/30">
+                <span class="material-symbols-outlined text-3xl text-teal-400">handshake</span>
+              </div>
+            </div>
+            <h4 class="font-semibold mb-3 d-block text-lg text-teal-400" style="font-weight: 600;">Professional Services</h4>
+            <p class="text-slate-300 text-sm leading-relaxed">Advisory and consulting firms where credibility is the product, and the site is often the first proof of it.</p>
           </div>
 
           <div class="motion-card group relative bg-dark p-8 rounded-2xl text-center border border-white/5 overflow-hidden transition-all duration-300 hover:scale-[1.02] hover:border-violet-400/30 hover:shadow-[0_30px_80px_-24px_rgba(167,139,250,0.35)]">
@@ -1315,95 +1401,115 @@ onBeforeUnmount(() => {
       </div>
     </section>
 
-    <section class="section section-padding bg-color-light" id="reviews">
-      <div class="container-fluid">
-        <div class="section-heading heading-center">
-          <span class="subtitle">In Their Words</span>
-          <h2 class="title">
-            <span class="gradient-text yellow-dark">What Clients</span> Say About Working With Us
+    <!-- ============================================================
+         TESTIMONIALS — GSAP Carousel
+         ============================================================ -->
+    <section class="tc-section" id="reviews">
+      <div class="tc-bg-glow" aria-hidden="true"></div>
+
+      <div class="tc-shell">
+        <!-- Header -->
+        <div class="tc-header">
+          <div class="inline-block py-2 px-4 rounded bg-dark text-[10px] font-black uppercase tracking-[0.3em] mb-3">
+            <span class="text-ly">In Their Words</span>
+          </div>
+          <h2 class="tc-heading">
+            What Clients Say About <span class="text-ly">Working With Us</span>
           </h2>
+          <p class="tc-sub">Real feedback from real clients — across industries, project types, and team sizes.</p>
         </div>
-        <div class="grid md:grid-cols-2 gap-8">
-          <div class="glass-card p-10 rounded-3xl relative overflow-hidden group">
-            <div class="absolute top-0 left-0 w-2 h-full bg-warning group-hover:w-full group-hover:opacity-5 transition-all duration-700"></div>
-            <div class="flex gap-1 text-ly mb-6">
-              <span class="material-symbols-outlined">star</span><span class="material-symbols-outlined">star</span>
-              <span class="material-symbols-outlined">star</span><span class="material-symbols-outlined">star</span>
-              <span class="material-symbols-outlined">star</span>
-            </div>
-            <p class="text-xl text-white italic mb-10 leading-relaxed font-light">
-              "Hi, I just wanted to take a moment to express my sincere appreciation for the outstanding work you've done. Completing it on time and to such a high standard is a testament to your dedication and expertise."
-            </p>
-            <div class="flex items-center gap-4">
-              <img src="../assets/img/project/c2/icon-sc.svg" class="m-0" style="height: 40px" alt="Solved Cube Logo" />
-              <div>
-                <p class="font-bold text-white uppercase text-sm tracking-widest mb-1">Sandeep L</p>
-                <small class="text-xs text-ll font-bold mb-0">Co-Founder, Solved Cube IT Solution</small>
+
+        <!-- Carousel -->
+        <div
+          class="tc-carousel"
+          @mouseenter="tcStopAuto"
+          @mouseleave="tcStartAuto"
+        >
+          <!-- Track — single active card -->
+          <div class="tc-track" ref="tcTrackRef">
+            <div class="tc-card">
+              <!-- Quote mark -->
+              <div class="tc-quote-mark">
+                <span class="material-symbols-outlined">format_quote</span>
+              </div>
+
+              <!-- Tag -->
+              <div class="tc-tag">{{ testimonials[tcActiveIndex].tag }}</div>
+
+              <!-- Stars -->
+              <div class="tc-stars">
+                <span
+                  v-for="s in 5"
+                  :key="s"
+                  class="material-symbols-outlined tc-star"
+                  :class="{ 'tc-star--lit': s <= testimonials[tcActiveIndex].stars }"
+                >star</span>
+              </div>
+
+              <!-- Quote text -->
+              <blockquote class="tc-quote">
+                "{{ testimonials[tcActiveIndex].quote }}"
+              </blockquote>
+
+              <!-- Author -->
+              <div class="tc-author">
+                <div class="tc-author-logo">
+                  <img :src="testimonials[tcActiveIndex].logo" :alt="testimonials[tcActiveIndex].author" />
+                </div>
+                <div class="tc-author-info">
+                  <strong>{{ testimonials[tcActiveIndex].author }}</strong>
+                  <span>{{ testimonials[tcActiveIndex].role }}</span>
+                </div>
               </div>
             </div>
           </div>
-          <div class="glass-card p-10 rounded-3xl relative overflow-hidden group">
-            <div class="absolute top-0 left-0 w-2 h-full bg-warning group-hover:w-full group-hover:opacity-5 transition-all duration-700"></div>
-            <div class="flex gap-1 text-ly mb-6">
-              <span class="material-symbols-outlined">star</span><span class="material-symbols-outlined">star</span>
-              <span class="material-symbols-outlined">star</span><span class="material-symbols-outlined">star</span>
-            </div>
-            <p class="text-xl text-white italic mb-10 leading-relaxed font-light">
-              "They did an excellent job on our website. They were highly understanding of our needs, thoughtful in their design approach, and very practical in aligning their ideas with our vision."
-            </p>
-            <div class="flex items-center gap-4">
-              <img src="../assets/img/project/c12/icon-rr.svg" class="m-0" style="height: 40px" alt="Raksha Realty" />
-              <div>
-                <p class="font-bold text-white uppercase text-sm tracking-widest mb-1">Ganesh Moorthy</p>
-                <small class="text-xs text-ll font-bold mb-0">Founder, Raksha Realty</small>
-              </div>
-            </div>
+
+          <!-- Nav arrows -->
+          <button class="tc-arrow tc-arrow--prev" @click="tcPrev" aria-label="Previous testimonial">
+            <span class="material-symbols-outlined">arrow_back</span>
+          </button>
+          <button class="tc-arrow tc-arrow--next" @click="tcNext" aria-label="Next testimonial">
+            <span class="material-symbols-outlined">arrow_forward</span>
+          </button>
+        </div>
+
+        <!-- Dot indicators + counter -->
+        <div class="tc-footer">
+          <div class="tc-dots">
+            <button
+              v-for="(t, i) in testimonials"
+              :key="i"
+              class="tc-dot"
+              :class="{ 'tc-dot--active': i === tcActiveIndex }"
+              @click="tcGoTo(i)"
+              :aria-label="`Go to testimonial ${i + 1}`"
+            ></button>
           </div>
-          <div class="glass-card p-10 rounded-3xl relative overflow-hidden group">
-            <div class="absolute top-0 left-0 w-2 h-full bg-warning group-hover:w-full group-hover:opacity-5 transition-all duration-700"></div>
-            <div class="flex gap-1 text-ly mb-6">
-              <span class="material-symbols-outlined">star</span><span class="material-symbols-outlined">star</span>
-              <span class="material-symbols-outlined">star</span><span class="material-symbols-outlined">star</span>
-              <span class="material-symbols-outlined">star</span>
-            </div>
-            <p class="text-xl text-white italic mb-10 leading-relaxed font-light">
-              "Amortree Tech is a pleasure to work with. They're responsive, professional, and always willing to go the extra mile. I highly recommend their services."
-            </p>
-            <div class="flex items-center gap-4">
-              <img src="../assets/img/project/c9/icon-sd.svg" class="m-0" style="height: 40px" alt="Samsiddhi Logo" />
-              <div>
-                <p class="font-bold text-white uppercase text-sm tracking-widest mb-1">Bharathkumar MS</p>
-                <small class="text-xs text-ll font-bold mb-0">Manager, Samsiddhi Designs</small>
-              </div>
-            </div>
+          <div class="tc-counter">
+            <span class="tc-counter-cur">{{ String(tcActiveIndex + 1).padStart(2, '0') }}</span>
+            <span class="tc-counter-sep">/</span>
+            <span class="tc-counter-tot">{{ String(tcTotal).padStart(2, '0') }}</span>
           </div>
-          <div class="glass-card p-10 rounded-3xl relative overflow-hidden group">
-            <div class="absolute top-0 left-0 w-2 h-full bg-warning group-hover:w-full group-hover:opacity-5 transition-all duration-700"></div>
-            <div class="flex gap-1 text-ly mb-6">
-              <span class="material-symbols-outlined">star</span><span class="material-symbols-outlined">star</span>
-              <span class="material-symbols-outlined">star</span><span class="material-symbols-outlined">star</span>
-              <span class="material-symbols-outlined">star</span>
-            </div>
-            <p class="text-xl text-white italic mb-10 leading-relaxed font-light">
-              "Good understanding of our needs from the start. A genuinely professional service provider, and a job well done."
-            </p>
-            <div class="flex items-center gap-4">
-              <img src="../assets/img/project/c6/spr-logo.svg" class="m-0" style="height: 40px" alt="SPR Real Estate" />
-              <div>
-                <p class="font-bold text-white uppercase text-sm tracking-widest mb-1">Suresh Babu</p>
-                <small class="text-xs text-ll font-bold mb-0">Founder, SPR Real Estate</small>
-              </div>
-            </div>
-          </div>
+        </div>
+
+        <!-- Thumbnail strip -->
+        <div class="tc-strip">
+          <button
+            v-for="(t, i) in testimonials"
+            :key="'strip-' + i"
+            class="tc-strip-item"
+            :class="{ 'tc-strip-item--active': i === tcActiveIndex }"
+            @click="tcGoTo(i); tcStopAuto(); tcStartAuto()"
+          >
+            <img :src="t.logo" :alt="t.author" />
+            <span>{{ t.author.split(',')[0] }}</span>
+          </button>
         </div>
       </div>
-      <ul class="list-unstyled shape-group-banner">
-        <li class="shape shape-3"><img src="../assets/img/shapes/bubble-14.png" alt="Bubble" /></li>
-        <li class="shape shape-4"><img src="../assets/img/shapes/bubble-14.png" alt="Bubble" /></li>
-        <li class="shape shape-6"><img src="../assets/img/shapes/bubble-40.png" alt="Bubble" /></li>
-        <li class="shape shape-7"><img src="../assets/img/shapes/bubble-41.png" alt="Bubble" /></li>
-      </ul>
     </section>
+
+
+
 
     <!-- ============================================================
          FAQ — Numbered Tab Rail + Expanding Stage
@@ -2812,6 +2918,352 @@ onBeforeUnmount(() => {
   background: #facc15;
   pointer-events: none;
   will-change: width;
+}
+
+// ─── Testimonials Carousel ────────────────────────────────────────
+.tc-section {
+  position: relative;
+  background: #07080e;
+  padding: clamp(4rem, 9vw, 7rem) 0;
+  overflow: hidden;
+}
+
+.tc-bg-glow {
+  position: absolute;
+  top: -160px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 700px;
+  height: 500px;
+  background: radial-gradient(ellipse at 50% 30%, rgba(250, 204, 21, 0.07), transparent 65%);
+  pointer-events: none;
+}
+
+.tc-shell {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 2rem;
+
+  @media (max-width: 600px) { padding: 0 1.25rem; }
+}
+
+// Header
+.tc-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.tc-heading {
+  font-size: clamp(1.8rem, 3.5vw, 2.75rem);
+  font-weight: 800;
+  color: #fff;
+  line-height: 1.15;
+  margin-bottom: 0.75rem;
+}
+
+.tc-sub {
+  font-size: 0.95rem;
+  color: rgba(255, 255, 255, 0.45);
+  line-height: 1.65;
+}
+
+// Carousel wrapper
+.tc-carousel {
+  position: relative;
+  margin-bottom: 2rem;
+}
+
+// Track
+.tc-track {
+  min-height: 360px;
+  display: flex;
+  align-items: stretch;
+}
+
+// The single visible card
+.tc-card {
+  width: 100%;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.09);
+  border-radius: 24px;
+  padding: 2.75rem 3rem;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+  will-change: opacity, transform;
+
+  // top-left yellow accent line
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 3px;
+    height: 100%;
+    background: linear-gradient(180deg, #facc15, rgba(250, 204, 21, 0.12));
+    border-radius: 0 0 3px 0;
+  }
+
+  // subtle inner glow
+  &::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse at 0% 0%, rgba(250, 204, 21, 0.05), transparent 55%);
+    pointer-events: none;
+  }
+
+  @media (max-width: 600px) {
+    padding: 2rem 1.5rem;
+  }
+}
+
+// Large quote mark
+.tc-quote-mark {
+  position: absolute;
+  top: 1.5rem;
+  right: 2rem;
+  color: rgba(250, 204, 21, 0.12);
+
+  .material-symbols-outlined {
+    font-size: 5rem;
+    line-height: 1;
+    font-variation-settings: "FILL" 1;
+  }
+}
+
+// Service tag
+.tc-tag {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.28rem 0.7rem;
+  border-radius: 6px;
+  background: rgba(250, 204, 21, 0.1);
+  border: 1px solid rgba(250, 204, 21, 0.2);
+  color: #facc15;
+  font-size: 0.65rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  width: fit-content;
+}
+
+// Stars
+.tc-stars {
+  display: flex;
+  gap: 2px;
+}
+
+.tc-star {
+  font-size: 1.05rem;
+  color: rgba(255, 255, 255, 0.15);
+  font-variation-settings: "FILL" 0;
+
+  &--lit {
+    color: #facc15;
+    font-variation-settings: "FILL" 1;
+  }
+}
+
+// Quote
+.tc-quote {
+  font-size: clamp(1rem, 1.8vw, 1.2rem);
+  font-style: italic;
+  color: rgba(255, 255, 255, 0.88);
+  line-height: 1.8;
+  font-weight: 300;
+  margin: 0;
+  flex: 1;
+  position: relative;
+  z-index: 1;
+}
+
+// Author
+.tc-author {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.07);
+  margin-top: auto;
+  position: relative;
+  z-index: 1;
+}
+
+.tc-author-logo {
+  width: 44px;
+  height: 44px;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.4rem;
+  flex-shrink: 0;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    filter: brightness(0) invert(1);
+    opacity: 0.9;
+  }
+}
+
+.tc-author-info {
+  strong {
+    display: block;
+    font-size: 0.88rem;
+    font-weight: 800;
+    color: #fff;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    margin-bottom: 0.2rem;
+  }
+
+  span {
+    font-size: 0.75rem;
+    color: rgba(255, 255, 255, 0.5);
+    font-weight: 500;
+  }
+}
+
+// Nav arrows
+.tc-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: rgba(255, 255, 255, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background 0.25s ease, border-color 0.25s ease, color 0.25s ease, transform 0.25s ease;
+  z-index: 4;
+
+  .material-symbols-outlined { font-size: 1.2rem; }
+
+  &:hover {
+    background: #facc15;
+    border-color: #facc15;
+    color: #0f172a;
+    transform: translateY(-50%) scale(1.08);
+  }
+
+  &--prev { left: -52px; }
+  &--next { right: -52px; }
+
+  @media (max-width: 600px) {
+    &--prev { left: -12px; }
+    &--next { right: -12px; }
+  }
+}
+
+// Footer row
+.tc-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+}
+
+// Dots
+.tc-dots {
+  display: flex;
+  gap: 0.45rem;
+}
+
+.tc-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.2);
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s ease, width 0.35s ease, border-radius 0.35s ease;
+
+  &--active {
+    width: 24px;
+    border-radius: 3px;
+    background: #facc15;
+  }
+}
+
+// Counter
+.tc-counter {
+  display: flex;
+  align-items: baseline;
+  gap: 0.25rem;
+  font-variant-numeric: tabular-nums;
+}
+
+.tc-counter-cur {
+  font-size: 1.1rem;
+  font-weight: 900;
+  color: #facc15;
+}
+
+.tc-counter-sep {
+  font-size: 0.75rem;
+  color: rgba(255, 255, 255, 0.25);
+}
+
+.tc-counter-tot {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.35);
+}
+
+// Thumbnail strip
+.tc-strip {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  padding-top: 2rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+.tc-strip-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.4rem 0.85rem 0.4rem 0.5rem;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  color: rgba(255, 255, 255, 0.45);
+  font-size: 0.72rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.25s, border-color 0.25s, color 0.25s;
+
+  img {
+    width: 22px;
+    height: 22px;
+    object-fit: contain;
+    filter: brightness(0) invert(1);
+    opacity: 0.5;
+    transition: opacity 0.25s;
+  }
+
+  &--active,
+  &:hover {
+    background: rgba(250, 204, 21, 0.1);
+    border-color: rgba(250, 204, 21, 0.35);
+    color: #facc15;
+
+    img { opacity: 1; filter: brightness(0) saturate(100%) invert(86%) sepia(68%) saturate(500%) hue-rotate(0deg); }
+  }
 }
 
 </style>
