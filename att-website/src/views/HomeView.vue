@@ -29,10 +29,10 @@ const testimonials = [
   {
     quote: "They did an excellent job on our website. They were highly understanding of our needs, thoughtful in their design approach, and very practical in aligning their ideas with our vision.",
     author: "Ganesh Moorthy",
-    role: "Founder, SteadyAsset",
-    logo: new URL("../assets/img/project/c4/icon-sa.svg", import.meta.url).href,
+    role: "Founder, Raksha Realty",
+    logo: new URL("../assets/img/project/c12/icon-rr.svg", import.meta.url).href,
     stars: 4,
-    tag: "Brand Identity & Website",
+    tag: "Redesign & Pitch Deck",
   },
   {
     quote: "Amortree Tech is a pleasure to work with. They're responsive, professional, and always willing to go the extra mile. I highly recommend their services to any business serious about digital growth.",
