@@ -1016,10 +1016,16 @@ onBeforeUnmount(() => {
             </div>
           </div>
         </div>
-        <h6 class="text-center mt-5 mb-1" style="font-weight: 400">Not sure which path fits your business?</h6>
-        <div class="d-flex justify-content-center gap-3 mt-4">
-          <a class="amor-btn btn-fill-primary btn-large"
-            href="https://wa.me/917975859061/?text=I%27d%20like%20to%20book%20a%20free%20strategy%20call.">Book Your Free Strategy Call</a>
+        <div class="text-center mt-12 pt-10 border-t border-white/10 max-w-xl mx-auto">
+          <h6 class="mb-2" style="font-weight: 600">Not sure which one fits?</h6>
+          <p class="text-slate-300 text-sm mb-6">
+            Book a 20-minute strategy call. We'll recommend the right growth system based on your
+            business, goals, and budget.
+          </p>
+          <div class="d-flex justify-content-center gap-3">
+            <a class="amor-btn btn-fill-primary btn-large"
+              href="https://wa.me/917975859061/?text=I%27d%20like%20to%20book%20a%20free%20strategy%20call.">Book Free Strategy Call</a>
+          </div>
         </div>
       </div>
     </section>

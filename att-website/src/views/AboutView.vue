@@ -33,7 +33,7 @@ const team = [
   },
   {
     name: "Srilatha",
-    role: "Digital Marketing Strategist · LinkedIn & SEO Specialist",
+    role: "Digital Marketing Strategist · Design-Driven Growth",
     img: srilathaImg,
     url: "https://srilatha.amortree.com/",
   },
