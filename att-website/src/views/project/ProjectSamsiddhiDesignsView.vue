@@ -119,14 +119,14 @@ onBeforeUnmount(() => ctx?.revert());
       <nav class="cs-breadcrumb" aria-label="Breadcrumb">
         <a href="/">Home</a>
         <span>&#8226;</span>
-        <a href="/case-studies">Portfolio</a>
+        <a href="/projects">Projects</a>
         <span>&#8226;</span>
         <span class="active">Samsiddhi Designs</span>
       </nav>
 
       <div class="cs-hero-eyebrow">
         <span class="eyebrow-pill">Interior Design</span>
-        Brand Identity &amp; Website
+        Interior Design, Decor, Furniture
       </div>
 
       <h1 class="cs-hero-title">
@@ -168,7 +168,7 @@ onBeforeUnmount(() => ctx?.revert());
             <line x1="10" y1="14" x2="21" y2="3"/>
           </svg>
         </a>
-        <a href="/case-studies" class="cs-btn-ghost">All Case Studies</a>
+        <a href="/projects" class="cs-btn-ghost">All Projects</a>
       </div>
 
       <!-- Mockup -->
@@ -436,6 +436,28 @@ onBeforeUnmount(() => ctx?.revert());
     </div>
   </section>
 
+  <!-- ── TESTIMONIAL ────────────────────────────────────────────── -->
+  <section class="cs-section cs-section--accent-deep">
+    <div class="cs-shell">
+      <div class="cs-testimonial cs-reveal">
+        <span class="material-symbols-outlined cs-testimonial-mark">format_quote</span>
+        <blockquote>
+          Amortree Tech is a pleasure to work with. They're responsive, professional, and always willing to go the extra mile. I highly recommend their services.
+        </blockquote>
+        <div class="cs-testimonial-attr">
+          <div class="cs-testimonial-avatar">BK</div>
+          <div class="cs-testimonial-text">
+            <strong>Bharath Kumar MS</strong>
+            <span>Manager, Samsiddhi Designs</span>
+          </div>
+          <div class="cs-testimonial-stars" aria-label="5 out of 5 stars">
+            <span class="material-symbols-outlined" v-for="n in 5" :key="n">star</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- ── METRICS ────────────────────────────────────────────────── -->
   <section class="cs-metrics-strip">
     <div class="cs-shell">
@@ -486,8 +508,8 @@ onBeforeUnmount(() => ctx?.revert());
           <span class="material-symbols-outlined">arrow_back</span> SaveDesk
         </a>
         <a href="https://samsiddhidesigns.com/" target="_blank" rel="noopener" class="cs-btn-primary">View Live Site</a>
-        <a href="/case-studies" class="cs-nav-link cs-nav-link--right">
-          <span class="material-symbols-outlined">arrow_forward</span> All Case Studies
+        <a href="/project/raksha-realty" class="cs-nav-link cs-nav-link--right">
+          <span class="material-symbols-outlined">arrow_forward</span> Raksha Realty
         </a>
       </div>
     </div>
@@ -512,6 +534,51 @@ onBeforeUnmount(() => ctx?.revert());
   --midnight: #04302e;
   --frost: #f5f5f7;
   font-family: 'Poppins', sans-serif;
+}
+
+// ─── Testimonial ─────────────────────────────────────────────────────
+.cs-testimonial {
+  max-width: 760px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.cs-testimonial-mark { font-size: 3.5rem; color: var(--accent); opacity: 0.7; display: block; margin-bottom: 1rem; }
+
+.cs-testimonial blockquote {
+  font-size: clamp(1.1rem, 2vw, 1.4rem);
+  color: rgba(255,255,255,0.92);
+  line-height: 1.75;
+  margin: 0 0 2.25rem;
+}
+
+.cs-testimonial-attr {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.cs-testimonial-avatar {
+  width: 44px; height: 44px;
+  border-radius: 50%;
+  background: var(--gold);
+  color: #0f172a;
+  font-weight: 800;
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0;
+}
+
+.cs-testimonial-text {
+  text-align: left;
+  strong { display: block; color: #fff; font-weight: 700; }
+  span { display: block; color: rgba(255,255,255,0.5); font-size: 0.82rem; }
+}
+
+.cs-testimonial-stars {
+  display: flex; gap: 1px; color: var(--accent);
+  .material-symbols-outlined { font-size: 1rem; font-variation-settings: "FILL" 1; }
 }
 
 // ─── Shell ──────────────────────────────────────────────────────────
@@ -844,6 +911,7 @@ onBeforeUnmount(() => ctx?.revert());
 
   &--dark { background: #06100f; }
   &--muted { background: var(--frost); }
+  &--accent-deep { background: var(--accent-deep); }
 }
 
 .cs-section-head {

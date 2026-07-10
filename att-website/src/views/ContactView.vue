@@ -320,26 +320,27 @@ onBeforeUnmount(() => {
   }
 
   &--light {
-    color: #facc15;
-    &::before { background: #facc15; }
+    color: #0f172a;
+    &::before { background: #0f172a; }
   }
 }
 
 // ─── Section shell ───────────────────────────────────────────────────────────
 .att-contact-section {
   position: relative;
-  padding: 7rem 4rem 8rem;
+  background: #f8fafc;
+  padding: 5rem 4rem 7rem;
   overflow: hidden;
 
-  @media (max-width: 1100px) { padding: 4.5rem 2rem 5rem; }
-  @media (max-width: 768px)  { padding: 3.5rem 1.25rem 4rem; }
+  @media (max-width: 1100px) { padding: 4rem 2rem 5rem; }
+  @media (max-width: 768px)  { padding: 3rem 1.25rem 4rem; }
 }
 
 .att-contact-inner {
   position: relative;
   max-width: 1280px;
   margin: 0 auto;
-  z-index: 1;
+  z-index: 2;
 }
 
 .att-contact-grid {
@@ -348,48 +349,49 @@ onBeforeUnmount(() => {
   gap: 2.5rem;
   align-items: start;
 
-  @media (max-width: 1024px) {
-    grid-template-columns: 1fr;
-  }
+  @media (max-width: 1024px) { grid-template-columns: 1fr; }
 }
 
-// ─── Form card (glass) ───────────────────────────────────────────────────────
+// ─── Form card ───────────────────────────────────────────────────────────────
 .att-contact-form-card {
-  background: rgba(255, 255, 255, 0.04);
-  border: 1px solid rgba(255, 255, 255, 0.09);
-  backdrop-filter: blur(24px);
-  -webkit-backdrop-filter: blur(24px);
-  border-radius: 28px;
+  background: #ffffff;
+  border: 1px solid rgba(15, 23, 42, 0.06);
+  border-radius: 24px;
+  box-shadow: 0 32px 64px -24px rgba(15, 23, 42, 0.25);
   padding: 3rem;
 
-  @media (max-width: 640px) { padding: 2rem 1.5rem; }
+  @media (max-width: 640px) { padding: 1.75rem; border-radius: 18px; }
 }
 
-.att-contact-heading {
-  font-size: clamp(1.9rem, 3.2vw, 2.6rem);
-  font-weight: 700;
-  line-height: 1.15;
-  color: #ffffff;
+.att-contact-eyebrow {
   margin-bottom: 0.75rem;
 }
 
+.att-contact-heading {
+  font-size: clamp(1.6rem, 3.2vw, 2.2rem);
+  font-weight: 700;
+  line-height: 1.15;
+  color: #0f172a;
+  margin-bottom: 0.6rem;
+}
+
 .att-contact-sub {
-  font-size: 0.95rem;
+  font-size: 0.9rem;
   line-height: 1.7;
-  color: rgba(255, 255, 255, 0.55);
-  margin-bottom: 2.5rem;
+  color: #64748b;
+  margin-bottom: 2rem;
 }
 
 .att-contact-form {
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
+  gap: 1.25rem;
 }
 
 .att-contact-row {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 1.5rem;
+  gap: 1.25rem;
 
   @media (max-width: 560px) { grid-template-columns: 1fr; }
 }
@@ -397,56 +399,59 @@ onBeforeUnmount(() => {
 .att-contact-field {
   display: flex;
   flex-direction: column;
-  gap: 0.6rem;
+  gap: 0.5rem;
 
   label {
-    font-size: 0.68rem;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-    font-weight: 700;
-    color: rgba(255, 255, 255, 0.45);
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: #334155;
+    letter-spacing: normal;
+    text-transform: none;
   }
 
   input,
   textarea {
     width: 100%;
-    background: rgba(255, 255, 255, 0.045);
-    border: 1px solid rgba(255, 255, 255, 0.12);
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
     border-radius: 12px;
-    padding: 0.9rem 1.1rem;
-    color: #ffffff;
+    padding: 0.85rem 1rem;
+    color: #0f172a;
     font-size: 0.92rem;
     font-family: inherit;
     resize: vertical;
-    transition: border-color 0.3s ease, background 0.3s ease;
+    transition: border-color 0.25s ease, background 0.25s ease, box-shadow 0.25s ease;
 
-    &::placeholder { color: rgba(255, 255, 255, 0.32); }
+    &::placeholder { color: #94a3b8; }
 
     &:focus {
       outline: none;
       border-color: #facc15;
-      background: rgba(255, 255, 255, 0.07);
+      background: #ffffff;
+      box-shadow: 0 0 0 3px rgba(250, 204, 21, 0.15);
     }
   }
+
+  textarea { min-height: 120px; }
 }
 
 .att-form-message {
-  margin: -0.5rem 0 0;
+  margin: -0.25rem 0 0;
   font-size: 0.85rem;
   font-weight: 600;
   border-radius: 10px;
   padding: 0.75rem 1rem;
 
   &--error {
-    color: #fca5a5;
-    background: rgba(220, 60, 45, 0.12);
-    border: 1px solid rgba(220, 60, 45, 0.3);
+    color: #dc2626;
+    background: #fef2f2;
+    border: 1px solid #fecaca;
   }
 
   &--success {
-    color: #86efac;
-    background: rgba(92, 176, 78, 0.12);
-    border: 1px solid rgba(92, 176, 78, 0.3);
+    color: #16a34a;
+    background: #f0fdf4;
+    border: 1px solid #bbf7d0;
   }
 }
 
@@ -458,16 +463,17 @@ onBeforeUnmount(() => {
 }
 
 .att-contact-info-card {
-  background: rgba(255, 255, 255, 0.035);
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: #ffffff;
+  border: 1px solid rgba(15, 23, 42, 0.06);
   border-radius: 20px;
-  padding: 2rem;
-  transition: border-color 0.35s ease, background 0.35s ease;
+  box-shadow: 0 4px 24px -8px rgba(15, 23, 42, 0.1);
+  padding: 1.75rem;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
   will-change: transform;
 
   &:hover {
-    border-color: rgba(250, 204, 21, 0.35);
-    background: rgba(255, 255, 255, 0.055);
+    border-color: rgba(250, 204, 21, 0.5);
+    box-shadow: 0 8px 32px -8px rgba(15, 23, 42, 0.15);
   }
 }
 
@@ -475,29 +481,29 @@ onBeforeUnmount(() => {
   width: 46px;
   height: 46px;
   border-radius: 13px;
-  background: rgba(250, 204, 21, 0.1);
-  border: 1px solid rgba(250, 204, 21, 0.24);
+  background: rgba(250, 204, 21, 0.12);
+  border: 1px solid rgba(250, 204, 21, 0.3);
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #facc15;
-  margin-bottom: 1.25rem;
+  color: #b45309;
+  margin-bottom: 1.1rem;
 
   .material-symbols-outlined { font-size: 1.3rem; }
 }
 
 .att-info-title {
-  font-size: 1.05rem;
+  font-size: 1rem;
   font-weight: 700;
-  color: #ffffff;
-  margin-bottom: 0.6rem;
+  color: #0f172a;
+  margin-bottom: 0.5rem;
 }
 
 .att-info-desc {
-  font-size: 0.85rem;
+  font-size: 0.82rem;
   line-height: 1.65;
-  color: rgba(255, 255, 255, 0.5);
-  margin-bottom: 1.1rem;
+  color: #64748b;
+  margin-bottom: 1rem;
 }
 
 .att-info-links {
@@ -506,32 +512,32 @@ onBeforeUnmount(() => {
   gap: 0.4rem;
 
   a {
-    font-size: 0.95rem;
+    font-size: 0.9rem;
     font-weight: 700;
-    color: #facc15;
+    color: #0f172a;
     text-decoration: none;
-    transition: color 0.25s ease;
+    transition: color 0.2s ease;
 
-    &:hover { color: #ffffff; }
+    &:hover { color: #b45309; }
   }
 }
 
 .att-contact-social-card {
-  .att-info-title { margin-bottom: 1.25rem; }
+  .att-info-title { margin-bottom: 1.1rem; }
 }
 
 .att-social-row {
   display: flex;
   gap: 0.65rem;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1.25rem;
 }
 
 .att-social-btn {
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  background: rgba(255, 255, 255, 0.06);
-  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: #f1f5f9;
+  border: 1px solid #e2e8f0;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -541,7 +547,7 @@ onBeforeUnmount(() => {
 
   &:hover {
     border-color: #facc15;
-    background: rgba(250, 204, 21, 0.1);
+    background: rgba(250, 204, 21, 0.12);
     transform: translateY(-3px);
   }
 }
@@ -552,19 +558,19 @@ onBeforeUnmount(() => {
   gap: 0.65rem;
   padding: 0.85rem 1.25rem;
   border-radius: 12px;
-  background: rgba(92, 176, 78, 0.12);
-  border: 1px solid rgba(92, 176, 78, 0.3);
+  background: #f0fdf4;
+  border: 1px solid #bbf7d0;
   text-decoration: none;
   font-size: 0.85rem;
   font-weight: 700;
-  color: #86efac;
+  color: #16a34a;
   transition: background 0.3s ease, border-color 0.3s ease;
 
   img { width: 20px; height: 20px; }
 
   &:hover {
-    background: rgba(92, 176, 78, 0.2);
-    border-color: rgba(92, 176, 78, 0.5);
+    background: #dcfce7;
+    border-color: #86efac;
   }
 }
 
@@ -573,9 +579,9 @@ onBeforeUnmount(() => {
   display: flex;
   flex-wrap: wrap;
   gap: 1rem;
-  margin-top: 3rem;
-  padding-top: 2.5rem;
-  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  margin-top: 2.5rem;
+  padding-top: 2rem;
+  border-top: 1px solid #e2e8f0;
 }
 
 .att-quickfact-item {
@@ -584,7 +590,11 @@ onBeforeUnmount(() => {
   gap: 0.6rem;
   font-size: 0.8rem;
   font-weight: 600;
-  color: rgba(255, 255, 255, 0.55);
+  color: #475569;
+  background: #ffffff;
+  border: 1px solid rgba(15, 23, 42, 0.06);
+  border-radius: 12px;
+  padding: 0.65rem 1rem;
 
   .material-symbols-outlined {
     font-size: 1.1rem;
@@ -592,34 +602,6 @@ onBeforeUnmount(() => {
   }
 }
 
-// ─── Ambient blobs ────────────────────────────────────────────────────────────
-.att-contact-blobs {
-  position: absolute;
-  inset: 0;
-  pointer-events: none;
-  z-index: 0;
-}
-
-.att-blob {
-  position: absolute;
-  border-radius: 50%;
-  filter: blur(120px);
-  opacity: 0.14;
-
-  &--yellow {
-    width: 420px;
-    height: 420px;
-    background: #facc15;
-    top: -120px;
-    right: -100px;
-  }
-
-  &--red {
-    width: 380px;
-    height: 380px;
-    background: var(--color-primaryR, #dc3c2d);
-    bottom: -140px;
-    left: -100px;
-  }
-}
+// ─── Remove ambient blobs (not needed on light bg) ───────────────────────────
+.att-contact-blobs { display: none; }
 </style>

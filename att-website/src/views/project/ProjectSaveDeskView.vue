@@ -106,14 +106,14 @@ onBeforeUnmount(() => ctx?.revert());
       <nav class="cs-breadcrumb" aria-label="Breadcrumb">
         <a href="/">Home</a>
         <span>&#8226;</span>
-        <a href="/case-studies">Portfolio</a>
+        <a href="/projects">Projects</a>
         <span>&#8226;</span>
         <span class="active">SaveDesk</span>
       </nav>
 
       <div class="cs-hero-eyebrow">
-        <span class="eyebrow-pill">2024</span>
-        Dashboard Redesign &amp; UI/UX
+        <span class="eyebrow-pill">Fintech</span>
+        Forex & Banking Cost Optimisation Dashboard
       </div>
 
       <h1 class="cs-hero-title">
@@ -155,7 +155,7 @@ onBeforeUnmount(() => ctx?.revert());
             <line x1="10" y1="14" x2="21" y2="3"/>
           </svg>
         </a>
-        <a href="/case-studies" class="cs-btn-ghost">All Case Studies</a>
+        <a href="/projects" class="cs-btn-ghost">All Projects</a>
       </div>
 
       <!-- Mockup -->
@@ -578,6 +578,18 @@ onBeforeUnmount(() => ctx?.revert());
   font-weight: 600;
   color: rgba(255,255,255,0.65);
   margin-bottom: 1.5rem;
+}
+
+.eyebrow-pill {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.3rem 0.75rem;
+  border-radius: 999px;
+  background: rgba(32,113,183,0.14);
+  border: 1px solid rgba(32,113,183,0.35);
+  color: var(--accent);
+  font-size: 0.72rem;
+  font-weight: 800;
 }
 
 .eyebrow-pill {

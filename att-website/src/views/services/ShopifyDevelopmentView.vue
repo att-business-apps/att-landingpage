@@ -285,7 +285,7 @@ onBeforeUnmount(() => {
                         Stores That <span class="text-ly">Shipped & Sold</span>
                     </h2>
                 </div>
-                <a href="/case-studies" class="sh-work-link">View all case studies →</a>
+                <a href="/projects" class="sh-work-link">View all Projects →</a>
             </div>
             <div class="sh-work-grid">
                 <a v-for="item in work" :key="item.name" :href="item.href" class="sh-work-card">

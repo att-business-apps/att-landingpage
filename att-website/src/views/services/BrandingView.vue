@@ -120,8 +120,8 @@ const faqs = [
   {
     q: "Can you rebrand an existing business?",
     body: "Yes. Rebrands follow the same process but start with an audit of what's working and what isn't in your current identity, so we evolve the brand rather than starting from zero unnecessarily.",
-    link: "/case-studies",
-    linkText: "See how this plays out in our case studies",
+    link: "/projects",
+    linkText: "See how this plays out in our Projects",
   },
 ];
 
@@ -356,7 +356,7 @@ onBeforeUnmount(() => {
             Brands That <span class="text-ly">Shipped & Stuck</span>
           </h2>
         </div>
-        <a href="/case-studies" class="br-work-link">View all case studies →</a>
+        <a href="/projects" class="br-work-link">View all Projects →</a>
       </div>
 
       <div class="br-work-grid">

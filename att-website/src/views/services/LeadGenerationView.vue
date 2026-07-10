@@ -361,7 +361,7 @@ onBeforeUnmount(() => {
             Funnels That <span class="text-ly">Shipped & Performed</span>
           </h2>
         </div>
-        <a href="/case-studies" class="lg-work-link">View all case studies →</a>
+        <a href="/projects" class="lg-work-link">View all Projects →</a>
       </div>
 
       <div class="lg-work-grid">

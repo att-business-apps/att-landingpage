@@ -102,14 +102,14 @@ onBeforeUnmount(() => ctx?.revert());
       <nav class="cs-breadcrumb" aria-label="Breadcrumb">
         <a href="/">Home</a>
         <span>&#8226;</span>
-        <a href="/case-studies">Portfolio</a>
+        <a href="/projects">Projects</a>
         <span>&#8226;</span>
         <span class="active">UAE Links</span>
       </nav>
 
       <div class="cs-hero-eyebrow">
-        <span class="eyebrow-pill">2024</span>
-        UI/UX Design &amp; Web Strategy
+        <span class="eyebrow-pill">UAE Govt Portal</span>
+        Government Services Portal &middot; 2024
       </div>
 
       <h1 class="cs-hero-title">
@@ -150,7 +150,7 @@ onBeforeUnmount(() => ctx?.revert());
             <line x1="10" y1="14" x2="21" y2="3"/>
           </svg>
         </a>
-        <a href="/case-studies" class="cs-btn-ghost">All Case Studies</a>
+        <a href="/projects" class="cs-btn-ghost">All Projects</a>
       </div>
 
       <!-- Mockup -->

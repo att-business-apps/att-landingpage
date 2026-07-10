@@ -54,7 +54,7 @@ const props = defineProps({
           </ul>
           <div class="panel-actions">
             <a class="amor-btn btn-fill-primary btn-large" href="/contact">Start a Project</a>
-            <a class="case-link" href="/case-studies">View More Work</a>
+            <a class="case-link" href="/projects">View More Work</a>
           </div>
         </div>
       </div>

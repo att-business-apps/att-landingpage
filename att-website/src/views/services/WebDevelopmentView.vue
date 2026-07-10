@@ -313,7 +313,7 @@ onBeforeUnmount(() => {
             Builds That <span class="text-ly">Shipped & Performed</span>
           </h2>
         </div>
-        <a href="/case-studies" class="wd-work-link">View all case studies →</a>
+        <a href="/projects" class="wd-work-link">View all Projects →</a>
       </div>
 
       <div class="wd-work-grid">

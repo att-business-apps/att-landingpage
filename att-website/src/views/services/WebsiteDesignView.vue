@@ -130,8 +130,8 @@ const faqs = [
   {
     q: "How many revision rounds are included?",
     body: "Two structured rounds of feedback are built into every phase — wireframes and visual design. This keeps the process moving without unlimited, unscoped revisions that stall a launch.",
-    link: "/case-studies",
-    linkText: "See how this plays out in our case studies",
+    link: "/projects",
+    linkText: "See how this plays out in our Projects",
   },
 ];
 
@@ -337,7 +337,7 @@ onBeforeUnmount(() => {
             Designs That <span class="text-ly">Shipped & Performed</span>
           </h2>
         </div>
-        <a href="/case-studies" class="wd-work-link">View all case studies →</a>
+        <a href="/projects" class="wd-work-link">View all Projects →</a>
       </div>
 
       <div class="wd-work-grid">

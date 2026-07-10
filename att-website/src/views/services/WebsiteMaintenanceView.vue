@@ -356,7 +356,7 @@ onBeforeUnmount(() => {
             Sites We <span class="text-ly">Built & Keep Running</span>
           </h2>
         </div>
-        <a href="/case-studies" class="wm-work-link">View all case studies →</a>
+        <a href="/projects" class="wm-work-link">View all Projects →</a>
       </div>
 
       <div class="wm-work-grid">

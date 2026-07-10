@@ -71,6 +71,90 @@ const plans = [
   },
 ];
 
+const additionalServices = [
+  {
+    key: "landing-page",
+    icon: "web",
+    label: "Conversion",
+    name: "Landing Page",
+    tagline: "A focused, high-converting page for a launch, campaign, or offer.",
+    price: "₹25,000",
+    waText: "I'm interested in a Landing Page (starting from ₹25,000). Can we talk?",
+  },
+  {
+    key: "branding",
+    icon: "auto_awesome",
+    label: "Identity",
+    name: "Branding",
+    tagline: "Create a memorable brand that earns trust and supports long-term growth.",
+    price: "₹1,50,000",
+    waText: "I'm interested in Branding (starting from ₹1,50,000). Can we talk?",
+  },
+  {
+    key: "seo",
+    icon: "manage_search",
+    label: "Visibility",
+    name: "SEO",
+    tagline: "Get found by the right customers and generate sustainable organic growth.",
+    price: "₹25,000/month",
+    waText: "I'm interested in SEO (starting from ₹25,000/month). Can we talk?",
+  },
+  {
+    key: "social-media-marketing",
+    icon: "groups",
+    label: "Social",
+    name: "Social Media Marketing",
+    tagline: "Build a stronger brand presence and convert engagement into opportunities.",
+    price: "₹20,000/month",
+    waText: "I'm interested in Social Media Marketing (starting from ₹20,000/month). Can we talk?",
+  },
+  {
+    key: "digital-marketing",
+    icon: "campaign",
+    label: "Acquisition",
+    name: "Digital Marketing",
+    tagline: "Generate qualified leads and maximize ROI with performance-driven campaigns.",
+    price: "₹25,000",
+    waText: "I'm interested in Digital Marketing (starting from ₹25,000). Can we talk?",
+  },
+  {
+    key: "lead-generation",
+    icon: "hub",
+    label: "Growth",
+    name: "Lead Generation",
+    tagline: "Build a predictable pipeline of qualified leads, not just website traffic.",
+    price: "₹22,000",
+    waText: "I'm interested in Lead Generation (starting from ₹22,000). Can we talk?",
+  },
+  {
+    key: "linkedin-marketing",
+    icon: "business_center",
+    label: "Social",
+    name: "LinkedIn Marketing",
+    tagline: "Connect with decision-makers and generate high-quality B2B opportunities.",
+    price: "₹18,000",
+    waText: "I'm interested in LinkedIn Marketing (starting from ₹18,000). Can we talk?",
+  },
+  {
+    key: "shopify-development",
+    icon: "storefront",
+    label: "Commerce",
+    name: "Shopify Development",
+    tagline: "Grow revenue with Shopify stores optimized for conversions and repeat purchases.",
+    price: "₹30,000",
+    waText: "I'm interested in Shopify Development (starting from ₹30,000). Can we talk?",
+  },
+  {
+    key: "website-maintenance",
+    icon: "build",
+    label: "Support",
+    name: "Website Maintenance",
+    tagline: "Protect your investment with continuous improvements that keep your site reliable.",
+    price: "₹8,000/mo",
+    waText: "I'm interested in Website Maintenance (starting from ₹8,000/mo). Can we talk?",
+  },
+];
+
 const trustPoints = [
   { icon: "fact_check", label: "Fixed scope, no surprise invoices" },
   { icon: "forum", label: "WhatsApp-first communication" },
@@ -108,6 +192,12 @@ const faqs = [
     question: "What if my project doesn't fit any tier?",
     body: "Some projects — multi-language sites, marketplace builds, complex integrations — fall outside these tiers entirely. We scope those individually after understanding your requirements on a strategy call.",
     note: "Every custom quote still follows the same fixed-scope approach.",
+  },
+  {
+    q: "Additional Services",
+    question: "Do you offer services beyond the website, like SEO or marketing?",
+    body: "Yes. Branding, Digital Marketing, Social Media Marketing, SEO, Lead Generation, LinkedIn Marketing, Ecommerce/Shopify Development, and Website Maintenance are all available as add-ons alongside any plan. Each is scoped and priced individually based on your goals and current setup, so the numbers shown are starting points.",
+    note: "Prices shown on each plan are starting from — final quote depends on scope.",
   },
 ];
 
@@ -366,6 +456,64 @@ onBeforeUnmount(() => {
         <div v-for="point in trustPoints" :key="point.label" class="pv-trust-item">
           <span class="material-symbols-outlined pv-trust-icon">{{ point.icon }}</span>
           <span>{{ point.label }}</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       ADDITIONAL SERVICES — Standalone add-on cards
+       ============================================================ -->
+  <section class="pv-addons-section">
+    <div class="pv-addons-inner">
+      <div class="pv-addons-header mb-16 text-center">
+        <div class="inline-block py-2 px-4 rounded bg-dark text-[10px] font-black uppercase tracking-[0.3em] mb-3">
+          <span class="text-ly">Beyond the Website</span>
+        </div>
+        <h2 class="pv-addons-heading text-3xl font-display font-bold text-dark mb-3" style="font-weight: 600">
+          Additional <span class="text-ly">Services</span>
+        </h2>
+        <p class="pv-addons-sub text-slate-500 max-w-md mx-auto mb-0 text-sm">
+          Add these alongside any plan. Each is scoped individually, so pricing starts here and is
+          confirmed on your strategy call.
+        </p>
+      </div>
+
+      <div class="pv-addons-grid">
+        <div v-for="service in additionalServices" :key="service.key" class="pv-addon-card">
+          <div class="pv-addon-card-top">
+            <div class="pv-addon-card-icon">
+              <span class="material-symbols-outlined">{{ service.icon }}</span>
+            </div>
+            <span class="pv-addon-card-label">{{ service.label }}</span>
+          </div>
+
+          <h3 class="pv-addon-card-name">{{ service.name }}</h3>
+          <p class="pv-addon-card-tagline">{{ service.tagline }}</p>
+
+          <div class="pv-addon-card-footer">
+            <div class="pv-addon-card-price">
+              <span class="pv-addon-card-price-label">Starting from</span>
+              <span class="pv-addon-card-price-value">{{ service.price }}</span>
+            </div>
+            <a
+              class="pv-addon-card-cta"
+              :href="waBase + encodeURIComponent(service.waText)"
+              target="_blank"
+              rel="noopener"
+              :aria-label="'Ask about ' + service.name"
+            >
+              <svg width="14" height="14" viewBox="0 0 16 16" fill="none">
+                <path
+                  d="M3 13L13 3M13 3H6M13 3V10"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </a>
+          </div>
         </div>
       </div>
     </div>
@@ -724,6 +872,155 @@ onBeforeUnmount(() => {
   font-size: 1.35rem;
   color: #eab308;
   flex-shrink: 0;
+}
+
+/* ─── Additional Services — Standalone Add-on Cards ─────────────────────── */
+.pv-addons-section {
+  padding: 7rem 4rem 8rem;
+  background: #ffffff;
+}
+
+@media (max-width: 1100px) {
+  .pv-addons-section { padding: 4.5rem 2rem 5rem; }
+}
+
+@media (max-width: 768px) {
+  .pv-addons-section { padding: 3.5rem 1.25rem 4rem; }
+}
+
+.pv-addons-inner {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.pv-addons-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+@media (max-width: 1024px) {
+  .pv-addons-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 640px) {
+  .pv-addons-grid { grid-template-columns: 1fr; }
+}
+
+.pv-addon-card {
+  display: flex;
+  flex-direction: column;
+  background: #f8fafc;
+  border: 1px solid rgba(15, 23, 42, 0.08);
+  border-radius: 18px;
+  padding: 1.75rem 1.75rem 1.5rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease, background 0.3s ease;
+}
+
+.pv-addon-card:hover {
+  transform: translateY(-4px);
+  background: #ffffff;
+  border-color: rgba(250, 204, 21, 0.4);
+  box-shadow: 0 20px 40px -20px rgba(15, 23, 42, 0.18);
+}
+
+.pv-addon-card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.25rem;
+}
+
+.pv-addon-card-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  background: rgba(250, 204, 21, 0.12);
+  border: 1px solid rgba(250, 204, 21, 0.25);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #0f172a;
+  flex-shrink: 0;
+}
+
+.pv-addon-card-icon .material-symbols-outlined {
+  font-size: 1.3rem;
+}
+
+.pv-addon-card-label {
+  font-size: 0.62rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: #94a3b8;
+}
+
+.pv-addon-card-name {
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: #0f172a;
+  letter-spacing: -0.01em;
+  margin-bottom: 0.5rem;
+}
+
+.pv-addon-card-tagline {
+  font-size: 0.85rem;
+  color: #64748b;
+  line-height: 1.6;
+  min-height: 2.6rem;
+  margin-bottom: 1.5rem;
+}
+
+.pv-addon-card-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-top: auto;
+  padding-top: 1.25rem;
+  border-top: 1px solid rgba(15, 23, 42, 0.08);
+}
+
+.pv-addon-card-price {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.pv-addon-card-price-label {
+  font-size: 0.62rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: #94a3b8;
+}
+
+.pv-addon-card-price-value {
+  font-size: 1.1rem;
+  font-weight: 800;
+  color: #0f172a;
+  font-variant-numeric: tabular-nums;
+}
+
+.pv-addon-card-cta {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  border-radius: 10px;
+  background: transparent;
+  border: 1px solid rgba(15, 23, 42, 0.16);
+  color: #0f172a;
+  flex-shrink: 0;
+  transition: background 0.25s ease, color 0.25s ease, border-color 0.25s ease;
+}
+
+.pv-addon-card-cta:hover {
+  background: #facc15;
+  border-color: #facc15;
+  color: #0f172a;
 }
 
 /* ─── FAQ — Tab Rail + Stage (matches HomeView pattern) ────────────────── */

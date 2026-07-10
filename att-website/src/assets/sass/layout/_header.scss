@@ -136,10 +136,10 @@
         a {
           color: var(--color-white);
           &::before {
-            background-color: var(--color-white);
+            background-color: var(--color-primaryY);
           }
           &::after {
-            color: var(--color-gray-4);
+            display: none;
           }
         }
       }

@@ -119,14 +119,14 @@ onBeforeUnmount(() => ctx?.revert());
       <nav class="cs-breadcrumb" aria-label="Breadcrumb">
         <a href="/">Home</a>
         <span>&#8226;</span>
-        <a href="/case-studies">Portfolio</a>
+        <a href="/projects">Projects</a>
         <span>&#8226;</span>
         <span class="active">SteadyAsset</span>
       </nav>
 
       <div class="cs-hero-eyebrow">
-        <span class="eyebrow-dot"></span>
-        Case Study &middot; Investment Platform &middot; 2024
+        <span class="eyebrow-pill">Fintech</span>
+        CRE, Bonds, and MF Investment Platform 
       </div>
 
       <h1 class="cs-hero-title">
@@ -169,7 +169,7 @@ onBeforeUnmount(() => ctx?.revert());
             <line x1="10" y1="14" x2="21" y2="3"/>
           </svg>
         </a>
-        <a href="/case-studies" class="cs-btn-ghost">All Case Studies</a>
+        <a href="/projects" class="cs-btn-ghost">All Projects</a>
       </div>
 
       <!-- Mockup -->
@@ -492,7 +492,7 @@ onBeforeUnmount(() => ctx?.revert());
           Amortree is a very professional and end-to-end service provider. They have good understanding of the clients needs and work in a timely and efficient manner.
         </blockquote>
         <div class="cs-testimonial-attr">
-          <div class="cs-testimonial-avatar">G</div>
+          <div class="cs-testimonial-avatar">MR</div>
           <div class="cs-testimonial-text">
             <strong>Menaka Reddy</strong>
             <span>Founder, SteadyAsset</span>
@@ -654,21 +654,23 @@ onBeforeUnmount(() => ctx?.revert());
   z-index: 2;
   display: inline-flex;
   align-items: center;
-  gap: 0.5rem;
-  font-size: 0.7rem;
-  font-weight: 800;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  color: var(--teal);
+  gap: 0.7rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.65);
   margin-bottom: 1.5rem;
 }
 
-.eyebrow-dot {
-  width: 7px; height: 7px;
-  border-radius: 50%;
-  background: var(--teal);
-  box-shadow: 0 0 12px var(--teal);
-  animation: pulse-dot 2s ease infinite;
+.eyebrow-pill {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.3rem 0.75rem;
+  border-radius: 999px;
+  background: rgba(32,178,170, 0.16);
+  border: 1px solid rgba(32,178,170, 0.4);
+  color: var(--teal);
+  font-size: 0.72rem;
+  font-weight: 800;
 }
 
 @keyframes pulse-dot {

@@ -351,7 +351,7 @@ onBeforeUnmount(() => {
             Stores That <span class="text-ly">Shipped & Sold</span>
           </h2>
         </div>
-        <a href="/case-studies" class="ecd-work-link">View all case studies →</a>
+        <a href="/projects" class="ecd-work-link">View all Projects →</a>
       </div>
 
       <div class="ecd-work-grid">

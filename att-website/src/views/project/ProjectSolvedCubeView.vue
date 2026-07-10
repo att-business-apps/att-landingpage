@@ -103,14 +103,14 @@ onBeforeUnmount(() => ctx?.revert());
       <nav class="cs-breadcrumb" aria-label="Breadcrumb">
         <a href="/">Home</a>
         <span>&#8226;</span>
-        <a href="/case-studies">Portfolio</a>
+        <a href="/projects">Projects</a>
         <span>&#8226;</span>
         <span class="active">Solved Cube</span>
       </nav>
 
       <div class="cs-hero-eyebrow">
-        <span class="eyebrow-pill">2024</span>
-        Brand Identity &amp; Web Strategy
+        <span class="eyebrow-pill">IT Company</span>
+        IT Consultancy and Services
       </div>
 
       <h1 class="cs-hero-title">
@@ -152,7 +152,7 @@ onBeforeUnmount(() => ctx?.revert());
             <line x1="10" y1="14" x2="21" y2="3"/>
           </svg>
         </a>
-        <a href="/case-studies" class="cs-btn-ghost">All Case Studies</a>
+        <a href="/projects" class="cs-btn-ghost">All Projects</a>
       </div>
 
       <!-- Mockup -->
@@ -424,7 +424,7 @@ onBeforeUnmount(() => ctx?.revert());
           Hi, I just wanted to take a moment to express my sincere appreciation for the outstanding work you've done. Completing it on time and to such a high standard is a testament to your dedication and expertise. Your efforts have not gone unnoticed and I'm grateful for your contributions. Thank you again for a job well done!"
         </blockquote>
         <div class="cs-testimonial-attr">
-          <div class="cs-testimonial-avatar">G</div>
+          <div class="cs-testimonial-avatar">SP</div>
           <div class="cs-testimonial-text">
             <strong>Sandeep P</strong>
             <span>CEO, Solved Cube IT Solutions</span>

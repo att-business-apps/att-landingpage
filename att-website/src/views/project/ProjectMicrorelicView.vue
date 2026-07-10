@@ -132,14 +132,14 @@ onBeforeUnmount(() => ctx?.revert());
       <nav class="cs-breadcrumb" aria-label="Breadcrumb">
         <a href="/">Home</a>
         <span>&#8226;</span>
-        <a href="/case-studies">Case Study</a>
+        <a href="/projects">Case Study</a>
         <span>&#8226;</span>
         <span class="active">Microrelic</span>
       </nav>
 
       <div class="cs-hero-eyebrow">
-        <span class="eyebrow-dot"></span>
-        Case Study &middot; Digital Product Development
+        <span class="eyebrow-pill">IT Company</span>
+        Digital Product Development
       </div>
 
       <h1 class="cs-hero-title">
@@ -181,7 +181,7 @@ onBeforeUnmount(() => ctx?.revert());
             <line x1="10" y1="14" x2="21" y2="3"/>
           </svg>
         </a>
-        <a href="/case-studies" class="cs-btn-ghost">All Case Studies</a>
+        <a href="/projects" class="cs-btn-ghost">All Projects</a>
       </div>
 
       <!-- Mockup -->
@@ -677,14 +677,14 @@ onBeforeUnmount(() => ctx?.revert());
 }
 
 .cs-hero-eyebrow {
+  position: relative;
+  z-index: 2;
   display: inline-flex;
   align-items: center;
-  gap: 0.55rem;
-  font-size: 0.76rem;
-  font-weight: 700;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  color: var(--primary-300);
+  gap: 0.7rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.65);
   margin-bottom: 1.5rem;
 }
 
@@ -1169,6 +1169,18 @@ onBeforeUnmount(() => ctx?.revert());
   align-items: start;
 
   @media (max-width: 900px) { grid-template-columns: 1fr; }
+}
+
+.eyebrow-pill {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.3rem 0.75rem;
+  border-radius: 999px;
+  background: rgba(42, 85, 176,0.14);
+  border: 1px solid rgba(42, 85, 176,0.35);
+  color: var(--primary-300);
+  font-size: 0.72rem;
+  font-weight: 800;
 }
 
 .cs-pillar {

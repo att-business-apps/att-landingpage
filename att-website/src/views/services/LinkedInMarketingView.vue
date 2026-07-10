@@ -351,7 +351,7 @@ onBeforeUnmount(() => {
             Brands That <span class="text-ly">Shipped & Connected</span>
           </h2>
         </div>
-        <a href="/case-studies" class="li-work-link">View all case studies →</a>
+        <a href="/projects" class="li-work-link">View all Projects →</a>
       </div>
 
       <div class="li-work-grid">

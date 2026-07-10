@@ -351,7 +351,7 @@ onBeforeUnmount(() => {
             Campaigns That <span class="text-ly">Shipped & Ranked</span>
           </h2>
         </div>
-        <a href="/case-studies" class="seo-work-link">View all case studies →</a>
+        <a href="/projects" class="seo-work-link">View all Projects →</a>
       </div>
 
       <div class="seo-work-grid">

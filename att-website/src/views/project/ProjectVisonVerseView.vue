@@ -16,7 +16,7 @@ import uaeDr from "@/assets/img/project/c1/uae-dr.png";
       >
         <ul class="list-unstyled">
           <li><a href="/">Home</a></li>
-          <li><a href="/case-studies">Case Study</a></li>
+          <li><a href="/projects">Projects</a></li>
           <li class="active text-ly">VisionVerse Technology</li>
         </ul>
         <div class="section-heading heading-left">

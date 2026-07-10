@@ -235,7 +235,7 @@ onBeforeUnmount(() => {
           class="amor-btn btn-fill-primary btn-large"
           href="https://wa.me/917975859061/?text=I%27d%20like%20to%20book%20a%20free%20strategy%20call."
         >Book Your Free Strategy Call</a>
-        <a href="/case-studies" class="amor-btn btn-borderd light">See Our Work</a>
+        <a href="/projects" class="amor-btn btn-borderd light">See Our Work</a>
       </div>
     </div>
   </section>

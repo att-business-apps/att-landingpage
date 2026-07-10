@@ -2,10 +2,48 @@
 import { onBeforeUnmount, onMounted, ref } from "vue";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import dineshImg from "../assets/img/team/dinesh.webp";
+import sufiImg from "../assets/img/team/sufi.png";
+import gouthamImg from "../assets/img/team/goutham.png";
+import srilathaImg from "../assets/img/team/srilatha.png";
+import lavanyaImg from "../assets/img/team/lavanya.png";
 
 gsap.registerPlugin(ScrollTrigger);
 
 const aboutPage = ref(null);
+
+const team = [
+  {
+    name: "Dinesh",
+    role: "UI/UX Strategist · Front-end Innovator",
+    img: dineshImg,
+    url: "https://dinesh.amortree.com/",
+  },
+  {
+    name: "Sufiyan",
+    role: "Full-Stack Developer · Frontend Specialist",
+    img: sufiImg,
+    url: "https://sufiyan.amortree.com/",
+  },
+  {
+    name: "Goutham",
+    role: "Business Analyst · Data Strategist",
+    img: gouthamImg,
+    url: "https://goutham.amortree.com/",
+  },
+  {
+    name: "Srilatha",
+    role: "Digital Marketing Strategist · LinkedIn & SEO Specialist",
+    img: srilathaImg,
+    url: "https://srilatha.amortree.com/",
+  },
+  {
+    name: "Lavanya",
+    role: "Digital Marketing Strategist · Brand Consultant",
+    img: lavanyaImg,
+    url: "https://lavanya.amortree.com/",
+  },
+];
 
 const values = [
   {
@@ -142,6 +180,26 @@ onMounted(() => {
       });
     });
 
+    // Team section
+    gsap.from(".att-team-eyebrow, .att-team-heading, .att-team-sub", {
+      y: 28,
+      autoAlpha: 0,
+      duration: 0.8,
+      stagger: 0.08,
+      ease: "power3.out",
+      scrollTrigger: { trigger: ".att-team-section", start: "top 78%", once: true },
+    });
+    gsap.utils.toArray(".att-team-card").forEach((card, i) => {
+      gsap.from(card, {
+        y: 40,
+        autoAlpha: 0,
+        duration: 0.7,
+        delay: (i % 4) * 0.08,
+        ease: "power3.out",
+        scrollTrigger: { trigger: card, start: "top 90%", once: true },
+      });
+    });
+
     // Values section
     gsap.from(".att-values-eyebrow, .att-values-heading, .att-values-sub", {
       y: 28,
@@ -192,6 +250,7 @@ onMounted(() => {
     });
 
     addHoverLift(".att-value-card", -8);
+    addHoverLift(".att-team-card", -8);
     addHoverLift(".att-process-step", -6);
     addHoverLift(".att-stat-card", -5);
 
@@ -307,6 +366,50 @@ onBeforeUnmount(() => {
     </section>
 
     <!-- ============================================================
+         LEADERSHIP TEAM — Premium 4-up profile grid
+         ============================================================ -->
+    <section class="att-team-section">
+      <div class="att-team-inner">
+        <div class="att-team-header">
+          <div class="att-team-eyebrow att-section-label">Leadership Team</div>
+          <h2 class="att-team-heading">
+            The People Behind <span class="text-lr">Every Build</span>
+          </h2>
+          <p class="att-team-sub">
+            A small, senior team — no account managers relaying messages, no juniors learning on
+            your project. You work directly with the people doing the work.
+          </p>
+        </div>
+
+        <div class="att-team-grid">
+          <div v-for="(m, i) in team" :key="m.name" class="att-team-card">
+            <div class="att-team-photo">
+              <img :src="m.img" :alt="m.name" loading="lazy" />
+              <!-- <span class="att-team-index">{{ String(i + 1).padStart(2, '0') }}</span> -->
+            </div>
+            <div class="att-team-body">
+              <h3 class="att-team-name">{{ m.name }}</h3>
+              <p class="att-team-role">{{ m.role }}</p>
+              <a
+                v-if="m.url"
+                :href="m.url"
+                target="_blank"
+                rel="noopener"
+                class="att-team-link"
+              >
+                View Profile
+                <svg width="13" height="13" viewBox="0 0 16 16" fill="none">
+                  <path d="M3 13L13 3M13 3H6M13 3V10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </a>
+              <span v-else class="att-team-tag">Leadership Team</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
          VALUES — Dark section, numbered grid
          ============================================================ -->
     <section class="att-values-section">
@@ -387,7 +490,7 @@ onBeforeUnmount(() => {
             class="amor-btn btn-fill-primary btn-large"
             href="https://wa.me/917975859061/?text=I%27d%20like%20to%20book%20a%20free%20strategy%20call."
           >Book Your Free Strategy Call</a>
-          <a href="/case-studies" class="amor-btn btn-borderd light">See Our Work</a>
+          <a href="/projects" class="amor-btn btn-borderd light">See Our Work</a>
         </div>
       </div>
     </section>
@@ -528,6 +631,160 @@ onBeforeUnmount(() => {
   color: #64748b;
   font-weight: 600;
   line-height: 1.4;
+}
+
+// ─── Leadership Team Section ─────────────────────────────────────────────────
+.att-team-section {
+  padding: 7rem 4rem;
+  background: #f8fafc;
+  border-top: 1px solid rgba(15, 23, 42, 0.05);
+
+  @media (max-width: 1100px) { padding: 4.5rem 2rem; }
+  @media (max-width: 768px)  { padding: 3.5rem 1.25rem; }
+}
+
+.att-team-inner {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.att-team-header {
+  max-width: 620px;
+  margin-bottom: 3.5rem;
+}
+
+.att-team-heading {
+  font-size: clamp(2.2rem, 4.2vw, 3.2rem);
+  font-weight: 700;
+  line-height: 1.15;
+  color: #0f172a;
+  letter-spacing: -0.01em;
+  margin-bottom: 1.25rem;
+}
+
+.att-team-sub {
+  font-size: 0.98rem;
+  line-height: 1.8;
+  color: #64748b;
+}
+
+.att-team-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.75rem;
+
+  @media (max-width: 1024px) { grid-template-columns: repeat(2, 1fr); }
+  @media (max-width: 560px)  { grid-template-columns: 1fr; max-width: 340px; margin: 0 auto; }
+}
+
+.att-team-card {
+  background: #ffffff;
+  border: 1px solid rgba(15, 23, 42, 0.07);
+  border-radius: 20px;
+  overflow: hidden;
+  transition: border-color 0.35s ease, box-shadow 0.35s ease;
+  will-change: transform;
+
+  &:hover {
+    border-color: rgba(219, 60, 45, 0.4);
+    box-shadow: 0 24px 48px -24px rgba(15, 23, 42, 0.25);
+  }
+}
+
+.att-team-photo {
+  position: relative;
+  aspect-ratio: 5 / 5;
+  overflow: hidden;
+  background: #e2e8f0;
+
+  img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    object-position: top center;
+    filter: grayscale(1) contrast(1.02);
+    transform: scale(1.02);
+    transition: filter 0.55s ease, transform 0.65s ease;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, transparent 55%, rgba(15, 23, 42, 0.55) 100%);
+    pointer-events: none;
+  }
+
+  .att-team-card:hover & img {
+    filter: grayscale(0) contrast(1);
+    transform: scale(1.08);
+  }
+}
+
+.att-team-index {
+  position: absolute;
+  top: 0.9rem;
+  left: 0.9rem;
+  z-index: 1;
+  font-size: 0.64rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  color: #fff;
+  background: rgba(15, 23, 42, 0.55);
+  backdrop-filter: blur(6px);
+  padding: 0.3rem 0.55rem;
+  border-radius: 999px;
+  font-variant-numeric: tabular-nums;
+}
+
+.att-team-body {
+  padding: 1.4rem;
+}
+
+.att-team-name {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #0f172a;
+  letter-spacing: -0.005em;
+  margin-bottom: 0.35rem;
+}
+
+.att-team-role {
+  font-size: 0.8rem;
+  color: #64748b;
+  line-height: 1.55;
+  margin-bottom: 0;
+  min-height: 2.4em;
+}
+
+.att-team-link {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: #dc3c2d;
+  text-decoration: none;
+  padding-top: 0.9rem;
+  border-top: 1px solid rgba(15, 23, 42, 0.07);
+  transition: gap 0.25s ease, color 0.25s ease;
+
+  &:hover {
+    gap: 0.65rem;
+    color: #b42d20;
+  }
+}
+
+.att-team-tag {
+  display: flex;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #94a3b8;
+  padding-top: 0.9rem;
+  border-top: 1px solid rgba(15, 23, 42, 0.07);
 }
 
 // ─── Values Section (dark) ───────────────────────────────────────────────────

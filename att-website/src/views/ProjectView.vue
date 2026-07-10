@@ -86,10 +86,11 @@
 
       <!-- Project cards -->
       <div class="pv-grid">
-        <div
+        <a
           class="pv-card"
           v-for="(item, index) in filteredProjects"
           :key="item.id"
+          :href="item.href"
           ref="projectCards"
         >
           <!-- Image -->
@@ -98,26 +99,19 @@
             <img :src="item.img" :alt="item.title" class="pv-card-img" />
 
             <!-- Number badge -->
-            <div class="pv-card-num">{{ String(index + 1).padStart(2, '0') }}</div>
+            <!-- <div class="pv-card-num">{{ String(index + 1).padStart(2, '0') }}</div> -->
 
             <!-- Float info top-right -->
             <div class="pv-card-float">
               <!-- <div class="pv-card-float-title">{{ item.title }}</div> -->
               <!-- <div class="pv-card-float-sub">{{ item.subtitle }}</div> -->
-              <a class="pv-card-float-cta" :href="item.href">
-                View Case Study
-                <svg width="14" height="14" viewBox="0 0 16 16" fill="none">
-                  <path d="M3 13L13 3M13 3H6M13 3V10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
-              </a>
             </div>
           </div>
 
           <!-- Glass content overlay bottom-left -->
           <div class="pv-card-content">
             <div class="pv-card-top">
-              <span class="pv-card-label">{{ item.year }}</span>
-              <span class="pv-card-role">{{ item.role }}</span>
+              <!-- <span class="pv-card-label">{{ item.year }}</span> -->
             </div>
 
             <h3 class="pv-card-title">{{ item.title }}</h3>
@@ -126,21 +120,8 @@
             <div class="pv-card-chips">
               <span class="pv-chip" v-for="tag in item.categories" :key="tag">{{ tag }}</span>
             </div>
-
-            <div class="pv-card-meta-row">
-              <span class="pv-meta-pill">
-                <span class="material-symbols-outlined">person</span>
-                {{ item.client }}
-              </span>
-              <a :href="item.href" class="pv-meta-cta">
-                Open project
-                <svg width="12" height="12" viewBox="0 0 16 16" fill="none">
-                  <path d="M3 13L13 3M13 3H6M13 3V10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
-              </a>
-            </div>
           </div>
-        </div>
+        </a>
       </div>
 
       <!-- Empty state -->
@@ -199,9 +180,7 @@ const projects = ref([
     href: "project/uae-links",
     img: new URL("../assets/img/project/c1/project-thum-uaeLinks.png", import.meta.url).href,
     subtitle: "One Portal. Every UAE Government Service.",
-    client: "Shajeer",
     year: "2024",
-    role: "UI/UX Design & Web Strategy",
     categories: ["UI/UX Design", "Website Design", "Web Development"],
   },
   {
@@ -210,9 +189,7 @@ const projects = ref([
     href: "project/solved-cube-it-solutions",
     img: new URL("../assets/img/project/c2/project-thum-sc.png", import.meta.url).href,
     subtitle: "Elevating an IT consulting brand with a modern digital presence.",
-    client: "Sandeep",
     year: "2024",
-    role: "Brand Identity, Web Strategy & Full-Stack Web Development",
     categories: ["Branding", "Logo", "UI/UX Design", "Website", "Web Development", "GMB"],
   },
   {
@@ -221,9 +198,7 @@ const projects = ref([
     href: "project/microrelic",
     img: new URL("../assets/img/project/c3/project-thum-mr.png", import.meta.url).href,
     subtitle: "Transforming an IT consulting brand into a modern digital experience.",
-    client: "Oruganti Sarma",
     year: "2023",
-    role: "Brand Refresh, UI/UX & Web Strategy",
     categories: ["Branding", "Website", "Redesign", "GA", "UI/UX Design"],
   },
   {
@@ -232,9 +207,7 @@ const projects = ref([
     href: "project/steadyasset",
     img: new URL("../assets/img/project/c4/project-thum-sa.png", import.meta.url).href,
     subtitle: "Logo, Branding, UI/UX Design, Website, GMB, GA",
-    client: "Menaka Reddy",
     year: "2024",
-    role: "Design Systems & Growth",
     categories: ["Branding", "Logo", "UI/UX Design", "Website", "GMB"],
   },
   {
@@ -243,9 +216,7 @@ const projects = ref([
     href: "project/al-shamil-computers",
     img: new URL("../assets/img/project/c5/project-thum-als.png", import.meta.url).href,
     subtitle: "Empowering businesses with a modern digital presence for enterprise IT solutions.",
-    client: "Shajeer",
-    year: "2023",
-    role: "Design Consultant, UI/UX Design, Web Development & Digital Strategy",
+    year: "2024",
     categories: ["UI/UX Design", "Corporate Website", "Web Development", "Digital Strategy"],
   },
   {
@@ -254,9 +225,7 @@ const projects = ref([
     href: "project/savedesk",
     img: new URL("../assets/img/project/c7/project-thum-sd.png", import.meta.url).href,
     subtitle: "Designing a scalable customer support platform for modern enterprises.",
-    client: "Kranthi Reddy",
-    year: "2024",
-    role: "Product Designer, Enterprise UI/UX Design & High-Fidelity Wireframing",
+    year: "2025",
     categories: ["Product Design", "UI/UX Design", "SaaS Application", "Enterprise Dashboard"],
   },
   // {
@@ -265,9 +234,7 @@ const projects = ref([
   //   href: "project/visonverse",
   //   img: new URL("../assets/img/project/c7/project-thum-vv.png", import.meta.url).href,
   //   subtitle: "Building a memorable technology brand from identity to local search visibility.",
-  //   client: "Kavya",
   //   year: "2025",
-  //   role: "Brand Identity Design & Google Business Profile Optimization",
   //   categories: ["Logo Design", "Brand Identity", "Google Business Profile","Local SEO"],
   // },
   {
@@ -276,22 +243,27 @@ const projects = ref([
     href: "project/samsiddhi-designs",
     img: new URL("../assets/img/project/c9/project-thum-sd.png", import.meta.url).href,
     subtitle: "Logo, Branding, UI/UX Design, Website, GMB, GA",
-    client: "Bharath Kumar",
     year: "2025",
-    role: "Brand Experience",
     categories: ["Branding", "Logo", "UI/UX Design", "Website", "GMB"],
   },
-  // {
-  //   id: "al-shamil-dashboard",
-  //   title: "Al-Shamil Dashboard",
-  //   href: "project/al-shamil-dashboard",
-  //   img: new URL("../assets/img/project/c9/project-thum-alsd.png", import.meta.url).href,
-  //   subtitle: "Designing an enterprise dashboard that simplifies complex visa management workflows.",
-  //   client: "Shajeer",
-  //   year: "2025",
-  //   role: "Brand Experience",
-  //   categories: ["Dashboard Design", "Enterprise Application", "UI/UX Design", "Frontend Development"],
-  // },
+  {
+    id: "raksha-realty",
+    title: "Raksha Realty",
+    href: "project/raksha-realty",
+    img: new URL("../assets/img/project/c12/project-thum-rr.png", import.meta.url).href,
+    subtitle: "Designing a modern real estate advisory brand identity and digital presence for Raksha Realty.",
+    year: "2026",
+    categories: ["Redesign", "UI/UX Design", "Custom Development", "Pitch Deck", "GA"],
+  },
+  {
+    id: "alin-salon",
+    title: "Alin Salon",
+    href: "project/alin-salon",
+    img: new URL("../assets/img/project/c13/project-thum-as.png", import.meta.url).href,
+    subtitle: "Designing a modern salon brand identity and digital presence for Alin Salon.",
+    year: "2026",
+    categories: ["Website Design", "UI/UX Design", "Custom Development", "GMB"],
+  },
 ]);
 
 const filteredProjects = computed(() => {
@@ -518,15 +490,19 @@ onBeforeUnmount(() => gsapContext?.revert());
 // ─── Project card ─────────────────────────────────────────────────────
 .pv-card {
   position: relative;
+  display: block;
   border-radius: 20px;
   overflow: hidden;
   background: #111827;
   border: 1px solid rgba(255, 255, 255, 0.08);
   box-shadow: 0 32px 80px rgba(8, 14, 30, 0.2);
-  transition: box-shadow 0.4s ease;
+  cursor: pointer;
+  text-decoration: none;
+  transition: box-shadow 0.4s ease, transform 0.4s ease;
 
   &:hover {
     box-shadow: 0 40px 100px rgba(8, 14, 30, 0.28);
+    transform: translateY(-4px);
   }
 }
 
@@ -607,56 +583,10 @@ onBeforeUnmount(() => gsapContext?.revert());
   right: 1.75rem;
   z-index: 6;
   width: min(36%, 320px);
-  padding: 1.35rem 1.5rem;
-  border-radius: 18px;
-  border: 1px solid rgba(255,255,255,0.14);
-  box-shadow: 0 24px 60px rgba(0,0,0,0.28);
-  backdrop-filter: blur(20px);
+  min-height: 0;
 
   @media (max-width: 768px) {
     display: none;
-  }
-}
-
-.pv-card-float-title {
-  font-size: 1.15rem;
-  font-weight: 700;
-  color: #f1f5f9;
-  margin-bottom: 0.45rem;
-  line-height: 1.2;
-}
-
-.pv-card-float-sub {
-  font-size: 0.8rem;
-  color: rgba(226,232,255,0.7);
-  line-height: 1.65;
-  margin-bottom: 1rem;
-}
-
-.pv-card-float-cta {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.45rem;
-  width: 100%;
-  justify-content: center;
-  padding: 0.8rem 1.2rem;
-  border-radius: 999px;
-  background: var(--logo-green);
-  color: #0f172a;
-  font-size: 0.82rem;
-  font-weight: 800;
-  letter-spacing: 0.02em;
-  text-decoration: none;
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
-
-  &:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 14px 32px rgba(92, 176, 77, 0.32);
-    color: #0f172a;
-  }
-
-  svg {
-    flex-shrink: 0;
   }
 }
 
@@ -704,12 +634,6 @@ onBeforeUnmount(() => gsapContext?.revert());
   border: 1px solid rgba(92, 176, 77, 0.22);
   padding: 0.28rem 0.65rem;
   border-radius: 999px;
-}
-
-.pv-card-role {
-  font-size: 0.78rem;
-  color: rgba(226,232,255,0.65);
-  font-weight: 500;
 }
 
 .pv-card-chips {
@@ -760,15 +684,6 @@ onBeforeUnmount(() => gsapContext?.revert());
   max-width: 86%;
 }
 
-.pv-card-meta-row {
-  display: flex;
-  align-items: center;
-  gap: 0.75rem;
-  flex-wrap: wrap;
-  padding-top: 0.85rem;
-  border-top: 1px solid rgba(255,255,255,0.08);
-}
-
 .pv-meta-pill {
   display: inline-flex;
   align-items: center;
@@ -782,23 +697,6 @@ onBeforeUnmount(() => gsapContext?.revert());
 
   .material-symbols-outlined {
     font-size: 0.95rem;
-  }
-}
-
-.pv-meta-cta {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.4rem;
-  font-size: 0.8rem;
-  font-weight: 700;
-  color: var(--logo-green);
-  text-decoration: none;
-  letter-spacing: 0.02em;
-  transition: gap 0.25s ease;
-
-  &:hover {
-    gap: 0.6rem;
-    color: var(--logo-green);
   }
 }
 

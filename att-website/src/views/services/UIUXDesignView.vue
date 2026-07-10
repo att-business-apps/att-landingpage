@@ -115,8 +115,8 @@ const faqs = [
   {
     q: "Will I get a usable prototype, or just static screens?",
     body: "You get clickable prototypes for key flows, not just static mockups — so you and your team can actually walk through the experience and catch issues before development starts.",
-    link: "/case-studies",
-    linkText: "See how this plays out in our case studies",
+    link: "/projects",
+    linkText: "See how this plays out in our Projects",
   },
 ];
 
@@ -320,7 +320,7 @@ onBeforeUnmount(() => {
             Experiences That <span class="text-ly">Shipped & Performed</span>
           </h2>
         </div>
-        <a href="/case-studies" class="uxd-work-link">View all case studies →</a>
+        <a href="/projects" class="uxd-work-link">View all Projects →</a>
       </div>
 
       <div class="uxd-work-grid">
