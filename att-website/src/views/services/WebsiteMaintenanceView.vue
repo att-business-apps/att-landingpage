@@ -438,7 +438,7 @@ onBeforeUnmount(() => {
       <div class="d-flex justify-content-center flex-wrap gap-3 mt-5">
         <a
           class="amor-btn btn-fill-primary btn-large"
-          href="https://calendar.app.google/oxixnGZCQPPcqaWd6" target="_blank" rel="noopener noreferrer"
+          href="https://wa.me/917975859061/?text=I%27d%20like%20to%20book%20a%20free%20strategy%20call."
         >Book Your Free Strategy Call</a>
         <a href="/estimate" class="amor-btn btn-borderd light">Get a Project Estimate</a>
       </div>

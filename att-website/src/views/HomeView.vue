@@ -736,7 +736,7 @@ onBeforeUnmount(() => {
           <!-- CTAs -->
           <div class="att-hero-ctas">
             <a class="att-hero-btn att-btn-primary"
-              href="https://calendar.app.google/oxixnGZCQPPcqaWd6" target="_blank" rel="noopener noreferrer">
+              href="https://wa.me/917975859061/?text=I%27d%20like%20to%20book%20a%20free%20strategy%20call.">
               Book Your Free Strategy Call
               <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
                 <path d="M2 12L12 2M12 2H5M12 2V9" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
