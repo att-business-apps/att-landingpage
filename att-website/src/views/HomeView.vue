@@ -736,7 +736,7 @@ onBeforeUnmount(() => {
           <!-- CTAs -->
           <div class="att-hero-ctas">
             <a class="att-hero-btn att-btn-primary"
-              href="https://wa.me/917975859061/?text=I%20need%20to%20Book%20Your%20Free%20Strategy%20Call.">
+              href="https://calendar.app.google/oxixnGZCQPPcqaWd6" target="_blank" rel="noopener noreferrer">
               Book Your Free Strategy Call
               <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
                 <path d="M2 12L12 2M12 2H5M12 2V9" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
@@ -1615,7 +1615,7 @@ onBeforeUnmount(() => {
         </p>
         <div class="d-flex justify-content-center gap-3 flex-wrap">
           <a class="amor-btn btn-fill-primary btn-large"
-            href="https://wa.me/917975859061/?text=I%27d%20like%20to%20book%20a%20free%20strategy%20call.">Book Your Free Strategy Call</a>
+            href="https://calendar.app.google/oxixnGZCQPPcqaWd6" target="_blank" rel="noopener noreferrer">Book Your Free Strategy Call</a>
           <a href="/estimate" class="amor-btn btn-borderd light">Get a Project Estimate</a>
         </div>
         <p class="mt-5 text-center text-slate-500 text-xs mb-0">
@@ -1723,7 +1723,8 @@ onBeforeUnmount(() => {
   }
 
   @media (max-width: 768px) {
-    padding: 7rem 1.25rem 2.5rem;
+    padding: 7rem .45rem 2.5rem;
+    width: 94%;
   }
 }
 

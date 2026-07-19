@@ -273,7 +273,29 @@
   </script>
 
   <style>
+    .qxCTlb {
+      position: fixed;
+      z-index: 1;
+      right: -94px;
+      bottom: 50%;
+      transform: rotate(90deg);
+    }
 
+    @media (max-width: 767px) {
+      .hur54b {
+        padding: 3rem 1rem !important;
+      }
+      .qxCTlb {
+        position: fixed;
+        z-index: 9999;
+        right: 30%;
+        bottom: 10.5%;
+        font-size: 12px;
+        padding: 2px 8px !important;
+        transform: rotate(0deg);
+        min-height: 26px !important;
+      }
+    }
   </style>
 
 </head>
@@ -295,6 +317,24 @@
       name: 'FacebookPixelNoScript',
     }
   </script>
+
+    <!-- Google Calendar Appointment Scheduling begin -->
+    <link href="https://calendar.google.com/calendar/scheduling-button-script.css" rel="stylesheet">
+    <script src="https://calendar.google.com/calendar/scheduling-button-script.js" async></script>
+    <script>
+    (function() {
+      var target = document.currentScript;
+      window.addEventListener('load', function() {
+        calendar.schedulingButton.load({
+          url: 'https://calendar.google.com/calendar/appointments/schedules/AcZssZ3EmVsyoqioF7VK_Nc19WVV49jtmYkyUCmVuZvTwY6Q2GvDt9nLAe1iscoeQmInX2ipR7SmGdD9?gv=true',
+          color: '#facc15',
+          label: 'Book Free Strategy Call',
+          target,
+        });
+      });
+    })();
+    </script>
+    <!-- end Google Calendar Appointment Scheduling -->
 
 
   <div class="main-wrapper wrapper">

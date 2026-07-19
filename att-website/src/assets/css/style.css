@@ -17005,7 +17005,7 @@ Frequently Asked Questions
   position: fixed;
   z-index: 10;
   height: 0.2rem;
-  top: 88px;
+  top: 89px;
   left: 0;
   border-radius: 0.5rem;
   width: 100%;
@@ -17021,12 +17021,12 @@ Frequently Asked Questions
 }
 @media only screen and (max-width: 991px) {
   .scroll-progress {
-    top: 82px;
+    top: 73px;
   }
 }
 @media only screen and (max-width: 479px) {
   .scroll-progress {
-    top: 80px;
+    top: 73px;
   }
 }
 
