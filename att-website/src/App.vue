@@ -2,10 +2,10 @@
 import { ref, onMounted, watch } from "vue";
 import { RouterView, useRouter } from "vue-router";
 import HeaderSec from "./components/Header.vue";
+import ChatWidget from "./components/Chatwidget.vue";
 import FooterSec from "./components/Footer.vue";
 import logoUrl from "./assets/img/shapes/bubble-2.png";
 import "animate.css";
-import ChatWidget from "@/components/ChatWidget.vue";
 
 const isLoading = ref(true);
 const router = useRouter();
