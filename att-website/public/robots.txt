@@ -25,6 +25,8 @@ Allow: /linkedin-marketing
 Allow: /branding
 Allow: /website-maintenance
 Allow: /about
+Allow: /blog
+Allow: /blog/
 Allow: /contact
 Allow: /projects
 Allow: /estimate

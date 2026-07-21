@@ -201,8 +201,7 @@ const tabs = [
   { label: "Home", path: "/", icon: "home" },
   { label: "Services", path: "/services", icon: "apps" },
   { label: "Projects", path: "/projects", icon: "work" },
-  { label: "About", path: "/about", icon: "groups" },
-  { label: "Blog", path: "/blog", icon: "rss_feed" },
+  { label: "Book", path: "https://calendar.app.google/oxixnGZCQPPcqaWd6", icon: "calendar_today" },
   { label: "Contact", path: "/contact", icon: "call" },
 ];
 
