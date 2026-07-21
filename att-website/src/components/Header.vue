@@ -15,6 +15,17 @@ const servicesActive = computed(() =>
   ].includes(route.path)
 );
 
+// Blog is active on /blog and all 2 /blog/* child routes
+const blogActive = computed(() =>
+  route.path === "/blog" || route.path.startsWith("/blog/") ||
+  [
+    "/before-you-hire-a-web-designer", "/how-much-does-a-website-cost-in-india", "/website-losing-customers",
+    "/freelancer-vs-design-studio-vs-agency", "/signs-you-need-a-website-redesign", 
+    "/whatsapp-lead-gen-for-local-business", "/landing-page-vs-full-website", "/seo-basics-small-business-india",
+
+  ].includes(route.path)
+);
+
 // Portfolio active on /projects and /project/*
 const portfolioActive = computed(() =>
   route.path === "/projects" || route.path.startsWith("/project/")
@@ -56,6 +67,11 @@ const contactActive  = computed(() => route.path === "/contact");
                 <li>
                   <a href="/about" :class="{ active: aboutActive }">
                     <span class="text-ll">About</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="/blog" :class="{ active: blogActive }">
+                    <span class="text-ll">Blog</span>
                   </a>
                 </li>
                 <li>

@@ -166,9 +166,9 @@ const year = new Date().getFullYear();
 
 const socialLinks = [
   { name: "LinkedIn", url: "https://in.linkedin.com/company/amortree-tech", icon: "icofont-linkedin" },
+  { name: "Dribbble", url: "https://dribbble.com/amortreetech", icon: "icofont-dribbble" },
   { name: "Instagram", url: "https://www.instagram.com/amortreetech/", icon: "icofont-instagram" },
   { name: "Facebook", url: "https://www.facebook.com/amortreetech/", icon: "icofont-facebook" },
-  { name: "Dribbble", url: "https://dribbble.com/amortreetech", icon: "icofont-dribbble" },
 ];
 
 // Mirrors the services list in ServicesView.vue — keep in sync if that changes.
@@ -191,6 +191,7 @@ const companyLinks = [
   { label: "About", href: "/about" },
   { label: "Careers", href: "/careers" },
   { label: "Projects", href: "/projects" },
+  { label: "Blog", href: "/blog" },
   { label: "Contact", href: "/contact" },
   { label: "Privacy Policy", href: "/privacy" },
   { label: "Terms of Use", href: "/terms" },
@@ -201,7 +202,7 @@ const tabs = [
   { label: "Services", path: "/services", icon: "apps" },
   { label: "Projects", path: "/projects", icon: "work" },
   { label: "About", path: "/about", icon: "groups" },
-  // { label: "Pricing", path: "/pricing", icon: "sell" },
+  { label: "Blog", path: "/blog", icon: "rss_feed" },
   { label: "Contact", path: "/contact", icon: "call" },
 ];
 
@@ -243,7 +244,7 @@ function scrollTop() {
 .accent-italic {
   font-family: var(--serif);
   font-style: italic;
-  font-weight: 500;
+  font-weight: 600;
   background: linear-gradient(100deg, var(--gold-soft), var(--gold) 65%);
   background-clip: text;
   -webkit-background-clip: text;

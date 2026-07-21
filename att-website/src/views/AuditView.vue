@@ -1343,7 +1343,7 @@ onBeforeUnmount(() => {
 .accent-italic {
   font-family: var(--serif);
   font-style: italic;
-  font-weight: 500;
+  font-weight: 600;
   background: linear-gradient(100deg, var(--gold-soft), var(--gold) 70%);
   background-clip: text;
   -webkit-background-clip: text;

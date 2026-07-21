@@ -1,8 +1,24 @@
 import { createRouter, createWebHistory } from "vue-router";
-import HomeView from "../views/HomeView.vue";
+import HomeView from "@/views/HomeView.vue";
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
+  scrollBehavior(to, from, savedPosition) {
+    // Browser back/forward: restore where the user was
+    if (savedPosition) {
+      return savedPosition;
+    }
+    // Same-page anchor link (e.g. blog table-of-contents jump)
+    if (to.hash) {
+      return {
+        el: to.hash,
+        top: 96, // offset for the sticky header
+        behavior: "smooth",
+      };
+    }
+    // Any other navigation: always start at the top
+    return { top: 0 };
+  },
   routes: [
     {
       path: "/",
@@ -12,7 +28,7 @@ const router = createRouter({
     {
       path: "/services",
       name: "services",
-      component: () => import("../views/ServicesView.vue"),
+      component: () => import("@/views/ServicesView.vue"),
     },
     {
       path: "/about",
@@ -20,169 +36,236 @@ const router = createRouter({
       // route level code-splitting
       // this generates a separate chunk (About.[hash].js) for this route
       // which is lazy-loaded when the route is visited.
-      component: () => import("../views/AboutView.vue"),
+      component: () => import("@/views/AboutView.vue"),
     },
     {
       path: "/careers",
       name: "careers",
-      component: () => import("../views/CareersView.vue"),
+      component: () => import("@/views/CareersView.vue"),
     },
     {
       path: "/contact",
       name: "contact",
-      component: () => import("../views/ContactView.vue"),
+      component: () => import("@/views/ContactView.vue"),
     },
     {
       path: "/projects",
       name: "case-studies",
-      component: () => import("../views/ProjectView.vue"),
+      component: () => import("@/views/ProjectView.vue"),
+    },
+    {
+      path: "/blog",
+      name: "blog",
+      component: () => import("@/views/BlogView.vue"),
     },
     {
       path: "/privacy",
       name: "privacy",
-      component: () => import("../views/PrivacyView.vue"),
+      component: () => import("@/views/PrivacyView.vue"),
     },
     {
       path: "/terms",
       name: "terms",
-      component: () => import("../views/TermsView.vue"),
+      component: () => import("@/views/TermsView.vue"),
     },
     {
       path: "/pricing",
       name: "pricing",
-      component: () => import("../views/PricingView.vue"),
+      component: () => import("@/views/PricingView.vue"),
     },
     {
       path: "/estimate",
       name: "estimate",
-      component: () => import("../views/EstimateView.vue"),
+      component: () => import("@/views/EstimateView.vue"),
     },
     {
       path: "/audit",
       name: "audit",
-      component: () => import("../views/AuditView.vue"),
+      component: () => import("@/views/AuditView.vue"),
     },
 
     // Services
     {
       path: "/website-design",
       name: "website-design",
-      component: () => import("../views/services/WebsiteDesignView.vue"),
+      component: () => import("@/views/services/WebsiteDesignView.vue"),
     },
     {
       path: "/web-development",
       name: "web-development",
-      component: () => import("../views/services/WebDevelopmentView.vue"),
+      component: () => import("@/views/services/WebDevelopmentView.vue"),
     },
     {
       path: "/ui-ux-design",
       name: "ui-ux-design",
-      component: () => import("../views/services/UIUXDesignView.vue"),
+      component: () => import("@/views/services/UIUXDesignView.vue"),
     },
     {
       path: "/ecommerce-development",
       name: "ecommerce-development",
-      component: () => import("../views/services/EcommerceDevelopmentView.vue"),
+      component: () => import("@/views/services/EcommerceDevelopmentView.vue"),
     },
     {
       path: "/lead-generation",
       name: "lead-generation",
-      component: () => import("../views/services/LeadGenerationView.vue"),
+      component: () => import("@/views/services/LeadGenerationView.vue"),
     },
     {
       path: "/shopify-development",
       name: "shopify-development",
-      component: () => import("../views/services/ShopifyDevelopmentView.vue"),
+      component: () => import("@/views/services/ShopifyDevelopmentView.vue"),
     },
     {
       path: "/seo",
       name: "seo",
-      component: () => import("../views/services/SEOView.vue"),
+      component: () => import("@/views/services/SEOView.vue"),
     },
     {
       path: "/digital-marketing",
       name: "digital-marketing",
-      component: () => import("../views/services/DigitalMarketingView.vue"),
+      component: () => import("@/views/services/DigitalMarketingView.vue"),
     },
     {
       path: "/social-media-marketing",
       name: "social-media-marketing",
-      component: () => import("../views/services/SocialMediaMarketingView.vue"),
+      component: () => import("@/views/services/SocialMediaMarketingView.vue"),
     },
     {
       path: "/linkedin-marketing",
       name: "linkedin-marketing",
-      component: () => import("../views/services/LinkedInMarketingView.vue"),
+      component: () => import("@/views/services/LinkedInMarketingView.vue"),
     },
     {
       path: "/branding",
       name: "branding",
-      component: () => import("../views/services/BrandingView.vue"),
+      component: () => import("@/views/services/BrandingView.vue"),
     },
     {
       path: "/website-maintenance",
       name: "website-maintenance",
-      component: () => import("../views/services/WebsiteMaintenanceView.vue"),
+      component: () => import("@/views/services/WebsiteMaintenanceView.vue"),
+    },
+
+    // Blogs
+    {
+      path: "/blog/how-much-does-a-website-cost-in-india",
+      name: "HowMuchDoesAWebsiteCostInIndia",
+      component: () => 
+        import("@/views/blog/HowMuchDoesAWebsiteCostInIndia.vue"),
+    },
+    {
+      path: "/blog/before-you-hire-a-web-designer",
+      name: "BeforeYouHireAWebDesigner",
+      component: () => 
+        import("@/views/blog/BeforeYouHireAWebDesigner.vue"),
+    },
+    {
+      path: "/blog/whatsapp-lead-gen-for-local-business",
+      name: "WhatsAppLeadGenForLocalBusiness",
+      component: () => 
+        import("@/views/blog/WhatsAppLeadGenForLocalBusiness.vue"),
+    },
+    {
+      path: "/blog/landing-page-vs-full-website",
+      name: "LandingPageVsFullWebsite",
+      component: () => 
+        import("@/views/blog/LandingPageVsFullWebsite.vue"),
+    },
+    {
+      path: "/blog/seo-basics-small-business-india",
+      name: "SEOBasicsSmallBusinessIndia",
+      component: () => 
+        import("@/views/blog/SEOBasicsSmallBusinessIndia.vue"),
+    },
+    {
+      path: "/blog/signs-you-need-a-website-redesign",
+      name: "SignsYouNeedAWebsiteRedesign",
+      component: () => 
+        import("@/views/blog/SignsYouNeedAWebsiteRedesign.vue"),
+    },
+    {
+      path: "/blog/freelancer-vs-design-studio-vs-agency",
+      name: "FreelancerVsDesignStudioVsAgency",
+      component: () => 
+        import("@/views/blog/FreelancerVsDesignStudioVsAgency.vue"),
+    },
+    {
+      path: "/blog/website-losing-customers",
+      name: "WebsiteLosingCustomers",
+      component: () => 
+        import("@/views/blog/WebsiteLosingCustomers.vue"),
+    },
+    {
+      path: "/blog/how-long-should-a-website-take-to-build",
+      name: "HowLongShouldAWebsiteTakeToBuild",
+      component: () =>
+        import("@/views/blog/HowLongShouldAWebsiteTakeToBuild.vue"),
+    },
+    {
+      path: "/blog/website-red-flags-before-hiring",
+      name: "WebsiteRedFlagsBeforeHiring",
+      component: () =>
+        import("@/views/blog/WebsiteRedFlagsBeforeHiring.vue"),
     },
 
     // Projects
     {
       path: "/project/uae-links",
       name: "uae-links",
-      component: () => import("../views/project/ProjectUAELinksView.vue"),
+      component: () => import("@/views/project/ProjectUAELinksView.vue"),
     },
     {
       path: "/project/solved-cube-it-solutions",
       name: "solved-cube-it-solutions",
-      component: () => import("../views/project/ProjectSolvedCubeView.vue"),
+      component: () => import("@/views/project/ProjectSolvedCubeView.vue"),
     },
     {
       path: "/project/microrelic",
       name: "microrelic",
-      component: () => import("../views/project/ProjectMicrorelicView.vue"),
+      component: () => import("@/views/project/ProjectMicrorelicView.vue"),
     },
     {
       path: "/project/steadyasset",
       name: "steadyasset",
-      component: () => import("../views/project/ProjectSteadyAssetView.vue"),
+      component: () => import("@/views/project/ProjectSteadyAssetView.vue"),
     },
     {
       path: "/project/al-shamil-computers",
       name: "al-shamil",
-      component: () => import("../views/project/ProjectAlShamilView.vue"),
+      component: () => import("@/views/project/ProjectAlShamilView.vue"),
     },
     {
       path: "/project/savedesk",
       name: "SaveDesk",
-      component: () => import("../views/project/ProjectSaveDeskView.vue"),
+      component: () => import("@/views/project/ProjectSaveDeskView.vue"),
     },
     {
       path: "/project/visonverse",
       name: "VisonVerse",
-      component: () => import("../views/project/ProjectVisonVerseView.vue"),
+      component: () => import("@/views/project/ProjectVisonVerseView.vue"),
     },
     {
       path: "/project/samsiddhi-designs",
       name: "samsiddhidesigns",
       component: () =>
-        import("../views/project/ProjectSamsiddhiDesignsView.vue"),
+        import("@/views/project/ProjectSamsiddhiDesignsView.vue"),
     },
     {
       path: "/project/raksha-realty",
       name: "raksha-realty",
       component: () =>
-        import("../views/project/ProjectRakshaRealtyView.vue"),
+        import("@/views/project/ProjectRakshaRealtyView.vue"),
     },
     {
       path: "/project/alin-salon",
       name: "alin-salon",
       component: () =>
-        import("../views/project/ProjectAlinSalonView.vue"),
+        import("@/views/project/ProjectAlinSalonView.vue"),
     },
     {
       path: "/pageNotFound",
       name: "pageNotFound",
-      component: () => import("../views/404.vue"),
+      component: () => import("@/views/404.vue"),
     },
   ],
 });

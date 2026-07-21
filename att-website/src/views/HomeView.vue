@@ -749,11 +749,11 @@ onBeforeUnmount(() => {
 
           <!-- Trust strip -->
           <div class="att-hero-trust">
-            <span>No commitment</span>
+            <span>🔒 Only 5 new businesses onboarded each month</span>
             <span aria-hidden="true">·</span>
-            <span>Scoped to your goals</span>
+            <span>Senior team execution</span>
             <span aria-hidden="true">·</span>
-            <span>Results from week one</span>
+            <span>No outsourcing</span>
           </div>
         </div>
 
@@ -1894,7 +1894,7 @@ onBeforeUnmount(() => {
   gap: 0.75rem;
   font-size: 0.72rem;
   letter-spacing: 0.06em;
-  color: #475569;
+  color: #7289aa;
   will-change: transform, opacity;
 
   span[aria-hidden] { color: #334155; }
