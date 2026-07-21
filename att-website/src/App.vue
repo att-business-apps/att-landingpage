@@ -5,6 +5,7 @@ import HeaderSec from "./components/Header.vue";
 import FooterSec from "./components/Footer.vue";
 import logoUrl from "./assets/img/shapes/bubble-2.png";
 import "animate.css";
+import ChatWidget from "@/components/ChatWidget.vue";
 
 const isLoading = ref(true);
 const router = useRouter();
@@ -48,6 +49,7 @@ watch(isLoading, (loading) => {
     <img :src="logoUrl" alt="Loading" class="loader-logo" />
   </div>
   <RouterView />
+  <ChatWidget />
   <FooterSec />
 </template>
 
