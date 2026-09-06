@@ -13,33 +13,8 @@
     }
 }
   
-.footer-menu {
-    ul {
-      list-style-type: none;
-    }
-  
-    li {
-      display: inline;
-      line-height: 2;
-      font-size: 14px;
-      padding-right: 15px;
-      text-transform: uppercase;
-  
-      a {
-        color: $clight;
-        text-decoration: none;
 
-        &:hover {
-            color: $cwhite;
-        }
-      }
-    }
-}
-  
-.footer-text p {
-    font-size: 14px;
-    color: #707570;
-    line-height: 2;
-    letter-spacing: 1px;
-    margin-top: 10px;
+.footer-bottom {
+    border-top: 1px solid var(--color-ship-gray);
+    padding: 25px 0;
 }

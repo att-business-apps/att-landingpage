@@ -17,10 +17,8 @@
 // Base
 @import "base/mixins";
 @import "base/reset";
-// @import "base/general";
 @import "base/typography";
 @import "base/classes";
-@import "base/form";
 @import "base/spacing";
 
 // @import "dark/dark-version";
@@ -29,36 +27,14 @@
 @import 'tailwind.scss';
 
 // Elements
-@import "elements/animate";
 @import "elements/gradientText";
 @import "elements/sectionHeading";
-@import "elements/back-top";
 @import "elements/breadcrumb";
 @import "elements/button";
-@import "elements/pagination";
-@import "elements/slick";
 @import "elements/scroll-progress";
-@import "elements/projectSec";
 
 // Layout
 @import "layout/header";
 @import "layout/nav";
-@import "layout/moilemenu";
-@import "layout/banner";
-@import "layout/serviceSec";
-@import "layout/caseStudy";
-@import "layout/process";
 @import "layout/callToAction";
 @import "layout/commonPages";
-@import "layout/about";
-@import "layout/section";
-@import "layout/footerWhite";
-@import "layout/contact";
-// @import "layout/intro";
-// @import "layout/btn";
-// @import "layout/mhrHigh";
-// @import "layout/oldStyle";
-// @import "layout/responsive";
-
-
-

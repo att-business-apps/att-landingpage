@@ -2209,7 +2209,6 @@ onBeforeUnmount(() => {
 .motion-card,
 .project-grid,
 .review-card,
-.services-grid,
 .glass-card,
 .step-arrow {
   transform-style: preserve-3d;
