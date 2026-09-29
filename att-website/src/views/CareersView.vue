@@ -36,19 +36,22 @@ const pillars = [
 
 const stories = [
   {
-    tag: "How Our Teams Build",
+    tag: "AI & Automation",
+    metric: "3x Faster Iteration",
     title: "AI-Assisted Workflows",
     text: "We use automation, research loops, and reusable systems to shorten the path from idea to shipping while keeping the work human and precise.",
     image: buildImage,
   },
   {
     tag: "Design & Engineering",
+    metric: "Zero Dropped Handoffs",
     title: "Calm Under Pressure",
     text: "Product decisions are made around clarity, conversion, and maintainability, so launches can keep improving after they go live.",
     image: designImage,
   },
   {
     tag: "Growth Systems",
+    metric: "One Operating Rhythm",
     title: "Every Experiment Compounds",
     text: "Campaigns, landing pages, analytics, and content work together as one operating rhythm instead of scattered deliverables.",
     image: systemsImage,
@@ -86,6 +89,23 @@ const marqueeText = computed(() => Array.from({ length: 6 }, () => "Outgrow Ordi
 
 const previousTitle = document.title;
 
+function addStoryHovers() {
+  gsap.utils.toArray(".careers-story-card").forEach((card) => {
+    const img = card.querySelector(".careers-story-media img");
+    const overlay = card.querySelector(".careers-story-overlay");
+    const arrow = card.querySelector(".careers-story-arrow");
+
+    const tl = gsap.timeline({ paused: true });
+    tl.to(img, { scale: 1.09, duration: 0.7, ease: "power2.out" }, 0)
+      .to(overlay, { opacity: 0.62, duration: 0.5, ease: "power2.out" }, 0)
+      .to(card, { y: -6, borderColor: "rgba(250, 204, 21, 0.55)", duration: 0.4, ease: "power2.out" }, 0)
+      .to(arrow, { x: 4, y: -4, backgroundColor: "#facc15", color: "#0f172a", duration: 0.4, ease: "power2.out" }, 0);
+
+    card.addEventListener("mouseenter", () => tl.play());
+    card.addEventListener("mouseleave", () => tl.reverse());
+  });
+}
+
 onMounted(() => {
   document.title = "Careers | Amortree Tech";
 
@@ -112,8 +132,8 @@ onMounted(() => {
       });
     });
 
-    // Stories header + rows
-    gsap.from(".careers-stories-eyebrow, .careers-stories-heading", {
+    // Stories header
+    gsap.from(".careers-stories-eyebrow, .careers-stories-heading, .careers-stories-count", {
       y: 28,
       autoAlpha: 0,
       duration: 0.8,
@@ -121,16 +141,19 @@ onMounted(() => {
       ease: "power3.out",
       scrollTrigger: { trigger: ".careers-stories", start: "top 78%", once: true },
     });
-    gsap.utils.toArray(".careers-story").forEach((row, i) => {
-      gsap.from(row, {
-        x: -40,
+
+    // Stories bento cards
+    gsap.utils.toArray(".careers-story-card").forEach((card, i) => {
+      gsap.from(card, {
+        y: 50,
         autoAlpha: 0,
-        duration: 0.7,
-        delay: i * 0.08,
+        duration: 0.8,
+        delay: i * 0.12,
         ease: "power3.out",
-        scrollTrigger: { trigger: row, start: "top 90%", once: true },
+        scrollTrigger: { trigger: ".careers-story-bento", start: "top 82%", once: true },
       });
     });
+    addStoryHovers();
 
     // Hiring steps
     gsap.from(".careers-hiring-eyebrow, .careers-hiring-heading", {
@@ -259,7 +282,7 @@ onBeforeUnmount(() => {
     </section>
 
     <!-- ============================================================
-         STORIES — Light numbered row list
+         STORIES — Premium bento feature grid
          ============================================================ -->
     <section class="careers-stories">
       <div class="careers-stories-inner">
@@ -268,17 +291,38 @@ onBeforeUnmount(() => {
             <div class="careers-stories-eyebrow att-section-label">How Our Teams Build</div>
             <h2 class="careers-stories-heading">With Systems, Taste &amp; Momentum</h2>
           </div>
+          <span class="careers-stories-count">03 Practices</span>
         </div>
 
-        <div class="careers-story-list">
-          <article v-for="story in stories" :key="story.title" class="careers-story">
-            <div class="careers-story-thumb">
-              <img :src="story.image" :alt="story.title" />
+        <div class="careers-story-bento">
+          <article
+            v-for="(story, i) in stories"
+            :key="story.title"
+            class="careers-story-card"
+            :class="{ 'careers-story-card--feature': i === 0 }"
+          >
+            <div class="careers-story-media">
+              <img :src="story.image" :alt="story.title" loading="lazy" />
+              <div class="careers-story-overlay"></div>
             </div>
-            <div class="careers-story-info">
+
+            <div class="careers-story-top">
+              <span class="careers-story-index">{{ String(i + 1).padStart(2, "0") }}</span>
               <span class="careers-story-tag">{{ story.tag }}</span>
-              <h3 class="careers-story-title">{{ story.title }}</h3>
-              <p class="careers-story-desc">{{ story.text }}</p>
+            </div>
+
+            <div class="careers-story-bottom">
+              <div class="careers-story-bottom-text">
+                <span class="careers-story-metric">
+                  <span class="material-symbols-outlined">bolt</span>
+                  {{ story.metric }}
+                </span>
+                <h3 class="careers-story-title">{{ story.title }}</h3>
+                <p class="careers-story-desc">{{ story.text }}</p>
+              </div>
+              <span class="careers-story-arrow">
+                <span class="material-symbols-outlined">arrow_outward</span>
+              </span>
             </div>
           </article>
         </div>
@@ -490,7 +534,7 @@ onBeforeUnmount(() => {
   color: rgba(255, 255, 255, 0.55);
 }
 
-// ─── Stories (light row list) ────────────────────────────────────────────────
+// ─── Stories (premium bento feature grid) ────────────────────────────────────
 .careers-stories {
   padding: 7rem 4rem;
   background: #ffffff;
@@ -505,7 +549,17 @@ onBeforeUnmount(() => {
 }
 
 .careers-stories-header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 2rem;
   margin-bottom: 3.5rem;
+
+  @media (max-width: 640px) {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
 }
 
 .careers-stories-heading {
@@ -515,72 +569,204 @@ onBeforeUnmount(() => {
   color: #0f172a;
 }
 
-.careers-story-list {
+.careers-stories-count {
+  flex-shrink: 0;
+  font-size: 0.68rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: #0f172a;
+  background: #f8fafc;
+  border: 1px solid rgba(15, 23, 42, 0.1);
+  border-radius: 999px;
+  padding: 0.55rem 1.1rem;
+  white-space: nowrap;
+  margin-bottom: 0.4rem;
+}
+
+.careers-story-bento {
+  display: grid;
+  grid-template-columns: 1.15fr 1fr;
+  grid-auto-rows: 260px;
+  gap: 1.25rem;
+
+  @media (max-width: 860px) {
+    grid-template-columns: 1fr;
+    grid-auto-rows: auto;
+  }
+}
+
+.careers-story-card {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  border-radius: 24px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 1.75rem;
   display: flex;
   flex-direction: column;
-  gap: 1rem;
-}
-
-.careers-story {
-  display: grid;
-  grid-template-columns: 220px 1fr;
-  gap: 2.25rem;
-  align-items: center;
-  padding: 1.5rem;
-  border: 1px solid rgba(15, 23, 42, 0.07);
-  border-radius: 18px;
-  transition: border-color 0.35s ease, box-shadow 0.35s ease, background 0.35s ease;
+  justify-content: space-between;
+  cursor: pointer;
   will-change: transform;
 
-  &:hover {
-    border-color: rgba(250, 204, 21, 0.4);
-    box-shadow: 0 24px 48px -20px rgba(15, 23, 42, 0.2);
-    background: #f8fafc;
+  &--feature {
+    grid-row: 1 / span 2;
+    padding: 2.5rem;
+
+    @media (max-width: 860px) {
+      grid-row: auto;
+      min-height: 380px;
+    }
   }
 
-  @media (max-width: 700px) {
-    grid-template-columns: 1fr;
+  @media (max-width: 860px) {
+    min-height: 300px;
   }
 }
 
-.careers-story-thumb {
-  width: 100%;
-  aspect-ratio: 16 / 11;
-  border-radius: 12px;
-  overflow: hidden;
-  background: #f8fafc;
+.careers-story-media {
+  position: absolute;
+  inset: 0;
+  z-index: -2;
 
   img {
     width: 100%;
     height: 100%;
-    object-fit: contain;
-    padding: 0.5rem;
+    object-fit: cover;
+    // Heavily muted + softened: source screenshots carry their own baked-in
+    // text/UI, so we turn them into a quiet texture rather than a second,
+    // competing layer of readable copy.
+    filter: grayscale(0.85) contrast(0.92) brightness(0.42) blur(1.5px);
+    transform: scale(1.03); // hides blur edge artifacts
+    transform-origin: center;
   }
 }
 
+.careers-story-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  // Strong, near-uniform scrim (no light "window" in the middle) so every
+  // zone of the card — not just the top/bottom — stays legible regardless
+  // of how busy the underlying screenshot is.
+  background: linear-gradient(
+    195deg,
+    rgba(10, 14, 26, 0.94) 0%,
+    rgba(10, 14, 26, 0.82) 40%,
+    rgba(10, 14, 26, 0.8) 60%,
+    rgba(10, 14, 26, 0.96) 100%
+  );
+}
+
+.careers-story-top {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+}
+
+.careers-story-index {
+  flex-shrink: 0;
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  color: rgba(255, 255, 255, 0.55);
+  font-variant-numeric: tabular-nums;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+}
+
 .careers-story-tag {
-  display: block;
-  font-size: 0.65rem;
-  letter-spacing: 0.18em;
+  min-width: 0;
+  max-width: 78%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 0.62rem;
+  letter-spacing: 0.14em;
   text-transform: uppercase;
-  color: #facc15;
   font-weight: 700;
-  margin-bottom: 0.6rem;
+  color: #0f172a;
+  background: #facc15;
+  border-radius: 999px;
+  padding: 0.4rem 0.85rem;
+}
+
+.careers-story-bottom {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.careers-story-bottom-text {
+  min-width: 0;
+  flex: 1;
+}
+
+.careers-story-metric {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  color: #facc15;
+  margin-bottom: 0.75rem;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+
+  .material-symbols-outlined { font-size: 1rem; }
 }
 
 .careers-story-title {
-  font-size: 1.4rem;
+  font-size: 1.35rem;
   font-weight: 700;
-  color: #0f172a;
+  color: #ffffff;
   letter-spacing: -0.01em;
   margin-bottom: 0.6rem;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.55);
+
+  .careers-story-card--feature & {
+    font-size: 1.85rem;
+  }
 }
 
 .careers-story-desc {
-  font-size: 0.88rem;
-  color: #64748b;
-  line-height: 1.72;
-  max-width: 560px;
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.72);
+  line-height: 1.65;
+  max-width: 42ch;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+
+  .careers-story-card--feature & {
+    font-size: 0.92rem;
+    max-width: 34ch;
+  }
+}
+
+.careers-story-arrow {
+  flex-shrink: 0;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  color: #ffffff;
+
+  .material-symbols-outlined { font-size: 1.15rem; }
+
+  .careers-story-card--feature & {
+    width: 46px;
+    height: 46px;
+
+    .material-symbols-outlined { font-size: 1.3rem; }
+  }
 }
 
 // ─── Hiring grid (light ghost-numbered) ──────────────────────────────────────

@@ -758,7 +758,7 @@ onBeforeUnmount(() => {
         </div>
 
         <!-- ── Right: Live proof panel ── -->
-        <div class="att-hero-panel" aria-hidden="true">
+        <div class="att-hero-panel">
 
           <AuditWidget />
         </div>

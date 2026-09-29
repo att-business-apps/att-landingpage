@@ -7,6 +7,7 @@ const phase      = ref("idle");   // idle | contact | loading | result | error
 const scores     = ref(null);
 const errorMsg   = ref("");
 const inputRef   = ref(null);
+const activeOffer = ref("audit");
 const pendingTarget = ref(""); // normalised URL, captured at the idle step and carried through contact → loading
 
 // ─── Contact capture (name + phone, before running the audit) ───────
@@ -246,6 +247,7 @@ const whatsappLink = computed(() => {
 
 function reset() {
   phase.value = "idle";
+  activeOffer.value = "audit";
   scores.value = null;
   url.value = "";
   pendingTarget.value = "";
@@ -263,44 +265,84 @@ function reset() {
 
     <!-- ── IDLE ─────────────────────────────────────────────────── -->
     <template v-if="phase === 'idle' || phase === 'error'">
-      <div class="aw-header">
-        <div class="aw-badge">
-          <span class="material-symbols-outlined">radar</span>
-          Free Instant Audit
-        </div>
-        <h3 class="aw-title">How many leads is your website losing?</h3>
-        <p class="aw-sub">Enter your URL — we'll score it on Performance, SEO, Accessibility, and Lead Generation potential in seconds.</p>
-      </div>
+      <Transition name="aw-slide" mode="out-in">
+        <section v-if="activeOffer === 'audit'" id="website-audit-panel" key="audit" class="aw-slide-panel" role="tabpanel" aria-labelledby="website-audit-tab" tabindex="0">
+          <div class="aw-header">
+            <div class="aw-badge">
+              <span class="material-symbols-outlined">radar</span>
+              Free Instant Audit
+            </div>
+            <h3 class="aw-title">How many leads is your website losing?</h3>
+            <p class="aw-sub">Enter your URL — we'll score it on Performance, SEO, Accessibility, and Lead Generation potential in seconds.</p>
+          </div>
 
-      <div class="aw-form">
-        <div class="aw-input-wrap">
-          <span class="material-symbols-outlined aw-input-icon">language</span>
-          <input
-            ref="inputRef"
-            v-model="url"
-            type="url"
-            placeholder="Your website URL"
-            class="aw-input"
-            @keyup.enter="startAudit"
-            autocomplete="url"
-            spellcheck="false"
-          />
-        </div>
-        <button class="aw-btn" @click="startAudit">
-          Analyse My Site
-          <span class="material-symbols-outlined">arrow_forward</span>
+          <div class="aw-form">
+            <div class="aw-input-wrap">
+              <span class="material-symbols-outlined aw-input-icon">language</span>
+              <input
+                ref="inputRef"
+                v-model="url"
+                type="url"
+                placeholder="Your website URL"
+                class="aw-input"
+                @keyup.enter="startAudit"
+                autocomplete="url"
+                spellcheck="false"
+              />
+            </div>
+            <button class="aw-btn" @click="startAudit">
+              Analyse My Site
+              <span class="material-symbols-outlined">arrow_forward</span>
+            </button>
+          </div>
+
+          <p v-if="phase === 'error'" class="aw-error">
+            <span class="material-symbols-outlined">error</span>
+            {{ errorMsg }}
+          </p>
+
+          <div class="aw-trust-row">
+            <span><span class="material-symbols-outlined">lock</span>Powered by Google PageSpeed Insights</span>
+            <span><span class="material-symbols-outlined">bolt</span>Results in ~10 seconds</span>
+            <span><span class="material-symbols-outlined">visibility_off</span>No sign-up needed</span>
+          </div>
+        </section>
+
+        <section v-else id="new-website-panel" key="new-website" class="aw-slide-panel aw-new-site-panel" role="tabpanel" aria-labelledby="new-website-tab" tabindex="0">
+          <div class="aw-header">
+            <div class="aw-badge">
+              <span class="material-symbols-outlined">web</span>
+              No website yet?
+            </div>
+            <h3 class="aw-title">Let's build your first growth-ready website.</h3>
+            <p class="aw-sub">Tell us what your business needs. We'll help you plan the right site, scope, and next step — with a clear estimate.</p>
+          </div>
+
+          <ul class="aw-new-site-list">
+            <li><span class="material-symbols-outlined">check_circle</span>Built around your business goals</li>
+            <li><span class="material-symbols-outlined">check_circle</span>Designed to earn trust and enquiries</li>
+            <li><span class="material-symbols-outlined">check_circle</span>Clear scope before work begins</li>
+          </ul>
+
+          <router-link to="/estimate" class="aw-btn aw-slide-cta">
+            Plan My Website
+            <span class="material-symbols-outlined">arrow_forward</span>
+          </router-link>
+
+          <div class="aw-trust-row aw-new-site-note">
+            <span><span class="material-symbols-outlined">support_agent</span>Talk with our team</span>
+            <span><span class="material-symbols-outlined">task_alt</span>No-pressure project estimate</span>
+          </div>
+        </section>
+      </Transition>
+
+      <div class="aw-slide-switch" role="tablist" aria-label="Choose your website situation">
+        <button id="website-audit-tab" type="button" role="tab" aria-controls="website-audit-panel" :aria-selected="activeOffer === 'audit'" :class="{ 'is-active': activeOffer === 'audit' }" @click="activeOffer = 'audit'">
+          I have a website
         </button>
-      </div>
-
-      <p v-if="phase === 'error'" class="aw-error">
-        <span class="material-symbols-outlined">error</span>
-        {{ errorMsg }}
-      </p>
-
-      <div class="aw-trust-row">
-        <span><span class="material-symbols-outlined">lock</span>Powered by Google PageSpeed Insights</span>
-        <span><span class="material-symbols-outlined">bolt</span>Results in ~10 seconds</span>
-        <span><span class="material-symbols-outlined">visibility_off</span>No sign-up needed</span>
+        <button id="new-website-tab" type="button" role="tab" aria-controls="new-website-panel" :aria-selected="activeOffer === 'new-site'" :class="{ 'is-active': activeOffer === 'new-site' }" @click="activeOffer = 'new-site'">
+          I need a website
+        </button>
       </div>
     </template>
 
@@ -475,6 +517,66 @@ function reset() {
     pointer-events: none;
   }
 }
+
+.aw-slide-panel { width: 100%; }
+.aw-slide-enter-active,
+.aw-slide-leave-active { transition: opacity 0.22s ease, transform 0.22s ease; }
+.aw-slide-enter-from { opacity: 0; transform: translateX(22px); }
+.aw-slide-leave-to { opacity: 0; transform: translateX(-22px); }
+
+.aw-slide-switch {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.35rem;
+  margin-top: 1rem;
+  padding: 0.3rem;
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 12px;
+  background: rgba(255,255,255,0.025);
+
+  button {
+    min-height: 38px;
+    padding: 0.5rem 0.65rem;
+    border: 1px solid transparent;
+    border-radius: 9px;
+    background: transparent;
+    color: rgba(255,255,255,0.55);
+    font: inherit;
+    font-size: 0.72rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: color 0.2s, background 0.2s, border-color 0.2s;
+
+    &:hover { color: #fff; }
+    &.is-active {
+      border-color: rgba(250,204,21,0.2);
+      background: rgba(250,204,21,0.1);
+      color: #facc15;
+    }
+  }
+}
+
+.aw-new-site-list {
+  display: grid;
+  gap: 0.75rem;
+  padding: 0;
+  margin: 0 0 1.35rem;
+  list-style: none;
+
+  li {
+    display: flex;
+    align-items: center;
+    gap: 0.55rem;
+    color: rgba(255,255,255,0.72);
+    font-size: 0.82rem;
+    line-height: 1.4;
+  }
+
+  .material-symbols-outlined { color: #facc15; font-size: 1rem; }
+}
+
+.aw-slide-cta { text-decoration: none; }
+.aw-new-site-note { margin-top: 1.25rem; }
 
 /* ─── Header ───────────────────────────────────────────────────── */
 .aw-badge {

@@ -207,6 +207,21 @@ const router = createRouter({
       component: () =>
         import("@/views/blog/WebsiteRedFlagsBeforeHiring.vue"),
     },
+    {
+      path: "/blog/website-maintenance-checklist",
+      name: "WebsiteMaintenanceChecklist",
+      component: () => import("@/views/blog/WebsiteMaintenanceChecklist.vue"),
+    },
+    {
+      path: "/blog/ecommerce-checkout-improvements",
+      name: "EcommerceCheckoutImprovements",
+      component: () => import("@/views/blog/EcommerceCheckoutImprovements.vue"),
+    },
+    {
+      path: "/blog/website-brief-checklist",
+      name: "WebsiteBriefChecklist",
+      component: () => import("@/views/blog/WebsiteBriefChecklist.vue"),
+    },
 
     // Projects
     {

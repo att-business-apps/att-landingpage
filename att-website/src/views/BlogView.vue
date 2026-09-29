@@ -8,6 +8,39 @@ gsap.registerPlugin(ScrollTrigger);
 // Replace / extend this list as you publish. `link` should match your router path.
 const posts = ref([
   {
+    slug: "website-maintenance-checklist",
+    title: "A Practical Website Maintenance Checklist for Small Businesses",
+    excerpt: "A monthly and quarterly routine for keeping your business website secure, accurate, fast, and ready to turn visits into enquiries.",
+    category: "Web Design",
+    date: "2026-09-29",
+    dateLabel: "Sep 29, 2026",
+    readTime: "7 min read",
+    featured: true,
+    link: "/blog/website-maintenance-checklist",
+  },
+  {
+    slug: "ecommerce-checkout-improvements",
+    title: "7 Checkout Improvements That Make Buying Easier",
+    excerpt: "Reduce avoidable friction in your online store with clearer delivery details, simpler forms, trusted payment options, and a better mobile checkout.",
+    category: "Growth",
+    date: "2026-09-29",
+    dateLabel: "Sep 9, 2026",
+    readTime: "6 min read",
+    featured: false,
+    link: "/blog/ecommerce-checkout-improvements",
+  },
+  {
+    slug: "website-brief-checklist",
+    title: "How to Write a Website Brief Your Designer Can Actually Use",
+    excerpt: "Get clearer proposals and fewer surprises by gathering the goals, content, audience details, and practical requirements before a website project starts.",
+    category: "Strategy",
+    date: "2026-09-29",
+    dateLabel: "Aug 29, 2026",
+    readTime: "7 min read",
+    featured: false,
+    link: "/blog/website-brief-checklist",
+  },
+  {
     slug: "website-losing-customers",
     title: "7 Signs Your Website Is Losing You Customers",
     excerpt:
@@ -16,7 +49,7 @@ const posts = ref([
     date: "2026-07-20",
     dateLabel: "Jul 20, 2026",
     readTime: "8 min read",
-    featured: true,
+    featured: false,
     link: "/blog/website-losing-customers",
   },
   {
