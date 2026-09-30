@@ -208,6 +208,12 @@ const router = createRouter({
         import("@/views/blog/WebsiteRedFlagsBeforeHiring.vue"),
     },
     {
+      path: "/crm",
+      name: "crm",
+      component: () => import("@/views/CRMView.vue"),
+      meta: { hideSiteChrome: true },
+    },
+    {
       path: "/blog/website-maintenance-checklist",
       name: "WebsiteMaintenanceChecklist",
       component: () => import("@/views/blog/WebsiteMaintenanceChecklist.vue"),

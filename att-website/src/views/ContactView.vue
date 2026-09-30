@@ -2,6 +2,7 @@
 import { onBeforeUnmount, onMounted, ref } from "vue";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { createLeadId, submitLead } from "@/utils/leadSync";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -14,10 +15,12 @@ const phoneNumber = ref("");
 const message = ref("");
 const formError = ref("");
 const formSuccess = ref(false);
+const crmSaveState = ref("idle");
 
 function sendMail() {
   formError.value = "";
   formSuccess.value = false;
+  crmSaveState.value = "idle";
 
   const params = {
     from_name: from_name.value,
@@ -47,6 +50,18 @@ function sendMail() {
   }
 
   disableBtn.value = true;
+  crmSaveState.value = "saving";
+  submitLead({
+    leadId: createLeadId("contact"),
+    name: params.from_name,
+    email: params.email,
+    phone: params.phoneNumber,
+    message: params.message,
+    source: "Contact Form",
+    page: window.location.pathname,
+  }).then((saved) => {
+    crmSaveState.value = saved ? "saved" : "failed";
+  });
 
   const resetForm = () => {
     from_name.value = "";
@@ -207,8 +222,11 @@ onBeforeUnmount(() => {
 
               <p v-if="formError" class="att-form-message att-form-message--error">{{ formError }}</p>
               <p v-if="formSuccess" class="att-form-message att-form-message--success">
-                Thanks — your message is in. We'll be in touch shortly.
+                Your message was sent to our team. We'll be in touch shortly.
               </p>
+              <p v-if="crmSaveState === 'saving'" class="att-form-message">Saving your enquiry to our follow-up CRM…</p>
+              <p v-else-if="crmSaveState === 'saved'" class="att-form-message att-form-message--success">Your enquiry was added to our follow-up CRM.</p>
+              <p v-else-if="crmSaveState === 'failed'" class="att-form-message att-form-message--error">Your message was sent, but we couldn't confirm the CRM save. Please contact us on WhatsApp so we can follow up.</p>
 
               <button type="submit" class="amor-btn btn-fill-primary btn-fluid" :disabled="disableBtn">
                 {{ disableBtn ? "Sending…" : "Start Your Growth Journey" }}

@@ -1,5 +1,6 @@
 <script setup>
 import { ref, reactive, computed, nextTick, onMounted, onBeforeUnmount } from "vue";
+import { createLeadId, submitLead as postLeadToCrm } from "@/utils/leadSync";
 
 /**
  * AmortreeBot — guided lead-capture chatbot.
@@ -34,8 +35,8 @@ import { ref, reactive, computed, nextTick, onMounted, onBeforeUnmount } from "v
  */
 
 // ── Config ──────────────────────────────────────────────────────────────────
-const SHEET_ENDPOINT = "https://script.google.com/macros/s/AKfycbzd3LSVcOjacl7YBqQnxnB_kp_eksqIrn8KO1JpMLrj1YStoTjtHLP5eJjR7kTOo7MMng/exec";
 const STORAGE_KEY = "amb_conversation_v4";
+const leadId = ref(createLeadId("chatbot"));
 const TRUNCATE_LEN = 200; // characters before a bot message collapses behind "Show more"
 const SUGGESTIONS_PER_TURN = 3; // how many FAQ chips to surface after each answer
 
@@ -382,19 +383,8 @@ async function askSuggestedFaq(item) {
 // visitor goes on to pick a service. Guarantees the lead lands in the sheet
 // even if they close the tab right after this point.
 async function silentCapture() {
-  if (!SHEET_ENDPOINT) return;
-  try {
-    await fetch(SHEET_ENDPOINT, {
-      method: "POST", mode: "no-cors",
-      headers: { "Content-Type": "text/plain;charset=utf-8" },
-      body: JSON.stringify({
-        name: lead.name, service: "", email: lead.email, phone: lead.phone,
-        message: "", source: "chatbot-partial", page: window.location.pathname,
-      }),
-    });
-  } catch (err) {
-    console.error("AmortreeBot: partial capture failed", err);
-  }
+  await postLeadToCrm({ leadId: leadId.value, name: lead.name, email: lead.email,
+    phone: lead.phone, source: "chatbot", page: window.location.pathname });
 }
 
 // ── Persistence (continuity across reloads / closed tabs) ──────────────────
@@ -406,6 +396,7 @@ function saveState() {
         quickReplies: m.quickReplies, suggestions: m.suggestions, time: m.time,
       })),
       lead: { ...lead },
+      leadId: leadId.value,
       askedFaqs: askedFaqs.value,
       step: step.value,
       hasOpenedOnce: hasOpenedOnce.value,
@@ -430,6 +421,7 @@ function loadState() {
       typed: true,
     }));
     Object.assign(lead, data.lead || {});
+    if (data.leadId) leadId.value = data.leadId;
     askedFaqs.value = data.askedFaqs || [];
     step.value = data.step || "name";
     hasOpenedOnce.value = !!data.hasOpenedOnce;
@@ -468,6 +460,7 @@ function restart() {
   typeIntervals.clear();
   messages.value = [];
   Object.assign(lead, { name: "", service: "", serviceLabel: "", email: "", phone: "", message: "" });
+  leadId.value = createLeadId("chatbot");
   askedFaqs.value = [];
   step.value = "name";
   nameAttempts.value = 0;
@@ -618,24 +611,9 @@ async function submitLead() {
 }
 
 async function sendToSheet() {
-  if (!SHEET_ENDPOINT) {
-    console.warn("AmortreeBot: SHEET_ENDPOINT is not set — lead was not saved.");
-    return false;
-  }
-  try {
-    await fetch(SHEET_ENDPOINT, {
-      method: "POST", mode: "no-cors",
-      headers: { "Content-Type": "text/plain;charset=utf-8" },
-      body: JSON.stringify({
-        name: lead.name, service: lead.serviceLabel, email: lead.email,
-        phone: lead.phone, message: lead.message, source: "chatbot", page: window.location.pathname,
-      }),
-    });
-    return true;
-  } catch (err) {
-    console.error("AmortreeBot: failed to submit lead", err);
-    return false;
-  }
+  return postLeadToCrm({ leadId: leadId.value, name: lead.name, service: lead.serviceLabel,
+    email: lead.email, phone: lead.phone, message: lead.message, source: "chatbot",
+    page: window.location.pathname });
 }
 
 async function handleDoneChoice(value) {

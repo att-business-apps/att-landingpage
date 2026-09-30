@@ -2,24 +2,11 @@
 import { computed, onBeforeUnmount, onMounted, nextTick, reactive, ref } from "vue";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { createLeadId, submitLead } from "@/utils/leadSync";
 
 gsap.registerPlugin(ScrollTrigger);
 
 const waBase = "https://wa.me/917975859061/?text=";
-
-/* ---------------------------------------------------------------- */
-/* Lead capture — URL input → modal → Google Sheet                   */
-/*                                                                    */
-/* SETUP REQUIRED:                                                    */
-/* 1. Create a Google Sheet with header row:                          */
-/*    Timestamp | Full Name | Email | Phone | Company Name |          */
-/*    Company Website | Industry | Source                            */
-/* 2. Extensions → Apps Script, paste the doPost() script provided    */
-/*    alongside this file, then Deploy → New deployment → Web app     */
-/*    (Execute as: Me, Who has access: Anyone).                       */
-/* 3. Paste the resulting /exec URL below.                            */
-/* ---------------------------------------------------------------- */
-const GOOGLE_SHEET_WEBHOOK_URL = "https://script.google.com/macros/s/AKfycbywOPzc6Pn-7YQ4fbChfmJ39d32s4L8mCSYJ3eUAONsV8cjWIMelRhFrh5HRS5Rv5Nb/exec";
 
 const industryOptions = [
   "Manufacturing & Auto-Ancillary",
@@ -149,8 +136,8 @@ async function submitAuditForm() {
   form.companyWebsite = normalizeUrl(form.companyWebsite);
   leadSaveWarning.value = "";
 
-  const payload = {
-    timestamp: new Date().toISOString(),
+  const saved = await submitLead({
+    leadId: createLeadId("growth-audit"),
     fullName: form.fullName.trim(),
     email: form.email.trim(),
     phone: form.phone.trim(),
@@ -158,34 +145,15 @@ async function submitAuditForm() {
     companyWebsite: form.companyWebsite,
     industry: form.industry,
     source: "Growth Score Landing Page",
-  };
+    page: window.location.pathname,
+  });
 
   // Saving the lead is best-effort and must never block the live check —
   // that's the actual thing the visitor is here for. If the Sheet write
   // isn't configured or fails, we log it clearly (so it doesn't go
   // unnoticed) and surface a soft, non-blocking note instead of a hard
   // error screen.
-  if (GOOGLE_SHEET_WEBHOOK_URL.includes("PASTE_YOUR_GOOGLE_APPS_SCRIPT")) {
-    console.warn("GOOGLE_SHEET_WEBHOOK_URL is not set — this lead was NOT saved. See setup notes above submitAuditForm().");
-    leadSaveWarning.value = "We couldn't confirm your details were saved — message us on WhatsApp just in case.";
-  } else {
-    try {
-      // Apps Script Web Apps don't return usable CORS headers, so the response
-      // body/status can't be read from here (mode: "no-cors" → opaque response).
-      // A network-level failure (offline, blocked, wrong URL) still throws and
-      // is caught below; anything that reaches the try block without throwing
-      // is treated as delivered.
-      await fetch(GOOGLE_SHEET_WEBHOOK_URL, {
-        method: "POST",
-        mode: "no-cors",
-        headers: { "Content-Type": "text/plain;charset=utf-8" },
-        body: JSON.stringify(payload),
-      });
-    } catch (err) {
-      console.error("Audit form submission failed:", err);
-      leadSaveWarning.value = "We couldn't confirm your details were saved — message us on WhatsApp just in case.";
-    }
-  }
+  if (!saved) leadSaveWarning.value = "We couldn't confirm your details were saved — message us on WhatsApp just in case.";
 
   formState.value = "success";
   // Brief reassurance, then roll straight into the real live check regardless

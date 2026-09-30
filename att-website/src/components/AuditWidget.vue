@@ -1,5 +1,6 @@
 <script setup>
 import { ref, computed, reactive } from "vue";
+import { createLeadId, submitLead } from "@/utils/leadSync";
 
 // ─── State ──────────────────────────────────────────────────────────
 const url        = ref("");
@@ -11,10 +12,6 @@ const activeOffer = ref("audit");
 const pendingTarget = ref(""); // normalised URL, captured at the idle step and carried through contact → loading
 
 // ─── Contact capture (name + phone, before running the audit) ───────
-// Same Apps Script deployment as AiScoreView.vue's lead form, routed to
-// a separate "Widget Leads" tab via formType. See Code.gs for setup.
-const GOOGLE_SHEET_WEBHOOK_URL = "https://script.google.com/macros/s/AKfycbywOPzc6Pn-7YQ4fbChfmJ39d32s4L8mCSYJ3eUAONsV8cjWIMelRhFrh5HRS5Rv5Nb/exec";
-
 const contact = reactive({
   name: "",
   phone: "",
@@ -44,35 +41,20 @@ async function submitContact() {
   contactSubmitting.value = true;
   leadSaveWarning.value = "";
 
-  const payload = {
-    formType: "widget",
-    timestamp: new Date().toISOString(),
+  const saved = await submitLead({
+    leadId: createLeadId("homepage-audit"),
     name: contact.name.trim(),
     phone: contact.phone.trim(),
     website: pendingTarget.value,
     source: "Home Audit Widget",
-  };
+    page: window.location.pathname,
+  });
 
   // Saving the lead is best-effort and must never block the audit —
   // that's what the visitor is actually here for. If the Sheet write
   // fails, log it clearly and surface a soft, non-blocking note instead
   // of a hard error screen.
-  try {
-    // Apps Script Web Apps don't return usable CORS headers, so the response
-    // body/status can't be read from here (mode: "no-cors" → opaque response).
-    // A network-level failure (offline, blocked, wrong URL) still throws and
-    // is caught below; anything that reaches the try block without throwing
-    // is treated as delivered.
-    await fetch(GOOGLE_SHEET_WEBHOOK_URL, {
-      method: "POST",
-      mode: "no-cors",
-      headers: { "Content-Type": "text/plain;charset=utf-8" },
-      body: JSON.stringify(payload),
-    });
-  } catch (err) {
-    console.error("Widget lead submission failed:", err);
-    leadSaveWarning.value = "Couldn't confirm your details were saved, but your audit is still running.";
-  }
+  if (!saved) leadSaveWarning.value = "Couldn't confirm your details were saved, but your audit is still running.";
 
   contactSubmitting.value = false;
   await runAudit();

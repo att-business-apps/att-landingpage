@@ -298,18 +298,10 @@
   <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NXJBZ7M8" height="0" width="0"
       style="display:none;visibility:hidden"></iframe></noscript>
   <!-- End Google Tag Manager (noscript) -->
-  <template>
-    <noscript>
-      <img height="1" width="1" style="display: none"
-        src="https://www.facebook.com/tr?id=1478128983960889&ev=PageView&noscript=1" alt="Facebook Pixel" />
-    </noscript>
-  </template>
-
-  <script>
-    export default {
-      name: 'FacebookPixelNoScript',
-    }
-  </script>
+  <noscript>
+    <img height="1" width="1" style="display: none"
+      src="https://www.facebook.com/tr?id=1478128983960889&ev=PageView&noscript=1" alt="Facebook Pixel" />
+  </noscript>
 
     <!-- Google Calendar Appointment Scheduling begin -->
     <link href="https://calendar.google.com/calendar/scheduling-button-script.css" rel="stylesheet">
@@ -318,6 +310,7 @@
     (function() {
       var target = document.currentScript;
       window.addEventListener('load', function() {
+        if (window.location.pathname === '/crm') return;
         calendar.schedulingButton.load({
           url: 'https://calendar.google.com/calendar/appointments/schedules/AcZssZ3EmVsyoqioF7VK_Nc19WVV49jtmYkyUCmVuZvTwY6Q2GvDt9nLAe1iscoeQmInX2ipR7SmGdD9?gv=true',
           color: '#facc15',
@@ -366,7 +359,8 @@
 
       // Paste your Google Apps Script Web App URL here after deployment.
       // Leave empty to skip remote sync (local-only mode).
-      const SHEET_WEBHOOK = "https://script.google.com/macros/s/AKfycbyy0AEGaObOnQMoAFJkJ6ttCwlqY2qn-IcUt6kuNCTKyII0Nko6tO4b19HDvHfgsO0a6A/exec";  // e.g. "https://script.google.com/macros/s/AKfy.../exec"
+      const SHEET_WEBHOOK_VALUE = "%VITE_LEADS_WEBHOOK_URL%";
+      const SHEET_WEBHOOK = SHEET_WEBHOOK_VALUE.startsWith("%VITE_") ? "" : SHEET_WEBHOOK_VALUE;
       /* ──────────────────────────────────────────────────────── */
 
       /* ── HELPERS ───────────────────────────────────────────── */
@@ -442,9 +436,9 @@
         if (SHEET_WEBHOOK) {
           fetch(SHEET_WEBHOOK, {
             method: "POST",
-            mode: "no-cors",          // avoids CORS preflight issues
-            headers: { "Content-Type": "application/json" },
-            body: JSON.stringify(entry)
+            mode: "no-cors",          // Apps Script intake is write-only from the browser
+            headers: { "Content-Type": "text/plain;charset=utf-8" },
+            body: JSON.stringify({ action: "event_append", ...entry })
           }).catch(function () {
             // silently fail — local copy is the safety net
           });

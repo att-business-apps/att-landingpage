@@ -1,6 +1,6 @@
 <script setup>
-import { ref, onMounted, watch } from "vue";
-import { RouterView, useRouter } from "vue-router";
+import { ref, onMounted, watch, computed } from "vue";
+import { RouterView, useRouter, useRoute } from "vue-router";
 import HeaderSec from "./components/Header.vue";
 import ChatWidget from "./components/Chatwidget.vue";
 import FooterSec from "./components/Footer.vue";
@@ -9,6 +9,8 @@ import "animate.css";
 
 const isLoading = ref(true);
 const router = useRouter();
+const route = useRoute();
+const showSiteChrome = computed(() => !route.meta.hideSiteChrome);
 
 router.beforeEach((_to, _from, next) => {
   isLoading.value = true;
@@ -38,7 +40,7 @@ watch(isLoading, (loading) => {
 </script>
 
 <template>
-  <HeaderSec />
+  <HeaderSec v-if="showSiteChrome" />
   <div
     v-if="isLoading"
     class="global-loader"
@@ -49,8 +51,8 @@ watch(isLoading, (loading) => {
     <img :src="logoUrl" alt="Loading" class="loader-logo" />
   </div>
   <RouterView />
-  <ChatWidget />
-  <FooterSec />
+  <ChatWidget v-if="showSiteChrome" />
+  <FooterSec v-if="showSiteChrome" />
 </template>
 
 <style scoped>

@@ -2,6 +2,7 @@
 import { computed, onBeforeUnmount, onMounted, ref } from "vue";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { createLeadId, submitLead } from "@/utils/leadSync";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -77,7 +78,7 @@ function buildWhatsAppMessage() {
   return lines.join("\n");
 }
 
-function submitEstimate() {
+async function submitEstimate() {
   error.value = "";
 
   if (!form.value.name.trim()) {
@@ -98,6 +99,19 @@ function submitEstimate() {
 
   const message = buildWhatsAppMessage();
   const url = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
+
+  await submitLead({
+    leadId: createLeadId("estimate"),
+    name: form.value.name,
+    company: form.value.company,
+    email: form.value.email,
+    phone: form.value.phone,
+    website: form.value.website,
+    service: form.value.service,
+    message: [form.value.budget && `Budget: ${form.value.budget}`, form.value.timeline && `Timeline: ${form.value.timeline}`, form.value.message].filter(Boolean).join("\n"),
+    source: "Project Estimate",
+    page: window.location.pathname,
+  });
 
   submitted.value = true;
   // Direct navigation, not window.open — wa.me deep links are far more reliable
