@@ -1,7 +1,8 @@
 <script setup>
 import { computed, onBeforeUnmount, onMounted, ref, watch } from "vue";
+import { crmWebAppUrl } from "@/utils/crmConfig";
 
-const endpoint = (import.meta.env.VITE_CRM_WEB_APP_URL || "").trim();
+const endpoint = crmWebAppUrl;
 const loginEmail = ref(sessionStorage.getItem("amt_crm_email") || "");
 const otp = ref("");
 const token = ref(sessionStorage.getItem("amt_crm_token") || "");

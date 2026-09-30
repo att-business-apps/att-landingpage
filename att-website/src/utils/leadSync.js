@@ -1,4 +1,6 @@
-const endpoint = (import.meta.env.VITE_LEADS_WEBHOOK_URL || "").trim();
+import { crmWebAppUrl } from "./crmConfig";
+
+const endpoint = crmWebAppUrl;
 let callbackSequence = 0;
 
 export function createLeadId(source = "website") {
