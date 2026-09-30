@@ -1,4 +1,4 @@
-# example netlify.toml
+﻿# example netlify.toml
 [build]
   command = "vite build"
   functions = "netlify/functions"
@@ -8,3 +8,6 @@
   from = "/*"
   to = "/index.html"
   status = 200
+[build.environment]
+  VITE_CRM_WEB_APP_URL = "https://script.google.com/macros/s/AKfycbyFdefYwZCu7uJKjutDcLtt5RG4mSlBwAwksFCWt2mP-ayDb7OAWnv2Hl6tkka_GWWq/exec"
+  VITE_LEADS_WEBHOOK_URL = "https://script.google.com/macros/s/AKfycbyFdefYwZCu7uJKjutDcLtt5RG4mSlBwAwksFCWt2mP-ayDb7OAWnv2Hl6tkka_GWWq/exec"
