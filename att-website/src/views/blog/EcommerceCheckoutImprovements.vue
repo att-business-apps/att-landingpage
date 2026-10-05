@@ -1,12 +1,10 @@
-<script setup>
+﻿<script setup>
 import { onMounted } from "vue";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 
 onMounted(() => {
-  document.title = "7 Checkout Improvements That Make Buying Easier | Amortree";
-  document.querySelector('meta[name="description"]')?.setAttribute("content", "Reduce avoidable friction in your online store with clearer delivery details, simpler forms, trusted payment options, and a better mobile checkout.");
   gsap.from(".att-blog-hero-eyebrow", { autoAlpha: 0, y: 16, duration: 0.6, ease: "power3.out", delay: 0.1 });
   gsap.from(".att-blog-title", { autoAlpha: 0, y: 28, duration: 0.75, ease: "power3.out", delay: 0.2 });
   gsap.from(".att-blog-meta", { autoAlpha: 0, y: 14, duration: 0.6, ease: "power2.out", delay: 0.35 });
@@ -20,7 +18,7 @@ onMounted(() => {
       <div class="att-blog-hero-eyebrow"><span class="att-blog-hero-dot" aria-hidden="true"></span> Growth</div>
       <h1 class="att-blog-title">7 Checkout Improvements That <span class="att-blog-title-accent">Make Buying Easier</span></h1>
       <p class="att-blog-dek">Reduce avoidable friction in your online store with clearer delivery details, simpler forms, trusted payment options, and a better mobile checkout.</p>
-      <div class="att-blog-meta"><span>Amortree Tech</span><span class="att-blog-meta-sep" aria-hidden="true">·</span><span>Published <strong>Sep 9, 2026</strong></span><span class="att-blog-meta-sep" aria-hidden="true">·</span><span>6 min read</span></div>
+      <div class="att-blog-meta"><span>Amortree Tech</span><span class="att-blog-meta-sep" aria-hidden="true">Â·</span><span>Published <strong>Sep 9, 2026</strong></span><span class="att-blog-meta-sep" aria-hidden="true">Â·</span><span>6 min read</span></div>
     </div></div></div>
     <div class="att-blog-body"><div class="att-blog-layout">
       <nav class="att-blog-toc" aria-label="Article sections"><div class="att-blog-toc-label">On this page</div><a href="#start" class="att-blog-toc-item">Start with evidence</a><a href="#guest" class="att-blog-toc-item">Guest checkout</a><a href="#costs" class="att-blog-toc-item">Show the full cost</a><a href="#forms" class="att-blog-toc-item">Simplify the form</a><a href="#mobile" class="att-blog-toc-item">Design for mobile</a><a href="#payments" class="att-blog-toc-item">Payment &amp; trust</a><a href="#after-order" class="att-blog-toc-item">After the order</a><a href="#faq" class="att-blog-toc-item">FAQ</a></nav>
@@ -33,25 +31,25 @@ onMounted(() => {
 
         <section class="att-blog-section" id="costs"><div class="att-blog-section-num" aria-hidden="true">03</div><h2 class="att-blog-section-title">2. Show the Total Cost Early</h2><p>Make product price, delivery charge, tax, and likely delivery timing easy to find before the final payment step. If delivery depends on a postcode or order value, explain that condition near the cart and make the estimate quick to check. A clear order summary should remain available while customers enter their details.</p><p>For free delivery thresholds, show how close the basket is without adding pressure or confusing the total. The amount due now should never be mistaken for a subtotal that excludes a mandatory fee.</p></section>
 
-        <section class="att-blog-section" id="forms"><div class="att-blog-section-num" aria-hidden="true">04</div><h2 class="att-blog-section-title">3. Ask for Less and Explain Errors</h2><p>Every required field should help take payment, deliver the order, or meet a real business requirement. Remove questions that do not serve one of those jobs. Use clear labels, sensible field order, autofill-friendly names, and mark optional fields so shoppers do not wonder whether they can skip them.</p><p>When information is missing or invalid, show the message beside the field and preserve everything the customer already entered. A generic “Something went wrong” message forces them to guess. Tell them what needs attention and how to correct it.</p><ul class="att-blog-list"><li><strong>Use one field per piece of information</strong> where that makes the form easier to complete.</li><li><strong>Do not clear completed fields</strong> after a validation error or payment failure.</li><li><strong>Keep optional requests optional</strong> and explain why you ask for sensitive or unusual details.</li></ul></section>
+        <section class="att-blog-section" id="forms"><div class="att-blog-section-num" aria-hidden="true">04</div><h2 class="att-blog-section-title">3. Ask for Less and Explain Errors</h2><p>Every required field should help take payment, deliver the order, or meet a real business requirement. Remove questions that do not serve one of those jobs. Use clear labels, sensible field order, autofill-friendly names, and mark optional fields so shoppers do not wonder whether they can skip them.</p><p>When information is missing or invalid, show the message beside the field and preserve everything the customer already entered. A generic â€œSomething went wrongâ€ message forces them to guess. Tell them what needs attention and how to correct it.</p><ul class="att-blog-list"><li><strong>Use one field per piece of information</strong> where that makes the form easier to complete.</li><li><strong>Do not clear completed fields</strong> after a validation error or payment failure.</li><li><strong>Keep optional requests optional</strong> and explain why you ask for sensitive or unusual details.</li></ul></section>
 
-        <section class="att-blog-section" id="mobile"><div class="att-blog-section-num" aria-hidden="true">05</div><h2 class="att-blog-section-title">4. Make the Mobile Flow Comfortable</h2><p>Open the checkout on a phone and complete it one-handed. Text should be readable without zooming, tap targets should have enough room, and the keyboard should not hide the next field or primary action. Use the correct keyboard for email, phone numbers, and postcodes, and let mobile browsers autofill where possible.</p><p>Keep the most important button visually clear and describe its action accurately: “Continue to payment” is more useful than an ambiguous “Next.” If a multi-step checkout is necessary, show where the customer is and what remains. Do not make them re-enter details as they move between steps.</p></section>
+        <section class="att-blog-section" id="mobile"><div class="att-blog-section-num" aria-hidden="true">05</div><h2 class="att-blog-section-title">4. Make the Mobile Flow Comfortable</h2><p>Open the checkout on a phone and complete it one-handed. Text should be readable without zooming, tap targets should have enough room, and the keyboard should not hide the next field or primary action. Use the correct keyboard for email, phone numbers, and postcodes, and let mobile browsers autofill where possible.</p><p>Keep the most important button visually clear and describe its action accurately: â€œContinue to paymentâ€ is more useful than an ambiguous â€œNext.â€ If a multi-step checkout is necessary, show where the customer is and what remains. Do not make them re-enter details as they move between steps.</p></section>
 
-        <section class="att-blog-section" id="payments"><div class="att-blog-section-num" aria-hidden="true">06</div><h2 class="att-blog-section-title">5. Make Payment Choices and Trust Clear</h2><p>Offer payment methods that suit your customers and your store’s actual capabilities. State which options are available before customers reach the final step, and explain any payment flow that sends them to another site. Never display a payment logo or assurance that does not match the live setup.</p><p>Use the payment provider’s supported integration and keep sensitive card handling within its secure flow. Explain how customers can get help if a payment fails or appears pending. Reassurance works best when it is specific: clear contact details, understandable policies, and a recognisable payment process all help reduce uncertainty.</p></section>
+        <section class="att-blog-section" id="payments"><div class="att-blog-section-num" aria-hidden="true">06</div><h2 class="att-blog-section-title">5. Make Payment Choices and Trust Clear</h2><p>Offer payment methods that suit your customers and your storeâ€™s actual capabilities. State which options are available before customers reach the final step, and explain any payment flow that sends them to another site. Never display a payment logo or assurance that does not match the live setup.</p><p>Use the payment providerâ€™s supported integration and keep sensitive card handling within its secure flow. Explain how customers can get help if a payment fails or appears pending. Reassurance works best when it is specific: clear contact details, understandable policies, and a recognisable payment process all help reduce uncertainty.</p></section>
 
         <section class="att-blog-section" id="after-order"><div class="att-blog-section-num" aria-hidden="true">07</div><h2 class="att-blog-section-title">6. Set Delivery Expectations and 7. Confirm the Order</h2><p>State where you deliver, how long dispatch usually takes, and what happens if a parcel is delayed. Make returns and exchange terms easy to find before purchase, with a short plain-language summary near relevant products or the cart. Customers should not need to search through a long policy to learn whether a purchase is practical.</p><p>After payment, show a confirmation with the items ordered, amount charged, delivery address, expected next step, and support contact. Send the same details by email. Distinguish a completed payment from a pending or failed one so customers are not left wondering whether they should try again.</p><p>These checkout details sit alongside the broader store experience. For planning or improving the storefront itself, explore our <a href="/ecommerce-development" class="att-blog-inline-link">ecommerce development service</a>.</p></section>
 
         <section class="att-blog-section" id="faq"><div class="att-blog-section-num" aria-hidden="true">08</div><h2 class="att-blog-section-title">Frequently Asked Questions</h2><div class="att-blog-faq-item"><h3 class="att-blog-faq-q">Should I use a one-page or multi-step checkout?</h3><p>Use the format that is easiest to complete and understand on your device mix. A single page is not automatically simpler if it becomes long and crowded; a multi-step flow can work when progress and the order summary stay clear.</p></div><div class="att-blog-faq-item"><h3 class="att-blog-faq-q">Should I remove every optional field?</h3><p>Remove fields that do not help the customer or your fulfilment process. A useful optional delivery note can help, but an unexplained request for extra personal details can create doubt.</p></div><div class="att-blog-faq-item"><h3 class="att-blog-faq-q">How do I know if a checkout change worked?</h3><p>Compare completion rate at the affected step, completed orders, and support issues before and after the change. Account for promotions, traffic sources, and seasonal shifts that may also affect sales.</p></div></section>
 
-        <router-link to="/blog" class="att-blog-inline-link">← Back to all articles</router-link>
+        <router-link to="/blog" class="att-blog-inline-link">â† Back to all articles</router-link>
       </article>
     </div></div>
-    <div class="att-blog-cta"><div class="att-blog-cta-inner"><div class="att-blog-cta-text"><p class="att-blog-cta-title">Planning an online store?</p><p class="att-blog-cta-sub">We can help you shape a store around how your customers shop.</p></div><a href="https://wa.me/917975859061/?text=I%27d%20like%20to%20discuss%20an%20ecommerce%20website." class="att-blog-cta-btn">Talk to Amortree <span aria-hidden="true">↗</span></a></div></div>
+    <div class="att-blog-cta"><div class="att-blog-cta-inner"><div class="att-blog-cta-text"><p class="att-blog-cta-title">Planning an online store?</p><p class="att-blog-cta-sub">We can help you shape a store around how your customers shop.</p></div><a href="https://wa.me/917975859061/?text=I%27d%20like%20to%20discuss%20an%20ecommerce%20website." class="att-blog-cta-btn">Talk to Amortree <span aria-hidden="true">â†—</span></a></div></div>
   </main>
 </template>
 
 <style lang="scss" scoped>
-// ── Page shell ────────────────────────────────────────────────────────────────
+// â”€â”€ Page shell â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 .att-blog-page {
   background: #f8fafc;
   min-height: 100vh;
@@ -61,7 +59,7 @@ onMounted(() => {
   padding-top: 10vh;
   background-color: #06060a;
 }
-// ── Hero strip ────────────────────────────────────────────────────────────────
+// â”€â”€ Hero strip â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 .att-blog-hero {
   position: relative;
   overflow: hidden;
@@ -137,7 +135,7 @@ onMounted(() => {
 
 .att-blog-meta-sep { color: #1e293b; }
 
-// ── Body layout ───────────────────────────────────────────────────────────────
+// â”€â”€ Body layout â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 .att-blog-body {
   max-width: 1200px; margin: 0 auto;
   padding: 5rem 4rem;
@@ -155,7 +153,7 @@ onMounted(() => {
   @media (max-width: 1024px) { grid-template-columns: 1fr; gap: 2.5rem; }
 }
 
-// ── TOC sidebar ───────────────────────────────────────────────────────────────
+// â”€â”€ TOC sidebar â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 .att-blog-toc {
   position: sticky;
   top: calc(var(--header-height, 96px) + 24px);
@@ -192,7 +190,7 @@ onMounted(() => {
   }
 }
 
-// ── Content ────────────────────────────────────────────────────────────────
+// â”€â”€ Content â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 .att-blog-content {
   display: flex; flex-direction: column; gap: 0;
 }
@@ -301,7 +299,7 @@ onMounted(() => {
   margin: 0 0 0.4rem;
 }
 
-// ── Cost/stat breakdown chart card ──────────────────────────────────────────
+// â”€â”€ Cost/stat breakdown chart card â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 .att-chart-card {
   margin: 1.5rem 0 0.5rem;
   padding: 1.5rem 1.75rem 1.25rem;
@@ -317,7 +315,7 @@ onMounted(() => {
   width: 100%; height: auto; display: block;
 }
 
-// ── Info cards (3-up grid) ──────────────────────────────────────────────────
+// â”€â”€ Info cards (3-up grid) â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 .att-info-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -344,7 +342,7 @@ onMounted(() => {
   margin-bottom: 0.7rem;
 }
 
-// ── Process / priority timeline ─────────────────────────────────────────────
+// â”€â”€ Process / priority timeline â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 .att-timeline {
   position: relative;
   display: grid;
@@ -404,7 +402,7 @@ onMounted(() => {
   font-size: 0.82rem; line-height: 1.6; color: #64748b; margin: 0; max-width: none;
 }
 
-// ── CTA strip ─────────────────────────────────────────────────────────────────
+// â”€â”€ CTA strip â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 .att-blog-cta {
   background: #0f172a;
   border-top: 1px solid rgba(255,255,255,0.06);

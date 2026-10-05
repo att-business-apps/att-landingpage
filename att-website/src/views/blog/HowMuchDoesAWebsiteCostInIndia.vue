@@ -1,4 +1,4 @@
-<script setup>
+﻿<script setup>
 import { onMounted } from "vue";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -6,18 +6,7 @@ gsap.registerPlugin(ScrollTrigger);
 
 
 onMounted(() => {
-    document.title = "How Much Does a Website Cost in India? [2026 Pricing Guide] | Amortree";
-
-    const description = document.querySelector('meta[name="description"]');
-
-    if (description) {
-        description.setAttribute(
-            "content",
-            "A transparent breakdown of website design costs in India for small businesses in 2026 — DIY vs freelancer vs agency, what drives the price, and how to budget without overpaying."
-        );
-    }
-
-    gsap.from(".att-blog-hero-eyebrow", { autoAlpha: 0, y: 16, duration: 0.6, ease: "power3.out", delay: 0.1 });
+gsap.from(".att-blog-hero-eyebrow", { autoAlpha: 0, y: 16, duration: 0.6, ease: "power3.out", delay: 0.1 });
     gsap.from(".att-blog-title", { autoAlpha: 0, y: 28, duration: 0.75, ease: "power3.out", delay: 0.2 });
     gsap.from(".att-blog-meta", { autoAlpha: 0, y: 14, duration: 0.6, ease: "power2.out", delay: 0.35 });
 
@@ -61,12 +50,12 @@ onMounted(() => {
                     Web Design &amp; Strategy
                 </div>
                 <h1 class="att-blog-title">How Much Does a <span class="att-blog-title-accent">Website</span> Really Cost in 2026?</h1>
-                <p class="att-blog-dek">A transparent, no-fluff pricing guide for small business owners in India — what actually drives the cost, how the build process works, and how to avoid overpaying (or underpaying).</p>
+                <p class="att-blog-dek">A transparent, no-fluff pricing guide for small business owners in India - what actually drives the cost, how the build process works, and how to avoid overpaying (or underpaying).</p>
                 <div class="att-blog-meta">
                     <span>Amortree Tech</span>
-                    <span class="att-blog-meta-sep" aria-hidden="true">·</span>
+                    <span class="att-blog-meta-sep" aria-hidden="true">Â·</span>
                     <span>Published <strong>Jun 20, 2026</strong></span>
-                    <span class="att-blog-meta-sep" aria-hidden="true">·</span>
+                    <span class="att-blog-meta-sep" aria-hidden="true">Â·</span>
                     <span>9 min read</span>
                 </div>
             </div>
@@ -96,7 +85,7 @@ onMounted(() => {
         <article class="att-blog-content">
 
           <div class="att-blog-intro att-blog-section">
-            <p>If you've asked three different people "how much should my website cost," you've probably gotten three wildly different answers — anywhere from ₹3,000 to ₹3,00,000. That's not because anyone's lying to you. It's because "website" means completely different things depending on who's building it and why.</p>
+            <p>If you've asked three different people "how much should my website cost," you've probably gotten three wildly different answers - anywhere from â‚¹3,000 to â‚¹3,00,000. That's not because anyone's lying to you. It's because "website" means completely different things depending on who's building it and why.</p>
             <p>This guide breaks down real numbers so you can budget with confidence, whether you're a solo consultant who needs a single page or a growing business that needs a proper digital presence.</p>
           </div>
 
@@ -105,11 +94,11 @@ onMounted(() => {
             <h2 class="att-blog-section-title">The Short Answer</h2>
             <p>For most small businesses in India in 2026, a professionally designed website falls into one of three brackets:</p>
             <ul class="att-blog-list">
-              <li><strong>₹8,000 – ₹25,000</strong> — a single, well-designed landing page for a specific service or launch</li>
-              <li><strong>₹25,000 – ₹80,000</strong> — a multi-page business website with custom design, animations, and SEO basics</li>
-              <li><strong>₹80,000+</strong> — a full digital presence with custom functionality, integrations, or e-commerce</li>
+              <li><strong>â‚¹8,000 â€“ â‚¹25,000</strong> - a single, well-designed landing page for a specific service or launch</li>
+              <li><strong>â‚¹25,000 â€“ â‚¹80,000</strong> - a multi-page business website with custom design, animations, and SEO basics</li>
+              <li><strong>â‚¹80,000+</strong> - a full digital presence with custom functionality, integrations, or e-commerce</li>
             </ul>
-            <p>The right number for you depends on what the website needs to <em>do</em> — not just what it needs to look like. That's what the rest of this guide is for.</p>
+            <p>The right number for you depends on what the website needs to <em>do</em> - not just what it needs to look like. That's what the rest of this guide is for.</p>
           </section>
 
           <section class="att-blog-section" id="cost-drivers">
@@ -117,11 +106,11 @@ onMounted(() => {
             <h2 class="att-blog-section-title">What Actually Drives the Cost</h2>
             <p>Price differences between two websites rarely come down to how many pages they have. They come down to these five factors:</p>
             <ul class="att-blog-list">
-              <li><strong>Custom design vs. template</strong> — a template is faster and cheaper, but it looks like a template. Custom design costs more because someone is solving your specific brand and layout problems, not filling in a theme.</li>
-              <li><strong>Animation and interactivity</strong> — scroll animations, hover states, and micro-interactions (the things that make a site feel "premium") take real development time.</li>
-              <li><strong>Content readiness</strong> — if you already have copy, photos, and brand assets ready, the build is faster. If someone has to write copy and source or shoot images, that's additional scope.</li>
-              <li><strong>Technical complexity</strong> — booking systems, payment integration, multi-language support, or custom forms all add development hours.</li>
-              <li><strong>Revisions and ownership</strong> — how many rounds of feedback are included, and do you own the final files outright, or are you locked into a platform?</li>
+              <li><strong>Custom design vs. template</strong> - a template is faster and cheaper, but it looks like a template. Custom design costs more because someone is solving your specific brand and layout problems, not filling in a theme.</li>
+              <li><strong>Animation and interactivity</strong> - scroll animations, hover states, and micro-interactions (the things that make a site feel "premium") take real development time.</li>
+              <li><strong>Content readiness</strong> - if you already have copy, photos, and brand assets ready, the build is faster. If someone has to write copy and source or shoot images, that's additional scope.</li>
+              <li><strong>Technical complexity</strong> - booking systems, payment integration, multi-language support, or custom forms all add development hours.</li>
+              <li><strong>Revisions and ownership</strong> - how many rounds of feedback are included, and do you own the final files outright, or are you locked into a platform?</li>
             </ul>
 
             <!-- Educational visual: where a typical budget goes -->
@@ -131,21 +120,21 @@ onMounted(() => {
                 <g font-family="inherit">
                   <!-- Design 30% -->
                   <rect class="att-chart-segment" x="0" y="10" width="192" height="34" rx="6" fill="#facc15"/>
-                  <text x="10" y="32" font-size="12" font-weight="700" fill="#0f172a">Design &amp; UX · 30%</text>
+                  <text x="10" y="32" font-size="12" font-weight="700" fill="#0f172a">Design &amp; UX Â· 30%</text>
 
                   <!-- Development 40% -->
                   <rect class="att-chart-segment" x="196" y="10" width="256" height="34" rx="6" fill="#0f172a"/>
-                  <text x="206" y="32" font-size="12" font-weight="700" fill="#f8fafc">Development · 40%</text>
+                  <text x="206" y="32" font-size="12" font-weight="700" fill="#f8fafc">Development Â· 40%</text>
 
                   <!-- Content 15% -->
                   <rect class="att-chart-segment" x="456" y="10" width="96" height="34" rx="6" fill="#94a3b8"/>
-                  <text x="466" y="32" font-size="11.5" font-weight="700" fill="#0f172a">Content · 15%</text>
+                  <text x="466" y="32" font-size="11.5" font-weight="700" fill="#0f172a">Content Â· 15%</text>
 
                   <!-- Testing/launch 15% -->
                   <rect class="att-chart-segment" x="556" y="10" width="84" height="34" rx="6" fill="#e2e8f0"/>
-                  <text x="563" y="32" font-size="11" font-weight="700" fill="#0f172a">QA &amp; Launch · 15%</text>
+                  <text x="563" y="32" font-size="11" font-weight="700" fill="#0f172a">QA &amp; Launch Â· 15%</text>
                 </g>
-                <text x="0" y="80" font-size="12" fill="#64748b">This is a general guideline, not a formula — a content-heavy site shifts more budget</text>
+                <text x="0" y="80" font-size="12" fill="#64748b">This is a general guideline, not a formula - a content-heavy site shifts more budget</text>
                 <text x="0" y="98" font-size="12" fill="#64748b">toward copywriting and photography; a highly custom UI shifts more toward design.</text>
                 <text x="0" y="130" font-size="11.5" font-weight="700" fill="#0f172a">Why this matters:</text>
                 <text x="0" y="150" font-size="12" fill="#475569">If a quote is 80% "development" with almost nothing allocated to design,</text>
@@ -156,7 +145,7 @@ onMounted(() => {
 
           <section class="att-blog-section" id="pricing-models">
             <div class="att-blog-section-num" aria-hidden="true">03</div>
-            <h2 class="att-blog-section-title">Fixed Price, Hourly, or Retainer — What's the Difference?</h2>
+            <h2 class="att-blog-section-title">Fixed Price, Hourly, or Retainer - What's the Difference?</h2>
             <p>Beyond <em>how much</em>, it helps to understand <em>how</em> you're being charged. The pricing model affects your risk, not just your total spend:</p>
             <div class="att-info-grid">
               <div class="att-info-card">
@@ -165,11 +154,11 @@ onMounted(() => {
               </div>
               <div class="att-info-card">
                 <div class="att-info-card-label">Hourly</div>
-                <p>You pay for time spent. Flexible for evolving projects, but harder to predict the final bill — always ask for a not-to-exceed estimate.</p>
+                <p>You pay for time spent. Flexible for evolving projects, but harder to predict the final bill - always ask for a not-to-exceed estimate.</p>
               </div>
               <div class="att-info-card">
                 <div class="att-info-card-label">Retainer</div>
-                <p>A recurring monthly fee for ongoing work — updates, new pages, SEO, small fixes. Makes sense once the site is live and needs continuous care, not for the initial build.</p>
+                <p>A recurring monthly fee for ongoing work - updates, new pages, SEO, small fixes. Makes sense once the site is live and needs continuous care, not for the initial build.</p>
               </div>
             </div>
           </section>
@@ -186,25 +175,25 @@ onMounted(() => {
                 <tbody>
                   <tr>
                     <td>DIY builder<br><span class="att-blog-table-sub">(Wix, Squarespace, etc.)</span></td>
-                    <td>₹0 – ₹8,000/yr</td>
+                    <td>â‚¹0 â€“ â‚¹8,000/yr</td>
                     <td>Testing an idea before investing</td>
                     <td>Generic look, your own time cost, weak SEO foundation</td>
                   </tr>
                   <tr>
                     <td>Freelancer</td>
-                    <td>₹10,000 – ₹50,000</td>
+                    <td>â‚¹10,000 â€“ â‚¹50,000</td>
                     <td>Simple, well-defined projects</td>
                     <td>Quality varies widely; limited strategy or ongoing support</td>
                   </tr>
                   <tr>
                     <td>Boutique studio<br><span class="att-blog-table-sub">(like Amortree)</span></td>
-                    <td>₹25,000 – ₹1,50,000</td>
+                    <td>â‚¹25,000 â€“ â‚¹1,50,000</td>
                     <td>Businesses that need it to actually convert visitors into leads</td>
                     <td>Higher upfront cost, but design + strategy + build in one place</td>
                   </tr>
                   <tr>
                     <td>Large agency</td>
-                    <td>₹2,00,000+</td>
+                    <td>â‚¹2,00,000+</td>
                     <td>Enterprises with complex, multi-stakeholder needs</td>
                     <td>Slower timelines, more process overhead</td>
                   </tr>
@@ -218,10 +207,10 @@ onMounted(() => {
             <h2 class="att-blog-section-title">Cost by Business Type</h2>
             <p>Different business types tend to need different things from a site, which shifts the budget:</p>
             <ul class="att-blog-list">
-              <li><strong>Local service business</strong> (clinics, salons, contractors) — a strong single landing page with clear contact/booking flow usually covers it: ₹15,000–₹40,000.</li>
-              <li><strong>Real estate / property listings</strong> — needs structured project pages, image galleries, and enquiry forms: ₹40,000–₹1,00,000.</li>
-              <li><strong>Fintech / SaaS startups</strong> — needs to build trust fast, often with interactive product previews and compliance-related pages: ₹60,000–₹2,00,000+.</li>
-              <li><strong>Personal brand / consultant</strong> — usually one polished page is enough: ₹8,000–₹25,000.</li>
+              <li><strong>Local service business</strong> (clinics, salons, contractors) - a strong single landing page with clear contact/booking flow usually covers it: â‚¹15,000â€“â‚¹40,000.</li>
+              <li><strong>Real estate / property listings</strong> - needs structured project pages, image galleries, and enquiry forms: â‚¹40,000â€“â‚¹1,00,000.</li>
+              <li><strong>Fintech / SaaS startups</strong> - needs to build trust fast, often with interactive product previews and compliance-related pages: â‚¹60,000â€“â‚¹2,00,000+.</li>
+              <li><strong>Personal brand / consultant</strong> - usually one polished page is enough: â‚¹8,000â€“â‚¹25,000.</li>
             </ul>
           </section>
 
@@ -237,8 +226,8 @@ onMounted(() => {
                 <div class="att-timeline-dot">1</div>
                 <div class="att-timeline-body">
                   <div class="att-timeline-title">Discovery</div>
-                  <div class="att-timeline-days">1–3 days</div>
-                  <p>Understanding your business, audience, and what the site needs to achieve — enquiries, bookings, credibility, or sales.</p>
+                  <div class="att-timeline-days">1â€“3 days</div>
+                  <p>Understanding your business, audience, and what the site needs to achieve - enquiries, bookings, credibility, or sales.</p>
                 </div>
               </div>
 
@@ -246,7 +235,7 @@ onMounted(() => {
                 <div class="att-timeline-dot">2</div>
                 <div class="att-timeline-body">
                   <div class="att-timeline-title">Design</div>
-                  <div class="att-timeline-days">3–10 days</div>
+                  <div class="att-timeline-days">3â€“10 days</div>
                   <p>Wireframes, then visual design in tools like Figma. This is where layout, hierarchy, and brand feel get locked in before any code is written.</p>
                 </div>
               </div>
@@ -255,8 +244,8 @@ onMounted(() => {
                 <div class="att-timeline-dot">3</div>
                 <div class="att-timeline-body">
                   <div class="att-timeline-title">Development</div>
-                  <div class="att-timeline-days">5–20 days</div>
-                  <p>Turning the approved design into a working, responsive site — including animations, forms, and any integrations.</p>
+                  <div class="att-timeline-days">5â€“20 days</div>
+                  <p>Turning the approved design into a working, responsive site - including animations, forms, and any integrations.</p>
                 </div>
               </div>
 
@@ -264,13 +253,13 @@ onMounted(() => {
                 <div class="att-timeline-dot">4</div>
                 <div class="att-timeline-body">
                   <div class="att-timeline-title">QA &amp; Launch</div>
-                  <div class="att-timeline-days">2–5 days</div>
+                  <div class="att-timeline-days">2â€“5 days</div>
                   <p>Cross-browser and mobile testing, speed checks, and a final review before the site goes live on your domain.</p>
                 </div>
               </div>
             </div>
 
-            <p>The bigger the gap between what's promised and this typical breakdown — for example, a "custom" site delivered in 2 days — the more likely it's a template with your logo swapped in.</p>
+            <p>The bigger the gap between what's promised and this typical breakdown - for example, a "custom" site delivered in 2 days - the more likely it's a template with your logo swapped in.</p>
           </section>
 
           <section class="att-blog-section" id="hidden-costs">
@@ -278,25 +267,25 @@ onMounted(() => {
             <h2 class="att-blog-section-title">Hidden Costs to Watch For</h2>
             <p>The quoted price is rarely the full picture. Ask about these before you sign anything:</p>
             <ul class="att-blog-list">
-              <li><strong>Domain and hosting</strong> — usually ₹1,000–₹5,000/year, separate from the design cost</li>
-              <li><strong>Stock photography or custom photography</strong> — can add ₹5,000–₹20,000 if you don't have your own assets</li>
-              <li><strong>Post-launch changes</strong> — clarify how many free revision rounds are included, and what happens after</li>
-              <li><strong>Platform lock-in</strong> — some cheap builds are only editable through the original provider, meaning you're stuck paying them forever for small changes</li>
+              <li><strong>Domain and hosting</strong> - usually â‚¹1,000â€“â‚¹5,000/year, separate from the design cost</li>
+              <li><strong>Stock photography or custom photography</strong> - can add â‚¹5,000â€“â‚¹20,000 if you don't have your own assets</li>
+              <li><strong>Post-launch changes</strong> - clarify how many free revision rounds are included, and what happens after</li>
+              <li><strong>Platform lock-in</strong> - some cheap builds are only editable through the original provider, meaning you're stuck paying them forever for small changes</li>
             </ul>
           </section>
 
           <section class="att-blog-section" id="budgeting">
             <div class="att-blog-section-num" aria-hidden="true">08</div>
             <h2 class="att-blog-section-title">How to Budget It Right</h2>
-            <p>A useful way to think about it: your website should cost roughly what one new customer is worth to you, not more than a few months of what you'd spend on ads to get the same result. If a single client or booking is worth ₹20,000 to your business, spending ₹30,000–₹50,000 on a site that reliably converts visitors into enquiries pays for itself within a couple of clients.</p>
-            <p>Start by defining what the site needs to <em>do</em> — get phone calls, collect enquiry forms, showcase a portfolio — before asking anyone for a quote. A clear brief gets you a more accurate number and prevents scope creep later.</p>
+            <p>A useful way to think about it: your website should cost roughly what one new customer is worth to you, not more than a few months of what you'd spend on ads to get the same result. If a single client or booking is worth â‚¹20,000 to your business, spending â‚¹30,000â€“â‚¹50,000 on a site that reliably converts visitors into enquiries pays for itself within a couple of clients.</p>
+            <p>Start by defining what the site needs to <em>do</em> - get phone calls, collect enquiry forms, showcase a portfolio - before asking anyone for a quote. A clear brief gets you a more accurate number and prevents scope creep later.</p>
           </section>
 
           <section class="att-blog-section" id="red-flags">
             <div class="att-blog-section-num" aria-hidden="true">09</div>
             <h2 class="att-blog-section-title">Red Flags to Avoid</h2>
             <ul class="att-blog-list">
-              <li>Quotes with no breakdown — a serious studio can tell you what you're paying for</li>
+              <li>Quotes with no breakdown - a serious studio can tell you what you're paying for</li>
               <li>No mention of who owns the final files or code</li>
               <li>Vague timelines with no milestones</li>
               <li>Pressure to decide immediately, especially paired with a steep "limited time" discount</li>
@@ -308,8 +297,8 @@ onMounted(() => {
             <h2 class="att-blog-section-title">Frequently Asked Questions</h2>
 
             <div class="att-blog-faq-item">
-              <h3 class="att-blog-faq-q">Is a ₹5,000 website actually worth it?</h3>
-              <p>For a true one-page brochure with no ongoing changes, sometimes. But most businesses outgrow it within a year and end up paying twice — once for the cheap site, once to redo it properly.</p>
+              <h3 class="att-blog-faq-q">Is a â‚¹5,000 website actually worth it?</h3>
+              <p>For a true one-page brochure with no ongoing changes, sometimes. But most businesses outgrow it within a year and end up paying twice - once for the cheap site, once to redo it properly.</p>
             </div>
             <div class="att-blog-faq-item">
               <h3 class="att-blog-faq-q">How long does a small business website take to build?</h3>
@@ -330,7 +319,7 @@ onMounted(() => {
       <div class="att-blog-cta-inner">
         <div class="att-blog-cta-text">
           <p class="att-blog-cta-title">Not sure what your website should cost?</p>
-          <p class="att-blog-cta-sub">Get a free audit and a straight-up quote — no vague ranges, no pressure.</p>
+          <p class="att-blog-cta-sub">Get a free audit and a straight-up quote - no vague ranges, no pressure.</p>
         </div>
         <a href="https://wa.me/917975859061/?text=I%27d%20like%20to%20claim%20my%20free%20audit." class="att-blog-cta-btn">
           Claim Your Free Audit
@@ -345,7 +334,7 @@ onMounted(() => {
 </template>
 
 <style lang="scss" scoped>
-// ── Page shell ────────────────────────────────────────────────────────────────
+// â”€â”€ Page shell â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 .att-blog-page {
   background: #f8fafc;
   min-height: 100vh;
@@ -355,7 +344,7 @@ onMounted(() => {
   padding-top: 10vh;
   background-color: #06060a;
 }
-// ── Hero strip ────────────────────────────────────────────────────────────────
+// â”€â”€ Hero strip â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 .att-blog-hero {
   position: relative;
   overflow: hidden;
@@ -431,7 +420,7 @@ onMounted(() => {
 
 .att-blog-meta-sep { color: #1e293b; }
 
-// ── Body layout ───────────────────────────────────────────────────────────────
+// â”€â”€ Body layout â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 .att-blog-body {
   max-width: 1200px; margin: 0 auto;
   padding: 5rem 4rem;
@@ -449,7 +438,7 @@ onMounted(() => {
   @media (max-width: 1024px) { grid-template-columns: 1fr; gap: 2.5rem; }
 }
 
-// ── TOC sidebar ───────────────────────────────────────────────────────────────
+// â”€â”€ TOC sidebar â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 .att-blog-toc {
   position: sticky;
   top: calc(var(--header-height, 96px) + 24px);
@@ -486,7 +475,7 @@ onMounted(() => {
   }
 }
 
-// ── Content ───────────────────────────────.att-blog-intro────────────────────────────────────
+// â”€â”€ Content â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€.att-blog-introâ”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 .att-blog-content {
   display: flex; flex-direction: column; gap: 0;
 }
@@ -588,7 +577,7 @@ onMounted(() => {
   margin: 0 0 0.4rem;
 }
 
-// ── Cost breakdown chart card ───────────────────────────────────────────────
+// â”€â”€ Cost breakdown chart card â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 .att-chart-card {
   margin: 1.5rem 0 0.5rem;
   padding: 1.5rem 1.75rem 1.25rem;
@@ -604,7 +593,7 @@ onMounted(() => {
   width: 100%; height: auto; display: block;
 }
 
-// ── Pricing model info cards ────────────────────────────────────────────────
+// â”€â”€ Pricing model info cards â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 .att-info-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -631,7 +620,7 @@ onMounted(() => {
   margin-bottom: 0.7rem;
 }
 
-// ── Build process timeline ──────────────────────────────────────────────────
+// â”€â”€ Build process timeline â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 .att-timeline {
   position: relative;
   display: grid;
@@ -691,7 +680,7 @@ onMounted(() => {
   font-size: 0.82rem; line-height: 1.6; color: #64748b; margin: 0; max-width: none;
 }
 
-// ── CTA strip ─────────────────────────────────────────────────────────────────
+// â”€â”€ CTA strip â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 .att-blog-cta {
   background: #0f172a;
   border-top: 1px solid rgba(255,255,255,0.06);

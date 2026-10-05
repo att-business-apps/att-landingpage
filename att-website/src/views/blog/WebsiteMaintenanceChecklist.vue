@@ -1,12 +1,10 @@
-<script setup>
+﻿<script setup>
 import { onMounted } from "vue";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 
 onMounted(() => {
-  document.title = "A Practical Website Maintenance Checklist for Small Businesses | Amortree";
-  document.querySelector('meta[name="description"]')?.setAttribute("content", "A monthly and quarterly routine for keeping your small business website secure, accurate, fast, and ready to turn visits into enquiries.");
   gsap.from(".att-blog-hero-eyebrow", { autoAlpha: 0, y: 16, duration: 0.6, ease: "power3.out", delay: 0.1 });
   gsap.from(".att-blog-title", { autoAlpha: 0, y: 28, duration: 0.75, ease: "power3.out", delay: 0.2 });
   gsap.from(".att-blog-meta", { autoAlpha: 0, y: 14, duration: 0.6, ease: "power2.out", delay: 0.35 });
@@ -20,7 +18,7 @@ onMounted(() => {
       <div class="att-blog-hero-eyebrow"><span class="att-blog-hero-dot" aria-hidden="true"></span> Web Design</div>
       <h1 class="att-blog-title">A Practical Website <span class="att-blog-title-accent">Maintenance Checklist</span> for Small Businesses</h1>
       <p class="att-blog-dek">A simple routine for keeping your business website secure, accurate, fast, and ready to turn visits into enquiries.</p>
-      <div class="att-blog-meta"><span>Amortree Tech</span><span class="att-blog-meta-sep" aria-hidden="true">·</span><span>Published <strong>Sep 29, 2026</strong></span><span class="att-blog-meta-sep" aria-hidden="true">·</span><span>7 min read</span></div>
+      <div class="att-blog-meta"><span>Amortree Tech</span><span class="att-blog-meta-sep" aria-hidden="true">Â·</span><span>Published <strong>Sep 29, 2026</strong></span><span class="att-blog-meta-sep" aria-hidden="true">Â·</span><span>7 min read</span></div>
     </div></div></div>
 
     <div class="att-blog-body"><div class="att-blog-layout">
@@ -44,15 +42,15 @@ onMounted(() => {
 
         <section class="att-blog-section" id="faq"><div class="att-blog-section-num" aria-hidden="true">07</div><h2 class="att-blog-section-title">Frequently Asked Questions</h2><div class="att-blog-faq-item"><h3 class="att-blog-faq-q">How often should a small business website be maintained?</h3><p>Check important customer journeys monthly and review technical health, access, and backups at least quarterly. Websites that process orders or bookings should be monitored more often.</p></div><div class="att-blog-faq-item"><h3 class="att-blog-faq-q">Can I update my website myself?</h3><p>Most owners can safely update approved text and images after learning the content system. Backups, software updates, and changes to custom features may need developer support.</p></div><div class="att-blog-faq-item"><h3 class="att-blog-faq-q">What should a website maintenance plan include?</h3><p>It should clearly state what is checked, how updates and backups are handled, how issues are reported, response expectations, and which work is included or billed separately.</p></div></section>
 
-        <router-link to="/blog" class="att-blog-inline-link">← Back to all articles</router-link>
+        <router-link to="/blog" class="att-blog-inline-link">â† Back to all articles</router-link>
       </article>
     </div></div>
-    <div class="att-blog-cta"><div class="att-blog-cta-inner"><div class="att-blog-cta-text"><p class="att-blog-cta-title">Want your website to stay reliable?</p><p class="att-blog-cta-sub">Talk to us about practical maintenance for your business site.</p></div><a href="https://wa.me/917975859061/?text=I%27d%20like%20to%20talk%20about%20website%20maintenance." class="att-blog-cta-btn">Talk to Amortree <span aria-hidden="true">↗</span></a></div></div>
+    <div class="att-blog-cta"><div class="att-blog-cta-inner"><div class="att-blog-cta-text"><p class="att-blog-cta-title">Want your website to stay reliable?</p><p class="att-blog-cta-sub">Talk to us about practical maintenance for your business site.</p></div><a href="https://wa.me/917975859061/?text=I%27d%20like%20to%20talk%20about%20website%20maintenance." class="att-blog-cta-btn">Talk to Amortree <span aria-hidden="true">â†—</span></a></div></div>
   </main>
 </template>
 
 <style lang="scss" scoped>
-// ── Page shell ────────────────────────────────────────────────────────────────
+// â”€â”€ Page shell â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 .att-blog-page {
   background: #f8fafc;
   min-height: 100vh;
@@ -62,7 +60,7 @@ onMounted(() => {
   padding-top: 10vh;
   background-color: #06060a;
 }
-// ── Hero strip ────────────────────────────────────────────────────────────────
+// â”€â”€ Hero strip â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 .att-blog-hero {
   position: relative;
   overflow: hidden;
@@ -138,7 +136,7 @@ onMounted(() => {
 
 .att-blog-meta-sep { color: #1e293b; }
 
-// ── Body layout ───────────────────────────────────────────────────────────────
+// â”€â”€ Body layout â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 .att-blog-body {
   max-width: 1200px; margin: 0 auto;
   padding: 5rem 4rem;
@@ -156,7 +154,7 @@ onMounted(() => {
   @media (max-width: 1024px) { grid-template-columns: 1fr; gap: 2.5rem; }
 }
 
-// ── TOC sidebar ───────────────────────────────────────────────────────────────
+// â”€â”€ TOC sidebar â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 .att-blog-toc {
   position: sticky;
   top: calc(var(--header-height, 96px) + 24px);
@@ -193,7 +191,7 @@ onMounted(() => {
   }
 }
 
-// ── Content ────────────────────────────────────────────────────────────────
+// â”€â”€ Content â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 .att-blog-content {
   display: flex; flex-direction: column; gap: 0;
 }
@@ -302,7 +300,7 @@ onMounted(() => {
   margin: 0 0 0.4rem;
 }
 
-// ── Cost/stat breakdown chart card ──────────────────────────────────────────
+// â”€â”€ Cost/stat breakdown chart card â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 .att-chart-card {
   margin: 1.5rem 0 0.5rem;
   padding: 1.5rem 1.75rem 1.25rem;
@@ -318,7 +316,7 @@ onMounted(() => {
   width: 100%; height: auto; display: block;
 }
 
-// ── Info cards (3-up grid) ──────────────────────────────────────────────────
+// â”€â”€ Info cards (3-up grid) â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 .att-info-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -345,7 +343,7 @@ onMounted(() => {
   margin-bottom: 0.7rem;
 }
 
-// ── Process / priority timeline ─────────────────────────────────────────────
+// â”€â”€ Process / priority timeline â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 .att-timeline {
   position: relative;
   display: grid;
@@ -405,7 +403,7 @@ onMounted(() => {
   font-size: 0.82rem; line-height: 1.6; color: #64748b; margin: 0; max-width: none;
 }
 
-// ── CTA strip ─────────────────────────────────────────────────────────────────
+// â”€â”€ CTA strip â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 .att-blog-cta {
   background: #0f172a;
   border-top: 1px solid rgba(255,255,255,0.06);

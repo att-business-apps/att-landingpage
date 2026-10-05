@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -8,7 +8,8 @@
   <link rel="icon" type="image/png" sizes="32x32" href="src/assets/img/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="src/assets/img/favicon-16x16.png">
   <link rel="manifest" href="src/assets/img/site.webmanifest">
-  <title>Website Development & Digital Growth Agency | amortree Tech</title>
+  <link rel="canonical" href="https://amortree.com/" />
+  <title>Amortree Tech | Websites and Digital Marketing That Grow Your Business</title>
 
 
 
@@ -21,7 +22,7 @@
     content="Premium website development, UI/UX design, SEO & digital growth solutions for startups and growing businesses. Build trust, generate leads, and scale with Amortree Tech." />
   <meta name="keywords" content="website development company, custom website development, web design agency, UI UX design services, ecommerce website development, Shopify development, SEO agency, SEO, digital marketing agency, branding services, website maintenance, conversion-focused websites, Lead Generation, LinkedIn Marketing, lead generation websites, startup website development, business website design, Social Media Marketing, web development company India, website design Bengaluru, digital growth partner" />
   <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
-  <meta name="copyright" content="© 2026 Amortree Tech. All Rights Reserved." />
+  <meta name="copyright" content="Â© 2026 Amortree Tech. All Rights Reserved." />
   <meta name="language" content="English" />
   <meta name="revisit-after" content="7 days" />
   <!-- Open Graph / Facebook -->
@@ -30,7 +31,7 @@
   <meta property="og:title" content="Website Development & Digital Growth Agency | Amortree" />
   <meta property="og:description"
     content="Premium website development, UI/UX design, SEO & digital growth solutions for startups and growing businesses. Build trust, generate leads, and scale with Amortree Tech." />
-  <meta property="og:image" content="https://demo.amortree.com/assets/img/og-image.png" />
+  <meta property="og:image" content="https://amortree.com/assets/img/og-image.png" />
   <meta property="og:site_name" content="amortree Tech" />
 
   <!-- Twitter Card -->
@@ -38,7 +39,7 @@
   <meta name="twitter:title" content="Website Development & Digital Growth Agency | Amortree" />
   <meta name="twitter:description"
     content="Premium website development, UI/UX design, SEO & digital growth solutions for startups and growing businesses. Build trust, generate leads, and scale with Amortree Tech." />
-  <meta name="twitter:image" content="https://demo.amortree.com/assets/img/og-image.png" />
+  <meta name="twitter:image" content="https://amortree.com/assets/img/og-image.png" />
 
   <!-- Additional SEO Meta -->
   <meta name="geo.placename" content="Bengaluru, Karnataka, India" />
@@ -49,12 +50,28 @@
   <!-- FB domain verification -->
   <meta name="facebook-domain-verification" content="lnz8klg6ydh5js7tcct6hcm090rsv0" />
 
-  <link href="https://fonts.googleapis.com" rel="preconnect" />
-  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
+    rel="preload"
+    as="style"
+    href="https://fonts.googleapis.com/css2?family=Google+Sans+Flex:opsz,wght@6..144,1..1000&amp;family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&amp;family=Instrument+Serif:ital@0;1&amp;display=swap"
+    onload="this.onload=null;this.rel='stylesheet'" />
+  <link
+    rel="preload"
+    as="style"
+    href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined&amp;display=swap"
+    onload="this.onload=null;this.rel='stylesheet'" />
+  <link
+    rel="preload"
+    as="style"
     href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
-    rel="stylesheet" />
+    onload="this.onload=null;this.rel='stylesheet'" />
+  <noscript>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Google+Sans+Flex:opsz,wght@6..144,1..1000&amp;family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&amp;family=Instrument+Serif:ital@0;1&amp;display=swap" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined&amp;display=swap" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" />
+  </noscript>
 
   <!-- Structured Data (JSON-LD) -->
   <script type="application/ld+json">
@@ -66,7 +83,7 @@
       "alternateName": "Amortree Tech",
       "url": "https://amortree.com",
       "logo": "https://amortree.com/assets/att-logo-light-CmBlsXOv.svg",
-      "image": "https://demo.amortree.com/assets/img/og-image.png",
+      "image": "https://amortree.com/assets/img/og-image.png",
       "description": "Amortree Tech is a premium digital growth agency specializing in website development, UI/UX design, SEO, digital marketing, and scalable digital solutions that help startups and growing businesses build trust, generate leads, and accelerate growth.",
       "email": "hi@amortree.com",
       "telephone": "+91-7975859061",
@@ -345,14 +362,14 @@
      3. openModal calls  (any element with data-track="open-modal")
    
    Storage:
-     • localStorage  → always, no setup needed
-     • Google Sheets → set SHEET_WEBHOOK below (see google-apps-script.gs)
+     â€¢ localStorage  â†’ always, no setup needed
+     â€¢ Google Sheets â†’ set SHEET_WEBHOOK below (see google-apps-script.gs)
    ============================================================ */
 
     (function () {
       "use strict";
 
-      /* ── CONFIG ────────────────────────────────────────────── */
+      /* â”€â”€ CONFIG â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
       const STORAGE_KEY = "amortree_click_events";
       const MAX_EVENTS = 500;          // keep last N events locally
       const DEBUG_PARAM = "debug=analytics"; // ?debug=analytics shows dashboard
@@ -361,9 +378,9 @@
       // Leave empty to skip remote sync (local-only mode).
       const SHEET_WEBHOOK_VALUE = "%VITE_LEADS_WEBHOOK_URL%";
       const SHEET_WEBHOOK = SHEET_WEBHOOK_VALUE.startsWith("%VITE_") ? "" : SHEET_WEBHOOK_VALUE;
-      /* ──────────────────────────────────────────────────────── */
+      /* â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 
-      /* ── HELPERS ───────────────────────────────────────────── */
+      /* â”€â”€ HELPERS â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
       function now() {
         return new Date().toISOString();
       }
@@ -414,7 +431,7 @@
         return { total, byType, byDate, events };
       }
 
-      /* ── CORE TRACK FUNCTION ───────────────────────────────── */
+      /* â”€â”€ CORE TRACK FUNCTION â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
       function track(eventName, meta) {
         const entry = {
           event: eventName,
@@ -440,7 +457,7 @@
             headers: { "Content-Type": "text/plain;charset=utf-8" },
             body: JSON.stringify({ action: "event_append", ...entry })
           }).catch(function () {
-            // silently fail — local copy is the safety net
+            // silently fail - local copy is the safety net
           });
         }
 
@@ -448,7 +465,7 @@
         console.log("[AMT Tracker]", entry);
       }
 
-      /* ── SELECTOR HELPERS ──────────────────────────────────── */
+      /* â”€â”€ SELECTOR HELPERS â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
       function isWhatsApp(el) {
         const href = (el.href || "").toLowerCase();
         return (
@@ -484,7 +501,7 @@
         );
       }
 
-      /* ── EVENT LISTENER ────────────────────────────────────── */
+      /* â”€â”€ EVENT LISTENER â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
       document.addEventListener("click", function (e) {
         // Walk up to find the actual interactive element
         let el = e.target;
@@ -518,9 +535,9 @@
 
           el = el.parentElement;
         }
-      }, true); // capture phase — catches everything
+      }, true); // capture phase - catches everything
 
-      /* ── EXPOSE GLOBAL API ─────────────────────────────────── */
+      /* â”€â”€ EXPOSE GLOBAL API â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
       // Usage in your own code:
       //   window.amtTrack("custom_event", { info: "anything" });
       window.amtTrack = track;
@@ -529,7 +546,7 @@
       //   window.amtStats()
       window.amtStats = getStats;
 
-      /* ── INLINE ADMIN DASHBOARD ────────────────────────────── */
+      /* â”€â”€ INLINE ADMIN DASHBOARD â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
       // Visit  yoursite.com/?debug=analytics  to see the dashboard
       if (location.search.includes(DEBUG_PARAM)) {
         document.addEventListener("DOMContentLoaded", function () {
@@ -581,14 +598,14 @@
                   font-family:'Segoe UI',system-ui,sans-serif;box-shadow:0 25px 60px rgba(0,0,0,0.7)">
         <div style="padding:24px 28px;border-bottom:1px solid #1F2937;display:flex;justify-content:space-between;align-items:center">
           <div>
-            <div style="font-size:18px;font-weight:700;color:#F9FAFB">🌳 Amortree Analytics</div>
-            <div style="font-size:12px;color:#6B7280;margin-top:2px">Local data — ${stats.total} events stored</div>
+            <div style="font-size:18px;font-weight:700;color:#F9FAFB">ðŸŒ³ Amortree Analytics</div>
+            <div style="font-size:12px;color:#6B7280;margin-top:2px">Local data - ${stats.total} events stored</div>
           </div>
           <div style="display:flex;gap:10px">
             <button onclick="var d=JSON.stringify(window.amtStats().events,null,2);var b=new Blob([d],{type:'application/json'});var a=document.createElement('a');a.href=URL.createObjectURL(b);a.download='amortree_events.json';a.click()"
-              style="background:#1F2937;border:1px solid #374151;color:#9CA3AF;padding:6px 14px;border-radius:8px;cursor:pointer;font-size:12px">⬇ Export JSON</button>
+              style="background:#1F2937;border:1px solid #374151;color:#9CA3AF;padding:6px 14px;border-radius:8px;cursor:pointer;font-size:12px">â¬‡ Export JSON</button>
             <button onclick="document.getElementById('amt-dashboard').remove()"
-              style="background:#EF4444;border:none;color:#fff;padding:6px 14px;border-radius:8px;cursor:pointer;font-size:12px">✕ Close</button>
+              style="background:#EF4444;border:none;color:#fff;padding:6px 14px;border-radius:8px;cursor:pointer;font-size:12px">âœ• Close</button>
           </div>
         </div>
         <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:16px;padding:20px 28px">
@@ -629,11 +646,11 @@
           </div>
         </div>
         <div style="padding:16px 28px;border-top:1px solid #1F2937;display:flex;gap:16px;align-items:center;flex-wrap:wrap">
-          <span style="font-size:11px;color:#6B7280">Google Sheets sync: <strong style="color:${SHEET_WEBHOOK ? '#22C55E' : '#EF4444'}">${SHEET_WEBHOOK ? "ENABLED ✓" : "NOT CONFIGURED"}</strong></span>
+          <span style="font-size:11px;color:#6B7280">Google Sheets sync: <strong style="color:${SHEET_WEBHOOK ? '#22C55E' : '#EF4444'}">${SHEET_WEBHOOK ? "ENABLED âœ“" : "NOT CONFIGURED"}</strong></span>
           <span style="font-size:11px;color:#6B7280">Visitor ID: <code style="color:#9CA3AF">${getVisitorId()}</code></span>
           <span style="font-size:11px;color:#6B7280">Session: <code style="color:#9CA3AF">${getSessionId()}</code></span>
           <button onclick="if(confirm('Clear all local events?')){localStorage.removeItem('${STORAGE_KEY}');location.reload()}"
-            style="margin-left:auto;background:transparent;border:1px solid #374151;color:#6B7280;padding:4px 12px;border-radius:6px;cursor:pointer;font-size:11px">🗑 Clear Local Data</button>
+            style="margin-left:auto;background:transparent;border:1px solid #374151;color:#6B7280;padding:4px 12px;border-radius:6px;cursor:pointer;font-size:11px">ðŸ—‘ Clear Local Data</button>
         </div>
       </div>`;
         document.body.appendChild(panel);

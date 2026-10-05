@@ -1,4 +1,4 @@
-<script setup>
+﻿<script setup>
 import { onMounted } from "vue";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -6,18 +6,7 @@ gsap.registerPlugin(ScrollTrigger);
 
 
 onMounted(() => {
-    document.title = "Landing Page vs. Full Website: Which Do You Actually Need? | Amortree";
-
-    const description = document.querySelector('meta[name="description"]');
-
-    if (description) {
-        description.setAttribute(
-            "content",
-            "A landing page and a full website solve different problems. Here's how to tell which one your business actually needs — before you spend on the wrong one."
-        );
-    }
-
-    gsap.from(".att-blog-hero-eyebrow", { autoAlpha: 0, y: 16, duration: 0.6, ease: "power3.out", delay: 0.1 });
+gsap.from(".att-blog-hero-eyebrow", { autoAlpha: 0, y: 16, duration: 0.6, ease: "power3.out", delay: 0.1 });
     gsap.from(".att-blog-title", { autoAlpha: 0, y: 28, duration: 0.75, ease: "power3.out", delay: 0.2 });
     gsap.from(".att-blog-meta", { autoAlpha: 0, y: 14, duration: 0.6, ease: "power2.out", delay: 0.35 });
 
@@ -48,9 +37,9 @@ onMounted(() => {
                 <p class="att-blog-dek">They solve different problems. Picking the wrong one means paying for pages nobody visits, or cramming everything onto one page that can't hold it.</p>
                 <div class="att-blog-meta">
                     <span>Amortree Tech</span>
-                    <span class="att-blog-meta-sep" aria-hidden="true">·</span>
+                    <span class="att-blog-meta-sep" aria-hidden="true">Â·</span>
                     <span>Published <strong>Mar 9, 2026</strong></span>
-                    <span class="att-blog-meta-sep" aria-hidden="true">·</span>
+                    <span class="att-blog-meta-sep" aria-hidden="true">Â·</span>
                     <span>6 min read</span>
                 </div>
             </div>
@@ -78,14 +67,14 @@ onMounted(() => {
 
           <div class="att-blog-intro att-blog-section">
             <p>Once you've settled on roughly <a href="/blog/website-cost-india-2026" class="att-blog-inline-link">what you'll spend</a> and <a href="/blog/how-long-website-takes" class="att-blog-inline-link">how long it'll take</a>, there's one decision that changes both numbers more than almost anything else: are you building a landing page, or a full website?</p>
-            <p>People often use the terms interchangeably, but they're built for different jobs — and picking the wrong one is one of the most common (and expensive) mistakes we see.</p>
+            <p>People often use the terms interchangeably, but they're built for different jobs - and picking the wrong one is one of the most common (and expensive) mistakes we see.</p>
           </div>
 
           <section class="att-blog-section" id="the-real-difference">
             <div class="att-blog-section-num" aria-hidden="true">01</div>
             <h2 class="att-blog-section-title">The Real Difference</h2>
-            <p>A <strong>landing page</strong> is a single page built around one goal — get a call, capture a booking, promote one offer. Everything on it points toward one action.</p>
-            <p>A <strong>full website</strong> is a multi-page structure — home, about, services, portfolio, contact — built to represent a business as a whole, across many different reasons someone might visit.</p>
+            <p>A <strong>landing page</strong> is a single page built around one goal - get a call, capture a booking, promote one offer. Everything on it points toward one action.</p>
+            <p>A <strong>full website</strong> is a multi-page structure - home, about, services, portfolio, contact - built to represent a business as a whole, across many different reasons someone might visit.</p>
             <p>The difference isn't really about page count. It's about whether you're guiding one visitor toward one decision, or giving many different visitors room to explore at their own pace.</p>
           </section>
 
@@ -93,10 +82,10 @@ onMounted(() => {
             <div class="att-blog-section-num" aria-hidden="true">02</div>
             <h2 class="att-blog-section-title">When a Landing Page Wins</h2>
             <ul class="att-blog-list">
-              <li><strong>You're promoting one specific thing</strong> — a product launch, an event, a limited offer, a single service</li>
-              <li><strong>You're running paid ads</strong> — sending ad traffic to a focused page converts far better than sending it to a general homepage where visitors have to hunt for what the ad promised</li>
-              <li><strong>You need something live fast</strong> — a landing page can typically go live in 1–2 weeks, useful for time-sensitive launches</li>
-              <li><strong>You're testing an idea</strong> — before investing in a full site, a landing page lets you validate demand with a smaller upfront cost</li>
+              <li><strong>You're promoting one specific thing</strong> - a product launch, an event, a limited offer, a single service</li>
+              <li><strong>You're running paid ads</strong> - sending ad traffic to a focused page converts far better than sending it to a general homepage where visitors have to hunt for what the ad promised</li>
+              <li><strong>You need something live fast</strong> - a landing page can typically go live in 1â€“2 weeks, useful for time-sensitive launches</li>
+              <li><strong>You're testing an idea</strong> - before investing in a full site, a landing page lets you validate demand with a smaller upfront cost</li>
             </ul>
           </section>
 
@@ -104,10 +93,10 @@ onMounted(() => {
             <div class="att-blog-section-num" aria-hidden="true">03</div>
             <h2 class="att-blog-section-title">When a Full Website Wins</h2>
             <ul class="att-blog-list">
-              <li><strong>You offer multiple services or products</strong> — each deserves its own space to be explained properly, not squeezed under one headline</li>
-              <li><strong>Visitors arrive with different intents</strong> — some want pricing, some want your portfolio, some just want to confirm you're legitimate before calling</li>
-              <li><strong>You rely on organic search (SEO)</strong> — more pages means more opportunities to rank for different search terms your customers actually use</li>
-              <li><strong>Credibility matters more than urgency</strong> — a fuller site with an About page, team info, and case studies builds trust over time rather than pushing for an immediate decision</li>
+              <li><strong>You offer multiple services or products</strong> - each deserves its own space to be explained properly, not squeezed under one headline</li>
+              <li><strong>Visitors arrive with different intents</strong> - some want pricing, some want your portfolio, some just want to confirm you're legitimate before calling</li>
+              <li><strong>You rely on organic search (SEO)</strong> - more pages means more opportunities to rank for different search terms your customers actually use</li>
+              <li><strong>Credibility matters more than urgency</strong> - a fuller site with an About page, team info, and case studies builds trust over time rather than pushing for an immediate decision</li>
             </ul>
           </section>
 
@@ -120,11 +109,11 @@ onMounted(() => {
                   <tr><th>Factor</th><th>Landing page</th><th>Full website</th></tr>
                 </thead>
                 <tbody>
-                  <tr><td>Typical cost</td><td>₹8,000 – ₹25,000</td><td>₹25,000 – ₹80,000+</td></tr>
-                  <tr><td>Typical timeline</td><td>1–2 weeks</td><td>3–6 weeks</td></tr>
+                  <tr><td>Typical cost</td><td>â‚¹8,000 â€“ â‚¹25,000</td><td>â‚¹25,000 â€“ â‚¹80,000+</td></tr>
+                  <tr><td>Typical timeline</td><td>1â€“2 weeks</td><td>3â€“6 weeks</td></tr>
                   <tr><td>Best for</td><td>One offer, one goal, ad traffic</td><td>Multiple services, SEO, credibility</td></tr>
                   <tr><td>Structure</td><td>Single scrolling page</td><td>Multiple linked pages</td></tr>
-                  <tr><td>SEO potential</td><td>Limited — one page to rank</td><td>Higher — many pages targeting different searches</td></tr>
+                  <tr><td>SEO potential</td><td>Limited - one page to rank</td><td>Higher - many pages targeting different searches</td></tr>
                 </tbody>
               </table>
             </div>
@@ -133,15 +122,15 @@ onMounted(() => {
           <section class="att-blog-section" id="common-mistake">
             <div class="att-blog-section-num" aria-hidden="true">05</div>
             <h2 class="att-blog-section-title">The Most Common Mistake</h2>
-            <p>The mistake we see most often isn't choosing the wrong format outright — it's trying to make one page do a full website's job. A single page gets stretched to cover five different services, a team bio, a blog, and a contact form, and the result is a page so long and unfocused that it loses the one advantage a landing page is supposed to have: a clear, single path to action.</p>
+            <p>The mistake we see most often isn't choosing the wrong format outright - it's trying to make one page do a full website's job. A single page gets stretched to cover five different services, a team bio, a blog, and a contact form, and the result is a page so long and unfocused that it loses the one advantage a landing page is supposed to have: a clear, single path to action.</p>
             <p>If you find yourself asking "should I add one more section to my landing page," that's usually the sign you actually need a proper multi-page site, not a longer single page.</p>
           </section>
 
           <section class="att-blog-section" id="can-you-start-small">
             <div class="att-blog-section-num" aria-hidden="true">06</div>
             <h2 class="att-blog-section-title">Can You Start With a Landing Page and Grow Into a Full Site?</h2>
-            <p>Yes, and it's often a smart way to sequence spending — especially if you're validating a new offer or don't yet have the content ready for a full site. A well-structured landing page can later become the homepage of a fuller website, rather than being thrown away.</p>
-            <p>The key is telling your designer upfront that growth is the plan, so the initial build uses a structure and design system that can expand cleanly — instead of one built as a dead end that needs to be redone from scratch later.</p>
+            <p>Yes, and it's often a smart way to sequence spending - especially if you're validating a new offer or don't yet have the content ready for a full site. A well-structured landing page can later become the homepage of a fuller website, rather than being thrown away.</p>
+            <p>The key is telling your designer upfront that growth is the plan, so the initial build uses a structure and design system that can expand cleanly - instead of one built as a dead end that needs to be redone from scratch later.</p>
           </section>
 
           <section class="att-blog-section" id="faq">
@@ -153,12 +142,12 @@ onMounted(() => {
               <p>It can rank for a narrow set of terms tied to its specific offer, but a full website with multiple pages generally has far more opportunities to appear for the range of searches real customers use.</p>
             </div>
             <div class="att-blog-faq-item">
-              <h3 class="att-blog-faq-q">I only offer one service — do I still need a full website?</h3>
+              <h3 class="att-blog-faq-q">I only offer one service - do I still need a full website?</h3>
               <p>Not necessarily. A single-service business is often the clearest case for a landing page, since there's naturally one goal for every visitor. A full site becomes more valuable once you have distinct services, locations, or audiences to speak to separately.</p>
             </div>
             <div class="att-blog-faq-item">
               <h3 class="att-blog-faq-q">Is it cheaper long-term to start with a full website instead of upgrading later?</h3>
-              <p>Not always — if you're not yet sure the offer will work, spending less upfront on a landing page and validating demand first can save money overall, even accounting for a later rebuild.</p>
+              <p>Not always - if you're not yet sure the offer will work, spending less upfront on a landing page and validating demand first can save money overall, even accounting for a later rebuild.</p>
             </div>
           </section>
 
@@ -171,7 +160,7 @@ onMounted(() => {
       <div class="att-blog-cta-inner">
         <div class="att-blog-cta-text">
           <p class="att-blog-cta-title">Not sure which one fits your business?</p>
-          <p class="att-blog-cta-sub">Tell us what you're promoting — we'll tell you honestly which format makes sense.</p>
+          <p class="att-blog-cta-sub">Tell us what you're promoting - we'll tell you honestly which format makes sense.</p>
         </div>
         <a href="https://wa.me/917975859061/?text=I%27d%20like%20to%20get%20your%20recommendation%20on%20which%20format%20would%20be%20best%20for%20my%20business." class="att-blog-cta-btn">
           Get Our Recommendation
@@ -186,7 +175,7 @@ onMounted(() => {
 </template>
 
 <style lang="scss" scoped>
-// ── Page shell ────────────────────────────────────────────────────────────────
+// â”€â”€ Page shell â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 .att-blog-page {
   background: #f8fafc;
   min-height: 100vh;
@@ -196,7 +185,7 @@ onMounted(() => {
   padding-top: 10vh;
   background-color: #06060a;
 }
-// ── Hero strip ────────────────────────────────────────────────────────────────
+// â”€â”€ Hero strip â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 .att-blog-hero {
   position: relative;
   overflow: hidden;
@@ -272,7 +261,7 @@ onMounted(() => {
 
 .att-blog-meta-sep { color: #1e293b; }
 
-// ── Body layout ───────────────────────────────────────────────────────────────
+// â”€â”€ Body layout â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 .att-blog-body {
   max-width: 1200px; margin: 0 auto;
   padding: 5rem 4rem;
@@ -290,7 +279,7 @@ onMounted(() => {
   @media (max-width: 1024px) { grid-template-columns: 1fr; gap: 2.5rem; }
 }
 
-// ── TOC sidebar ───────────────────────────────────────────────────────────────
+// â”€â”€ TOC sidebar â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 .att-blog-toc {
   position: sticky;
   top: calc(var(--header-height, 96px) + 24px);
@@ -327,7 +316,7 @@ onMounted(() => {
   }
 }
 
-// ── Content ───────────────────────────────.att-blog-intro────────────────────────────────────
+// â”€â”€ Content â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€.att-blog-introâ”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 .att-blog-content {
   display: flex; flex-direction: column; gap: 0;
 }
@@ -429,7 +418,7 @@ onMounted(() => {
   margin: 0 0 0.4rem;
 }
 
-// ── Cost breakdown chart card ───────────────────────────────────────────────
+// â”€â”€ Cost breakdown chart card â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 .att-chart-card {
   margin: 1.5rem 0 0.5rem;
   padding: 1.5rem 1.75rem 1.25rem;
@@ -445,7 +434,7 @@ onMounted(() => {
   width: 100%; height: auto; display: block;
 }
 
-// ── Pricing model info cards ────────────────────────────────────────────────
+// â”€â”€ Pricing model info cards â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 .att-info-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -472,7 +461,7 @@ onMounted(() => {
   margin-bottom: 0.7rem;
 }
 
-// ── Build process timeline ──────────────────────────────────────────────────
+// â”€â”€ Build process timeline â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 .att-timeline {
   position: relative;
   display: grid;
@@ -532,7 +521,7 @@ onMounted(() => {
   font-size: 0.82rem; line-height: 1.6; color: #64748b; margin: 0; max-width: none;
 }
 
-// ── CTA strip ─────────────────────────────────────────────────────────────────
+// â”€â”€ CTA strip â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 .att-blog-cta {
   background: #0f172a;
   border-top: 1px solid rgba(255,255,255,0.06);

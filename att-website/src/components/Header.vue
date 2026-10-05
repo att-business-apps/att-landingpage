@@ -2,6 +2,7 @@
 import { computed, onBeforeUnmount, ref } from "vue";
 import { useRoute } from "vue-router";
 import { gsap } from "gsap";
+import SocialIcon from "./SocialIcon.vue";
 
 const route = useRoute();
 
@@ -60,10 +61,10 @@ const growthLinks = [
 ];
 
 const socialLinks = [
-  { name: "LinkedIn", href: "https://in.linkedin.com/company/amortree-tech", icon: "icofont-linkedin" },
-  { name: "Dribbble", href: "https://dribbble.com/amortreetech", icon: "icofont-dribbble" },
-  { name: "Instagram", href: "https://www.instagram.com/amortreetech/", icon: "icofont-instagram" },
-  { name: "Facebook", href: "https://www.facebook.com/amortreetech/", icon: "icofont-facebook" },
+  { name: "LinkedIn", href: "https://in.linkedin.com/company/amortree-tech" },
+  { name: "Dribbble", href: "https://dribbble.com/amortreetech" },
+  { name: "Instagram", href: "https://www.instagram.com/amortreetech/" },
+  { name: "Facebook", href: "https://www.facebook.com/amortreetech/" },
 ];
 
 function playMenuIn() {
@@ -116,6 +117,8 @@ onBeforeUnmount(() => {
                 class="light-version-logo"
                 style="width: 200px; margin: 0 auto"
                 src="../assets/img/att-logo-light.svg"
+                width="546"
+                height="121"
                 alt="amortree Tech logo"
               />
             </a>
@@ -207,7 +210,7 @@ onBeforeUnmount(() => {
             </a>
             <div class="amor-fsmenu-socials">
               <a v-for="s in socialLinks" :key="s.name" :href="s.href" target="_blank" rel="noopener" :aria-label="s.name">
-                <i :class="s.icon" aria-hidden="true"></i>
+                <SocialIcon :name="s.name" />
               </a>
             </div>
           </div>

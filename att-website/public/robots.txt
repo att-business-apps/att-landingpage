@@ -1,8 +1,7 @@
-User-agent: *
+﻿User-agent: *
+Disallow: /crm
 Allow: /
 
-# Sitemap
-Sitemap: https://amortree.com/sitemap.xml
 
 # Disallow admin areas (if any)
 Disallow: /admin/
@@ -35,14 +34,13 @@ Allow: /project/
 # Crawl-delay for respectful crawling
 Crawl-delay: 1
 
-Disallow: /admin/
-Disallow: /private/
-
 # Search engine crawlers (explicit allow, no restrictions)
 User-agent: Googlebot
+Disallow: /crm
 Allow: /
 
 User-agent: Bingbot
+Disallow: /crm
 Allow: /
 
 # AI / Answer Engine crawlers - explicitly allowed for AEO visibility
@@ -50,45 +48,59 @@ Allow: /
 # block these at the edge even when robots.txt allows them - verify in
 # your hosting/CDN bot-management settings too)
 User-agent: GPTBot
+Disallow: /crm
 Allow: /
 
 User-agent: ChatGPT-User
+Disallow: /crm
 Allow: /
 
 User-agent: OAI-SearchBot
+Disallow: /crm
 Allow: /
 
 User-agent: ClaudeBot
+Disallow: /crm
 Allow: /
 
 User-agent: Claude-User
+Disallow: /crm
 Allow: /
 
 User-agent: anthropic-ai
+Disallow: /crm
 Allow: /
 
 User-agent: PerplexityBot
+Disallow: /crm
 Allow: /
 
 User-agent: Perplexity-User
+Disallow: /crm
 Allow: /
 
 User-agent: Google-Extended
+Disallow: /crm
 Allow: /
 
 User-agent: CCBot
+Disallow: /crm
 Allow: /
 
 User-agent: Applebot
+Disallow: /crm
 Allow: /
 
 User-agent: Applebot-Extended
+Disallow: /crm
 Allow: /
 
 User-agent: Bytespider
+Disallow: /crm
 Allow: /
 
 User-agent: meta-externalagent
+Disallow: /crm
 Allow: /
 
 # Sitemap

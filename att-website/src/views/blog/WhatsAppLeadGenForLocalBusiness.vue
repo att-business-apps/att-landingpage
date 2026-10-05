@@ -1,4 +1,4 @@
-<script setup>
+﻿<script setup>
 import { onMounted } from "vue";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -6,18 +6,7 @@ gsap.registerPlugin(ScrollTrigger);
 
 
 onMounted(() => {
-    document.title = "Turning WhatsApp Into Your Best Lead Gen Channel | Amortree";
-
-    const description = document.querySelector('meta[name="description"]');
-
-    if (description) {
-        description.setAttribute(
-            "content",
-            "For local and service businesses in India, a WhatsApp-first contact flow often outperforms a traditional contact form. Here's how to set it up right."
-        );
-    }
-
-    gsap.from(".att-blog-hero-eyebrow", { autoAlpha: 0, y: 16, duration: 0.6, ease: "power3.out", delay: 0.1 });
+gsap.from(".att-blog-hero-eyebrow", { autoAlpha: 0, y: 16, duration: 0.6, ease: "power3.out", delay: 0.1 });
     gsap.from(".att-blog-title", { autoAlpha: 0, y: 28, duration: 0.75, ease: "power3.out", delay: 0.2 });
     gsap.from(".att-blog-meta", { autoAlpha: 0, y: 14, duration: 0.6, ease: "power2.out", delay: 0.35 });
 
@@ -61,12 +50,12 @@ onMounted(() => {
                     Growth
                 </div>
                 <h1 class="att-blog-title">Turning <span class="att-blog-title-accent">WhatsApp</span> Into Your Best Lead Gen Channel</h1>
-                <p class="att-blog-dek">For local and service businesses in India, a WhatsApp-first contact flow often outperforms a traditional contact form. Here's how to set it up right — from your business profile to the messages that actually convert.</p>
+                <p class="att-blog-dek">For local and service businesses in India, a WhatsApp-first contact flow often outperforms a traditional contact form. Here's how to set it up right - from your business profile to the messages that actually convert.</p>
                 <div class="att-blog-meta">
                     <span>Amortree Tech</span>
-                    <span class="att-blog-meta-sep" aria-hidden="true">·</span>
+                    <span class="att-blog-meta-sep" aria-hidden="true">Â·</span>
                     <span>Published <strong>Feb 22, 2026</strong></span>
-                    <span class="att-blog-meta-sep" aria-hidden="true">·</span>
+                    <span class="att-blog-meta-sep" aria-hidden="true">Â·</span>
                     <span>7 min read</span>
                 </div>
             </div>
@@ -96,8 +85,8 @@ onMounted(() => {
         <article class="att-blog-content">
 
           <div class="att-blog-intro att-blog-section">
-            <p>Most small business websites still lead with a contact form — name, email, message, submit, wait. For a shopper in India who already has WhatsApp open on their phone, that's friction they don't need to accept. A single tap into a chat feels faster, more personal, and far less likely to get abandoned halfway through.</p>
-            <p>This guide walks through how to turn WhatsApp from an afterthought into the primary way people reach you — and how to structure that flow so it actually produces leads instead of just messages.</p>
+            <p>Most small business websites still lead with a contact form - name, email, message, submit, wait. For a shopper in India who already has WhatsApp open on their phone, that's friction they don't need to accept. A single tap into a chat feels faster, more personal, and far less likely to get abandoned halfway through.</p>
+            <p>This guide walks through how to turn WhatsApp from an afterthought into the primary way people reach you - and how to structure that flow so it actually produces leads instead of just messages.</p>
           </div>
 
           <section class="att-blog-section" id="why-whatsapp">
@@ -105,18 +94,18 @@ onMounted(() => {
             <h2 class="att-blog-section-title">Why WhatsApp Wins for Local Businesses</h2>
             <p>WhatsApp is already the default messaging app for the vast majority of smartphone users in India. That single fact changes the math on lead generation:</p>
             <ul class="att-blog-list">
-              <li><strong>Zero new habit required</strong> — people don't need to learn a new tool or check a new inbox; they're already in the app multiple times a day.</li>
-              <li><strong>Lower commitment to start a conversation</strong> — typing "Hi, is this available?" feels lighter than filling out a form with four required fields.</li>
-              <li><strong>Two-way and real-time</strong> — you can ask a clarifying question back immediately instead of waiting for an email reply the next day.</li>
-              <li><strong>Trust signals built in</strong> — a business profile with a photo, hours, and a catalog reads as more legitimate than an anonymous form submission.</li>
+              <li><strong>Zero new habit required</strong> - people don't need to learn a new tool or check a new inbox; they're already in the app multiple times a day.</li>
+              <li><strong>Lower commitment to start a conversation</strong> - typing "Hi, is this available?" feels lighter than filling out a form with four required fields.</li>
+              <li><strong>Two-way and real-time</strong> - you can ask a clarifying question back immediately instead of waiting for an email reply the next day.</li>
+              <li><strong>Trust signals built in</strong> - a business profile with a photo, hours, and a catalog reads as more legitimate than an anonymous form submission.</li>
             </ul>
-            <p>For local and service businesses in particular — clinics, salons, contractors, boutique studios — the sale often depends on a quick back-and-forth. WhatsApp is built for exactly that.</p>
+            <p>For local and service businesses in particular - clinics, salons, contractors, boutique studios - the sale often depends on a quick back-and-forth. WhatsApp is built for exactly that.</p>
           </section>
 
           <section class="att-blog-section" id="whatsapp-vs-forms">
             <div class="att-blog-section-num" aria-hidden="true">02</div>
             <h2 class="att-blog-section-title">WhatsApp vs. a Traditional Contact Form</h2>
-            <p>Neither channel is universally better — but for most local and service businesses, the trade-offs favor WhatsApp:</p>
+            <p>Neither channel is universally better - but for most local and service businesses, the trade-offs favor WhatsApp:</p>
             <div class="att-blog-table-wrap">
               <table class="att-blog-table">
                 <thead>
@@ -130,8 +119,8 @@ onMounted(() => {
                   </tr>
                   <tr>
                     <td>Abandonment risk</td>
-                    <td>High — multiple fields, no immediate feedback</td>
-                    <td>Low — one tap opens a familiar chat window</td>
+                    <td>High - multiple fields, no immediate feedback</td>
+                    <td>Low - one tap opens a familiar chat window</td>
                   </tr>
                   <tr>
                     <td>Follow-up questions</td>
@@ -151,7 +140,7 @@ onMounted(() => {
                 </tbody>
               </table>
             </div>
-            <p>The strongest setups don't choose one or the other — they lead with a WhatsApp click-to-chat button and keep a short form as a backup for people who prefer it.</p>
+            <p>The strongest setups don't choose one or the other - they lead with a WhatsApp click-to-chat button and keep a short form as a backup for people who prefer it.</p>
           </section>
 
           <section class="att-blog-section" id="building-blocks">
@@ -165,7 +154,7 @@ onMounted(() => {
               </div>
               <div class="att-info-card">
                 <div class="att-info-card-label">Qualifying question</div>
-                <p>One short question that tells you what the person needs — service type, location, or timeline — so the human reply that follows is useful, not generic.</p>
+                <p>One short question that tells you what the person needs - service type, location, or timeline - so the human reply that follows is useful, not generic.</p>
               </div>
               <div class="att-info-card">
                 <div class="att-info-card-label">Human handoff</div>
@@ -179,10 +168,10 @@ onMounted(() => {
             <h2 class="att-blog-section-title">Setting Up Your WhatsApp Business Profile</h2>
             <p>Before you put a chat link anywhere on your site, get the profile itself in order:</p>
             <ul class="att-blog-list">
-              <li><strong>Switch to WhatsApp Business</strong> — it's free, and unlocks a proper profile, catalog, and automated messages that the personal app doesn't support.</li>
-              <li><strong>Fill in business hours, address, and category</strong> — this is often the first thing a prospective customer checks before messaging.</li>
-              <li><strong>Add a catalog</strong> — even a simple one with 5–10 items or services gives people something to browse before they ask a question.</li>
-              <li><strong>Use a recognizable display photo</strong> — your logo or storefront, not a placeholder — since this is what builds trust before the first reply.</li>
+              <li><strong>Switch to WhatsApp Business</strong> - it's free, and unlocks a proper profile, catalog, and automated messages that the personal app doesn't support.</li>
+              <li><strong>Fill in business hours, address, and category</strong> - this is often the first thing a prospective customer checks before messaging.</li>
+              <li><strong>Add a catalog</strong> - even a simple one with 5â€“10 items or services gives people something to browse before they ask a question.</li>
+              <li><strong>Use a recognizable display photo</strong> - your logo or storefront, not a placeholder - since this is what builds trust before the first reply.</li>
             </ul>
           </section>
 
@@ -199,7 +188,7 @@ onMounted(() => {
                 <div class="att-timeline-body">
                   <div class="att-timeline-title">Click-to-chat link</div>
                   <div class="att-timeline-days">On every page</div>
-                  <p>A visible WhatsApp button in the header, hero, and footer — not buried in a "Contact" page three clicks deep.</p>
+                  <p>A visible WhatsApp button in the header, hero, and footer - not buried in a "Contact" page three clicks deep.</p>
                 </div>
               </div>
 
@@ -235,7 +224,7 @@ onMounted(() => {
           <section class="att-blog-section" id="response-time">
             <div class="att-blog-section-num" aria-hidden="true">06</div>
             <h2 class="att-blog-section-title">Why Response Time Is Everything</h2>
-            <p>The single biggest factor in whether a WhatsApp lead converts isn't the design of your profile — it's how quickly a real person replies:</p>
+            <p>The single biggest factor in whether a WhatsApp lead converts isn't the design of your profile - it's how quickly a real person replies:</p>
 
             <figure class="att-chart-card">
               <figcaption class="att-chart-title">Typical lead-to-conversation conversion by response time</figcaption>
@@ -259,16 +248,16 @@ onMounted(() => {
 
                   <!-- Labels -->
                   <text x="30" y="188" font-size="11" font-weight="700" fill="#475569">Under 5 min</text>
-                  <text x="190" y="188" font-size="11" font-weight="700" fill="#475569">5–60 min</text>
-                  <text x="350" y="188" font-size="11" font-weight="700" fill="#475569">1–24 hours</text>
+                  <text x="190" y="188" font-size="11" font-weight="700" fill="#475569">5â€“60 min</text>
+                  <text x="350" y="188" font-size="11" font-weight="700" fill="#475569">1â€“24 hours</text>
                   <text x="510" y="188" font-size="11" font-weight="700" fill="#475569">Over 24 hours</text>
                 </g>
-                <text x="0" y="212" font-size="12" fill="#64748b">Directional figures based on typical service-business response patterns —</text>
+                <text x="0" y="212" font-size="12" fill="#64748b">Directional figures based on typical service-business response patterns -</text>
                 <text x="0" y="228" font-size="12" fill="#64748b">the trend holds regardless of exact numbers: speed beats polish.</text>
               </svg>
             </figure>
 
-            <p>This is why automation matters less for "sounding smart" and more for buying you time — a fast acknowledgment keeps the lead warm until a person can genuinely engage.</p>
+            <p>This is why automation matters less for "sounding smart" and more for buying you time - a fast acknowledgment keeps the lead warm until a person can genuinely engage.</p>
           </section>
 
           <section class="att-blog-section" id="templates">
@@ -276,10 +265,10 @@ onMounted(() => {
             <h2 class="att-blog-section-title">Message Templates That Convert</h2>
             <p>A few well-written templates remove the guesswork for whoever's replying, without making the conversation feel robotic:</p>
             <ul class="att-blog-list">
-              <li><strong>Greeting message</strong> — confirms receipt, sets a response-time expectation, and asks one qualifying question in the same message.</li>
-              <li><strong>Away message</strong> — used outside business hours, states when you'll reply and offers an alternative like a callback request.</li>
-              <li><strong>Quick replies for common questions</strong> — pricing ranges, service areas, and availability, saved so staff aren't retyping the same answer all day.</li>
-              <li><strong>Booking confirmation</strong> — a short, clear message once a slot or order is confirmed, reducing no-shows and follow-up questions.</li>
+              <li><strong>Greeting message</strong> - confirms receipt, sets a response-time expectation, and asks one qualifying question in the same message.</li>
+              <li><strong>Away message</strong> - used outside business hours, states when you'll reply and offers an alternative like a callback request.</li>
+              <li><strong>Quick replies for common questions</strong> - pricing ranges, service areas, and availability, saved so staff aren't retyping the same answer all day.</li>
+              <li><strong>Booking confirmation</strong> - a short, clear message once a slot or order is confirmed, reducing no-shows and follow-up questions.</li>
             </ul>
           </section>
 
@@ -289,7 +278,7 @@ onMounted(() => {
             <ul class="att-blog-list">
               <li>Using a personal WhatsApp number with no business profile, hours, or catalog</li>
               <li>Letting messages sit unanswered for hours during business hours</li>
-              <li>Over-automating — a fully bot-driven conversation with no human handoff frustrates people who want a real answer</li>
+              <li>Over-automating - a fully bot-driven conversation with no human handoff frustrates people who want a real answer</li>
               <li>Burying the WhatsApp link instead of placing it where the contact form used to live</li>
               <li>Not tracking which pages or campaigns actually drive chats, making it impossible to improve the flow over time</li>
             </ul>
@@ -301,7 +290,7 @@ onMounted(() => {
             <div class="att-info-grid">
               <div class="att-info-card">
                 <div class="att-info-card-label">WhatsApp Business App</div>
-                <p>Free and sufficient for most single-location businesses — covers catalog, quick replies, and basic automated greetings.</p>
+                <p>Free and sufficient for most single-location businesses - covers catalog, quick replies, and basic automated greetings.</p>
               </div>
               <div class="att-info-card">
                 <div class="att-info-card-label">WhatsApp Business API tools</div>
@@ -320,7 +309,7 @@ onMounted(() => {
 
             <div class="att-blog-faq-item">
               <h3 class="att-blog-faq-q">Should I remove my contact form entirely?</h3>
-              <p>No — keep a short form as a backup for people who prefer email or need to share detailed information. Just don't make it the primary path when WhatsApp converts better for most quick enquiries.</p>
+              <p>No - keep a short form as a backup for people who prefer email or need to share detailed information. Just don't make it the primary path when WhatsApp converts better for most quick enquiries.</p>
             </div>
             <div class="att-blog-faq-item">
               <h3 class="att-blog-faq-q">Do I need the paid WhatsApp Business API?</h3>
@@ -328,7 +317,7 @@ onMounted(() => {
             </div>
             <div class="att-blog-faq-item">
               <h3 class="att-blog-faq-q">What if I can't respond quickly during the day?</h3>
-              <p>An automated greeting with a clear response-time expectation ("we typically reply within 30 minutes") holds the lead's attention far better than silence — but it's a stopgap, not a substitute for a fast human reply.</p>
+              <p>An automated greeting with a clear response-time expectation ("we typically reply within 30 minutes") holds the lead's attention far better than silence - but it's a stopgap, not a substitute for a fast human reply.</p>
             </div>
           </section>
 
@@ -341,7 +330,7 @@ onMounted(() => {
       <div class="att-blog-cta-inner">
         <div class="att-blog-cta-text">
           <p class="att-blog-cta-title">Want a WhatsApp-first site built right?</p>
-          <p class="att-blog-cta-sub">Get a free audit of your current contact flow — no vague ranges, no pressure.</p>
+          <p class="att-blog-cta-sub">Get a free audit of your current contact flow - no vague ranges, no pressure.</p>
         </div>
         <a href="https://wa.me/917975859061/?text=I%27d%20like%20to%20claim%20my%20free%20audit." class="att-blog-cta-btn">
           Claim Your Free Audit
@@ -356,7 +345,7 @@ onMounted(() => {
 </template>
 
 <style lang="scss" scoped>
-// ── Page shell ────────────────────────────────────────────────────────────────
+// â”€â”€ Page shell â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 .att-blog-page {
   background: #f8fafc;
   min-height: 100vh;
@@ -366,7 +355,7 @@ onMounted(() => {
   padding-top: 10vh;
   background-color: #06060a;
 }
-// ── Hero strip ────────────────────────────────────────────────────────────────
+// â”€â”€ Hero strip â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 .att-blog-hero {
   position: relative;
   overflow: hidden;
@@ -442,7 +431,7 @@ onMounted(() => {
 
 .att-blog-meta-sep { color: #1e293b; }
 
-// ── Body layout ───────────────────────────────────────────────────────────────
+// â”€â”€ Body layout â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 .att-blog-body {
   max-width: 1200px; margin: 0 auto;
   padding: 5rem 4rem;
@@ -460,7 +449,7 @@ onMounted(() => {
   @media (max-width: 1024px) { grid-template-columns: 1fr; gap: 2.5rem; }
 }
 
-// ── TOC sidebar ───────────────────────────────────────────────────────────────
+// â”€â”€ TOC sidebar â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 .att-blog-toc {
   position: sticky;
   top: calc(var(--header-height, 96px) + 24px);
@@ -497,7 +486,7 @@ onMounted(() => {
   }
 }
 
-// ── Content ──────────────────────────────────────────────────────────────────
+// â”€â”€ Content â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 .att-blog-content {
   display: flex; flex-direction: column; gap: 0;
 }
@@ -599,7 +588,7 @@ onMounted(() => {
   margin: 0 0 0.4rem;
 }
 
-// ── Response-time chart card ────────────────────────────────────────────────
+// â”€â”€ Response-time chart card â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 .att-chart-card {
   margin: 1.5rem 0 0.5rem;
   padding: 1.5rem 1.75rem 1.25rem;
@@ -615,7 +604,7 @@ onMounted(() => {
   width: 100%; height: auto; display: block;
 }
 
-// ── Building-block / tools info cards ───────────────────────────────────────
+// â”€â”€ Building-block / tools info cards â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 .att-info-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -642,7 +631,7 @@ onMounted(() => {
   margin-bottom: 0.7rem;
 }
 
-// ── Contact-flow timeline ───────────────────────────────────────────────────
+// â”€â”€ Contact-flow timeline â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 .att-timeline {
   position: relative;
   display: grid;
@@ -702,7 +691,7 @@ onMounted(() => {
   font-size: 0.82rem; line-height: 1.6; color: #64748b; margin: 0; max-width: none;
 }
 
-// ── CTA strip ─────────────────────────────────────────────────────────────────
+// â”€â”€ CTA strip â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 .att-blog-cta {
   background: #0f172a;
   border-top: 1px solid rgba(255,255,255,0.06);

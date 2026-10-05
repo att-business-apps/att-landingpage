@@ -1,4 +1,4 @@
-<script setup>
+﻿<script setup>
 import { computed, onBeforeUnmount, onMounted, ref } from "vue";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -87,7 +87,6 @@ const hiringSteps = [
 
 const marqueeText = computed(() => Array.from({ length: 6 }, () => "Outgrow Ordinary").join(" / "));
 
-const previousTitle = document.title;
 
 function addStoryHovers() {
   gsap.utils.toArray(".careers-story-card").forEach((card) => {
@@ -107,7 +106,6 @@ function addStoryHovers() {
 }
 
 onMounted(() => {
-  document.title = "Careers | Amortree Tech";
 
   gsapContext = gsap.context(() => {
     // Manifesto
@@ -200,7 +198,6 @@ onMounted(() => {
 
 onBeforeUnmount(() => {
   gsapContext?.revert();
-  document.title = previousTitle;
 });
 </script>
 
@@ -256,7 +253,7 @@ onBeforeUnmount(() => {
     </div>
 
     <!-- ============================================================
-         MANIFESTO + PILLARS — Dark section
+         MANIFESTO + PILLARS - Dark section
          ============================================================ -->
     <section class="careers-manifesto">
       <div class="careers-manifesto-inner">
@@ -282,7 +279,7 @@ onBeforeUnmount(() => {
     </section>
 
     <!-- ============================================================
-         STORIES — Premium bento feature grid
+         STORIES - Premium bento feature grid
          ============================================================ -->
     <section class="careers-stories">
       <div class="careers-stories-inner">
@@ -330,7 +327,7 @@ onBeforeUnmount(() => {
     </section>
 
     <!-- ============================================================
-         HIRING PROCESS — Light ghost-numbered grid
+         HIRING PROCESS - Light ghost-numbered grid
          ============================================================ -->
     <section class="careers-hiring">
       <div class="careers-hiring-inner">
@@ -381,7 +378,7 @@ onBeforeUnmount(() => {
 </template>
 
 <style lang="scss" scoped>
-// ─── Shared section label ───────────────────────────────────────────────────
+// â”€â”€â”€ Shared section label â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 .att-section-label {
   font-size: 0.65rem;
   letter-spacing: 0.28em;
@@ -407,7 +404,7 @@ onBeforeUnmount(() => {
   }
 }
 
-// ─── Marquee ──────────────────────────────────────────────────────────────────
+// â”€â”€â”€ Marquee â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 .careers-marquee {
   width: 100%;
   overflow: hidden;
@@ -438,7 +435,7 @@ onBeforeUnmount(() => {
   .careers-marquee span { animation: none; }
 }
 
-// ─── Manifesto + Pillars (dark) ─────────────────────────────────────────────
+// â”€â”€â”€ Manifesto + Pillars (dark) â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 .careers-manifesto {
   padding: 8rem 4rem;
   background: linear-gradient(135deg, #0f0f0f 0%, #000000 100%);
@@ -534,7 +531,7 @@ onBeforeUnmount(() => {
   color: rgba(255, 255, 255, 0.55);
 }
 
-// ─── Stories (premium bento feature grid) ────────────────────────────────────
+// â”€â”€â”€ Stories (premium bento feature grid) â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 .careers-stories {
   padding: 7rem 4rem;
   background: #ffffff;
@@ -647,7 +644,7 @@ onBeforeUnmount(() => {
   inset: 0;
   z-index: -1;
   // Strong, near-uniform scrim (no light "window" in the middle) so every
-  // zone of the card — not just the top/bottom — stays legible regardless
+  // zone of the card - not just the top/bottom - stays legible regardless
   // of how busy the underlying screenshot is.
   background: linear-gradient(
     195deg,
@@ -769,7 +766,7 @@ onBeforeUnmount(() => {
   }
 }
 
-// ─── Hiring grid (light ghost-numbered) ──────────────────────────────────────
+// â”€â”€â”€ Hiring grid (light ghost-numbered) â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 .careers-hiring {
   padding: 8rem 4rem;
   background: #f8fafc;
@@ -864,7 +861,7 @@ onBeforeUnmount(() => {
   line-height: 1.72;
 }
 
-// ─── Closing CTA ─────────────────────────────────────────────────────────────
+// â”€â”€â”€ Closing CTA â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 .careers-cta {
   padding: 7rem 4rem;
   text-align: center;

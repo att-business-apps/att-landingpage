@@ -1,22 +1,11 @@
-<script setup>
+﻿<script setup>
 import { onMounted } from "vue";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 
 onMounted(() => {
-    document.title = "Freelancer vs. Design Studio vs. Agency: Who Should Build Your Website? | Amortree";
-
-    const description = document.querySelector('meta[name="description"]');
-
-    if (description) {
-        description.setAttribute(
-            "content",
-            "A practical guide to choosing between a freelancer, a boutique design studio, or a large agency for your business website — matched to budget, timeline, and what you actually need."
-        );
-    }
-
-  gsap.from(".att-blog-hero-eyebrow", { autoAlpha: 0, y: 16, duration: 0.6, ease: "power3.out", delay: 0.1 });
+gsap.from(".att-blog-hero-eyebrow", { autoAlpha: 0, y: 16, duration: 0.6, ease: "power3.out", delay: 0.1 });
   gsap.from(".att-blog-title", { autoAlpha: 0, y: 28, duration: 0.75, ease: "power3.out", delay: 0.2 });
   gsap.from(".att-blog-meta", { autoAlpha: 0, y: 14, duration: 0.6, ease: "power2.out", delay: 0.35 });
 
@@ -44,12 +33,12 @@ onMounted(() => {
                     Web Design &amp; Strategy
                 </div>
                 <h1 class="att-blog-title">Freelancer, Design Studio, or <span class="att-blog-title-accent">Agency?</span></h1>
-                <p class="att-blog-dek">Three very different ways to get a website built — and the honest trade-offs of each, so you don't find out the hard way three months in.</p>
+                <p class="att-blog-dek">Three very different ways to get a website built - and the honest trade-offs of each, so you don't find out the hard way three months in.</p>
                 <div class="att-blog-meta">
                     <span>Amortree Tech</span>
-                    <span class="att-blog-meta-sep" aria-hidden="true">·</span>
+                    <span class="att-blog-meta-sep" aria-hidden="true">Â·</span>
                     <span>Published <strong>Jul 2, 2026</strong></span>
-                    <span class="att-blog-meta-sep" aria-hidden="true">·</span>
+                    <span class="att-blog-meta-sep" aria-hidden="true">Â·</span>
                     <span>6 min read</span>
                 </div>
             </div>
@@ -76,17 +65,17 @@ onMounted(() => {
         <article class="att-blog-content">
 
           <div class="att-blog-intro att-blog-section">
-            <p>Once you've figured out roughly <a href="/blog/how-much-does-a-website-cost-in-india" class="att-blog-inline-link">what a website should cost</a>, the next question is who should actually build it. This decision matters more than most business owners expect — it affects not just the price, but the timeline, the quality, and how much of a headache the process becomes.</p>
-            <p>Here's an honest look at all three options, with no option positioned as universally "best" — because the right choice genuinely depends on what you need.</p>
+            <p>Once you've figured out roughly <a href="/blog/how-much-does-a-website-cost-in-india" class="att-blog-inline-link">what a website should cost</a>, the next question is who should actually build it. This decision matters more than most business owners expect - it affects not just the price, but the timeline, the quality, and how much of a headache the process becomes.</p>
+            <p>Here's an honest look at all three options, with no option positioned as universally "best" - because the right choice genuinely depends on what you need.</p>
           </div>
 
           <section class="att-blog-section" id="three-options">
             <div class="att-blog-section-num" aria-hidden="true">01</div>
             <h2 class="att-blog-section-title">The Three Options, In Short</h2>
             <ul class="att-blog-list">
-              <li><strong>Freelancer</strong> — one person, wearing every hat. Fast to start, but limited in scope and availability.</li>
-              <li><strong>Boutique design studio</strong> — a small, focused team that handles design, development, and strategy together.</li>
-              <li><strong>Large agency</strong> — a full-service organization with dedicated departments, built for complex, high-budget projects.</li>
+              <li><strong>Freelancer</strong> - one person, wearing every hat. Fast to start, but limited in scope and availability.</li>
+              <li><strong>Boutique design studio</strong> - a small, focused team that handles design, development, and strategy together.</li>
+              <li><strong>Large agency</strong> - a full-service organization with dedicated departments, built for complex, high-budget projects.</li>
             </ul>
             <p>None of these is a scaled-down or scaled-up version of the others. They're structurally different ways of working, and that difference matters more than the price tag alone.</p>
           </section>
@@ -94,23 +83,23 @@ onMounted(() => {
           <section class="att-blog-section" id="freelancer">
             <div class="att-blog-section-num" aria-hidden="true">02</div>
             <h2 class="att-blog-section-title">Hiring a Freelancer</h2>
-            <p>A freelancer is usually the fastest and cheapest way to get something built. You're working directly with the person doing the work, with no layers in between — which can mean faster decisions and lower overhead.</p>
-            <p>The trade-off is capacity and range. Most freelancers are strong in one or two areas — design <em>or</em> development, rarely both at a high level — and a single freelancer can only take on so much at once. If they get busy, sick, or move on to another project, your timeline moves with them. There's also rarely a strategic layer: a freelancer will usually build what you ask for, but won't always push back on whether what you're asking for is the right approach.</p>
+            <p>A freelancer is usually the fastest and cheapest way to get something built. You're working directly with the person doing the work, with no layers in between - which can mean faster decisions and lower overhead.</p>
+            <p>The trade-off is capacity and range. Most freelancers are strong in one or two areas - design <em>or</em> development, rarely both at a high level - and a single freelancer can only take on so much at once. If they get busy, sick, or move on to another project, your timeline moves with them. There's also rarely a strategic layer: a freelancer will usually build what you ask for, but won't always push back on whether what you're asking for is the right approach.</p>
             <p><strong>Best for:</strong> simple, well-defined projects where you already know exactly what you want, and timeline flexibility isn't a major concern.</p>
           </section>
 
           <section class="att-blog-section" id="studio">
             <div class="att-blog-section-num" aria-hidden="true">03</div>
             <h2 class="att-blog-section-title">Hiring a Design Studio</h2>
-            <p>A boutique studio sits in the middle — small enough to stay personal and fast, but structured enough to bring design, development, and strategy together under one roof. You're not relying on a single person's bandwidth, and there's usually someone thinking about whether the website will actually convert visitors, not just look good.</p>
-            <p>This is typically where you'll find the most attention paid to the details that separate an average site from one that performs — animation, information hierarchy, mobile experience, and conversion-focused layout. The cost sits above a freelancer but meaningfully below a large agency, because the overhead is lower and the team is lean by design.</p>
+            <p>A boutique studio sits in the middle - small enough to stay personal and fast, but structured enough to bring design, development, and strategy together under one roof. You're not relying on a single person's bandwidth, and there's usually someone thinking about whether the website will actually convert visitors, not just look good.</p>
+            <p>This is typically where you'll find the most attention paid to the details that separate an average site from one that performs - animation, information hierarchy, mobile experience, and conversion-focused layout. The cost sits above a freelancer but meaningfully below a large agency, because the overhead is lower and the team is lean by design.</p>
             <p><strong>Best for:</strong> businesses that want a site that looks distinctive and converts well, without agency-level pricing or process.</p>
           </section>
 
           <section class="att-blog-section" id="agency">
             <div class="att-blog-section-num" aria-hidden="true">04</div>
             <h2 class="att-blog-section-title">Hiring an Agency</h2>
-            <p>Large agencies bring dedicated specialists for every part of the process — strategists, designers, developers, project managers, sometimes even legal and compliance support. This is the right structure for genuinely complex projects: multi-stakeholder approvals, enterprise integrations, or work that spans well beyond a single website.</p>
+            <p>Large agencies bring dedicated specialists for every part of the process - strategists, designers, developers, project managers, sometimes even legal and compliance support. This is the right structure for genuinely complex projects: multi-stakeholder approvals, enterprise integrations, or work that spans well beyond a single website.</p>
             <p>The trade-off is cost and speed. More people in the process means more coordination, more meetings, and longer timelines. For a straightforward business website, this level of process often works against you rather than for you.</p>
             <p><strong>Best for:</strong> large organizations with complex requirements, multiple decision-makers, or needs that extend beyond web design alone.</p>
           </section>
@@ -124,9 +113,9 @@ onMounted(() => {
                   <tr><th>Factor</th><th>Freelancer</th><th>Design studio</th><th>Agency</th></tr>
                 </thead>
                 <tbody>
-                  <tr><td>Typical timeline</td><td>1–3 weeks</td><td>2–6 weeks</td><td>6–16+ weeks</td></tr>
+                  <tr><td>Typical timeline</td><td>1â€“3 weeks</td><td>2â€“6 weeks</td><td>6â€“16+ weeks</td></tr>
                   <tr><td>Strategic input</td><td>Minimal</td><td>Built in</td><td>Extensive</td></tr>
-                  <tr><td>Reliability if things go wrong</td><td>Low — single point of failure</td><td>Moderate to high</td><td>High</td></tr>
+                  <tr><td>Reliability if things go wrong</td><td>Low - single point of failure</td><td>Moderate to high</td><td>High</td></tr>
                   <tr><td>Best project size</td><td>Small, simple</td><td>Small to mid-sized</td><td>Large, complex</td></tr>
                   <tr><td>Cost efficiency for SMBs</td><td>High</td><td>High</td><td>Low</td></tr>
                 </tbody>
@@ -143,7 +132,7 @@ onMounted(() => {
               <li><strong>What happens if it goes wrong?</strong> A single freelancer becoming unavailable can stall a project entirely. A studio or agency has more built-in redundancy.</li>
               <li><strong>Does this need to convert visitors into customers, or just exist?</strong> If the site is a critical part of how you get leads, the strategic thinking a studio or agency brings tends to pay for itself.</li>
             </ul>
-            <p>Most small and growing businesses in India land in the studio range — enough structure to avoid the risks of a single freelancer, without the overhead and timeline of a large agency.</p>
+            <p>Most small and growing businesses in India land in the studio range - enough structure to avoid the risks of a single freelancer, without the overhead and timeline of a large agency.</p>
           </section>
 
           <section class="att-blog-section" id="faq">
@@ -152,11 +141,11 @@ onMounted(() => {
 
             <div class="att-blog-faq-item">
               <h3 class="att-blog-faq-q">Is it cheaper to hire a freelancer than a design studio?</h3>
-              <p>Usually upfront, yes. But freelancers rarely offer strategy, ongoing support, or a backup if they become unavailable mid-project — costs that tend to surface later rather than disappear.</p>
+              <p>Usually upfront, yes. But freelancers rarely offer strategy, ongoing support, or a backup if they become unavailable mid-project - costs that tend to surface later rather than disappear.</p>
             </div>
             <div class="att-blog-faq-item">
               <h3 class="att-blog-faq-q">Can a freelancer and a studio work on the same project?</h3>
-              <p>Sometimes — for example, a freelancer writing copy while a studio handles design and build. But mixing multiple freelancers across design, development, and strategy usually creates coordination gaps that a single studio avoids.</p>
+              <p>Sometimes - for example, a freelancer writing copy while a studio handles design and build. But mixing multiple freelancers across design, development, and strategy usually creates coordination gaps that a single studio avoids.</p>
             </div>
             <div class="att-blog-faq-item">
               <h3 class="att-blog-faq-q">When does it make sense to hire a large agency instead of a studio?</h3>
@@ -173,7 +162,7 @@ onMounted(() => {
       <div class="att-blog-cta-inner">
         <div class="att-blog-cta-text">
           <p class="att-blog-cta-title">Not sure which route fits your project?</p>
-          <p class="att-blog-cta-sub">Tell us what you're building — we'll give you a straight answer, even if it's not us.</p>
+          <p class="att-blog-cta-sub">Tell us what you're building - we'll give you a straight answer, even if it's not us.</p>
         </div>
         <a href="https://wa.me/917975859061/?text=I%27d%20like%20to%20talk%20to%20you%20about%20my%20project." class="att-blog-cta-btn">
           Talk to Us
@@ -188,7 +177,7 @@ onMounted(() => {
 </template>
 
 <style lang="scss" scoped>
-// ── Page shell ────────────────────────────────────────────────────────────────
+// â”€â”€ Page shell â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 .att-blog-page {
   background: #f8fafc;
   min-height: 100vh;
@@ -199,7 +188,7 @@ onMounted(() => {
   padding-top: 10vh;
   background-color: #06060a;
 }
-// ── Hero strip ────────────────────────────────────────────────────────────────
+// â”€â”€ Hero strip â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 .att-blog-hero {
   position: relative;
   overflow: hidden;
@@ -275,7 +264,7 @@ onMounted(() => {
 
 .att-blog-meta-sep { color: #1e293b; }
 
-// ── Body layout ───────────────────────────────────────────────────────────────
+// â”€â”€ Body layout â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 .att-blog-body {
   max-width: 1200px; margin: 0 auto;
   padding: 5rem 4rem;
@@ -293,7 +282,7 @@ onMounted(() => {
   @media (max-width: 1024px) { grid-template-columns: 1fr; gap: 2.5rem; }
 }
 
-// ── TOC sidebar ───────────────────────────────────────────────────────────────
+// â”€â”€ TOC sidebar â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 .att-blog-toc {
   position: sticky;
   top: calc(var(--header-height, 96px) + 24px);
@@ -330,7 +319,7 @@ onMounted(() => {
   }
 }
 
-// ── Content ───────────────────────────────────────────────────────────────────
+// â”€â”€ Content â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 .att-blog-content {
   display: flex; flex-direction: column; gap: 0;
 }
@@ -435,7 +424,7 @@ onMounted(() => {
   margin: 0 0 0.4rem;
 }
 
-// ── CTA strip ─────────────────────────────────────────────────────────────────
+// â”€â”€ CTA strip â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 .att-blog-cta {
   background: #0f172a;
   border-top: 1px solid rgba(255,255,255,0.06);

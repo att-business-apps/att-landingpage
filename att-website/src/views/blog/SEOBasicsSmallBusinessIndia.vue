@@ -1,4 +1,4 @@
-<script setup>
+﻿<script setup>
 import { onMounted } from "vue";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -6,18 +6,7 @@ gsap.registerPlugin(ScrollTrigger);
 
 
 onMounted(() => {
-    document.title = "SEO Basics Every Small Business in India Should Get Right | Amortree";
-
-    const description = document.querySelector('meta[name="description"]');
-
-    if (description) {
-        description.setAttribute(
-            "content",
-            "You don't need a huge budget to rank locally. These are the fundamentals that move the needle before you spend a rupee on ads."
-        );
-    }
-
-    gsap.from(".att-blog-hero-eyebrow", { autoAlpha: 0, y: 16, duration: 0.6, ease: "power3.out", delay: 0.1 });
+gsap.from(".att-blog-hero-eyebrow", { autoAlpha: 0, y: 16, duration: 0.6, ease: "power3.out", delay: 0.1 });
     gsap.from(".att-blog-title", { autoAlpha: 0, y: 28, duration: 0.75, ease: "power3.out", delay: 0.2 });
     gsap.from(".att-blog-meta", { autoAlpha: 0, y: 14, duration: 0.6, ease: "power2.out", delay: 0.35 });
 
@@ -64,9 +53,9 @@ onMounted(() => {
                 <p class="att-blog-dek">You don't need a huge budget to rank locally. These are the fundamentals that move the needle before you spend a rupee on ads.</p>
                 <div class="att-blog-meta">
                     <span>Amortree Tech</span>
-                    <span class="att-blog-meta-sep" aria-hidden="true">·</span>
+                    <span class="att-blog-meta-sep" aria-hidden="true">Â·</span>
                     <span>Published <strong>Apr 28, 2026</strong></span>
-                    <span class="att-blog-meta-sep" aria-hidden="true">·</span>
+                    <span class="att-blog-meta-sep" aria-hidden="true">Â·</span>
                     <span>8 min read</span>
                 </div>
             </div>
@@ -97,14 +86,14 @@ onMounted(() => {
         <article class="att-blog-content">
 
           <div class="att-blog-intro att-blog-section">
-            <p>SEO gets treated like a mysterious, expensive discipline reserved for big companies — but for a small business trying to show up when someone nearby searches "salon near me" or "best plumber in [city]," the fundamentals are neither expensive nor mysterious.</p>
+            <p>SEO gets treated like a mysterious, expensive discipline reserved for big companies - but for a small business trying to show up when someone nearby searches "salon near me" or "best plumber in [city]," the fundamentals are neither expensive nor mysterious.</p>
             <p>Most small businesses in India lose local search visibility not because of some advanced technical gap, but because a handful of basics were never set up properly. This guide covers exactly those basics, in the order they actually matter.</p>
           </div>
 
           <section class="att-blog-section" id="why-seo">
             <div class="att-blog-section-num" aria-hidden="true">01</div>
             <h2 class="att-blog-section-title">Why Local SEO Matters More Than General SEO</h2>
-            <p>For most small businesses — clinics, salons, contractors, restaurants, local service providers — the people who matter most are searching with location intent, whether or not they type the city name. Ranking for a broad, high-competition keyword nationally is a much harder and often pointless fight compared to owning your immediate area.</p>
+            <p>For most small businesses - clinics, salons, contractors, restaurants, local service providers - the people who matter most are searching with location intent, whether or not they type the city name. Ranking for a broad, high-competition keyword nationally is a much harder and often pointless fight compared to owning your immediate area.</p>
             <p>Local SEO is also one of the few marketing channels where a well-optimized profile can outrank a competitor with a far bigger budget, simply because Google prioritizes relevance and proximity over ad spend for these results.</p>
           </section>
 
@@ -119,21 +108,21 @@ onMounted(() => {
                 <g font-family="inherit">
                   <!-- GBP 30% -->
                   <rect class="att-chart-segment" x="0" y="10" width="192" height="34" rx="6" fill="#facc15"/>
-                  <text x="10" y="32" font-size="12" font-weight="700" fill="#0f172a">Google Business · 30%</text>
+                  <text x="10" y="32" font-size="12" font-weight="700" fill="#0f172a">Google Business Â· 30%</text>
 
                   <!-- Reviews 25% -->
                   <rect class="att-chart-segment" x="196" y="10" width="160" height="34" rx="6" fill="#0f172a"/>
-                  <text x="206" y="32" font-size="12" font-weight="700" fill="#f8fafc">Reviews · 25%</text>
+                  <text x="206" y="32" font-size="12" font-weight="700" fill="#f8fafc">Reviews Â· 25%</text>
 
                   <!-- On-page 25% -->
                   <rect class="att-chart-segment" x="360" y="10" width="160" height="34" rx="6" fill="#94a3b8"/>
-                  <text x="370" y="32" font-size="11.5" font-weight="700" fill="#0f172a">On-page · 25%</text>
+                  <text x="370" y="32" font-size="11.5" font-weight="700" fill="#0f172a">On-page Â· 25%</text>
 
                   <!-- Citations 20% -->
                   <rect class="att-chart-segment" x="524" y="10" width="116" height="34" rx="6" fill="#e2e8f0"/>
-                  <text x="534" y="32" font-size="11" font-weight="700" fill="#0f172a">Citations · 20%</text>
+                  <text x="534" y="32" font-size="11" font-weight="700" fill="#0f172a">Citations Â· 20%</text>
                 </g>
-                <text x="0" y="80" font-size="12" fill="#64748b">This is a general guideline, not a fixed algorithm — Google weighs these signals</text>
+                <text x="0" y="80" font-size="12" fill="#64748b">This is a general guideline, not a fixed algorithm - Google weighs these signals</text>
                 <text x="0" y="98" font-size="12" fill="#64748b">differently by industry and location, but the relative order rarely flips.</text>
                 <text x="0" y="130" font-size="11.5" font-weight="700" fill="#0f172a">Why this matters:</text>
                 <text x="0" y="150" font-size="12" fill="#475569">If your Google Business Profile is incomplete or your reviews are thin,</text>
@@ -147,10 +136,10 @@ onMounted(() => {
             <h2 class="att-blog-section-title">Google Business Profile: Your Highest-Leverage Asset</h2>
             <p>If you do nothing else from this guide, do this. A complete, active Google Business Profile is the single highest-leverage local SEO asset a small business has:</p>
             <ul class="att-blog-list">
-              <li><strong>Claim and verify your listing</strong> — an unclaimed or unverified profile barely competes, no matter how good your website is.</li>
-              <li><strong>Fill in every field</strong> — category, service area, hours, phone number, and a description using the terms customers actually search for.</li>
-              <li><strong>Add photos regularly</strong> — listings with recent photos consistently get more clicks and calls than ones with a single old storefront shot.</li>
-              <li><strong>Use posts and Q&amp;A</strong> — Google Business Profile supports short updates and a public Q&amp;A section; both are lightweight, free ranking signals.</li>
+              <li><strong>Claim and verify your listing</strong> - an unclaimed or unverified profile barely competes, no matter how good your website is.</li>
+              <li><strong>Fill in every field</strong> - category, service area, hours, phone number, and a description using the terms customers actually search for.</li>
+              <li><strong>Add photos regularly</strong> - listings with recent photos consistently get more clicks and calls than ones with a single old storefront shot.</li>
+              <li><strong>Use posts and Q&amp;A</strong> - Google Business Profile supports short updates and a public Q&amp;A section; both are lightweight, free ranking signals.</li>
             </ul>
           </section>
 
@@ -158,10 +147,10 @@ onMounted(() => {
             <div class="att-blog-section-num" aria-hidden="true">04</div>
             <h2 class="att-blog-section-title">On-Page Basics That Are Easy to Get Wrong</h2>
             <ul class="att-blog-list">
-              <li><strong>Title tags and meta descriptions</strong> — every page needs a unique, descriptive title; "Home" or "Untitled" is a wasted opportunity on every single page.</li>
-              <li><strong>One clear H1 per page</strong> — stating what the page is about in plain language, not just your business name.</li>
-              <li><strong>City and service names in your actual copy</strong> — not stuffed unnaturally, but present in a natural sentence at least once per relevant page.</li>
-              <li><strong>Image alt text</strong> — describes what's in the photo, which also helps with accessibility, not just search engines.</li>
+              <li><strong>Title tags and meta descriptions</strong> - every page needs a unique, descriptive title; "Home" or "Untitled" is a wasted opportunity on every single page.</li>
+              <li><strong>One clear H1 per page</strong> - stating what the page is about in plain language, not just your business name.</li>
+              <li><strong>City and service names in your actual copy</strong> - not stuffed unnaturally, but present in a natural sentence at least once per relevant page.</li>
+              <li><strong>Image alt text</strong> - describes what's in the photo, which also helps with accessibility, not just search engines.</li>
             </ul>
           </section>
 
@@ -170,9 +159,9 @@ onMounted(() => {
             <h2 class="att-blog-section-title">Local Keyword Research Without the Guesswork</h2>
             <p>You don't need paid keyword tools to get this right. Start with what customers actually say:</p>
             <ul class="att-blog-list">
-              <li><strong>Type your service into Google</strong> and note the autocomplete suggestions — these are real, common phrasings.</li>
+              <li><strong>Type your service into Google</strong> and note the autocomplete suggestions - these are real, common phrasings.</li>
               <li><strong>Check "People also ask"</strong> on the results page for related questions worth answering on your site.</li>
-              <li><strong>Listen to how customers describe what you do</strong> on calls or in messages — their words are often different from the industry terms you'd default to.</li>
+              <li><strong>Listen to how customers describe what you do</strong> on calls or in messages - their words are often different from the industry terms you'd default to.</li>
               <li><strong>Include neighborhood-level terms</strong> where relevant, not just the city name, if you serve a specific area within a larger city.</li>
             </ul>
           </section>
@@ -180,25 +169,25 @@ onMounted(() => {
           <section class="att-blog-section" id="speed">
             <div class="att-blog-section-num" aria-hidden="true">06</div>
             <h2 class="att-blog-section-title">Site Speed &amp; Mobile Experience</h2>
-            <p>Most local searches happen on a phone, often on a mobile connection that isn't always fast. A slow, non-responsive site loses visitors before they ever see your offer — and Google factors this into rankings directly.</p>
+            <p>Most local searches happen on a phone, often on a mobile connection that isn't always fast. A slow, non-responsive site loses visitors before they ever see your offer - and Google factors this into rankings directly.</p>
             <ul class="att-blog-list">
-              <li><strong>Compress images</strong> before uploading — this is usually the single biggest speed win on a small business site.</li>
+              <li><strong>Compress images</strong> before uploading - this is usually the single biggest speed win on a small business site.</li>
               <li><strong>Avoid heavy, unnecessary plugins or scripts</strong> that slow down page load for marginal visual benefit.</li>
-              <li><strong>Test on an actual phone</strong>, not just a desktop browser resized smaller — the experience is genuinely different.</li>
+              <li><strong>Test on an actual phone</strong>, not just a desktop browser resized smaller - the experience is genuinely different.</li>
             </ul>
           </section>
 
           <section class="att-blog-section" id="content">
             <div class="att-blog-section-num" aria-hidden="true">07</div>
             <h2 class="att-blog-section-title">Content That Actually Ranks</h2>
-            <p>You don't need a large blog to benefit from content — you need a small number of pages that genuinely answer what people are searching for. A dedicated page per core service, written in plain language with real details (pricing ranges, process, service area) tends to outperform a single generic "Services" page that tries to cover everything at once.</p>
+            <p>You don't need a large blog to benefit from content - you need a small number of pages that genuinely answer what people are searching for. A dedicated page per core service, written in plain language with real details (pricing ranges, process, service area) tends to outperform a single generic "Services" page that tries to cover everything at once.</p>
           </section>
 
           <section class="att-blog-section" id="reviews">
             <div class="att-blog-section-num" aria-hidden="true">08</div>
             <h2 class="att-blog-section-title">Reviews &amp; Local Citations</h2>
-            <p>Reviews aren't just a trust signal for customers — they're a ranking signal for Google. A steady trickle of recent, genuine reviews consistently outperforms a large batch collected once and never followed up on.</p>
-            <p>Citations — your business name, address, and phone number listed consistently across directories like Justdial, Sulekha, or industry-specific listings — reinforce that your business is real and where you say it is. Consistency matters more than volume: the same details everywhere beats slightly different formatting across ten different sites.</p>
+            <p>Reviews aren't just a trust signal for customers - they're a ranking signal for Google. A steady trickle of recent, genuine reviews consistently outperforms a large batch collected once and never followed up on.</p>
+            <p>Citations - your business name, address, and phone number listed consistently across directories like Justdial, Sulekha, or industry-specific listings - reinforce that your business is real and where you say it is. Consistency matters more than volume: the same details everywhere beats slightly different formatting across ten different sites.</p>
           </section>
 
           <section class="att-blog-section" id="timeline">
@@ -222,7 +211,7 @@ onMounted(() => {
                 <div class="att-timeline-dot">2</div>
                 <div class="att-timeline-body">
                   <div class="att-timeline-title">Early movement</div>
-                  <div class="att-timeline-days">Month 2–3</div>
+                  <div class="att-timeline-days">Month 2â€“3</div>
                   <p>Small ranking improvements for specific, less competitive local searches start to appear.</p>
                 </div>
               </div>
@@ -231,7 +220,7 @@ onMounted(() => {
                 <div class="att-timeline-dot">3</div>
                 <div class="att-timeline-body">
                   <div class="att-timeline-title">Steady growth</div>
-                  <div class="att-timeline-days">Month 4–6</div>
+                  <div class="att-timeline-days">Month 4â€“6</div>
                   <p>More consistent visibility across relevant searches as reviews and content accumulate.</p>
                 </div>
               </div>
@@ -254,7 +243,7 @@ onMounted(() => {
               <li>Leaving your Google Business Profile unclaimed or half-filled</li>
               <li>Using inconsistent business name, address, or phone number across directories</li>
               <li>Stuffing city and keyword names unnaturally instead of writing for humans first</li>
-              <li>Ignoring reviews — not asking for them, and not responding to the ones you get</li>
+              <li>Ignoring reviews - not asking for them, and not responding to the ones you get</li>
               <li>Chasing a national ranking when the customer base is entirely local</li>
             </ul>
           </section>
@@ -273,7 +262,7 @@ onMounted(() => {
             </div>
             <div class="att-blog-faq-item">
               <h3 class="att-blog-faq-q">Should I run ads while working on SEO?</h3>
-              <p>They're not mutually exclusive — ads can drive traffic while SEO builds up in the background. Just don't expect ads to substitute for the fundamentals; a weak Google Business Profile undermines both.</p>
+              <p>They're not mutually exclusive - ads can drive traffic while SEO builds up in the background. Just don't expect ads to substitute for the fundamentals; a weak Google Business Profile undermines both.</p>
             </div>
           </section>
 
@@ -286,7 +275,7 @@ onMounted(() => {
       <div class="att-blog-cta-inner">
         <div class="att-blog-cta-text">
           <p class="att-blog-cta-title">Not sure where your local SEO stands?</p>
-          <p class="att-blog-cta-sub">Get a free audit of your Google Business Profile and site fundamentals — no vague ranges, no pressure.</p>
+          <p class="att-blog-cta-sub">Get a free audit of your Google Business Profile and site fundamentals - no vague ranges, no pressure.</p>
         </div>
         <a href="https://wa.me/917975859061/?text=I%27d%20like%20to%20claim%20my%20free%20audit." class="att-blog-cta-btn">
           Claim Your Free Audit
@@ -301,7 +290,7 @@ onMounted(() => {
 </template>
 
 <style lang="scss" scoped>
-// ── Page shell ────────────────────────────────────────────────────────────────
+// â”€â”€ Page shell â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 .att-blog-page {
   background: #f8fafc;
   min-height: 100vh;
@@ -311,7 +300,7 @@ onMounted(() => {
   padding-top: 10vh;
   background-color: #06060a;
 }
-// ── Hero strip ────────────────────────────────────────────────────────────────
+// â”€â”€ Hero strip â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 .att-blog-hero {
   position: relative;
   overflow: hidden;
@@ -387,7 +376,7 @@ onMounted(() => {
 
 .att-blog-meta-sep { color: #1e293b; }
 
-// ── Body layout ───────────────────────────────────────────────────────────────
+// â”€â”€ Body layout â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 .att-blog-body {
   max-width: 1200px; margin: 0 auto;
   padding: 5rem 4rem;
@@ -405,7 +394,7 @@ onMounted(() => {
   @media (max-width: 1024px) { grid-template-columns: 1fr; gap: 2.5rem; }
 }
 
-// ── TOC sidebar ───────────────────────────────────────────────────────────────
+// â”€â”€ TOC sidebar â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 .att-blog-toc {
   position: sticky;
   top: calc(var(--header-height, 96px) + 24px);
@@ -442,7 +431,7 @@ onMounted(() => {
   }
 }
 
-// ── Content ──────────────────────────────────────────────────────────────────
+// â”€â”€ Content â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 .att-blog-content {
   display: flex; flex-direction: column; gap: 0;
 }
@@ -544,7 +533,7 @@ onMounted(() => {
   margin: 0 0 0.4rem;
 }
 
-// ── Ranking-factors chart card ──────────────────────────────────────────────
+// â”€â”€ Ranking-factors chart card â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 .att-chart-card {
   margin: 1.5rem 0 0.5rem;
   padding: 1.5rem 1.75rem 1.25rem;
@@ -560,7 +549,7 @@ onMounted(() => {
   width: 100%; height: auto; display: block;
 }
 
-// ── Info cards (kept for structural consistency across blog pages) ─────────
+// â”€â”€ Info cards (kept for structural consistency across blog pages) â”€â”€â”€â”€â”€â”€â”€â”€â”€
 .att-info-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -587,7 +576,7 @@ onMounted(() => {
   margin-bottom: 0.7rem;
 }
 
-// ── Results timeline ─────────────────────────────────────────────────────────
+// â”€â”€ Results timeline â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 .att-timeline {
   position: relative;
   display: grid;
@@ -647,7 +636,7 @@ onMounted(() => {
   font-size: 0.82rem; line-height: 1.6; color: #64748b; margin: 0; max-width: none;
 }
 
-// ── CTA strip ─────────────────────────────────────────────────────────────────
+// â”€â”€ CTA strip â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 .att-blog-cta {
   background: #0f172a;
   border-top: 1px solid rgba(255,255,255,0.06);

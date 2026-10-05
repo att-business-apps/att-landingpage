@@ -1,4 +1,4 @@
-<script setup>
+﻿<script setup>
 import { onMounted } from "vue";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -6,18 +6,7 @@ gsap.registerPlugin(ScrollTrigger);
 
 
 onMounted(() => {
-    document.title = "How Long Should a Website Actually Take to Build? | Amortree";
-
-    const description = document.querySelector('meta[name="description"]');
-
-    if (description) {
-        description.setAttribute(
-            "content",
-            "Real timelines for landing pages, multi-page sites, and custom builds — what determines how long it takes, what slows projects down, and how to read a timeline quote."
-        );
-    }
-
-    gsap.from(".att-blog-hero-eyebrow", { autoAlpha: 0, y: 16, duration: 0.6, ease: "power3.out", delay: 0.1 });
+gsap.from(".att-blog-hero-eyebrow", { autoAlpha: 0, y: 16, duration: 0.6, ease: "power3.out", delay: 0.1 });
     gsap.from(".att-blog-title", { autoAlpha: 0, y: 28, duration: 0.75, ease: "power3.out", delay: 0.2 });
     gsap.from(".att-blog-meta", { autoAlpha: 0, y: 14, duration: 0.6, ease: "power2.out", delay: 0.35 });
 
@@ -61,12 +50,12 @@ onMounted(() => {
                     Web Design &amp; Strategy
                 </div>
                 <h1 class="att-blog-title">How Long Should a Website <span class="att-blog-title-accent">Actually</span> Take?</h1>
-                <p class="att-blog-dek">Real timelines for landing pages, multi-page sites, and custom builds — what determines the timeline, what slows it down, and how to read a quote that promises the impossible.</p>
+                <p class="att-blog-dek">Real timelines for landing pages, multi-page sites, and custom builds - what determines the timeline, what slows it down, and how to read a quote that promises the impossible.</p>
                 <div class="att-blog-meta">
                     <span>Amortree Tech</span>
-                    <span class="att-blog-meta-sep" aria-hidden="true">·</span>
+                    <span class="att-blog-meta-sep" aria-hidden="true">Â·</span>
                     <span>Published <strong>Jan 24, 2026</strong></span>
-                    <span class="att-blog-meta-sep" aria-hidden="true">·</span>
+                    <span class="att-blog-meta-sep" aria-hidden="true">Â·</span>
                     <span>7 min read</span>
                 </div>
             </div>
@@ -94,25 +83,25 @@ onMounted(() => {
         <article class="att-blog-content">
 
           <div class="att-blog-intro att-blog-section">
-            <p>"How long will it take?" is usually the second question business owners ask, right after <a href="/blog/how-much-does-a-website-cost-in-india" class="att-blog-inline-link">how much it costs</a>. And like cost, the honest answer is "it depends" — but the factors it depends on are specific and predictable, not mysterious.</p>
+            <p>"How long will it take?" is usually the second question business owners ask, right after <a href="/blog/how-much-does-a-website-cost-in-india" class="att-blog-inline-link">how much it costs</a>. And like cost, the honest answer is "it depends" - but the factors it depends on are specific and predictable, not mysterious.</p>
             <p>This guide gives you real timeline ranges, what actually drives them, and how to tell a realistic quote from one that's either padded or dangerously optimistic.</p>
           </div>
 
           <section class="att-blog-section" id="why-timelines-vary">
             <div class="att-blog-section-num" aria-hidden="true">01</div>
             <h2 class="att-blog-section-title">Why Timelines Vary So Much</h2>
-            <p>Ask five people how long a website takes and you'll get five different answers — because "website" covers everything from a single-page brochure to a fully custom platform with integrations. The gap between a 1-week project and a 16-week project usually isn't about one team being faster than another. It's about scope, and how ready the content is before work even starts.</p>
+            <p>Ask five people how long a website takes and you'll get five different answers - because "website" covers everything from a single-page brochure to a fully custom platform with integrations. The gap between a 1-week project and a 16-week project usually isn't about one team being faster than another. It's about scope, and how ready the content is before work even starts.</p>
           </section>
 
           <section class="att-blog-section" id="what-determines-it">
             <div class="att-blog-section-num" aria-hidden="true">02</div>
             <h2 class="att-blog-section-title">What Actually Determines Timeline</h2>
             <ul class="att-blog-list">
-              <li><strong>Number of pages and depth</strong> — a single landing page and a 12-page multi-section site aren't the same order of magnitude, even at similar design quality.</li>
-              <li><strong>Content readiness</strong> — this is the single biggest variable, and the one most within your control. If copy, photos, and brand assets are ready on day one, weeks get saved. If they need to be written or sourced mid-project, the timeline stretches to match.</li>
-              <li><strong>Custom animation and interactivity</strong> — the same features that make a site feel premium (see <a href="/blog/how-much-does-a-website-cost-in-india" class="att-blog-inline-link">our pricing guide</a>) also add build time.</li>
-              <li><strong>Number of revision rounds</strong> — each round of feedback and changes adds days, especially if feedback arrives in scattered batches instead of one consolidated pass.</li>
-              <li><strong>Integrations</strong> — booking systems, payment gateways, or custom forms that connect to other tools typically add testing time beyond the visible design work.</li>
+              <li><strong>Number of pages and depth</strong> - a single landing page and a 12-page multi-section site aren't the same order of magnitude, even at similar design quality.</li>
+              <li><strong>Content readiness</strong> - this is the single biggest variable, and the one most within your control. If copy, photos, and brand assets are ready on day one, weeks get saved. If they need to be written or sourced mid-project, the timeline stretches to match.</li>
+              <li><strong>Custom animation and interactivity</strong> - the same features that make a site feel premium (see <a href="/blog/how-much-does-a-website-cost-in-india" class="att-blog-inline-link">our pricing guide</a>) also add build time.</li>
+              <li><strong>Number of revision rounds</strong> - each round of feedback and changes adds days, especially if feedback arrives in scattered batches instead of one consolidated pass.</li>
+              <li><strong>Integrations</strong> - booking systems, payment gateways, or custom forms that connect to other tools typically add testing time beyond the visible design work.</li>
             </ul>
           </section>
 
@@ -127,18 +116,18 @@ onMounted(() => {
                 <g font-family="inherit">
                   <!-- Landing page 1-2wks -->
                   <rect class="att-chart-segment" x="0" y="10" width="110" height="34" rx="6" fill="#e2e8f0"/>
-                  <text x="10" y="32" font-size="12" font-weight="700" fill="#0f172a">1–2 wks · Landing page</text>
+                  <text x="10" y="32" font-size="12" font-weight="700" fill="#0f172a">1â€“2 wks Â· Landing page</text>
 
                   <!-- Multi-page 3-6wks -->
                   <rect class="att-chart-segment" x="0" y="56" width="290" height="34" rx="6" fill="#facc15"/>
-                  <text x="10" y="78" font-size="12" font-weight="700" fill="#0f172a">3–6 wks · Multi-page site</text>
+                  <text x="10" y="78" font-size="12" font-weight="700" fill="#0f172a">3â€“6 wks Â· Multi-page site</text>
 
                   <!-- Custom 8-16wks -->
                   <rect class="att-chart-segment" x="0" y="102" width="560" height="34" rx="6" fill="#0f172a"/>
-                  <text x="10" y="124" font-size="12" font-weight="700" fill="#f8fafc">8–16 wks · Complex custom build</text>
+                  <text x="10" y="124" font-size="12" font-weight="700" fill="#f8fafc">8â€“16 wks Â· Complex custom build</text>
                 </g>
-                <text x="0" y="160" font-size="12" fill="#64748b">Ranges assume content is ready at kickoff — missing copy or photos</text>
-                <text x="0" y="178" font-size="12" fill="#64748b">typically adds 1–3 weeks regardless of project type.</text>
+                <text x="0" y="160" font-size="12" fill="#64748b">Ranges assume content is ready at kickoff - missing copy or photos</text>
+                <text x="0" y="178" font-size="12" fill="#64748b">typically adds 1â€“3 weeks regardless of project type.</text>
               </svg>
             </figure>
           </section>
@@ -146,7 +135,7 @@ onMounted(() => {
           <section class="att-blog-section" id="week-by-week">
             <div class="att-blog-section-num" aria-hidden="true">04</div>
             <h2 class="att-blog-section-title">Week-by-Week: A Typical Multi-Page Build</h2>
-            <p>To make "3–6 weeks" more concrete, here's what a mid-sized project usually looks like stage by stage:</p>
+            <p>To make "3â€“6 weeks" more concrete, here's what a mid-sized project usually looks like stage by stage:</p>
 
             <div class="att-timeline">
               <div class="att-timeline-track" aria-hidden="true"></div>
@@ -164,7 +153,7 @@ onMounted(() => {
                 <div class="att-timeline-dot">2</div>
                 <div class="att-timeline-body">
                   <div class="att-timeline-title">Design</div>
-                  <div class="att-timeline-days">Weeks 1–2</div>
+                  <div class="att-timeline-days">Weeks 1â€“2</div>
                   <p>Wireframes and visual design, usually with one consolidated feedback round before moving to development.</p>
                 </div>
               </div>
@@ -173,8 +162,8 @@ onMounted(() => {
                 <div class="att-timeline-dot">3</div>
                 <div class="att-timeline-body">
                   <div class="att-timeline-title">Development</div>
-                  <div class="att-timeline-days">Weeks 2–4</div>
-                  <p>Building the approved design into a working, responsive site — animations, forms, and any integrations included.</p>
+                  <div class="att-timeline-days">Weeks 2â€“4</div>
+                  <p>Building the approved design into a working, responsive site - animations, forms, and any integrations included.</p>
                 </div>
               </div>
 
@@ -182,7 +171,7 @@ onMounted(() => {
                 <div class="att-timeline-dot">4</div>
                 <div class="att-timeline-body">
                   <div class="att-timeline-title">QA &amp; launch</div>
-                  <div class="att-timeline-days">Weeks 5–6</div>
+                  <div class="att-timeline-days">Weeks 5â€“6</div>
                   <p>Cross-browser and mobile testing, speed checks, and final review before the site goes live.</p>
                 </div>
               </div>
@@ -192,18 +181,18 @@ onMounted(() => {
           <section class="att-blog-section" id="what-slows-it-down">
             <div class="att-blog-section-num" aria-hidden="true">05</div>
             <h2 class="att-blog-section-title">What Slows It Down</h2>
-            <p>In our experience, delays almost never come from the design or development work itself — they come from the gaps around it:</p>
+            <p>In our experience, delays almost never come from the design or development work itself - they come from the gaps around it:</p>
             <ul class="att-blog-list">
-              <li><strong>Content arriving late or in pieces</strong> — copy and images trickling in over weeks instead of arriving as a complete set at the start</li>
-              <li><strong>Scattered feedback</strong> — comments arriving across five separate messages over two weeks instead of one consolidated review</li>
-              <li><strong>Scope creep</strong> — new pages or features added mid-project without adjusting the timeline to match</li>
-              <li><strong>Slow approval chains</strong> — if multiple stakeholders need to sign off and aren't aligned, each round of review can add days on its own</li>
+              <li><strong>Content arriving late or in pieces</strong> - copy and images trickling in over weeks instead of arriving as a complete set at the start</li>
+              <li><strong>Scattered feedback</strong> - comments arriving across five separate messages over two weeks instead of one consolidated review</li>
+              <li><strong>Scope creep</strong> - new pages or features added mid-project without adjusting the timeline to match</li>
+              <li><strong>Slow approval chains</strong> - if multiple stakeholders need to sign off and aren't aligned, each round of review can add days on its own</li>
             </ul>
           </section>
 
           <section class="att-blog-section" id="speed-it-up">
             <div class="att-blog-section-num" aria-hidden="true">06</div>
-            <h2 class="att-blog-section-title">How to Speed It Up — Your Part</h2>
+            <h2 class="att-blog-section-title">How to Speed It Up - Your Part</h2>
             <div class="att-info-grid">
               <div class="att-info-card">
                 <div class="att-info-card-label">Prepare content early</div>
@@ -225,10 +214,10 @@ onMounted(() => {
             <h2 class="att-blog-section-title">Reading a Timeline Quote</h2>
             <p>Two red flags worth watching for, in opposite directions:</p>
             <ul class="att-blog-list">
-              <li><strong>Suspiciously fast</strong> — a "custom" multi-page site promised in 3–4 days is almost always a template with your branding swapped in, not genuinely custom work.</li>
-              <li><strong>Vague and open-ended</strong> — "it depends, we'll see" with no milestone structure at all makes it hard to know if a project is on track or quietly stalled.</li>
+              <li><strong>Suspiciously fast</strong> - a "custom" multi-page site promised in 3â€“4 days is almost always a template with your branding swapped in, not genuinely custom work.</li>
+              <li><strong>Vague and open-ended</strong> - "it depends, we'll see" with no milestone structure at all makes it hard to know if a project is on track or quietly stalled.</li>
             </ul>
-            <p>A trustworthy quote gives you a range tied to specific milestones — discovery, design approval, development, launch — not just a single end date pulled from thin air.</p>
+            <p>A trustworthy quote gives you a range tied to specific milestones - discovery, design approval, development, launch - not just a single end date pulled from thin air.</p>
           </section>
 
           <section class="att-blog-section" id="faq">
@@ -237,15 +226,15 @@ onMounted(() => {
 
             <div class="att-blog-faq-item">
               <h3 class="att-blog-faq-q">Can a website be built faster if I pay more?</h3>
-              <p>To an extent — a dedicated team working exclusively on your project can move faster than one juggling several clients. But content readiness and feedback speed still set the floor; no amount of budget skips those steps entirely.</p>
+              <p>To an extent - a dedicated team working exclusively on your project can move faster than one juggling several clients. But content readiness and feedback speed still set the floor; no amount of budget skips those steps entirely.</p>
             </div>
             <div class="att-blog-faq-item">
               <h3 class="att-blog-faq-q">Why do some agencies quote much longer timelines than others?</h3>
-              <p>Larger agencies often have more approval layers and coordination overhead, which was covered in <a href="/blog/freelancer-vs-design-studio-vs-agency" class="att-blog-inline-link">our comparison of freelancers, studios, and agencies</a>. A longer timeline isn't automatically a red flag — it depends on what's driving it.</p>
+              <p>Larger agencies often have more approval layers and coordination overhead, which was covered in <a href="/blog/freelancer-vs-design-studio-vs-agency" class="att-blog-inline-link">our comparison of freelancers, studios, and agencies</a>. A longer timeline isn't automatically a red flag - it depends on what's driving it.</p>
             </div>
             <div class="att-blog-faq-item">
               <h3 class="att-blog-faq-q">What happens if my content isn't ready when the project starts?</h3>
-              <p>Most studios will either pause the relevant stage until content arrives or run content creation in parallel with design — both work, but either way, the timeline shifts to reflect the delay rather than staying fixed.</p>
+              <p>Most studios will either pause the relevant stage until content arrives or run content creation in parallel with design - both work, but either way, the timeline shifts to reflect the delay rather than staying fixed.</p>
             </div>
           </section>
 
@@ -258,7 +247,7 @@ onMounted(() => {
       <div class="att-blog-cta-inner">
         <div class="att-blog-cta-text">
           <p class="att-blog-cta-title">Want a realistic timeline for your project?</p>
-          <p class="att-blog-cta-sub">Tell us what you're building — we'll give you a straight answer, milestones included.</p>
+          <p class="att-blog-cta-sub">Tell us what you're building - we'll give you a straight answer, milestones included.</p>
         </div>
         <a href="https://wa.me/917975859061/?text=I%27d%20like%20to%20get%20a%20timeline%20estimate%20for%20my%20project." class="att-blog-cta-btn">
           Get a Timeline Estimate
@@ -273,7 +262,7 @@ onMounted(() => {
 </template>
 
 <style lang="scss" scoped>
-// ── Page shell ────────────────────────────────────────────────────────────────
+// â”€â”€ Page shell â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 .att-blog-page {
   background: #f8fafc;
   min-height: 100vh;
@@ -283,7 +272,7 @@ onMounted(() => {
   padding-top: 10vh;
   background-color: #06060a;
 }
-// ── Hero strip ────────────────────────────────────────────────────────────────
+// â”€â”€ Hero strip â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 .att-blog-hero {
   position: relative;
   overflow: hidden;
@@ -359,7 +348,7 @@ onMounted(() => {
 
 .att-blog-meta-sep { color: #1e293b; }
 
-// ── Body layout ───────────────────────────────────────────────────────────────
+// â”€â”€ Body layout â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 .att-blog-body {
   max-width: 1200px; margin: 0 auto;
   padding: 5rem 4rem;
@@ -377,7 +366,7 @@ onMounted(() => {
   @media (max-width: 1024px) { grid-template-columns: 1fr; gap: 2.5rem; }
 }
 
-// ── TOC sidebar ───────────────────────────────────────────────────────────────
+// â”€â”€ TOC sidebar â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 .att-blog-toc {
   position: sticky;
   top: calc(var(--header-height, 96px) + 24px);
@@ -414,7 +403,7 @@ onMounted(() => {
   }
 }
 
-// ── Content ───────────────────────────────.att-blog-intro────────────────────────────────────
+// â”€â”€ Content â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€.att-blog-introâ”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 .att-blog-content {
   display: flex; flex-direction: column; gap: 0;
 }
@@ -516,7 +505,7 @@ onMounted(() => {
   margin: 0 0 0.4rem;
 }
 
-// ── Cost breakdown chart card ───────────────────────────────────────────────
+// â”€â”€ Cost breakdown chart card â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 .att-chart-card {
   margin: 1.5rem 0 0.5rem;
   padding: 1.5rem 1.75rem 1.25rem;
@@ -532,7 +521,7 @@ onMounted(() => {
   width: 100%; height: auto; display: block;
 }
 
-// ── Pricing model info cards ────────────────────────────────────────────────
+// â”€â”€ Pricing model info cards â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 .att-info-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -559,7 +548,7 @@ onMounted(() => {
   margin-bottom: 0.7rem;
 }
 
-// ── Build process timeline ──────────────────────────────────────────────────
+// â”€â”€ Build process timeline â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 .att-timeline {
   position: relative;
   display: grid;
@@ -619,7 +608,7 @@ onMounted(() => {
   font-size: 0.82rem; line-height: 1.6; color: #64748b; margin: 0; max-width: none;
 }
 
-// ── CTA strip ─────────────────────────────────────────────────────────────────
+// â”€â”€ CTA strip â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 .att-blog-cta {
   background: #0f172a;
   border-top: 1px solid rgba(255,255,255,0.06);

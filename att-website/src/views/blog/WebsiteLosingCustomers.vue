@@ -1,4 +1,4 @@
-<script setup>
+﻿<script setup>
 import { onMounted } from "vue";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -6,18 +6,7 @@ gsap.registerPlugin(ScrollTrigger);
 
 
 onMounted(() => {
-    document.title = "7 Signs Your Website Is Losing You Customers | Amortree";
-
-    const description = document.querySelector('meta[name="description"]');
-
-    if (description) {
-        description.setAttribute(
-            "content",
-            "It's rarely just 'looking dated.' Seven concrete, checkable signs your website is actively costing you leads — and what to fix first."
-        );
-    }
-
-    gsap.from(".att-blog-hero-eyebrow", { autoAlpha: 0, y: 16, duration: 0.6, ease: "power3.out", delay: 0.1 });
+gsap.from(".att-blog-hero-eyebrow", { autoAlpha: 0, y: 16, duration: 0.6, ease: "power3.out", delay: 0.1 });
     gsap.from(".att-blog-title", { autoAlpha: 0, y: 28, duration: 0.75, ease: "power3.out", delay: 0.2 });
     gsap.from(".att-blog-meta", { autoAlpha: 0, y: 14, duration: 0.6, ease: "power2.out", delay: 0.35 });
 
@@ -61,12 +50,12 @@ onMounted(() => {
                     Web Design &amp; Strategy
                 </div>
                 <h1 class="att-blog-title">7 Signs Your Website Is <span class="att-blog-title-accent">Losing</span> You Customers</h1>
-                <p class="att-blog-dek">Not just "looking dated" — these are concrete, checkable signs that your site is actively pushing potential customers away before they ever reach out.</p>
+                <p class="att-blog-dek">Not just "looking dated" - these are concrete, checkable signs that your site is actively pushing potential customers away before they ever reach out.</p>
                 <div class="att-blog-meta">
                     <span>Amortree Tech</span>
-                    <span class="att-blog-meta-sep" aria-hidden="true">·</span>
+                    <span class="att-blog-meta-sep" aria-hidden="true">Â·</span>
                     <span>Published <strong>Jul 20, 2026</strong></span>
-                    <span class="att-blog-meta-sep" aria-hidden="true">·</span>
+                    <span class="att-blog-meta-sep" aria-hidden="true">Â·</span>
                     <span>8 min read</span>
                 </div>
             </div>
@@ -97,50 +86,50 @@ onMounted(() => {
         <article class="att-blog-content">
 
           <div class="att-blog-intro att-blog-section">
-            <p>Most business owners assume a website loses customers because it "looks old." Sometimes that's true — but far more often, the real damage comes from a handful of specific, fixable problems that have nothing to do with taste and everything to do with friction: the visitor wanted to do something, and the site made it harder than it needed to be.</p>
+            <p>Most business owners assume a website loses customers because it "looks old." Sometimes that's true - but far more often, the real damage comes from a handful of specific, fixable problems that have nothing to do with taste and everything to do with friction: the visitor wanted to do something, and the site made it harder than it needed to be.</p>
             <p>Here are seven signs to check on your own site right now, in order of how often they actually cost businesses leads.</p>
           </div>
 
           <section class="att-blog-section" id="why-this-matters">
             <div class="att-blog-section-num" aria-hidden="true">01</div>
             <h2 class="att-blog-section-title">Why This Matters More Than It Looks</h2>
-            <p>A visitor who lands on your site has already done the hard part — they searched, clicked, and arrived with some intent to learn more or reach out. What happens in the next few seconds determines whether that intent turns into an enquiry or evaporates entirely.</p>
-            <p>Unlike a shop with foot traffic, there's no second chance with a slow storefront. A frustrated visitor doesn't wait around — they hit back and click a competitor instead. That's what makes these seven signs worth taking seriously: each one is a specific point where visitors are quietly leaving.</p>
+            <p>A visitor who lands on your site has already done the hard part - they searched, clicked, and arrived with some intent to learn more or reach out. What happens in the next few seconds determines whether that intent turns into an enquiry or evaporates entirely.</p>
+            <p>Unlike a shop with foot traffic, there's no second chance with a slow storefront. A frustrated visitor doesn't wait around - they hit back and click a competitor instead. That's what makes these seven signs worth taking seriously: each one is a specific point where visitors are quietly leaving.</p>
           </section>
 
           <section class="att-blog-section" id="sign-slow-load">
             <div class="att-blog-section-num" aria-hidden="true">02</div>
             <h2 class="att-blog-section-title">1. Slow Load Times</h2>
-            <p>This is the single biggest silent killer of leads, because visitors never tell you they left — they just don't. Every extra second a page takes to load pushes more visitors to abandon it before they've even seen what you offer.</p>
+            <p>This is the single biggest silent killer of leads, because visitors never tell you they left - they just don't. Every extra second a page takes to load pushes more visitors to abandon it before they've even seen what you offer.</p>
 
             <figure class="att-chart-card">
-              <figcaption class="att-chart-title">Illustrative — relative bounce risk by load time</figcaption>
+              <figcaption class="att-chart-title">Illustrative - relative bounce risk by load time</figcaption>
               <svg class="att-chart-svg" viewBox="0 0 640 190" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Bar chart showing bounce risk increasing with page load time: 1 second low risk, 3 seconds moderate risk, 5 seconds high risk">
                 <g font-family="inherit">
                   <!-- 1s -->
                   <rect class="att-chart-segment" x="0" y="10" width="120" height="34" rx="6" fill="#e2e8f0"/>
-                  <text x="10" y="32" font-size="12" font-weight="700" fill="#0f172a">1s · Low risk</text>
+                  <text x="10" y="32" font-size="12" font-weight="700" fill="#0f172a">1s Â· Low risk</text>
 
                   <!-- 3s -->
                   <rect class="att-chart-segment" x="0" y="56" width="320" height="34" rx="6" fill="#facc15"/>
-                  <text x="10" y="78" font-size="12" font-weight="700" fill="#0f172a">3s · Moderate risk</text>
+                  <text x="10" y="78" font-size="12" font-weight="700" fill="#0f172a">3s Â· Moderate risk</text>
 
                   <!-- 5s -->
                   <rect class="att-chart-segment" x="0" y="102" width="560" height="34" rx="6" fill="#0f172a"/>
-                  <text x="10" y="124" font-size="12" font-weight="700" fill="#f8fafc">5s · High risk</text>
+                  <text x="10" y="124" font-size="12" font-weight="700" fill="#f8fafc">5s Â· High risk</text>
                 </g>
-                <text x="0" y="160" font-size="12" fill="#64748b">Every additional second of load time compounds visitor drop-off —</text>
+                <text x="0" y="160" font-size="12" fill="#64748b">Every additional second of load time compounds visitor drop-off -</text>
                 <text x="0" y="178" font-size="12" fill="#64748b">the gap between 1s and 5s is far larger than it feels while you're waiting.</text>
               </svg>
             </figure>
 
-            <p><strong>Quick check:</strong> open your site on mobile data (not wifi) and time how long it takes to become usable. If it's more than 3–4 seconds, this is likely costing you leads right now.</p>
+            <p><strong>Quick check:</strong> open your site on mobile data (not wifi) and time how long it takes to become usable. If it's more than 3â€“4 seconds, this is likely costing you leads right now.</p>
           </section>
 
           <section class="att-blog-section" id="sign-no-cta">
             <div class="att-blog-section-num" aria-hidden="true">03</div>
             <h2 class="att-blog-section-title">2. No Clear Call to Action</h2>
-            <p>A surprising number of business websites describe what the company does in great detail — and never actually ask the visitor to do anything. No "Book a Call," no "Get a Quote," no phone number in sight. If a visitor has to hunt for how to contact you, most simply won't bother.</p>
+            <p>A surprising number of business websites describe what the company does in great detail - and never actually ask the visitor to do anything. No "Book a Call," no "Get a Quote," no phone number in sight. If a visitor has to hunt for how to contact you, most simply won't bother.</p>
             <p><strong>Quick check:</strong> look at your homepage without scrolling. Is there one obvious, unambiguous next step? If you can't answer instantly, neither can your visitors.</p>
           </section>
 
@@ -148,35 +137,35 @@ onMounted(() => {
             <div class="att-blog-section-num" aria-hidden="true">04</div>
             <h2 class="att-blog-section-title">3. Broken Mobile Experience</h2>
             <p>Most traffic to a small business website today comes from a phone, not a laptop. A site that looks fine on a widescreen monitor but has cramped text, overlapping buttons, or a broken menu on mobile is turning away the majority of its visitors before they read a word.</p>
-            <p><strong>Quick check:</strong> open your own site on your phone and try to complete the exact action you want a customer to take — call you, fill a form, view your services. If it's clunky for you, it's clunky for them.</p>
+            <p><strong>Quick check:</strong> open your own site on your phone and try to complete the exact action you want a customer to take - call you, fill a form, view your services. If it's clunky for you, it's clunky for them.</p>
           </section>
 
           <section class="att-blog-section" id="sign-outdated-design">
             <div class="att-blog-section-num" aria-hidden="true">05</div>
             <h2 class="att-blog-section-title">4. Outdated Visual Design</h2>
-            <p>This is the one people assume matters most, and it does matter — but mainly because of what it signals, not because of aesthetics alone. A dated design (small stretched images, default fonts, cluttered layouts) quietly tells a visitor "this business might not be actively run" — even if that's completely untrue.</p>
+            <p>This is the one people assume matters most, and it does matter - but mainly because of what it signals, not because of aesthetics alone. A dated design (small stretched images, default fonts, cluttered layouts) quietly tells a visitor "this business might not be actively run" - even if that's completely untrue.</p>
             <p><strong>Quick check:</strong> would you trust this site with your payment details or personal information if you'd never heard of the business before? If you hesitate, so will your visitors.</p>
           </section>
 
           <section class="att-blog-section" id="sign-contact-info">
             <div class="att-blog-section-num" aria-hidden="true">06</div>
             <h2 class="att-blog-section-title">5. Buried or Missing Contact Info</h2>
-            <p>Some sites make visitors dig through a footer or a separate "Contact" page just to find a phone number. By the time a warm, ready-to-enquire visitor finds it, a chunk of that intent has already cooled off — or they've simply gone to find a competitor whose number was on the homepage.</p>
+            <p>Some sites make visitors dig through a footer or a separate "Contact" page just to find a phone number. By the time a warm, ready-to-enquire visitor finds it, a chunk of that intent has already cooled off - or they've simply gone to find a competitor whose number was on the homepage.</p>
             <p><strong>Quick check:</strong> can a visitor call, WhatsApp, or email you within one click from your homepage, without scrolling or navigating away? If not, that's friction you're paying for.</p>
           </section>
 
           <section class="att-blog-section" id="sign-navigation">
             <div class="att-blog-section-num" aria-hidden="true">07</div>
             <h2 class="att-blog-section-title">6. Confusing Navigation</h2>
-            <p>Too many menu items, unclear labels, or pages that don't match what a visitor expected all add up to the same result: the visitor gives up trying to find what they need. A confused visitor doesn't ask for help — they just leave.</p>
-            <p><strong>Quick check:</strong> hand your phone to someone unfamiliar with your business and ask them to find your pricing or services. Watch where they hesitate — that's exactly where real customers are getting stuck too.</p>
+            <p>Too many menu items, unclear labels, or pages that don't match what a visitor expected all add up to the same result: the visitor gives up trying to find what they need. A confused visitor doesn't ask for help - they just leave.</p>
+            <p><strong>Quick check:</strong> hand your phone to someone unfamiliar with your business and ask them to find your pricing or services. Watch where they hesitate - that's exactly where real customers are getting stuck too.</p>
           </section>
 
           <section class="att-blog-section" id="sign-social-proof">
             <div class="att-blog-section-num" aria-hidden="true">08</div>
             <h2 class="att-blog-section-title">7. No Social Proof</h2>
-            <p>New visitors don't know you yet, and a website with zero testimonials, reviews, client logos, or before/after examples is asking them to take a leap of faith on trust alone. Social proof isn't decoration — it's often the deciding factor between "I'll enquire" and "I'll keep looking."</p>
-            <p><strong>Quick check:</strong> can a first-time visitor find evidence that real people have used and liked your service, without leaving your site? If the answer is no, you're leaving trust-building — and conversions — on the table.</p>
+            <p>New visitors don't know you yet, and a website with zero testimonials, reviews, client logos, or before/after examples is asking them to take a leap of faith on trust alone. Social proof isn't decoration - it's often the deciding factor between "I'll enquire" and "I'll keep looking."</p>
+            <p><strong>Quick check:</strong> can a first-time visitor find evidence that real people have used and liked your service, without leaving your site? If the answer is no, you're leaving trust-building - and conversions - on the table.</p>
           </section>
 
           <section class="att-blog-section" id="self-check">
@@ -185,12 +174,12 @@ onMounted(() => {
             <p>Count how many of the seven signs above apply to your current website, then use this as a rough guide:</p>
             <div class="att-info-grid">
               <div class="att-info-card">
-                <div class="att-info-card-label">0–1 signs</div>
+                <div class="att-info-card-label">0â€“1 signs</div>
                 <p>You're in reasonably good shape. Worth revisiting periodically, but no urgent action needed.</p>
               </div>
               <div class="att-info-card">
-                <div class="att-info-card-label">2–3 signs</div>
-                <p>Your site is likely leaking leads. A focused round of fixes — not necessarily a full rebuild — should recover meaningful ground.</p>
+                <div class="att-info-card-label">2â€“3 signs</div>
+                <p>Your site is likely leaking leads. A focused round of fixes - not necessarily a full rebuild - should recover meaningful ground.</p>
               </div>
               <div class="att-info-card">
                 <div class="att-info-card-label">4+ signs</div>
@@ -220,7 +209,7 @@ onMounted(() => {
                 <div class="att-timeline-dot">2</div>
                 <div class="att-timeline-body">
                   <div class="att-timeline-title">Trust &amp; content</div>
-                  <div class="att-timeline-days">2–3 weeks</div>
+                  <div class="att-timeline-days">2â€“3 weeks</div>
                   <p>Add testimonials, reviews, or client examples. Tighten navigation labels based on real user testing.</p>
                 </div>
               </div>
@@ -229,8 +218,8 @@ onMounted(() => {
                 <div class="att-timeline-dot">3</div>
                 <div class="att-timeline-body">
                   <div class="att-timeline-title">Performance &amp; mobile</div>
-                  <div class="att-timeline-days">4–6 weeks</div>
-                  <p>Optimize images, fix mobile layout issues, and address load-time problems — usually needs a developer's help.</p>
+                  <div class="att-timeline-days">4â€“6 weeks</div>
+                  <p>Optimize images, fix mobile layout issues, and address load-time problems - usually needs a developer's help.</p>
                 </div>
               </div>
 
@@ -239,7 +228,7 @@ onMounted(() => {
                 <div class="att-timeline-body">
                   <div class="att-timeline-title">Full redesign</div>
                   <div class="att-timeline-days">If 4+ signs apply</div>
-                  <p>If the foundation itself is outdated or technically limited, patching individual issues stops being worth it — a rebuild pays for itself faster.</p>
+                  <p>If the foundation itself is outdated or technically limited, patching individual issues stops being worth it - a rebuild pays for itself faster.</p>
                 </div>
               </div>
             </div>
@@ -272,7 +261,7 @@ onMounted(() => {
       <div class="att-blog-cta-inner">
         <div class="att-blog-cta-text">
           <p class="att-blog-cta-title">Wondering how many signs apply to your site?</p>
-          <p class="att-blog-cta-sub">Get a free audit — we'll tell you exactly what's costing you leads.</p>
+          <p class="att-blog-cta-sub">Get a free audit - we'll tell you exactly what's costing you leads.</p>
         </div>
         <a href="https://wa.me/917975859061/?text=I%27d%20like%20to%20claim%20my%20free%20audit." class="att-blog-cta-btn">
           Claim Your Free Audit
@@ -287,7 +276,7 @@ onMounted(() => {
 </template>
 
 <style lang="scss" scoped>
-// ── Page shell ────────────────────────────────────────────────────────────────
+// â”€â”€ Page shell â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 .att-blog-page {
   background: #f8fafc;
   min-height: 100vh;
@@ -297,7 +286,7 @@ onMounted(() => {
   padding-top: 10vh;
   background-color: #06060a;
 }
-// ── Hero strip ────────────────────────────────────────────────────────────────
+// â”€â”€ Hero strip â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 .att-blog-hero {
   position: relative;
   overflow: hidden;
@@ -373,7 +362,7 @@ onMounted(() => {
 
 .att-blog-meta-sep { color: #1e293b; }
 
-// ── Body layout ───────────────────────────────────────────────────────────────
+// â”€â”€ Body layout â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 .att-blog-body {
   max-width: 1200px; margin: 0 auto;
   padding: 5rem 4rem;
@@ -391,7 +380,7 @@ onMounted(() => {
   @media (max-width: 1024px) { grid-template-columns: 1fr; gap: 2.5rem; }
 }
 
-// ── TOC sidebar ───────────────────────────────────────────────────────────────
+// â”€â”€ TOC sidebar â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 .att-blog-toc {
   position: sticky;
   top: calc(var(--header-height, 96px) + 24px);
@@ -428,7 +417,7 @@ onMounted(() => {
   }
 }
 
-// ── Content ────────────────────────────────────────────────────────────────
+// â”€â”€ Content â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 .att-blog-content {
   display: flex; flex-direction: column; gap: 0;
 }
@@ -537,7 +526,7 @@ onMounted(() => {
   margin: 0 0 0.4rem;
 }
 
-// ── Cost/stat breakdown chart card ──────────────────────────────────────────
+// â”€â”€ Cost/stat breakdown chart card â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 .att-chart-card {
   margin: 1.5rem 0 0.5rem;
   padding: 1.5rem 1.75rem 1.25rem;
@@ -553,7 +542,7 @@ onMounted(() => {
   width: 100%; height: auto; display: block;
 }
 
-// ── Info cards (3-up grid) ──────────────────────────────────────────────────
+// â”€â”€ Info cards (3-up grid) â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 .att-info-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -580,7 +569,7 @@ onMounted(() => {
   margin-bottom: 0.7rem;
 }
 
-// ── Process / priority timeline ─────────────────────────────────────────────
+// â”€â”€ Process / priority timeline â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 .att-timeline {
   position: relative;
   display: grid;
@@ -640,7 +629,7 @@ onMounted(() => {
   font-size: 0.82rem; line-height: 1.6; color: #64748b; margin: 0; max-width: none;
 }
 
-// ── CTA strip ─────────────────────────────────────────────────────────────────
+// â”€â”€ CTA strip â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 .att-blog-cta {
   background: #0f172a;
   border-top: 1px solid rgba(255,255,255,0.06);

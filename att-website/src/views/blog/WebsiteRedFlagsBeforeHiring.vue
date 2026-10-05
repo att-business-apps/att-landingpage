@@ -1,4 +1,4 @@
-<script setup>
+﻿<script setup>
 import { onMounted } from "vue";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -6,18 +6,7 @@ gsap.registerPlugin(ScrollTrigger);
 
 
 onMounted(() => {
-    document.title = "12 Website Red Flags to Check Before You Hire Anyone | Amortree";
-
-    const description = document.querySelector('meta[name="description"]');
-
-    if (description) {
-        description.setAttribute(
-            "content",
-            "Before you sign with a freelancer, studio, or agency — 12 concrete red flags across pricing, process, ownership, and communication that predict a project going wrong."
-        );
-    }
-
-    gsap.from(".att-blog-hero-eyebrow", { autoAlpha: 0, y: 16, duration: 0.6, ease: "power3.out", delay: 0.1 });
+gsap.from(".att-blog-hero-eyebrow", { autoAlpha: 0, y: 16, duration: 0.6, ease: "power3.out", delay: 0.1 });
     gsap.from(".att-blog-title", { autoAlpha: 0, y: 28, duration: 0.75, ease: "power3.out", delay: 0.2 });
     gsap.from(".att-blog-meta", { autoAlpha: 0, y: 14, duration: 0.6, ease: "power2.out", delay: 0.35 });
 
@@ -45,12 +34,12 @@ onMounted(() => {
                     Web Design &amp; Strategy
                 </div>
                 <h1 class="att-blog-title">12 Red Flags to Check <span class="att-blog-title-accent">Before You Hire</span></h1>
-                <p class="att-blog-dek">Most bad website projects don't fail on day one — they fail from something that was visible in the very first conversation. Here's what to check for before you sign anything.</p>
+                <p class="att-blog-dek">Most bad website projects don't fail on day one - they fail from something that was visible in the very first conversation. Here's what to check for before you sign anything.</p>
                 <div class="att-blog-meta">
                     <span>Amortree Tech</span>
-                    <span class="att-blog-meta-sep" aria-hidden="true">·</span>
+                    <span class="att-blog-meta-sep" aria-hidden="true">Â·</span>
                     <span>Published <strong>Feb 4, 2026</strong></span>
-                    <span class="att-blog-meta-sep" aria-hidden="true">·</span>
+                    <span class="att-blog-meta-sep" aria-hidden="true">Â·</span>
                     <span>7 min read</span>
                 </div>
             </div>
@@ -78,22 +67,22 @@ onMounted(() => {
         <article class="att-blog-content">
 
           <div class="att-blog-intro att-blog-section">
-            <p>If you've read through <a href="/blog/how-much-does-a-website-cost-in-india" class="att-blog-inline-link">what a website should cost</a> and <a href="/blog/freelancer-vs-design-studio-vs-agency" class="att-blog-inline-link">who should build it</a>, you're probably close to actually hiring someone. This is the last checkpoint — the specific things worth checking in a proposal or first conversation, before money changes hands.</p>
+            <p>If you've read through <a href="/blog/how-much-does-a-website-cost-in-india" class="att-blog-inline-link">what a website should cost</a> and <a href="/blog/freelancer-vs-design-studio-vs-agency" class="att-blog-inline-link">who should build it</a>, you're probably close to actually hiring someone. This is the last checkpoint - the specific things worth checking in a proposal or first conversation, before money changes hands.</p>
             <p>None of these are about personality or vibes. They're concrete, checkable signals that predict how the project will actually go.</p>
           </div>
 
           <section class="att-blog-section" id="why-check">
             <div class="att-blog-section-num" aria-hidden="true">01</div>
             <h2 class="att-blog-section-title">Why This Matters</h2>
-            <p>Most website projects that go badly don't go badly because of bad design. They go badly because of misaligned expectations set up front — about price, ownership, timeline, or communication — that only surface once it's expensive to walk away. Every red flag below is something you can check before you commit, not something you find out the hard way.</p>
+            <p>Most website projects that go badly don't go badly because of bad design. They go badly because of misaligned expectations set up front - about price, ownership, timeline, or communication - that only surface once it's expensive to walk away. Every red flag below is something you can check before you commit, not something you find out the hard way.</p>
           </section>
 
           <section class="att-blog-section" id="pricing-flags">
             <div class="att-blog-section-num" aria-hidden="true">02</div>
             <h2 class="att-blog-section-title">Pricing &amp; Quote Red Flags</h2>
             <ul class="att-blog-list">
-              <li><strong>1. No breakdown behind the number.</strong> A serious studio can tell you roughly what you're paying for — design, development, content, revisions — not just hand you one lump figure.</li>
-              <li><strong>2. A price far below everyone else's.</strong> If one quote is a fraction of every other quote you've gotten for the same scope, something is being cut — usually quality, originality, or post-launch support.</li>
+              <li><strong>1. No breakdown behind the number.</strong> A serious studio can tell you roughly what you're paying for - design, development, content, revisions - not just hand you one lump figure.</li>
+              <li><strong>2. A price far below everyone else's.</strong> If one quote is a fraction of every other quote you've gotten for the same scope, something is being cut - usually quality, originality, or post-launch support.</li>
               <li><strong>3. Pressure paired with a "limited time" discount.</strong> Real pricing doesn't need urgency tactics. A discount that disappears if you don't decide today is a sales technique, not a reflection of actual cost.</li>
             </ul>
           </section>
@@ -103,7 +92,7 @@ onMounted(() => {
             <h2 class="att-blog-section-title">Process &amp; Timeline Red Flags</h2>
             <ul class="att-blog-list">
               <li><strong>4. No milestones, just an end date.</strong> "It'll be done in 4 weeks" with nothing in between makes it impossible to know if the project is on track or quietly stalled until week 3.</li>
-              <li><strong>5. A "custom" site promised in a few days.</strong> As covered in <a href="/blog/how-long-should-a-website-take-to-build" class="att-blog-inline-link">our timeline guide</a>, genuine custom work takes real time — an unrealistically fast promise usually means a template with your logo swapped in.</li>
+              <li><strong>5. A "custom" site promised in a few days.</strong> As covered in <a href="/blog/how-long-should-a-website-take-to-build" class="att-blog-inline-link">our timeline guide</a>, genuine custom work takes real time - an unrealistically fast promise usually means a template with your logo swapped in.</li>
               <li><strong>6. No mention of revision rounds.</strong> Ask directly: how many rounds of feedback are included, and what happens if you need more? If this isn't clear upfront, it becomes a point of friction later.</li>
             </ul>
           </section>
@@ -112,7 +101,7 @@ onMounted(() => {
             <div class="att-blog-section-num" aria-hidden="true">04</div>
             <h2 class="att-blog-section-title">Ownership &amp; Technical Red Flags</h2>
             <ul class="att-blog-list">
-              <li><strong>7. Unclear who owns the final files.</strong> You should own your domain, your code or platform account, and your content outright — not be dependent on the original builder for basic access.</li>
+              <li><strong>7. Unclear who owns the final files.</strong> You should own your domain, your code or platform account, and your content outright - not be dependent on the original builder for basic access.</li>
               <li><strong>8. Locked into a proprietary platform with no export option.</strong> If leaving means rebuilding from zero because nothing can be exported, you're not really the owner of your own site.</li>
               <li><strong>9. No mention of hosting or who manages it.</strong> Know upfront whether hosting is included, who renews the domain, and what happens if you ever want to switch providers.</li>
             </ul>
@@ -123,8 +112,8 @@ onMounted(() => {
             <h2 class="att-blog-section-title">Communication &amp; Trust Red Flags</h2>
             <ul class="att-blog-list">
               <li><strong>10. Slow or vague responses before you've even signed.</strong> This is usually the best-case version of how they'll communicate once you're a paying client, not the worst case.</li>
-              <li><strong>11. No portfolio, or a portfolio of unrelated work.</strong> You want to see real, live examples close to your business type — not just polished mockups that never shipped.</li>
-              <li><strong>12. Reluctance to put anything in writing.</strong> Scope, price, and timeline should exist somewhere other than a verbal conversation — an email summary at minimum, ideally a short written agreement.</li>
+              <li><strong>11. No portfolio, or a portfolio of unrelated work.</strong> You want to see real, live examples close to your business type - not just polished mockups that never shipped.</li>
+              <li><strong>12. Reluctance to put anything in writing.</strong> Scope, price, and timeline should exist somewhere other than a verbal conversation - an email summary at minimum, ideally a short written agreement.</li>
             </ul>
           </section>
 
@@ -135,26 +124,26 @@ onMounted(() => {
 
             <div class="att-blog-faq-item">
               <h3 class="att-blog-faq-q">Pricing</h3>
-              <p>Breakdown provided · priced in line with comparable quotes · no artificial urgency</p>
+              <p>Breakdown provided Â· priced in line with comparable quotes Â· no artificial urgency</p>
             </div>
             <div class="att-blog-faq-item">
               <h3 class="att-blog-faq-q">Process</h3>
-              <p>Milestones defined · timeline is realistic for the scope · revision rounds specified</p>
+              <p>Milestones defined Â· timeline is realistic for the scope Â· revision rounds specified</p>
             </div>
             <div class="att-blog-faq-item">
               <h3 class="att-blog-faq-q">Ownership</h3>
-              <p>You own the domain, files, and content · no lock-in without export options · hosting terms are clear</p>
+              <p>You own the domain, files, and content Â· no lock-in without export options Â· hosting terms are clear</p>
             </div>
             <div class="att-blog-faq-item">
               <h3 class="att-blog-faq-q">Communication</h3>
-              <p>Responsive before you've paid anything · relevant portfolio shown · terms exist in writing</p>
+              <p>Responsive before you've paid anything Â· relevant portfolio shown Â· terms exist in writing</p>
             </div>
           </section>
 
           <section class="att-blog-section" id="if-you-spot-one">
             <div class="att-blog-section-num" aria-hidden="true">07</div>
             <h2 class="att-blog-section-title">If You Spot One, What Should You Do?</h2>
-            <p>One yellow flag alone isn't necessarily disqualifying — plenty of good freelancers or studios might be slow to respond during a busy week, for instance. But if you notice two or three of these together, that pattern is worth taking seriously. Ask directly about the specific concern before moving forward; how someone responds to being asked tells you almost as much as the answer itself.</p>
+            <p>One yellow flag alone isn't necessarily disqualifying - plenty of good freelancers or studios might be slow to respond during a busy week, for instance. But if you notice two or three of these together, that pattern is worth taking seriously. Ask directly about the specific concern before moving forward; how someone responds to being asked tells you almost as much as the answer itself.</p>
           </section>
 
           <section class="att-blog-section" id="faq">
@@ -163,7 +152,7 @@ onMounted(() => {
 
             <div class="att-blog-faq-item">
               <h3 class="att-blog-faq-q">Is a low quote always a red flag?</h3>
-              <p>Not always — sometimes it reflects genuinely lower overhead. But it's worth understanding why before assuming it's simply a good deal, especially if it's dramatically below every other quote for the same scope.</p>
+              <p>Not always - sometimes it reflects genuinely lower overhead. But it's worth understanding why before assuming it's simply a good deal, especially if it's dramatically below every other quote for the same scope.</p>
             </div>
             <div class="att-blog-faq-item">
               <h3 class="att-blog-faq-q">What should be in writing before I pay anything?</h3>
@@ -184,7 +173,7 @@ onMounted(() => {
       <div class="att-blog-cta-inner">
         <div class="att-blog-cta-text">
           <p class="att-blog-cta-title">Ready to compare us against this checklist?</p>
-          <p class="att-blog-cta-sub">Ask us anything on this list directly — we'd rather you check now than find out later.</p>
+          <p class="att-blog-cta-sub">Ask us anything on this list directly - we'd rather you check now than find out later.</p>
         </div>
         <a href="https://wa.me/917975859061/?text=I%27d%20like%20to%20ask%20about%20your%20services." class="att-blog-cta-btn">
           Start the Conversation
@@ -199,7 +188,7 @@ onMounted(() => {
 </template>
 
 <style lang="scss" scoped>
-// ── Page shell ────────────────────────────────────────────────────────────────
+// â”€â”€ Page shell â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 .att-blog-page {
   background: #f8fafc;
   min-height: 100vh;
@@ -209,7 +198,7 @@ onMounted(() => {
   padding-top: 10vh;
   background-color: #06060a;
 }
-// ── Hero strip ────────────────────────────────────────────────────────────────
+// â”€â”€ Hero strip â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 .att-blog-hero {
   position: relative;
   overflow: hidden;
@@ -285,7 +274,7 @@ onMounted(() => {
 
 .att-blog-meta-sep { color: #1e293b; }
 
-// ── Body layout ───────────────────────────────────────────────────────────────
+// â”€â”€ Body layout â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 .att-blog-body {
   max-width: 1200px; margin: 0 auto;
   padding: 5rem 4rem;
@@ -303,7 +292,7 @@ onMounted(() => {
   @media (max-width: 1024px) { grid-template-columns: 1fr; gap: 2.5rem; }
 }
 
-// ── TOC sidebar ───────────────────────────────────────────────────────────────
+// â”€â”€ TOC sidebar â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 .att-blog-toc {
   position: sticky;
   top: calc(var(--header-height, 96px) + 24px);
@@ -340,7 +329,7 @@ onMounted(() => {
   }
 }
 
-// ── Content ───────────────────────────────.att-blog-intro────────────────────────────────────
+// â”€â”€ Content â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€.att-blog-introâ”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 .att-blog-content {
   display: flex; flex-direction: column; gap: 0;
 }
@@ -442,7 +431,7 @@ onMounted(() => {
   margin: 0 0 0.4rem;
 }
 
-// ── Cost breakdown chart card ───────────────────────────────────────────────
+// â”€â”€ Cost breakdown chart card â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 .att-chart-card {
   margin: 1.5rem 0 0.5rem;
   padding: 1.5rem 1.75rem 1.25rem;
@@ -458,7 +447,7 @@ onMounted(() => {
   width: 100%; height: auto; display: block;
 }
 
-// ── Pricing model info cards ────────────────────────────────────────────────
+// â”€â”€ Pricing model info cards â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 .att-info-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -485,7 +474,7 @@ onMounted(() => {
   margin-bottom: 0.7rem;
 }
 
-// ── Build process timeline ──────────────────────────────────────────────────
+// â”€â”€ Build process timeline â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 .att-timeline {
   position: relative;
   display: grid;
@@ -553,7 +542,7 @@ onMounted(() => {
 }
 
 
-// ── CTA strip ─────────────────────────────────────────────────────────────────
+// â”€â”€ CTA strip â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 .att-blog-cta {
   background: #0f172a;
   border-top: 1px solid rgba(255,255,255,0.06);

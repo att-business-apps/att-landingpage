@@ -1,12 +1,10 @@
-<script setup>
+﻿<script setup>
 import { onMounted } from "vue";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 
 onMounted(() => {
-  document.title = "How to Write a Website Brief Your Designer Can Actually Use | Amortree";
-  document.querySelector('meta[name="description"]')?.setAttribute("content", "Gather the goals, audience details, content, and practical requirements that lead to clearer website proposals and a smoother project.");
   gsap.from(".att-blog-hero-eyebrow", { autoAlpha: 0, y: 16, duration: 0.6, ease: "power3.out", delay: 0.1 });
   gsap.from(".att-blog-title", { autoAlpha: 0, y: 28, duration: 0.75, ease: "power3.out", delay: 0.2 });
   gsap.from(".att-blog-meta", { autoAlpha: 0, y: 14, duration: 0.6, ease: "power2.out", delay: 0.35 });
@@ -20,22 +18,22 @@ onMounted(() => {
       <div class="att-blog-hero-eyebrow"><span class="att-blog-hero-dot" aria-hidden="true"></span> Strategy</div>
       <h1 class="att-blog-title">How to Write a Website Brief <span class="att-blog-title-accent">Your Designer Can Actually Use</span></h1>
       <p class="att-blog-dek">Gather the goals, audience details, content, and practical requirements that lead to clearer proposals and a smoother project.</p>
-      <div class="att-blog-meta"><span>Amortree Tech</span><span class="att-blog-meta-sep" aria-hidden="true">·</span><span>Published <strong>Aug 29, 2026</strong></span><span class="att-blog-meta-sep" aria-hidden="true">·</span><span>7 min read</span></div>
+      <div class="att-blog-meta"><span>Amortree Tech</span><span class="att-blog-meta-sep" aria-hidden="true">Â·</span><span>Published <strong>Aug 29, 2026</strong></span><span class="att-blog-meta-sep" aria-hidden="true">Â·</span><span>7 min read</span></div>
     </div></div></div>
     <div class="att-blog-body"><div class="att-blog-layout">
       <nav class="att-blog-toc" aria-label="Article sections"><div class="att-blog-toc-label">On this page</div><a href="#why-brief" class="att-blog-toc-item">Why a brief helps</a><a href="#goals" class="att-blog-toc-item">Business goals</a><a href="#audience" class="att-blog-toc-item">Audience &amp; offer</a><a href="#content" class="att-blog-toc-item">Content &amp; proof</a><a href="#requirements" class="att-blog-toc-item">Requirements</a><a href="#budget-timeline" class="att-blog-toc-item">Budget &amp; timing</a><a href="#evaluate" class="att-blog-toc-item">How to evaluate ideas</a><a href="#faq" class="att-blog-toc-item">FAQ</a></nav>
       <article class="att-blog-content">
-        <div class="att-blog-intro att-blog-section"><p>“We need a modern website” is a reasonable starting thought, but it leaves a designer guessing about what the site must accomplish, who it needs to serve, and what “modern” means for your business. Those guesses often show up later as mismatched proposals, extra rounds of revision, or a schedule that slips while everyone waits for content.</p><p>A website brief does not need to be a formal document or contain every answer. Its job is to explain the business, the customer, the desired outcome, and the known constraints clearly enough that a designer can ask useful questions and recommend an appropriate solution.</p></div>
+        <div class="att-blog-intro att-blog-section"><p>â€œWe need a modern websiteâ€ is a reasonable starting thought, but it leaves a designer guessing about what the site must accomplish, who it needs to serve, and what â€œmodernâ€ means for your business. Those guesses often show up later as mismatched proposals, extra rounds of revision, or a schedule that slips while everyone waits for content.</p><p>A website brief does not need to be a formal document or contain every answer. Its job is to explain the business, the customer, the desired outcome, and the known constraints clearly enough that a designer can ask useful questions and recommend an appropriate solution.</p></div>
 
         <section class="att-blog-section" id="why-brief"><div class="att-blog-section-num" aria-hidden="true">01</div><h2 class="att-blog-section-title">Why a Brief Makes the Project Better</h2><p>A good brief gives every proposal the same starting point. It helps a designer separate necessary features from nice-to-have ideas, spot dependencies early, and explain the trade-offs between scope, budget, and timing. You get a more useful estimate because the work is described in business terms rather than a list of unexplained technical requests.</p><p>It also helps your own team agree on what success means. If one person expects a site to generate enquiries and another expects an online catalogue, that difference is better discovered before design begins. If you are comparing potential partners, our guide to <a href="/blog/before-you-hire-a-web-designer" class="att-blog-inline-link">questions to ask before hiring a web designer</a> can help you discuss the proposal.</p></section>
 
-        <section class="att-blog-section" id="goals"><div class="att-blog-section-num" aria-hidden="true">02</div><h2 class="att-blog-section-title">Start With the Business Goal</h2><p>Write down the main job the website should do. Examples include generating qualified enquiries, helping customers understand a complex service, selling products, supporting bookings, or making existing customer information easier to find. Choose the primary outcome; the site can have secondary goals, but everything cannot be the top priority.</p><p>Describe how you would recognise progress. You may track completed enquiries, booked consultations, orders, or visits to a specific resource. You do not need to promise a particular growth number before the project starts. A clear measure simply gives the team something concrete to improve and review.</p><div class="att-info-card"><p><strong>Try this sentence:</strong> “The website should help [audience] do [important task] so that [business outcome].” If the sentence is difficult to finish, the project goal may need more discussion.</p></div></section>
+        <section class="att-blog-section" id="goals"><div class="att-blog-section-num" aria-hidden="true">02</div><h2 class="att-blog-section-title">Start With the Business Goal</h2><p>Write down the main job the website should do. Examples include generating qualified enquiries, helping customers understand a complex service, selling products, supporting bookings, or making existing customer information easier to find. Choose the primary outcome; the site can have secondary goals, but everything cannot be the top priority.</p><p>Describe how you would recognise progress. You may track completed enquiries, booked consultations, orders, or visits to a specific resource. You do not need to promise a particular growth number before the project starts. A clear measure simply gives the team something concrete to improve and review.</p><div class="att-info-card"><p><strong>Try this sentence:</strong> â€œThe website should help [audience] do [important task] so that [business outcome].â€ If the sentence is difficult to finish, the project goal may need more discussion.</p></div></section>
 
-        <section class="att-blog-section" id="audience"><div class="att-blog-section-num" aria-hidden="true">03</div><h2 class="att-blog-section-title">Describe Your Audience and Your Offer</h2><p>Explain who you serve, where they are, what they are trying to solve, and what usually makes them hesitate before choosing a provider. Be specific enough to guide decisions: a business selling high-consideration services may need more education and proof than a shop where customers already know exactly what they want.</p><p>List your main services or product groups in priority order. Say which matter most to the business and which customers are the best fit. Include the questions prospects ask before they enquire, the alternatives they compare, and the facts that distinguish your offer. “High quality” is difficult to design around; a clear process, specialist expertise, local coverage, or documented results is much more useful.</p><p>Share competitors or reference sites only to explain what you like or want to avoid. Point to a specific detail—a clear comparison table, an easy booking flow, or a calm visual style—rather than asking for a copy of another company’s whole website.</p></section>
+        <section class="att-blog-section" id="audience"><div class="att-blog-section-num" aria-hidden="true">03</div><h2 class="att-blog-section-title">Describe Your Audience and Your Offer</h2><p>Explain who you serve, where they are, what they are trying to solve, and what usually makes them hesitate before choosing a provider. Be specific enough to guide decisions: a business selling high-consideration services may need more education and proof than a shop where customers already know exactly what they want.</p><p>List your main services or product groups in priority order. Say which matter most to the business and which customers are the best fit. Include the questions prospects ask before they enquire, the alternatives they compare, and the facts that distinguish your offer. â€œHigh qualityâ€ is difficult to design around; a clear process, specialist expertise, local coverage, or documented results is much more useful.</p><p>Share competitors or reference sites only to explain what you like or want to avoid. Point to a specific detail-a clear comparison table, an easy booking flow, or a calm visual style-rather than asking for a copy of another companyâ€™s whole website.</p></section>
 
-        <section class="att-blog-section" id="content"><div class="att-blog-section-num" aria-hidden="true">04</div><h2 class="att-blog-section-title">Inventory Content and Proof</h2><p>List the pages you think you need, but mark each as essential, optional, or still to be decided. Then take stock of what already exists: brand files, product data, photography, service descriptions, policies, case studies, and testimonials. Identify material that is current, material that needs editing, and material that must be created.</p><p>Proof makes a website more credible. Gather project examples, customer feedback, qualifications, awards, certifications, or process details that you have permission to publish. If a testimonial contains a customer’s name, logo, or image, confirm you have permission before including it in the brief.</p><p>Assign an owner and target date for missing content. Design and development can move quickly, but a project may still stall if no one is responsible for writing the service pages or approving the product images.</p></section>
+        <section class="att-blog-section" id="content"><div class="att-blog-section-num" aria-hidden="true">04</div><h2 class="att-blog-section-title">Inventory Content and Proof</h2><p>List the pages you think you need, but mark each as essential, optional, or still to be decided. Then take stock of what already exists: brand files, product data, photography, service descriptions, policies, case studies, and testimonials. Identify material that is current, material that needs editing, and material that must be created.</p><p>Proof makes a website more credible. Gather project examples, customer feedback, qualifications, awards, certifications, or process details that you have permission to publish. If a testimonial contains a customerâ€™s name, logo, or image, confirm you have permission before including it in the brief.</p><p>Assign an owner and target date for missing content. Design and development can move quickly, but a project may still stall if no one is responsible for writing the service pages or approving the product images.</p></section>
 
-        <section class="att-blog-section" id="requirements"><div class="att-blog-section-num" aria-hidden="true">05</div><h2 class="att-blog-section-title">Separate Requirements From Ideas</h2><p>List functions the site needs to support, such as payments, booking, search, customer accounts, multilingual pages, a product catalogue, or a connection to a CRM. For each one, explain who uses it and what they need to accomplish. “Connect our CRM” is a starting point; “send qualified form enquiries into these fields so our team can follow up” gives a designer something to scope.</p><div class="att-blog-table-wrap"><table class="att-blog-table"><thead><tr><th>Include in the brief</th><th>Example detail</th></tr></thead><tbody><tr><td>Essential functions</td><td>Online booking, product filters, payment, enquiry form, customer portal</td></tr><tr><td>Existing systems</td><td>CRM, inventory, email platform, payment provider, analytics</td></tr><tr><td>Operational needs</td><td>Who edits content, how orders are handled, who receives enquiries</td></tr><tr><td>Non-functional needs</td><td>Accessibility, privacy, languages, performance, security, support</td></tr><tr><td>Future ideas</td><td>Features that may be useful later but are not needed for launch</td></tr></tbody></table></div><p>Mark uncertain items as questions rather than promises. This lets your designer investigate options and explain the impact before you commit to an approach.</p></section>
+        <section class="att-blog-section" id="requirements"><div class="att-blog-section-num" aria-hidden="true">05</div><h2 class="att-blog-section-title">Separate Requirements From Ideas</h2><p>List functions the site needs to support, such as payments, booking, search, customer accounts, multilingual pages, a product catalogue, or a connection to a CRM. For each one, explain who uses it and what they need to accomplish. â€œConnect our CRMâ€ is a starting point; â€œsend qualified form enquiries into these fields so our team can follow upâ€ gives a designer something to scope.</p><div class="att-blog-table-wrap"><table class="att-blog-table"><thead><tr><th>Include in the brief</th><th>Example detail</th></tr></thead><tbody><tr><td>Essential functions</td><td>Online booking, product filters, payment, enquiry form, customer portal</td></tr><tr><td>Existing systems</td><td>CRM, inventory, email platform, payment provider, analytics</td></tr><tr><td>Operational needs</td><td>Who edits content, how orders are handled, who receives enquiries</td></tr><tr><td>Non-functional needs</td><td>Accessibility, privacy, languages, performance, security, support</td></tr><tr><td>Future ideas</td><td>Features that may be useful later but are not needed for launch</td></tr></tbody></table></div><p>Mark uncertain items as questions rather than promises. This lets your designer investigate options and explain the impact before you commit to an approach.</p></section>
 
         <section class="att-blog-section" id="budget-timeline"><div class="att-blog-section-num" aria-hidden="true">06</div><h2 class="att-blog-section-title">Be Direct About Budget, Timing, and Decisions</h2><p>Share a realistic budget range if you have one. Budget is not just a negotiation number; it helps determine which outcomes, content, and features are possible in the first release. If you are not sure what is realistic, say so and ask for options at different levels. Our overview of <a href="/blog/how-much-does-a-website-cost-in-india" class="att-blog-inline-link">website costs in India</a> explains the factors that commonly affect a quote.</p><p>Include fixed dates and the reason behind them: a campaign launch, seasonal demand, event, or internal handover. Mention dependencies such as product data, legal review, photography, or a system vendor. Name the person who can approve direction and how feedback will be collected. A single coordinated response is easier to use than conflicting comments from several reviewers.</p></section>
 
@@ -43,15 +41,15 @@ onMounted(() => {
 
         <section class="att-blog-section" id="faq"><div class="att-blog-section-num" aria-hidden="true">08</div><h2 class="att-blog-section-title">Frequently Asked Questions</h2><div class="att-blog-faq-item"><h3 class="att-blog-faq-q">How long should a website brief be?</h3><p>Long enough to explain goals, audience, offer, content, requirements, timing, and open questions. A few well-organised pages are often sufficient; clarity matters more than length.</p></div><div class="att-blog-faq-item"><h3 class="att-blog-faq-q">Do I need to finalise every page before contacting a designer?</h3><p>No. Share your best current understanding and label uncertain decisions. A discovery conversation can help refine page structure and scope.</p></div><div class="att-blog-faq-item"><h3 class="att-blog-faq-q">What if I do not know my budget yet?</h3><p>Say that directly and ask for options with clear trade-offs. You can also share a maximum investment or the business result you need the project to support.</p></div></section>
 
-        <router-link to="/blog" class="att-blog-inline-link">← Back to all articles</router-link>
+        <router-link to="/blog" class="att-blog-inline-link">â† Back to all articles</router-link>
       </article>
     </div></div>
-    <div class="att-blog-cta"><div class="att-blog-cta-inner"><div class="att-blog-cta-text"><p class="att-blog-cta-title">Have a project taking shape?</p><p class="att-blog-cta-sub">Bring us your goals and open questions. We’ll help map out the next step.</p></div><a href="https://wa.me/917975859061/?text=I%27d%20like%20to%20discuss%20a%20website%20project." class="att-blog-cta-btn">Talk to Amortree <span aria-hidden="true">↗</span></a></div></div>
+    <div class="att-blog-cta"><div class="att-blog-cta-inner"><div class="att-blog-cta-text"><p class="att-blog-cta-title">Have a project taking shape?</p><p class="att-blog-cta-sub">Bring us your goals and open questions. Weâ€™ll help map out the next step.</p></div><a href="https://wa.me/917975859061/?text=I%27d%20like%20to%20discuss%20a%20website%20project." class="att-blog-cta-btn">Talk to Amortree <span aria-hidden="true">â†—</span></a></div></div>
   </main>
 </template>
 
 <style lang="scss" scoped>
-// ── Page shell ────────────────────────────────────────────────────────────────
+// â”€â”€ Page shell â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 .att-blog-page {
   background: #f8fafc;
   min-height: 100vh;
@@ -61,7 +59,7 @@ onMounted(() => {
   padding-top: 10vh;
   background-color: #06060a;
 }
-// ── Hero strip ────────────────────────────────────────────────────────────────
+// â”€â”€ Hero strip â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 .att-blog-hero {
   position: relative;
   overflow: hidden;
@@ -137,7 +135,7 @@ onMounted(() => {
 
 .att-blog-meta-sep { color: #1e293b; }
 
-// ── Body layout ───────────────────────────────────────────────────────────────
+// â”€â”€ Body layout â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 .att-blog-body {
   max-width: 1200px; margin: 0 auto;
   padding: 5rem 4rem;
@@ -155,7 +153,7 @@ onMounted(() => {
   @media (max-width: 1024px) { grid-template-columns: 1fr; gap: 2.5rem; }
 }
 
-// ── TOC sidebar ───────────────────────────────────────────────────────────────
+// â”€â”€ TOC sidebar â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 .att-blog-toc {
   position: sticky;
   top: calc(var(--header-height, 96px) + 24px);
@@ -192,7 +190,7 @@ onMounted(() => {
   }
 }
 
-// ── Content ────────────────────────────────────────────────────────────────
+// â”€â”€ Content â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 .att-blog-content {
   display: flex; flex-direction: column; gap: 0;
 }
@@ -301,7 +299,7 @@ onMounted(() => {
   margin: 0 0 0.4rem;
 }
 
-// ── Cost/stat breakdown chart card ──────────────────────────────────────────
+// â”€â”€ Cost/stat breakdown chart card â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 .att-chart-card {
   margin: 1.5rem 0 0.5rem;
   padding: 1.5rem 1.75rem 1.25rem;
@@ -317,7 +315,7 @@ onMounted(() => {
   width: 100%; height: auto; display: block;
 }
 
-// ── Info cards (3-up grid) ──────────────────────────────────────────────────
+// â”€â”€ Info cards (3-up grid) â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 .att-info-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -344,7 +342,7 @@ onMounted(() => {
   margin-bottom: 0.7rem;
 }
 
-// ── Process / priority timeline ─────────────────────────────────────────────
+// â”€â”€ Process / priority timeline â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 .att-timeline {
   position: relative;
   display: grid;
@@ -404,7 +402,7 @@ onMounted(() => {
   font-size: 0.82rem; line-height: 1.6; color: #64748b; margin: 0; max-width: none;
 }
 
-// ── CTA strip ─────────────────────────────────────────────────────────────────
+// â”€â”€ CTA strip â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 .att-blog-cta {
   background: #0f172a;
   border-top: 1px solid rgba(255,255,255,0.06);

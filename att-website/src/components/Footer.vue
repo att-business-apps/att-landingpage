@@ -27,6 +27,10 @@
         <img
           class="cta-visual-img"
           src="../assets/img/amorboy/laptop-poses-banner.png"
+          width="578"
+          height="530"
+          loading="lazy"
+          decoding="async"
           alt=""
         />
       </div>
@@ -46,6 +50,8 @@
           <img
             class="footer-logo"
             src="../assets/img/att-logo-light.svg"
+            width="546"
+            height="121"
             alt="amortree Tech"
           />
         </a>
@@ -57,7 +63,7 @@
         <ul class="footer-social" aria-label="Social media links">
           <li v-for="social in socialLinks" :key="social.name">
             <a :href="social.url" target="_blank" rel="noopener" :aria-label="social.name">
-              <i :class="social.icon" aria-hidden="true"></i>
+              <SocialIcon :name="social.name" />
             </a>
           </li>
         </ul>
@@ -160,15 +166,16 @@
 
 <script setup>
 import { useRoute } from "vue-router";
+import SocialIcon from "./SocialIcon.vue";
 
 const route = useRoute();
 const year = new Date().getFullYear();
 
 const socialLinks = [
-  { name: "LinkedIn", url: "https://in.linkedin.com/company/amortree-tech", icon: "icofont-linkedin" },
-  { name: "Dribbble", url: "https://dribbble.com/amortreetech", icon: "icofont-dribbble" },
-  { name: "Instagram", url: "https://www.instagram.com/amortreetech/", icon: "icofont-instagram" },
-  { name: "Facebook", url: "https://www.facebook.com/amortreetech/", icon: "icofont-facebook" },
+  { name: "LinkedIn", url: "https://in.linkedin.com/company/amortree-tech" },
+  { name: "Dribbble", url: "https://dribbble.com/amortreetech" },
+  { name: "Instagram", url: "https://www.instagram.com/amortreetech/" },
+  { name: "Facebook", url: "https://www.facebook.com/amortreetech/" },
 ];
 
 // Mirrors the services list in ServicesView.vue — keep in sync if that changes.

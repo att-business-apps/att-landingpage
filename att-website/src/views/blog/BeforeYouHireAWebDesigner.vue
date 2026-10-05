@@ -1,4 +1,4 @@
-<script setup>
+﻿<script setup>
 import { onMounted } from "vue";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -6,18 +6,7 @@ gsap.registerPlugin(ScrollTrigger);
 
 
 onMounted(() => {
-    document.title = "12 Questions to Ask Before You Hire a Web Designer | Amortree";
-
-    const description = document.querySelector('meta[name="description"]');
-
-    if (description) {
-        description.setAttribute(
-            "content",
-            "The right questions upfront save you from vague quotes, missed deadlines, and a site you don't actually own. Here are 12 to ask before you sign."
-        );
-    }
-
-    gsap.from(".att-blog-hero-eyebrow", { autoAlpha: 0, y: 16, duration: 0.6, ease: "power3.out", delay: 0.1 });
+gsap.from(".att-blog-hero-eyebrow", { autoAlpha: 0, y: 16, duration: 0.6, ease: "power3.out", delay: 0.1 });
     gsap.from(".att-blog-title", { autoAlpha: 0, y: 28, duration: 0.75, ease: "power3.out", delay: 0.2 });
     gsap.from(".att-blog-meta", { autoAlpha: 0, y: 14, duration: 0.6, ease: "power2.out", delay: 0.35 });
 
@@ -64,9 +53,9 @@ onMounted(() => {
                 <p class="att-blog-dek">The right questions upfront save you from vague quotes, missed deadlines, and a site you don't actually own. Ask these before you sign anything.</p>
                 <div class="att-blog-meta">
                     <span>Amortree Tech</span>
-                    <span class="att-blog-meta-sep" aria-hidden="true">·</span>
+                    <span class="att-blog-meta-sep" aria-hidden="true">Â·</span>
                     <span>Published <strong>Jan 3, 2026</strong></span>
-                    <span class="att-blog-meta-sep" aria-hidden="true">·</span>
+                    <span class="att-blog-meta-sep" aria-hidden="true">Â·</span>
                     <span>6 min read</span>
                 </div>
             </div>
@@ -95,14 +84,14 @@ onMounted(() => {
         <article class="att-blog-content">
 
           <div class="att-blog-intro att-blog-section">
-            <p>Most bad website projects don't go wrong because of a bad designer — they go wrong because of questions that never got asked. A vague scope, an unclear ownership clause, or a payment schedule that front-loads all the risk onto you can turn a straightforward project into a months-long headache.</p>
+            <p>Most bad website projects don't go wrong because of a bad designer - they go wrong because of questions that never got asked. A vague scope, an unclear ownership clause, or a payment schedule that front-loads all the risk onto you can turn a straightforward project into a months-long headache.</p>
             <p>Below are 12 questions worth asking before you hand anyone a deposit, grouped into the four areas that actually determine whether a project goes smoothly.</p>
           </div>
 
           <section class="att-blog-section" id="why-ask">
             <div class="att-blog-section-num" aria-hidden="true">01</div>
             <h2 class="att-blog-section-title">Why These Questions Matter</h2>
-            <p>A quote is just a number until you know what's actually included. Two designers can give you the exact same price for very different scopes of work — one might include three rounds of revisions and full source files, the other might include one round and a platform you can never leave.</p>
+            <p>A quote is just a number until you know what's actually included. Two designers can give you the exact same price for very different scopes of work - one might include three rounds of revisions and full source files, the other might include one round and a platform you can never leave.</p>
             <p>Asking these questions isn't about being difficult. A designer who's run projects professionally will have clear, confident answers ready. Hesitation or vagueness on any of these is itself useful information.</p>
           </section>
 
@@ -110,9 +99,9 @@ onMounted(() => {
             <div class="att-blog-section-num" aria-hidden="true">02</div>
             <h2 class="att-blog-section-title">Process &amp; Timeline</h2>
             <ul class="att-blog-list">
-              <li><strong>1. What does your process look like, start to finish?</strong> — a clear answer usually includes discovery, wireframes, design, development, and QA as distinct stages.</li>
-              <li><strong>2. What's the realistic timeline, and what could delay it?</strong> — good designers will flag that late content or slow feedback from you is the most common cause of delays, not just their own workload.</li>
-              <li><strong>3. How many revision rounds are included, and what happens beyond that?</strong> — unlimited revisions sounds generous but often signals a vague scope; two to three defined rounds is a healthier structure for both sides.</li>
+              <li><strong>1. What does your process look like, start to finish?</strong> - a clear answer usually includes discovery, wireframes, design, development, and QA as distinct stages.</li>
+              <li><strong>2. What's the realistic timeline, and what could delay it?</strong> - good designers will flag that late content or slow feedback from you is the most common cause of delays, not just their own workload.</li>
+              <li><strong>3. How many revision rounds are included, and what happens beyond that?</strong> - unlimited revisions sounds generous but often signals a vague scope; two to three defined rounds is a healthier structure for both sides.</li>
             </ul>
           </section>
 
@@ -120,9 +109,9 @@ onMounted(() => {
             <div class="att-blog-section-num" aria-hidden="true">03</div>
             <h2 class="att-blog-section-title">Ownership &amp; Rights</h2>
             <ul class="att-blog-list">
-              <li><strong>4. Do I own the final files and code outright?</strong> — you should be able to walk away with everything, even if you never work with this person again.</li>
-              <li><strong>5. Is the site built on a platform I control, or one that locks me to you?</strong> — a site built on a proprietary builder can mean every future change has to go through the original designer.</li>
-              <li><strong>6. Who registers the domain and hosting, and whose name is it under?</strong> — always insist these are registered in your name, not the agency's, even if they manage it for you.</li>
+              <li><strong>4. Do I own the final files and code outright?</strong> - you should be able to walk away with everything, even if you never work with this person again.</li>
+              <li><strong>5. Is the site built on a platform I control, or one that locks me to you?</strong> - a site built on a proprietary builder can mean every future change has to go through the original designer.</li>
+              <li><strong>6. Who registers the domain and hosting, and whose name is it under?</strong> - always insist these are registered in your name, not the agency's, even if they manage it for you.</li>
             </ul>
           </section>
 
@@ -130,9 +119,9 @@ onMounted(() => {
             <div class="att-blog-section-num" aria-hidden="true">04</div>
             <h2 class="att-blog-section-title">Cost &amp; Payment</h2>
             <ul class="att-blog-list">
-              <li><strong>7. What exactly is included in this price?</strong> — ask for a written breakdown, not just a total figure.</li>
-              <li><strong>8. What's not included, and what would trigger an extra charge?</strong> — copywriting, stock photography, and extra pages are common add-ons that surprise people later.</li>
-              <li><strong>9. What's the payment schedule?</strong> — a healthy structure splits payment across milestones (deposit, midpoint, delivery) rather than 100% upfront.</li>
+              <li><strong>7. What exactly is included in this price?</strong> - ask for a written breakdown, not just a total figure.</li>
+              <li><strong>8. What's not included, and what would trigger an extra charge?</strong> - copywriting, stock photography, and extra pages are common add-ons that surprise people later.</li>
+              <li><strong>9. What's the payment schedule?</strong> - a healthy structure splits payment across milestones (deposit, midpoint, delivery) rather than 100% upfront.</li>
             </ul>
           </section>
 
@@ -140,16 +129,16 @@ onMounted(() => {
             <div class="att-blog-section-num" aria-hidden="true">05</div>
             <h2 class="att-blog-section-title">Support &amp; Maintenance</h2>
             <ul class="att-blog-list">
-              <li><strong>10. What happens after launch if something breaks?</strong> — clarify whether a short post-launch support window is included, and what it costs after that.</li>
-              <li><strong>11. Can I make small edits myself, or do I need to come back to you every time?</strong> — for many businesses, a site they can lightly self-edit is worth more than one that looks marginally sharper but requires a developer for every text change.</li>
-              <li><strong>12. Do you offer ongoing plans for updates, SEO, or new pages?</strong> — not something you need to commit to now, but worth knowing if it's an option later.</li>
+              <li><strong>10. What happens after launch if something breaks?</strong> - clarify whether a short post-launch support window is included, and what it costs after that.</li>
+              <li><strong>11. Can I make small edits myself, or do I need to come back to you every time?</strong> - for many businesses, a site they can lightly self-edit is worth more than one that looks marginally sharper but requires a developer for every text change.</li>
+              <li><strong>12. Do you offer ongoing plans for updates, SEO, or new pages?</strong> - not something you need to commit to now, but worth knowing if it's an option later.</li>
             </ul>
           </section>
 
           <section class="att-blog-section" id="red-flags">
             <div class="att-blog-section-num" aria-hidden="true">06</div>
             <h2 class="att-blog-section-title">Answers That Should Worry You</h2>
-            <p>Some answers are worse than others. Here's what a weak answer to each category tends to sound like — and what a stronger answer looks like instead:</p>
+            <p>Some answers are worse than others. Here's what a weak answer to each category tends to sound like - and what a stronger answer looks like instead:</p>
             <div class="att-blog-table-wrap">
               <table class="att-blog-table">
                 <thead>
@@ -184,7 +173,7 @@ onMounted(() => {
           <section class="att-blog-section" id="the-call">
             <div class="att-blog-section-num" aria-hidden="true">07</div>
             <h2 class="att-blog-section-title">Running the Conversation</h2>
-            <p>You don't need to interrogate anyone — spreading these questions naturally across a first call or email thread works better than reading off a checklist:</p>
+            <p>You don't need to interrogate anyone - spreading these questions naturally across a first call or email thread works better than reading off a checklist:</p>
 
             <div class="att-timeline">
               <div class="att-timeline-track" aria-hidden="true"></div>
@@ -194,7 +183,7 @@ onMounted(() => {
                 <div class="att-timeline-body">
                   <div class="att-timeline-title">Before the call</div>
                   <div class="att-timeline-days">Prep</div>
-                  <p>Write down what the site needs to do — bookings, enquiries, credibility — so your questions have context.</p>
+                  <p>Write down what the site needs to do - bookings, enquiries, credibility - so your questions have context.</p>
                 </div>
               </div>
 
@@ -203,7 +192,7 @@ onMounted(() => {
                 <div class="att-timeline-body">
                   <div class="att-timeline-title">During the call</div>
                   <div class="att-timeline-days">Ask &amp; listen</div>
-                  <p>Lead with process and timeline questions first — they're the easiest to ask naturally and reveal a lot about how organized the designer is.</p>
+                  <p>Lead with process and timeline questions first - they're the easiest to ask naturally and reveal a lot about how organized the designer is.</p>
                 </div>
               </div>
 
@@ -221,7 +210,7 @@ onMounted(() => {
                 <div class="att-timeline-body">
                   <div class="att-timeline-title">Before you sign</div>
                   <div class="att-timeline-days">Final check</div>
-                  <p>Re-read the scope, payment schedule, and ownership clause one more time — this is the cheapest moment to catch a problem.</p>
+                  <p>Re-read the scope, payment schedule, and ownership clause one more time - this is the cheapest moment to catch a problem.</p>
                 </div>
               </div>
             </div>
@@ -253,7 +242,7 @@ onMounted(() => {
 
             <div class="att-blog-faq-item">
               <h3 class="att-blog-faq-q">Is it rude to ask about ownership and contracts upfront?</h3>
-              <p>No — any designer running a real business expects these questions and will have straightforward answers. Hesitation here is more telling than the question itself.</p>
+              <p>No - any designer running a real business expects these questions and will have straightforward answers. Hesitation here is more telling than the question itself.</p>
             </div>
             <div class="att-blog-faq-item">
               <h3 class="att-blog-faq-q">What if a designer refuses to put answers in writing?</h3>
@@ -274,7 +263,7 @@ onMounted(() => {
       <div class="att-blog-cta-inner">
         <div class="att-blog-cta-text">
           <p class="att-blog-cta-title">Want a straight answer to all 12?</p>
-          <p class="att-blog-cta-sub">Get a free audit and a clear, written quote — no vague ranges, no pressure.</p>
+          <p class="att-blog-cta-sub">Get a free audit and a clear, written quote - no vague ranges, no pressure.</p>
         </div>
         <a href="https://wa.me/917975859061/?text=I%27d%20like%20to%20claim%20my%20free%20audit." class="att-blog-cta-btn">
           Claim Your Free Audit
@@ -289,7 +278,7 @@ onMounted(() => {
 </template>
 
 <style lang="scss" scoped>
-// ── Page shell ────────────────────────────────────────────────────────────────
+// â”€â”€ Page shell â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 .att-blog-page {
   background: #f8fafc;
   min-height: 100vh;
@@ -299,7 +288,7 @@ onMounted(() => {
   padding-top: 10vh;
   background-color: #06060a;
 }
-// ── Hero strip ────────────────────────────────────────────────────────────────
+// â”€â”€ Hero strip â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 .att-blog-hero {
   position: relative;
   overflow: hidden;
@@ -375,7 +364,7 @@ onMounted(() => {
 
 .att-blog-meta-sep { color: #1e293b; }
 
-// ── Body layout ───────────────────────────────────────────────────────────────
+// â”€â”€ Body layout â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 .att-blog-body {
   max-width: 1200px; margin: 0 auto;
   padding: 5rem 4rem;
@@ -393,7 +382,7 @@ onMounted(() => {
   @media (max-width: 1024px) { grid-template-columns: 1fr; gap: 2.5rem; }
 }
 
-// ── TOC sidebar ───────────────────────────────────────────────────────────────
+// â”€â”€ TOC sidebar â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 .att-blog-toc {
   position: sticky;
   top: calc(var(--header-height, 96px) + 24px);
@@ -430,7 +419,7 @@ onMounted(() => {
   }
 }
 
-// ── Content ──────────────────────────────────────────────────────────────────
+// â”€â”€ Content â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 .att-blog-content {
   display: flex; flex-direction: column; gap: 0;
 }
@@ -532,7 +521,7 @@ onMounted(() => {
   margin: 0 0 0.4rem;
 }
 
-// ── Chart card (kept for structural consistency across blog pages) ─────────
+// â”€â”€ Chart card (kept for structural consistency across blog pages) â”€â”€â”€â”€â”€â”€â”€â”€â”€
 .att-chart-card {
   margin: 1.5rem 0 0.5rem;
   padding: 1.5rem 1.75rem 1.25rem;
@@ -548,7 +537,7 @@ onMounted(() => {
   width: 100%; height: auto; display: block;
 }
 
-// ── Info cards ───────────────────────────────────────────────────────────────
+// â”€â”€ Info cards â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 .att-info-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -575,7 +564,7 @@ onMounted(() => {
   margin-bottom: 0.7rem;
 }
 
-// ── Hiring-conversation timeline ────────────────────────────────────────────
+// â”€â”€ Hiring-conversation timeline â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 .att-timeline {
   position: relative;
   display: grid;
@@ -635,7 +624,7 @@ onMounted(() => {
   font-size: 0.82rem; line-height: 1.6; color: #64748b; margin: 0; max-width: none;
 }
 
-// ── CTA strip ─────────────────────────────────────────────────────────────────
+// â”€â”€ CTA strip â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 .att-blog-cta {
   background: #0f172a;
   border-top: 1px solid rgba(255,255,255,0.06);

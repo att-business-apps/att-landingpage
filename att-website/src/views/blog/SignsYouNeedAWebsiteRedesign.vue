@@ -1,4 +1,4 @@
-<script setup>
+﻿<script setup>
 import { onMounted } from "vue";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -6,18 +6,7 @@ gsap.registerPlugin(ScrollTrigger);
 
 
 onMounted(() => {
-    document.title = "7 Signs Your Website Is Quietly Costing You Customers | Amortree";
-
-    const description = document.querySelector('meta[name="description"]');
-
-    if (description) {
-        description.setAttribute(
-            "content",
-            "Slow load times and confusing navigation don't just annoy visitors — they show up directly in your enquiry numbers. Here's what to check first."
-        );
-    }
-
-    gsap.from(".att-blog-hero-eyebrow", { autoAlpha: 0, y: 16, duration: 0.6, ease: "power3.out", delay: 0.1 });
+gsap.from(".att-blog-hero-eyebrow", { autoAlpha: 0, y: 16, duration: 0.6, ease: "power3.out", delay: 0.1 });
     gsap.from(".att-blog-title", { autoAlpha: 0, y: 28, duration: 0.75, ease: "power3.out", delay: 0.2 });
     gsap.from(".att-blog-meta", { autoAlpha: 0, y: 14, duration: 0.6, ease: "power2.out", delay: 0.35 });
 
@@ -61,12 +50,12 @@ onMounted(() => {
                     Strategy
                 </div>
                 <h1 class="att-blog-title">7 Signs Your Website Is Quietly <span class="att-blog-title-accent">Costing</span> You Customers</h1>
-                <p class="att-blog-dek">Slow load times and confusing navigation don't just annoy visitors — they show up directly in your enquiry numbers. Here's what to check first.</p>
+                <p class="att-blog-dek">Slow load times and confusing navigation don't just annoy visitors - they show up directly in your enquiry numbers. Here's what to check first.</p>
                 <div class="att-blog-meta">
                     <span>Amortree Tech</span>
-                    <span class="att-blog-meta-sep" aria-hidden="true">·</span>
+                    <span class="att-blog-meta-sep" aria-hidden="true">Â·</span>
                     <span>Published <strong>May 12, 2026</strong></span>
-                    <span class="att-blog-meta-sep" aria-hidden="true">·</span>
+                    <span class="att-blog-meta-sep" aria-hidden="true">Â·</span>
                     <span>6 min read</span>
                 </div>
             </div>
@@ -95,14 +84,14 @@ onMounted(() => {
         <article class="att-blog-content">
 
           <div class="att-blog-intro att-blog-section">
-            <p>Most businesses don't notice their website is underperforming — they just notice that enquiries have quietly dropped, or that the phone doesn't ring as much as it used to. The website rarely gets blamed, because it's still technically "up." But a site can be online and still be losing you customers every single day.</p>
+            <p>Most businesses don't notice their website is underperforming - they just notice that enquiries have quietly dropped, or that the phone doesn't ring as much as it used to. The website rarely gets blamed, because it's still technically "up." But a site can be online and still be losing you customers every single day.</p>
             <p>Here are the seven most common culprits, roughly in order of how much damage they tend to do.</p>
           </div>
 
           <section class="att-blog-section" id="short-answer">
             <div class="att-blog-section-num" aria-hidden="true">01</div>
             <h2 class="att-blog-section-title">The Short Answer</h2>
-            <p>If your site is slow to load, hard to navigate on a phone, or doesn't make it obvious what to do next, you're losing visitors before they ever become leads — and it's usually invisible in your analytics unless you're looking for it specifically.</p>
+            <p>If your site is slow to load, hard to navigate on a phone, or doesn't make it obvious what to do next, you're losing visitors before they ever become leads - and it's usually invisible in your analytics unless you're looking for it specifically.</p>
             <p>None of these issues require a full rebuild to fix. Most are fixable in days, not months, once you know what to look for.</p>
           </section>
 
@@ -183,7 +172,7 @@ onMounted(() => {
                   <text x="350" y="188" font-size="11" font-weight="700" fill="#475569">5 seconds</text>
                   <text x="510" y="188" font-size="11" font-weight="700" fill="#475569">10 seconds</text>
                 </g>
-                <text x="0" y="212" font-size="12" fill="#64748b">Directional figures based on typical mobile browsing behavior —</text>
+                <text x="0" y="212" font-size="12" fill="#64748b">Directional figures based on typical mobile browsing behavior -</text>
                 <text x="0" y="228" font-size="12" fill="#64748b">the pattern holds even if your exact numbers differ.</text>
               </svg>
             </figure>
@@ -194,11 +183,11 @@ onMounted(() => {
           <section class="att-blog-section" id="navigation">
             <div class="att-blog-section-num" aria-hidden="true">04</div>
             <h2 class="att-blog-section-title">Fixing Confusing Navigation</h2>
-            <p>Navigation problems are sneaky because they feel obvious to you — you built the site, so you already know where everything is. A first-time visitor doesn't have that advantage.</p>
+            <p>Navigation problems are sneaky because they feel obvious to you - you built the site, so you already know where everything is. A first-time visitor doesn't have that advantage.</p>
             <ul class="att-blog-list">
-              <li><strong>Keep the main menu short</strong> — five to seven items is a reasonable ceiling before it starts overwhelming people.</li>
-              <li><strong>Use labels people actually search for</strong> — "Services" beats a clever but unclear label like "What We Do."</li>
-              <li><strong>Make the path to contact obvious from anywhere</strong> — a visitor shouldn't have to hunt for how to reach you.</li>
+              <li><strong>Keep the main menu short</strong> - five to seven items is a reasonable ceiling before it starts overwhelming people.</li>
+              <li><strong>Use labels people actually search for</strong> - "Services" beats a clever but unclear label like "What We Do."</li>
+              <li><strong>Make the path to contact obvious from anywhere</strong> - a visitor shouldn't have to hunt for how to reach you.</li>
             </ul>
           </section>
 
@@ -206,20 +195,20 @@ onMounted(() => {
             <div class="att-blog-section-num" aria-hidden="true">05</div>
             <h2 class="att-blog-section-title">Mobile Experience Gaps</h2>
             <p>For most local and service businesses, the majority of visitors are on a phone. A site that was only ever really tested on a laptop tends to have problems that don't show up until you check it on an actual device: text too small to read, buttons too close together to tap accurately, or forms that are painful to fill in on a small screen.</p>
-            <p>This is worth checking directly on your own phone, not just by resizing a desktop browser window — the two experiences aren't the same.</p>
+            <p>This is worth checking directly on your own phone, not just by resizing a desktop browser window - the two experiences aren't the same.</p>
           </section>
 
           <section class="att-blog-section" id="cta">
             <div class="att-blog-section-num" aria-hidden="true">06</div>
             <h2 class="att-blog-section-title">Weak or Missing Calls-to-Action</h2>
-            <p>A visitor who's interested but doesn't see an obvious next step will simply leave. Every page that matters should answer, at a glance, "what do I do now?" — whether that's calling, messaging on WhatsApp, booking a slot, or filling in a short form.</p>
+            <p>A visitor who's interested but doesn't see an obvious next step will simply leave. Every page that matters should answer, at a glance, "what do I do now?" - whether that's calling, messaging on WhatsApp, booking a slot, or filling in a short form.</p>
             <p>If your call-to-action is buried below several paragraphs of text, or written in vague language like "Learn More" with no context, you're likely losing people who were genuinely ready to act.</p>
           </section>
 
           <section class="att-blog-section" id="stale-content">
             <div class="att-blog-section-num" aria-hidden="true">07</div>
             <h2 class="att-blog-section-title">Outdated Content &amp; Design</h2>
-            <p>An outdated design signals something to visitors whether you intend it to or not — it quietly raises the question of whether the business itself is still active or keeping up. The same goes for content: old prices, services you no longer offer, or a "latest news" section frozen two years in the past all chip away at trust at exactly the moment someone's deciding whether to reach out.</p>
+            <p>An outdated design signals something to visitors whether you intend it to or not - it quietly raises the question of whether the business itself is still active or keeping up. The same goes for content: old prices, services you no longer offer, or a "latest news" section frozen two years in the past all chip away at trust at exactly the moment someone's deciding whether to reach out.</p>
           </section>
 
           <section class="att-blog-section" id="quick-audit">
@@ -244,7 +233,7 @@ onMounted(() => {
                 <div class="att-timeline-body">
                   <div class="att-timeline-title">Find the contact path</div>
                   <div class="att-timeline-days">2 min</div>
-                  <p>Pretend you're a first-time visitor — how many taps does it take to reach a way to contact you?</p>
+                  <p>Pretend you're a first-time visitor - how many taps does it take to reach a way to contact you?</p>
                 </div>
               </div>
 
@@ -274,7 +263,7 @@ onMounted(() => {
 
             <div class="att-blog-faq-item">
               <h3 class="att-blog-faq-q">Do I need a full redesign, or can I fix these one at a time?</h3>
-              <p>Most of these issues — speed, navigation labels, weak calls-to-action, stale content — can be fixed individually without a full rebuild. A redesign becomes worth it when several of these compound together or the underlying platform itself is limiting you.</p>
+              <p>Most of these issues - speed, navigation labels, weak calls-to-action, stale content - can be fixed individually without a full rebuild. A redesign becomes worth it when several of these compound together or the underlying platform itself is limiting you.</p>
             </div>
             <div class="att-blog-faq-item">
               <h3 class="att-blog-faq-q">How do I know if slow load time is actually costing me leads?</h3>
@@ -310,7 +299,7 @@ onMounted(() => {
 </template>
 
 <style lang="scss" scoped>
-// ── Page shell ────────────────────────────────────────────────────────────────
+// â”€â”€ Page shell â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 .att-blog-page {
   background: #f8fafc;
   min-height: 100vh;
@@ -320,7 +309,7 @@ onMounted(() => {
   padding-top: 10vh;
   background-color: #06060a;
 }
-// ── Hero strip ────────────────────────────────────────────────────────────────
+// â”€â”€ Hero strip â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 .att-blog-hero {
   position: relative;
   overflow: hidden;
@@ -396,7 +385,7 @@ onMounted(() => {
 
 .att-blog-meta-sep { color: #1e293b; }
 
-// ── Body layout ───────────────────────────────────────────────────────────────
+// â”€â”€ Body layout â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 .att-blog-body {
   max-width: 1200px; margin: 0 auto;
   padding: 5rem 4rem;
@@ -414,7 +403,7 @@ onMounted(() => {
   @media (max-width: 1024px) { grid-template-columns: 1fr; gap: 2.5rem; }
 }
 
-// ── TOC sidebar ───────────────────────────────────────────────────────────────
+// â”€â”€ TOC sidebar â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 .att-blog-toc {
   position: sticky;
   top: calc(var(--header-height, 96px) + 24px);
@@ -451,7 +440,7 @@ onMounted(() => {
   }
 }
 
-// ── Content ──────────────────────────────────────────────────────────────────
+// â”€â”€ Content â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 .att-blog-content {
   display: flex; flex-direction: column; gap: 0;
 }
@@ -553,7 +542,7 @@ onMounted(() => {
   margin: 0 0 0.4rem;
 }
 
-// ── Bounce-rate chart card ───────────────────────────────────────────────────
+// â”€â”€ Bounce-rate chart card â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 .att-chart-card {
   margin: 1.5rem 0 0.5rem;
   padding: 1.5rem 1.75rem 1.25rem;
@@ -569,7 +558,7 @@ onMounted(() => {
   width: 100%; height: auto; display: block;
 }
 
-// ── Info cards (kept for structural consistency across blog pages) ─────────
+// â”€â”€ Info cards (kept for structural consistency across blog pages) â”€â”€â”€â”€â”€â”€â”€â”€â”€
 .att-info-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -596,7 +585,7 @@ onMounted(() => {
   margin-bottom: 0.7rem;
 }
 
-// ── Self-audit timeline ──────────────────────────────────────────────────────
+// â”€â”€ Self-audit timeline â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 .att-timeline {
   position: relative;
   display: grid;
@@ -656,7 +645,7 @@ onMounted(() => {
   font-size: 0.82rem; line-height: 1.6; color: #64748b; margin: 0; max-width: none;
 }
 
-// ── CTA strip ─────────────────────────────────────────────────────────────────
+// â”€â”€ CTA strip â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 .att-blog-cta {
   background: #0f172a;
   border-top: 1px solid rgba(255,255,255,0.06);

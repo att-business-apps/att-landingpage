@@ -15,6 +15,8 @@ const homePage = ref(null);
 let gsapContext;
 let pointerCleanup;
 let structuredDataScript;
+let motionIdleCallback;
+let motionFallbackTimer;
 
 // ─── Testimonials carousel ───────────────────────────────────────────
 const testimonials = [
@@ -677,11 +679,23 @@ function animateHomePage() {
 onMounted(async () => {
   injectStructuredData();
   await nextTick();
-  animateHomePage();
-  initFaqTabs();
+  const initMotion = () => {
+    animateHomePage();
+    initFaqTabs();
+  };
+
+  if ("requestIdleCallback" in window) {
+    motionIdleCallback = window.requestIdleCallback(initMotion, { timeout: 1500 });
+  } else {
+    motionFallbackTimer = window.setTimeout(initMotion, 250);
+  }
 });
 
 onBeforeUnmount(() => {
+  if (motionIdleCallback !== undefined && "cancelIdleCallback" in window) {
+    window.cancelIdleCallback(motionIdleCallback);
+  }
+  window.clearTimeout(motionFallbackTimer);
   pointerCleanup?.();
   gsapContext?.revert();
   structuredDataScript?.remove();
@@ -789,10 +803,10 @@ onBeforeUnmount(() => {
 
       <!-- Shapes (kept for existing CSS compatibility) -->
       <ul class="list-unstyled shape-group-banner" aria-hidden="true">
-        <li class="shape shape-1"><img src="../assets/img/shapes/bubble-39.png" alt="" /></li>
-        <li class="shape shape-2"><img src="../assets/img/shapes/bubble-38.png" alt="" /></li>
-        <li class="shape shape-6"><img src="../assets/img/shapes/bubble-40.png" alt="" /></li>
-        <li class="shape shape-7"><img src="../assets/img/shapes/bubble-41.png" alt="" /></li>
+        <li class="shape shape-1"><img src="../assets/img/shapes/bubble-39.png" alt="" width="501" height="212" /></li>
+        <li class="shape shape-2"><img src="../assets/img/shapes/bubble-38.png" alt="" width="339" height="370" /></li>
+        <li class="shape shape-6"><img src="../assets/img/shapes/bubble-40.png" alt="" width="25" height="27" /></li>
+        <li class="shape shape-7"><img src="../assets/img/shapes/bubble-41.png" alt="" width="39" height="43" /></li>
       </ul>
     </div>
 
@@ -1167,7 +1181,7 @@ onBeforeUnmount(() => {
           </div>
           <div class="lg:col-span-6 relative">
             <div class="relative rounded-[3rem] overflow-hidden shadow-2xl shadow-charcoal-200/50 group border border-charcoal-100">
-              <img alt="Data analytics dashboard"
+              <img alt="Data analytics dashboard" loading="lazy" decoding="async" width="2408" height="1872"
                 class="w-full aspect-[4/5] object-cover group-hover:scale-105 transition-transform duration-1000 mob-stat"
                 src="../assets/img/project/c4/sa-ad.png" />
               <div class="absolute inset-0 bg-gradient-to-t from-white via-transparent to-transparent"></div>
@@ -1186,7 +1200,7 @@ onBeforeUnmount(() => {
                   "Amortree is a very professional and end-to-end service provider. They have good understanding of the clients needs and work in a timely and efficient manner."
                 </p>
                 <div class="flex items-center gap-4">
-                  <img alt="Client" class="w-14 h-14" src="../assets/img/project/c4/icon-sa.svg" />
+                  <img alt="Client" class="w-14 h-14" src="../assets/img/project/c4/icon-sa.svg" width="56" height="56" loading="lazy" decoding="async" />
                   <div>
                     <h5 class="text-base font-black text-secondary mb-0">Menaka Krishna</h5>
                     <small class="text-xs text-secondary mb-0">CEO @ SteadyAsset</small>
@@ -1310,7 +1324,7 @@ onBeforeUnmount(() => {
             </a>
           </div>
           <div class="att-cs-preview">
-            <img src="../assets/img/project/c4/project-thum-sa.png" alt="SteadyAsset" />
+            <img src="../assets/img/project/c4/project-thum-sa.png" alt="SteadyAsset" width="1899" height="1165" loading="lazy" decoding="async" />
           </div>
         </div>
         <hr class="att-cs-divider" />
@@ -1337,7 +1351,7 @@ onBeforeUnmount(() => {
             </a>
           </div>
           <div class="att-cs-preview">
-            <img src="../assets/img/project/c7/project-thum-sd.png" alt="SaveDesk" />
+            <img src="../assets/img/project/c7/project-thum-sd.png" alt="SaveDesk" width="1899" height="1165" loading="lazy" decoding="async" />
           </div>
         </div>
         <hr class="att-cs-divider" />
@@ -1364,7 +1378,7 @@ onBeforeUnmount(() => {
             </a>
           </div>
           <div class="att-cs-preview">
-            <img src="../assets/img/project/c2/project-thum-sc.png" alt="Solved Cube IT Solutions" />
+            <img src="../assets/img/project/c2/project-thum-sc.png" alt="Solved Cube IT Solutions" width="1898" height="1165" loading="lazy" decoding="async" />
           </div>
         </div>
         <hr class="att-cs-divider" />
@@ -1391,7 +1405,7 @@ onBeforeUnmount(() => {
             </a>
           </div>
           <div class="att-cs-preview">
-            <img src="../assets/img/project/c1/project-thum-uaeLinks.png" alt="UAE Links" />
+            <img src="../assets/img/project/c1/project-thum-uaeLinks.png" alt="UAE Links" width="1898" height="1165" loading="lazy" decoding="async" />
           </div>
         </div>
       </div>
@@ -1454,7 +1468,7 @@ onBeforeUnmount(() => {
               <!-- Author -->
               <div class="tc-author">
                 <div class="tc-author-logo">
-                  <img :src="testimonials[tcActiveIndex].logo" :alt="testimonials[tcActiveIndex].author" />
+                  <img :src="testimonials[tcActiveIndex].logo" :alt="testimonials[tcActiveIndex].author" width="56" height="56" loading="lazy" decoding="async" />
                 </div>
                 <div class="tc-author-info">
                   <strong>{{ testimonials[tcActiveIndex].author }}</strong>
@@ -1501,7 +1515,7 @@ onBeforeUnmount(() => {
             :class="{ 'tc-strip-item--active': i === tcActiveIndex }"
             @click="tcGoTo(i); tcStopAuto(); tcStartAuto()"
           >
-            <img :src="t.logo" :alt="t.author" />
+            <img :src="t.logo" :alt="t.author" width="56" height="56" loading="lazy" decoding="async" />
             <span>{{ t.author.split(',')[0] }}</span>
           </button>
         </div>
