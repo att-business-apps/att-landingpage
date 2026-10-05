@@ -45,9 +45,9 @@ For local development, copy `.env.example` to `.env.local` and enter the same va
 
 ## Workbook tabs
 
-- **Leads** — website submissions, CRM stage, assignment, and private follow-up notes.
-- **Lead ID** — human-readable sequential ID shown in the CRM; **Record Key** is the internal key used to link form submissions and CRM updates.
-- **CRM Access** — staff email, display name, role, and enabled flag.
-- **Events** — WhatsApp, booking, and modal click events.
+- **Leads** - website submissions, CRM stage, assignment, and private follow-up notes.
+- **Lead ID** - human-readable sequential ID shown in the CRM; **Record Key** is the internal key used to link form submissions and CRM updates.
+- **CRM Access** - staff email, display name, role, and enabled flag.
+- **Events** - WhatsApp, booking, and modal click events.
 
 Admins see every lead and can assign a lead to any enabled CRM user. Agents receive only rows assigned to their exact email; this filter is enforced in Apps Script on every read and update. An agent cannot reassign leads or import a CSV. CSV import is available to admins in the CRM UI.

@@ -1,5 +1,5 @@
 /**
- * Amortree Leads CRM — Google Apps Script backend.
+ * Amortree Leads CRM - Google Apps Script backend.
  *
  * First-time setup:
  *   1. Create a standalone Apps Script project and add Code.gs + CRM.html.

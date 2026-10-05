@@ -232,7 +232,7 @@ onBeforeUnmount(() => {
 
 <style scoped>
 /*
-  Desktop active state — 50% bottom underline only.
+  Desktop active state - 50% bottom underline only.
   Overrides the global SCSS which sets both ::before (bottom) and ::after (top)
   to width:100% on .active. We suppress ::after and lock ::before to 50%.
 */
@@ -245,7 +245,7 @@ onBeforeUnmount(() => {
   opacity: 1 !important;
 }
 
-/* Kill the top line (::after) on active — only the bottom 50% shows */
+/* Kill the top line (::after) on active - only the bottom 50% shows */
 .mainmenu > li > a.active::after {
   width: 0 !important;
   opacity: 0 !important;
@@ -336,7 +336,7 @@ onBeforeUnmount(() => {
   }
 }
 
-/* ── Left panel — nav columns ───────────────────────────────────────── */
+/* ── Left panel - nav columns ───────────────────────────────────────── */
 .amor-fsmenu-panel-left {
   background: #000000;
   border-right: 1px solid rgba(255, 255, 255, 0.06);
@@ -495,7 +495,7 @@ onBeforeUnmount(() => {
   }
 }
 
-/* ── Right panel — CTA ───────────────────────────────────────────────── */
+/* ── Right panel - CTA ───────────────────────────────────────────────── */
 .amor-fsmenu-panel-right {
   background: radial-gradient(120% 100% at 100% 0%, rgba(228, 197, 53, 0.14), transparent 60%), #0b0b0d;
 }

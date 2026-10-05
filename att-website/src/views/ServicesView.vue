@@ -58,7 +58,7 @@ const services = [
     icon: "hub",
     tag: "Growth",
     title: "Lead Generation",
-    desc: "Build a predictable pipeline of qualified leads—not just website traffic.",
+    desc: "Build a predictable pipeline of qualified leads-not just website traffic.",
     bestFor: ["B2B Companies", "Service Businesses"],
     href: "/lead-generation",
   },
@@ -228,7 +228,7 @@ onBeforeUnmount(() => {
       </h2>
       <p class="svc-cta-sub">
         Most projects combine two or three of the above. Tell us where you're stuck and we'll
-        recommend a scope — no obligation.
+        recommend a scope - no obligation.
       </p>
       <div class="d-flex justify-content-center flex-wrap gap-3 mt-5">
         <a

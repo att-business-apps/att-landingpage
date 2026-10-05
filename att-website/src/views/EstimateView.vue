@@ -114,7 +114,7 @@ async function submitEstimate() {
   });
 
   submitted.value = true;
-  // Direct navigation, not window.open — wa.me deep links are far more reliable
+  // Direct navigation, not window.open - wa.me deep links are far more reliable
   // this way on mobile browsers and don't get caught by popup blockers.
   window.location.href = url;
 }
@@ -189,7 +189,7 @@ onBeforeUnmount(() => {
                     </ul>
                 <div class="section-heading heading-left">
                     <h1 class="title h2 mb-4">Tell Us About Your Project. <span class="text-ly">We'll Reply on WhatsApp</span></h1>
-                    <p>Fill in a few details below and hit submit — your project brief opens directly in WhatsApp, ready to send. No back-and-forth email threads, no waiting on a contact form.</p>
+                    <p>Fill in a few details below and hit submit - your project brief opens directly in WhatsApp, ready to send. No back-and-forth email threads, no waiting on a contact form.</p>
                 </div>
             </div>
             <div class="banner-thumbnail " style="right: 200px;bottom: 80px;">
@@ -312,7 +312,7 @@ onBeforeUnmount(() => {
             </button>
 
             <p class="est-disclaimer">
-              Submitting takes you straight to WhatsApp with your details pre-filled — you'll
+              Submitting takes you straight to WhatsApp with your details pre-filled - you'll
               just need to hit send. We typically reply within a few hours during business days.
             </p>
           </form>
@@ -346,11 +346,11 @@ onBeforeUnmount(() => {
         </div>
         <div class="est-trust-item">
           <span class="material-symbols-outlined">lock</span>
-          <span>Your details go straight to us — no third-party storage</span>
+          <span>Your details go straight to us - no third-party storage</span>
         </div>
         <div class="est-trust-item">
           <span class="material-symbols-outlined">price_check</span>
-          <span>No fixed packages — scope drives price, not the other way round</span>
+          <span>No fixed packages - scope drives price, not the other way round</span>
         </div>
       </div>
     </div>

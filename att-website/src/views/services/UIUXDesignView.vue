@@ -9,7 +9,7 @@ const includes = [
   {
     icon: "manage_search",
     title: "User Research",
-    desc: "We uncover user needs, business goals, and behavioral insights before making design decisions—so every screen solves a real problem.",
+    desc: "We uncover user needs, business goals, and behavioral insights before making design decisions-so every screen solves a real problem.",
   },
   {
     icon: "account_tree",
@@ -19,7 +19,7 @@ const includes = [
   {
     icon: "draft",
     title: "Wireframes & Interactive Prototypes",
-    desc: "Validate ideas early with clickable prototypes—reducing revisions before visual design begins.",
+    desc: "Validate ideas early with clickable prototypes-reducing revisions before visual design begins.",
   },
   {
     icon: "palette",
@@ -50,7 +50,7 @@ const steps = [
     num: "02",
     icon: "account_tree",
     title: "Flows & Wireframes",
-    desc: "User flows and low-fidelity wireframes mapped and agreed on — the structure, before the styling.",
+    desc: "User flows and low-fidelity wireframes mapped and agreed on - the structure, before the styling.",
     week: "Week 1–2",
   },
   {
@@ -109,12 +109,12 @@ const faqs = [
   },
   {
     q: "Do you design for web, mobile, or both?",
-    body: "Both. We design responsive web interfaces and native mobile app experiences, using the same research-driven process either way — the platform changes the patterns, not the rigor.",
+    body: "Both. We design responsive web interfaces and native mobile app experiences, using the same research-driven process either way - the platform changes the patterns, not the rigor.",
     note: "Most projects span both, since users move between devices.",
   },
   {
     q: "Will I get a usable prototype, or just static screens?",
-    body: "You get clickable prototypes for key flows, not just static mockups — so you and your team can actually walk through the experience and catch issues before development starts.",
+    body: "You get clickable prototypes for key flows, not just static mockups - so you and your team can actually walk through the experience and catch issues before development starts.",
     link: "/projects",
     linkText: "See how this plays out in our Projects",
   },
@@ -354,7 +354,7 @@ onBeforeUnmount(() => {
           </h2>
         </div>
         <p class="text-slate-800 max-w-sm mb-0 text-sm">
-          A defined sequence, not an open-ended back-and-forth — so you always know what happens
+          A defined sequence, not an open-ended back-and-forth - so you always know what happens
           next and when.
         </p>
       </div>

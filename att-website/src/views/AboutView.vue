@@ -84,7 +84,7 @@ const process = [
     step: "01",
     label: "Step One",
     title: "Insight Ignition",
-    desc: "We begin with in-depth research to unveil market trends, understand your audience, and analyze competitors — laying the groundwork for informed decisions.",
+    desc: "We begin with in-depth research to unveil market trends, understand your audience, and analyze competitors - laying the groundwork for informed decisions.",
     week: "Week 1",
   },
   {
@@ -92,7 +92,7 @@ const process = [
     step: "02",
     label: "Step Two",
     title: "Identity Alchemy",
-    desc: "Insights become a compelling brand identity — logos, color palettes, and typography — forging a cohesive, memorable presence.",
+    desc: "Insights become a compelling brand identity - logos, color palettes, and typography - forging a cohesive, memorable presence.",
     week: "Week 2",
   },
   {
@@ -275,7 +275,7 @@ onBeforeUnmount(() => {
           </ul>
           <div class="section-heading heading-left">
             <h1 class="title h2 mb-4">
-              More Than an Agency — <span class="text-lr">Your Growth Engineering Partner</span>
+              More Than an Agency - <span class="text-lr">Your Growth Engineering Partner</span>
             </h1>
             <p>
               Amortree Tech is a Bengaluru-based digital growth agency built for founders and
@@ -308,7 +308,7 @@ onBeforeUnmount(() => {
     </div>
 
     <!-- ============================================================
-         STORY — Who We Are + Live Stats
+         STORY - Who We Are + Live Stats
          ============================================================ -->
     <section class="att-story-section">
       <div class="att-story-inner">
@@ -325,12 +325,12 @@ onBeforeUnmount(() => {
             <p>
               At Amortree Tech, we specialize in <strong>custom web development</strong>,
               <strong>UI/UX design</strong>, and <strong>DevOps consulting</strong> to help
-              businesses grow in the digital age — from responsive websites and mobile app design
+              businesses grow in the digital age - from responsive websites and mobile app design
               to branding and cloud infrastructure.
             </p>
             <p>
               Our team of expert developers and designers delivers customized IT solutions aligned
-              with your unique goals — enhancing digital platforms, crafting seamless experiences,
+              with your unique goals - enhancing digital platforms, crafting seamless experiences,
               and building technology that scales with you.
             </p>
           </div>
@@ -366,7 +366,7 @@ onBeforeUnmount(() => {
     </section>
 
     <!-- ============================================================
-         LEADERSHIP TEAM — Premium 4-up profile grid
+         LEADERSHIP TEAM - Premium 4-up profile grid
          ============================================================ -->
     <section class="att-team-section">
       <div class="att-team-inner">
@@ -376,7 +376,7 @@ onBeforeUnmount(() => {
             The People Behind <span class="text-lr">Every Build</span>
           </h2>
           <p class="att-team-sub">
-            A small, senior team — no account managers relaying messages, no juniors learning on
+            A small, senior team - no account managers relaying messages, no juniors learning on
             your project. You work directly with the people doing the work.
           </p>
         </div>
@@ -410,7 +410,7 @@ onBeforeUnmount(() => {
     </section>
 
     <!-- ============================================================
-         VALUES — Dark section, numbered grid
+         VALUES - Dark section, numbered grid
          ============================================================ -->
     <section class="att-values-section">
       <div class="att-values-inner">
@@ -441,7 +441,7 @@ onBeforeUnmount(() => {
     </section>
 
     <!-- ============================================================
-         PROCESS — Light section, 5-step grid
+         PROCESS - Light section, 5-step grid
          ============================================================ -->
     <section class="att-about-process-section">
       <div class="att-process-inner">
@@ -482,7 +482,7 @@ onBeforeUnmount(() => {
           Let's Turn Your Website Into Your Best <span class="text-ly">Growth Asset</span>
         </h2>
         <p class="att-cta-sub">
-          Tell us where your business is today — we'll show you the fastest path to a site that
+          Tell us where your business is today - we'll show you the fastest path to a site that
           builds trust, generates leads, and drives growth.
         </p>
         <div class="d-flex justify-content-center flex-wrap gap-3 mt-5">

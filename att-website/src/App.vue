@@ -1,5 +1,5 @@
 <script setup>
-import { ref, onMounted, onBeforeUnmount, watch, computed, defineAsyncComponent } from "vue";
+import { ref, onMounted, watch, computed, defineAsyncComponent } from "vue";
 import { RouterView, useRouter, useRoute } from "vue-router";
 import HeaderSec from "./components/Header.vue";
 import FooterSec from "./components/Footer.vue";
@@ -9,12 +9,15 @@ import "animate.css";
 
 const isLoading = ref(true);
 const isChatWidgetReady = ref(false);
+const isChatWidgetOpen = ref(false);
 const ChatWidget = defineAsyncComponent(() => import("./components/Chatwidget.vue"));
-let chatIdleCallback;
-let chatFallbackTimer;
 const router = useRouter();
 const route = useRoute();
 const showSiteChrome = computed(() => !route.meta.hideSiteChrome);
+
+watch(showSiteChrome, (visible) => {
+  if (!visible) isChatWidgetOpen.value = false;
+});
 
 const seoPages = {
   "/": ["Amortree Tech | Websites and Digital Marketing That Grow Your Business", "Amortree Tech helps ambitious businesses grow with strategic website design, web development, SEO, and digital marketing."],
@@ -92,24 +95,12 @@ onMounted(() => {
   router.isReady().then(() => {
     isLoading.value = false;
   });
-
-  if ("requestIdleCallback" in window) {
-    chatIdleCallback = window.requestIdleCallback(() => {
-      isChatWidgetReady.value = true;
-    }, { timeout: 2500 });
-  } else {
-    chatFallbackTimer = window.setTimeout(() => {
-      isChatWidgetReady.value = true;
-    }, 1200);
-  }
 });
 
-onBeforeUnmount(() => {
-  if (chatIdleCallback !== undefined && "cancelIdleCallback" in window) {
-    window.cancelIdleCallback(chatIdleCallback);
-  }
-  window.clearTimeout(chatFallbackTimer);
-});
+function openChatWidget() {
+  isChatWidgetOpen.value = true;
+  isChatWidgetReady.value = true;
+}
 
 watch(isLoading, (loading) => {
   document.body.style.overflow = loading ? "hidden" : "";
@@ -129,7 +120,24 @@ watch(isLoading, (loading) => {
     <img :src="logoUrl" alt="Loading" class="loader-logo" />
   </div>
   <RouterView />
-  <ChatWidget v-if="showSiteChrome && isChatWidgetReady" />
+  <ChatWidget
+    v-if="showSiteChrome && isChatWidgetReady"
+    :initial-open="isChatWidgetOpen"
+  />
+  <button
+    v-else-if="showSiteChrome"
+    class="chat-widget-launcher"
+    type="button"
+    aria-label="Open chat with amortree assistant"
+    @click="openChatWidget"
+  >
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+      <path d="M4 4h16v12H7l-3 3V4z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" />
+      <circle cx="9" cy="10" r="1" fill="currentColor" />
+      <circle cx="12" cy="10" r="1" fill="currentColor" />
+      <circle cx="15" cy="10" r="1" fill="currentColor" />
+    </svg>
+  </button>
   <FooterSec v-if="showSiteChrome" />
 </template>
 
@@ -155,6 +163,24 @@ watch(isLoading, (loading) => {
   -webkit-animation: spin 4s linear infinite;
   -moz-animation: spin 4s linear infinite;
   animation: spin 4s linear infinite;
+}
+
+.chat-widget-launcher {
+  position: fixed;
+  right: 24px;
+  bottom: 24px;
+  z-index: 9998;
+  display: flex;
+  width: 56px;
+  height: 56px;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid #facc15;
+  border-radius: 50%;
+  background: #0f172a;
+  color: #facc15;
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.35);
+  cursor: pointer;
 }
 
 .visually-hidden {

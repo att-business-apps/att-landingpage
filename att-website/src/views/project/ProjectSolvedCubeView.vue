@@ -24,7 +24,7 @@ const metrics = [
 ];
 
 const timeline = [
-  { week: "01", phase: "Discovery & Brand Vision", desc: "Sessions to identify core service lines — web, mobile, game, and HRM solutions — and align on the brand vision before any design began." },
+  { week: "01", phase: "Discovery & Brand Vision", desc: "Sessions to identify core service lines - web, mobile, game, and HRM solutions - and align on the brand vision before any design began." },
   { week: "02", phase: "Logo & Brand System", desc: "A modern logo and cohesive branding system designed to read as innovative and trustworthy, not generic IT-firm boilerplate." },
   { week: "03", phase: "Website UI/UX", desc: "A clean, responsive layout that presents complex service offerings with clarity, instead of burying them in dense text." },
   { week: "04", phase: "Collateral & Identity Rollout", desc: "Business cards, ID cards, brochures, and posters designed on the same system, so every touchpoint feels consistent." },
@@ -35,7 +35,7 @@ const timeline = [
 const challenges = [
   { num: "01", icon: "category", title: "Multiple service lines, no clear story", desc: "Web, mobile, game, and HRM solutions all lived under one brand without a clear way to present them as a coherent offering." },
   { num: "02", icon: "visibility_off", title: "No digital footprint", desc: "No website, no analytics, and no Google Business presence meant the consultancy was effectively invisible to local search." },
-  { num: "03", icon: "style", title: "No visual identity", desc: "No logo, no brand system, no consistent collateral — every touchpoint looked like it came from a different company." },
+  { num: "03", icon: "style", title: "No visual identity", desc: "No logo, no brand system, no consistent collateral - every touchpoint looked like it came from a different company." },
   { num: "04", icon: "groups", title: "Competing in a crowded market", desc: "IT consultancies are everywhere. Standing out required more than a generic 'we do tech' positioning." },
   { num: "05", icon: "build_circle", title: "No deployment discipline", desc: "Without a defined DevOps framework, shipping updates was slower and riskier than it needed to be." },
   { num: "06", icon: "speed", title: "Credibility under time pressure", desc: "The business needed to look established quickly, while still being early-stage in its digital maturity." },
@@ -44,10 +44,10 @@ const challenges = [
 const outcomes = [
   { icon: "verified", title: "A credible, modern presence", desc: "The new identity and site position Solved Cube as a forward-looking IT provider, not a startup finding its feet." },
   { icon: "category", title: "Services presented clearly", desc: "Web, mobile, game, and HRM offerings are now structured so visitors immediately understand what's on offer." },
-  { icon: "monitoring", title: "Data-driven decisions", desc: "GA4 gives the team visibility into visitor behaviour, top pages, and traffic sources — replacing guesswork." },
+  { icon: "monitoring", title: "Data-driven decisions", desc: "GA4 gives the team visibility into visitor behaviour, top pages, and traffic sources - replacing guesswork." },
   { icon: "location_on", title: "Stronger local visibility", desc: "An optimised GMB profile improves discoverability for local and regional searches." },
   { icon: "deployed_code", title: "Faster, safer deployments", desc: "The DevOps framework supports continuous integration, so updates ship with less risk." },
-  { icon: "forum", title: "A brand system built to extend", desc: "Every collateral piece — cards, brochures, posters — shares one system, so future materials stay consistent.", highlight: true },
+  { icon: "forum", title: "A brand system built to extend", desc: "Every collateral piece - cards, brochures, posters - shares one system, so future materials stay consistent.", highlight: true },
 ];
 
 let ctx;
@@ -218,7 +218,7 @@ onBeforeUnmount(() => ctx?.revert());
             to back it up.
           </p>
           <p>
-            Amortree was brought in to build the complete picture — a logo and brand system,
+            Amortree was brought in to build the complete picture - a logo and brand system,
             a professional website, marketing collateral, and the analytics infrastructure to
             measure what was actually working.
           </p>
@@ -247,7 +247,7 @@ onBeforeUnmount(() => ctx?.revert());
           <img :src="clientLogo" alt="Solved Cube IT Solutions logo" class="cs-client-logo" loading="lazy" />
           <span class="cs-quote-mark material-symbols-outlined">format_quote</span>
           <p class="cs-client-quote">
-            We had the expertise across web, mobile, and HRM — we just didn't have a brand
+            We had the expertise across web, mobile, and HRM - we just didn't have a brand
             that made any of that obvious to a new client.
           </p>
           <div class="cs-client-quote-attr">Project Brief, Solved Cube</div>
@@ -295,12 +295,12 @@ onBeforeUnmount(() => ctx?.revert());
         <div class="cs-strategy-copy cs-reveal">
           <p class="cs-lead-text">
             For a consultancy spanning four distinct service lines, the goal wasn't to design
-            four separate stories — it was to build one consistent system flexible enough to
+            four separate stories - it was to build one consistent system flexible enough to
             present all of them clearly.
           </p>
 
           <div class="cs-pillar" v-for="(p, i) in [
-            { t: 'Modern, trust-signalling identity', d: 'A logo and brand system designed to read as innovative and established — the visual baseline every other touchpoint builds on.' },
+            { t: 'Modern, trust-signalling identity', d: 'A logo and brand system designed to read as innovative and established - the visual baseline every other touchpoint builds on.' },
             { t: 'Service-led website structure', d: 'Web, mobile, game, and HRM solutions each given clear, scannable space, instead of being flattened into one generic services page.' },
             { t: 'Consistent collateral, not one-offs', d: 'Business cards, ID cards, brochures, and posters were all designed on the same system, so every physical and digital touchpoint matches.' },
           ]" :key="p.t">
@@ -316,13 +316,13 @@ onBeforeUnmount(() => ctx?.revert());
           <span class="material-symbols-outlined cs-insight-icon">lightbulb</span>
           <h4>The insight that shaped everything</h4>
           <p>
-            A consultancy with four service lines doesn't need four brands — it needs one
+            A consultancy with four service lines doesn't need four brands - it needs one
             brand confident enough to hold all four without diluting any of them.
           </p>
           <div class="cs-insight-divider"></div>
           <p class="cs-insight-action">
-            So we built a single, flexible system and applied it everywhere — website, cards,
-            brochures — rather than treating each touchpoint as a separate design project.
+            So we built a single, flexible system and applied it everywhere - website, cards,
+            brochures - rather than treating each touchpoint as a separate design project.
           </p>
         </div>
       </div>
@@ -364,7 +364,7 @@ onBeforeUnmount(() => ctx?.revert());
         <div>
           <div class="cs-eyebrow">Design System</div>
           <h2 class="cs-h2">One identity, every touchpoint</h2>
-          <p class="cs-section-sub">From the website mockup to physical collateral — every piece built on the same visual system.</p>
+          <p class="cs-section-sub">From the website mockup to physical collateral - every piece built on the same visual system.</p>
         </div>
       </div>
 

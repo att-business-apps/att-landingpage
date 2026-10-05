@@ -17,6 +17,7 @@ let pointerCleanup;
 let structuredDataScript;
 let motionIdleCallback;
 let motionFallbackTimer;
+let motionScrollHandler;
 
 // ─── Testimonials carousel ───────────────────────────────────────────
 const testimonials = [
@@ -274,7 +275,7 @@ function getTemplate(target) {
 }
 
 // ─────────────────────────────────────────────────────────────────────────────
-// FAQ Tab Rail — pure GSAP, no Bootstrap JS dependency
+// FAQ Tab Rail - pure GSAP, no Bootstrap JS dependency
 // ─────────────────────────────────────────────────────────────────────────────
 function initFaqTabs() {
   const rail = document.querySelector(".att-faq-rail");
@@ -285,7 +286,7 @@ function initFaqTabs() {
   const stage = document.querySelector(".att-faq-stage");
   let active = 0;
 
-  // Underline ticker — a shared element that slides under the active tab
+  // Underline ticker - a shared element that slides under the active tab
   const ticker = document.createElement("div");
   ticker.className = "att-tab-ticker";
   rail.appendChild(ticker);
@@ -349,7 +350,7 @@ function initFaqTabs() {
 }
 
 // ─────────────────────────────────────────────────────────────────────────────
-// Recent Work — numbered row list animations (reference style)
+// Recent Work - numbered row list animations (reference style)
 // ─────────────────────────────────────────────────────────────────────────────
 function animateWorkSection() {
   // Header title cascades in
@@ -411,7 +412,7 @@ function animateWorkSection() {
 }
 
 // ─────────────────────────────────────────────────────────────────────────────
-// Process section — staggered step entrance + bottom-border hover line
+// Process section - staggered step entrance + bottom-border hover line
 // ─────────────────────────────────────────────────────────────────────────────
 function animateProcessSection() {
   gsap.from(".att-process-title", {
@@ -635,7 +636,7 @@ function animateHomePage() {
     const pageSections = [...homePage.value.querySelectorAll(":scope > section:not(.d-none)")];
 
     pageSections.forEach((section) => {
-      // Skip the two custom sections — they have their own animations
+      // Skip the two custom sections - they have their own animations
       if (section.classList.contains("att-why-section") || section.classList.contains("att-faq-section")) return;
 
       const headingItems = section.querySelectorAll("h2, h3, .section-heading, .motion-text");
@@ -679,19 +680,26 @@ function animateHomePage() {
 onMounted(async () => {
   injectStructuredData();
   await nextTick();
-  const initMotion = () => {
-    animateHomePage();
-    initFaqTabs();
-  };
+  initFaqTabs();
 
-  if ("requestIdleCallback" in window) {
-    motionIdleCallback = window.requestIdleCallback(initMotion, { timeout: 1500 });
-  } else {
-    motionFallbackTimer = window.setTimeout(initMotion, 250);
-  }
+  motionScrollHandler = () => {
+    window.clearTimeout(motionFallbackTimer);
+    motionFallbackTimer = window.setTimeout(() => {
+      window.removeEventListener("scroll", motionScrollHandler);
+      if ("requestIdleCallback" in window) {
+        motionIdleCallback = window.requestIdleCallback(animateHomePage, { timeout: 3000 });
+      } else {
+        animateHomePage();
+      }
+    }, 500);
+  };
+  window.addEventListener("scroll", motionScrollHandler, { passive: true });
 });
 
 onBeforeUnmount(() => {
+  if (motionScrollHandler) {
+    window.removeEventListener("scroll", motionScrollHandler);
+  }
   if (motionIdleCallback !== undefined && "cancelIdleCallback" in window) {
     window.cancelIdleCallback(motionIdleCallback);
   }
@@ -704,7 +712,7 @@ onBeforeUnmount(() => {
 
 <template>
   <main ref="homePage" class="home-motion-page">
-    <!-- HERO SECTION — full replacement for .banner.banner-style-1 -->
+    <!-- HERO SECTION - full replacement for .banner.banner-style-1 -->
     <div class="att-hero" id="top">
       <!-- Ambient background layers -->
       <div class="att-hero-grid" aria-hidden="true"></div>
@@ -738,13 +746,13 @@ onBeforeUnmount(() => {
 
           <!-- Subtitle -->
           <p class="att-hero-sub">
-            Your website shouldn't just exist—it should generate qualified enquiries, build credibility, and support your sales team every day.
+            Your website shouldn't just exist-it should generate qualified enquiries, build credibility, and support your sales team every day.
             <!-- We combine strategy, UX, development, SEO, and AI-ready optimization to create websites that become your highest-performing business asset. -->
           </p>
 
           <!-- Positioning line -->
           <p class="att-hero-position">
-            Designed for businesses that are ready to grow — not just go online.
+            Designed for businesses that are ready to grow - not just go online.
           </p>
 
           <!-- CTAs -->
@@ -822,7 +830,7 @@ onBeforeUnmount(() => {
             </h2>
           </div>
           <p class="motion-text text-slate-800 max-w-sm mb-0">
-            We intentionally partner with a limited number of businesses each quarter so every client receives strategic attention—not just project management.
+            We intentionally partner with a limited number of businesses each quarter so every client receives strategic attention-not just project management.
           </p>
         </div>
         <div class="grid md:grid-cols-3 gap-6">
@@ -845,7 +853,7 @@ onBeforeUnmount(() => {
               </div>
             </div>
             <h4 class="font-semibold mb-3 d-block text-lg text-emerald-400" style="font-weight: 600;">Real Estate</h4>
-            <p class="text-slate-300 text-sm leading-relaxed">Firms where trust is decided before the first call — and the website is doing that work, or isn't.</p>
+            <p class="text-slate-300 text-sm leading-relaxed">Firms where trust is decided before the first call - and the website is doing that work, or isn't.</p>
           </div>
 
           <div class="motion-card group relative bg-dark p-8 rounded-2xl text-center border border-white/5 overflow-hidden transition-all duration-300 hover:scale-[1.02] hover:border-rose-400/30 hover:shadow-[0_30px_80px_-24px_rgba(251,113,133,0.35)]">
@@ -942,7 +950,7 @@ onBeforeUnmount(() => {
     </section>
 
     <!-- ============================================================
-         WHAT IT'S LIKE WORKING WITH AMORTREE — Before / After Wipe Grid
+         WHAT IT'S LIKE WORKING WITH AMORTREE - Before / After Wipe Grid
          ============================================================ -->
     <section class="att-why-section pb-28 px-6 bg-white overflow-hidden" id="why-us">
       <div class="container mx-auto max-w-6xl">
@@ -983,7 +991,7 @@ onBeforeUnmount(() => {
               <span class="att-cell-icon-badge att-cell-icon-badge--before">
                 <span class="material-symbols-outlined att-cell-icon">bolt</span>
               </span>
-              <p class="att-cell-label">Designs first, asks strategy questions later — if at all.</p>
+              <p class="att-cell-label">Designs first, asks strategy questions later - if at all.</p>
             </div>
             <div class="att-why-cell att-cell-after">
               <span class="att-cell-icon-badge att-cell-icon-badge--after">
@@ -1005,7 +1013,7 @@ onBeforeUnmount(() => {
               <span class="att-cell-icon-badge att-cell-icon-badge--after">
                 <span class="material-symbols-outlined att-cell-icon">trending_up</span>
               </span>
-              <p class="att-cell-label"><strong>Measured against business results.</strong> We track conversion lift, pipeline velocity, and ROAS — not just task completion.</p>
+              <p class="att-cell-label"><strong>Measured against business results.</strong> We track conversion lift, pipeline velocity, and ROAS - not just task completion.</p>
             </div>
           </div>
 
@@ -1225,7 +1233,7 @@ onBeforeUnmount(() => {
     </section>
 
     <!-- ============================================================
-         HOW WE WORK — 4-step process grid (reference: Our Approach)
+         HOW WE WORK - 4-step process grid (reference: Our Approach)
          ============================================================ -->
     <section class="att-process-section" id="process">
       <div class="att-process-inner">
@@ -1239,7 +1247,7 @@ onBeforeUnmount(() => {
             </h2>
           </div>
           <p class="motion-text text-slate-800 max-w-sm mb-0">
-            Every engagement follows a proven framework that balances creative ambition with strategic execution. We don't just build websites — we engineer growth systems.
+            Every engagement follows a proven framework that balances creative ambition with strategic execution. We don't just build websites - we engineer growth systems.
           </p>
         </div>
         <div class="att-process-steps">
@@ -1256,7 +1264,7 @@ onBeforeUnmount(() => {
               <span class="material-symbols-outlined">design_services</span>
             </div>
             <div class="att-ps-title">Design &amp; Build</div>
-            <div class="att-ps-desc">Information architecture, user flow, and visual execution — built against the strategy, not a template. Every pixel earns its place with intention.</div>
+            <div class="att-ps-desc">Information architecture, user flow, and visual execution - built against the strategy, not a template. Every pixel earns its place with intention.</div>
             <div class="att-ps-week">Weeks 2–6</div>
           </div>
           <div class="att-process-step" data-step="03">
@@ -1272,7 +1280,7 @@ onBeforeUnmount(() => {
               <span class="material-symbols-outlined">trending_up</span>
             </div>
             <div class="att-ps-title">Optimize &amp; Scale</div>
-            <div class="att-ps-desc">Ongoing analytics monitoring to iterate and compound results. We keep tuning against live data long after launch day — not just hand off and disappear.</div>
+            <div class="att-ps-desc">Ongoing analytics monitoring to iterate and compound results. We keep tuning against live data long after launch day - not just hand off and disappear.</div>
             <div class="att-ps-week">Ongoing</div>
           </div>
         </div>
@@ -1280,11 +1288,11 @@ onBeforeUnmount(() => {
     </section>
 
     <div class="d-none section serviceSec pt-5 section-padding" id="whatWeDo">
-      <!-- legacy services grid — kept hidden -->
+      <!-- legacy services grid - kept hidden -->
     </div>
 
     <!-- ============================================================
-         RECENT WORK — Numbered row list (reference: On Going Projects)
+         RECENT WORK - Numbered row list (reference: On Going Projects)
          ============================================================ -->
     <section class="att-work-section" id="work">
       <div class="flex flex-col md:flex-row md:items-end justify-between mb-5 gap-2">
@@ -1337,7 +1345,7 @@ onBeforeUnmount(() => {
               <div class="att-cs-tag">Full Redesign · UI/UX</div>
               <div class="att-cs-name">SaveDesk</div>
             </div>
-            <div class="att-cs-desc">Full redesign from wireframes to high-fidelity UI/UX — restructured IA, new design system, and a measurable lift in task-completion rate.</div>
+            <div class="att-cs-desc">Full redesign from wireframes to high-fidelity UI/UX - restructured IA, new design system, and a measurable lift in task-completion rate.</div>
             <div class="att-cs-metrics">
               <div class="att-cs-metric">
                 <span class="att-cs-metric-val">0%</span>
@@ -1416,7 +1424,7 @@ onBeforeUnmount(() => {
     </section>
 
     <!-- ============================================================
-         TESTIMONIALS — GSAP Carousel
+         TESTIMONIALS - GSAP Carousel
          ============================================================ -->
     <section class="tc-section" id="reviews">
       <div class="tc-bg-glow" aria-hidden="true"></div>
@@ -1430,7 +1438,7 @@ onBeforeUnmount(() => {
           <h2 class="tc-heading">
             What Clients Say About <span class="text-ly">Working With Us</span>
           </h2>
-          <p class="tc-sub">Real feedback from real clients — across industries, project types, and team sizes.</p>
+          <p class="tc-sub">Real feedback from real clients - across industries, project types, and team sizes.</p>
         </div>
 
         <!-- Carousel -->
@@ -1439,7 +1447,7 @@ onBeforeUnmount(() => {
           @mouseenter="tcStopAuto"
           @mouseleave="tcStartAuto"
         >
-          <!-- Track — single active card -->
+          <!-- Track - single active card -->
           <div class="tc-track" ref="tcTrackRef">
             <div class="tc-card">
               <!-- Quote mark -->
@@ -1526,7 +1534,7 @@ onBeforeUnmount(() => {
 
 
     <!-- ============================================================
-         FAQ — Numbered Tab Rail + Expanding Stage
+         FAQ - Numbered Tab Rail + Expanding Stage
          ============================================================ -->
     <section class="att-faq-section py-28 px-6 bg-color-light overflow-hidden" id="faq">
       <div class="att-faq-inner">
@@ -1572,7 +1580,7 @@ onBeforeUnmount(() => {
             <h3 class="att-answer-q">How much does a website cost at Amortree?</h3>
             <p class="att-answer-body">
               Most engagements fall between &#8377;50,000 and &#8377;5,00,000,
-              depending on scope — from a focused conversion-first landing page
+              depending on scope - from a focused conversion-first landing page
               to a full lead-generation system with CRM integration. We scope
               exact pricing after the strategy call, once we understand what
               the site actually needs to do for your business.
@@ -1584,14 +1592,14 @@ onBeforeUnmount(() => {
             <p class="att-answer-body">
               Most projects run 4–10 weeks from strategy to launch. Audit
               and strategy take 1–2 weeks; design and build 2–6 weeks. Ongoing
-              optimization continues after launch — we don't hand off and disappear.
+              optimization continues after launch - we don't hand off and disappear.
             </p>
             <p class="att-answer-note">Timelines are defined upfront and updated at every milestone.</p>
           </div>
           <div class="att-faq-answer d-none" data-answer="2">
             <h3 class="att-answer-q">Do you only build websites, or do you handle marketing too?</h3>
             <p class="att-answer-body">
-              We work across strategy, UX, development, SEO, and paid acquisition — because a website's performance
+              We work across strategy, UX, development, SEO, and paid acquisition - because a website's performance
               depends on all of them working together, not just the design. A well-designed site sitting on a broken
               acquisition path still doesn't convert.
             </p>
@@ -1601,7 +1609,7 @@ onBeforeUnmount(() => {
             <h3 class="att-answer-q">What industries do you work with?</h3>
             <p class="att-answer-body">
               Primarily real estate and professional service firms, SaaS and startup founders, and manufacturing
-              and healthcare businesses. These are sectors where trust is earned before the first call — and the
+              and healthcare businesses. These are sectors where trust is earned before the first call - and the
               website is doing that work, or it isn't.
             </p>
             <a href="/projects" class="att-answer-link">See our Projects &rarr;</a>
@@ -1610,7 +1618,7 @@ onBeforeUnmount(() => {
             <h3 class="att-answer-q">What happens after I book a strategy call?</h3>
             <p class="att-answer-body">
               We review your current site and metrics before the call, so the conversation starts with specific
-              observations about your business — not a generic sales pitch. You'll leave with a clear picture of
+              observations about your business - not a generic sales pitch. You'll leave with a clear picture of
               where the site is losing ground and what fixing it looks like.
             </p>
             <p class="att-answer-note">20 minutes. No pressure, no obligation.</p>
@@ -1633,12 +1641,12 @@ onBeforeUnmount(() => {
           <a href="/estimate" class="amor-btn btn-borderd light">Get a Project Estimate</a>
         </div>
         <p class="mt-5 text-center text-slate-500 text-xs mb-0">
-          <small>No pressure, no obligation — just clarity on what your website should be doing for your business.</small>
+          <small>No pressure, no obligation - just clarity on what your website should be doing for your business.</small>
         </p>
       </div>
     </section>
 
-    <!-- Legacy sections — hidden, kept for reference -->
+    <!-- Legacy sections - hidden, kept for reference -->
     <section class="d-none section section-padding-equal bg-color-white" id="about"></section>
     <section class="d-none section section-padding faqSec bg-color-light"></section>
   </main>
@@ -1815,12 +1823,12 @@ onBeforeUnmount(() => {
   color: #f8fafc;
 }
 
-// "Generate Leads." — yellow filled
+// "Generate Leads." - yellow filled
 .att-line-accent {
   color: #facc15;
 }
 
-// "Drive Growth." — outline text, the signature element
+// "Drive Growth." - outline text, the signature element
 .att-line-outline {
   color: transparent;
   -webkit-text-stroke: 2px rgba(248,250,252,0.55);
@@ -2375,7 +2383,7 @@ onBeforeUnmount(() => {
   padding: 1.75rem 2rem;
   transition: background 0.3s ease;
 
-  // Clip-path starts collapsed — GSAP animates it open
+  // Clip-path starts collapsed - GSAP animates it open
   clip-path: inset(0 0 0 0);
 
   &.att-cell-before {
@@ -2448,7 +2456,7 @@ onBeforeUnmount(() => {
   .att-why-cell.att-cell-before { border-right: none; border-bottom: 1px solid #e2e8f0; }
 }
 
-// ─── FAQ — Tab Rail + Stage ───────────────────────────────────────────────────
+// ─── FAQ - Tab Rail + Stage ───────────────────────────────────────────────────
 .att-faq-section {
   background: var(--color-bg-light, #f8fafc);
 }
@@ -2469,7 +2477,7 @@ onBeforeUnmount(() => {
   border-bottom: 2px solid #e2e8f0;
 }
 
-// Sliding underline ticker — positioned by JS
+// Sliding underline ticker - positioned by JS
 .att-tab-ticker {
   position: absolute;
   bottom: -2px;
@@ -2581,7 +2589,7 @@ onBeforeUnmount(() => {
 }
 
 
-// ─── Recent Work — Numbered Row List ─────────────────────────────────────────
+// ─── Recent Work - Numbered Row List ─────────────────────────────────────────
 .att-work-section {
   padding: 8rem 4rem;
   background: var(--color-bg-white, #fff);
@@ -2752,7 +2760,7 @@ onBeforeUnmount(() => {
   }
 }
 
-// Hover preview — slides in from right
+// Hover preview - slides in from right
 .att-cs-preview {
   position: absolute;
   top: 50%;
@@ -2781,7 +2789,7 @@ onBeforeUnmount(() => {
   margin: 0;
 }
 
-// ─── Process — 4-Step Grid ───────────────────────────────────────────────────
+// ─── Process - 4-Step Grid ───────────────────────────────────────────────────
 .att-process-section {
   padding: 8rem 4rem;
   background: #f8fafc;
@@ -2864,7 +2872,7 @@ onBeforeUnmount(() => {
 
   &:hover { background: #f1f5f9; }
 
-  // Ghost step number — decorative
+  // Ghost step number - decorative
   &::before {
     content: attr(data-step);
     position: absolute;
@@ -2922,7 +2930,7 @@ onBeforeUnmount(() => {
   margin-top: auto;
 }
 
-// Bottom-border swipe line — injected by GSAP
+// Bottom-border swipe line - injected by GSAP
 .att-ps-hover-line {
   position: absolute;
   bottom: 0;

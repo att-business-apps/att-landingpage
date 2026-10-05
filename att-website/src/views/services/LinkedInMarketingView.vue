@@ -24,7 +24,7 @@ const includes = [
   {
     icon: "campaign",
     title: "LinkedIn Ad Campaigns",
-    desc: "Sponsored content and lead-gen forms targeted by job title, industry, and company size — not broad guesswork.",
+    desc: "Sponsored content and lead-gen forms targeted by job title, industry, and company size - not broad guesswork.",
   },
   {
     icon: "groups",
@@ -34,7 +34,7 @@ const includes = [
   {
     icon: "monitoring",
     title: "Pipeline Reporting",
-    desc: "Clear reporting tied to connections, conversations, and meetings booked — not just impressions and likes.",
+    desc: "Clear reporting tied to connections, conversations, and meetings booked - not just impressions and likes.",
   },
 ];
 
@@ -43,7 +43,7 @@ const steps = [
     num: "01",
     icon: "manage_search",
     title: "Audit & ICP Definition",
-    desc: "We review your current presence and define exactly who you're trying to reach — by role, industry, and company size.",
+    desc: "We review your current presence and define exactly who you're trying to reach - by role, industry, and company size.",
     week: "Week 1",
   },
   {
@@ -104,7 +104,7 @@ const faqs = [
   },
   {
     q: "Will you post and message from my personal profile?",
-    body: "Yes, typically from the founder's or a key team member's profile — LinkedIn outreach and content perform far better from a real person than a company page alone, since buyers trust people over logos.",
+    body: "Yes, typically from the founder's or a key team member's profile - LinkedIn outreach and content perform far better from a real person than a company page alone, since buyers trust people over logos.",
     note: "We work with you to keep the voice authentically yours.",
   },
   {
@@ -114,7 +114,7 @@ const faqs = [
   },
   {
     q: "Is LinkedIn marketing only for B2B companies?",
-    body: "It works best for B2B, recruiting, and high-ticket B2C where the buyer is a professional making a considered decision — not for impulse-purchase consumer products.",
+    body: "It works best for B2B, recruiting, and high-ticket B2C where the buyer is a professional making a considered decision - not for impulse-purchase consumer products.",
     link: "/digital-marketing",
     linkText: "See our broader digital marketing service",
   },
@@ -292,7 +292,7 @@ onBeforeUnmount(() => {
           </h2>
         </div>
         <p class="text-slate-800 max-w-sm mb-0 text-sm">
-          Every campaign is built with the same focus on targeting, authority, and pipeline — nothing important is treated as an add-on.
+          Every campaign is built with the same focus on targeting, authority, and pipeline - nothing important is treated as an add-on.
         </p>
       </div>
 
@@ -321,7 +321,7 @@ onBeforeUnmount(() => {
           </h2>
         </div>
         <p class="text-slate-500 max-w-sm mb-0 text-sm">
-          A defined sequence, not an open-ended back-and-forth — so you always know what happens
+          A defined sequence, not an open-ended back-and-forth - so you always know what happens
           next and when.
         </p>
       </div>

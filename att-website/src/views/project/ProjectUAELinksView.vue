@@ -23,9 +23,9 @@ const metrics = [
 ];
 
 const timeline = [
-  { week: "01", phase: "Research & Requirements", desc: "Mapped user pain points and identified the core service categories users actually search for — Labour, Visa, Pension, Medical Fitness." },
+  { week: "01", phase: "Research & Requirements", desc: "Mapped user pain points and identified the core service categories users actually search for - Labour, Visa, Pension, Medical Fitness." },
   { week: "02", phase: "Information Architecture", desc: "Designed a clean category structure and navigation system that gets users to the right government service in as few clicks as possible." },
-  { week: "03", phase: "UI Design", desc: "A minimalist, high-contrast interface built for quick scanning — no decoration that slows down someone trying to find a form." },
+  { week: "03", phase: "UI Design", desc: "A minimalist, high-contrast interface built for quick scanning - no decoration that slows down someone trying to find a form." },
   { week: "04", phase: "Development & Linking", desc: "Built for speed and security, with seamless, verified linking out to official government portals for every listed service." },
   { week: "05", phase: "Usability Testing", desc: "Tested with real users across devices to confirm the structure actually reduced time-to-find, not just looked clean." },
   { week: "06", phase: "Launch & Analytics", desc: "Shipped with GA4 instrumented from day one, so every category and click is measurable for ongoing improvement." },
@@ -35,7 +35,7 @@ const challenges = [
   { num: "01", icon: "hub", title: "Scattered government services", desc: "Dozens of UAE government services lived across disconnected portals, each with its own navigation and design language." },
   { num: "02", icon: "schedule", title: "High time-to-find", desc: "Users were spending too long searching for the right portal before they could even start their actual task." },
   { num: "03", icon: "diversity_3", title: "Mixed digital literacy", desc: "The audience spans residents, workers, and visitors with very different comfort levels using government websites." },
-  { num: "04", icon: "verified_user", title: "Trust & authenticity", desc: "Every link had to clearly route to the genuine official portal — no ambiguity that could be mistaken for a third-party site." },
+  { num: "04", icon: "verified_user", title: "Trust & authenticity", desc: "Every link had to clearly route to the genuine official portal - no ambiguity that could be mistaken for a third-party site." },
   { num: "05", icon: "devices", title: "Device fragmentation", desc: "A large share of the audience accesses services on mobile, often on inconsistent connections." },
   { num: "06", icon: "speed", title: "Speed under load", desc: "As a public-facing utility, the portal needed to stay fast and reliable regardless of traffic spikes." },
 ];
@@ -119,7 +119,7 @@ onBeforeUnmount(() => ctx?.revert());
       <div class="cs-hero-split">
         <p class="cs-hero-sub">
           One portal. Every UAE government service. UAE Links functions as a streamlined hub
-          offering direct access to a wide range of official UAE government services — built to
+          offering direct access to a wide range of official UAE government services - built to
           simplify processes that used to mean searching across a dozen disconnected portals.
         </p>
 
@@ -210,8 +210,8 @@ onBeforeUnmount(() => ctx?.revert());
         <div class="cs-client-copy">
           <p class="cs-lead-text">
             UAE Links is a centralised digital gateway designed to connect residents, workers,
-            and visitors to official UAE government services — Labour, Visa, Pension, Medical
-            Fitness, and more — without the friction of navigating a dozen separate portals.
+            and visitors to official UAE government services - Labour, Visa, Pension, Medical
+            Fitness, and more - without the friction of navigating a dozen separate portals.
           </p>
           <p>
             Before UAE Links, users had to know exactly which government body managed the
@@ -290,13 +290,13 @@ onBeforeUnmount(() => ctx?.revert());
       <div class="cs-strategy-grid">
         <div class="cs-strategy-copy cs-reveal">
           <p class="cs-lead-text">
-            For a service this functional, the brief wasn't to impress — it was to get out of
+            For a service this functional, the brief wasn't to impress - it was to get out of
             the way. Every design decision was tested against one question: does this help
             someone find their service faster?
           </p>
 
           <div class="cs-pillar" v-for="(p, i) in [
-            { t: 'Category-first navigation', d: 'Services grouped into clear, recognisable categories — Labour, Visa, Pension, Medical Fitness — so users self-sort in seconds, not minutes.' },
+            { t: 'Category-first navigation', d: 'Services grouped into clear, recognisable categories - Labour, Visa, Pension, Medical Fitness - so users self-sort in seconds, not minutes.' },
             { t: 'Minimal, high-contrast interface', d: 'No decorative elements competing for attention. Clean typography and generous spacing make scanning fast, even for less tech-confident users.' },
             { t: 'Verified, transparent linking', d: 'Every outbound link is clearly labelled and routes to the genuine official portal, so trust is never in question.' },
           ]" :key="p.t">
@@ -312,13 +312,13 @@ onBeforeUnmount(() => ctx?.revert());
           <span class="material-symbols-outlined cs-insight-icon">lightbulb</span>
           <h4>The insight that shaped everything</h4>
           <p>
-            For a government services portal, the worst outcome isn't an ugly interface —
+            For a government services portal, the worst outcome isn't an ugly interface -
             it's a user who gives up and goes searching elsewhere because they couldn't find
             what they needed in the first ten seconds.
           </p>
           <div class="cs-insight-divider"></div>
           <p class="cs-insight-action">
-            So we designed for findability above everything else — fewer clicks, clearer
+            So we designed for findability above everything else - fewer clicks, clearer
             labels, and zero ambiguity about where each link leads.
           </p>
         </div>

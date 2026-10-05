@@ -37,7 +37,7 @@ const metrics = [
 ];
 
 const timeline = [
-  { week: "01", phase: "Logo & Identity Design", desc: "A unique logo mark designed to reflect creativity and elegance — the foundation every other asset would extend." },
+  { week: "01", phase: "Logo & Identity Design", desc: "A unique logo mark designed to reflect creativity and elegance - the foundation every other asset would extend." },
   { week: "02", phase: "Branding Assets", desc: "Business cards, letterheads, a company signboard, and a detailed portfolio, all built to carry the identity consistently." },
   { week: "03", phase: "Website Development", desc: "A complete website designed and built around the new identity, presenting Interior Design, Decor, Furniture, and Raw Materials clearly." },
   { week: "04", phase: "GMB Setup & Local SEO", desc: "Google My Business set up and optimised to strengthen local discoverability for nearby clients." },
@@ -45,7 +45,7 @@ const timeline = [
 ];
 
 const challenges = [
-  { num: "01", icon: "design_services", title: "No existing brand identity", desc: "Samsiddhi Designs needed a logo and visual identity built from scratch — one that felt as considered as the interiors they design." },
+  { num: "01", icon: "design_services", title: "No existing brand identity", desc: "Samsiddhi Designs needed a logo and visual identity built from scratch - one that felt as considered as the interiors they design." },
   { num: "02", icon: "inventory_2", title: "Four adjacent categories", desc: "Interior Design, Decor, Furniture, and Raw Materials all needed to sit under one coherent brand without confusing visitors." },
   { num: "03", icon: "print", title: "Assets across physical and digital", desc: "Business cards, letterheads, a signboard, and a company portfolio all had to carry the same identity as the website." },
   { num: "04", icon: "location_on", title: "Local discoverability", desc: "Without an optimised Google Business Profile, the company was hard to find for nearby clients searching for interior designers." },
@@ -53,7 +53,7 @@ const challenges = [
 ];
 
 const outcomes = [
-  { icon: "verified", title: "A brand that feels considered", desc: "The logo and identity read as intentional and elegant — a fitting first impression for an interior design company." },
+  { icon: "verified", title: "A brand that feels considered", desc: "The logo and identity read as intentional and elegant - a fitting first impression for an interior design company." },
   { icon: "print", title: "Consistency across every touchpoint", desc: "Business cards, letterheads, signboard, and portfolio all carry the same visual language as the website." },
   { icon: "location_on", title: "Easier to find locally", desc: "An optimised Google Business Profile improved visibility for nearby clients searching for interior designers." },
   { icon: "monitoring", title: "Visibility into real behaviour", desc: "Google Analytics now gives the team actionable insight into how visitors actually use the site." },
@@ -135,8 +135,8 @@ onBeforeUnmount(() => ctx?.revert());
 
       <div class="cs-hero-split">
         <p class="cs-hero-sub">
-          Samsiddhi Designs needed a complete digital transformation — brand identity, website,
-          and analytics — for a business spanning Interior Design, Decor, Furniture, and Raw
+          Samsiddhi Designs needed a complete digital transformation - brand identity, website,
+          and analytics - for a business spanning Interior Design, Decor, Furniture, and Raw
           Materials. Amortree built a cohesive identity from the ground up and carried it across
           every physical and digital touchpoint.
         </p>
@@ -229,13 +229,13 @@ onBeforeUnmount(() => ctx?.revert());
       <div class="cs-client-grid cs-reveal">
         <div class="cs-client-copy">
           <p class="cs-lead-text">
-            Samsiddhi Designs works across Interior Design, Decor, Furniture, and Raw Materials —
+            Samsiddhi Designs works across Interior Design, Decor, Furniture, and Raw Materials -
             a business where visual taste is the product, which meant its own brand had to prove
             that taste before a single project photo was shown.
           </p>
           <p>
-            With no existing identity to build from, Amortree designed a complete brand system —
-            logo, branding assets, website, and local presence — from a blank page.
+            With no existing identity to build from, Amortree designed a complete brand system -
+            logo, branding assets, website, and local presence - from a blank page.
           </p>
 
           <div class="cs-fact-list">
@@ -262,7 +262,7 @@ onBeforeUnmount(() => ctx?.revert());
           <img :src="clientLogo" alt="Samsiddhi Designs logo" class="cs-client-logo" loading="lazy" />
           <span class="cs-quote-mark material-symbols-outlined">format_quote</span>
           <p class="cs-client-quote">
-            We design spaces for a living — our own brand needed to show that same care, from the
+            We design spaces for a living - our own brand needed to show that same care, from the
             logo to the business card someone takes home.
           </p>
           <div class="cs-client-quote-attr">Project Brief, Samsiddhi Designs</div>
@@ -314,7 +314,7 @@ onBeforeUnmount(() => ctx?.revert());
           </p>
 
           <div class="cs-pillar" v-for="(p, i) in [
-            { t: 'A logo that carries the whole system', d: 'Every subsequent asset — website, business card, signboard, portfolio — was built to extend the same mark and colour language, not reinterpret it.' },
+            { t: 'A logo that carries the whole system', d: 'Every subsequent asset - website, business card, signboard, portfolio - was built to extend the same mark and colour language, not reinterpret it.' },
             { t: 'One identity, four categories', d: 'Interior Design, Decor, Furniture, and Raw Materials were treated as facets of one brand story rather than four separate offerings.' },
             { t: 'Local visibility as part of the brief', d: 'GMB optimisation and Analytics were treated as core deliverables, not afterthoughts bolted on after launch.' },
           ]" :key="p.t">
@@ -330,7 +330,7 @@ onBeforeUnmount(() => ctx?.revert());
           <span class="material-symbols-outlined cs-insight-icon">lightbulb</span>
           <h4>The insight that shaped everything</h4>
           <p>
-            A design company's own brand is its first portfolio piece — clients judge the taste
+            A design company's own brand is its first portfolio piece - clients judge the taste
             behind it before they ever see a finished room.
           </p>
           <div class="cs-insight-divider"></div>
@@ -381,7 +381,7 @@ onBeforeUnmount(() => ctx?.revert());
         <span class="cs-ghost-num">05</span>
         <div>
           <div class="cs-eyebrow">Design System</div>
-          <h2 class="cs-h2">Colour, type &amp; collateral — one language, every surface</h2>
+          <h2 class="cs-h2">Colour, type &amp; collateral - one language, every surface</h2>
           <p class="cs-section-sub">
             A documented palette and type system keep the logo, website, and printed collateral
             reading as one considered brand.

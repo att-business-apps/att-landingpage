@@ -109,12 +109,12 @@ const faqs = [
   },
   {
     q: "Do I need maintenance if my site already works fine?",
-    body: "Yes — most sites that 'work fine' are quietly accumulating outdated plugins, unpatched vulnerabilities, and slowing performance. Maintenance catches problems before visitors or search engines notice.",
+    body: "Yes - most sites that 'work fine' are quietly accumulating outdated plugins, unpatched vulnerabilities, and slowing performance. Maintenance catches problems before visitors or search engines notice.",
     note: "Prevention is far cheaper than fixing a hacked or broken site.",
   },
   {
     q: "What happens if my site goes down?",
-    body: "Uptime monitoring alerts us immediately, and we work to restore the site as a priority — not as a ticket in a generic queue. Recent backups mean most issues are a quick rollback, not a rebuild.",
+    body: "Uptime monitoring alerts us immediately, and we work to restore the site as a priority - not as a ticket in a generic queue. Recent backups mean most issues are a quick rollback, not a rebuild.",
     note: "Response time depends on your plan, but downtime is always priority one.",
   },
   {
@@ -297,7 +297,7 @@ onBeforeUnmount(() => {
           </h2> 
         </div>
         <p class="text-slate-800 max-w-sm mb-0 text-sm">
-          Every maintenance plan includes proactive security, performance monitoring, GitHub version control, and automated DigitalOcean deployments—keeping your website secure, stable, and always ready for growth.
+          Every maintenance plan includes proactive security, performance monitoring, GitHub version control, and automated DigitalOcean deployments-keeping your website secure, stable, and always ready for growth.
         </p>
       </div>
 
@@ -326,7 +326,7 @@ onBeforeUnmount(() => {
           </h2>
         </div>
         <p class="text-slate-500 max-w-sm mb-0 text-sm">
-          A defined sequence, not an open-ended back-and-forth — so you always know what happens
+          A defined sequence, not an open-ended back-and-forth - so you always know what happens
           next and when.
         </p>
       </div>

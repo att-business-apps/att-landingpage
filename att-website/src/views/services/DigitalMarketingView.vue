@@ -114,12 +114,12 @@ const faqs = [
   },
   {
     q: "How much should I budget for ad spend?",
-    body: "It depends on your market and goals, but most campaigns need a minimum viable budget to gather meaningful data — usually ₹30,000–₹50,000/month to start testing properly across creatives and audiences.",
+    body: "It depends on your market and goals, but most campaigns need a minimum viable budget to gather meaningful data - usually ₹30,000–₹50,000/month to start testing properly across creatives and audiences.",
     note: "We'll recommend a realistic starting budget after the audit.",
   },
   {
     q: "Which platforms do you run campaigns on?",
-    body: "Primarily Google Ads, Meta (Facebook/Instagram), and LinkedIn, chosen based on where your actual customers spend time — not run across every platform by default to pad a report.",
+    body: "Primarily Google Ads, Meta (Facebook/Instagram), and LinkedIn, chosen based on where your actual customers spend time - not run across every platform by default to pad a report.",
     link: "/linkedin-marketing",
     linkText: "See our dedicated LinkedIn marketing service",
   },
@@ -302,7 +302,7 @@ onBeforeUnmount(() => {
           </h2>
         </div>
         <p class="text-slate-800 max-w-sm mb-0 text-sm">
-          Every campaign is planned around your business goals—from targeting and creative to landing pages, tracking, and optimization. Nothing important is left to chance.
+          Every campaign is planned around your business goals-from targeting and creative to landing pages, tracking, and optimization. Nothing important is left to chance.
         </p>
       </div>
 
@@ -331,7 +331,7 @@ onBeforeUnmount(() => {
           </h2>
         </div>
         <p class="text-slate-800 max-w-sm mb-0 text-sm">
-          A defined sequence, not an open-ended back-and-forth — so you always know what happens
+          A defined sequence, not an open-ended back-and-forth - so you always know what happens
           next and when.
         </p>
       </div>

@@ -31,7 +31,7 @@ const form = reactive({
   companyName: "",
   companyWebsite: "",
   industry: "",
-  _hp: "", // honeypot — must stay empty; bots tend to fill every field
+  _hp: "", // honeypot - must stay empty; bots tend to fill every field
 });
 
 const formErrors = ref({});
@@ -125,7 +125,7 @@ function proceedToLiveCheck() {
 
 async function submitAuditForm() {
   if (form._hp) {
-    // Honeypot tripped — silently "succeed" without writing anything.
+    // Honeypot tripped - silently "succeed" without writing anything.
     formState.value = "success";
     successTimeoutId = setTimeout(proceedToLiveCheck, 1400);
     return;
@@ -148,12 +148,12 @@ async function submitAuditForm() {
     page: window.location.pathname,
   });
 
-  // Saving the lead is best-effort and must never block the live check —
+  // Saving the lead is best-effort and must never block the live check -
   // that's the actual thing the visitor is here for. If the Sheet write
   // isn't configured or fails, we log it clearly (so it doesn't go
   // unnoticed) and surface a soft, non-blocking note instead of a hard
   // error screen.
-  if (!saved) leadSaveWarning.value = "We couldn't confirm your details were saved — message us on WhatsApp just in case.";
+  if (!saved) leadSaveWarning.value = "We couldn't confirm your details were saved - message us on WhatsApp just in case.";
 
   formState.value = "success";
   // Brief reassurance, then roll straight into the real live check regardless
@@ -162,17 +162,17 @@ async function submitAuditForm() {
 }
 
 /* ---------------------------------------------------------------- */
-/* Hero — REAL live check, powered by Google PageSpeed Insights       */
+/* Hero - REAL live check, powered by Google PageSpeed Insights       */
 /*                                                                    */
 /* This calls Google's public PageSpeed Insights API, which actually  */
 /* loads the submitted URL server-side (the same way Google's own     */
 /* Lighthouse tooling does) and returns real Performance, SEO, and    */
 /* Best Practices scores plus real Core Web Vitals.                   */
 /*                                                                    */
-/* ⚠️ ACTION REQUIRED — READ THIS:                                    */
+/* ⚠️ ACTION REQUIRED - READ THIS:                                    */
 /* Without an API key below, EVERY unauthenticated caller of this API */
 /* worldwide shares one small daily quota. In practice that means it  */
-/* runs out almost immediately — this is not a bug, it's Google's     */
+/* runs out almost immediately - this is not a bug, it's Google's     */
 /* free-tier design. You WILL see "Quota exceeded" errors until you   */
 /* set PAGESPEED_API_KEY. To fix, permanently:                        */
 /*   1. https://console.cloud.google.com/ → create/select a project   */
@@ -188,11 +188,11 @@ async function submitAuditForm() {
 /* no-backend API call (Performance, on-page SEO signals, Security /  */
 /* Best Practices). Design & UX quality, AI/search discoverability,   */
 /* and conversion readiness need a real look at the site and are NOT  */
-/* faked here — they're offered as the follow-up full audit via the   */
+/* faked here - they're offered as the follow-up full audit via the   */
 /* lead form instead of being invented as a live number. Don't remove */
 /* this note without re-reading it.                                  */
 /* ---------------------------------------------------------------- */
-const PAGESPEED_API_KEY = "AIzaSyBcAN9sn1W_t1R-kuM00BT-IbCywvIdMjA"; // 👈 paste your free Google API key here — see note above
+const PAGESPEED_API_KEY = "AIzaSyBcAN9sn1W_t1R-kuM00BT-IbCywvIdMjA"; // 👈 paste your free Google API key here - see note above
 
 const pendingUrl = ref("");
 const liveCheckStatus = ref("idle"); // idle | loading | success | error
@@ -204,9 +204,9 @@ const liveResult = reactive({
   performance: 0,
   seo: 0,
   bestPractices: 0,
-  lcp: "—",
-  cls: "—",
-  tbt: "—",
+  lcp: "-",
+  cls: "-",
+  tbt: "-",
   httpsOk: null,
   titleOk: null,
   metaDescOk: null,
@@ -223,7 +223,7 @@ function tierFor(score) {
 }
 
 /* Lighthouse-style severity banding, reused for every pillar bar, the
-   gauge ring, and the detail rows below — so colour always means the
+   gauge ring, and the detail rows below - so colour always means the
    same thing everywhere on the card. */
 function bandFor(score) {
   if (score >= 90) return "good";
@@ -232,7 +232,7 @@ function bandFor(score) {
 }
 
 // The overall gauge/tier colour follows the tier's own boundaries
-// (0–59 / 60–79 / 80–100) rather than bandFor's stricter 90/50 split —
+// (0–59 / 60–79 / 80–100) rather than bandFor's stricter 90/50 split -
 // otherwise an 85 "Full Canopy" would render in amber, which reads as
 // a contradiction rather than nuance.
 function tierBand(score) {
@@ -260,19 +260,19 @@ const weakestPillar = computed(() => {
 });
 
 // True when the headline tier reads better than the worst pillar actually
-// is — the exact "85 / Full Canopy next to a 16.7s LCP" mismatch. When
+// is - the exact "85 / Full Canopy next to a 16.7s LCP" mismatch. When
 // this fires we show a caution note instead of letting the tier stand
 // unqualified.
 const hasHiddenWeakness = computed(() => liveResult.overall >= 60 && weakestPillar.value.score < 50);
 
 function opportunityMessage(pillar) {
   if (pillar.key === "performance") {
-    return `Largest Contentful Paint is ${liveResult.lcp} — anything past 2.5s starts losing visitors before the page even finishes loading.`;
+    return `Largest Contentful Paint is ${liveResult.lcp} - anything past 2.5s starts losing visitors before the page even finishes loading.`;
   }
   if (pillar.key === "seo") {
     return "Thin or missing title tags and meta descriptions make it harder for both search engines and AI tools to understand what the page is about.";
   }
-  return "A security or best-practices gap — often a missing HTTPS redirect or an outdated library — that browsers flag to visitors before they reach your content.";
+  return "A security or best-practices gap - often a missing HTTPS redirect or an outdated library - that browsers flag to visitors before they reach your content.";
 }
 
 function animateLiveResult() {
@@ -290,7 +290,7 @@ function animateLiveResult() {
   });
 }
 
-const LIVE_CHECK_CACHE_TTL = 15 * 60 * 1000; // 15 minutes — avoids re-burning quota while testing/demoing
+const LIVE_CHECK_CACHE_TTL = 15 * 60 * 1000; // 15 minutes - avoids re-burning quota while testing/demoing
 
 function getCachedLiveCheck(cacheKey) {
   try {
@@ -308,7 +308,7 @@ function setCachedLiveCheck(cacheKey, data) {
   try {
     sessionStorage.setItem("amortree_live_check:" + cacheKey, JSON.stringify({ savedAt: Date.now(), data }));
   } catch {
-    // sessionStorage unavailable (private browsing, etc.) — caching is a nice-to-have, not required.
+    // sessionStorage unavailable (private browsing, etc.) - caching is a nice-to-have, not required.
   }
 }
 
@@ -323,7 +323,7 @@ async function runLiveCheck(rawUrl) {
   const cacheKey = target.replace(/^https?:\/\//i, "").replace(/\/+$/, "");
   const cached = getCachedLiveCheck(cacheKey);
   if (cached) {
-    // Same URL checked recently in this session — reuse it instead of
+    // Same URL checked recently in this session - reuse it instead of
     // spending another call against Google's (easily-exhausted) free quota.
     liveCheckStatus.value = "loading";
     Object.assign(liveResult, cached);
@@ -372,9 +372,9 @@ async function runLiveCheck(rawUrl) {
       seo,
       bestPractices: bp,
       overall: Math.round((perf + seo + bp) / 3),
-      lcp: audits["largest-contentful-paint"]?.displayValue || "—",
-      cls: audits["cumulative-layout-shift"]?.displayValue || "—",
-      tbt: audits["total-blocking-time"]?.displayValue || "—",
+      lcp: audits["largest-contentful-paint"]?.displayValue || "-",
+      cls: audits["cumulative-layout-shift"]?.displayValue || "-",
+      tbt: audits["total-blocking-time"]?.displayValue || "-",
       httpsOk: (audits["is-on-https"]?.score ?? 1) === 1,
       titleOk: (audits["document-title"]?.score ?? 1) === 1,
       metaDescOk: (audits["meta-description"]?.score ?? 1) === 1,
@@ -397,14 +397,14 @@ async function runLiveCheck(rawUrl) {
     if (/quota/i.test(msg) || /RESOURCE_EXHAUSTED/i.test(msg)) {
       liveCheckErrorType.value = "quota";
       liveCheckError.value =
-        "Google's free PageSpeed quota for today is used up. Without an API key, every visitor to every site using this free tier shares one small daily quota — it runs out fast. Add a free key (takes about 5 minutes) to fix this permanently.";
+        "Google's free PageSpeed quota for today is used up. Without an API key, every visitor to every site using this free tier shares one small daily quota - it runs out fast. Add a free key (takes about 5 minutes) to fix this permanently.";
     } else if (err.name === "AbortError") {
       liveCheckErrorType.value = "timeout";
       liveCheckError.value =
-        "That scan took too long and timed out. Some sites block automated scanners — try again, or request a manual audit below.";
+        "That scan took too long and timed out. Some sites block automated scanners - try again, or request a manual audit below.";
     } else if (msg.includes("Failed to fetch")) {
       liveCheckErrorType.value = "network";
-      liveCheckError.value = "Couldn't reach Google's audit service — check your connection and try again.";
+      liveCheckError.value = "Couldn't reach Google's audit service - check your connection and try again.";
     } else {
       liveCheckErrorType.value = "generic";
       liveCheckError.value = `${msg || "We couldn't complete a live scan for that site."} It may be blocking automated tools, or the URL may be incorrect.`;
@@ -416,7 +416,7 @@ async function runLiveCheck(rawUrl) {
 }
 
 /* ---------------------------------------------------------------- */
-/* Problem — invisible grove                                         */
+/* Problem - invisible grove                                         */
 /* ---------------------------------------------------------------- */
 const groveBars = [38, 52, 88, 44, 60, 34, 70, 48, 56, 40];
 
@@ -425,18 +425,18 @@ const groveBars = [38, 52, 88, 44, 60, 34, 70, 48, 56, 40];
 /* ---------------------------------------------------------------- */
 const statBand = [
   { big: "2+", text: "years designing and building production websites, SaaS products, and mobile apps for growing B2B teams.", source: "Amortree Tech" },
-  { big: "72hr", text: "from a kickoff call to a scoped proposal and timeline — no lengthy sales process before you see a plan.", source: "Amortree Engagement" },
+  { big: "72hr", text: "from a kickoff call to a scoped proposal and timeline - no lengthy sales process before you see a plan.", source: "Amortree Engagement" },
   { big: "6", text: "disciplines under one roof: design, development, SaaS product, mobile, SEO, and growth strategy.", source: "Amortree Coverage" },
 ];
 
 /* ---------------------------------------------------------------- */
-/* What We Do — services (rendered as GSAP-driven stacked cards)     */
+/* What We Do - services (rendered as GSAP-driven stacked cards)     */
 /* ---------------------------------------------------------------- */
 const services = [
   {
     index: "01",
     title: "Website Design & Development",
-    body: "Custom-built marketing sites, landing pages, and web apps, designed around how your buyers actually browse and convert — not a template with your logo on it.",
+    body: "Custom-built marketing sites, landing pages, and web apps, designed around how your buyers actually browse and convert - not a template with your logo on it.",
     checks: ["Custom UI/UX design", "Responsive front-end build", "CMS & headless integrations", "Conversion-focused landing pages"],
     meta: "Most requested",
     icon: "language",
@@ -444,7 +444,7 @@ const services = [
   {
     index: "02",
     title: "UI/UX Strategy & Product Design",
-    body: "Interfaces for SaaS products and internal tools, grounded in real user flows — wireframes through pixel-perfect, developer-ready design systems.",
+    body: "Interfaces for SaaS products and internal tools, grounded in real user flows - wireframes through pixel-perfect, developer-ready design systems.",
     checks: ["User research & flow mapping", "Wireframes to hi-fi UI", "Design systems & tokens", "Usability testing"],
     meta: "Design-led",
     icon: "design_services",
@@ -452,7 +452,7 @@ const services = [
   {
     index: "03",
     title: "SaaS Product Development",
-    body: "End-to-end build for SaaS products — from MVP to a scalable Vue front end backed by the APIs and integrations your product actually needs.",
+    body: "End-to-end build for SaaS products - from MVP to a scalable Vue front end backed by the APIs and integrations your product actually needs.",
     checks: ["MVP to production build", "Vue / React front-ends", "API & third-party integrations", "Iterative, sprint-based delivery"],
     meta: "Full-stack",
     icon: "dashboard_customize",
@@ -468,7 +468,7 @@ const services = [
   {
     index: "05",
     title: "SEO & Digital Growth",
-    body: "Technical SEO, on-page structure, and content architecture that gets you found on Google — and increasingly, cited inside AI answers like ChatGPT and Gemini.",
+    body: "Technical SEO, on-page structure, and content architecture that gets you found on Google - and increasingly, cited inside AI answers like ChatGPT and Gemini.",
     checks: ["Technical & on-page SEO", "Content architecture", "Structured data (schema)", "AI & search discoverability"],
     meta: "Ongoing",
     icon: "trending_up",
@@ -487,19 +487,19 @@ const services = [
 /* Growth Score rings + tiers                                        */
 /* ---------------------------------------------------------------- */
 const ringCards = [
-  { pct: "32%", note: "Primary driver", title: "Design & UX Quality", body: "Whether the site is clear, credible, and easy to act on — from first impression to the moment someone reaches for a form or a call." },
+  { pct: "32%", note: "Primary driver", title: "Design & UX Quality", body: "Whether the site is clear, credible, and easy to act on - from first impression to the moment someone reaches for a form or a call." },
   { pct: "20%", title: "Performance", body: "Load speed and Core Web Vitals. Slow, janky pages lose visitors before they read a word, and get crawled less often." },
-  { pct: "20%", title: "SEO & Content", body: "On-page structure, content depth, and technical SEO — the foundation that gets you found on Google in the first place." },
+  { pct: "20%", title: "SEO & Content", body: "On-page structure, content depth, and technical SEO - the foundation that gets you found on Google in the first place." },
   { pct: "12%", title: "Security Health", body: "SSL validity, HTTPS enforcement, and crawler-friendly configuration. A grade of C or below and both buyers and bots hesitate." },
-  { pct: "10%", title: "AI & Search Discoverability", body: "Structured data and machine-readable content — the signals that let AI tools like ChatGPT, Claude, and Gemini find and cite you." },
-  { pct: "6%", title: "Conversion Readiness", body: "How easy the site makes it to actually reach out — clear CTAs, working forms, and a path from visitor to lead." },
+  { pct: "10%", title: "AI & Search Discoverability", body: "Structured data and machine-readable content - the signals that let AI tools like ChatGPT, Claude, and Gemini find and cite you." },
+  { pct: "6%", title: "Conversion Readiness", body: "How easy the site makes it to actually reach out - clear CTAs, working forms, and a path from visitor to lead." },
 ];
 
 const tierStages = [
-  { range: "0–29", name: "Seedling", body: "Buyers can't easily find, trust, or convert with you online. The basics — speed, clarity, or SEO — are holding the site back." },
-  { range: "30–59", name: "Sapling", body: "You're present but unconfirmed — design or content gaps keep visitors from committing to a conversation." },
+  { range: "0–29", name: "Seedling", body: "Buyers can't easily find, trust, or convert with you online. The basics - speed, clarity, or SEO - are holding the site back." },
+  { range: "30–59", name: "Sapling", body: "You're present but unconfirmed - design or content gaps keep visitors from committing to a conversation." },
   { range: "60–79", name: "Growing Tree", body: "The fundamentals are in place. This is where search engines, AI tools, and buyers start taking you seriously." },
-  { range: "80–100", name: "Full Canopy", body: "Fast, secure, well-structured, and easy to act on — a site that earns trust and converts on its own." },
+  { range: "80–100", name: "Full Canopy", body: "Fast, secure, well-structured, and easy to act on - a site that earns trust and converts on its own." },
 ];
 
 /* ---------------------------------------------------------------- */
@@ -513,9 +513,9 @@ const caseStudy = {
     { num: "3.1x", label: "Increase in qualified inbound enquiries" },
   ],
   blocks: [
-    { title: "The Challenge", body: "Kestrel had two decades of precision-motion expertise and ISO 9001 certification — almost none of it visible on a site untouched since 2016. Buyers researching vendors, on Google or through AI tools, found little to go on." },
+    { title: "The Challenge", body: "Kestrel had two decades of precision-motion expertise and ISO 9001 certification - almost none of it visible on a site untouched since 2016. Buyers researching vendors, on Google or through AI tools, found little to go on." },
     { title: "What We Did", body: "The audit scored them a Seedling at 11. We rebuilt the site on a proper design system, restructured content and schema around their real capabilities, and lifted Core Web Vitals and security to production-grade." },
-    { title: "The Impact", body: "Score moved from 11 to 76 — Growing Tree — in 84 days. Qualified inbound enquiries rose 3.1x in the two months after launch, and Kestrel now reads as credible wherever a buyer looks, search engine or AI assistant." },
+    { title: "The Impact", body: "Score moved from 11 to 76 - Growing Tree - in 84 days. Qualified inbound enquiries rose 3.1x in the two months after launch, and Kestrel now reads as credible wherever a buyer looks, search engine or AI assistant." },
   ],
 };
 
@@ -526,7 +526,7 @@ const industries = [
   { icon: "precision_manufacturing", title: "Manufacturing & Auto-Ancillary", body: "Product catalogs, certifications, and OEM relationships built into a site that reads as credible to procurement teams and modern search alike.", tags: ["Product Catalogs", "ISO / IATF Content", "OEM Portals"] },
   { icon: "medical_services", title: "Healthcare & MedTech", body: "Accreditation-forward websites and patient- or partner-facing tools that meet compliance needs without sacrificing usability.", tags: ["NABH / NABL Content", "Patient UX", "Compliance-Aware"] },
   { icon: "terminal", title: "IT & Technology Services", body: "Service pages, case studies, and credential-rich content structured to win enterprise procurement attention.", tags: ["Case Study Systems", "Service Pages", "Credential Markup"] },
-  { icon: "account_balance", title: "Fintech & Financial Services", body: "Licensing, compliance, and product clarity — presented with the trust signals financial buyers expect.", tags: ["Compliance Content", "Product Clarity", "Trust Signals"] },
+  { icon: "account_balance", title: "Fintech & Financial Services", body: "Licensing, compliance, and product clarity - presented with the trust signals financial buyers expect.", tags: ["Compliance Content", "Product Clarity", "Trust Signals"] },
   { icon: "local_shipping", title: "Logistics & Supply Chain", body: "Coverage maps, fleet capability, and partner network detail structured for fast vendor evaluation.", tags: ["Coverage Pages", "Fleet Data", "Partner Network"] },
   { icon: "workspace_premium", title: "Professional Services", body: "Expertise, credentials, and case studies structured to turn consulting inquiries into qualified conversations.", tags: ["Expertise Pages", "Case Studies", "Lead Capture"] },
 ];
@@ -535,12 +535,12 @@ const industries = [
 /* FAQ                                                                */
 /* ---------------------------------------------------------------- */
 const faqs = [
-  { q: "What does Amortree actually build?", a: "Websites, SaaS products, and mobile apps — plus the SEO and growth strategy to make sure they get found and used. Most engagements start with a website or product redesign and grow into an ongoing growth retainer." },
-  { q: "How is this different from a typical web agency?", a: "One team covers design, front-end development, product, and growth — the same people from kickoff to launch. Nothing gets lost in a hand-off between a design studio and a separate dev shop." },
+  { q: "What does Amortree actually build?", a: "Websites, SaaS products, and mobile apps - plus the SEO and growth strategy to make sure they get found and used. Most engagements start with a website or product redesign and grow into an ongoing growth retainer." },
+  { q: "How is this different from a typical web agency?", a: "One team covers design, front-end development, product, and growth - the same people from kickoff to launch. Nothing gets lost in a hand-off between a design studio and a separate dev shop." },
   { q: "Do you work with early-stage products, or only established companies?", a: "Both. We've taken SaaS ideas from a blank canvas to a working MVP, and we've rebuilt decade-old sites for established B2B manufacturers and service firms." },
-  { q: "What's the free website check on this page?", a: "It's a real, live scan of your site's Performance, on-page SEO, and Security — the same technology behind Google's own Lighthouse tooling. It's a taste of the full six-pillar Growth Score, not a marketing gimmick." },
+  { q: "What's the free website check on this page?", a: "It's a real, live scan of your site's Performance, on-page SEO, and Security - the same technology behind Google's own Lighthouse tooling. It's a taste of the full six-pillar Growth Score, not a marketing gimmick." },
   { q: "How long does a typical website or product build take?", a: "A focused marketing site or landing page usually ships in 4–8 weeks. SaaS MVPs and larger product builds run longer and are scoped after a kickoff call." },
-  { q: "Do you offer support after launch?", a: "Yes — ongoing retainers cover maintenance, SEO, content, and iterative product work, so the site keeps improving instead of going stale the day it ships." },
+  { q: "Do you offer support after launch?", a: "Yes - ongoing retainers cover maintenance, SEO, content, and iterative product work, so the site keeps improving instead of going stale the day it ships." },
   { q: "Can you help us get found by AI tools like ChatGPT and Gemini, not just Google?", a: "Yes. Structured data and machine-readable content are part of our SEO & Growth service, and it's one of the six pillars in the Growth Score." },
   { q: "What is the Growth Score?", a: "A 0–100 measure of how well your website actually works for the business behind it, built from six weighted pillars: Design & UX (32%), Performance (20%), SEO & Content (20%), Security (12%), AI & Search Discoverability (10%), and Conversion Readiness (6%)." },
   { q: "What industries do you work with?", a: "Manufacturing, healthcare, IT services, fintech, logistics, and professional services, with more playbooks in progress. If your buyers research vendors online, we can help you win that moment." },
@@ -553,7 +553,7 @@ const activeFaq = ref(0);
 const finalStats = [
   { num: "4–8 wks", body: "Typical timeline for a full website or landing page design-and-build, start to launch." },
   { num: "6", body: "Core disciplines covered in-house: design, front-end, SaaS product, mobile, SEO, and growth." },
-  { num: "1", body: "Team from first call to launch — no hand-off between a design agency and a separate dev shop." },
+  { num: "1", body: "Team from first call to launch - no hand-off between a design agency and a separate dev shop." },
 ];
 
 /* ---------------------------------------------------------------- */
@@ -626,11 +626,11 @@ onMounted(async () => {
     });
 
     /* ------------------------------------------------------------
-       "What We Do" — vertically stacked service cards.
+       "What We Do" - vertically stacked service cards.
 
        Earlier versions of this used GSAP's ScrollTrigger.pin (both
        for the header and for each card, at different points across
-       several attempts). That kept producing new failure modes —
+       several attempts). That kept producing new failure modes -
        most recently, cards rendering narrower and shifted from the
        header instead of aligned to it. The likely cause: once
        multiple simultaneous position:fixed pins are in play, along
@@ -639,7 +639,7 @@ onMounted(async () => {
 
        Switched to a much simpler, far more battle-tested pattern:
        plain CSS `position: sticky` handles "stay in place while
-       scrolling" (see .stack-card below) — no GSAP pin, no pin-spacer
+       scrolling" (see .stack-card below) - no GSAP pin, no pin-spacer
        elements, none of the position:fixed containing-block quirks
        that `transform`/`perspective`/`filter` on an ancestor can
        trigger. GSAP's only job here is the scroll-scrubbed scale/tilt
@@ -647,7 +647,7 @@ onMounted(async () => {
        is a much smaller, safer surface area.
 
        The separately pinned header (from earlier attempts) has been
-       dropped entirely — it was the other half of what kept breaking,
+       dropped entirely - it was the other half of what kept breaking,
        and a working card stack matters more than a header that also
        stays fixed. It scrolls normally above the cards now.
        ------------------------------------------------------------ */
@@ -682,7 +682,7 @@ onMounted(async () => {
   });
 
   // Recalculate trigger positions once everything (fonts, images, layout)
-  // has fully settled — stacked cards are especially sensitive to this.
+  // has fully settled - stacked cards are especially sensitive to this.
   window.requestAnimationFrame(() => ScrollTrigger.refresh());
 });
 
@@ -709,7 +709,7 @@ onBeforeUnmount(() => {
           </h1>
           <p class="as-hero-lede hero-lede">
             Get a professional website audit that uncovers the problems hurting your Google rankings, user experience, trust, speed, and conversions.
-            You'll receive actionable recommendations—not generic AI suggestions.
+            You'll receive actionable recommendations-not generic AI suggestions.
           </p>
           <form class="as-url-form as-url-form-center hero-cta-row" @submit.prevent="submitHeroUrl">
             <span class="material-symbols-outlined as-url-icon" aria-hidden="true">language</span>
@@ -743,7 +743,7 @@ onBeforeUnmount(() => {
                 <span class="material-symbols-outlined live-state-icon" aria-hidden="true">bolt</span>
                 <h3>Your live check will appear here</h3>
                 <p>
-                  Enter your website above and tell us a bit about your business — then we'll run
+                  Enter your website above and tell us a bit about your business - then we'll run
                   a real scan: actual Lighthouse performance, on-page SEO signals, and security
                   checks, live.
                 </p>
@@ -754,7 +754,7 @@ onBeforeUnmount(() => {
                 <div class="live-loading-track"><span class="live-loading-bar"></span></div>
                 <p class="live-loading-domain">{{ pendingUrl }}</p>
                 <p class="live-loading-copy">
-                  Running a real scan on your site — this can take up to 30 seconds since we're
+                  Running a real scan on your site - this can take up to 30 seconds since we're
                   actually loading the page, the same way Google does.
                 </p>
               </div>
@@ -845,7 +845,7 @@ onBeforeUnmount(() => {
                   </div>
                 </div>
 
-                <!-- The one thing worth fixing first — never buried behind
+                <!-- The one thing worth fixing first - never buried behind
                      a decent-looking overall number. -->
                 <div
                   v-if="weakestPillar.score < 90"
@@ -897,7 +897,7 @@ onBeforeUnmount(() => {
                   <p>
                     This instant check covers 3 of the 6 pillars in your full Growth Score.
                     <strong>Design &amp; UX, AI/search discoverability, and conversion readiness</strong>
-                    are already on the way — your full report lands within 72 hours.
+                    are already on the way - your full report lands within 72 hours.
                   </p>
                   <a
                     class="as-btn as-btn-ghost"
@@ -913,7 +913,7 @@ onBeforeUnmount(() => {
       </section>
 
       <!-- ============================================================
-           WHAT WE DO — vertically stacked service cards (GSAP)
+           WHAT WE DO - vertically stacked service cards (GSAP)
            ============================================================ -->
       <section id="what-we-do" class="as-section as-section-light as-services-section">
         <div class="as-wrap">
@@ -921,7 +921,7 @@ onBeforeUnmount(() => {
             <div class="as-eyebrow">What We Do</div>
             <h2 class="as-h2">One team, six disciplines, no hand-offs.</h2>
             <p class="as-body-lg">
-              Design, build, and grow — under one roof. Scroll to see everything one Amortree
+              Design, build, and grow - under one roof. Scroll to see everything one Amortree
               engagement can cover, end to end.
             </p>
           </div>
@@ -958,7 +958,7 @@ onBeforeUnmount(() => {
             <p class="as-body-lg">
               Buyers now research vendors across Google, review sites, and increasingly AI tools
               before they ever pick up the phone. A site that's slow, thin on content, or unclear
-              about what you do gets skipped — no matter how good the business behind it is.
+              about what you do gets skipped - no matter how good the business behind it is.
             </p>
           </div>
           <div class="reveal">
@@ -973,7 +973,7 @@ onBeforeUnmount(() => {
             </div>
             <p class="as-stat-caption">
               Most B2B websites we audit score under <strong>50/100</strong> on Growth Score before
-              we touch them. The gap is rarely the business — it's the site.
+              we touch them. The gap is rarely the business - it's the site.
             </p>
           </div>
         </div>
@@ -1001,7 +1001,7 @@ onBeforeUnmount(() => {
             <div class="as-eyebrow">The Growth Score</div>
             <h2 class="as-h2">Six pillars. One number that tells you where the site is costing you leads.</h2>
             <p class="as-body-lg">
-              Every site we look at is scored across six weighted pillars — the same six things
+              Every site we look at is scored across six weighted pillars - the same six things
               that decide whether a visitor becomes a lead.
             </p>
           </div>
@@ -1121,7 +1121,7 @@ onBeforeUnmount(() => {
           <div class="as-eyebrow" style="justify-content: center">Free Website Check · No Commitment</div>
           <h2 class="as-h2">Get your free Website Growth Score.</h2>
           <p class="as-body-lg as-final-lede">
-            A real, live scan of your site today — and a full six-pillar report within 72 hours,
+            A real, live scan of your site today - and a full six-pillar report within 72 hours,
             so you know exactly what design, dev, or SEO work would move the needle.
           </p>
           <form class="as-url-form as-url-form-center" @submit.prevent="submitHeroUrl">
@@ -1175,7 +1175,7 @@ onBeforeUnmount(() => {
             </p>
 
             <form class="as-modal-form" @submit.prevent="submitAuditForm">
-              <!-- Honeypot — hidden from real visitors, catches simple bots -->
+              <!-- Honeypot - hidden from real visitors, catches simple bots -->
               <input
                 v-model="form._hp"
                 type="text"
@@ -1242,8 +1242,8 @@ onBeforeUnmount(() => {
               <h3 id="auditModalTitle" class="as-modal-title">You're all set{{ form.fullName ? ", " + form.fullName.split(" ")[0] : "" }}.</h3>
               <p class="as-modal-sub">
                 Pulling up your live check for <strong>{{ form.companyWebsite }}</strong> now. Your
-                full six-pillar Growth Score report will also land in your inbox — and on
-                WhatsApp — within 72 hours.
+                full six-pillar Growth Score report will also land in your inbox - and on
+                WhatsApp - within 72 hours.
               </p>
               <p v-if="leadSaveWarning" class="as-form-banner">{{ leadSaveWarning }}</p>
               <div class="as-modal-success-actions">
@@ -1265,7 +1265,7 @@ onBeforeUnmount(() => {
 
 <style scoped lang="scss">
 /* ==================================================
-   Local design tokens — matches the amortree Tech
+   Local design tokens - matches the amortree Tech
    dark/gold system used across Header/Footer/Pricing
    ================================================== */
 .amor-score-page {
@@ -1568,7 +1568,7 @@ onBeforeUnmount(() => {
 }
 
 .score-card {
-  /* Local light-theme tokens — everything inside this card (idle, loading,
+  /* Local light-theme tokens - everything inside this card (idle, loading,
      error, and success states; gauge; pillar bars; opportunity callout)
      already reads colour via var(--surface-*), var(--ink*), and
      var(--gold-soft), so overriding them here re-themes the whole card
@@ -1902,8 +1902,8 @@ onBeforeUnmount(() => {
 
 /* ─── Radial score gauge ───────────────────────────────────────────
    A conic-gradient ring reads instantly ("how full is the circle")
-   in a way a bare number doesn't, and its colour — driven by the
-   same good/ok/poor band as every other score on the card — is the
+   in a way a bare number doesn't, and its colour - driven by the
+   same good/ok/poor band as every other score on the card - is the
    first signal before anyone reads a digit. */
 .score-gauge {
   --gauge-color: var(--leaf);
@@ -2010,7 +2010,7 @@ onBeforeUnmount(() => {
   overflow: hidden;
 }
 
-/* Bars are coloured per their own score, not a single flat gradient —
+/* Bars are coloured per their own score, not a single flat gradient -
    a 56 and a 100 should never look like the same colour of "done". */
 .pillar-bar-fill {
   display: block;
@@ -2043,13 +2043,13 @@ onBeforeUnmount(() => {
   border-top: 1px solid var(--line);
   border-bottom: 1px solid var(--line);
 }
-/* Light section — mirrors PricingView.vue's alternating light FAQ band.
+/* Light section - mirrors PricingView.vue's alternating light FAQ band.
    Overriding the tokens here is enough: every rule in this file reads
    colors via var(--ink)/var(--ink-muted)/var(--line)/etc., so the whole
    section (headings, body copy, dividers, the FAQ accordion) flips to a
    light theme without needing section-specific color rules. */
 .as-section-light {
-  /* --surface-0 is intentionally NOT overridden here — it doubles as the
+  /* --surface-0 is intentionally NOT overridden here - it doubles as the
      dark "text on gold accent" color (buttons, active states, etc.)
      throughout this file, not just a background. Redefining it would
      make gold buttons render with invisible white-on-gold text. */
@@ -2063,7 +2063,7 @@ onBeforeUnmount(() => {
   --line-strong: #cbd5e1;
   --gold-soft: #a9790a;
 }
-/* Explicit white only for full sections — .as-stat-band carries the same
+/* Explicit white only for full sections - .as-stat-band carries the same
    token overrides above but keeps its own var(--surface-1) background
    (now a soft off-white) so it reads as a distinct band, not a seam. */
 .as-section.as-section-light {
@@ -2176,7 +2176,7 @@ onBeforeUnmount(() => {
   letter-spacing: 0.06em;
 }
 
-/* ─── What We Do — stacked service cards ──────────────────────────── */
+/* ─── What We Do - stacked service cards ──────────────────────────── */
 .as-services-section {
   overflow: visible;
 }

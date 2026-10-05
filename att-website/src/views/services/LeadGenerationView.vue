@@ -9,12 +9,12 @@ const includes = [
   {
     icon: "conversion_path",
     title: "Funnel Strategy & Mapping",
-    desc: "Map every customer touchpoint—from first click to closed deal—so your funnel works as one connected growth system.",
+    desc: "Map every customer touchpoint-from first click to closed deal-so your funnel works as one connected growth system.",
   },
   {
     icon: "web",
     title: "High-Converting Landing Pages",
-    desc: "Conversion-focused landing pages built around one clear offer, persuasive messaging, and a single goal—more qualified enquiries.",
+    desc: "Conversion-focused landing pages built around one clear offer, persuasive messaging, and a single goal-more qualified enquiries.",
   },
   {
     icon: "fact_check",
@@ -74,7 +74,7 @@ const steps = [
     num: "04",
     icon: "task_alt",
     title: "Launch & Optimize",
-    desc: "Go live with tracking confirmed, then iterate on real conversion data — not assumptions — in the weeks after.",
+    desc: "Go live with tracking confirmed, then iterate on real conversion data - not assumptions - in the weeks after.",
     week: "Week 3–4",
   },
 ];
@@ -114,7 +114,7 @@ const faqs = [
   },
   {
     q: "How long until I start seeing leads?",
-    body: "Most funnels go live in 3–4 weeks from strategy to launch. If paid traffic is driving visitors, leads can start coming in within days of launch — though optimization continues after that.",
+    body: "Most funnels go live in 3–4 weeks from strategy to launch. If paid traffic is driving visitors, leads can start coming in within days of launch - though optimization continues after that.",
     note: "Timelines are agreed upfront and tracked at every milestone.",
   },
   {
@@ -125,7 +125,7 @@ const faqs = [
   },
   {
     q: "What counts as a 'qualified' lead?",
-    body: "We define qualification criteria with you upfront — budget, timeline, fit — and build forms and scoring around it, so the leads reaching your team are ones worth a follow-up call, not just an email address.",
+    body: "We define qualification criteria with you upfront - budget, timeline, fit - and build forms and scoring around it, so the leads reaching your team are ones worth a follow-up call, not just an email address.",
     note: "Quality is designed in, not filtered after the fact.",
   },
 ];
@@ -302,7 +302,7 @@ onBeforeUnmount(() => {
           </h2>
         </div>
         <p class="text-slate-800 max-w-sm mb-0 text-sm">
-          Every lead generation system follows the same proven framework—from funnel strategy and landing pages to CRM automation and conversion tracking—so every lead has a clear path to becoming a customer.
+          Every lead generation system follows the same proven framework-from funnel strategy and landing pages to CRM automation and conversion tracking-so every lead has a clear path to becoming a customer.
         </p>
       </div>
 
@@ -331,7 +331,7 @@ onBeforeUnmount(() => {
           </h2>
         </div>
         <p class="text-slate-800 max-w-sm mb-0 text-sm">
-          A defined sequence, not an open-ended back-and-forth — so you always know what happens
+          A defined sequence, not an open-ended back-and-forth - so you always know what happens
           next and when.
         </p>
       </div>

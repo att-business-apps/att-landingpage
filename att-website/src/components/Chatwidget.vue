@@ -2,14 +2,18 @@
 import { ref, reactive, computed, nextTick, onMounted, onBeforeUnmount } from "vue";
 import { createLeadId, submitLead as postLeadToCrm } from "@/utils/leadSync";
 
+const props = defineProps({
+  initialOpen: { type: Boolean, default: false },
+});
+
 /**
- * AmortreeBot — guided lead-capture chatbot.
+ * AmortreeBot - guided lead-capture chatbot.
  *
  * Why "guided" instead of a raw LLM hookup: a free-form AI chatbot needs a
  * server-side API key (an LLM call from the browser would expose that key
- * to anyone who opens devtools). This widget gets you 90% of the value —
+ * to anyone who opens devtools). This widget gets you 90% of the value -
  * instant answers about services, qualifying questions, lead capture, and
- * contextual FAQs — with zero backend to run. If you later want true
+ * contextual FAQs - with zero backend to run. If you later want true
  * generative answers, swap `sendToSheet()`'s endpoint for a small
  * serverless function that calls an LLM server-side and keep everything else.
  *
@@ -18,7 +22,7 @@ import { createLeadId, submitLead as postLeadToCrm } from "@/utils/leadSync";
  *
  * UX notes (v4):
  * - Contact info (name, phone, email) is now collected right up front, before
- *   services are shown — this guarantees a lead is captured even if the
+ *   services are shown - this guarantees a lead is captured even if the
  *   visitor never picks a service. A lightweight, silent POST fires the
  *   moment email is collected (source: "chatbot-partial"), then a second,
  *   fuller POST fires at the natural end of the conversation once service +
@@ -26,7 +30,7 @@ import { createLeadId, submitLead as postLeadToCrm } from "@/utils/leadSync";
  *   row per visitor, remove the `silentCapture()` call in `handleEmail()`
  *   and dedupe isn't needed.
  * - Expanding/collapsing a long answer ("Show more"/"Show less") no longer
- *   yanks the scroll position to the bottom — it anchors the scroll to the
+ *   yanks the scroll position to the bottom - it anchors the scroll to the
  *   same relative spot so nothing jumps.
  * - Several of the bot's stock lines (greeting, prompts, transitions) are
  *   picked at random from a small set of variants each time, so repeat
@@ -48,14 +52,14 @@ const GREETINGS = [
   "👋 Welcome to amortree Tech! I'm your AI assistant, here to help you explore our services, answer your questions, and connect you with our team when you're ready.",
   "Hi there! 👋 I'm the amortree AI Assistant. Whether you need a website, branding, digital marketing, or a custom solution, I'm here to point you in the right direction.",
   "Hello! 🚀 I'm the amortree AI Assistant. Tell me about your business or project, and I'll help you find the best solution or connect you with our experts.",
-  "Welcome! ✨ Need a website, eCommerce store, SEO, branding, or digital marketing? Ask me anything—I'm here to help you get started.",
+  "Welcome! ✨ Need a website, eCommerce store, SEO, branding, or digital marketing? Ask me anything-I'm here to help you get started.",
   "Hey! 👋 I'm your amortree AI Assistant. I can explain our services, recommend the right solution for your business, or help you request a free consultation.",
   "Hi! 💙 Looking to grow your business online? I'm here to answer your questions, guide you through our services, and help you take the next step with confidence.",
 ];
 const NAME_PROMPTS = [
-  "First off — what should I call you?",
+  "First off - what should I call you?",
   "To kick things off, what's your name?",
-  "Let's start simple — what should I call you?",
+  "Let's start simple - what should I call you?",
 ];
 const PHONE_PROMPTS = (name) => ([
   `Great to meet you, ${name}! 😉 Could you share a phone number where our team can reach you?`,
@@ -64,13 +68,13 @@ const PHONE_PROMPTS = (name) => ([
 ]);
 const EMAIL_PROMPTS = [
   "Perfect! And what's the best email address to reach you at? 📧",
-  "Great, got it! One more — what's a good email for you?",
-  "Thanks! Last one — what email should we use to follow up?",
+  "Great, got it! One more - what's a good email for you?",
+  "Thanks! Last one - what email should we use to follow up?",
 ];
 const SERVICE_TRANSITIONS = (name) => ([
   `Thank you so much for sharing your details, ${name}! ☀️ Now that I have your info, here are the services we offer. Please choose one!`,
-  `All set, ${name}! 🎉 Here's what we can help with — pick whatever fits best.`,
-  `Perfect, ${name} — you're all set up. Here's a look at what we offer!`,
+  `All set, ${name}! 🎉 Here's what we can help with - pick whatever fits best.`,
+  `Perfect, ${name} - you're all set up. Here's a look at what we offer!`,
 ]);
 const FAQ_FOLLOWUPS = [
   "Anything else you'd like to know, or ready for a quote?",
@@ -78,16 +82,16 @@ const FAQ_FOLLOWUPS = [
   "Got more questions, or ready to get a quote rolling?",
 ];
 const FAQ_EXHAUSTED = [
-  "That covers the common questions here — want me to connect you with the team for a free quote?",
-  "That's the main stuff people ask about this — ready for a free quote from the team?",
-  "I think that covers it — shall I connect you with the team for a free quote?",
+  "That covers the common questions here - want me to connect you with the team for a free quote?",
+  "That's the main stuff people ask about this - ready for a free quote from the team?",
+  "I think that covers it - shall I connect you with the team for a free quote?",
 ];
 
 const SERVICES = [
-  { id: "web-design", label: "Website Design", blurb: "We design custom, conversion-focused websites — not templates. Typical turnaround is 2–4 weeks depending on scope.", link: "/website-design" },
+  { id: "web-design", label: "Website Design", blurb: "We design custom, conversion-focused websites - not templates. Typical turnaround is 2–4 weeks depending on scope.", link: "/website-design" },
   { id: "web-dev", label: "Web Development", blurb: "From marketing sites to custom web apps, built to be fast, maintainable, and easy for your team to update.", link: "/web-development" },
-  { id: "ecommerce", label: "E-commerce & Shopify", blurb: "Shopify builds and custom e-commerce, set up to actually convert — clean checkout flow, fast load times, mobile-first.", link: "/shopify-development" },
-  { id: "seo", label: "SEO", blurb: "Local and national SEO — Google Business Profile, on-page fundamentals, and content that targets what your customers actually search.", link: "/seo" },
+  { id: "ecommerce", label: "E-commerce & Shopify", blurb: "Shopify builds and custom e-commerce, set up to actually convert - clean checkout flow, fast load times, mobile-first.", link: "/shopify-development" },
+  { id: "seo", label: "SEO", blurb: "Local and national SEO - Google Business Profile, on-page fundamentals, and content that targets what your customers actually search.", link: "/seo" },
   { id: "marketing", label: "Digital Marketing", blurb: "Paid ads, social, and LinkedIn marketing built around measurable lead flow, not vanity metrics.", link: "/digital-marketing" },
   { id: "branding", label: "Branding & UI/UX", blurb: "Logo, visual identity, and UI/UX design that gives your business a consistent, professional look across every touchpoint.", link: "/branding" },
   { id: "leadgen", label: "Lead Generation", blurb: "WhatsApp funnels, landing pages, and contact flows designed specifically to turn visitors into enquiries.", link: "/lead-generation" },
@@ -108,7 +112,7 @@ const KEYWORD_MAP = [
 
 const GREETING_WORDS = ["hi", "hii", "hiii", "hello", "hey", "heya", "yo", "sup", "hola", "hlo"];
 
-// ── FAQ content — PLACEHOLDER, not sourced from amortree.com ────────────────
+// ── FAQ content - PLACEHOLDER, not sourced from amortree.com ────────────────
 const FAQS_BY_SERVICE = {
     "web-design": [
         { q: "What is included in your website design service?", a: "Our service includes research, wireframing, custom UI/UX design, responsive layouts, and design revisions before development begins." },
@@ -178,15 +182,15 @@ const FAQS_BY_SERVICE = {
 
 const GENERAL_FAQS = [
   { q: "What if I'm not happy with the final result?", a: "We build in revision rounds specifically so we can course-correct together before final delivery, rather than surprising you with a finished product." },
-  { q: "Do I own the website and code after it's built?", a: "Yes — full ownership transfers to you once the project is paid in full. No lock-in, no recurring platform fees to us." },
-  { q: "How does payment work?", a: "Typically a deposit to start, a milestone payment at design approval, and the balance on delivery — so you're never paying in full upfront." },
-  { q: "How much does a website cost?", a: "It depends on scope — a single landing page typically runs ₹8,000–₹25,000, while a full multi-page site is usually ₹25,000–₹80,000+. Happy to give you a specific range once I know a bit about your project." },
-  { q: "How long does a project take?", a: "A landing page usually takes 1–2 weeks, a multi-page site 3–6 weeks — assuming your content and brand assets are ready to go when we start." },
-  { q: "Do you work with clients outside Bengaluru?", a: "Yes — we're based in Bengaluru but work with clients across India and internationally, entirely remote." },
+  { q: "Do I own the website and code after it's built?", a: "Yes - full ownership transfers to you once the project is paid in full. No lock-in, no recurring platform fees to us." },
+  { q: "How does payment work?", a: "Typically a deposit to start, a milestone payment at design approval, and the balance on delivery - so you're never paying in full upfront." },
+  { q: "How much does a website cost?", a: "It depends on scope - a single landing page typically runs ₹8,000–₹25,000, while a full multi-page site is usually ₹25,000–₹80,000+. Happy to give you a specific range once I know a bit about your project." },
+  { q: "How long does a project take?", a: "A landing page usually takes 1–2 weeks, a multi-page site 3–6 weeks - assuming your content and brand assets are ready to go when we start." },
+  { q: "Do you work with clients outside Bengaluru?", a: "Yes - we're based in Bengaluru but work with clients across India and internationally, entirely remote." },
 ];
 
 // ── State ───────────────────────────────────────────────────────────────────
-const open = ref(false);
+const open = ref(props.initialOpen);
 const hasOpenedOnce = ref(false);
 const showPulse = ref(true);
 const typing = ref(false);
@@ -404,7 +408,7 @@ function saveState() {
       sent: sent.value,
     }));
   } catch (e) {
-    // localStorage may be unavailable (private browsing, disabled storage) — fail silently
+    // localStorage may be unavailable (private browsing, disabled storage) - fail silently
   }
 }
 
@@ -507,7 +511,7 @@ async function handlePhone(text) {
   const trimmed = text.trim();
   const digitsOnly = trimmed.replace(/[\s\-()]/g, "");
   if (!PHONE_RE.test(digitsOnly)) {
-    await botSay("Hmm, that doesn't look like a valid 10-digit mobile number — mind sharing it again?");
+    await botSay("Hmm, that doesn't look like a valid 10-digit mobile number - mind sharing it again?");
     return;
   }
   lead.phone = digitsOnly;
@@ -520,7 +524,7 @@ async function handleEmail(text) {
   pushUserMessage(text);
   const trimmed = text.trim();
   if (!EMAIL_RE.test(trimmed)) {
-    await botSay("It looks like there was an issue validating that email — could you please double-check it and share a valid one?");
+    await botSay("It looks like there was an issue validating that email - could you please double-check it and share a valid one?");
     return;
   }
   lead.email = trimmed;
@@ -530,7 +534,7 @@ async function handleEmail(text) {
 }
 
 // ── Validation ────────────────────────────────────────────────────────────
-// Heuristic only — no client-side check can confirm an email is real or
+// Heuristic only - no client-side check can confirm an email is real or
 // deliverable. Rejects obviously-implausible entries (single-char local
 // part or domain label, e.g. "d@f.com") without pretending to guarantee
 // the address actually exists. True verification needs a server-side
@@ -555,7 +559,7 @@ async function handleServiceChoice(id) {
     });
     step.value = "exploring";
   } else {
-    await botSay("No problem — tell me a bit about what you need and I'll pass it straight to the team.");
+    await botSay("No problem - tell me a bit about what you need and I'll pass it straight to the team.");
     step.value = "notes";
   }
   saveState();
@@ -563,10 +567,10 @@ async function handleServiceChoice(id) {
 
 async function handleWantsQuote(value) {
   if (value === "yes") {
-    await botSay(`Great — I've already got your contact details, ${lead.name.split(" ")[0]}. Anything specific about the project you'd like the team to know? (Or say "skip.")`);
+    await botSay(`Great - I've already got your contact details, ${lead.name.split(" ")[0]}. Anything specific about the project you'd like the team to know? (Or say "skip.")`);
     step.value = "notes";
   } else {
-    await botSay(`All good — the page will be right here whenever you're ready. Anything else I can help with?`, {
+    await botSay(`All good - the page will be right here whenever you're ready. Anything else I can help with?`, {
       quickReplies: [
         { label: "Ask about another service", value: "restart-service" },
         { label: "Actually, get me a quote", value: "yes" },
@@ -595,14 +599,14 @@ async function submitLead() {
   sending.value = false;
   sent.value = ok;
   if (ok) {
-    await botSay(`Thanks, ${lead.name.split(" ")[0]} — that's in. Someone from the team will reach out shortly. In the meantime, feel free to browse our work, or I'm happy to answer more questions.`, {
+    await botSay(`Thanks, ${lead.name.split(" ")[0]} - that's in. Someone from the team will reach out shortly. In the meantime, feel free to browse our work, or I'm happy to answer more questions.`, {
       quickReplies: [
         { label: "Ask about another service", value: "restart-service" },
         { label: "That's all for now", value: "done" },
       ],
     });
   } else {
-    await botSay("Hmm, that didn't go through on my end. You can also reach us directly — want me to open the contact page?", {
+    await botSay("Hmm, that didn't go through on my end. You can also reach us directly - want me to open the contact page?", {
       quickReplies: [{ label: "Open contact page", value: "contact" }],
     });
   }
@@ -622,7 +626,7 @@ async function handleDoneChoice(value) {
   } else if (value === "contact") {
     window.location.href = "/contact";
   } else {
-    await botSay("Sounds good — I'll be right here if you need anything else. 👋");
+    await botSay("Sounds good - I'll be right here if you need anything else. 👋");
   }
 }
 
@@ -662,13 +666,17 @@ async function handleSubmit() {
   if (matched && ["service", "exploring", "browsing", "done"].includes(step.value)) {
     handleServiceChoice(matched);
   } else {
-    await botSay("I want to make sure I point you the right way — could you pick one of the options above, or tell me a bit more about what you need?");
+    await botSay("I want to make sure I point you the right way - could you pick one of the options above, or tell me a bit more about what you need?");
   }
 }
 
 onMounted(() => {
   loadState();
   scrollToBottom();
+  if (open.value && messages.value.length === 0) {
+    hasOpenedOnce.value = true;
+    startConversation();
+  }
 });
 onBeforeUnmount(() => typeIntervals.forEach((iv) => clearInterval(iv)));
 </script>
@@ -984,7 +992,7 @@ onBeforeUnmount(() => typeIntervals.forEach((iv) => clearInterval(iv)));
 .amb-msg-time { font-size: 0.6rem; color: var(--amb-muted); margin-top: 0.2rem; padding: 0 0.2rem; }
 .amb-msg-time-user { text-align: right; }
 
-// ── Quick replies (list rows — used for binary choices) ─────────────────
+// ── Quick replies (list rows - used for binary choices) ─────────────────
 .amb-quick-replies {
   margin-top: 0.45rem; background: #fff;
   border: 1px solid var(--amb-border); border-radius: 11px; overflow: hidden;

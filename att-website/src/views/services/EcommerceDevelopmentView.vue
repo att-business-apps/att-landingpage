@@ -50,7 +50,7 @@ const steps = [
     num: "02",
     icon: "account_tree",
     title: "Storefront & Catalog Setup",
-    desc: "Core store structure, product catalog, and category architecture stood up — the foundation for everything after.",
+    desc: "Core store structure, product catalog, and category architecture stood up - the foundation for everything after.",
     week: "Week 1–3",
   },
   {
@@ -109,13 +109,13 @@ const faqs = [
   },
   {
     q: "Which ecommerce platforms do you build on?",
-    body: "We work across Shopify, WooCommerce, and fully custom builds — the choice depends on your catalog complexity, budget, and how much control you need over checkout and integrations.",
+    body: "We work across Shopify, WooCommerce, and fully custom builds - the choice depends on your catalog complexity, budget, and how much control you need over checkout and integrations.",
     link: "/shopify-development",
     linkText: "See our dedicated Shopify development service",
   },
   {
     q: "Can you migrate my existing store?",
-    body: "Yes. We handle migrations from other platforms with care for SEO, product data, and customer records — so you don't lose rankings, reviews, or order history in the switch.",
+    body: "Yes. We handle migrations from other platforms with care for SEO, product data, and customer records - so you don't lose rankings, reviews, or order history in the switch.",
     note: "Migration timelines depend on catalog size and existing platform.",
   },
 ];
@@ -292,7 +292,7 @@ onBeforeUnmount(() => {
           </h2>
         </div>
         <p class="text-slate-800 max-w-sm mb-0 text-sm">
-          Every store is built with the same focus on conversion, performance, security, and long-term scalability—nothing important is treated as an add-on.
+          Every store is built with the same focus on conversion, performance, security, and long-term scalability-nothing important is treated as an add-on.
         </p>
       </div>
 
@@ -321,7 +321,7 @@ onBeforeUnmount(() => {
           </h2>
         </div>
         <p class="text-slate-800 max-w-sm mb-0 text-sm">
-          A defined sequence, not an open-ended back-and-forth — so you always know what happens
+          A defined sequence, not an open-ended back-and-forth - so you always know what happens
           next and when.
         </p>
       </div>

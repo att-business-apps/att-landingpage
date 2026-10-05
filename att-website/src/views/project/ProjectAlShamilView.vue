@@ -23,7 +23,7 @@ const metrics = [
 
 const timeline = [
   { week: "01", phase: "Requirement Gathering & Brand Understanding", desc: "Sessions with the Al-Shamil team to understand the four core services and how UAE buyers evaluate an IT partner." },
-  { week: "02", phase: "Information Architecture", desc: "Structured the site around Infrastructure, Networking & CCTV, Hardware Procurement, and AMC — each with room to breathe." },
+  { week: "02", phase: "Information Architecture", desc: "Structured the site around Infrastructure, Networking & CCTV, Hardware Procurement, and AMC - each with room to breathe." },
   { week: "03", phase: "UI Design & Responsive Build", desc: "A clean, modern interface designed mobile-first and built for performance across every screen size." },
   { week: "04", phase: "SEO & Analytics Integration", desc: "On-page SEO best practices and Google Analytics tracking wired in before launch, not bolted on after." },
   { week: "05", phase: "Launch & Handoff", desc: "Shipped to production with a scalable structure the Al-Shamil team can extend as services grow." },
@@ -31,10 +31,10 @@ const timeline = [
 
 const challenges = [
   { num: "01", icon: "hub", title: "Four distinct service lines", desc: "IT infrastructure, networking & CCTV, hardware procurement, and AMC each needed clear explanation without turning the site into a wall of text." },
-  { num: "02", icon: "verified_user", title: "Trust in a competitive market", desc: "The UAE's IT services market is crowded — Al-Shamil needed to read as established and reliable from the very first screen." },
+  { num: "02", icon: "verified_user", title: "Trust in a competitive market", desc: "The UAE's IT services market is crowded - Al-Shamil needed to read as established and reliable from the very first screen." },
   { num: "03", icon: "web", title: "No existing digital presence", desc: "There was no prior website to iterate from, so the brand's online identity had to be defined from scratch." },
   { num: "04", icon: "diversity_3", title: "A mixed buyer audience", desc: "Facilities managers, procurement teams, and business owners all land on the same site looking for different proof points." },
-  { num: "05", icon: "speed", title: "Performance expectations", desc: "Enquiries needed a fast, frictionless path — slow load times or confusing navigation would cost leads directly." },
+  { num: "05", icon: "speed", title: "Performance expectations", desc: "Enquiries needed a fast, frictionless path - slow load times or confusing navigation would cost leads directly." },
 ];
 
 const outcomes = [
@@ -123,7 +123,7 @@ onBeforeUnmount(() => ctx?.revert());
         <p class="cs-hero-sub">
           A UAE-based IT solutions provider delivering infrastructure setup, networking &amp;
           CCTV, hardware procurement, and annual maintenance contracts. Amortree built a clean,
-          credible website from the ground up — one that turns first-time visitors into enquiries.
+          credible website from the ground up - one that turns first-time visitors into enquiries.
         </p>
 
         <div class="cs-hero-stats">
@@ -220,7 +220,7 @@ onBeforeUnmount(() => ctx?.revert());
           </p>
           <p>
             With no existing website to build from, Amortree designed and developed a clean,
-            informative site from scratch — one built to present four distinct service lines
+            informative site from scratch - one built to present four distinct service lines
             clearly and drive real enquiries, not just look presentable.
           </p>
 
@@ -248,8 +248,8 @@ onBeforeUnmount(() => ctx?.revert());
           <img :src="clientLogo" alt="Al-Shamil Computers logo" class="cs-client-logo" loading="lazy" />
           <span class="cs-quote-mark material-symbols-outlined">format_quote</span>
           <p class="cs-client-quote">
-            We needed a website that explains what we actually do — infrastructure, networking,
-            hardware, and support — clearly enough for a first-time visitor to trust us with an
+            We needed a website that explains what we actually do - infrastructure, networking,
+            hardware, and support - clearly enough for a first-time visitor to trust us with an
             enquiry.
           </p>
           <div class="cs-client-quote-attr">Project Brief, Al-Shamil Computers</div>
@@ -296,13 +296,13 @@ onBeforeUnmount(() => ctx?.revert());
       <div class="cs-strategy-grid">
         <div class="cs-strategy-copy cs-reveal">
           <p class="cs-lead-text">
-            An IT services buyer isn't browsing for inspiration — they're checking whether this
+            An IT services buyer isn't browsing for inspiration - they're checking whether this
             company can be trusted with their infrastructure. Our approach was built on three
             pillars.
           </p>
 
           <div class="cs-pillar" v-for="(p, i) in [
-            { t: 'Service clarity before decoration', d: 'Each of the four service lines — infrastructure, networking & CCTV, hardware, and AMC — got its own clear space and explanation before any visual polish was added.' },
+            { t: 'Service clarity before decoration', d: 'Each of the four service lines - infrastructure, networking & CCTV, hardware, and AMC - got its own clear space and explanation before any visual polish was added.' },
             { t: 'Credibility-first structure', d: 'The homepage was built to establish trust immediately: clear positioning, visible service breadth, and an obvious path to enquire.' },
             { t: 'SEO and analytics from day one', d: 'On-page SEO and Google Analytics were built into the launch, not retrofitted months later once traffic questions came up.' },
           ]" :key="p.t">
@@ -318,7 +318,7 @@ onBeforeUnmount(() => ctx?.revert());
           <span class="material-symbols-outlined cs-insight-icon">lightbulb</span>
           <h4>The insight that shaped everything</h4>
           <p>
-            An IT services buyer isn't shopping for a beautiful website — they're checking a box:
+            An IT services buyer isn't shopping for a beautiful website - they're checking a box:
             can this company handle our infrastructure?
           </p>
           <div class="cs-insight-divider"></div>

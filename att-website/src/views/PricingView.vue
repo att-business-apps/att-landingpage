@@ -172,7 +172,7 @@ const faqs = [
   {
     q: "Payment Terms",
     question: "How is payment structured?",
-    body: "We work on a milestone basis — typically 50% to begin the engagement and 50% on delivery. For Scale engagements with a longer scope, payments are split across project milestones agreed upfront.",
+    body: "We work on a milestone basis - typically 50% to begin the engagement and 50% on delivery. For Scale engagements with a longer scope, payments are split across project milestones agreed upfront.",
     note: "No hidden fees. What's quoted is what's billed.",
   },
   {
@@ -184,20 +184,20 @@ const faqs = [
   {
     q: "What's Included",
     question: "Is hosting or domain included in these prices?",
-    body: "These packages cover design, development, and the listed features. Hosting and domain registration are billed separately at cost — we'll recommend the right setup for your traffic and budget during the strategy call.",
+    body: "These packages cover design, development, and the listed features. Hosting and domain registration are billed separately at cost - we'll recommend the right setup for your traffic and budget during the strategy call.",
     note: "We keep pass-through costs transparent, always at cost.",
   },
   {
     q: "Custom Scope",
     question: "What if my project doesn't fit any tier?",
-    body: "Some projects — multi-language sites, marketplace builds, complex integrations — fall outside these tiers entirely. We scope those individually after understanding your requirements on a strategy call.",
+    body: "Some projects - multi-language sites, marketplace builds, complex integrations - fall outside these tiers entirely. We scope those individually after understanding your requirements on a strategy call.",
     note: "Every custom quote still follows the same fixed-scope approach.",
   },
   {
     q: "Additional Services",
     question: "Do you offer services beyond the website, like SEO or marketing?",
     body: "Yes. Branding, Digital Marketing, Social Media Marketing, SEO, Lead Generation, LinkedIn Marketing, Ecommerce/Shopify Development, and Website Maintenance are all available as add-ons alongside any plan. Each is scoped and priced individually based on your goals and current setup, so the numbers shown are starting points.",
-    note: "Prices shown on each plan are starting from — final quote depends on scope.",
+    note: "Prices shown on each plan are starting from - final quote depends on scope.",
   },
 ];
 
@@ -355,7 +355,7 @@ onBeforeUnmount(() => {
 
 <template>
   <!-- ============================================================
-       HERO — Breadcrumb banner, matches ServicesView
+       HERO - Breadcrumb banner, matches ServicesView
        ============================================================ -->
   <div class="breadcrum-area breadcrumb-banner">
     <div class="container">
@@ -372,7 +372,7 @@ onBeforeUnmount(() => {
             Fixed Packages. <span class="text-ly">No Surprise Invoices.</span>
           </h1>
           <p class="pv-hero-sub">
-            Three ways to work with us — each scoped, priced, and delivered on a fixed timeline.
+            Three ways to work with us - each scoped, priced, and delivered on a fixed timeline.
             Pick where you are today; every plan is built to grow into the next.
           </p>
         </div>
@@ -462,7 +462,7 @@ onBeforeUnmount(() => {
   </section>
 
   <!-- ============================================================
-       ADDITIONAL SERVICES — Standalone add-on cards
+       ADDITIONAL SERVICES - Standalone add-on cards
        ============================================================ -->
   <section class="pv-addons-section">
     <div class="pv-addons-inner">
@@ -520,7 +520,7 @@ onBeforeUnmount(() => {
   </section>
 
   <!-- ============================================================
-       FAQ — Numbered Tab Rail + Expanding Stage
+       FAQ - Numbered Tab Rail + Expanding Stage
        ============================================================ -->
   <section class="pv-faq-section py-28 px-6 overflow-hidden" id="pricing-faq">
     <div class="pv-faq-inner">
@@ -582,7 +582,7 @@ onBeforeUnmount(() => {
         Let's Find the <span class="text-ly">Right Plan</span> for Your Business
       </h2>
       <p class="pv-cta-sub">
-        A 20-minute strategy call costs you nothing and tells you exactly which package fits — no
+        A 20-minute strategy call costs you nothing and tells you exactly which package fits - no
         pressure, no obligation.
       </p>
       <div class="d-flex justify-content-center flex-wrap gap-3 mt-5">
@@ -874,7 +874,7 @@ onBeforeUnmount(() => {
   flex-shrink: 0;
 }
 
-/* ─── Additional Services — Standalone Add-on Cards ─────────────────────── */
+/* ─── Additional Services - Standalone Add-on Cards ─────────────────────── */
 .pv-addons-section {
   padding: 7rem 4rem 8rem;
   background: #ffffff;
@@ -1023,7 +1023,7 @@ onBeforeUnmount(() => {
   color: #0f172a;
 }
 
-/* ─── FAQ — Tab Rail + Stage (matches HomeView pattern) ────────────────── */
+/* ─── FAQ - Tab Rail + Stage (matches HomeView pattern) ────────────────── */
 .pv-faq-section {
   background: #ffffff;
 }

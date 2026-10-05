@@ -33,9 +33,9 @@ const challenges = [
   { num: "01", icon: "call_split", title: "Two branches, one experience", desc: "Hulimavu and Hongasandra needed to feel like the same premium salon, not two disconnected listings competing for attention." },
   { num: "02", icon: "event_busy", title: "Booking friction", desc: "Appointments relied on phone calls and walk-ins, with no fast way for a client browsing on mobile to actually book." },
   { num: "03", icon: "search_off", title: "Fragmented local visibility", desc: "Two Google Business Profiles and no shared analytics meant no way to see which branch or service was actually driving enquiries." },
-  { num: "04", icon: "menu_book", title: "Service menu buried", desc: "12+ services and signature packages — bridal, hair spa, nail art — had no dedicated space to be browsed before booking." },
+  { num: "04", icon: "menu_book", title: "Service menu buried", desc: "12+ services and signature packages - bridal, hair spa, nail art - had no dedicated space to be browsed before booking." },
   { num: "05", icon: "devices", title: "Mobile experience gap", desc: "Most potential clients discover a salon on their phone; the booking journey needed to work in a few taps, not a phone call." },
-  { num: "06", icon: "diversity_3", title: "Blending into the category", desc: "Beauty salons live or die on trust signals — reviews, hygiene, premium brands — and the old presence wasn't surfacing any of it." },
+  { num: "06", icon: "diversity_3", title: "Blending into the category", desc: "Beauty salons live or die on trust signals - reviews, hygiene, premium brands - and the old presence wasn't surfacing any of it." },
 ];
 
 const outcomes = [
@@ -116,7 +116,7 @@ onBeforeUnmount(() => ctx?.revert());
 
       <div class="cs-hero-split">
         <p class="cs-hero-sub">
-          A luxury beauty &amp; hair experience for women — premium salon services designed to
+          A luxury beauty &amp; hair experience for women - premium salon services designed to
           make every client feel confident, radiant, and truly beautiful. We built a custom,
           booking-first website with one-tap WhatsApp booking and Google visibility across both
           Bangalore branches.
@@ -211,7 +211,7 @@ onBeforeUnmount(() => ctx?.revert());
         <div class="cs-client-copy">
           <p class="cs-lead-text">
             Alin Salon for Women's is a premium beauty and hair salon with two branches in
-            Bangalore — Hulimavu and Hongasandra — offering hair, skin, bridal, and nail services
+            Bangalore - Hulimavu and Hongasandra - offering hair, skin, bridal, and nail services
             using premium brands like L'Oréal, Schwarzkopf, and Olaplex.
           </p>
           <p>
@@ -245,7 +245,7 @@ onBeforeUnmount(() => ctx?.revert());
           <span class="cs-quote-mark material-symbols-outlined">format_quote</span>
           <p class="cs-client-quote">
             A client should feel like the appointment was worth booking before they've even sat
-            down — the website needed to set that expectation first.
+            down - the website needed to set that expectation first.
           </p>
           <div class="cs-client-quote-attr">Project Brief, Alin Salon</div>
         </aside>
@@ -292,7 +292,7 @@ onBeforeUnmount(() => ctx?.revert());
         <div class="cs-strategy-copy cs-reveal">
           <p class="cs-lead-text">
             A salon's booking decision is made in seconds on a phone screen. The brief wasn't just
-            to look premium — it was to move a scrolling visitor into a confirmed appointment
+            to look premium - it was to move a scrolling visitor into a confirmed appointment
             before they lost interest.
           </p>
 
@@ -361,7 +361,7 @@ onBeforeUnmount(() => ctx?.revert());
         <div>
           <div class="cs-eyebrow">The Experience</div>
           <h2 class="cs-h2">Built to book on the go</h2>
-          <p class="cs-section-sub">Most bookings start on a phone — the site was designed mobile-first from the ground up.</p>
+          <p class="cs-section-sub">Most bookings start on a phone - the site was designed mobile-first from the ground up.</p>
         </div>
       </div>
 

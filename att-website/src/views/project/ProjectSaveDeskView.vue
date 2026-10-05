@@ -36,11 +36,11 @@ const timeline = [
 ];
 
 const challenges = [
-  { num: "01", icon: "dashboard", title: "Functional but unintuitive", desc: "The existing dashboard worked, but navigation required learning rather than feeling obvious — a real cost for a tool meant to save users time." },
+  { num: "01", icon: "dashboard", title: "Functional but unintuitive", desc: "The existing dashboard worked, but navigation required learning rather than feeling obvious - a real cost for a tool meant to save users time." },
   { num: "02", icon: "query_stats", title: "Dense financial data", desc: "Banking cost data is inherently complex. Presenting it clearly, without oversimplifying, was the core design challenge." },
   { num: "03", icon: "account_tree", title: "Inconsistent component patterns", desc: "Without a defined design system, screens had drifted into inconsistent spacing, colour use, and interaction patterns over time." },
   { num: "04", icon: "groups", title: "Active user base mid-migration", desc: "The redesign had to roll out without disrupting existing users actively managing their banking costs through the platform." },
-  { num: "05", icon: "dark_mode", title: "Dual-theme requirement", desc: "The dashboard needed to work equally well in light and dark mode — not as an afterthought toggle, but as two fully considered states." },
+  { num: "05", icon: "dark_mode", title: "Dual-theme requirement", desc: "The dashboard needed to work equally well in light and dark mode - not as an afterthought toggle, but as two fully considered states." },
   { num: "06", icon: "speed", title: "Speed of iteration", desc: "As a fast-moving fintech team, SaveDesk needed a process that produced usable feedback quickly, not a slow waterfall handoff." },
 ];
 
@@ -123,7 +123,7 @@ onBeforeUnmount(() => ctx?.revert());
       <div class="cs-hero-split">
         <p class="cs-hero-sub">
           A Bangalore-based fintech helping businesses reduce banking costs through smarter
-          financial management. We rebuilt their dashboard from the ground up — turning a
+          financial management. We rebuilt their dashboard from the ground up - turning a
           functional but confusing interface into one that makes complex banking data effortless
           to read and act on.
         </p>
@@ -216,7 +216,7 @@ onBeforeUnmount(() => ctx?.revert());
           <p class="cs-lead-text">
             SaveDesk is a Bangalore-based fintech company that helps businesses reduce banking
             costs through smarter financial management. As the product grew, the existing
-            dashboard — functional but unintuitive — needed a complete UX rethink to keep pace
+            dashboard - functional but unintuitive - needed a complete UX rethink to keep pace
             with a more demanding user base.
           </p>
           <p>
@@ -296,13 +296,13 @@ onBeforeUnmount(() => ctx?.revert());
       <div class="cs-strategy-grid">
         <div class="cs-strategy-copy cs-reveal">
           <p class="cs-lead-text">
-            A dashboard redesign isn't about making things prettier — it's about making complex
+            A dashboard redesign isn't about making things prettier - it's about making complex
             data faster to act on. Our approach was built on three pillars.
           </p>
 
           <div class="cs-pillar" v-for="(p, i) in [
             { t: 'Information architecture before visuals', d: 'We restructured the dashboard around financial insights and ease of access first, then layered the visual design on top of a structure that already made sense.' },
-            { t: 'A real, documented design system', d: 'Components, spacing, and colour usage were standardised and documented — not just designed once and left to drift inconsistently over time.' },
+            { t: 'A real, documented design system', d: 'Components, spacing, and colour usage were standardised and documented - not just designed once and left to drift inconsistently over time.' },
             { t: 'Light and dark as equal citizens', d: 'Both theme modes were designed in parallel as full experiences, not a default mode plus an inverted afterthought.' },
           ]" :key="p.t">
             <div class="cs-pillar-num">{{ String(i + 1).padStart(2, '0') }}</div>
@@ -317,7 +317,7 @@ onBeforeUnmount(() => ctx?.revert());
           <span class="material-symbols-outlined cs-insight-icon">lightbulb</span>
           <h4>The insight that shaped everything</h4>
           <p>
-            A fintech dashboard's job isn't to look impressive — it's to make a stressed-out
+            A fintech dashboard's job isn't to look impressive - it's to make a stressed-out
             finance lead trust a number on screen enough to act on it in the next five minutes.
           </p>
           <div class="cs-insight-divider"></div>

@@ -9,7 +9,7 @@ const includes = [
   {
     icon: "explore",
     title: "Brand Strategy & Positioning",
-    desc: "Define your positioning, messaging, audience, and competitive advantage before visual design begins—so every creative decision has purpose.",
+    desc: "Define your positioning, messaging, audience, and competitive advantage before visual design begins-so every creative decision has purpose.",
   },
   {
     icon: "draw",
@@ -34,7 +34,7 @@ const includes = [
   {
     icon: "rocket_launch",
     title: "Launch-Ready Assets",
-    desc: "Receive production-ready files for print, web, social media, signage, and packaging—organized for seamless handoff to any team or vendor.",
+    desc: "Receive production-ready files for print, web, social media, signage, and packaging-organized for seamless handoff to any team or vendor.",
   },
   {
     icon: "record_voice_over",
@@ -114,7 +114,7 @@ const faqs = [
   },
   {
     q: "How many logo concepts will I see?",
-    body: "We typically present 2–3 distinct directions rather than a dozen variations of the same idea — each one a genuinely different concept, so the choice is meaningful rather than overwhelming.",
+    body: "We typically present 2–3 distinct directions rather than a dozen variations of the same idea - each one a genuinely different concept, so the choice is meaningful rather than overwhelming.",
     note: "Quality of options matters more than quantity.",
   },
   {
@@ -297,7 +297,7 @@ onBeforeUnmount(() => {
           </h2>
         </div>
         <p class="text-slate-800 max-w-sm mb-0 text-sm">
-          Define your positioning, messaging, audience, and competitive advantage before visual design begins—so every creative decision has purpose.
+          Define your positioning, messaging, audience, and competitive advantage before visual design begins-so every creative decision has purpose.
         </p>
       </div>
 
@@ -326,7 +326,7 @@ onBeforeUnmount(() => {
           </h2>
         </div>
         <p class="text-slate-800 max-w-sm mb-0 text-sm">
-          A defined sequence, not an open-ended back-and-forth — so you always know what happens
+          A defined sequence, not an open-ended back-and-forth - so you always know what happens
           next and when.
         </p>
       </div>

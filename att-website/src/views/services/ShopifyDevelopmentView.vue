@@ -9,7 +9,7 @@ const includes = [
     {
         icon: "storefront",
         title: "Custom Theme Development",
-        desc: "Shopify themes built or modified to match your brand exactly — not a stock theme with your logo swapped in.",
+        desc: "Shopify themes built or modified to match your brand exactly - not a stock theme with your logo swapped in.",
     },
     {
         icon: "shopping_cart",
@@ -57,7 +57,7 @@ const steps = [
         num: "03",
         icon: "storefront",
         title: "Build & Integrate",
-        desc: "Products configured, apps integrated, and custom features built — with a staging store for review before go-live.",
+        desc: "Products configured, apps integrated, and custom features built - with a staging store for review before go-live.",
         week: "Week 3–5",
     },
     {
@@ -104,7 +104,7 @@ const faqs = [
     },
     {
         q: "Should I use a custom theme or a licensed Shopify theme?",
-        body: "Licensed themes (like Prestige or Dawn) are faster to build on and cost less upfront — they're the right choice for most stores. Custom themes make sense when your brand or UX requirements can't be achieved within a licensed theme's constraints.",
+        body: "Licensed themes (like Prestige or Dawn) are faster to build on and cost less upfront - they're the right choice for most stores. Custom themes make sense when your brand or UX requirements can't be achieved within a licensed theme's constraints.",
         note: "We'll recommend the right approach after reviewing your goals.",
     },
     {
@@ -227,7 +227,7 @@ onBeforeUnmount(() => {
                         Shopify Stores Built to <span class="text-ly">Convert, Not Just Look Good.</span>
                     </h1>
                     <p>
-                        From custom theme development to catalogue setup and checkout optimisation — we build Shopify
+                        From custom theme development to catalogue setup and checkout optimisation - we build Shopify
                         stores that turn traffic into revenue.
                     </p>
                 </div>
@@ -256,7 +256,7 @@ onBeforeUnmount(() => {
                     </h2>
                 </div>
                 <p class="text-slate-800 max-w-sm mb-0 text-sm">
-                    Every store is built with the same focus on conversion, performance, and usability — nothing
+                    Every store is built with the same focus on conversion, performance, and usability - nothing
                     important is treated as an add-on.
                 </p>
             </div>
@@ -319,7 +319,7 @@ onBeforeUnmount(() => {
                     </h2>
                 </div>
                 <p class="text-slate-500 max-w-sm mb-0 text-sm">
-                    A defined sequence, not an open-ended back-and-forth — so you always know what happens
+                    A defined sequence, not an open-ended back-and-forth - so you always know what happens
                     next and when.
                 </p>
             </div>

@@ -9,7 +9,7 @@ const includes = [
   {
     icon: "calendar_month",
     title: "Content Strategy & Calendar",
-    desc: "Monthly content plans aligned with your business goals, audience interests, and campaigns—not random daily posting.",
+    desc: "Monthly content plans aligned with your business goals, audience interests, and campaigns-not random daily posting.",
   },
   {
     icon: "draw",
@@ -19,7 +19,7 @@ const includes = [
   {
     icon: "ads_click",
     title: "Paid Social Campaigns",
-    desc: "Meta, Instagram, and LinkedIn campaigns optimized to generate qualified leads, website traffic, and sales—not just impressions.",
+    desc: "Meta, Instagram, and LinkedIn campaigns optimized to generate qualified leads, website traffic, and sales-not just impressions.",
   },
   {
     icon: "forum",
@@ -34,7 +34,7 @@ const includes = [
   {
     icon: "monitoring",
     title: "Analytics & Reporting",
-    desc: "Track engagement, follower growth, reach, leads, and conversions with reports focused on business impact—not vanity metrics.",
+    desc: "Track engagement, follower growth, reach, leads, and conversions with reports focused on business impact-not vanity metrics.",
   },
   {
     icon: "trending_up",
@@ -119,7 +119,7 @@ const faqs = [
   },
   {
     q: "Which platforms do you manage?",
-    body: "Primarily Instagram and Facebook, since that's where most of our clients' audiences are most active — we'll recommend other platforms only if your audience data actually supports it.",
+    body: "Primarily Instagram and Facebook, since that's where most of our clients' audiences are most active - we'll recommend other platforms only if your audience data actually supports it.",
     note: "We don't spread budget across platforms just to look comprehensive.",
   },
   {
@@ -302,7 +302,7 @@ onBeforeUnmount(() => {
           </h2>
         </div>
         <p class="text-slate-800 max-w-sm mb-0 text-sm">
-          Every social media engagement follows a structured content system—from strategy and creative to community, paid promotion, and reporting—so every post supports measurable business growth.
+          Every social media engagement follows a structured content system-from strategy and creative to community, paid promotion, and reporting-so every post supports measurable business growth.
         </p>
       </div>
 
@@ -331,7 +331,7 @@ onBeforeUnmount(() => {
           </h2>
         </div>
         <p class="text-slate-500 max-w-sm mb-0 text-sm">
-          A defined sequence, not an open-ended back-and-forth — so you always know what happens
+          A defined sequence, not an open-ended back-and-forth - so you always know what happens
           next and when.
         </p>
       </div>

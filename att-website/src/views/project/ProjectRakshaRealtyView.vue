@@ -14,7 +14,7 @@ const compareBefore = new URL("../../assets/img/project/c12/before.png", import.
 const compareAfter = new URL("../../assets/img/project/c12/after.png", import.meta.url).href;
 
 const metrics = [
-  { value: "3", label: "Distinct advisory tracks — Developers, Buyers & Investors" },
+  { value: "3", label: "Distinct advisory tracks - Developers, Buyers & Investors" },
   { value: "100%", label: "Mobile-responsive advisory experience" },
   { value: "GA", label: "Analytics tracking live from launch day" },
   { value: "RERA", label: "Registration & credentials front and centre" },
@@ -43,7 +43,7 @@ const challenges = [
 const outcomes = [
   { icon: "verified", title: "Clearer independent positioning", desc: "The site now signals zero-commission, structured advisory before a single word is read." },
   { icon: "devices", title: "Consistent across every device", desc: "The mobile-first build means the experience holds up whether a visitor arrives on desktop or on the go." },
-  { icon: "monitoring", title: "Measurable from day one", desc: "GA tracking shows exactly which advisory track — developer, buyer, or investor — is driving enquiries." },
+  { icon: "monitoring", title: "Measurable from day one", desc: "GA tracking shows exactly which advisory track - developer, buyer, or investor - is driving enquiries." },
   { icon: "slideshow", title: "Investor & developer-ready storytelling", desc: "A matching pitch deck gives the team a professional way to present the advisory's track record." },
   { icon: "call_split", title: "Three distinct advisory journeys", desc: "Developers, buyers, and investors each get a path built around their exact decision, not a generic funnel." },
   { icon: "forum", title: "A reference for advisory branding", desc: "Raksha Realty is now a live example of how an independent advisory can look as considered as the guidance it gives.", highlight: true },
@@ -119,7 +119,7 @@ onBeforeUnmount(() => ctx?.revert());
       <div class="cs-hero-split">
         <p class="cs-hero-sub">
           Raksha Realty needed a website that matched its positioning: strategic real estate
-          advisory for developers, buyers, and investors — built on structured thinking, not
+          advisory for developers, buyers, and investors - built on structured thinking, not
           market noise. We redesigned the site end to end, plus a pitch deck and analytics to
           back it up.
         </p>
@@ -218,7 +218,7 @@ onBeforeUnmount(() => ctx?.revert());
           </p>
           <p>
             Before this project, the website didn't reflect that independence. It needed to speak
-            to three very different audiences — developers, buyers, and investors — with the same
+            to three very different audiences - developers, buyers, and investors - with the same
             clarity the advisory itself promises, without leaning on the sales tropes of a typical
             real estate brokerage.
           </p>
@@ -247,7 +247,7 @@ onBeforeUnmount(() => ctx?.revert());
           <img :src="clientLogo" alt="Raksha Realty logo" class="cs-client-logo" loading="lazy" />
           <span class="cs-quote-mark material-symbols-outlined">format_quote</span>
           <p class="cs-client-quote">
-            We don't sell inventory or earn commission — our only obligation is to help
+            We don't sell inventory or earn commission - our only obligation is to help
             developers, buyers, and investors decide with clarity, not urgency.
           </p>
           <div class="cs-client-quote-attr">Project Brief, Raksha Realty</div>
@@ -294,7 +294,7 @@ onBeforeUnmount(() => ctx?.revert());
       <div class="cs-strategy-grid">
         <div class="cs-strategy-copy cs-reveal">
           <p class="cs-lead-text">
-            An independent advisory has to look like one. The brief wasn't to look trendy — it
+            An independent advisory has to look like one. The brief wasn't to look trendy - it
             was to look neutral, considered, and different from every commission-driven broker
             competing for the same attention.
           </p>
@@ -322,7 +322,7 @@ onBeforeUnmount(() => ctx?.revert());
           </p>
           <div class="cs-insight-divider"></div>
           <p class="cs-insight-action">
-            So we designed for restraint — structured layouts, confident typography, and copy
+            So we designed for restraint - structured layouts, confident typography, and copy
             that reads like counsel, not a sales script.
           </p>
         </div>

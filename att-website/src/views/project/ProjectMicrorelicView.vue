@@ -62,7 +62,7 @@ const techStack = [
 
 const timeline = [
   { step: "01", phase: "Brand Discovery", desc: "Deep-dive workshops to uncover Microrelic's core values and translate them into a distinctive visual identity." },
-  { step: "02", phase: "Design System", desc: "A consistent, reusable design system spanning colour, type, and components — built to feel innovative while staying easy to use." },
+  { step: "02", phase: "Design System", desc: "A consistent, reusable design system spanning colour, type, and components - built to feel innovative while staying easy to use." },
   { step: "03", phase: "Product Showcase UX", desc: "Information architecture and page flows tailored to present Web, Mobile, PWA, Consultancy, Marketing, and Training services with clarity." },
   { step: "04", phase: "Responsive Build", desc: "A fully responsive website engineered to hold up the new visual language across desktop, tablet, and mobile." },
 ];
@@ -243,13 +243,13 @@ onBeforeUnmount(() => ctx?.revert());
         <div class="cs-client-copy">
           <p class="cs-lead-text">
             Microrelic is a digital products company delivering solutions across Healthcare,
-            Pharma/CRO, Education, and Supply Chain — sectors where credibility has to be earned
+            Pharma/CRO, Education, and Supply Chain - sectors where credibility has to be earned
             before a single feature is discussed.
           </p>
           <p>
-            The brief was to present clear value propositions for six distinct service lines —
+            The brief was to present clear value propositions for six distinct service lines -
             Web Development, Mobile Development, Progressive Web App (PWA), Business Consultancy,
-            Digital Marketing, and Training — all grounded in real social proof, without the site
+            Digital Marketing, and Training - all grounded in real social proof, without the site
             feeling scattered or generic.
           </p>
 
@@ -265,7 +265,7 @@ onBeforeUnmount(() => ctx?.revert());
           <img :src="clientLogo" alt="Microrelic Technologies logo" class="cs-client-logo" loading="lazy" />
           <span class="cs-quote-mark material-symbols-outlined">format_quote</span>
           <p class="cs-client-quote">
-            We wanted a brand that could stand out through a unique style and design language —
+            We wanted a brand that could stand out through a unique style and design language -
             not just another product website.
           </p>
           <div class="cs-client-quote-attr">Microrelic Founding Team</div>
@@ -313,7 +313,7 @@ onBeforeUnmount(() => ctx?.revert());
         <div class="cs-strategy-copy cs-reveal">
           <p class="cs-lead-text">
             For a company selling six services into four industries, design consistency isn't a
-            nice-to-have — it's what makes the offer legible at all. Our strategy rested on three
+            nice-to-have - it's what makes the offer legible at all. Our strategy rested on three
             pillars.
           </p>
 
@@ -330,7 +330,7 @@ onBeforeUnmount(() => ctx?.revert());
           <span class="material-symbols-outlined cs-insight-icon">lightbulb</span>
           <h4>The insight that shaped everything</h4>
           <p>
-            A multi-service, multi-industry brand doesn't earn trust by listing capabilities — it
+            A multi-service, multi-industry brand doesn't earn trust by listing capabilities - it
             earns trust by making every visitor feel the site was built specifically for their
             industry.
           </p>
@@ -441,7 +441,7 @@ onBeforeUnmount(() => ctx?.revert());
         <span class="cs-ghost-num">07</span>
         <div>
           <div class="cs-eyebrow">Design System</div>
-          <h2 class="cs-h2">Colour, type &amp; components — built to scale</h2>
+          <h2 class="cs-h2">Colour, type &amp; components - built to scale</h2>
           <p class="cs-section-sub">
             A single design system now powers every page, so the brand reads consistently
             whether visitors land on Web, Mobile, PWA, Consultancy, Marketing, or Training.
@@ -512,7 +512,7 @@ onBeforeUnmount(() => ctx?.revert());
           <div class="cs-type-eyebrow">Body &amp; Interface</div>
           <p class="cs-type-body">
             A single typeface across every touchpoint keeps six service lines feeling like one
-            product — legible at a glance, calm under detail, and easy to extend as the catalogue
+            product - legible at a glance, calm under detail, and easy to extend as the catalogue
             grows.
           </p>
           <div class="cs-type-meta">Base 16px &middot; Line height 1.7 &middot; Inter, sans-serif</div>

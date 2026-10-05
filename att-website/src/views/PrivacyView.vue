@@ -108,7 +108,7 @@ onMounted(() => {
               <li>To send project updates, invoices, and delivery materials</li>
               <li>To improve our website, service quality, and client communication</li>
               <li>To fulfil legal and contractual obligations</li>
-              <li>To send occasional updates about our work — only where you have given consent, and you can unsubscribe at any time</li>
+              <li>To send occasional updates about our work - only where you have given consent, and you can unsubscribe at any time</li>
             </ul>
             <p>We do not use your data for automated decision-making or profiling that produces legal or similarly significant effects.</p>
           </section>
@@ -118,9 +118,9 @@ onMounted(() => {
             <h2 class="att-legal-section-title">Who We Share It With</h2>
             <p>We do not sell, rent, or trade your personal data. We share information only where necessary:</p>
             <ul class="att-legal-list">
-              <li><strong>Service providers</strong> — tools we use to run the business (Google Workspace, EmailJS, project management tools). Each provider is bound by its own privacy policy and our data processing agreements.</li>
-              <li><strong>Analytics providers</strong> — Google Analytics, used in anonymised form to understand site performance.</li>
-              <li><strong>Legal or regulatory authorities</strong> — only where required by applicable law.</li>
+              <li><strong>Service providers</strong> - tools we use to run the business (Google Workspace, EmailJS, project management tools). Each provider is bound by its own privacy policy and our data processing agreements.</li>
+              <li><strong>Analytics providers</strong> - Google Analytics, used in anonymised form to understand site performance.</li>
+              <li><strong>Legal or regulatory authorities</strong> - only where required by applicable law.</li>
             </ul>
             <p>All third-party tools we use are listed below in the Cookies section.</p>
           </section>
@@ -135,9 +135,9 @@ onMounted(() => {
                   <tr><th>Cookie</th><th>Purpose</th><th>Duration</th></tr>
                 </thead>
                 <tbody>
-                  <tr><td>_ga, _gid</td><td>Google Analytics — page views and session tracking</td><td>Up to 2 years</td></tr>
+                  <tr><td>_ga, _gid</td><td>Google Analytics - page views and session tracking</td><td>Up to 2 years</td></tr>
                   <tr><td>_gcl_au</td><td>Google Ads conversion tracking</td><td>90 days</td></tr>
-                  <tr><td>GTM-*</td><td>Google Tag Manager — loads other tags</td><td>Session</td></tr>
+                  <tr><td>GTM-*</td><td>Google Tag Manager - loads other tags</td><td>Session</td></tr>
                 </tbody>
               </table>
             </div>
@@ -148,10 +148,10 @@ onMounted(() => {
             <div class="att-legal-section-num" aria-hidden="true">06</div>
             <h2 class="att-legal-section-title">How Long We Keep It</h2>
             <ul class="att-legal-list">
-              <li><strong>Enquiry and pre-sales data</strong> — retained for 12 months after last contact, then deleted.</li>
-              <li><strong>Client project data</strong> — retained for 3 years after project completion for contractual and warranty purposes, then deleted or anonymised.</li>
-              <li><strong>Financial records</strong> — retained for 7 years as required by Indian tax law (GST Act).</li>
-              <li><strong>Analytics data</strong> — aggregated and anonymised; no identifiable retention limit.</li>
+              <li><strong>Enquiry and pre-sales data</strong> - retained for 12 months after last contact, then deleted.</li>
+              <li><strong>Client project data</strong> - retained for 3 years after project completion for contractual and warranty purposes, then deleted or anonymised.</li>
+              <li><strong>Financial records</strong> - retained for 7 years as required by Indian tax law (GST Act).</li>
+              <li><strong>Analytics data</strong> - aggregated and anonymised; no identifiable retention limit.</li>
             </ul>
           </section>
 
@@ -173,7 +173,7 @@ onMounted(() => {
           <section class="att-legal-section" id="security">
             <div class="att-legal-section-num" aria-hidden="true">08</div>
             <h2 class="att-legal-section-title">Security</h2>
-            <p>We take reasonable technical and organisational measures to protect your data — including HTTPS encryption, access controls, and secure cloud storage. No method of transmission over the internet is completely secure, but we continuously review our practices.</p>
+            <p>We take reasonable technical and organisational measures to protect your data - including HTTPS encryption, access controls, and secure cloud storage. No method of transmission over the internet is completely secure, but we continuously review our practices.</p>
             <p>If you believe a security incident has occurred, email <a href="mailto:hi@amortree.com" class="att-legal-inline-link">hi@amortree.com</a> immediately.</p>
           </section>
 

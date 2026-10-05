@@ -1,5 +1,5 @@
 <template>
-  <!-- Breadcrumb hero — untouched -->
+  <!-- Breadcrumb hero - untouched -->
   <div class="breadcrum-area breadcrumb-banner">
     <div class="container">
       <div class="breadcrumb animate__animated fadeInUp" style="animation-duration: 2s">
@@ -61,7 +61,7 @@
             Projects That <span class="text-ly">Shipped & Performed</span>
           </h2>
           <p class="pv-header-sub">
-            <!-- {{ filteredProjects.length }} project{{ filteredProjects.length !== 1 ? 's' : '' }} — -->
+            <!-- {{ filteredProjects.length }} project{{ filteredProjects.length !== 1 ? 's' : '' }} - -->
             each one scoped, built, and measured against real business outcomes.
           </p>
         </div>

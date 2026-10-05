@@ -65,7 +65,7 @@ const steps = [
     num: "02",
     icon: "account_tree",
     title: "Wireframes & IA",
-    desc: "Low-fidelity wireframes map the structure and user flow — agreed before visual design begins, so changes are cheap.",
+    desc: "Low-fidelity wireframes map the structure and user flow - agreed before visual design begins, so changes are cheap.",
     week: "Week 1–2",
   },
   {
@@ -119,17 +119,17 @@ const faqs = [
   },
   {
     q: "How long does a website design project take?",
-    body: "Most design-only engagements run 4–5 weeks from discovery to final handoff. Wireframes take 1–2 weeks, visual design 2–3 weeks, with structured review rounds throughout — not an open-ended back-and-forth.",
+    body: "Most design-only engagements run 4–5 weeks from discovery to final handoff. Wireframes take 1–2 weeks, visual design 2–3 weeks, with structured review rounds throughout - not an open-ended back-and-forth.",
     note: "Timelines are agreed upfront and tracked at every milestone.",
   },
   {
     q: "Do you design and develop, or just design?",
-    body: "Both. We can hand off a developer-ready design for your own team, or carry it straight into development with us — same design system, no re-interpretation gap between design and build.",
+    body: "Both. We can hand off a developer-ready design for your own team, or carry it straight into development with us - same design system, no re-interpretation gap between design and build.",
     note: "Most clients choose to keep design and build under one roof.",
   },
   {
     q: "How many revision rounds are included?",
-    body: "Two structured rounds of feedback are built into every phase — wireframes and visual design. This keeps the process moving without unlimited, unscoped revisions that stall a launch.",
+    body: "Two structured rounds of feedback are built into every phase - wireframes and visual design. This keeps the process moving without unlimited, unscoped revisions that stall a launch.",
     link: "/projects",
     linkText: "See how this plays out in our Projects",
   },
@@ -309,7 +309,7 @@ onBeforeUnmount(() => {
           </h2>
         </div>
         <p class="text-slate-800 max-w-sm mb-0 text-sm">
-          Every website is designed as a complete growth system—from strategy and UX to SEO, performance, analytics, and developer-ready delivery. Nothing critical is left out because every detail contributes to better business results.
+          Every website is designed as a complete growth system-from strategy and UX to SEO, performance, analytics, and developer-ready delivery. Nothing critical is left out because every detail contributes to better business results.
         </p>
       </div>
 
@@ -371,7 +371,7 @@ onBeforeUnmount(() => {
           </h2>
         </div>
         <p class="text-slate-800 max-w-sm mb-0 text-sm">
-          A defined sequence, not an open-ended back-and-forth — so you always know what happens
+          A defined sequence, not an open-ended back-and-forth - so you always know what happens
           next and when.
         </p>
       </div>

@@ -73,7 +73,7 @@ onMounted(() => {
         <div class="att-legal-content">
 
           <div class="att-legal-intro att-legal-section pt-0">
-            <p>These Terms of Use ("Terms") are published in compliance with Rule 3(1) of the Information Technology (Intermediaries Guidelines) Rules, 2011 and govern access to and use of <strong>amortree.com</strong> (the "Website"). By accessing or using the Website you agree to these Terms — please read them carefully.</p>
+            <p>These Terms of Use ("Terms") are published in compliance with Rule 3(1) of the Information Technology (Intermediaries Guidelines) Rules, 2011 and govern access to and use of <strong>amortree.com</strong> (the "Website"). By accessing or using the Website you agree to these Terms - please read them carefully.</p>
             <p>If you do not agree, please do not use the Website.</p>
           </div>
 
@@ -92,7 +92,7 @@ onMounted(() => {
           <section class="att-legal-section" id="eligibility">
             <div class="att-legal-section-num" aria-hidden="true">03</div>
             <h2 class="att-legal-section-title">Eligibility</h2>
-            <p>To use this Website you must have the capacity to enter into binding contracts under the Indian Contract Act, 1872. Persons who are legally incapable of contracting — such as minors or undischarged insolvents — are not permitted to use the Website. Minors (under 18) may use the Website only with the involvement of a parent or legal guardian. We reserve the right to refuse access if we reasonably believe you do not meet these requirements.</p>
+            <p>To use this Website you must have the capacity to enter into binding contracts under the Indian Contract Act, 1872. Persons who are legally incapable of contracting - such as minors or undischarged insolvents - are not permitted to use the Website. Minors (under 18) may use the Website only with the involvement of a parent or legal guardian. We reserve the right to refuse access if we reasonably believe you do not meet these requirements.</p>
           </section>
 
           <section class="att-legal-section" id="privacy">

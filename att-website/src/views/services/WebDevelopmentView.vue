@@ -9,7 +9,7 @@ const includes = [
   {
     icon: "code",
     title: "Custom Code. Zero Bloat.",
-    desc: "Built with clean, maintainable code—not page builders or unnecessary plugins—so your website stays fast, secure, and easy to scale.",
+    desc: "Built with clean, maintainable code-not page builders or unnecessary plugins-so your website stays fast, secure, and easy to scale.",
   },
   {
     icon: "speed",
@@ -50,7 +50,7 @@ const steps = [
     num: "02",
     icon: "account_tree",
     title: "Environment & Setup",
-    desc: "Repository, staging environment, and core architecture stood up — the foundation every page builds on.",
+    desc: "Repository, staging environment, and core architecture stood up - the foundation every page builds on.",
     week: "Week 1–2",
   },
   {
@@ -109,12 +109,12 @@ const faqs = [
   },
   {
     q: "What tech stack do you build on?",
-    body: "We choose the stack based on the project — typically Vue or React for interactive front-ends, with WordPress or a headless CMS where content teams need to self-manage. No one-size-fits-all platform.",
+    body: "We choose the stack based on the project - typically Vue or React for interactive front-ends, with WordPress or a headless CMS where content teams need to self-manage. No one-size-fits-all platform.",
     note: "Most clients choose to keep design and build under one roof.",
   },
   {
     q: "Do you handle hosting and ongoing maintenance?",
-    body: "Yes. We can set up and manage hosting, and offer ongoing maintenance plans for updates, monitoring, and performance tuning after launch — so the site stays fast and secure long-term.",
+    body: "Yes. We can set up and manage hosting, and offer ongoing maintenance plans for updates, monitoring, and performance tuning after launch - so the site stays fast and secure long-term.",
     link: "/website-maintenance",
     linkText: "See what's included in website maintenance",
   },
@@ -259,7 +259,7 @@ onBeforeUnmount(() => {
                     </ul>
                 <div class="section-heading heading-left">
                     <h1 class="title h2 mb-0">Web Development That Scales With Your Business. <span class="text-ly">Fast. Secure. Built to Grow.</span></h1>
-                    <p>Custom web development engineered for performance, scalability, and long-term business growth—from marketing websites to enterprise platforms.</p>
+                    <p>Custom web development engineered for performance, scalability, and long-term business growth-from marketing websites to enterprise platforms.</p>
                 </div>
             </div>
             <div class="banner-thumbnail " style="right: 250px;bottom: 80px;">
@@ -285,7 +285,7 @@ onBeforeUnmount(() => {
           </h2>
         </div>
         <p class="text-slate-800 max-w-sm mb-0 text-sm">
-          Every project is engineered with the same standards we use for enterprise builds—performance, security, scalability, and maintainability are built in from day one.
+          Every project is engineered with the same standards we use for enterprise builds-performance, security, scalability, and maintainability are built in from day one.
         </p>
       </div>
 
@@ -347,7 +347,7 @@ onBeforeUnmount(() => {
           </h2>
         </div>
         <p class="text-slate-800 max-w-sm mb-0 text-sm">
-          A defined sequence, not an open-ended back-and-forth — so you always know what happens
+          A defined sequence, not an open-ended back-and-forth - so you always know what happens
           next and when.
         </p>
       </div>

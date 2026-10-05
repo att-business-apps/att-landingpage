@@ -44,7 +44,7 @@ onMounted(() => {
         <router-link to="/blog" class="att-blog-inline-link">â† Back to all articles</router-link>
       </article>
     </div></div>
-    <div class="att-blog-cta"><div class="att-blog-cta-inner"><div class="att-blog-cta-text"><p class="att-blog-cta-title">Planning an online store?</p><p class="att-blog-cta-sub">We can help you shape a store around how your customers shop.</p></div><a href="https://wa.me/917975859061/?text=I%27d%20like%20to%20discuss%20an%20ecommerce%20website." class="att-blog-cta-btn">Talk to Amortree <span aria-hidden="true">â†—</span></a></div></div>
+    <div class="att-blog-cta"><div class="att-blog-cta-inner"><div class="att-blog-cta-text"><p class="att-blog-cta-title">Planning an online store?</p><p class="att-blog-cta-sub">We can help you shape a store around how your customers shop.</p></div><a href="https://wa.me/917975859061/?text=I%27d%20like%20to%20discuss%20an%20ecommerce%20website." class="att-blog-cta-btn">Talk to Amortree <span aria-hidden="true">â†-</span></a></div></div>
   </main>
 </template>
 

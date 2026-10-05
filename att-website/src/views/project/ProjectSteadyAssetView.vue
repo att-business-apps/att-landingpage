@@ -22,7 +22,7 @@ const metrics = [
 const timeline = [
   { week: "01", phase: "Discovery & Audit", desc: "Competitive landscape mapping across NBFC/fintech peers, ICP interviews, and goal alignment with the founding team." },
   { week: "02", phase: "Brand Identity", desc: "Logo concepts, colour psychology workshop, and final brand system covering mark, palette, and typography." },
-  { week: "03", phase: "UX Architecture", desc: "Sitemap, information hierarchy, wireframes for key pages — home, products, investor education, and contact." },
+  { week: "03", phase: "UX Architecture", desc: "Sitemap, information hierarchy, wireframes for key pages - home, products, investor education, and contact." },
   { week: "04", phase: "UI Design & Prototype", desc: "High-fidelity Figma screens with an interactive prototype reviewed by the client team before a line of code was written." },
   { week: "05", phase: "Development & QA", desc: "Responsive build, GA4 + GTM implementation, GMB setup, and a performance audit before launch." },
   { week: "06", phase: "Content & SEO", desc: "Monthly blog strategy, keyword targeting, and analytics review to build organic authority in the alternative investment space." },
@@ -49,10 +49,10 @@ const palette = [
 ];
 
 const challenges = [
-  { num: "01", icon: "bolt", title: "Zero brand equity", desc: "No logo, colour system, or typography — nothing for investors to visually anchor trust to. Competitors had years of brand recognition." },
+  { num: "01", icon: "bolt", title: "Zero brand equity", desc: "No logo, colour system, or typography - nothing for investors to visually anchor trust to. Competitors had years of brand recognition." },
   { num: "02", icon: "manage_search", title: "No organic discovery", desc: "Without a website or GMB listing, SteadyAsset was invisible to investors searching for alternative investment options in Bengaluru and beyond." },
   { num: "03", icon: "query_stats", title: "Low-literacy market", desc: "Fractional CRE and fixed-income products require investor education. Most visitors arrive unfamiliar with the asset class itself." },
-  { num: "04", icon: "groups", title: "Dual audience tension", desc: "The site had to speak to first-time retail investors and HNIs with high return expectations — at the same time." },
+  { num: "04", icon: "groups", title: "Dual audience tension", desc: "The site had to speak to first-time retail investors and HNIs with high return expectations - at the same time." },
   { num: "05", icon: "gavel", title: "Regulatory sensitivity", desc: "Every claim and number needed to build confidence without crossing into unverifiable performance promises." },
   { num: "06", icon: "schedule", title: "Launch pressure", desc: "Investor milestones were tied to a live product. Eight weeks from zero to a functioning brand and site was non-negotiable." },
 ];
@@ -138,7 +138,7 @@ onBeforeUnmount(() => ctx?.revert());
         <p class="cs-hero-sub">
           SteadyAsset offers fixed-income products and fractional commercial real estate to
           retail and HNI investors. Amortree delivered the complete brand system, UX
-          architecture, and investor-grade website — built to earn trust before a single rupee
+          architecture, and investor-grade website - built to earn trust before a single rupee
           is committed.
         </p>
 
@@ -230,7 +230,7 @@ onBeforeUnmount(() => ctx?.revert());
           <p class="cs-lead-text">
             SteadyAsset is a Bengaluru-based alternative investment platform that makes
             commercial real estate and fixed-income products accessible to retail investors
-            starting at &#8377;10,000 — sitting at the intersection of fintech and real estate,
+            starting at &#8377;10,000 - sitting at the intersection of fintech and real estate,
             where trust and credibility are non-negotiable.
           </p>
           <p>
@@ -316,8 +316,8 @@ onBeforeUnmount(() => ctx?.revert());
           </p>
 
           <div class="cs-pillar" v-for="(p, i) in [
-            { t: 'Credibility-first visual identity', d: 'The palette was built around teal and gold — a deliberate departure from the red-heavy palette of most Indian fintech brands. Teal signals stability. Gold signals value.' },
-            { t: 'Education-led content architecture', d: 'Rather than leading with returns, we structured the site around investor education — how CRE works, why fractional ownership reduces risk. Education builds trust before the ask.' },
+            { t: 'Credibility-first visual identity', d: 'The palette was built around teal and gold - a deliberate departure from the red-heavy palette of most Indian fintech brands. Teal signals stability. Gold signals value.' },
+            { t: 'Education-led content architecture', d: 'Rather than leading with returns, we structured the site around investor education - how CRE works, why fractional ownership reduces risk. Education builds trust before the ask.' },
             { t: 'Analytics from day one', d: 'GA4 with custom event tracking was configured pre-launch, so the team could iterate based on real investor behaviour from launch day, not three months in.' },
           ]" :key="p.t">
             <div class="cs-pillar-num">{{ String(i + 1).padStart(2, '0') }}</div>
@@ -332,13 +332,13 @@ onBeforeUnmount(() => ctx?.revert());
           <span class="material-symbols-outlined cs-insight-icon">lightbulb</span>
           <h4>The insight that shaped everything</h4>
           <p>
-            Alternative investment platforms don't lose investors on the product page — they
+            Alternative investment platforms don't lose investors on the product page - they
             lose them on the homepage, in the first eight seconds, when the brand doesn't feel
             established enough to hand over &#8377;10,000.
           </p>
           <div class="cs-insight-divider"></div>
           <p class="cs-insight-action">
-            So we designed the homepage as a confidence engine — leading with credibility and
+            So we designed the homepage as a confidence engine - leading with credibility and
             transparency before ever showing a product card.
           </p>
         </div>
@@ -401,7 +401,7 @@ onBeforeUnmount(() => ctx?.revert());
         <div class="cs-ba-card cs-ba-card--after">
           <span class="cs-ba-tag">After</span>
           <ul>
-            <li><span class="material-symbols-outlined">check</span>Full identity — logo, palette, type system</li>
+            <li><span class="material-symbols-outlined">check</span>Full identity - logo, palette, type system</li>
             <li><span class="material-symbols-outlined">check</span>Investor-grade site, 94 Lighthouse score</li>
             <li><span class="material-symbols-outlined">check</span>Page 1 rankings for target keywords</li>
             <li><span class="material-symbols-outlined">check</span>GA4 + GTM tracking every touchpoint</li>
@@ -513,7 +513,7 @@ onBeforeUnmount(() => ctx?.revert());
         <div>
           <div class="cs-eyebrow">Technology</div>
           <h2 class="cs-h2">Stack &amp; tools</h2>
-          <p class="cs-section-sub">Every tool was chosen for performance and the investor experience — not trend-chasing.</p>
+          <p class="cs-section-sub">Every tool was chosen for performance and the investor experience - not trend-chasing.</p>
         </div>
       </div>
 

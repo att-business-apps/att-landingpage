@@ -15,7 +15,7 @@ const pendingTarget = ref(""); // normalised URL, captured at the idle step and 
 const contact = reactive({
   name: "",
   phone: "",
-  _hp: "", // honeypot — must stay empty; bots tend to fill every field
+  _hp: "", // honeypot - must stay empty; bots tend to fill every field
 });
 const contactErrors = ref({});
 const contactSubmitting = ref(false);
@@ -32,7 +32,7 @@ function validateContact() {
 
 async function submitContact() {
   if (contact._hp) {
-    // Honeypot tripped — silently proceed without writing anything.
+    // Honeypot tripped - silently proceed without writing anything.
     await runAudit();
     return;
   }
@@ -50,7 +50,7 @@ async function submitContact() {
     page: window.location.pathname,
   });
 
-  // Saving the lead is best-effort and must never block the audit —
+  // Saving the lead is best-effort and must never block the audit -
   // that's what the visitor is actually here for. If the Sheet write
   // fails, log it clearly and surface a soft, non-blocking note instead
   // of a hard error screen.
@@ -138,7 +138,7 @@ async function runAudit() {
   const cats   = CATEGORIES.map(c => `category=${c.key}`).join("&");
   const apiUrl = `${PSI}?url=${encodeURIComponent(target)}&strategy=mobile&${cats}${PSI_KEY ? "&key=" + PSI_KEY : ""}`;
 
-  // Retry with backoff on 429 (rate limit) — PSI briefly rate-limits bursts,
+  // Retry with backoff on 429 (rate limit) - PSI briefly rate-limits bursts,
   // a short retry usually clears it without bothering the user.
   const MAX_ATTEMPTS = 3;
   let lastErr = null;
@@ -172,7 +172,7 @@ async function runAudit() {
       return;
     } catch (e) {
       lastErr = e;
-      // Network-level failures (CORS, offline, DNS) won't succeed on retry — bail immediately.
+      // Network-level failures (CORS, offline, DNS) won't succeed on retry - bail immediately.
       if (!(e instanceof Error) || !/^API error 429/.test(e.message)) break;
     }
   }
@@ -255,7 +255,7 @@ function reset() {
               Free Instant Audit
             </div>
             <h3 class="aw-title">How many leads is your website losing?</h3>
-            <p class="aw-sub">Enter your URL — we'll score it on Performance, SEO, Accessibility, and Lead Generation potential in seconds.</p>
+            <p class="aw-sub">Enter your URL - we'll score it on Performance, SEO, Accessibility, and Lead Generation potential in seconds.</p>
           </div>
 
           <div class="aw-form">
@@ -297,7 +297,7 @@ function reset() {
               No website yet?
             </div>
             <h3 class="aw-title">Let's build your first growth-ready website.</h3>
-            <p class="aw-sub">Tell us what your business needs. We'll help you plan the right site, scope, and next step — with a clear estimate.</p>
+            <p class="aw-sub">Tell us what your business needs. We'll help you plan the right site, scope, and next step - with a clear estimate.</p>
           </div>
 
           <ul class="aw-new-site-list">
@@ -336,7 +336,7 @@ function reset() {
           Free Instant Audit
         </div>
         <h3 class="aw-title">Where should we send your score?</h3>
-        <p class="aw-sub">Quick details so we can follow up if your site needs work — then we'll scan <strong>{{ pendingTarget.replace(/^https?:\/\//i, '') }}</strong> right away.</p>
+        <p class="aw-sub">Quick details so we can follow up if your site needs work - then we'll scan <strong>{{ pendingTarget.replace(/^https?:\/\//i, '') }}</strong> right away.</p>
       </div>
 
       <div class="aw-form">
@@ -371,7 +371,7 @@ function reset() {
           <span class="material-symbols-outlined">error</span>{{ contactErrors.phone }}
         </p>
 
-        <!-- Honeypot — hidden from real visitors, catches basic bots -->
+        <!-- Honeypot - hidden from real visitors, catches basic bots -->
         <input v-model="contact._hp" type="text" class="aw-hp-field" tabindex="-1" autocomplete="off" aria-hidden="true" />
 
         <button class="aw-btn" :disabled="contactSubmitting" @click="submitContact">
@@ -780,7 +780,7 @@ function reset() {
   50% { opacity: 1; }
 }
 
-/* ─── Result — overall ring ─────────────────────────────────────── */
+/* ─── Result - overall ring ─────────────────────────────────────── */
 .aw-overall {
   display: flex;
   gap: 1.25rem;

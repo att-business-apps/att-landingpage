@@ -19,7 +19,7 @@ const includes = [
   {
     icon: "article",
     title: "On-Page & Content Optimization",
-    desc: "Title tags, headers, internal links, and content structured around search intent — not stuffed with keywords.",
+    desc: "Title tags, headers, internal links, and content structured around search intent - not stuffed with keywords.",
   },
   {
     icon: "link",
@@ -104,7 +104,7 @@ const faqs = [
   },
   {
     q: "How long until I see results from SEO?",
-    body: "Most sites see early movement in rankings within 8–12 weeks, with meaningful traffic growth building over 4–6 months. SEO compounds over time — it's not a one-time fix.",
+    body: "Most sites see early movement in rankings within 8–12 weeks, with meaningful traffic growth building over 4–6 months. SEO compounds over time - it's not a one-time fix.",
     note: "Timelines depend on competition and your site's starting point.",
   },
   {
@@ -292,7 +292,7 @@ onBeforeUnmount(() => {
           </h2>
         </div>
         <p class="text-slate-800 max-w-sm mb-0 text-sm">
-          Every campaign is built with the same focus on technical health, content quality, and authority — nothing important is treated as an add-on.
+          Every campaign is built with the same focus on technical health, content quality, and authority - nothing important is treated as an add-on.
         </p>
       </div>
 
@@ -321,7 +321,7 @@ onBeforeUnmount(() => {
           </h2>
         </div>
         <p class="text-slate-800 max-w-sm mb-0 text-sm">
-          A defined sequence, not an open-ended back-and-forth — so you always know what happens
+          A defined sequence, not an open-ended back-and-forth - so you always know what happens
           next and when.
         </p>
       </div>

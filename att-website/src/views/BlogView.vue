@@ -44,7 +44,7 @@ const posts = ref([
     slug: "website-losing-customers",
     title: "7 Signs Your Website Is Losing You Customers",
     excerpt:
-      "It's rarely just 'looking dated.' Seven concrete, checkable signs your website is actively costing you leads — and what to fix first.",
+      "It's rarely just 'looking dated.' Seven concrete, checkable signs your website is actively costing you leads - and what to fix first.",
     category: "Strategy",
     date: "2026-07-20",
     dateLabel: "Jul 20, 2026",
@@ -56,7 +56,7 @@ const posts = ref([
     slug: "freelancer-vs-design-studio-vs-agency",
     title: "Freelancer vs. Design Studio vs. Agency: Who Should Build Your Website?",
     excerpt:
-      "A practical guide to choosing between a freelancer, a boutique design studio, or a large agency for your business website — matched to budget, timeline, and what you actually need.",
+      "A practical guide to choosing between a freelancer, a boutique design studio, or a large agency for your business website - matched to budget, timeline, and what you actually need.",
     category: "Strategy",
     date: "2026-07-20",
     dateLabel: "Jul 2, 2026",
@@ -68,7 +68,7 @@ const posts = ref([
     slug: "how-much-does-a-website-cost-in-india",
     title: "How Much Does a Website Really Cost in 2026?",
     excerpt:
-      "A transparent, no-fluff pricing guide — what actually drives the cost, how the build process works, and how to budget without overpaying.",
+      "A transparent, no-fluff pricing guide - what actually drives the cost, how the build process works, and how to budget without overpaying.",
     category: "Pricing",
     date: "2026-07-20",
     dateLabel: "Jun 20, 2026",
@@ -80,7 +80,7 @@ const posts = ref([
     slug: "signs-you-need-a-website-redesign",
     title: "7 Signs Your Website Is Quietly Costing You Customers",
     excerpt:
-      "Slow load times and confusing navigation don't just annoy visitors — they show up directly in your enquiry numbers. Here's what to check first.",
+      "Slow load times and confusing navigation don't just annoy visitors - they show up directly in your enquiry numbers. Here's what to check first.",
     category: "Strategy",
     date: "2026-06-12",
     dateLabel: "May 12, 2026",
@@ -140,7 +140,7 @@ const posts = ref([
     slug: "how-long-should-a-website-take-to-build",
     title: "How Long Should a Website Actually Take to Build?",
     excerpt:
-      "Real timelines for landing pages, multi-page sites, and custom builds — what determines how long it takes, what slows projects down, and how to read a timeline quote.",
+      "Real timelines for landing pages, multi-page sites, and custom builds - what determines how long it takes, what slows projects down, and how to read a timeline quote.",
     category: "Pricing",
     date: "2026-04-03",
     dateLabel: "Jan 24, 2026",
@@ -214,7 +214,7 @@ onMounted(() => {
             Amortree Journal
           </div>
           <h1 class="att-blog-idx-title">Ideas on <span class="att-blog-idx-title-accent">design</span>, pricing &amp; growth</h1>
-          <p class="att-blog-idx-dek">Straight-talking guides on web design, pricing, and digital growth — written for founders and small business owners, not other agencies.</p>
+          <p class="att-blog-idx-dek">Straight-talking guides on web design, pricing, and digital growth - written for founders and small business owners, not other agencies.</p>
         </div>
       </div>
     </div>
@@ -285,7 +285,7 @@ onMounted(() => {
         </router-link>
 
         <p v-if="!filteredPosts.length" class="att-blog-idx-empty">
-          No posts in this category yet — check back soon.
+          No posts in this category yet - check back soon.
         </p>
       </div>
     </div>
@@ -295,7 +295,7 @@ onMounted(() => {
       <div class="att-blog-idx-cta-inner">
         <div class="att-blog-idx-cta-text">
           <p class="att-blog-idx-cta-title">Have a project in mind?</p>
-          <p class="att-blog-idx-cta-sub">Get a free audit and a straight-up quote — no vague ranges, no pressure.</p>
+          <p class="att-blog-idx-cta-sub">Get a free audit and a straight-up quote - no vague ranges, no pressure.</p>
         </div>
         <a href="/audit" class="att-blog-idx-cta-btn">
           Claim Your Free Audit

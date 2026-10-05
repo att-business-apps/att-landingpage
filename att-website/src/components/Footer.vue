@@ -178,7 +178,7 @@ const socialLinks = [
   { name: "Facebook", url: "https://www.facebook.com/amortreetech/" },
 ];
 
-// Mirrors the services list in ServicesView.vue — keep in sync if that changes.
+// Mirrors the services list in ServicesView.vue - keep in sync if that changes.
 const serviceLinks = [
   { title: "Website Design", tag: "Design", href: "/website-design", icon: "palette" },
   { title: "Web Development", tag: "Engineering", href: "/web-development", icon: "code" },
