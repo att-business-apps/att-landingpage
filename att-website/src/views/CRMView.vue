@@ -3,8 +3,10 @@ import { computed, onBeforeUnmount, onMounted, ref, watch } from "vue";
 import { crmWebAppUrl } from "@/utils/crmConfig";
 
 const endpoint = crmWebAppUrl;
-// Keep the account linked to this browser so the login form only needs the passkey.
-const loginEmail = ref(localStorage.getItem("amt_crm_email") || sessionStorage.getItem("amt_crm_email") || "");
+// The backend needs an account identity to enforce CRM roles and lead assignments.
+// Keep it out of the form and use the configured account (shown in the prior login screenshot).
+const defaultCrmEmail = String(import.meta.env.VITE_CRM_USER_EMAIL || "amortreetech@gmail.com").trim().toLowerCase();
+const loginEmail = ref(localStorage.getItem("amt_crm_email") || sessionStorage.getItem("amt_crm_email") || defaultCrmEmail);
 const passkey = ref("");
 const token = ref(sessionStorage.getItem("amt_crm_token") || "");
 const user = ref(null);
@@ -80,7 +82,12 @@ function callBackend(method, ...args) {
       if (error) reject(error); else resolve(value);
     };
     window[callback] = (payload) => {
-      if (!payload?.ok) return finish(new Error(payload?.error || "CRM request failed."));
+      if (!payload?.ok) {
+        const error = payload?.error === "Unsupported CRM request."
+          ? "The Apps Script deployment is out of date. Deploy a new version of the CRM backend, then try again."
+          : payload?.error || "CRM request failed.";
+        return finish(new Error(error));
+      }
       finish(null, payload.result);
     };
     script.onerror = () => finish(new Error("Could not reach the CRM service. Check the Apps Script deployment URL and access setting."));
