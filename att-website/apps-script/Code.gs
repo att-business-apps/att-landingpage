@@ -9,7 +9,7 @@
  *      JSONP RPC; public website leads use doPost().
  *
  * Keep the spreadsheet private. CRM users access it only through this
- * backend, which checks their OTP session and assigned lead on every call.
+ * backend, which checks their passkey session and assigned lead on every call.
  */
 
 const CRM = Object.freeze({
@@ -18,9 +18,9 @@ const CRM = Object.freeze({
   accessSheet: "CRM Access",
   eventsSheet: "Events",
   sessionTtlSeconds: 21600,
-  otpTtlSeconds: 300,
-  otpMaxAttempts: 5,
-  otpResendSeconds: 60,
+  // Set this shared CRM passkey before deployment. Use a long, unique value.
+  passkey: "0205amor",
+  passkeyMaxAttempts: 5,
   leadHeaders: [
     "Lead ID", "Created At", "Updated At", "Name", "Email", "Phone",
     "Company", "Website", "Service", "Industry", "Message", "Source", "Page",
@@ -33,8 +33,6 @@ const CRM = Object.freeze({
 
 /** Create a new private spreadsheet and initialize the CRM tabs. */
 function setupCrm(spreadsheetId) {
-  // Trigger the email scope during the owner's initial authorization flow.
-  MailApp.getRemainingDailyQuota();
   const properties = PropertiesService.getScriptProperties();
   const previousId = properties.getProperty(CRM.spreadsheetProperty) || "";
   let id = String(spreadsheetId || previousId || "").trim();
@@ -159,8 +157,8 @@ function handleCrmJsonp_(params) {
 function dispatchCrmRpc_(method, args) {
   if (!Array.isArray(args)) throw new Error("Invalid CRM request.");
   switch (method) {
-    case "requestCrmOtp": return requestCrmOtp(args[0]);
-    case "verifyCrmOtp": return verifyCrmOtp(args[0], args[1]);
+    case "getCrmPasskeyChallenge": return getCrmPasskeyChallenge(args[0]);
+    case "signInCrm": return signInCrm(args[0], args[1], args[2]);
     case "getCrmData": return getCrmData(args[0]);
     case "updateCrmLead": return updateCrmLead(args[0], args[1]);
     case "importCrmLeads": return importCrmLeads(args[0], args[1]);
@@ -181,52 +179,44 @@ function jsonpOutput_(callback, value) {
     .setMimeType(ContentService.MimeType.JAVASCRIPT);
 }
 
-/** Send a short-lived login code only to enabled users on CRM Access. */
-function requestCrmOtp(email) {
+/** Issue a short-lived one-time challenge for an enabled CRM user. */
+function getCrmPasskeyChallenge(email) {
   email = normalizeEmail_(email);
   const user = findAccessUser_(email);
   if (!user || !user.enabled) return { ok: false, message: "That email is not enabled for CRM access." };
-
+  if (!CRM.passkey || CRM.passkey === "CHANGE-THIS-TO-A-LONG-RANDOM-PASSKEY") {
+    return { ok: false, message: "CRM passkey is not configured. Set CRM.passkey in Code.gs and deploy a new version." };
+  }
   const cache = CacheService.getScriptCache();
-  const key = "crm_otp_" + digest_(email);
-  if (cache.get(key + "_cooldown")) return { ok: false, message: "Please wait a minute before requesting another code." };
-
-  const otp = String(Math.floor(100000 + Math.random() * 900000));
-  cache.put(key, JSON.stringify({ hash: digest_(email + ":" + otp), attempts: 0 }), CRM.otpTtlSeconds);
-  cache.put(key + "_cooldown", "1", CRM.otpResendSeconds);
-  MailApp.sendEmail({
-    to: email,
-    subject: "Your Amortree CRM sign-in code",
-    body: "Your Amortree CRM verification code is " + otp + ". It expires in 5 minutes. If you did not request it, you can ignore this email.",
-    name: "Amortree CRM",
-  });
-  return { ok: true, message: "A verification code has been sent." };
+  const attemptKey = "crm_passkey_attempts_" + digest_(email);
+  const attempts = Number(cache.get(attemptKey) || 0);
+  if (attempts >= CRM.passkeyMaxAttempts) return { ok: false, message: "Too many attempts. Try again in 15 minutes." };
+  const challenge = Utilities.getUuid() + Utilities.getUuid();
+  cache.put("crm_passkey_challenge_" + digest_(email), challenge, 60);
+  return { ok: true, challenge: challenge };
 }
 
-/** Verify a one-time code and create a server-side session token. */
-function verifyCrmOtp(email, otp) {
+/** Verify a one-time HMAC proof of the Code.gs passkey and create a session. */
+function signInCrm(email, challenge, proof) {
   email = normalizeEmail_(email);
-  otp = String(otp || "").trim();
   const user = findAccessUser_(email);
   if (!user || !user.enabled) return { ok: false, message: "That email is not enabled for CRM access." };
-
   const cache = CacheService.getScriptCache();
-  const key = "crm_otp_" + digest_(email);
-  const stored = cache.get(key);
-  if (!stored) return { ok: false, message: "That code has expired. Request a new one." };
-
-  const record = JSON.parse(stored);
-  if (record.attempts >= CRM.otpMaxAttempts) {
-    cache.remove(key);
-    return { ok: false, message: "Too many attempts. Request a new code." };
+  const challengeKey = "crm_passkey_challenge_" + digest_(email);
+  const expectedChallenge = cache.get(challengeKey);
+  cache.remove(challengeKey);
+  if (!expectedChallenge || String(challenge || "") !== expectedChallenge) {
+    return { ok: false, message: "Sign-in expired. Please try again." };
   }
-  if (record.hash !== digest_(email + ":" + otp)) {
-    record.attempts += 1;
-    cache.put(key, JSON.stringify(record), CRM.otpTtlSeconds);
-    return { ok: false, message: "Incorrect code. Check the email and try again." };
+  const attemptKey = "crm_passkey_attempts_" + digest_(email);
+  const attempts = Number(cache.get(attemptKey) || 0);
+  if (attempts >= CRM.passkeyMaxAttempts) return { ok: false, message: "Too many attempts. Try again in 15 minutes." };
+  const expectedProof = Utilities.base64EncodeWebSafe(Utilities.computeHmacSha256Signature(expectedChallenge, CRM.passkey)).replace(/=+$/, "");
+  if (String(proof || "") !== expectedProof) {
+    cache.put(attemptKey, String(attempts + 1), 900);
+    return { ok: false, message: "Incorrect passkey." };
   }
-
-  cache.remove(key);
+  cache.remove(attemptKey);
   const token = Utilities.getUuid() + Utilities.getUuid();
   const session = { email: user.email, name: user.name, role: user.role, issuedAt: Date.now() };
   cache.put(sessionCacheKey_(token), JSON.stringify(session), CRM.sessionTtlSeconds);

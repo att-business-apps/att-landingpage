@@ -14,7 +14,7 @@ The Apps Script project is the secure bridge between the website, the CRM UI, an
    }
    ```
 
-   Approve the requested Google Sheets and email permissions. The execution log contains the spreadsheet URL and migration counts. This adds/repairs the `Leads` and `Events` tabs, retains the target `CRM Access` roster, and copies unique lead/event rows from the previously configured CRM spreadsheet. The source spreadsheet is left intact. It also assigns readable lead IDs (`#latt01`, `#latt02`, …) to existing rows and preserves each original key in the `Record Key` column. Run setup once after updating `Code.gs` to migrate existing rows.
+   Approve the requested Google Sheets permission. The execution log contains the spreadsheet URL and migration counts. This adds/repairs the `Leads` and `Events` tabs, retains the target `CRM Access` roster, and copies unique lead/event rows from the previously configured CRM spreadsheet. The source spreadsheet is left intact. It also assigns readable lead IDs (`#latt01`, `#latt02`, …) to existing rows and preserves each original key in the `Record Key` column. Run setup once after updating `Code.gs` to migrate existing rows.
 4. Open the `CRM Access` tab. The account that ran setup is seeded as an admin when Google provides its email. Add one row per staff member:
 
    | Email | Name | Role | Enabled |
@@ -29,7 +29,7 @@ The spreadsheet owner controls its sharing. Keep the spreadsheet private and do 
 ## 2. Deploy the CRM web app
 
 1. In Apps Script select **Deploy → New deployment → Web app**.
-2. Set **Execute as** to the spreadsheet/script owner. Set access to **Anyone** so the sign-in screen can deliver OTPs to enabled emails; the CRM data methods require a valid server-side session and recheck the user's enabled role and assignment.
+2. Before deploying, set `CRM.passkey` near the top of `Code.gs` to a long, unique value and keep the script editor restricted to trusted administrators. This is a shared passphrase that CRM users enter with their enabled work email; it is not a device-bound WebAuthn credential. Set **Execute as** to the spreadsheet/script owner and access to **Anyone**. CRM data methods still require a server-side session and recheck the user's enabled role and assignment.
 3. Deploy and copy the `/exec` URL. After changing `Code.gs` or `CRM.html`, deploy a new version of that deployment.
 
 ## 3. Connect the website

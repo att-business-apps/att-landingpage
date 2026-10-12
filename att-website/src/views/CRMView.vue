@@ -3,8 +3,9 @@ import { computed, onBeforeUnmount, onMounted, ref, watch } from "vue";
 import { crmWebAppUrl } from "@/utils/crmConfig";
 
 const endpoint = crmWebAppUrl;
-const loginEmail = ref(sessionStorage.getItem("amt_crm_email") || "");
-const otp = ref("");
+// Keep the account linked to this browser so the login form only needs the passkey.
+const loginEmail = ref(localStorage.getItem("amt_crm_email") || sessionStorage.getItem("amt_crm_email") || "");
+const passkey = ref("");
 const token = ref(sessionStorage.getItem("amt_crm_token") || "");
 const user = ref(null);
 const leads = ref([]);
@@ -18,7 +19,6 @@ const editedAssignee = ref("");
 const noteText = ref("");
 const busy = ref(false);
 const hasLoadedLeads = ref(false);
-const loginStep = ref("email");
 const message = ref("");
 const detailMessage = ref("");
 const csvInput = ref(null);
@@ -104,31 +104,26 @@ async function postBackend(method, ...args) {
   });
 }
 
-async function sendCode() {
+async function signIn() {
   message.value = "";
   const email = loginEmail.value.trim().toLowerCase();
-  if (!email) { message.value = "Enter your work email address."; return; }
+  if (!email) { message.value = "This browser has no CRM account linked yet. Sign in once using the account email, then future sign-ins will only need the passkey."; return; }
   busy.value = true;
   try {
-    const result = await callBackend("requestCrmOtp", email);
+    const challengeResult = await callBackend("getCrmPasskeyChallenge", email);
+    if (!challengeResult.ok) throw new Error(challengeResult.message);
+    const key = await crypto.subtle.importKey("raw", new TextEncoder().encode(passkey.value), { name: "HMAC", hash: "SHA-256" }, false, ["sign"]);
+    const signature = new Uint8Array(await crypto.subtle.sign("HMAC", key, new TextEncoder().encode(challengeResult.challenge)));
+    const proof = btoa(String.fromCharCode(...signature)).replace(/\+/g, "-").replace(/\//g, "_").replace(/=+$/, "");
+    const result = await callBackend("signInCrm", email, challengeResult.challenge, proof);
     if (!result.ok) throw new Error(result.message);
     loginEmail.value = email;
     sessionStorage.setItem("amt_crm_email", email);
-    loginStep.value = "otp";
-    message.value = result.message;
-  } catch (error) { message.value = error.message; }
-  finally { busy.value = false; }
-}
-
-async function verifyCode() {
-  message.value = "";
-  busy.value = true;
-  try {
-    const result = await callBackend("verifyCrmOtp", loginEmail.value.trim().toLowerCase(), otp.value.trim());
-    if (!result.ok) throw new Error(result.message);
+    localStorage.setItem("amt_crm_email", email);
     token.value = result.token;
     user.value = result.user;
     sessionStorage.setItem("amt_crm_token", result.token);
+    passkey.value = "";
     await refreshLeads();
   } catch (error) { message.value = error.message; }
   finally { busy.value = false; }
@@ -186,8 +181,7 @@ function signOut() {
   leads.value = [];
   users.value = [];
   selectedId.value = "";
-  otp.value = "";
-  loginStep.value = "email";
+  passkey.value = "";
   sessionStorage.removeItem("amt_crm_token");
 }
 
@@ -270,14 +264,12 @@ onBeforeUnmount(() => {
       <div class="panel auth"><div class="brand"><span class="mark">✳</span> amortree <span class="eyebrow">CRM</span></div><h1>CRM setup needed.</h1><p>Set <code>VITE_CRM_WEB_APP_URL</code> to your deployed Apps Script <code>/exec</code> URL, then rebuild the site.</p><RouterLink class="back-link" to="/">Back to Amortree</RouterLink></div>
     </section>
     <section v-else-if="loginMode" class="auth-wrap">
-      <form class="panel auth" @submit.prevent="loginStep === 'email' ? sendCode() : verifyCode()">
+      <form class="panel auth" @submit.prevent="signIn">
         <div class="brand"><span class="mark">✳</span> amortree <span class="eyebrow">CRM</span></div>
-        <p class="eyebrow auth-eyebrow">Secure follow-up workspace</p><h1>{{ loginStep === 'email' ? 'Good to see you.' : 'Check your inbox.' }}</h1>
-        <p>{{ loginStep === 'email' ? 'Sign in with the email address enabled by your CRM administrator.' : `Enter the six-digit code sent to ${loginEmail}.` }}</p>
-        <template v-if="loginStep === 'email'"><label class="field-label" for="crm-email">Work email</label><input id="crm-email" v-model="loginEmail" class="field" type="email" autocomplete="email" placeholder="you@company.com" required></template>
-        <template v-else><label class="field-label" for="crm-otp">Six-digit code</label><input id="crm-otp" v-model="otp" class="field" inputmode="numeric" autocomplete="one-time-code" maxlength="6" placeholder="000000" required></template>
-        <button class="primary full" type="submit" :disabled="busy">{{ busy ? 'Please wait…' : loginStep === 'email' ? 'Send sign-in code' : 'Verify and continue' }}</button>
-        <button v-if="loginStep === 'otp'" class="text-button" type="button" @click="loginStep = 'email'; message = ''">Use a different email</button>
+        <p class="eyebrow auth-eyebrow">Secure follow-up workspace</p><h1>Good to see you.</h1>
+        <p>Enter your CRM passkey to continue.</p>
+        <label class="field-label" for="crm-passkey">Passkey</label><input id="crm-passkey" v-model="passkey" class="field" type="password" autocomplete="current-password" required>
+        <button class="primary full" type="submit" :disabled="busy">{{ busy ? 'Please wait…' : 'Sign in with passkey' }}</button>
         <p class="message" aria-live="polite">{{ message }}</p>
       </form>
     </section>
