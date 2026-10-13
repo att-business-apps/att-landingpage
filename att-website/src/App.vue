@@ -67,6 +67,8 @@ const seoPages = {
   "/project/samsiddhi-designs": ["Samsiddhi Designs Case Study | Amortree Tech", "See how Amortree Tech presented the work and digital experience for Samsiddhi Designs."],
   "/project/raksha-realty": ["Raksha Realty Website Case Study | Amortree Tech", "Explore the website experience Amortree Tech created for Raksha Realty."],
   "/project/alin-salon": ["Alin Salon Website Case Study | Amortree Tech", "Explore the website project Amortree Tech delivered for Alin Salon."],
+  "/project/the-verde-cozy-co": ["The Verde Cozy Co E-commerce Case Study | Amortree Tech", "See how Amortree Tech shaped a warm, considered home décor brand into a connected e-commerce experience, from product discovery to order management."],
+  "/project/velourah": ["Velourah Luxury Gifting Case Study | Amortree Tech", "Explore Velourah's luxury gifting experience, with curated product discovery, WhatsApp ordering, Lead CRM and Order CRM."],
   "/crm": ["Amortree CRM", "Internal Amortree workspace."],
   "/pageNotFound": ["Page Not Found | Amortree Tech", "The page you requested could not be found. Explore Amortree Tech services, projects, or contact us."]
 };

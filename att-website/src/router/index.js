@@ -284,6 +284,18 @@ const router = createRouter({
         import("@/views/project/ProjectAlinSalonView.vue"),
     },
     {
+      path: "/project/the-verde-cozy-co",
+      name: "the-verde-cozy-co",
+      component: () =>
+        import("@/views/project/ProjectVerdeCozyCoView.vue"),
+    },
+    {
+      path: "/project/velourah",
+      name: "velourah",
+      component: () =>
+        import("@/views/project/ProjectVelourahView.vue"),
+    },
+    {
       path: "/pageNotFound",
       name: "pageNotFound",
       component: () => import("@/views/404.vue"),

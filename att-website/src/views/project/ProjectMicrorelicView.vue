@@ -74,6 +74,25 @@ const outcomes = [
   { icon: "auto_awesome", title: "Positive early signal", desc: "Prototypes of the site and design system have already drawn praise for their clarity and originality.", highlight: true },
 ];
 
+const getCaseIcon = (label = "") => {
+  const value = String(label).toLowerCase();
+  if (/brand|identity|position|visual/.test(value)) return "palette";
+  if (/discover|research|audit|find|search/.test(value)) return "travel_explore";
+  if (/develop|build|implement|frontend/.test(value)) return "code";
+  if (/launch|deliver|deploy/.test(value)) return "rocket_launch";
+  if (/review|test|quality/.test(value)) return "fact_check";
+  if (/content|copy|story/.test(value)) return "edit_note";
+  if (/journey|customer|flow|follow|track|lead|crm|enquiry|conversion/.test(value)) return "conversion_path";
+  if (/store|operation|manage|inventory|catalog|admin/.test(value)) return "settings";
+  if (/website|mobile|digital|responsive|experience|web/.test(value)) return "web";
+  if (/trust|review|quality|proof|safety/.test(value)) return "verified";
+  if (/strategy|approach|plan|goal|direction/.test(value)) return "lightbulb";
+  if (/service|category|product|collection/.test(value)) return "grid_view";
+  if (/book|appointment|schedule/.test(value)) return "event_available";
+  if (/payment|checkout|order|purchase|price|cost/.test(value)) return "shopping_bag";
+  if (/next|growth|future|scale/.test(value)) return "trending_up";
+  return "task_alt";
+};
 let ctx;
 
 onMounted(() => {
@@ -232,7 +251,7 @@ onBeforeUnmount(() => ctx?.revert());
   <section class="cs-section">
     <div class="cs-shell">
       <div class="cs-section-head cs-reveal">
-        <span class="cs-ghost-num">01</span>
+        <span class="material-symbols-outlined cs-ghost-num" aria-hidden="true">business_center</span>
         <div>
           <div class="cs-eyebrow">Client</div>
           <h2 class="cs-h2">Who is Microrelic?</h2>
@@ -278,7 +297,7 @@ onBeforeUnmount(() => ctx?.revert());
   <section class="cs-section cs-section--dark">
     <div class="cs-shell">
       <div class="cs-section-head cs-reveal">
-        <span class="cs-ghost-num cs-ghost-num--dark">02</span>
+        <span class="material-symbols-outlined cs-ghost-num cs-ghost-num--dark" aria-hidden="true">target</span>
         <div>
           <div class="cs-eyebrow cs-eyebrow--light">Challenge</div>
           <h2 class="cs-h2 cs-h2--light">Standing out across four industries at once</h2>
@@ -287,7 +306,7 @@ onBeforeUnmount(() => ctx?.revert());
 
       <div class="cs-challenge-list cs-stagger">
         <div class="cs-challenge-row" v-for="c in challenges" :key="c.num">
-          <span class="cs-challenge-num">{{ c.num }}</span>
+          
           <span class="material-symbols-outlined cs-challenge-icon">{{ c.icon }}</span>
           <div class="cs-challenge-body">
             <h3>{{ c.title }}</h3>
@@ -302,7 +321,7 @@ onBeforeUnmount(() => ctx?.revert());
   <section class="cs-section">
     <div class="cs-shell">
       <div class="cs-section-head cs-reveal">
-        <span class="cs-ghost-num">03</span>
+        <span class="material-symbols-outlined cs-ghost-num" aria-hidden="true">lightbulb</span>
         <div>
           <div class="cs-eyebrow">Strategy</div>
           <h2 class="cs-h2">A system, not a set of screens</h2>
@@ -318,7 +337,7 @@ onBeforeUnmount(() => ctx?.revert());
           </p>
 
           <div class="cs-pillar" v-for="(p, i) in strategyPillars" :key="p.t">
-            <div class="cs-pillar-num">{{ String(i + 1).padStart(2, '0') }}</div>
+            <span class="material-symbols-outlined cs-pillar-num" aria-hidden="true">{{ getCaseIcon(p.t) }}</span>
             <div>
               <h4>{{ p.t }}</h4>
               <p>{{ p.d }}</p>
@@ -348,7 +367,7 @@ onBeforeUnmount(() => ctx?.revert());
   <section class="cs-section cs-section--muted">
     <div class="cs-shell">
       <div class="cs-section-head cs-reveal">
-        <span class="cs-ghost-num">04</span>
+        <span class="material-symbols-outlined cs-ghost-num" aria-hidden="true">conversion_path</span>
         <div>
           <div class="cs-eyebrow">Scope</div>
           <h2 class="cs-h2">Six service lines, one coherent story</h2>
@@ -369,7 +388,7 @@ onBeforeUnmount(() => ctx?.revert());
   <section class="cs-section">
     <div class="cs-shell">
       <div class="cs-section-head cs-reveal">
-        <span class="cs-ghost-num">05</span>
+        <span class="material-symbols-outlined cs-ghost-num" aria-hidden="true">web</span>
         <div>
           <div class="cs-eyebrow">Our Process</div>
           <h2 class="cs-h2">From brand discovery to a scalable system</h2>
@@ -382,7 +401,7 @@ onBeforeUnmount(() => ctx?.revert());
 
       <div class="cs-timeline">
         <div v-for="(item, i) in timeline" :key="item.step" class="timeline-row">
-          <div class="timeline-week">{{ item.step }}</div>
+          <span class="material-symbols-outlined timeline-week" aria-hidden="true">{{ getCaseIcon(item.phase || item.step) }}</span>
           <div class="timeline-rail">
             <div class="timeline-dot"></div>
             <div class="timeline-line" v-if="i < timeline.length - 1"></div>
@@ -400,7 +419,7 @@ onBeforeUnmount(() => ctx?.revert());
   <section class="cs-section cs-section--muted">
     <div class="cs-shell">
       <div class="cs-section-head cs-reveal">
-        <span class="cs-ghost-num">06</span>
+        <span class="material-symbols-outlined cs-ghost-num" aria-hidden="true">settings</span>
         <div>
           <div class="cs-eyebrow">Before / After</div>
           <h2 class="cs-h2">The transformation, side by side</h2>
@@ -438,7 +457,7 @@ onBeforeUnmount(() => ctx?.revert());
   <section class="cs-section">
     <div class="cs-shell">
       <div class="cs-section-head cs-reveal">
-        <span class="cs-ghost-num">07</span>
+        <span class="material-symbols-outlined cs-ghost-num" aria-hidden="true">verified</span>
         <div>
           <div class="cs-eyebrow">Design System</div>
           <h2 class="cs-h2">Colour, type &amp; components - built to scale</h2>
@@ -525,7 +544,7 @@ onBeforeUnmount(() => ctx?.revert());
   <section class="cs-section cs-section--muted">
     <div class="cs-shell">
       <div class="cs-section-head cs-reveal">
-        <span class="cs-ghost-num">08</span>
+        <span class="material-symbols-outlined cs-ghost-num" aria-hidden="true">trending_up</span>
         <div>
           <div class="cs-eyebrow">Technology</div>
           <h2 class="cs-h2">Stack &amp; tools</h2>
@@ -546,7 +565,7 @@ onBeforeUnmount(() => ctx?.revert());
   <section class="cs-section cs-section--muted">
     <div class="cs-shell">
       <div class="cs-section-head cs-reveal">
-        <span class="cs-ghost-num">09</span>
+        <span class="material-symbols-outlined cs-ghost-num" aria-hidden="true">trending_up</span>
         <div>
           <div class="cs-eyebrow">Result</div>
           <h2 class="cs-h2">A foundation for a differentiated brand</h2>
@@ -569,12 +588,12 @@ onBeforeUnmount(() => ctx?.revert());
       </div>
 
       <div class="cs-nav-row cs-reveal">
-        <a href="/project/solved-cube-it-solutions" class="cs-nav-link">
-          <span class="material-symbols-outlined">arrow_back</span> Solved Cube
+        <a href="/project/velourah" class="cs-nav-link">
+          <span class="material-symbols-outlined">arrow_back</span> Previous Project
         </a>
-        <a href="https://microrelic.com/" target="_blank" rel="noopener" class="cs-btn-primary">View Live Site</a>
+        <a href="/projects" class="cs-btn-ghost">All Projects</a>
         <a href="/project/steadyasset" class="cs-nav-link cs-nav-link--right">
-          <span class="material-symbols-outlined">arrow_forward</span> SteadyAsset
+          Next Project <span class="material-symbols-outlined">arrow_forward</span>
         </a>
       </div>
     </div>
@@ -1405,8 +1424,20 @@ onBeforeUnmount(() => ctx?.revert());
   transition: color 0.25s ease;
 
   &:hover { color: #0f172a; }
-  &--right { flex-direction: row-reverse; }
+  &--right { flex-direction: row; }
 
   .material-symbols-outlined { font-size: 1.1rem; }
+}
+/* Replace repetitive section counters with semantic iconography. */
+.cs-ghost-num { font-family:"Material Symbols Outlined";font-size:clamp(3rem,6vw,5.5rem);line-height:.8;font-weight:400;font-variant-numeric:normal;font-variation-settings:"FILL" 0,"wght" 400; }
+
+.cs-challenge-row { grid-template-columns:50px minmax(0,1fr); }
+.cs-pillar-num { font-family:"Material Symbols Outlined";font-size:1.2rem;font-weight:400; }
+.timeline-week { display:flex;align-items:flex-start;justify-content:center;font-family:"Material Symbols Outlined";font-size:1.25rem;font-weight:400;line-height:1;color:var(--accent);padding-top:.05rem; }
+@media (max-width:600px) { .cs-challenge-row { grid-template-columns:36px minmax(0,1fr); } }
+@media (max-width:768px) {
+  .cs-nav-row { display:grid;grid-template-columns:1fr 1fr;gap:1rem; }
+  .cs-nav-row > .cs-btn-ghost { display:none!important; }
+  .cs-nav-link--right { justify-self:end; }
 }
 </style>

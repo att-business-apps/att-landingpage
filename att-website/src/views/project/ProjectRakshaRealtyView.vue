@@ -49,6 +49,25 @@ const outcomes = [
   { icon: "forum", title: "A reference for advisory branding", desc: "Raksha Realty is now a live example of how an independent advisory can look as considered as the guidance it gives.", highlight: true },
 ];
 
+const getCaseIcon = (label = "") => {
+  const value = String(label).toLowerCase();
+  if (/brand|identity|position|visual/.test(value)) return "palette";
+  if (/discover|research|audit|find|search/.test(value)) return "travel_explore";
+  if (/develop|build|implement|frontend/.test(value)) return "code";
+  if (/launch|deliver|deploy/.test(value)) return "rocket_launch";
+  if (/review|test|quality/.test(value)) return "fact_check";
+  if (/content|copy|story/.test(value)) return "edit_note";
+  if (/journey|customer|flow|follow|track|lead|crm|enquiry|conversion/.test(value)) return "conversion_path";
+  if (/store|operation|manage|inventory|catalog|admin/.test(value)) return "settings";
+  if (/website|mobile|digital|responsive|experience|web/.test(value)) return "web";
+  if (/trust|review|quality|proof|safety/.test(value)) return "verified";
+  if (/strategy|approach|plan|goal|direction/.test(value)) return "lightbulb";
+  if (/service|category|product|collection/.test(value)) return "grid_view";
+  if (/book|appointment|schedule/.test(value)) return "event_available";
+  if (/payment|checkout|order|purchase|price|cost/.test(value)) return "shopping_bag";
+  if (/next|growth|future|scale/.test(value)) return "trending_up";
+  return "task_alt";
+};
 let ctx;
 
 onMounted(() => {
@@ -202,7 +221,7 @@ onBeforeUnmount(() => ctx?.revert());
   <section class="cs-section">
     <div class="cs-shell">
       <div class="cs-section-head cs-reveal">
-        <span class="cs-ghost-num">01</span>
+        <span class="material-symbols-outlined cs-ghost-num" aria-hidden="true">business_center</span>
         <div>
           <div class="cs-eyebrow">Client</div>
           <h2 class="cs-h2">What is Raksha Realty?</h2>
@@ -260,7 +279,7 @@ onBeforeUnmount(() => ctx?.revert());
   <section class="cs-section cs-section--dark">
     <div class="cs-shell">
       <div class="cs-section-head cs-reveal">
-        <span class="cs-ghost-num cs-ghost-num--accent">02</span>
+        <span class="material-symbols-outlined cs-ghost-num cs-ghost-num--accent" aria-hidden="true">target</span>
         <div>
           <div class="cs-eyebrow cs-eyebrow--accent">Challenge</div>
           <h2 class="cs-h2 cs-h2--light">Why the site needed a rebuild</h2>
@@ -269,7 +288,7 @@ onBeforeUnmount(() => ctx?.revert());
 
       <div class="cs-challenge-list cs-stagger">
         <div class="cs-challenge-row" v-for="c in challenges" :key="c.num">
-          <span class="cs-challenge-num">{{ c.num }}</span>
+          
           <span class="material-symbols-outlined cs-challenge-icon">{{ c.icon }}</span>
           <div class="cs-challenge-body">
             <h3>{{ c.title }}</h3>
@@ -284,7 +303,7 @@ onBeforeUnmount(() => ctx?.revert());
   <section class="cs-section">
     <div class="cs-shell">
       <div class="cs-section-head cs-reveal">
-        <span class="cs-ghost-num">03</span>
+        <span class="material-symbols-outlined cs-ghost-num" aria-hidden="true">lightbulb</span>
         <div>
           <div class="cs-eyebrow">Strategy</div>
           <h2 class="cs-h2">Structured thinking, not market noise</h2>
@@ -304,7 +323,7 @@ onBeforeUnmount(() => ctx?.revert());
             { t: 'Three clear entry points', d: 'Distinct paths for Developers, Buyers, and Investors, so each audience finds guidance built around their exact situation.' },
             { t: 'A measurable foundation', d: 'Analytics wired in from launch, so every enquiry can be traced back to which advisory track brought it in.' },
           ]" :key="p.t">
-            <div class="cs-pillar-num">{{ String(i + 1).padStart(2, '0') }}</div>
+            <span class="material-symbols-outlined cs-pillar-num" aria-hidden="true">{{ getCaseIcon(p.t) }}</span>
             <div>
               <h4>{{ p.t }}</h4>
               <p>{{ p.d }}</p>
@@ -334,7 +353,7 @@ onBeforeUnmount(() => ctx?.revert());
   <section class="cs-section cs-section--muted">
     <div class="cs-shell">
       <div class="cs-section-head cs-reveal">
-        <span class="cs-ghost-num">04</span>
+        <span class="material-symbols-outlined cs-ghost-num" aria-hidden="true">conversion_path</span>
         <div>
           <div class="cs-eyebrow">Process</div>
           <h2 class="cs-h2">Audit to launch</h2>
@@ -343,7 +362,7 @@ onBeforeUnmount(() => ctx?.revert());
 
       <div class="cs-timeline">
         <div v-for="(item, i) in timeline" :key="item.week" class="timeline-row">
-          <div class="timeline-week">{{ item.week }}</div>
+          <span class="material-symbols-outlined timeline-week" aria-hidden="true">{{ getCaseIcon(item.phase || item.step) }}</span>
           <div class="timeline-rail">
             <div class="timeline-dot"></div>
             <div class="timeline-line" v-if="i < timeline.length - 1"></div>
@@ -361,7 +380,7 @@ onBeforeUnmount(() => ctx?.revert());
   <section class="cs-section">
     <div class="cs-shell">
       <div class="cs-section-head cs-reveal">
-        <span class="cs-ghost-num">05</span>
+        <span class="material-symbols-outlined cs-ghost-num" aria-hidden="true">web</span>
         <div>
           <div class="cs-eyebrow">Transformation</div>
           <h2 class="cs-h2">The redesign, side by side</h2>
@@ -405,7 +424,7 @@ onBeforeUnmount(() => ctx?.revert());
   <section class="cs-metrics-strip">
     <div class="cs-shell">
       <div class="cs-section-head cs-reveal">
-        <span class="cs-ghost-num cs-ghost-num--accent">06</span>
+        <span class="material-symbols-outlined cs-ghost-num cs-ghost-num--accent" aria-hidden="true">settings</span>
         <div>
           <div class="cs-eyebrow cs-eyebrow--accent">Snapshot</div>
           <h2 class="cs-h2 cs-h2--light">What the redesign delivers</h2>
@@ -426,7 +445,7 @@ onBeforeUnmount(() => ctx?.revert());
   <section class="cs-section cs-section--muted">
     <div class="cs-shell">
       <div class="cs-section-head cs-reveal">
-        <span class="cs-ghost-num">07</span>
+        <span class="material-symbols-outlined cs-ghost-num" aria-hidden="true">verified</span>
         <div>
           <div class="cs-eyebrow">Result</div>
           <h2 class="cs-h2">What this built for Raksha Realty</h2>
@@ -448,11 +467,11 @@ onBeforeUnmount(() => ctx?.revert());
 
       <div class="cs-nav-row cs-reveal">
         <a href="/project/samsiddhi-designs" class="cs-nav-link">
-          <span class="material-symbols-outlined">arrow_back</span> Samsiddhi Designs
+          <span class="material-symbols-outlined">arrow_back</span> Previous Project
         </a>
-        <a href="https://raksharealty.in/" target="_blank" rel="noopener" class="cs-btn-primary">View Live Site</a>
+        <a href="/projects" class="cs-btn-ghost">All Projects</a>
         <a href="/project/alin-salon" class="cs-nav-link cs-nav-link--right">
-          <span class="material-symbols-outlined">arrow_forward</span> Alin Salon
+          Next Project <span class="material-symbols-outlined">arrow_forward</span>
         </a>
       </div>
     </div>
@@ -1228,8 +1247,20 @@ onBeforeUnmount(() => ctx?.revert());
   transition: color 0.25s ease;
 
   &:hover { color: #0f172a; }
-  &--right { flex-direction: row-reverse; }
+  &--right { flex-direction: row; }
 
   .material-symbols-outlined { font-size: 1.1rem; }
+}
+/* Replace repetitive section counters with semantic iconography. */
+.cs-ghost-num { font-family:"Material Symbols Outlined";font-size:clamp(3rem,6vw,5.5rem);line-height:.8;font-weight:400;font-variant-numeric:normal;font-variation-settings:"FILL" 0,"wght" 400; }
+
+.cs-challenge-row { grid-template-columns:50px minmax(0,1fr); }
+.cs-pillar-num { font-family:"Material Symbols Outlined";font-size:1.2rem;font-weight:400; }
+.timeline-week { display:flex;align-items:flex-start;justify-content:center;font-family:"Material Symbols Outlined";font-size:1.25rem;font-weight:400;line-height:1;color:var(--accent);padding-top:.05rem; }
+@media (max-width:600px) { .cs-challenge-row { grid-template-columns:36px minmax(0,1fr); } }
+@media (max-width:768px) {
+  .cs-nav-row { display:grid;grid-template-columns:1fr 1fr;gap:1rem; }
+  .cs-nav-row > .cs-btn-ghost { display:none!important; }
+  .cs-nav-link--right { justify-self:end; }
 }
 </style>

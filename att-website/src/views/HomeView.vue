@@ -524,6 +524,41 @@ function animateWhySection() {
   });
 }
 
+function animateAudienceSection() {
+  const section = homePage.value?.querySelector(".att-audience-section");
+  if (!section) return;
+
+  const intro = section.querySelectorAll(".att-audience-kicker, .att-audience-title, .att-audience-copy");
+  const cards = section.querySelectorAll(".att-audience-card");
+
+  gsap.from(intro, {
+    y: 34,
+    autoAlpha: 0,
+    duration: 0.8,
+    stagger: 0.12,
+    ease: "power3.out",
+    immediateRender: false,
+    scrollTrigger: { trigger: section, start: "top 78%", once: true },
+  });
+
+  gsap.from(cards, {
+    y: 54,
+    rotateX: 5,
+    autoAlpha: 0,
+    duration: 0.9,
+    stagger: { each: 0.11, from: "start" },
+    ease: "power3.out",
+    immediateRender: false,
+    scrollTrigger: { trigger: section.querySelector(".att-audience-grid"), start: "top 82%", once: true },
+  });
+
+  gsap.to(section.querySelector(".att-audience-glow"), {
+    yPercent: -22,
+    ease: "none",
+    scrollTrigger: { trigger: section, start: "top bottom", end: "bottom top", scrub: 0.7 },
+  });
+}
+
 // ─────────────────────────────────────────────────────────────────────────────
 // FAQ Section entrance
 // ─────────────────────────────────────────────────────────────────────────────
@@ -637,7 +672,7 @@ function animateHomePage() {
 
     pageSections.forEach((section) => {
       // Skip the two custom sections - they have their own animations
-      if (section.classList.contains("att-why-section") || section.classList.contains("att-faq-section")) return;
+      if (section.classList.contains("att-why-section") || section.classList.contains("att-faq-section") || section.classList.contains("att-audience-section")) return;
 
       const headingItems = section.querySelectorAll("h2, h3, .section-heading, .motion-text");
       const cards = section.querySelectorAll(".motion-card, .review-card, .glass-card, .step-arrow, .project-grid, .why > div");
@@ -669,6 +704,7 @@ function animateHomePage() {
     // Why & FAQ custom animations
     animateWhySection();
     animateFaqSection();
+    animateAudienceSection();
     // Work & Process custom animations
     animateWorkSection();
     animateProcessSection();
@@ -818,91 +854,34 @@ onBeforeUnmount(() => {
       </ul>
     </div>
 
-    <section class="home-motion-section bg-white py-24">
-      <div class="container mx-auto px-6">
-        <div class="flex flex-col md:flex-row md:items-end justify-between mb-5 gap-2">
-          <div>
-            <div class="inline-block py-2 px-4 rounded bg-dark text-brand-700 text-[10px] font-black uppercase tracking-[0.3em] mb-2">
+    <section class="att-audience-section" aria-labelledby="audience-title">
+      <div class="att-audience-glow" aria-hidden="true"></div>
+      <div class="att-audience-inner">
+        <div class="att-audience-header">
+          <div class="att-audience-intro">
+            <span class="att-audience-kicker inline-block py-2 px-4 rounded bg-dark text-[10px] font-black uppercase tracking-[0.3em]">
               <span class="text-ly">Who We Work With</span>
-            </div>
-            <h2 class="font-bold text-dark mb-0" style="font-weight: 600">
-              Not Every Business Needs a Better Website. <span class="d-inline text-ly">The Right Businesses Need a Better Growth Partner.</span>
+            </span>
+            <h2 id="audience-title" class="att-audience-title font-display font-bold text-dark">
+              Not Every Business Needs a Better Website.<br />
+              <span class="text-ly">The Right Businesses Need a Better Growth Partner.</span>
             </h2>
           </div>
-          <p class="motion-text text-slate-800 max-w-sm mb-0">
-            We intentionally partner with a limited number of businesses each quarter so every client receives strategic attention-not just project management.
+          <p class="att-audience-copy">
+            We intentionally partner with a limited number of businesses each quarter, so every client gets the strategic attention to move forward with confidence.
           </p>
         </div>
-        <div class="grid md:grid-cols-3 gap-6">
-          <div class="motion-card group relative bg-dark p-8 rounded-2xl text-center border border-white/5 overflow-hidden transition-all duration-300 hover:scale-[1.02] hover:border-blue-400/30 hover:shadow-[0_30px_80px_-24px_rgba(96,165,250,0.35)]">
-            <div class="relative w-16 h-16 mx-auto mb-6">
-              <div class="absolute inset-0 rounded-full bg-blue-400 blur-xl opacity-30 group-hover:opacity-50 transition-opacity duration-300"></div>
-              <div class="relative w-16 h-16 rounded-full flex items-center justify-center bg-blue-400/10 border border-blue-400/30">
-                <span class="material-symbols-outlined text-3xl text-blue-400">terminal</span>
-              </div>
-            </div>
-            <h4 class="font-semibold mb-3 d-block text-lg text-blue-400" style="font-weight: 600;">SaaS &amp; Technology</h4>
-            <p class="text-slate-300 text-sm leading-relaxed">Founders and product teams who need a site that holds up in front of investors, not just visitors.</p>
-          </div>
-
-          <div class="motion-card group relative bg-dark p-8 rounded-2xl text-center border border-white/5 overflow-hidden transition-all duration-300 hover:scale-[1.02] hover:border-emerald-400/30 hover:shadow-[0_30px_80px_-24px_rgba(52,211,153,0.35)]">
-            <div class="relative w-16 h-16 mx-auto mb-6">
-              <div class="absolute inset-0 rounded-full bg-emerald-400 blur-xl opacity-30 group-hover:opacity-50 transition-opacity duration-300"></div>
-              <div class="relative w-16 h-16 rounded-full flex items-center justify-center bg-emerald-400/10 border border-emerald-400/30">
-                <span class="material-symbols-outlined text-3xl text-emerald-400">apartment</span>
-              </div>
-            </div>
-            <h4 class="font-semibold mb-3 d-block text-lg text-emerald-400" style="font-weight: 600;">Real Estate</h4>
-            <p class="text-slate-300 text-sm leading-relaxed">Firms where trust is decided before the first call - and the website is doing that work, or isn't.</p>
-          </div>
-
-          <div class="motion-card group relative bg-dark p-8 rounded-2xl text-center border border-white/5 overflow-hidden transition-all duration-300 hover:scale-[1.02] hover:border-rose-400/30 hover:shadow-[0_30px_80px_-24px_rgba(251,113,133,0.35)]">
-            <div class="relative w-16 h-16 mx-auto mb-6">
-              <div class="absolute inset-0 rounded-full bg-rose-400 blur-xl opacity-30 group-hover:opacity-50 transition-opacity duration-300"></div>
-              <div class="relative w-16 h-16 rounded-full flex items-center justify-center bg-rose-400/10 border border-rose-400/30">
-                <span class="material-symbols-outlined text-3xl text-rose-400">medical_services</span>
-              </div>
-            </div>
-            <h4 class="font-semibold mb-3 d-block text-lg text-rose-400" style="font-weight: 600;">Healthcare</h4>
-            <p class="text-slate-300 text-sm leading-relaxed">Providers and healthcare businesses that need to build patient trust digitally, without sacrificing compliance or clarity.</p>
-          </div>
-
-          <div class="motion-card group relative bg-dark p-8 rounded-2xl text-center border border-white/5 overflow-hidden transition-all duration-300 hover:scale-[1.02] hover:border-orange-400/30 hover:shadow-[0_30px_80px_-24px_rgba(251,146,60,0.35)]">
-            <div class="relative w-16 h-16 mx-auto mb-6">
-              <div class="absolute inset-0 rounded-full bg-orange-400 blur-xl opacity-30 group-hover:opacity-50 transition-opacity duration-300"></div>
-              <div class="relative w-16 h-16 rounded-full flex items-center justify-center bg-orange-400/10 border border-orange-400/30">
-                <span class="material-symbols-outlined text-3xl text-orange-400">precision_manufacturing</span>
-              </div>
-            </div>
-            <h4 class="font-semibold mb-3 d-block text-lg text-orange-400" style="font-weight: 600;">Manufacturing &amp; Industrial</h4>
-            <p class="text-slate-300 text-sm leading-relaxed">Established operators whose digital presence still undersells the scale and precision of what they actually deliver.</p>
-          </div>
-
-          <div class="motion-card group relative bg-dark p-8 rounded-2xl text-center border border-white/5 overflow-hidden transition-all duration-300 hover:scale-[1.02] hover:border-teal-400/30 hover:shadow-[0_30px_80px_-24px_rgba(45,212,191,0.35)]">
-            <div class="relative w-16 h-16 mx-auto mb-6">
-              <div class="absolute inset-0 rounded-full bg-teal-400 blur-xl opacity-30 group-hover:opacity-50 transition-opacity duration-300"></div>
-              <div class="relative w-16 h-16 rounded-full flex items-center justify-center bg-teal-400/10 border border-teal-400/30">
-                <span class="material-symbols-outlined text-3xl text-teal-400">handshake</span>
-              </div>
-            </div>
-            <h4 class="font-semibold mb-3 d-block text-lg text-teal-400" style="font-weight: 600;">Professional Services</h4>
-            <p class="text-slate-300 text-sm leading-relaxed">Advisory and consulting firms where credibility is the product, and the site is often the first proof of it.</p>
-          </div>
-
-          <div class="motion-card group relative bg-dark p-8 rounded-2xl text-center border border-white/5 overflow-hidden transition-all duration-300 hover:scale-[1.02] hover:border-violet-400/30 hover:shadow-[0_30px_80px_-24px_rgba(167,139,250,0.35)]">
-            <div class="relative w-16 h-16 mx-auto mb-6">
-              <div class="absolute inset-0 rounded-full bg-violet-400 blur-xl opacity-30 group-hover:opacity-50 transition-opacity duration-300"></div>
-              <div class="relative w-16 h-16 rounded-full flex items-center justify-center bg-violet-400/10 border border-violet-400/30">
-                <span class="material-symbols-outlined text-3xl text-violet-400">rocket_launch</span>
-              </div>
-            </div>
-            <h4 class="font-semibold mb-3 d-block text-lg text-violet-400" style="font-weight: 600;">Growth-Stage Startups</h4>
-            <p class="text-slate-300 text-sm leading-relaxed">Teams past the MVP stage, scaling fast, who need a site and brand that can keep pace with the round they're raising.</p>
-          </div>
+        <div class="att-audience-grid">
+          <article class="att-audience-card"><span class="att-audience-icon material-symbols-outlined" aria-hidden="true">terminal</span><div><h3>SaaS &amp; Technology</h3><p>For founders and product teams ready to turn a promising product into a clear, credible digital experience.</p></div></article>
+          <article class="att-audience-card"><span class="att-audience-icon material-symbols-outlined" aria-hidden="true">apartment</span><div><h3>Real Estate</h3><p>For property teams who need to earn trust early and guide every visitor toward the right next step.</p></div></article>
+          <article class="att-audience-card"><span class="att-audience-icon material-symbols-outlined" aria-hidden="true">medical_services</span><div><h3>Healthcare</h3><p>For providers who want to make care easier to understand, access, and trust online.</p></div></article>
+          <article class="att-audience-card"><span class="att-audience-icon material-symbols-outlined" aria-hidden="true">precision_manufacturing</span><div><h3>Manufacturing &amp; Industrial</h3><p>For established operators whose digital presence should reflect the quality and precision of their work.</p></div></article>
+          <article class="att-audience-card"><span class="att-audience-icon material-symbols-outlined" aria-hidden="true">handshake</span><div><h3>Professional Services</h3><p>For expert teams where credibility is essential and a website is often the first proof of it.</p></div></article>
+          <article class="att-audience-card"><span class="att-audience-icon material-symbols-outlined" aria-hidden="true">rocket_launch</span><div><h3>Growth-Stage Startups</h3><p>For teams scaling beyond the MVP and building a brand and platform that can keep pace.</p></div></article>
         </div>
+        <div class="att-audience-foot"><span>Built around your next stage</span><span>Strategy <i></i> Design <i></i> Growth</span></div>
       </div>
     </section>
-
     <section class="home-motion-section pb-24 px-4 bg-white">
       <div class="motion-card max-w-7xl mx-auto rounded-3xl p-12 border border-secondary shadow-sm relative overflow-hidden hover:scale-[1.02] transition-all">
         <div class="home-parallax absolute top-0 right-0 p-8 opacity-[0.06]">
@@ -1052,92 +1031,60 @@ onBeforeUnmount(() => {
       </div>
     </section>
 
-    <section class="home-motion-section py-24" id="solutions" style="background: linear-gradient(135deg, #0f0f0f 0%, #000000 100%)">
-      <div class="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8">
-        <div class="flex flex-col md:flex-row md:items-end justify-between mb-5 gap-2">
+    <section class="home-motion-section att-solutions-section" id="solutions">
+      <div class="att-solutions-inner">
+        <div class="att-solutions-heading">
           <div>
-            <div class="inline-block py-2 px-4 rounded bg-dark text-brand-700 text-[10px] font-black uppercase tracking-[0.3em] mb-2">
-              <span class="text-ly">HOW WE HELP</span>
-            </div>
-            <h2 class="font-bold text-light mb-0" style="font-weight: 600">
-              Choose the Right <span class="text-ly">Growth System</span> for Your Business
-            </h2>
+            <span class="att-solutions-kicker"><span></span> How we help</span>
+            <h2>Choose the right <span>growth system</span><br class="att-solutions-break" /> for your business.</h2>
           </div>
-          <p class="motion-text text-slate-100 max-w-sm mb-0">
-            We don't sell fixed packages. We build the right system based on your business model and growth goals.
-          </p>
+          <p>We do not sell fixed packages. We build the right system around your business model, your customers, and the growth you want next.</p>
         </div>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <div class="motion-card group relative bg-background-light p-8 rounded-xl border border-dark transition-all hover:scale-[1.02] hover:shadow-2xl flex flex-col h-full">
-            <div class="w-14 h-14 bg-blue-500/10 text-blue-500 rounded-lg flex items-center justify-center mb-6">
-              <span class="material-icons-outlined text-3xl">hub</span>
+
+        <div class="att-solutions-grid">
+          <article class="motion-card att-solution-card">
+            <div class="att-solution-card-top">
+              <span class="att-solution-icon material-symbols-outlined" aria-hidden="true">conversion_path</span>
+              <span class="att-solution-type">Lead generation</span>
             </div>
-            <h4 class="text-2xl font-bolder mb-3" style="font-weight: 600">
-              <a href="/lead-generation" class="text-white text-decoration-none">Generate More Qualified Leads</a>
-            </h4>
-            <p class="text-slate-300 mb-6 flex-grow">Perfect for businesses that rely on inbound enquiries.</p>
-            <ul class="space-y-3 mb-8 text-sm p-0">
-              <li class="flex items-center gap-2"><span class="material-icons-outlined text-green-500 text-sm">check_circle</span>Professional Services</li>
-              <li class="flex items-center gap-2"><span class="material-icons-outlined text-green-500 text-sm">check_circle</span>Healthcare</li>
-              <li class="flex items-center gap-2"><span class="material-icons-outlined text-green-500 text-sm">check_circle</span>Real Estate</li>
-              <li class="flex items-center gap-2"><span class="material-icons-outlined text-green-500 text-sm">check_circle</span>B2B Companies</li>
-            </ul>
-            <div class="pt-6 border-t border-slate-200">
-              <p class="text-xs uppercase font-bold text-slate-400 mb-2"><small>EXPECTED OUTCOME</small></p>
-              <h5 class="text-lg font-bold text-primary mb-2" style="font-weight: 600">A Predictable Lead Pipeline</h5>
-              <p class="text-xs text-slate-500 mb-0">Typical delivery: 4–8 weeks</p>
+            <h3><a href="/lead-generation">Generate more qualified leads</a></h3>
+            <p class="att-solution-desc">Turn your website into a dependable source of better-fit enquiries.</p>
+            <div class="att-solution-fit"><span>Built for</span><div><i>Professional services</i><i>Healthcare</i><i>Real estate</i><i>B2B teams</i></div></div>
+            <div class="att-solution-outcome"><span class="att-solution-label">The outcome</span><strong>A predictable lead pipeline</strong><span class="att-solution-time">Typical delivery · 4–8 weeks</span></div>
+            <a class="att-solution-link" href="/lead-generation">Explore lead generation <span class="material-symbols-outlined" aria-hidden="true">arrow_outward</span></a>
+          </article>
+
+          <article class="motion-card att-solution-card att-solution-card--featured">
+            <div class="att-solution-card-top">
+              <span class="att-solution-icon material-symbols-outlined" aria-hidden="true">shopping_bag</span>
+              <span class="att-solution-type">E-commerce growth</span>
             </div>
-          </div>
-          <div class="motion-card group relative bg-dark p-8 rounded-xl border border-dark transition-all shadow-2xl flex flex-col h-full">
-            <div class="w-14 h-14 bg-white/10 text-white rounded-lg flex items-center justify-center mb-6">
-              <span class="material-icons-outlined text-3xl">shopping_bag</span>
+            <h3>Grow online sales</h3>
+            <p class="att-solution-desc">Remove friction from your storefront so more of your traffic becomes revenue.</p>
+            <div class="att-solution-fit"><span>Built for</span><div><i>Shopify stores</i><i>D2C brands</i><i>Retail businesses</i></div></div>
+            <div class="att-solution-outcome"><span class="att-solution-label">The outcome</span><strong>More value from every visit</strong><span class="att-solution-time">Typical delivery · 3–6 weeks</span></div>
+            <a class="att-solution-link" href="https://wa.me/917975859061/?text=I%27d%20like%20to%20grow%20my%20online%20store.">Talk about your store <span class="material-symbols-outlined" aria-hidden="true">arrow_outward</span></a>
+          </article>
+
+          <article class="motion-card att-solution-card">
+            <div class="att-solution-card-top">
+              <span class="att-solution-icon material-symbols-outlined" aria-hidden="true">rocket_launch</span>
+              <span class="att-solution-type">Startup launch</span>
             </div>
-            <h4 class="text-2xl font-bold mb-3 text-white" style="font-weight: 600">Grow Online Sales</h4>
-            <p class="text-slate-300 mb-6 flex-grow">For Shopify and custom stores where the storefront is the limiting factor on revenue, not traffic.</p>
-            <ul class="space-y-3 mb-8 text-sm text-slate-200 font-medium p-0">
-              <li class="flex items-center gap-2"><span class="material-icons-outlined text-primary text-sm">check_circle</span>Shopify Stores</li>
-              <li class="flex items-center gap-2"><span class="material-icons-outlined text-primary text-sm">check_circle</span>D2C Brands</li>
-              <li class="flex items-center gap-2"><span class="material-icons-outlined text-primary text-sm">check_circle</span>Retail Businesses</li>
-            </ul>
-            <div class="pt-6 border-t border-white/20">
-              <p class="text-xs uppercase font-bold text-slate-400 mb-2"><small>EXPECTED OUTCOME</small></p>
-              <h5 class="text-lg font-bold text-white mb-2" style="font-weight: 600">Higher Return Per Visitor</h5>
-              <p class="text-xs text-slate-400 mb-0">Typical delivery: 3–6 weeks</p>
-            </div>
-          </div>
-          <div class="motion-card group relative bg-background-light p-8 rounded-xl border border-dark transition-all hover:scale-[1.02] hover:shadow-2xl flex flex-col h-full">
-            <div class="w-14 h-14 bg-purple-500/10 text-purple-500 rounded-lg flex items-center justify-center mb-6">
-              <span class="material-icons-outlined text-3xl">rocket_launch</span>
-            </div>
-            <h4 class="text-2xl font-bold mb-3" style="font-weight: 600">Launch With Confidence</h4>
-            <p class="text-slate-300 mb-6 flex-grow">For founders who need a product and site that hold up in front of investors and early customers alike.</p>
-            <ul class="space-y-3 mb-8 text-sm p-0">
-              <li class="flex items-center gap-2"><span class="material-icons-outlined text-green-500 text-sm">check_circle</span>SaaS</li>
-              <li class="flex items-center gap-2"><span class="material-icons-outlined text-green-500 text-sm">check_circle</span>Tech Startups</li>
-              <li class="flex items-center gap-2"><span class="material-icons-outlined text-green-500 text-sm">check_circle</span>Founders</li>
-              <li class="flex items-center gap-2"><span class="material-icons-outlined text-green-500 text-sm">check_circle</span>MVPs</li>
-            </ul>
-            <div class="pt-6 border-t border-slate-200">
-              <p class="text-xs uppercase font-bold text-slate-500 mb-2"><small>EXPECTED OUTCOME</small></p>
-              <h5 class="text-lg font-bold text-primary mb-2" style="font-weight: 600">A Foundation That Scales With You</h5>
-              <p class="text-xs text-slate-500 mb-0">Typical delivery: 6–10 weeks</p>
-            </div>
-          </div>
+            <h3>Launch with confidence</h3>
+            <p class="att-solution-desc">Bring your product, brand, and website together for a credible first impression.</p>
+            <div class="att-solution-fit"><span>Built for</span><div><i>SaaS</i><i>Technology teams</i><i>Founders</i><i>MVPs</i></div></div>
+            <div class="att-solution-outcome"><span class="att-solution-label">The outcome</span><strong>A foundation ready to scale</strong><span class="att-solution-time">Typical delivery · 6–10 weeks</span></div>
+            <a class="att-solution-link" href="https://wa.me/917975859061/?text=I%27d%20like%20to%20discuss%20a%20startup%20launch.">Plan your launch <span class="material-symbols-outlined" aria-hidden="true">arrow_outward</span></a>
+          </article>
         </div>
-        <div class="text-center mt-12 pt-10 border-t border-white/10 max-w-xl mx-auto">
-          <h6 class="mb-2" style="font-weight: 600">Not sure which one fits?</h6>
-          <p class="text-slate-300 text-sm mb-6">
-            Book a 20-minute strategy call. We'll recommend the right growth system based on your
-            business, goals, and budget.
-          </p>
-          <div class="d-flex justify-content-center gap-3">
-            <a class="amor-btn btn-fill-primary btn-large"
-              href="https://wa.me/917975859061/?text=I%27d%20like%20to%20book%20a%20free%20strategy%20call.">Book Free Strategy Call</a>
-          </div>
+
+        <div class="att-solutions-cta">
+          <div><span>Not sure which path fits?</span><p>Tell us where you want to go. We’ll help you choose the right next step.</p></div>
+          <a class="amor-btn btn-fill-primary btn-large" href="https://wa.me/917975859061/?text=I%27d%20like%20to%20book%20a%20free%20strategy%20call.">Book a free strategy call <span class="material-symbols-outlined" aria-hidden="true">arrow_forward</span></a>
         </div>
       </div>
     </section>
-
     <section class="py-40 bg-white" id="results">
       <div class="max-w-7xl mx-auto px-6 lg:px-10">
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-24 items-center">
@@ -1723,6 +1670,109 @@ onBeforeUnmount(() => {
   z-index: 0;
   pointer-events: none;
   opacity: 0.4;
+}
+
+.att-audience-section {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+  padding: clamp(5rem, 9vw, 8.5rem) 1.5rem clamp(8rem, 12vw, 11rem);
+  color: #22252a;
+  background: #fff;
+}
+
+.att-audience-glow {
+  position: absolute;
+  z-index: -1;
+  top: 5%;
+  right: -14rem;
+  width: 38rem;
+  height: 38rem;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(229, 197, 53, .09), rgba(229, 197, 53, 0) 68%);
+  pointer-events: none;
+}
+
+.att-audience-inner { max-width: 1320px; margin: 0 auto; }
+.att-audience-header { display: grid; grid-template-columns: minmax(0, 1fr) minmax(240px, .36fr); gap: clamp(2rem, 6vw, 6rem); align-items: end; margin-bottom: clamp(2.5rem, 5vw, 4.5rem); }
+.att-audience-kicker { margin-bottom: 1rem; }
+.att-audience-title { max-width: 900px; margin: 0; color: #202124; font-size: clamp(2rem, 4.5vw, 4.25rem); font-weight: 600; letter-spacing: -.045em; line-height: 1.08; }
+.att-audience-copy { max-width: 350px; margin: 0 0 .35rem auto; color: #555b64; font-size: clamp(.98rem, 1.2vw, 1.1rem); line-height: 1.8; }
+.att-audience-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); border-top: 1px solid #e4e5e2; }
+.att-audience-card { position: relative; display: grid; grid-template-columns: 3rem minmax(0, 1fr); gap: 1.15rem; align-items: start; min-height: 190px; padding: 2rem 1.5rem 1.8rem 0; border-bottom: 1px solid #e4e5e2; }
+.att-audience-card:not(:nth-child(3n + 1)) { padding-left: 1.5rem; border-left: 1px solid #e4e5e2; }
+.att-audience-icon { color: #5cb04e; font-size: 2rem; line-height: 1; }
+.att-audience-card h3 { margin: 0 0 .65rem; color: #202124; font-size: clamp(1.1rem, 1.55vw, 1.4rem); font-weight: 650; letter-spacing: -.025em; }
+.att-audience-card p { max-width: 330px; margin: 0; color: #60656d; font-size: .94rem; line-height: 1.65; }
+.att-audience-foot { display: flex; justify-content: space-between; gap: 1rem; padding-top: 1.3rem; color: #777b80; font-size: .72rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; }
+.att-audience-foot > span:last-child { display: inline-flex; align-items: center; gap: .7rem; }
+.att-audience-foot i { width: 3px; height: 3px; border-radius: 50%; background: var(--color-primaryY, #e5c535); }
+
+.att-solutions-section { position: relative; overflow: hidden; padding: clamp(5.5rem, 9vw, 8rem) 1.5rem; color: #fff; background: #101010; }
+.att-solutions-inner { position: relative; z-index: 1; max-width: 1280px; margin: 0 auto; }
+.att-solutions-heading { display: grid; grid-template-columns: minmax(0, 1fr) minmax(250px, .38fr); align-items: end; gap: clamp(2rem, 6vw, 6rem); margin-bottom: clamp(2.5rem, 5vw, 4rem); }
+.att-solutions-kicker { display: inline-flex; align-items: center; gap: .65rem; margin-bottom: 1rem; color: #d8d8d8; font-size: .7rem; font-weight: 800; letter-spacing: .2em; text-transform: uppercase; }
+.att-solutions-kicker > span { width: 1.7rem; height: 2px; background: var(--color-primaryY, #e5c535); }
+.att-solutions-heading h2 { max-width: 850px; margin: 0; color: #fff; font-family: var(--font-secondary, sans-serif); font-size: clamp(2.4rem, 5.2vw, 4.6rem); font-weight: 600; letter-spacing: -.05em; line-height: 1.06; }
+.att-solutions-heading h2 > span { color: var(--color-primaryY, #e5c535); }
+.att-solutions-heading > p { max-width: 360px; margin: 0 0 .4rem auto; color: #b7b7b7; font-size: 1rem; line-height: 1.8; }
+.att-solutions-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1.1rem; perspective: 1000px; }
+.att-solution-card { position: relative; display: flex; flex-direction: column; min-height: 450px; padding: clamp(1.5rem, 2.5vw, 2.1rem); border: 1px solid #333; border-radius: 1.15rem; background: linear-gradient(155deg, #1b1b1b 0%, #151515 100%); transition: transform .35s ease, border-color .35s ease, background .35s ease, box-shadow .35s ease; }
+.att-solution-card::before { position: absolute; top: -1px; right: 1.5rem; left: 1.5rem; height: 2px; border-radius: 0 0 3px 3px; background: linear-gradient(90deg, transparent, var(--color-primaryY, #e5c535), transparent); content: ""; opacity: 0; transition: opacity .3s ease; }
+.att-solution-card:hover, .att-solution-card--featured { transform: translateY(-5px); border-color: rgba(229, 197, 53, .45); box-shadow: 0 24px 60px rgba(0, 0, 0, .2); }
+.att-solution-card:hover::before, .att-solution-card--featured::before { opacity: 1; }
+.att-solution-card-top { display: flex; align-items: center; justify-content: space-between; gap: 1rem; margin-bottom: 2rem; }
+.att-solution-icon { display: grid; width: 3.35rem; height: 3.35rem; place-items: center; border: 1px solid rgba(229, 197, 53, .32); border-radius: 1rem; background: rgba(229, 197, 53, .09); color: var(--color-primaryY, #e5c535); font-size: 1.7rem; }
+.att-solution-type { color: #a9a9a9; font-size: .68rem; font-weight: 750; letter-spacing: .15em; text-transform: uppercase; }
+.att-solution-card h3 { margin: 0 0 .8rem; color: #fff; font-size: clamp(1.45rem, 2vw, 1.85rem); font-weight: 650; letter-spacing: -.035em; line-height: 1.2; }
+.att-solution-card h3 a { color: inherit; text-decoration: none; }
+.att-solution-card h3 a:hover { color: var(--color-primaryY, #e5c535); }
+.att-solution-desc { min-height: 3.3rem; margin: 0 0 1.65rem; color: #b8b8b8; font-size: .94rem; line-height: 1.7; }
+.att-solution-fit { margin-bottom: 1.6rem; }
+.att-solution-fit > span, .att-solution-label { display: block; margin-bottom: .7rem; color: #929292; font-size: .66rem; font-weight: 800; letter-spacing: .16em; text-transform: uppercase; }
+.att-solution-fit > div { display: flex; flex-wrap: wrap; gap: .45rem; }
+.att-solution-fit i { padding: .4rem .65rem; border: 1px solid #373737; border-radius: 999px; color: #d2d2d2; font-size: .72rem; font-style: normal; line-height: 1; }
+.att-solution-outcome { margin-top: auto; padding: 1.25rem 0 1.15rem; border-top: 1px solid #373737; }
+.att-solution-outcome strong { display: block; margin-bottom: .35rem; color: #fff; font-size: 1.05rem; font-weight: 650; }
+.att-solution-time { color: #939393; font-size: .78rem; }
+.att-solution-link { display: inline-flex; align-items: center; gap: .45rem; align-self: flex-start; color: #e5c535; font-size: .83rem; font-weight: 700; text-decoration: none; }
+.att-solution-link .material-symbols-outlined { font-size: 1rem; transition: transform .25s ease; }
+.att-solution-link:hover { color: #f2d84f; }
+.att-solution-link:hover .material-symbols-outlined { transform: translate(3px, -3px); }
+.att-solutions-cta { display: flex; align-items: center; justify-content: space-between; gap: 2rem; margin-top: 1.5rem; padding: 1.75rem 2rem; border: 1px solid #303030; border-radius: 1rem; background: #171717; }
+.att-solutions-cta > div > span { color: #fff; font-size: 1.1rem; font-weight: 650; }
+.att-solutions-cta p { margin: .35rem 0 0; color: #aaa; font-size: .88rem; }
+.att-solutions-cta .amor-btn { display: inline-flex; align-items: center; gap: .5rem; white-space: nowrap; text-decoration: none; }
+.att-solutions-cta .material-symbols-outlined { font-size: 1.1rem; }
+
+@media (max-width: 900px) {
+  .att-solutions-heading { grid-template-columns: 1fr; gap: 1.25rem; }
+  .att-solutions-heading > p { max-width: 560px; margin-left: 0; }
+  .att-solutions-grid { grid-template-columns: 1fr; }
+  .att-solution-card { min-height: 0; }
+}
+@media (max-width: 600px) {
+  .att-solutions-section { padding-right: 1.15rem; padding-left: 1.15rem; }
+  .att-solutions-break { display: none; }
+  .att-solutions-cta { align-items: flex-start; flex-direction: column; padding: 1.4rem; }
+  .att-solutions-cta .amor-btn { white-space: normal; }
+}
+
+@media (max-width: 900px) {
+  .att-audience-header { grid-template-columns: 1fr; gap: 1.5rem; }
+  .att-audience-copy { max-width: 560px; margin-left: 0; }
+  .att-audience-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .att-audience-card:not(:nth-child(3n + 1)) { padding-left: 0; border-left: 0; }
+  .att-audience-card:nth-child(2n) { padding-left: 1.5rem; border-left: 1px solid #e4e5e2; }
+}
+
+@media (max-width: 600px) {
+  .att-audience-section { padding-right: 1.15rem; padding-left: 1.15rem; }
+  .att-audience-title br { display: none; }
+  .att-audience-grid { grid-template-columns: 1fr; }
+  .att-audience-card, .att-audience-card:not(:nth-child(3n + 1)), .att-audience-card:nth-child(2n) { min-height: 0; grid-template-columns: 2.5rem minmax(0, 1fr); gap: 1rem; padding: 1.55rem 1.2rem; border-left: 0; }
+  .att-audience-icon { font-size: 1.7rem; }
+  .att-audience-foot { flex-direction: column; gap: .7rem; }
 }
 
 // ── Main two-column layout ─────────────────────────────────────────
