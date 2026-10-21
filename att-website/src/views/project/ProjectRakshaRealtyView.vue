@@ -8,45 +8,65 @@ import CaseStudyWorkWithUs from "@/components/CaseStudyWorkWithUs.vue";
 gsap.registerPlugin(ScrollTrigger);
 
 const heroMockup = new URL("../../assets/img/project/c12/project-rr.png", import.meta.url).href;
-const clientLogo = new URL("../../assets/img/project/c12/logo.png", import.meta.url).href;
+const clientLogo = new URL("../../assets/img/project/c12/rr-logo-Horizontal.svg", import.meta.url).href;
 const tabMockup = new URL("../../assets/img/project/c12/project-rr-tab.png", import.meta.url).href;
 const compareBefore = new URL("../../assets/img/project/c12/before.png", import.meta.url).href;
 const compareAfter = new URL("../../assets/img/project/c12/after.png", import.meta.url).href;
+const brandAssets = [
+  { src: new URL("../../assets/img/project/c12/rr-logo-Horizontal.svg", import.meta.url).href, alt: "Raksha Realty horizontal logo", title: "Primary horizontal logo", kind: "Logo system" },
+  { src: new URL("../../assets/img/project/c12/rr-logo-Stacked.svg", import.meta.url).href, alt: "Raksha Realty stacked logo", title: "Stacked logo", kind: "Logo system" },
+  { src: new URL("../../assets/img/project/c12/rr-logo-tagline.svg", import.meta.url).href, alt: "Raksha Realty logo with tagline", title: "Logo with tagline", kind: "Logo system" },
+  { src: new URL("../../assets/img/project/c12/rr-logo-icon.svg", import.meta.url).href, alt: "Raksha Realty brand symbol", title: "Brand symbol", kind: "Brand mark" },
+  { src: new URL("../../assets/img/project/c12/id-front.svg", import.meta.url).href, alt: "Front of Raksha Realty identity card", title: "Identity card · front", kind: "Identity collateral" },
+  { src: new URL("../../assets/img/project/c12/id-back.svg", import.meta.url).href, alt: "Back of Raksha Realty identity card", title: "Identity card · back", kind: "Identity collateral" },
+  { src: new URL("../../assets/img/project/c12/vc-front.svg", import.meta.url).href, alt: "Front of Raksha Realty visiting card", title: "Visiting card · front", kind: "Print collateral" },
+  { src: new URL("../../assets/img/project/c12/vc-info.svg", import.meta.url).href, alt: "Information side of Raksha Realty visiting card", title: "Visiting card · information", kind: "Print collateral" },
+  { src: new URL("../../assets/img/project/c12/ec.svg", import.meta.url).href, alt: "Raksha Realty email signature design", title: "Email signature", kind: "Digital collateral" },
+  { src: new URL("../../assets/img/project/c12/id-tag.svg", import.meta.url).href, alt: "Raksha Realty identity tag artwork", title: "Identity tag", kind: "Brand detail" },
+];
+const logoAssets = brandAssets.slice(0, 4);
+const printAssets = brandAssets.slice(4, 8);
+const supportingAssets = brandAssets.slice(8);
+const brandPalette = [
+  { name: "Primary", color: "#0A2342" },
+  { name: "Accent", color: "#C49A5A" },
+  { name: "Neutral", color: "#5B5D63" },
+];
 
 const metrics = [
-  { value: "3", label: "Distinct advisory tracks - Developers, Buyers & Investors" },
-  { value: "100%", label: "Mobile-responsive advisory experience" },
-  { value: "GA", label: "Analytics tracking live from launch day" },
-  { value: "RERA", label: "Registration & credentials front and centre" },
-  { value: "Figma", label: "Custom design system built for the brand" },
-  { value: "Live", label: "raksharealty.in shipped end to end" },
+  { value: "3", label: "Logo arrangements for flexible use" },
+  { value: "2", label: "Identity card sides designed" },
+  { value: "2", label: "Visiting card sides designed" },
+  { value: "01", label: "Distinctive brand symbol" },
+  { value: "1", label: "Email signature design" },
+  { value: "10", label: "Brand assets presented" },
 ];
 
 const timeline = [
-  { week: "01", phase: "Discovery & Positioning Audit", desc: "Reviewed the existing site to see where it still read like a typical brokerage instead of an independent, zero-commission advisory." },
-  { week: "02", phase: "Identity & Website UX", desc: "Designed a credibility-first layout in Figma with distinct journeys for developers, buyers, and investors." },
-  { week: "03", phase: "Frontend Development", desc: "Built the site to match the design system exactly, tuned for fast loading on the mobile connections most visitors use." },
-  { week: "04", phase: "Analytics Setup", desc: "Instrumented Google Analytics so every enquiry can be traced back to its source and advisory track." },
-  { week: "05", phase: "Pitch Deck Design", desc: "Delivered a matching pitch deck for developer and investor conversations, consistent with the website's identity." },
-  { week: "06", phase: "Launch", desc: "Shipped raksharealty.in live, ready to support all three advisory tracks from day one." },
+  { week: "01", phase: "Brand foundation", desc: "Ground the identity in Raksha Realty’s independent advisory model and its promise of clarity before commitment." },
+  { week: "02", phase: "Logo family", desc: "Build a flexible family of horizontal, stacked, and tagline lockups for use across different formats." },
+  { week: "03", phase: "Brand mark", desc: "Develop a distinct symbol to complement the wordmark and support compact applications." },
+  { week: "04", phase: "Identity collateral", desc: "Apply the visual system to both sides of the identity card and visiting card." },
+  { week: "05", phase: "Digital collateral", desc: "Extend the same identity into the email signature and supporting brand details." },
+  { week: "06", phase: "Consistent application", desc: "Bring the identity together across the digital presence and the client-facing brand materials." },
 ];
 
 const challenges = [
-  { num: "01", icon: "balance", title: "Advisory positioning got lost", desc: "An independent, zero-commission advisory is a different model from a typical broker, but the existing site didn't make that distinction clear at a glance." },
-  { num: "02", icon: "call_split", title: "One website, three audiences", desc: "Developers, buyers, and investors each needed a distinct path in, without turning the homepage into three unrelated brochures." },
-  { num: "03", icon: "search_off", title: "No visibility into what was working", desc: "Without analytics in place, there was no way to see which audience segment was engaging, or where enquiries were actually coming from." },
-  { num: "04", icon: "slideshow", title: "Weak developer-facing materials", desc: "Presenting the advisory's track record to developers and investors relied on ad-hoc documents rather than a consistent, professional pitch deck." },
-  { num: "05", icon: "devices", title: "Mobile experience gap", desc: "Most visitors were arriving on mobile, and the existing site wasn't built with that reality in mind." },
-  { num: "06", icon: "diversity_3", title: "No clear differentiation", desc: "Amid commission-driven brokers and property portals, nothing in the brand signalled why this was an independent, structured advisory instead." },
+  { num: "01", icon: "balance", title: "Make independence visible", desc: "The identity needed to signal an advisory role clearly in a category often associated with inventory-led selling." },
+  { num: "02", icon: "shield", title: "Give the name meaning", desc: "Raksha means protection. The brand needed to connect that name to the firm’s promise of avoiding preventable real estate mistakes." },
+  { num: "03", icon: "grid_view", title: "Create a flexible logo family", desc: "A single lockup would not suit every format, so the identity includes horizontal, stacked, and tagline versions." },
+  { num: "04", icon: "badge", title: "Carry trust into client materials", desc: "Identity cards and visiting cards needed to feel professional and consistent with the advisory’s positioning." },
+  { num: "05", icon: "devices", title: "Extend the system digitally", desc: "The same brand needed to work in everyday digital communication, including the email signature." },
+  { num: "06", icon: "palette", title: "Keep each touchpoint cohesive", desc: "The mark, logo, and collateral needed to read as one considered identity across print and digital use." },
 ];
 
 const outcomes = [
-  { icon: "verified", title: "Clearer independent positioning", desc: "The site now signals zero-commission, structured advisory before a single word is read." },
-  { icon: "devices", title: "Consistent across every device", desc: "The mobile-first build means the experience holds up whether a visitor arrives on desktop or on the go." },
-  { icon: "monitoring", title: "Measurable from day one", desc: "GA tracking shows exactly which advisory track - developer, buyer, or investor - is driving enquiries." },
-  { icon: "slideshow", title: "Investor & developer-ready storytelling", desc: "A matching pitch deck gives the team a professional way to present the advisory's track record." },
-  { icon: "call_split", title: "Three distinct advisory journeys", desc: "Developers, buyers, and investors each get a path built around their exact decision, not a generic funnel." },
-  { icon: "forum", title: "A reference for advisory branding", desc: "Raksha Realty is now a live example of how an independent advisory can look as considered as the guidance it gives.", highlight: true },
+  { icon: "verified", title: "Independent positioning", desc: "A considered identity supports Raksha Realty’s advisory-first, no-commission model." },
+  { icon: "view_week", title: "Flexible logo system", desc: "Horizontal, stacked, and tagline lockups give the brand options for different placements." },
+  { icon: "shield", title: "A meaningful brand idea", desc: "Protection is expressed as clarity and guidance before important decisions are made." },
+  { icon: "badge", title: "Professional identity collateral", desc: "Identity and visiting cards extend the visual system into client-facing materials." },
+  { icon: "alternate_email", title: "Digital brand consistency", desc: "An email signature brings the same visual identity into day-to-day correspondence." },
+  { icon: "palette", title: "A cohesive set of touchpoints", desc: "Brand marks and collateral work together as one recognizable identity.", highlight: true },
 ];
 
 const getCaseIcon = (label = "") => {
@@ -127,8 +147,8 @@ onBeforeUnmount(() => ctx?.revert());
       </nav>
 
       <div class="cs-hero-eyebrow">
-        <span class="eyebrow-pill">Real Estate</span>
-        Real Estate Advisory for Developers, Buyers &amp; Investors
+          <span class="eyebrow-pill">Brand Identity</span>
+        Independent Real Estate Advisory · Coimbatore
       </div>
 
       <h1 class="cs-hero-title">
@@ -137,21 +157,20 @@ onBeforeUnmount(() => ctx?.revert());
 
       <div class="cs-hero-split">
         <p class="cs-hero-sub">
-          Raksha Realty needed a website that matched its positioning: strategic real estate
-          advisory for developers, buyers, and investors - built on structured thinking, not
-          market noise. We redesigned the site end to end, plus a pitch deck and analytics to
-          back it up.
+          Raksha Realty needed a brand that could express its promise of protection through
+          clarity. We shaped a distinctive identity and applied it across the advisory’s
+          digital presence and everyday client touchpoints.
         </p>
 
         <div class="cs-hero-stats">
           <div class="cs-hero-stat">
-            <span class="cs-hero-stat-val">5</span>
-            <span class="cs-hero-stat-label">Deliverables</span>
+            <span class="cs-hero-stat-val">10</span>
+            <span class="cs-hero-stat-label">Identity assets</span>
           </div>
           <div class="cs-hero-stat-divider"></div>
           <div class="cs-hero-stat">
-            <span class="cs-hero-stat-val">100%</span>
-            <span class="cs-hero-stat-label">Mobile-ready</span>
+            <span class="cs-hero-stat-val">3</span>
+            <span class="cs-hero-stat-label">Logo arrangements</span>
           </div>
           <div class="cs-hero-stat-divider"></div>
           <div class="cs-hero-stat">
@@ -183,11 +202,11 @@ onBeforeUnmount(() => ctx?.revert());
           Live &amp; Taking Enquiries
         </div>
         <div class="cs-hero-mockup-tags">
-          <span>Website Redesign</span>
-          <span>UI/UX Design</span>
-          <span>Custom Development</span>
-          <span>Pitch Deck</span>
-          <span>Google Analytics</span>
+          <span>Brand Identity</span>
+          <span>Logo System</span>
+          <span>Identity Cards</span>
+          <span>Visiting Cards</span>
+          <span>Digital Collateral</span>
         </div>
       </div>
     </div>
@@ -206,7 +225,7 @@ onBeforeUnmount(() => ctx?.revert());
       </div>
       <div class="cs-meta-item">
         <span class="cs-meta-label">Engagement</span>
-        <span class="cs-meta-value">Website Redesign &middot; UI/UX &middot; Custom Development &middot; Pitch Deck &middot; GA</span>
+        <span class="cs-meta-value">Brand Identity &middot; Logo System &middot; Identity &amp; Visiting Cards &middot; Digital Collateral</span>
       </div>
       <div class="cs-meta-item">
         <span class="cs-meta-label">Live Site</span>
@@ -236,10 +255,9 @@ onBeforeUnmount(() => ctx?.revert());
             advice instead of sales pressure.
           </p>
           <p>
-            Before this project, the website didn't reflect that independence. It needed to speak
-            to three very different audiences - developers, buyers, and investors - with the same
-            clarity the advisory itself promises, without leaning on the sales tropes of a typical
-            real estate brokerage.
+            The identity brings that independence into view and gives the firm a consistent way
+            to speak to three different audiences - developers, buyers, and investors - without
+            leaning on the sales cues of a typical real estate brokerage.
           </p>
 
           <div class="cs-fact-list">
@@ -282,7 +300,7 @@ onBeforeUnmount(() => ctx?.revert());
         <span class="material-symbols-outlined cs-ghost-num cs-ghost-num--accent" aria-hidden="true">target</span>
         <div>
           <div class="cs-eyebrow cs-eyebrow--accent">Challenge</div>
-          <h2 class="cs-h2 cs-h2--light">Why the site needed a rebuild</h2>
+          <h2 class="cs-h2 cs-h2--light">What the identity needed to communicate</h2>
         </div>
       </div>
 
@@ -306,22 +324,22 @@ onBeforeUnmount(() => ctx?.revert());
         <span class="material-symbols-outlined cs-ghost-num" aria-hidden="true">lightbulb</span>
         <div>
           <div class="cs-eyebrow">Strategy</div>
-          <h2 class="cs-h2">Structured thinking, not market noise</h2>
+          <h2 class="cs-h2">A brand built around clarity and protection</h2>
         </div>
       </div>
 
       <div class="cs-strategy-grid">
         <div class="cs-strategy-copy cs-reveal">
           <p class="cs-lead-text">
-            An independent advisory has to look like one. The brief wasn't to look trendy - it
-            was to look neutral, considered, and different from every commission-driven broker
-            competing for the same attention.
+            “Raksha” means protection. The identity translates that idea into a confident,
+            considered presence for an independent real estate advisory: clear in its purpose,
+            composed in its tone, and consistent wherever clients meet the brand.
           </p>
 
           <div class="cs-pillar" v-for="(p, i) in [
-            { t: 'A credibility-first identity', d: 'Clean, editorial design and confident typography that reads as independent expertise, not a typical real estate sales pitch.' },
-            { t: 'Three clear entry points', d: 'Distinct paths for Developers, Buyers, and Investors, so each audience finds guidance built around their exact situation.' },
-            { t: 'A measurable foundation', d: 'Analytics wired in from launch, so every enquiry can be traced back to which advisory track brought it in.' },
+            { t: 'Protection through clarity', d: 'A brand idea grounded in Raksha Realty’s belief that structured guidance helps people avoid preventable mistakes.' },
+            { t: 'Independent by design', d: 'A composed visual language supports the firm’s no-commission, advisory-first model across developer, buyer, and investor audiences.' },
+            { t: 'One identity, many touchpoints', d: 'Flexible logo arrangements and a consistent graphic system carry the brand across digital and printed materials.' },
           ]" :key="p.t">
             <span class="material-symbols-outlined cs-pillar-num" aria-hidden="true">{{ getCaseIcon(p.t) }}</span>
             <div>
@@ -333,16 +351,15 @@ onBeforeUnmount(() => ctx?.revert());
 
         <div class="cs-insight cs-reveal">
           <span class="material-symbols-outlined cs-insight-icon">lightbulb</span>
-          <h4>The insight that shaped everything</h4>
+          <h4>Clarity before commitment</h4>
           <p>
-            Buyers and developers dealing with real estate professionals are trained to expect
-            a pitch. For an advisory built on zero-commission independence, a site that still
-            feels like every other brokerage undercuts the whole premise.
+            Real estate decisions can be difficult to reverse. Raksha Realty’s role is to help
+            developers, buyers, and investors think clearly before they commit.
           </p>
           <div class="cs-insight-divider"></div>
           <p class="cs-insight-action">
-            So we designed for restraint - structured layouts, confident typography, and copy
-            that reads like counsel, not a sales script.
+            The visual identity carries that principle through a distinctive logo system and
+            practical collateral that feels consistent at every interaction.
           </p>
         </div>
       </div>
@@ -355,8 +372,66 @@ onBeforeUnmount(() => ctx?.revert());
       <div class="cs-section-head cs-reveal">
         <span class="material-symbols-outlined cs-ghost-num" aria-hidden="true">conversion_path</span>
         <div>
-          <div class="cs-eyebrow">Process</div>
-          <h2 class="cs-h2">Audit to launch</h2>
+          <div class="cs-eyebrow">Brand System</div>
+          <h2 class="cs-h2">Identity design and application</h2>
+        </div>
+      </div>
+
+      <div class="cs-brand-block cs-reveal">
+        <div class="cs-brand-intro">
+          <div class="cs-eyebrow">Identity Collateral</div>
+          <h3>One identity, from first impression to every detail</h3>
+          <p>The logo family and collateral created for Raksha Realty, shown across the touchpoints supplied with the project.</p>
+        </div>
+        <div class="cs-brand-feature cs-reveal">
+          <div class="cs-brand-feature-copy">
+            <span class="cs-brand-feature-kicker">The Raksha Realty identity</span>
+            <h3>Protection through clarity.</h3>
+            <p>An independent advisory identity, built to feel considered across every client interaction.</p>
+            <div class="cs-brand-palette" aria-label="Brand color palette">
+              <div v-for="swatch in brandPalette" :key="swatch.name" class="cs-brand-swatch">
+                <span :style="{ backgroundColor: swatch.color }" aria-hidden="true"></span>
+                <small>{{ swatch.name }} · {{ swatch.color }}</small>
+              </div>
+            </div>
+          </div>
+          <div class="cs-brand-primary-logo">
+            <img :src="logoAssets[0].src" :alt="logoAssets[0].alt" loading="lazy" />
+          </div>
+        </div>
+
+        <div class="cs-brand-group">
+          <div class="cs-brand-group-head"><div><span class="cs-eyebrow">01 · Logo system</span><h3>One mark, three ways to use it</h3></div><p>Alternate lockups and a standalone symbol keep the identity flexible.</p></div>
+          <div class="cs-brand-grid cs-brand-grid--logos cs-stagger">
+            <article v-for="asset in logoAssets.slice(1)" :key="asset.title" class="cs-brand-card">
+              <div class="cs-brand-art"><img :src="asset.src" :alt="asset.alt" loading="lazy" /></div>
+              <div class="cs-brand-caption"><div><span>{{ asset.kind }}</span><h4>{{ asset.title }}</h4></div></div>
+            </article>
+          </div>
+        </div>
+
+        <div class="cs-brand-group">
+          <div class="cs-brand-group-head"><div><span class="cs-eyebrow">02 · Printed identity</span><h3>Designed for real-world introductions</h3></div><p>Identity and visiting cards carry the same visual language into face-to-face client moments.</p></div>
+          <div class="cs-brand-grid cs-brand-grid--print cs-stagger">
+            <article v-for="asset in printAssets" :key="asset.title" class="cs-brand-card">
+              <div class="cs-brand-art" :class="{ 'cs-brand-art--portrait': /Identity/.test(asset.title) }"><img :src="asset.src" :alt="asset.alt" loading="lazy" /></div>
+              <div class="cs-brand-caption"><div><span>{{ asset.kind }}</span><h4>{{ asset.title }}</h4></div></div>
+            </article>
+          </div>
+        </div>
+
+        <div class="cs-brand-group cs-brand-group--supporting">
+          <div class="cs-brand-group-head"><div><span class="cs-eyebrow">03 · Everyday brand details</span><h3>Consistent in digital communication</h3></div><p>Supporting artwork extends the identity into day-to-day use.</p></div>
+          <div class="cs-brand-grid cs-brand-grid--supporting cs-stagger">
+            <article v-for="asset in supportingAssets" :key="asset.title" class="cs-brand-card">
+              <div class="cs-brand-art cs-brand-art--wide"><img :src="asset.src" :alt="asset.alt" loading="lazy" /></div>
+              <div class="cs-brand-caption"><div><span>{{ asset.kind }}</span><h4>{{ asset.title }}</h4></div></div>
+            </article>
+          </div>
+        </div>
+        <div class="cs-brand-principle">
+          <span class="material-symbols-outlined" aria-hidden="true">shield</span>
+          <p><strong>Raksha means protection.</strong> The brand stands for protection from avoidable mistakes through independent advice, structured thinking, and clarity before commitment.</p>
         </div>
       </div>
 
@@ -383,8 +458,8 @@ onBeforeUnmount(() => ctx?.revert());
         <span class="material-symbols-outlined cs-ghost-num" aria-hidden="true">web</span>
         <div>
           <div class="cs-eyebrow">Transformation</div>
-          <h2 class="cs-h2">The redesign, side by side</h2>
-          <p class="cs-section-sub">Drag to compare the original site against the redesigned brand and website.</p>
+          <h2 class="cs-h2">The identity in its digital setting</h2>
+          <p class="cs-section-sub">The website carries the same Raksha Realty identity into the brand’s primary digital touchpoint.</p>
         </div>
       </div>
 
@@ -427,8 +502,8 @@ onBeforeUnmount(() => ctx?.revert());
         <span class="material-symbols-outlined cs-ghost-num cs-ghost-num--accent" aria-hidden="true">settings</span>
         <div>
           <div class="cs-eyebrow cs-eyebrow--accent">Snapshot</div>
-          <h2 class="cs-h2 cs-h2--light">What the redesign delivers</h2>
-          <p class="cs-section-sub cs-section-sub--light">The brand and structural wins that came out of the engagement.</p>
+          <h2 class="cs-h2 cs-h2--light">The identity at a glance</h2>
+          <p class="cs-section-sub cs-section-sub--light">A flexible logo system and a consistent set of client-facing brand touchpoints.</p>
         </div>
       </div>
 
@@ -480,20 +555,20 @@ onBeforeUnmount(() => ctx?.revert());
   <CaseStudyWorkWithUs
     project="Raksha Realty"
     industry="Real Estate Advisory"
-    accent="#226090"
-    result="A credibility-first website and pitch deck that let Raksha Realty's independent, zero-commission advisory speak for itself online."
-    :services="['Website Redesign', 'UI/UX Design', 'Custom Development', 'Pitch Deck', 'Google Analytics']"
-    :proof="['Independent Advisory Positioning', 'Three-Track Website Structure', 'Analytics-Backed Visibility']"
+    accent="#0A2342"
+    result="A distinctive identity system that expresses Raksha Realty's independent advisory model across digital and printed client touchpoints."
+    :services="['Brand Identity', 'Logo System', 'Identity Cards', 'Visiting Cards', 'Digital Collateral']"
+    :proof="['Protection Through Clarity', 'Flexible Logo Arrangements', 'Consistent Brand Touchpoints']"
   />
 </template>
 
 <style lang="scss" scoped>
 .cs-hero, .cs-section, .cs-metrics-strip, .cs-meta-strip {
-  --accent: #468FC7;
-  --accent-deep: #226090;
-  --gold: #facc15;
-  --midnight: #2e1c05;
-  --frost: #f9f7f5;
+  --accent: #0A2342;
+  --accent-deep: #04132A;
+  --gold: #C49A5A;
+  --midnight: #04132A;
+  --frost: #F3F4F6;
 }
 
 // ─── Testimonial ─────────────────────────────────────────────────────
@@ -581,7 +656,7 @@ onBeforeUnmount(() => ctx?.revert());
   &--1 {
     top: -180px; right: -120px;
     width: 560px; height: 560px;
-    background: radial-gradient(circle, rgba(70, 143, 199,0.22), transparent 70%);
+    background: radial-gradient(circle, rgba(10, 35, 66,0.22), transparent 70%);
   }
   &--2 {
     bottom: -200px; left: -160px;
@@ -627,8 +702,8 @@ onBeforeUnmount(() => ctx?.revert());
   align-items: center;
   padding: 0.3rem 0.75rem;
   border-radius: 999px;
-  background: rgba(70, 143, 199,0.14);
-  border: 1px solid rgba(70, 143, 199,0.35);
+  background: rgba(10, 35, 66,0.14);
+  border: 1px solid rgba(10, 35, 66,0.35);
   color: var(--accent);
   font-size: 0.72rem;
   font-weight: 800;
@@ -734,7 +809,7 @@ onBeforeUnmount(() => ctx?.revert());
 
   &:hover {
     transform: translateY(-2px);
-    box-shadow: 0 16px 36px rgba(70, 143, 199,0.32);
+    box-shadow: 0 16px 36px rgba(10, 35, 66,0.32);
     color: #fff;
   }
 }
@@ -767,9 +842,9 @@ onBeforeUnmount(() => ctx?.revert());
 .cs-hero-mockup {
   border-radius: 20px 20px 0 0;
   overflow: hidden;
-  border: 1px solid rgba(70, 143, 199,0.25);
+  border: 1px solid rgba(10, 35, 66,0.25);
   border-bottom: none;
-  box-shadow: 0 -20px 100px rgba(70, 143, 199,0.08), 0 40px 120px rgba(0,0,0,0.6);
+  box-shadow: 0 -20px 100px rgba(10, 35, 66,0.08), 0 40px 120px rgba(0,0,0,0.6);
 
   img { width: 100%; display: block; }
 }
@@ -782,7 +857,7 @@ onBeforeUnmount(() => ctx?.revert());
   align-items: center;
   gap: 0.5rem;
   background: rgba(0,0,0,0.7);
-  border: 1px solid rgba(70, 143, 199,0.4);
+  border: 1px solid rgba(10, 35, 66,0.4);
   backdrop-filter: blur(12px);
   border-radius: 999px;
   padding: 0.5rem 1rem;
@@ -796,8 +871,8 @@ onBeforeUnmount(() => ctx?.revert());
 .float-dot {
   width: 7px; height: 7px;
   border-radius: 50%;
-  background: #226090;
-  box-shadow: 0 0 10px #226090;
+  background: #04132A;
+  box-shadow: 0 0 10px #04132A;
   animation: pulse-dot 1.5s ease infinite;
 }
 
@@ -827,7 +902,7 @@ onBeforeUnmount(() => ctx?.revert());
 
 // ─── Meta strip ─────────────────────────────────────────────────────
 .cs-meta-strip {
-  background: #120c04;
+  background: #04132A;
   border-bottom: 1px solid rgba(255,255,255,0.06);
   padding: 2rem 0;
 }
@@ -871,7 +946,7 @@ onBeforeUnmount(() => ctx?.revert());
   padding: clamp(4.5rem, 8vw, 7rem) 0;
   background: #fff;
 
-  &--dark { background: #120c04; }
+  &--dark { background: #04132A; }
   &--muted { background: var(--frost); }
   &--accent-deep { background: var(--accent-deep); }
 }
@@ -974,7 +1049,7 @@ onBeforeUnmount(() => ctx?.revert());
   position: relative;
   padding: 2.5rem 2rem;
   border-radius: 20px;
-  background: #120c04;
+  background: #04132A;
   text-align: left;
 }
 
@@ -1066,8 +1141,8 @@ onBeforeUnmount(() => ctx?.revert());
   flex-shrink: 0;
   width: 38px; height: 38px;
   border-radius: 10px;
-  background: rgba(70, 143, 199,0.1);
-  border: 1px solid rgba(70, 143, 199,0.25);
+  background: rgba(10, 35, 66,0.1);
+  border: 1px solid rgba(10, 35, 66,0.25);
   color: var(--accent-deep);
   font-weight: 800;
   font-size: 0.78rem;
@@ -1077,7 +1152,7 @@ onBeforeUnmount(() => ctx?.revert());
 .cs-insight {
   padding: 2.25rem 2rem;
   border-radius: 18px;
-  background: linear-gradient(160deg, #120c04, #2e1c05);
+  background: linear-gradient(160deg, #04132A, #04132A);
   position: sticky;
   top: 2rem;
 
@@ -1121,7 +1196,7 @@ onBeforeUnmount(() => ctx?.revert());
   flex: 1;
   width: 2px;
   min-height: 44px;
-  background: linear-gradient(180deg, var(--accent), rgba(70, 143, 199,0.15));
+  background: linear-gradient(180deg, var(--accent), rgba(10, 35, 66,0.15));
   margin-top: 0.25rem;
 }
 
@@ -1135,14 +1210,14 @@ onBeforeUnmount(() => ctx?.revert());
 .cs-compare-wrap {
   border-radius: 18px;
   overflow: hidden;
-  border: 1px solid rgba(70, 143, 199,0.15);
+  border: 1px solid rgba(10, 35, 66,0.15);
   margin-bottom: 2.5rem;
 }
 
 .cs-mockup-wrap {
   border-radius: 18px;
   overflow: hidden;
-  border: 1px solid rgba(70, 143, 199,0.15);
+  border: 1px solid rgba(10, 35, 66,0.15);
   margin: 0 auto;
 
   img { width: 100%; display: block; }
@@ -1210,7 +1285,7 @@ onBeforeUnmount(() => ctx?.revert());
 
   &:hover { transform: translateY(-4px); box-shadow: 0 18px 48px rgba(15,23,42,0.08); }
   &--highlight {
-    background: linear-gradient(160deg, #120c04, #2e1c05);
+    background: linear-gradient(160deg, #04132A, #04132A);
     border-color: transparent;
     h4, p { color: #fff !important; }
     .material-symbols-outlined { color: var(--gold); }
@@ -1263,4 +1338,44 @@ onBeforeUnmount(() => ctx?.revert());
   .cs-nav-row > .cs-btn-ghost { display:none!important; }
   .cs-nav-link--right { justify-self:end; }
 }
+
+.cs-brand-block { margin: 4rem 0 1rem; }
+.cs-brand-intro { max-width: 680px; margin-bottom: 1.75rem; }
+.cs-brand-intro h3 { margin: .4rem 0 .65rem; color: #171717; font-size: clamp(1.45rem, 2.6vw, 2rem); line-height: 1.2; }
+.cs-brand-intro p { margin: 0; color: #68717c; line-height: 1.7; }
+.cs-brand-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 1rem; }
+.cs-brand-card { min-width: 0; overflow: hidden; border: 1px solid rgba(15,23,42,.08); border-radius: 14px; background: #fff; }
+.cs-brand-art { height: 190px; display: flex; align-items: center; justify-content: center; padding: 1.25rem; background: #f5f6f7; }
+.cs-brand-art img { display: block; width: 100%; height: 100%; object-fit: contain; }
+.cs-brand-art--portrait img { max-width: 112px; }
+.cs-brand-art--wide img { height: auto; max-height: 92px; }
+.cs-brand-caption { min-height: 76px; display:flex; align-items:center; justify-content:space-between; gap:.7rem; padding: .9rem 1rem; }
+.cs-brand-caption > div > span { display:block; margin-bottom:.25rem; color:#7a8490; font-size:.68rem; letter-spacing:.08em; text-transform:uppercase; }
+.cs-brand-caption h4 { margin:0; color:#20252b; font-size:.92rem; font-weight:650; line-height:1.3; }
+.cs-brand-caption > .material-symbols-outlined { color:var(--accent-deep); font-size:1.1rem; }
+.cs-brand-principle { display:flex; align-items:center; gap:1rem; max-width:850px; margin:1.5rem auto 0; padding:1rem 1.25rem; border-radius:12px; background:#fff; }
+.cs-brand-principle > .material-symbols-outlined { flex:0 0 auto; color:var(--accent-deep); font-size:1.6rem; }
+.cs-brand-principle p { margin:0; color:#53606d; line-height:1.65; }
+.cs-brand-principle strong { color:#20252b; }
+.cs-brand-feature { display:grid; grid-template-columns:minmax(0, .8fr) minmax(0, 1.2fr); align-items:center; gap:2rem; padding:clamp(1.5rem,4vw,3.5rem); border-radius:20px; background:linear-gradient(125deg,#04132A,#0A2342); }
+.cs-brand-feature-copy { max-width:370px; }
+.cs-brand-feature-kicker { color:#C49A5A; font-size:.72rem; font-weight:700; letter-spacing:.14em; text-transform:uppercase; }
+.cs-brand-feature-copy h3 { margin:.7rem 0; color:#fff; font-size:clamp(1.8rem,3.5vw,3rem); line-height:1.08; }
+.cs-brand-feature-copy p { margin:0; color:rgba(255,255,255,.7); line-height:1.7; }
+.cs-brand-palette { display:flex; flex-wrap:wrap; gap:.8rem 1rem; margin-top:1.25rem; }
+.cs-brand-swatch { display:flex; align-items:center; gap:.45rem; }
+.cs-brand-swatch > span { width:17px; height:17px; border:1px solid rgba(255,255,255,.4); border-radius:50%; }
+.cs-brand-swatch small { color:rgba(255,255,255,.76); font-size:.68rem; }
+.cs-brand-primary-logo { display:flex; min-height:200px; align-items:center; justify-content:center; padding:2rem; border-radius:14px; background:#fff; }
+.cs-brand-primary-logo img { display:block; width:min(100%,560px); max-height:150px; object-fit:contain; }
+.cs-brand-group { margin-top:3.25rem; }
+.cs-brand-group-head { display:flex; align-items:end; justify-content:space-between; gap:2rem; margin-bottom:1.15rem; }
+.cs-brand-group-head h3 { margin:.35rem 0 0; color:#20252b; font-size:clamp(1.25rem,2.3vw,1.7rem); line-height:1.2; }
+.cs-brand-group-head p { max-width:390px; margin:0; color:#68717c; font-size:.93rem; line-height:1.6; }
+.cs-brand-grid--logos { grid-template-columns:repeat(3,minmax(0,1fr)); }
+.cs-brand-grid--print { grid-template-columns:repeat(4,minmax(0,1fr)); }
+.cs-brand-grid--supporting { grid-template-columns:repeat(2,minmax(0,1fr)); max-width:780px; }
+@media (max-width: 900px) { .cs-brand-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+@media (max-width: 900px) { .cs-brand-grid--print { grid-template-columns:repeat(2,minmax(0,1fr)); } }
+@media (max-width: 650px) { .cs-brand-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap:.7rem; } .cs-brand-art { height:150px; padding:.8rem; } .cs-brand-caption { min-height:68px; padding:.7rem; } .cs-brand-caption h4 { font-size:.82rem; } .cs-brand-feature { grid-template-columns:1fr; gap:1.25rem; padding:1.25rem; } .cs-brand-primary-logo { min-height:140px; padding:1.25rem; } .cs-brand-group-head { display:block; } .cs-brand-group-head p { margin-top:.55rem; } }
 </style>
