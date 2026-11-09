@@ -368,7 +368,7 @@ onBeforeUnmount(() => {
     <!-- ============================================================
          LEADERSHIP TEAM - Premium 4-up profile grid
          ============================================================ -->
-    <section class="att-team-section">
+    <section class="att-team-section d-none">
       <div class="att-team-inner">
         <div class="att-team-header">
           <div class="att-team-eyebrow att-section-label">Leadership Team</div>
