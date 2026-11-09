@@ -19,12 +19,12 @@ const team = [
     img: dineshImg,
     url: "https://dinesh.amortree.com/",
   },
-  {
-    name: "Sufiyan",
-    role: "Full-Stack Developer · Frontend Specialist",
-    img: sufiImg,
-    url: "https://sufiyan.amortree.com/",
-  },
+  //{
+  //  name: "Sufiyan",
+  //  role: "Full-Stack Developer · Frontend Specialist",
+  //  img: sufiImg,
+  //  url: "https://sufiyan.amortree.com/",
+  //},
   {
     name: "Goutham",
     role: "Business Analyst · Data Strategist",
@@ -37,12 +37,12 @@ const team = [
     img: srilathaImg,
     url: "https://srilatha.amortree.com/",
   },
-  {
-    name: "Lavanya",
-    role: "Digital Marketing Strategist · Brand Consultant",
-    img: lavanyaImg,
-    url: "https://lavanya.amortree.com/",
-  },
+  //{
+  //  name: "Lavanya",
+  //  role: "Digital Marketing Strategist · Brand Consultant",
+  //  img: lavanyaImg,
+  //  url: "https://lavanya.amortree.com/",
+  //},
 ];
 
 const values = [
